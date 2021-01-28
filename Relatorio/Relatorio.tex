@@ -1,0 +1,53 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%PREAMBLE%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{./input/preamble/PREAMBLEREPORT}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%\bibliographystyle{apacite}
+\bibliographystyle{babplain}
+%\bibliographystyle{bstfilename}
+%%%%%%%%%%%%%FIX SECTION NUMBERING IN CASE REPORT%%%%%%%%%%%%%%%
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesection.\thesubsection.\arabic{subsubsection}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{./include/CAPAREPORT}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents
+\appendix
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{plain} %plain headings empty
+%\setcounter{chapter}{0}
+%\numberwithin{page}{section}
+%\renewcommand{\abstractname}{Executive Summary}
+%\captionsetup{justification = raggedright, singlelinecheck = false}
+\setlength{\parindent}{0in}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{./input/page/Abstract}
+\newpage
+\input{./input/page/Introducao}
+\newpage
+\input{./input/page/Desenvolvimento}
+\newpage
+\input{./input/page/Conclusao}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\input{./input/EQUACAO}
+%\input{./input/DEFINICAO}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Figuras Bibliografia Index
+\listoffigures
+\cite{*}
+\bibliography{./bibliography/Bibliography}
+%\printindex
+\newpage
+\footnote{Apontamento}
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
+Não conheço nenhuma geração que não tenha passado por dificuldades tremendas, episódios horrendos. Parece existe mudança mas fica tudo igual, o sistema já esta implementado. \\
+Para sobreviver temos de nos adaptar e competir, mas a maquina é a mesma. A gerência parece estática e firme é uma herança perpetua de desigualdade. \\
+\end{comment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

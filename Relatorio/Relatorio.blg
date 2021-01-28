@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Relatorio.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+The style file: babplain.bst
+Reallocating 'name_of_file' (item size: 1) to 25 items.
+A level-1 auxiliary file: ./include/CAPAREPORT.aux
+Reallocating 'name_of_file' (item size: 1) to 28 items.
+Database file #1: ./bibliography/Bibliography.bib
+Warning--to sort, need author or key in article_2
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Warning--empty language in article_2
+Warning--empty author in article_2
+You've used 15 entries,
+            2788 wiz_defined-function locations,
+            700 strings with 7855 characters,
+and the built_in function-call counts, 4567 in all, are:
+= -- 363
+> -- 177
+< -- 0
++ -- 72
+- -- 56
+* -- 395
+:= -- 675
+add.period$ -- 30
+call.type$ -- 15
+change.case$ -- 61
+chr.to.int$ -- 0
+cite$ -- 18
+duplicate$ -- 275
+empty$ -- 478
+format.name$ -- 106
+if$ -- 964
+int.to.chr$ -- 0
+int.to.str$ -- 15
+missing$ -- 30
+newline$ -- 76
+num.names$ -- 28
+pop$ -- 152
+preamble$ -- 1
+purify$ -- 58
+quote$ -- 0
+skip$ -- 127
+stack$ -- 0
+substring$ -- 76
+swap$ -- 86
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 36
+warning$ -- 3
+while$ -- 28
+width$ -- 17
+write$ -- 149
+(There were 3 warnings)
