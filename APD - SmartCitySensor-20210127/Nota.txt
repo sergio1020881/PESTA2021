@@ -4,4 +4,5 @@ Radar contagem caros e Chip lora wifi.
 
 o segundo RFID.
 
-Parece a melhor escolha de todos os outros o contra é ser longe, Vila Nova de Gaia.
+Parece a melhor escolha de todos os outros o contra é ser longe, 
+Vila Nova de Gaia.
