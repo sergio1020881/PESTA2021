@@ -1,0 +1,7 @@
+Beaglebone, pc card já é hardware antigo. Sistema de estabilidade, sensores tipo 
+unidades de medição inercial (IMU).
+
+Na FEUP.
+
+Nice, just the hardware will complicate because is a overkill.
+

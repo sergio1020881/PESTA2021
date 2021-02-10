@@ -1,0 +1,20 @@
+1- APP para TV.
+
+IPBRIKLIVE, plataform tv viewer. Sistema operativo para a box.
+(Sistema Operativo Linux) e com as linguagens de programação SQL, PHP, HTML5, CSS3, AJAX, XML, XSLT,
+JavaScript, Angular JS, REST, JAVA, SWIFT. Acaba por ser uma destribuição linux, dedicada a video e som.
+
+Centro porto.
+
+1 Realtime dashboard.
+
+Sou bom no linux, quem sabe pode-se sempre aprender mais.
+
+
+
+Um task manager do sistema operativo.
+
+
+capacidade de aprendizagem. Good.
+
+
