@@ -1,4 +1,4 @@
-INEGI- beglebone FEUP.
+INEGI- beaglebone FEUP.
 MWTechnologies-20210206- mcu da stm, e ingles.
 
 

@@ -13,8 +13,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \include{./include/CAPAREPORT}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\input{./input/page/Tribute}
+\input{./input/page/Abstract}
 \tableofcontents
-\appendix
+\listoffigures
+\newpage
+\input{./input/page/Acronym}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \pagestyle{plain} %plain headings empty
 %\setcounter{chapter}{0}
@@ -22,10 +26,9 @@
 %\renewcommand{\abstractname}{Executive Summary}
 %\captionsetup{justification = raggedright, singlelinecheck = false}
 \setlength{\parindent}{0in}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\input{./input/page/Abstract}
 \newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{./input/page/Introducao}
 \newpage
 \input{./input/page/Desenvolvimento}
@@ -33,21 +36,15 @@
 \input{./input/page/Conclusao}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\input{./input/EQUACAO}
-%\input{./input/DEFINICAO}
+\input{./input/DEFINICAO}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Figuras Bibliografia Index
-\listoffigures
 \cite{*}
 \bibliography{./bibliography/Bibliography}
-%\printindex
+\appendix
 \newpage
 \footnote{Apontamento}
 \end{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{comment}
-Não conheço nenhuma geração que não tenha passado por dificuldades tremendas, episódios horrendos. Parece existe mudança mas fica tudo igual, o sistema já esta implementado. \\
-Para sobreviver temos de nos adaptar e competir, mas a maquina é a mesma. A gerência parece estática e firme é uma herança perpetua de desigualdade. \\
-\end{comment}
+%\begin{comment}
+%\end{comment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

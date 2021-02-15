@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  28 JAN 2021 18:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  15 FEB 2021 17:55
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
@@ -507,15 +507,15 @@ Package caption Info: End \AtBeginDocument code.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(42.67912pt, 520.68553pt, 34.14322pt)
-* v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
+* h-part:(L,W,R)=(85.35826pt, 441.01773pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=520.68553pt
-* \textheight=731.23584pt
-* \oddsidemargin=-29.59087pt
-* \evensidemargin=-29.59087pt
-* \topmargin=-52.36449pt
+* \textwidth=441.01773pt
+* \textheight=702.78308pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-38.1381pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=12.0pt
@@ -569,24 +569,71 @@ Overfull \hbox (17.62482pt too wide) in paragraph at lines 33--14
 
 
 {C:/Users/sergi/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./image/capa/IS
-EP_marca_cor_grande.png>] (Relatorio.toc)
+EP_marca_cor_grande.png>] (input/page/Abstract.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--7
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--10
+
+ []
+
+[1
+
+]) (Relatorio.toc)
 \tf@toc=\write4
 \openout4 = `Relatorio.toc'.
 
- (input/page/Abstract.tex [2
+ [1
 
+] (Relatorio.lof)
+\tf@lof=\write5
+\openout5 = `Relatorio.lof'.
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 3--8
+ [2
+
+] (input/page/Acronym.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--5
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--8
+Underfull \hbox (badness 10000) in paragraph at lines 2--5
 
  []
 
-[1]) (input/page/Introducao.tex
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--28
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--28
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--28
+
+ []
+
+)
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 6--29
+[]$[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--29
+
+ []
+
+[3] (input/page/Introducao.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--24
 
  []
@@ -596,7 +643,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--24
 
  []
 
-<./image/SGS/Contribuicoes_1.jpg, id=23, 677.53125pt x 211.79124pt>
+<./image/SGS/Contribuicoes_1.jpg, id=29, 677.53125pt x 211.79124pt>
 File: ./image/SGS/Contribuicoes_1.jpg Graphic file (type jpg)
 <use ./image/SGS/Contribuicoes_1.jpg>
 Package pdftex.def Info: ./image/SGS/Contribuicoes_1.jpg  used on input line 29
@@ -627,9 +674,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--42
 
  []
 
-[1 <./image/SGS/Contribuicoes_1.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 48--68
-
+[4 <./image/SGS/Contribuicoes_1.jpg>]
+Overfull \hbox (68.98318pt too wide) in paragraph at lines 48--68
+ \T1/cmr/m/n/12 Ne-nhum ci-da-dão de-via acei-tar qual-quer tra-ba-lho que ga-n
+he me-nos que  $[]$
  []
 
 
@@ -657,19 +705,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--68
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--68
+
+ []
+
+[5]
 LaTeX Font Info:    Trying to load font information for T1+cmss on input line 7
 0.
-("C:\Program Files\MiKTeX\tex/latex/base\t1cmss.fd"
+ ("C:\Program Files\MiKTeX\tex/latex/base\t1cmss.fd"
 File: t1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-<./image/Change/Forces_for_Change.jpg, id=34, 602.25pt x 508.90125pt>
+<./image/Change/Forces_for_Change.jpg, id=47, 602.25pt x 508.90125pt>
 File: ./image/Change/Forces_for_Change.jpg Graphic file (type jpg)
 <use ./image/Change/Forces_for_Change.jpg>
 Package pdftex.def Info: ./image/Change/Forces_for_Change.jpg  used on input li
 ne 73.
 (pdftex.def)             Requested size: 313.1718pt x 264.63017pt.
- [2]
-<./image/Leadership/Leadership_Models.jpg, id=41, 532.99126pt x 507.8975pt>
+<./image/Leadership/Leadership_Models.jpg, id=48, 532.99126pt x 507.8975pt>
 File: ./image/Leadership/Leadership_Models.jpg Graphic file (type jpg)
 <use ./image/Leadership/Leadership_Models.jpg>
 Package pdftex.def Info: ./image/Leadership/Leadership_Models.jpg  used on inpu
@@ -680,16 +733,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--83
 
  []
 
-[3 <./image/Change/Forces_for_Change.jpg>]
-<./image/Change/Three_Change_Approaches.jpg, id=46, 965.6075pt x 448.67625pt>
+[6 <./image/Change/Forces_for_Change.jpg>]
+<./image/Change/Three_Change_Approaches.jpg, id=53, 965.6075pt x 448.67625pt>
 File: ./image/Change/Three_Change_Approaches.jpg Graphic file (type jpg)
 <use ./image/Change/Three_Change_Approaches.jpg>
 Package pdftex.def Info: ./image/Change/Three_Change_Approaches.jpg  used on in
 put line 87.
 (pdftex.def)             Requested size: 502.11879pt x 233.31299pt.
-) [4 <./image/Leadership/Leadership_Models.jpg> <./image/Change/Three_Change_Ap
-proaches.jpg>]
-(input/page/Desenvolvimento.tex
+
+Overfull \hbox (61.10106pt too wide) in paragraph at lines 87--88
+ [][] 
+ []
+
+) [7 <./image/Leadership/Leadership_Models.jpg>] [8 <./image/Change/Three_Chang
+e_Approaches.jpg>] (input/page/Desenvolvimento.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--25
 
  []
@@ -729,8 +786,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--25
 
  []
 
-[5]
-<./image/Salary/Universidade.jpg, id=54, 634.37pt x 531.9875pt>
+[9]
+<./image/Salary/Universidade.jpg, id=63, 634.37pt x 531.9875pt>
 File: ./image/Salary/Universidade.jpg Graphic file (type jpg)
 <use ./image/Salary/Universidade.jpg>
 Package pdftex.def Info: ./image/Salary/Universidade.jpg  used on input line 29
@@ -741,8 +798,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--31
 
  []
 
-[6 <./image/Salary/Universidade.jpg>]
-<./image/Salary/Eng_Elec.jpg, id=58, 736.7525pt x 365.365pt>
+[10 <./image/Salary/Universidade.jpg>]
+<./image/Salary/Eng_Elec.jpg, id=67, 736.7525pt x 365.365pt>
 File: ./image/Salary/Eng_Elec.jpg Graphic file (type jpg)
 <use ./image/Salary/Eng_Elec.jpg>
 Package pdftex.def Info: ./image/Salary/Eng_Elec.jpg  used on input line 37.
@@ -753,17 +810,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--39
  []
 
 
+Overfull \hbox (22.34117pt too wide) in paragraph at lines 40--44
+[]\T1/cmr/m/n/12 [ link:  https://meusalario.pt/emprego/portugal-emprego-e-sala
+rio/engenheiros-electricos
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 40--44
 
  []
 
-[7 <./image/Salary/Eng_Elec.jpg>]
-Overfull \hbox (5.49649pt too wide) in paragraph at lines 45--45
-[]\T1/cmr/bx/n/17.28 A ges-tão de car-reira e as com-pe-tên-cias ne-ces-sá-rias
- num mundo
- []
-
-(input/page/Competencias.tex
+[11 <./image/Salary/Eng_Elec.jpg>] (input/page/Competencias.tex
 Underfull \hbox (badness 10000) in paragraph at lines 47--2
 
  []
@@ -824,7 +881,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--62
  []
 
 ) (input/page/sergio1020881.tex
-Overfull \hbox (2.61047pt too wide) in paragraph at lines 4--1
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 4--1
 [] []
  []
 
@@ -833,7 +890,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--1
 
  []
 
-[8]
+[12]
 Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
  []
@@ -843,7 +900,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--26
 
  []
 
-<./image/Skills/Managerial_Skills_for_the_Global_Marketplace.jpg, id=66, 942.52
+<./image/Skills/Managerial_Skills_for_the_Global_Marketplace.jpg, id=76, 942.52
 126pt x 480.79625pt>
 File: ./image/Skills/Managerial_Skills_for_the_Global_Marketplace.jpg Graphic f
 ile (type jpg)
@@ -852,7 +909,7 @@ Package pdftex.def Info: ./image/Skills/Managerial_Skills_for_the_Global_Market
 place.jpg  used on input line 30.
 (pdftex.def)             Requested size: 282.75856pt x 144.23997pt.
 
-Overfull \hbox (8.30093pt too wide) in paragraph at lines 2--38
+Overfull \hbox (87.96873pt too wide) in paragraph at lines 2--38
 []$ $[]$ 
  []
 
@@ -871,7 +928,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--38
 
  []
 
-[9 <./image/Skills/Managerial_Skills_for_the_Global_Marketplace.jpg>]
+[13 <./image/Skills/Managerial_Skills_for_the_Global_Marketplace.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 40--78
 
  []
@@ -891,58 +948,92 @@ Underfull \hbox (badness 10000) in paragraph at lines 79--85
 
  []
 
-))
-Underfull \hbox (badness 10000) in paragraph at lines 86--32
+[14]))
+Underfull \hbox (badness 10000) in paragraph at lines 86--35
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 86--32
+Underfull \hbox (badness 10000) in paragraph at lines 86--35
 
  []
 
-[10] [11] (input/page/Conclusao.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 3--34
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3--34
+[15] (input/page/Conclusao.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 3--37
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--34
+Underfull \hbox (badness 10000) in paragraph at lines 3--37
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--34
+Underfull \hbox (badness 10000) in paragraph at lines 3--37
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--34
+Underfull \hbox (badness 10000) in paragraph at lines 3--37
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--34
+Underfull \hbox (badness 10000) in paragraph at lines 3--37
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--34
+Underfull \hbox (badness 10000) in paragraph at lines 3--37
 
  []
 
-[12] (Relatorio.lof)
-\tf@lof=\write5
-\openout5 = `Relatorio.lof'.
 
- (Relatorio.bbl [13
+Underfull \hbox (badness 10000) in paragraph at lines 3--37
 
-]
+ []
+
+[16] (input/DEFINICAO.tex
+Underfull \hbox (badness 10000) in paragraph at lines 1--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--38
+
+ []
+
+
+Overfull \hbox (46.71495pt too wide) in paragraph at lines 1--38
+[] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--38
+
+ []
+
+) (Relatorio.bbl
+Overfull \hbox (46.71495pt too wide) in paragraph at lines 39--1
+[][] []
+ []
+
+[17]
 babelbib: Using the BibTeX style's default font for `name'.
 babelbib: Using the BibTeX style's default font for `lastname'.
 babelbib: Using the BibTeX style's default font for `title'.
@@ -954,46 +1045,50 @@ babelbib: Using the BibTeX style's default font for `ISBN'.
 babelbib: Using the BibTeX style's default font for `ISSN'.
 babelbib: Using the BibTeX style's default font for `url'.
 babelbib: Using the BibTeX style's default font for `numeral'.
-) [14
+[18
 
-] [15] (Relatorio.aux (include/CAPAREPORT.aux)) ) 
+]) [19] [20] (Relatorio.aux (include/CAPAREPORT.aux)) ) 
 Here is how much of TeX's memory you used:
- 8883 strings out of 480790
- 139972 string characters out of 2907055
- 540081 words of memory out of 3000000
- 24648 multiletter control sequences out of 15000+200000
- 555538 words of font info for 82 fonts, out of 3000000 for 9000
+ 8898 strings out of 480790
+ 140460 string characters out of 2907055
+ 543089 words of memory out of 3000000
+ 24653 multiletter control sequences out of 15000+200000
+ 556911 words of font info for 84 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,15n,54p,1223b,590s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\sergi\AppData\Local
-\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\sergi\AppData
-\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\sergi\A
-ppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\s
-ergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcti1200.pk> <C:\U
-sers\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/eurosym/dpi720\feymr10.p
-k> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss
-1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
-0\ecti1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
-/dpi600\ecrm1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
-pen/ec/dpi600\ecbx1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour
-/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/
-ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fon
-ts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\sergi\AppData\Local\MiKT
-eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\sergi\AppData\Loca
+ <C:\Users\sergi\AppData
+\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\sergi\A
+ppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\s
+ergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\U
+sers\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcti1200.pk>
+ <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti08
+00.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/eurosym/dpi7
+20\feymr10.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
+/dpi600\ecss1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
+pen/ec/dpi600\ecti1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour
+/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/
+ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fon
+ts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\sergi\AppData\Local\MiKT
+eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\sergi\AppData\Loca
 l\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\sergi\AppDat
-a\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1440.pk> <C:\Users\sergi\
-AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\
-sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\
-Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2074.pk
+a\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\sergi\
+AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\
+sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1440.pk> <C:\
+Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk
+> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1
+440.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600
+\ecrm2074.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb
 ><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program
  Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.
-pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Relatorio.pdf (18 pages, 683732 bytes).
+X/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfo
+nts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.p
+fb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Progr
+am Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on Relatorio.pdf (22 pages, 718233 bytes).
 PDF statistics:
- 606 PDF objects out of 1000 (max. 8388607)
+ 644 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
