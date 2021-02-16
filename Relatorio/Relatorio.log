@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  16 FEB 2021 13:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  16 FEB 2021 13:22
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
 LaTeX2e <2020-02-02> patch level 5
-L3 programming layer <2020-06-18> (input/preamble/PREAMBLEREPORT.tex
+L3 programming layer <2020-06-18> (include/preamble/PREAMBLEREPORT.tex
 ("C:\Program Files\MiKTeX\tex/latex/base\report.cls"
 Document Class: report 2019/12/20 v1.4l Standard LaTeX document class
 ("C:\Program Files\MiKTeX\tex/latex/base\size12.clo"
@@ -795,7 +795,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--44
 
  []
 
-[12 <./image/Salary/Eng_Elec.jpg>] (input/page/Competencias.tex
+[12 <./image/Salary/Eng_Elec.jpg>] (input/excerpt/Competencias.tex
 Underfull \hbox (badness 10000) in paragraph at lines 47--2
 
  []
@@ -855,7 +855,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--62
 
  []
 
-) (input/page/sergio1020881.tex
+) (input/excerpt/sergio1020881.tex
 Overfull \hbox (2.61049pt too wide) in paragraph at lines 4--1
 [] []
  []
@@ -968,7 +968,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--40
 
  []
 
-[17] (input/DEFINICAO.tex
+[17] (input/excerpt/DEFINICAO.tex
 Overfull \hbox (46.71495pt too wide) in paragraph at lines 4--37
 [] [] 
  []
@@ -994,24 +994,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--37
  []
 
 )
-Overfull \hbox (46.71495pt too wide) in paragraph at lines 38--44
+Overfull \hbox (46.71495pt too wide) in paragraph at lines 38--77
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--44
+Underfull \hbox (badness 10000) in paragraph at lines 38--77
 
  []
 
-[18] [19
-
-] [20
-
-
-] [21] (Relatorio.bbl [22
-
-
-]
+(Relatorio.bbl [18]
 babelbib: Using the BibTeX style's default font for `name'.
 babelbib: Using the BibTeX style's default font for `lastname'.
 babelbib: Using the BibTeX style's default font for `title'.
@@ -1023,17 +1015,17 @@ babelbib: Using the BibTeX style's default font for `ISBN'.
 babelbib: Using the BibTeX style's default font for `ISSN'.
 babelbib: Using the BibTeX style's default font for `url'.
 babelbib: Using the BibTeX style's default font for `numeral'.
-[23
+[19
 
-]) [24] [25] (Relatorio.aux (include/CAPAREPORT.aux)) ) 
+]) [20] [21] (Relatorio.aux (include/CAPAREPORT.aux)) ) 
 Here is how much of TeX's memory you used:
- 8913 strings out of 480790
- 140771 string characters out of 2907055
- 543089 words of memory out of 3000000
- 24662 multiletter control sequences out of 15000+200000
+ 8908 strings out of 480790
+ 140773 string characters out of 2907055
+ 543095 words of memory out of 3000000
+ 24657 multiletter control sequences out of 15000+200000
  556911 words of font info for 84 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,15n,54p,1223b,592s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,15n,54p,1223b,590s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\sergi\AppData
 \Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\sergi\A
 ppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\s
@@ -1064,9 +1056,9 @@ nts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.p
 fb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Progr
 am Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKT
 eX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Relatorio.pdf (28 pages, 724521 bytes).
+Output written on Relatorio.pdf (24 pages, 719335 bytes).
 PDF statistics:
- 672 PDF objects out of 1000 (max. 8388607)
+ 651 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

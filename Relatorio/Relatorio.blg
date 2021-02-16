@@ -6,7 +6,7 @@ The style file: babplain.bst
 Reallocating 'name_of_file' (item size: 1) to 25 items.
 A level-1 auxiliary file: ./include/CAPAREPORT.aux
 Reallocating 'name_of_file' (item size: 1) to 28 items.
-Illegal, another \bibstyle command---line 92 of file Relatorio.aux
+Illegal, another \bibstyle command---line 87 of file Relatorio.aux
  : \bibstyle
  :          {plain}
 I'm skipping whatever remains of this command
