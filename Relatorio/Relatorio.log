@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  16 FEB 2021 13:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  16 FEB 2021 13:57
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
@@ -450,12 +450,376 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@count@id=\count284
 \enitdp@description=\count285
 )
-\c@theorem=\count286
-\c@lemma=\count287
-\c@definition=\count288
-\c@notation=\count289
-\@indexfile=\write3
-\openout3 = `Relatorio.idx'.
+("C:\Program Files\MiKTeX\tex/latex/pgf/frontendlayer\tikz.sty"
+("C:\Program Files\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty"
+("C:\Program Files\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty"
+("C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex"
+\pgfutil@everybye=\toks36
+\pgfutil@tempdima=\dimen190
+\pgfutil@tempdimb=\dimen191
+
+("C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfutil-common-lists.tex"))
+("C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfutil-latex.def"
+\pgfutil@abb=\box102
+
+("C:\Program Files\MiKTeX\tex/latex/ms\everyshi.sty"
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+("C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfrcs.code.tex"
+("C:\Program Files\MiKTeX\tex/generic/pgf\pgf.revision.tex")
+Package: pgfrcs 2020/01/08 v3.1.5b (3.1.5b)
+))
+Package: pgf 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:\Program Files\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.sty"
+("C:\Program Files\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.sty"
+("C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsys.code.tex"
+Package: pgfsys 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex"
+\pgfkeys@pathtoks=\toks37
+\pgfkeys@temptoks=\toks38
+
+("C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfkeysfiltered.code.tex"
+\pgfkeys@tmptoks=\toks39
+))
+\pgf@x=\dimen192
+\pgf@y=\dimen193
+\pgf@xa=\dimen194
+\pgf@ya=\dimen195
+\pgf@xb=\dimen196
+\pgf@yb=\dimen197
+\pgf@xc=\dimen198
+\pgf@yc=\dimen199
+\pgf@xd=\dimen256
+\pgf@yd=\dimen257
+\w@pgf@writea=\write3
+\r@pgf@reada=\read4
+\c@pgf@counta=\count286
+\c@pgf@countb=\count287
+\c@pgf@countc=\count288
+\c@pgf@countd=\count289
+\t@pgf@toka=\toks40
+\t@pgf@tokb=\toks41
+\t@pgf@tokc=\toks42
+\pgf@sys@id@count=\count290
+("C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg"
+File: pgf.cfg 2020/01/08 v3.1.5b (3.1.5b)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+("C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-pdftex.def"
+File: pgfsys-pdftex.def 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-common-pdf.def"
+File: pgfsys-common-pdf.def 2020/01/08 v3.1.5b (3.1.5b)
+))) ("C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.t
+ex"
+File: pgfsyssoftpath.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfsyssoftpath@smallbuffer@items=\count291
+\pgfsyssoftpath@bigbuffer@items=\count292
+) ("C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex
+"
+File: pgfsysprotocol.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)) ("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcore.code.tex"
+Package: pgfcore 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex"
+("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathcalc.code.tex"
+("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathutil.code.tex")
+("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathparser.code.tex"
+\pgfmath@dimen=\dimen258
+\pgfmath@count=\count293
+\pgfmath@box=\box103
+\pgfmath@toks=\toks43
+\pgfmath@stack@operand=\toks44
+\pgfmath@stack@operation=\toks45
+)
+("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex"
+("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex"
+)
+("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.trigonometric.c
+ode.tex")
+("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.random.code.tex
+")
+("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.comparison.code
+.tex")
+("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.base.code.tex")
+("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.round.code.tex"
+) ("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex
+")
+("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmet
+ics.code.tex")))
+("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfloat.code.tex"
+\c@pgfmathroundto@lastzeros=\count294
+))
+("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfint.code.tex")
+("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex"
+File: pgfcorepoints.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@picminx=\dimen259
+\pgf@picmaxx=\dimen260
+\pgf@picminy=\dimen261
+\pgf@picmaxy=\dimen262
+\pgf@pathminx=\dimen263
+\pgf@pathmaxx=\dimen264
+\pgf@pathminy=\dimen265
+\pgf@pathmaxy=\dimen266
+\pgf@xx=\dimen267
+\pgf@xy=\dimen268
+\pgf@yx=\dimen269
+\pgf@yy=\dimen270
+\pgf@zx=\dimen271
+\pgf@zy=\dimen272
+)
+("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.
+tex"
+File: pgfcorepathconstruct.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@path@lastx=\dimen273
+\pgf@path@lasty=\dimen274
+)
+("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex"
+File: pgfcorepathusage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@shorten@end@additional=\dimen275
+\pgf@shorten@start@additional=\dimen276
+) ("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex"
+File: pgfcorescopes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfpic=\box104
+\pgf@hbox=\box105
+\pgf@layerbox@main=\box106
+\pgf@picture@serial@count=\count295
+)
+("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.t
+ex"
+File: pgfcoregraphicstate.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgflinewidth=\dimen277
+)
+("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransformations.cod
+e.tex"
+File: pgfcoretransformations.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@pt@x=\dimen278
+\pgf@pt@y=\dimen279
+\pgf@pt@temp=\dimen280
+)
+("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorequick.code.tex"
+File: pgfcorequick.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex"
+File: pgfcoreobjects.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathprocessing.code
+.tex"
+File: pgfcorepathprocessing.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex"
+File: pgfcorearrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfarrowsep=\dimen281
+)
+("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex"
+File: pgfcoreshade.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@max=\dimen282
+\pgf@sys@shading@range@num=\count296
+\pgf@shadingcount=\count297
+)
+("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex"
+File: pgfcoreimage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex"
+File: pgfcoreexternal.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfexternal@startupbox=\box107
+)) ("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex"
+File: pgfcorelayers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransparency.code.t
+ex"
+File: pgfcoretransparency.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepatterns.code.tex"
+File: pgfcorepatterns.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+) ("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorerdf.code.tex"
+File: pgfcorerdf.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)))
+("C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmoduleshapes.code.tex"
+File: pgfmoduleshapes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfnodeparttextbox=\box108
+)
+("C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmoduleplot.code.tex"
+File: pgfmoduleplot.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+("C:\Program Files\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty"
+Package: pgfcomp-version-0-65 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@nodesepstart=\dimen283
+\pgf@nodesepend=\dimen284
+) ("C:\Program Files\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-1-18.st
+y"
+Package: pgfcomp-version-1-18 2020/01/08 v3.1.5b (3.1.5b)
+)) ("C:\Program Files\MiKTeX\tex/latex/pgf/utilities\pgffor.sty"
+("C:\Program Files\MiKTeX\tex/latex/pgf/utilities\pgfkeys.sty"
+("C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex"))
+("C:\Program Files\MiKTeX\tex/latex/pgf/math\pgfmath.sty"
+("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex"))
+("C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgffor.code.tex"
+Package: pgffor 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex")
+\pgffor@iter=\dimen285
+\pgffor@skip=\dimen286
+\pgffor@stack=\toks46
+\pgffor@toks=\toks47
+))
+("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex"
+Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:\Program Files\MiKTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code
+.tex"
+File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@plot@mark@count=\count298
+\pgfplotmarksize=\dimen287
+)
+\tikz@lastx=\dimen288
+\tikz@lasty=\dimen289
+\tikz@lastxsaved=\dimen290
+\tikz@lastysaved=\dimen291
+\tikz@lastmovetox=\dimen292
+\tikz@lastmovetoy=\dimen293
+\tikzleveldistance=\dimen294
+\tikzsiblingdistance=\dimen295
+\tikz@figbox=\box109
+\tikz@figbox@bg=\box110
+\tikz@tempbox=\box111
+\tikz@tempbox@bg=\box112
+\tikztreelevel=\count299
+\tikznumberofchildren=\count300
+\tikznumberofcurrentchild=\count301
+\tikz@fig@count=\count302
+
+("C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmodulematrix.code.tex"
+File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfmatrixcurrentrow=\count303
+\pgfmatrixcurrentcolumn=\count304
+\pgf@matrix@numberofcolumns=\count305
+)
+\tikz@expandcount=\count306
+
+("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
+arytopaths.code.tex"
+File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)))
+("C:\Program Files\MiKTeX\tex/latex/circuitikz\circuitikz.sty"
+Package: circuitikz 2020/10/04{} The CircuiTikz circuit drawing package version
+ 1.2.4
+
+("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
+arycalc.code.tex"
+File: tikzlibrarycalc.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+("C:\Program Files\MiKTeX\tex/generic/pgf/libraries\pgflibraryarrows.meta.code.
+tex"
+File: pgflibraryarrows.meta.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgfarrowinset=\dimen296
+\pgfarrowlength=\dimen297
+\pgfarrowwidth=\dimen298
+\pgfarrowlinewidth=\dimen299
+)
+("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
+arybending.code.tex"
+File: tikzlibrarybending.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmodulebending.code.tex"
+File: pgfmodulebending.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmodulenonlineartransformat
+ions.code.tex"
+File: pgfmodulenonlineartransformations.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgftransformnonlinearflatness=\dimen300
+)
+("C:\Program Files\MiKTeX\tex/generic/pgf/libraries\pgflibrarycurvilinear.code.
+tex"
+File: pgflibrarycurvilinear.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\pgf@curvilinear@time@a=\dimen301
+\pgf@curvilinear@length@a=\dimen302
+\pgf@curvilinear@length@b=\dimen303
+\pgf@curvilinear@length@c=\dimen304
+\pgf@curvilinear@length@d=\dimen305
+)
+\pgf@arrows@the@rigidity=\dimen306
+))
+("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
+aryfpu.code.tex"
+("C:\Program Files\MiKTeX\tex/generic/pgf/libraries\pgflibraryfpu.code.tex"))
+("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcirc.defines.tex"
+\pgf@circ@count@a=\count307
+\pgf@circ@count@b=\count308
+\pgf@circ@count@c=\count309
+\pgf@circ@res@up=\dimen307
+\pgf@circ@res@down=\dimen308
+\pgf@circ@res@zero=\dimen309
+\pgf@circ@res@left=\dimen310
+\pgf@circ@res@right=\dimen311
+\pgf@circ@res@other=\dimen312
+\pgf@circ@res@step=\dimen313
+\pgf@circ@res@temp=\dimen314
+\pgf@circ@Rlen=\dimen315
+\pgf@circ@scaled@Rlen=\dimen316
+\pgfstartlinewidth=\dimen317
+)
+("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircutils.tex")
+("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircshapes.tex")
+("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircmonopoles.tex")
+("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircbipoles.tex")
+("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcirctripoles.tex"
+\pgf@circ@res@count=\count310
+)
+("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircquadpoles.tex")
+("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircmultipoles.tex")
+("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcirclabel.tex")
+("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircvoltage.tex"
+\pgfcirc@labelshift=\dimen318
+)
+("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcirccurrent.tex")
+("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircflow.tex")
+("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircpath.tex")
+
+Package circuitikz Warning: You did not specify one of the voltage directions:
+(circuitikz)                  oldvoltagedirection, nooldvoltagedirection, 
+(circuitikz)                  RPvoltages or EFvoltages 
+(circuitikz)                Default directions may have changed, 
+(circuitikz)                please check the manual.
+
+)
+("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
+arymatrix.code.tex"
+File: tikzlibrarymatrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
+aryshapes.geometric.code.tex"
+File: tikzlibraryshapes.geometric.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:\Program Files\MiKTeX\tex/generic/pgf/libraries/shapes\pgflibraryshapes.geo
+metric.code.tex"
+File: pgflibraryshapes.geometric.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+))
+("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
+aryarrows.code.tex"
+File: tikzlibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+("C:\Program Files\MiKTeX\tex/generic/pgf/libraries\pgflibraryarrows.code.tex"
+File: pgflibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\arrowsize=\dimen319
+))
+("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
+arytrees.code.tex"
+File: tikzlibrarytrees.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
+arypositioning.code.tex"
+File: tikzlibrarypositioning.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+\c@theorem=\count311
+\c@lemma=\count312
+\c@definition=\count313
+\c@notation=\count314
+\@indexfile=\write4
+\openout4 = `Relatorio.idx'.
 
 
 Writing index file Relatorio.idx
@@ -479,17 +843,17 @@ LaTeX Font Info:    ... okay on input line 5.
 
 ("C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count290
-\scratchdimen=\dimen190
-\scratchbox=\box102
-\nofMPsegments=\count291
-\nofMParguments=\count292
-\everyMPshowfont=\toks36
-\MPscratchCnt=\count293
-\MPscratchDim=\dimen191
-\MPnumerator=\count294
-\makeMPintoPDFobject=\count295
-\everyMPtoPDFconversion=\toks37
+\scratchcounter=\count315
+\scratchdimen=\dimen320
+\scratchbox=\box113
+\nofMPsegments=\count316
+\nofMParguments=\count317
+\everyMPshowfont=\toks48
+\MPscratchCnt=\count318
+\MPscratchDim=\dimen321
+\MPnumerator=\count319
+\makeMPintoPDFobject=\count320
+\everyMPtoPDFconversion=\toks49
 ) ("C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -541,11 +905,11 @@ File: portuguese.bdf 2019/03/11 v1.32 babelbib: multilingual bibliographies (HH
 
 babelbib extension \bibsportuguese added to \extrasportuguese
 babelbib extension \btxifchangecaseoff added to \extrasportuguese
-)
+) ABD: EveryShipout initializing macros
 \openout2 = `./include/CAPAREPORT.aux'.
 
  (include/CAPAREPORT.tex
-<./image/capa/ISEP_marca_cor_grande.png, id=1, 730.6497pt x 278.2395pt>
+<./image/capa/ISEP_marca_cor_grande.png, id=4, 730.6497pt x 278.2395pt>
 File: ./image/capa/ISEP_marca_cor_grande.png Graphic file (type png)
 <use ./image/capa/ISEP_marca_cor_grande.png>
 Package pdftex.def Info: ./image/capa/ISEP_marca_cor_grande.png  used on input 
@@ -553,12 +917,14 @@ line 34.
 (pdftex.def)             Requested size: 438.3932pt x 166.94498pt.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 35.
 
- ("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd"
+
+("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 35.
 
- ("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd"
+
+("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
 Overfull \hbox (17.62482pt too wide) in paragraph at lines 33--14
@@ -590,20 +956,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--10
  []
 
 [1]) (Relatorio.toc)
-\tf@toc=\write4
-\openout4 = `Relatorio.toc'.
+\tf@toc=\write5
+\openout5 = `Relatorio.toc'.
 
  [1
 
 ] (Relatorio.lof)
-\tf@lof=\write5
-\openout5 = `Relatorio.lof'.
+\tf@lof=\write6
+\openout6 = `Relatorio.lof'.
 
  [2
 
 ] (Relatorio.lot)
-\tf@lot=\write6
-\openout6 = `Relatorio.lot'.
+\tf@lot=\write7
+\openout7 = `Relatorio.lot'.
 
  [3
 
@@ -618,7 +984,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--24
 
  []
 
-<./image/SGS/Contribuicoes_1.jpg, id=37, 677.53125pt x 211.79124pt>
+<./image/SGS/Contribuicoes_1.jpg, id=40, 677.53125pt x 211.79124pt>
 File: ./image/SGS/Contribuicoes_1.jpg Graphic file (type jpg)
 <use ./image/SGS/Contribuicoes_1.jpg>
 Package pdftex.def Info: ./image/SGS/Contribuicoes_1.jpg  used on input line 29
@@ -691,13 +1057,13 @@ LaTeX Font Info:    Trying to load font information for T1+cmss on input line 7
  ("C:\Program Files\MiKTeX\tex/latex/base\t1cmss.fd"
 File: t1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-<./image/Change/Forces_for_Change.jpg, id=53, 602.25pt x 508.90125pt>
+<./image/Change/Forces_for_Change.jpg, id=56, 602.25pt x 508.90125pt>
 File: ./image/Change/Forces_for_Change.jpg Graphic file (type jpg)
 <use ./image/Change/Forces_for_Change.jpg>
 Package pdftex.def Info: ./image/Change/Forces_for_Change.jpg  used on input li
 ne 73.
 (pdftex.def)             Requested size: 313.1718pt x 264.63017pt.
-<./image/Leadership/Leadership_Models.jpg, id=54, 532.99126pt x 507.8975pt>
+<./image/Leadership/Leadership_Models.jpg, id=57, 532.99126pt x 507.8975pt>
 File: ./image/Leadership/Leadership_Models.jpg Graphic file (type jpg)
 <use ./image/Leadership/Leadership_Models.jpg>
 Package pdftex.def Info: ./image/Leadership/Leadership_Models.jpg  used on inpu
@@ -709,7 +1075,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--83
  []
 
 [7 <./image/Change/Forces_for_Change.jpg>]
-<./image/Change/Three_Change_Approaches.jpg, id=59, 965.6075pt x 448.67625pt>
+<./image/Change/Three_Change_Approaches.jpg, id=62, 965.6075pt x 448.67625pt>
 File: ./image/Change/Three_Change_Approaches.jpg Graphic file (type jpg)
 <use ./image/Change/Three_Change_Approaches.jpg>
 Package pdftex.def Info: ./image/Change/Three_Change_Approaches.jpg  used on in
@@ -762,7 +1128,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--25
  []
 
 [10]
-<./image/Salary/Universidade.jpg, id=70, 634.37pt x 531.9875pt>
+<./image/Salary/Universidade.jpg, id=73, 634.37pt x 531.9875pt>
 File: ./image/Salary/Universidade.jpg Graphic file (type jpg)
 <use ./image/Salary/Universidade.jpg>
 Package pdftex.def Info: ./image/Salary/Universidade.jpg  used on input line 29
@@ -774,7 +1140,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--31
  []
 
 [11 <./image/Salary/Universidade.jpg>]
-<./image/Salary/Eng_Elec.jpg, id=74, 736.7525pt x 365.365pt>
+<./image/Salary/Eng_Elec.jpg, id=77, 736.7525pt x 365.365pt>
 File: ./image/Salary/Eng_Elec.jpg Graphic file (type jpg)
 <use ./image/Salary/Eng_Elec.jpg>
 Package pdftex.def Info: ./image/Salary/Eng_Elec.jpg  used on input line 37.
@@ -875,7 +1241,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--26
 
  []
 
-<./image/Skills/Managerial_Skills_for_the_Global_Marketplace.jpg, id=82, 942.52
+<./image/Skills/Managerial_Skills_for_the_Global_Marketplace.jpg, id=85, 942.52
 126pt x 480.79625pt>
 File: ./image/Skills/Managerial_Skills_for_the_Global_Marketplace.jpg Graphic f
 ile (type jpg)
@@ -884,7 +1250,12 @@ Package pdftex.def Info: ./image/Skills/Managerial_Skills_for_the_Global_Market
 place.jpg  used on input line 30.
 (pdftex.def)             Requested size: 282.75856pt x 144.23997pt.
 
-Overfull \hbox (87.96873pt too wide) in paragraph at lines 2--38
+Overfull \hbox (26.68376pt too wide) in paragraph at lines 30--31
+[]  
+ []
+
+
+Overfull \hbox (45.2896pt too wide) in paragraph at lines 2--38
 []$ $[]$ 
  []
 
@@ -968,42 +1339,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--40
 
  []
 
-[17] (input/excerpt/DEFINICAO.tex
-Overfull \hbox (46.71495pt too wide) in paragraph at lines 4--37
-[] [] 
- []
+[17] (input/excerpt/sample.tex [18
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--37
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--37
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--37
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--37
-
- []
-
-)
-Overfull \hbox (46.71495pt too wide) in paragraph at lines 38--77
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 38--77
-
- []
-
-(Relatorio.bbl [18]
+]) [19] (Relatorio.bbl [20]
 babelbib: Using the BibTeX style's default font for `name'.
 babelbib: Using the BibTeX style's default font for `lastname'.
 babelbib: Using the BibTeX style's default font for `title'.
@@ -1015,50 +1353,46 @@ babelbib: Using the BibTeX style's default font for `ISBN'.
 babelbib: Using the BibTeX style's default font for `ISSN'.
 babelbib: Using the BibTeX style's default font for `url'.
 babelbib: Using the BibTeX style's default font for `numeral'.
-[19
+[21
 
-]) [20] [21] (Relatorio.aux (include/CAPAREPORT.aux)) ) 
+]) [22] [23] (Relatorio.aux (include/CAPAREPORT.aux)) ) 
 Here is how much of TeX's memory you used:
- 8908 strings out of 480790
- 140773 string characters out of 2907055
- 543095 words of memory out of 3000000
- 24657 multiletter control sequences out of 15000+200000
- 556911 words of font info for 84 fonts, out of 3000000 for 9000
+ 32708 strings out of 480790
+ 774944 string characters out of 2907055
+ 1288302 words of memory out of 3000000
+ 48156 multiletter control sequences out of 15000+200000
+ 555538 words of font info for 82 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,15n,54p,1223b,590s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,15n,72p,1223b,590s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\sergi\AppData
 \Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\sergi\A
 ppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\s
 ergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\U
 sers\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcti1200.pk>
- <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti08
-00.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/eurosym/dpi7
-20\feymr10.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
-/dpi600\ecss1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
-pen/ec/dpi600\ecti1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour
-/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/
-ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fon
-ts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\sergi\AppData\Local\MiKT
-eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\sergi\AppData\Loca
-l\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\sergi\AppDat
-a\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\sergi\
-AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\
-sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1440.pk> <C:\
-Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk
-> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1
-440.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600
-\ecrm2074.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb
-><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program
- Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.p
-fb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Progr
-am Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Relatorio.pdf (24 pages, 719335 bytes).
+ <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/eurosym/dpi720\fey
+mr10.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
+0\ecss1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
+/dpi600\ecti1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
+pen/ec/dpi600\ecrm1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour
+/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/
+ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fon
+ts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\sergi\AppData\Local\MiKT
+eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\sergi\AppData\Loca
+l\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\sergi\AppDat
+a\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\sergi\
+AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1440.pk> <C:\Users\
+sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\
+Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk
+> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2
+074.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/P
+rogram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/c
+msy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on Relatorio.pdf (26 pages, 694581 bytes).
 PDF statistics:
- 651 PDF objects out of 1000 (max. 8388607)
+ 647 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
