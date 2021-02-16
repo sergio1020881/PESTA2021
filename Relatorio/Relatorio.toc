@@ -11,6 +11,7 @@
 \contentsline {subsection}{\numberline {4.1}Análise S.W.O.T Pessoal}{15}%
 \contentsline {subsection}{\numberline {4.2}Curriculum Vitae}{16}%
 \contentsline {section}{\numberline {5}Conclusão}{17}%
+\contentsline {chapter}{\numberline {A}Definições}{20}%
 \babel@toc {portuguese}{}
 \babel@toc {portuguese}{}
 \babel@toc {portuguese}{}

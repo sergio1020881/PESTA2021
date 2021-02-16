@@ -1,9 +1,13 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  16 FEB 2021 13:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  16 FEB 2021 14:21
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
 LaTeX2e <2020-02-02> patch level 5
-L3 programming layer <2020-06-18> (include/preamble/PREAMBLEREPORT.tex
+L3 programming layer <2020-06-18>
+\@input{./include/preamble/PREAMBLEREPORT.aux}
+\openout2 = `./include/preamble/PREAMBLEREPORT.aux'.
+
+(include/preamble/PREAMBLEREPORT.tex
 ("C:\Program Files\MiKTeX\tex/latex/base\report.cls"
 Document Class: report 2019/12/20 v1.4l Standard LaTeX document class
 ("C:\Program Files\MiKTeX\tex/latex/base\size12.clo"
@@ -823,7 +827,10 @@ File: tikzlibrarypositioning.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 
 
 Writing index file Relatorio.idx
-) (Relatorio.aux (include/CAPAREPORT.aux))
+) (Relatorio.aux (include/CAPAREPORT.aux) (include/Acknowledgement.aux)
+(include/Abstract.aux) (include/Acronym.aux) (input/page/Introducao.aux)
+(input/page/Desenvolvimento.aux) (input/page/Conclusao.aux)
+(input/excerpt/DEFINICAO.aux))
 \openout1 = `Relatorio.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
@@ -934,13 +941,22 @@ Overfull \hbox (17.62482pt too wide) in paragraph at lines 33--14
 [1
 
 
+
+
 {C:/Users/sergi/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
 
- <./image/capa/ISEP_marca_cor_grande.png>] (include/Acknowledgement.tex) (inclu
-de/Abstract.tex [2
+ <./image/capa/ISEP_marca_cor_grande.png>]
+\openout2 = `./include/Acknowledgement.aux'.
+
+ (include/Acknowledgement.tex) [2
+
 
 
 ]
+\openout2 = `./include/Abstract.aux'.
+
+
+(include/Abstract.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--7
 
  []
@@ -955,11 +971,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--10
 
  []
 
-[1]) (Relatorio.toc)
+[1
+
+
+]) (Relatorio.toc)
 \tf@toc=\write5
 \openout5 = `Relatorio.toc'.
 
  [1
+
 
 ] (Relatorio.lof)
 \tf@lof=\write6
@@ -974,7 +994,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--10
  [3
 
 ]
-(include/Acronym.tex) [4] (input/page/Introducao.tex
+\openout2 = `./include/Acronym.aux'.
+
+
+(include/Acronym.tex) [4
+
+]
+\openout2 = `./input/page/Introducao.aux'.
+
+ (input/page/Introducao.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--24
 
  []
@@ -1015,7 +1043,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--42
 
  []
 
-[5 <./image/SGS/Contribuicoes_1.jpg>]
+[5
+
+
+ <./image/SGS/Contribuicoes_1.jpg>]
 Overfull \hbox (68.98318pt too wide) in paragraph at lines 48--68
  \T1/cmr/m/n/12 Ne-nhum ci-da-dão de-via acei-tar qual-quer tra-ba-lho que ga-n
 he me-nos que  $[]$
@@ -1087,7 +1118,10 @@ Overfull \hbox (61.10106pt too wide) in paragraph at lines 87--88
  []
 
 ) [8 <./image/Leadership/Leadership_Models.jpg>] [9 <./image/Change/Three_Chang
-e_Approaches.jpg>] (input/page/Desenvolvimento.tex
+e_Approaches.jpg>]
+\openout2 = `./input/page/Desenvolvimento.aux'.
+
+ (input/page/Desenvolvimento.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--25
 
  []
@@ -1127,7 +1161,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--25
 
  []
 
-[10]
+[10
+
+
+]
 <./image/Salary/Universidade.jpg, id=73, 634.37pt x 531.9875pt>
 File: ./image/Salary/Universidade.jpg Graphic file (type jpg)
 <use ./image/Salary/Universidade.jpg>
@@ -1295,53 +1332,101 @@ Underfull \hbox (badness 10000) in paragraph at lines 79--85
  []
 
 [15]))
-Underfull \hbox (badness 10000) in paragraph at lines 86--38
+Underfull \hbox (badness 10000) in paragraph at lines 86--37
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 86--38
+Underfull \hbox (badness 10000) in paragraph at lines 86--37
 
  []
 
-[16] (input/page/Conclusao.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 3--40
+[16]
+\openout2 = `./input/page/Conclusao.aux'.
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3--40
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3--40
+ (input/page/Conclusao.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 3--39
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--40
+Underfull \hbox (badness 10000) in paragraph at lines 3--39
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--40
+Underfull \hbox (badness 10000) in paragraph at lines 3--39
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--40
+Underfull \hbox (badness 10000) in paragraph at lines 3--39
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--40
+Underfull \hbox (badness 10000) in paragraph at lines 3--39
 
  []
 
-[17] (input/excerpt/sample.tex [18
 
-]) [19] (Relatorio.bbl [20]
+Underfull \hbox (badness 10000) in paragraph at lines 3--39
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--39
+
+ []
+
+[17
+
+
+] (input/excerpt/sample.tex [18
+
+
+]) [19]
+\openout2 = `./input/excerpt/DEFINICAO.aux'.
+
+ (input/excerpt/DEFINICAO.tex
+Ap\^endice A.
+
+Overfull \hbox (46.71495pt too wide) in paragraph at lines 4--37
+[] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--37
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--37
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--37
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--37
+
+ []
+
+
+Overfull \hbox (46.71495pt too wide) in paragraph at lines 38--63
+[][] [] 
+ []
+
+[20
+
+
+]) (Relatorio.bbl [21
+
+
+]
 babelbib: Using the BibTeX style's default font for `name'.
 babelbib: Using the BibTeX style's default font for `lastname'.
 babelbib: Using the BibTeX style's default font for `title'.
@@ -1353,46 +1438,53 @@ babelbib: Using the BibTeX style's default font for `ISBN'.
 babelbib: Using the BibTeX style's default font for `ISSN'.
 babelbib: Using the BibTeX style's default font for `url'.
 babelbib: Using the BibTeX style's default font for `numeral'.
-[21
+[22
 
-]) [22] [23] (Relatorio.aux (include/CAPAREPORT.aux)) ) 
+]) [23] [24] (Relatorio.aux (include/CAPAREPORT.aux)
+(include/Acknowledgement.aux) (include/Abstract.aux) (include/Acronym.aux)
+(input/page/Introducao.aux) (input/page/Desenvolvimento.aux)
+(input/page/Conclusao.aux) (input/excerpt/DEFINICAO.aux)) ) 
 Here is how much of TeX's memory you used:
- 32708 strings out of 480790
- 774944 string characters out of 2907055
- 1288302 words of memory out of 3000000
- 48156 multiletter control sequences out of 15000+200000
- 555538 words of font info for 82 fonts, out of 3000000 for 9000
+ 32767 strings out of 480790
+ 777150 string characters out of 2907055
+ 1293302 words of memory out of 3000000
+ 48182 multiletter control sequences out of 15000+200000
+ 556911 words of font info for 84 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,15n,72p,1223b,590s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\sergi\AppData
-\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\sergi\A
-ppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\s
-ergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\U
-sers\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcti1200.pk>
- <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/eurosym/dpi720\fey
-mr10.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
-0\ecss1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
-/dpi600\ecti1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
-pen/ec/dpi600\ecrm1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour
-/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/
-ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fon
-ts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\sergi\AppData\Local\MiKT
-eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\sergi\AppData\Loca
-l\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\sergi\AppDat
-a\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\sergi\
-AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1440.pk> <C:\Users\
-sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\
-Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk
-> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2
-074.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/P
-rogram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files
-/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public
-/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/c
-msy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Relatorio.pdf (26 pages, 694581 bytes).
+ 65i,15n,74p,1225b,590s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\sergi\App
+Data\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\ser
+gi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Use
+rs\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <
+C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcti1200
+.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ec
+ti0800.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/eurosym/
+dpi720\feymr10.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappe
+n/ec/dpi600\ecss1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/j
+knappen/ec/dpi600\ecti1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/lj
+four/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts
+/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX
+\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\sergi\AppData\Local\
+MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\sergi\AppData\
+Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\sergi\Ap
+pData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\se
+rgi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Us
+ers\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1440.pk> 
+<C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm144
+0.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\e
+cbx1440.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dp
+i600\ecrm2074.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10
+.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Pro
+gram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cm
+r8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/P
+rogram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on Relatorio.pdf (27 pages, 729794 bytes).
 PDF statistics:
- 647 PDF objects out of 1000 (max. 8388607)
+ 680 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
