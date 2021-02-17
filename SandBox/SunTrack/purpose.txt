@@ -1,0 +1,13 @@
+The objective is to make a sun track device on one fixed axis [W E] using a servo motor 
+(38 degrees for N S axis has pre determined by institute for solar panels in Portugal), it will have a manual 
+override in witch you type in the angle, or automatic where it will have pre-defined 
+position programmed syncronized by a clock (clock is pre programmed also by menu), it will have a margin of error that is 
+rectified using two LDR sensors circuit consisting of a intrumentation amplifier in wheatstone format input.
+The sun rise time and sun down time are the start and end cycle that is then devided by 5 or any other 
+number of precise position, and the diference between these angles is then rectified by the sensor in that margin of error, 
+or in certain small partions of time the sensor will do the positioning around a determined precise value.
+Could use the SPA library and use only the clock for positioning, but the mcu does not have suficient float precision, 
+or use a table, ignoring completely the sensor part, but for academic purpose is so.
+
+
+

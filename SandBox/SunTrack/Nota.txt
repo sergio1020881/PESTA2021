@@ -1,0 +1,6 @@
+Se usar chip FTDI para comunicar com USART e tiver driver MAX232IN este tem
+que ser removido para não inverter o sinal e ser shuntado os i-o.
+
+So se usar porta RS232 é que este chip é necessario ja que o PC tem o sinal
+invertido.
+
