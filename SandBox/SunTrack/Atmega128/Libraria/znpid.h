@@ -18,14 +18,14 @@ struct znpid{
 	float kp;
 	float ki;
 	float kd;
-	float dy; // the error
-	float py; // inicial value as zero
-	float dx; // inicial value as zero
-	float delta; // rate of growth (tangent)
+	float dy; // the error.
+	float py; // inicial value as zero, previous error value.
+	float dx; // inicial value as zero.
+	float delta; // rate of growth (tangent.
 	float setpoint;
-	float feedback; //inicial value as zero
+	float feedback; //inicial value as zero.
 	/******
-	Taking down notes for what desired to build library:
+	Taking down notes for what is desired to build library:
 	dx=tf-ti;
 	dy=setpoint-feedback;
 	integral+=((py+dy)*dx)/2; // put watchdog on this value, if above setpoint*dx*1.5 do not let it integrate anymore and wait.
