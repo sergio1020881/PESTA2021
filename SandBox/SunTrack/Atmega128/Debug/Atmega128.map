@@ -56,8 +56,8 @@ C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/a
 Allocating common symbols
 Common symbol       size              file
 
-ZNPID_clkpin        0x1               Libraria/znpid.o
 keypad_PORT         0x2               Libraria/keypad.o
+tmp                 0x4               Libraria/znpid.o
 lcd0_PIN            0x2               Libraria/lcd.o
 uart_msg            0x40              Libraria/atmega128uart.o
 CLOCK_timp          0x9               Libraria/clock.o
@@ -113,7 +113,6 @@ UART1_TxBuf         0x40              Libraria/atmega128uart.o
 MM74C923_pointer    0x2               Libraria/mm74c923.o
 lcd0_PORT           0x2               Libraria/lcd.o
 ticks               0x2               Libraria/atmega128i2c.o
-ZNPID_datapin       0x1               Libraria/znpid.o
 lcd1_PORT           0x2               Libraria/lcd.o
 func                0x4a              Libraria/mm74c923.o
 keypad_DDR          0x2               Libraria/keypad.o
@@ -125,7 +124,6 @@ laptime             0x3               Libraria/clock.o
 UART_RxHead         0x1               Libraria/atmega128uart.o
 uart                0x12              main.o
 UART_RxTail         0x1               Libraria/atmega128uart.o
-ZNPID_outpin        0x1               Libraria/znpid.o
 MM74C923_KEY_BUFFER
                     0x10              Libraria/mm74c923.o
 UART1_RxTail        0x1               Libraria/atmega128uart.o
@@ -383,25 +381,27 @@ Discarded input sections
  .text          0x00000000        0x0 Libraria/znpid.o
  .data          0x00000000        0x0 Libraria/znpid.o
  .bss           0x00000000        0x0 Libraria/znpid.o
- .text.ZNPID_shift_bit
-                0x00000000        0x2 Libraria/znpid.o
- .text.ZNPID_shift_byte
-                0x00000000        0x2 Libraria/znpid.o
- .text.ZNPID_shift_out
-                0x00000000        0x2 Libraria/znpid.o
+ .text.ZNPID_set_kc
+                0x00000000        0xc Libraria/znpid.o
+ .text.ZNPID_set_ki
+                0x00000000        0xc Libraria/znpid.o
+ .text.ZNPID_set_kd
+                0x00000000        0xc Libraria/znpid.o
+ .text.ZNPID_setpoint
+                0x00000000        0xc Libraria/znpid.o
  .text.ZNPIDenable
-                0x00000000       0x58 Libraria/znpid.o
- .debug_info    0x00000000      0x1ea Libraria/znpid.o
- .debug_abbrev  0x00000000      0x12e Libraria/znpid.o
- .debug_loc     0x00000000       0xe4 Libraria/znpid.o
+                0x00000000       0x70 Libraria/znpid.o
+ .debug_info    0x00000000      0x2e4 Libraria/znpid.o
+ .debug_abbrev  0x00000000      0x102 Libraria/znpid.o
+ .debug_loc     0x00000000       0x40 Libraria/znpid.o
  .debug_aranges
-                0x00000000       0x38 Libraria/znpid.o
- .debug_ranges  0x00000000       0x28 Libraria/znpid.o
- .debug_line    0x00000000      0x115 Libraria/znpid.o
- .debug_str     0x00000000      0x21e Libraria/znpid.o
+                0x00000000       0x40 Libraria/znpid.o
+ .debug_ranges  0x00000000       0x30 Libraria/znpid.o
+ .debug_line    0x00000000      0x126 Libraria/znpid.o
+ .debug_str     0x00000000      0x218 Libraria/znpid.o
  .comment       0x00000000       0x31 Libraria/znpid.o
  .debug_frame   0x00000000       0x64 Libraria/znpid.o
- COMMON         0x00000000        0x3 Libraria/znpid.o
+ COMMON         0x00000000        0x4 Libraria/znpid.o
  .text          0x00000000        0x0 main.o
  .data          0x00000000        0x0 main.o
  .bss           0x00000000        0x0 main.o

@@ -4959,25 +4959,25 @@ uint8_t KEYPADhl(uint8_t xi, uint8_t xf)
     1c64:	94 30       	cpi	r25, 0x04	; 4
     1c66:	19 f4       	brne	.+6      	; 0x1c6e <KEYPAD_getkey+0x214>
 						c=keypadvalue[3][0];
-    1c68:	80 91 0c 01 	lds	r24, 0x010C	; 0x80010c <__DATA_REGION_ORIGIN__+0xc>
+    1c68:	80 91 0c 01 	lds	r24, 0x010C	; 0x80010c <__data_start+0xc>
     1c6c:	0a c0       	rjmp	.+20     	; 0x1c82 <KEYPAD_getkey+0x228>
 					if(HL == (1<<KEYPADDATA_2))
     1c6e:	90 31       	cpi	r25, 0x10	; 16
     1c70:	19 f4       	brne	.+6      	; 0x1c78 <KEYPAD_getkey+0x21e>
 						c=keypadvalue[3][1];
-    1c72:	80 91 0d 01 	lds	r24, 0x010D	; 0x80010d <__DATA_REGION_ORIGIN__+0xd>
+    1c72:	80 91 0d 01 	lds	r24, 0x010D	; 0x80010d <__data_start+0xd>
     1c76:	09 c0       	rjmp	.+18     	; 0x1c8a <KEYPAD_getkey+0x230>
 					if(HL == (1<<KEYPADDATA_3))
     1c78:	90 32       	cpi	r25, 0x20	; 32
     1c7a:	19 f4       	brne	.+6      	; 0x1c82 <KEYPAD_getkey+0x228>
 						c=keypadvalue[3][2];
-    1c7c:	80 91 0e 01 	lds	r24, 0x010E	; 0x80010e <__DATA_REGION_ORIGIN__+0xe>
+    1c7c:	80 91 0e 01 	lds	r24, 0x010E	; 0x80010e <__data_start+0xe>
     1c80:	04 c0       	rjmp	.+8      	; 0x1c8a <KEYPAD_getkey+0x230>
 					if(HL == (1<<KEYPADDATA_4))
     1c82:	90 34       	cpi	r25, 0x40	; 64
     1c84:	11 f4       	brne	.+4      	; 0x1c8a <KEYPAD_getkey+0x230>
 						c=keypadvalue[3][3];
-    1c86:	80 91 0f 01 	lds	r24, 0x010F	; 0x80010f <__DATA_REGION_ORIGIN__+0xf>
+    1c86:	80 91 0f 01 	lds	r24, 0x010F	; 0x80010f <__data_start+0xf>
 				}
 				*keypad_DDR&=~(1<<KEYPADLINE_4);
     1c8a:	e0 91 06 04 	lds	r30, 0x0406	; 0x800406 <keypad_DDR>

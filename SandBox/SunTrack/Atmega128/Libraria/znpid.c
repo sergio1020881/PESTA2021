@@ -22,8 +22,9 @@ Comment:
 #endif
 #define ZERO 0
 /***Global File Variable***/
+float tmp;
 /***Header***/
-void ZNPID_set_kp(ZNPID* self, float kp);
+void ZNPID_set_kc(ZNPID* self, float kc);
 void ZNPID_set_ki(ZNPID* self, float ki);
 void ZNPID_set_kd(ZNPID* self, float kp);
 void ZNPID_setpoint(ZNPID* self, float setpoint);
@@ -38,7 +39,7 @@ ZNPID ZNPIDenable(void)
 	ZNPID znpid;
 	//import parametros
 	znpid.Ep=0;
-	znpid.kp=1;
+	znpid.kc=1;
 	znpid.ki=0;
 	znpid.kd=0;
 	znpid.integral=0;
@@ -46,7 +47,7 @@ ZNPID ZNPIDenable(void)
 	znpid.OP=0;
 	//inic variables   
 	//Direccionar apontadores para PROTOTIPOS
-	znpid.set_kp=ZNPID_set_kp;
+	znpid.set_kc=ZNPID_set_kc;
 	znpid.set_ki=ZNPID_set_ki;
 	znpid.set_kd=ZNPID_set_kd;
 	znpid.setpoint=ZNPID_setpoint;
@@ -54,9 +55,9 @@ ZNPID ZNPIDenable(void)
 	//
 	return znpid;
 }
-void ZNPID_set_kp(ZNPID* self, float kp)
+void ZNPID_set_kc(ZNPID* self, float kc)
 {
-	self->kp=kp;
+	self->kc=kc;
 }
 void ZNPID_set_ki(ZNPID* self, float ki)
 {
@@ -68,7 +69,7 @@ void ZNPID_set_kd(ZNPID* self, float kd)
 }
 void ZNPID_setpoint(ZNPID* self, float setpoint)
 {
-	self->SP=setpoint;
+	self->SetP=setpoint;
 }
 /***Interrupt***/
 /***EOF***/

@@ -14,9 +14,9 @@ Comment:
 #include <inttypes.h>
 /***Constant & Macro***/
 /***Global Variable***/
-float tmp;
+
 struct znpid{
-	float kp;
+	float kc;
 	float ki;
 	float kd;
 	float dy; // difference error y axis points.
@@ -25,7 +25,7 @@ struct znpid{
 	float dx; // difference time x axis points.
 	float derivative; // rate of growth (tangent), or derivative
 	float integral;
-	float SP; // desired output
+	float SetP; // desired output
 	float PV; // output feedback
 	float OP; // output signal
 	/******
@@ -39,7 +39,7 @@ struct znpid{
 	integral+=tmp; // put watchdog on this value, if above setpoint*dx*1.5 do not let it integrate anymore and wait. Trapezio.
 	derivative=dy/dx; //put watchdog on this value, if overshoot specified rate put in standby until drops bellow.
 	Ep=Ef;
-	result=kp*Ef;
+	result=kc*Ef;
 	tmp=ki*integral;
 	result+=tmp
 	tmp=kd*derivative;
@@ -48,10 +48,10 @@ struct znpid{
 	The main objective is to prevent overshoot, that is feedback > setpoint, but to smoothly go to zero, preventing oscillation.
 	*******/
 	/******/
-	void (*set_kp)(ZNPID* self, float kp);
-	void (*set_ki)(ZNPID* self, float ki);
-	void (*set_kd)(ZNPID* self, float kd);
-	void (*setpoint)(ZNPID* self, float setpoint);
+	void (*set_kc)(struct znpid* self, float kc);
+	void (*set_ki)(struct znpid* self, float ki);
+	void (*set_kd)(struct znpid* self, float kd);
+	void (*setpoint)(struct znpid* self, float setpoint);
 };
 typedef struct znpid ZNPID;
 /***Header***/
