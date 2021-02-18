@@ -14,23 +14,35 @@ Comment:
 #include <inttypes.h>
 /***Constant & Macro***/
 /***Global Variable***/
+float tmp;
 struct znpid{
 	float kp;
 	float ki;
 	float kd;
-	float dy; // the error.
-	float py; // inicial value as zero, previous error value.
-	float dx; // inicial value as zero.
-	float delta; // rate of growth (tangent.
-	float setpoint;
-	float feedback; //inicial value as zero.
+	float dy; // difference error y axis points.
+	float sy; // sum error points
+	float Yi; // inicial value as zero, previous error value.
+	float dx; // difference time x axis points.
+	float delta; // rate of growth (tangent), or derivative
+	float setpoint; // desired output
+	float feedback; // output feedback
+	float result;
 	/******
 	Taking down notes for what is desired to build library:
-	dx=tf-ti;
-	dy=setpoint-feedback;
-	integral+=((py+dy)*dx)/2; // put watchdog on this value, if above setpoint*dx*1.5 do not let it integrate anymore and wait.
-	py=dy;
+	Yf=setpoint-feedback;
+	dy=Yf-Yi;
+	sy=Yf+Yi;
+	dx=Xf-Xi;
+	tmp=sy*dx;
+	tmp/=2;
+	integral+=tmp; // put watchdog on this value, if above setpoint*dx*1.5 do not let it integrate anymore and wait. Trapezio.
 	delta=dy/dx; //put watchdog on this value, if overshoot specified rate put in standby until drops bellow.
+	Yi=Yf;
+	result=kp*Yf;
+	tmp=ki*integral;
+	result+=tmp
+	tmp=kd*delta;
+	result+=tmp; // do step by step, because of mcu, always two variable equation.
 	
 	The main objective is to prevent overshoot, that is feedback > setpoint, but to smoothly go to zero, preventing oscillation.
 	*******/
