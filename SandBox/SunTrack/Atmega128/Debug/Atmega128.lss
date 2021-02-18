@@ -15,19 +15,19 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
   5 .debug_aranges 000006d0  00000000  00000000  00004144  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_info   0000848f  00000000  00000000  00004814  2**0
+  6 .debug_info   00008496  00000000  00000000  00004814  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 00001e70  00000000  00000000  0000cca3  2**0
+  7 .debug_abbrev 00001e70  00000000  00000000  0000ccaa  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   000046ac  00000000  00000000  0000eb13  2**0
+  8 .debug_line   000046ac  00000000  00000000  0000eb1a  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_frame  000013e4  00000000  00000000  000131c0  2**2
+  9 .debug_frame  000013e4  00000000  00000000  000131c8  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    00001734  00000000  00000000  000145a4  2**0
+ 10 .debug_str    000016d7  00000000  00000000  000145ac  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    00006ab7  00000000  00000000  00015cd8  2**0
+ 11 .debug_loc    00006ab7  00000000  00000000  00015c83  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00000620  00000000  00000000  0001c78f  2**0
+ 12 .debug_ranges 00000620  00000000  00000000  0001c73a  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -4959,25 +4959,25 @@ uint8_t KEYPADhl(uint8_t xi, uint8_t xf)
     1c64:	94 30       	cpi	r25, 0x04	; 4
     1c66:	19 f4       	brne	.+6      	; 0x1c6e <KEYPAD_getkey+0x214>
 						c=keypadvalue[3][0];
-    1c68:	80 91 0c 01 	lds	r24, 0x010C	; 0x80010c <__data_start+0xc>
+    1c68:	80 91 0c 01 	lds	r24, 0x010C	; 0x80010c <__DATA_REGION_ORIGIN__+0xc>
     1c6c:	0a c0       	rjmp	.+20     	; 0x1c82 <KEYPAD_getkey+0x228>
 					if(HL == (1<<KEYPADDATA_2))
     1c6e:	90 31       	cpi	r25, 0x10	; 16
     1c70:	19 f4       	brne	.+6      	; 0x1c78 <KEYPAD_getkey+0x21e>
 						c=keypadvalue[3][1];
-    1c72:	80 91 0d 01 	lds	r24, 0x010D	; 0x80010d <__data_start+0xd>
+    1c72:	80 91 0d 01 	lds	r24, 0x010D	; 0x80010d <__DATA_REGION_ORIGIN__+0xd>
     1c76:	09 c0       	rjmp	.+18     	; 0x1c8a <KEYPAD_getkey+0x230>
 					if(HL == (1<<KEYPADDATA_3))
     1c78:	90 32       	cpi	r25, 0x20	; 32
     1c7a:	19 f4       	brne	.+6      	; 0x1c82 <KEYPAD_getkey+0x228>
 						c=keypadvalue[3][2];
-    1c7c:	80 91 0e 01 	lds	r24, 0x010E	; 0x80010e <__data_start+0xe>
+    1c7c:	80 91 0e 01 	lds	r24, 0x010E	; 0x80010e <__DATA_REGION_ORIGIN__+0xe>
     1c80:	04 c0       	rjmp	.+8      	; 0x1c8a <KEYPAD_getkey+0x230>
 					if(HL == (1<<KEYPADDATA_4))
     1c82:	90 34       	cpi	r25, 0x40	; 64
     1c84:	11 f4       	brne	.+4      	; 0x1c8a <KEYPAD_getkey+0x230>
 						c=keypadvalue[3][3];
-    1c86:	80 91 0f 01 	lds	r24, 0x010F	; 0x80010f <__data_start+0xf>
+    1c86:	80 91 0f 01 	lds	r24, 0x010F	; 0x80010f <__DATA_REGION_ORIGIN__+0xf>
 				}
 				*keypad_DDR&=~(1<<KEYPADLINE_4);
     1c8a:	e0 91 06 04 	lds	r30, 0x0406	; 0x800406 <keypad_DDR>

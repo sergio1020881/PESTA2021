@@ -33,7 +33,7 @@ Comment:
 #include "pcf8563rtc.h"
 #include "keypad.h"
 #include "74hc595.h"
-// #include "znpid.h"
+#include "znpid.h"
 #include "atmega128uart.h"
 /*
 ** Constant and Macro
