@@ -56,7 +56,7 @@ PCF8563RTC rtc;
 uint8_t count=0; // 1Hz
 uint8_t increment=0; // 1Hz
 char* ptr=NULL; // pointing to analog reading string
-char* uartreceive=NULL; // pointing to Rx Buffer
+//char* uartreceive=NULL; // pointing to Rx Buffer
 /*
 ** Header
 */
@@ -74,7 +74,8 @@ int main(void)
 	TIMER_COUNTER1 timer1 = TIMER_COUNTER1enable(9,0); // PWM Positioning
 	rtc = PCF8563RTCenable(16); // RTC with I2C
 	shift = HC595enable(&DDRG,&PORTG,2,0,1);
-	uart = UART1enable(103,8,1,NONE);//UART 103 para 9600, 68 para 14400
+	//uart = UART1enable(103,8,1,NONE);//UART 103 para 9600, 68 para 14400
+	ZNPID pid = ZNPIDenable();
 	/******/
 	char Menu='1'; // Main menu selector
 	uint16_t adcvalue; // analog reading
@@ -85,7 +86,7 @@ int main(void)
 	char tstr[6]; // time vector
 	char cal='0'; // Sub Menu for setting up date and time
 	uint16_t set;
-	char uartmessage[64];
+	//char uartmessage[64];
 	ptr=str;
 	uint16_t positionhour=12;
 	/***Parameters timers***/
@@ -95,13 +96,16 @@ int main(void)
 	timer1.compareA(20000);
 	timer1.start(8);
 	rtc.SetClkOut(1, 2); // oscillate pin at 1 sec
+	pid.set_SP(&pid, 10);
+	pid.set_kd(&pid, 6);
+	pid.set_ki(&pid, 12);
 	/**********/
 	//TODO:: Please write your application code
 	while(TRUE){
 		/***PREAMBLE***/
 		lcd0.reboot();
 		keypad.read();
-		uartreceive=uart.read();
+		//uartreceive=uart.read();
 		/***Reading input***/
 		lcd0.gotoxy(3,13);
 		lcd0.putch(':');
@@ -143,33 +147,33 @@ int main(void)
 					lcd0.string_size(function.ui16toa(rtc.bcd2dec(tm.VL_seconds)),2);
 					/***Message from uart***/
 					lcd0.gotoxy(2,0);
-					strcpy(uartmessage,uartreceive);
-					if(uartreceive[0]!='\0'){lcd0.string_size("u> ",3);lcd0.string_size(uartmessage,17);}
+					//strcpy(uartmessage,uartreceive);
+					//if(uartreceive[0]!='\0'){lcd0.string_size("u> ",3);lcd0.string_size(uartmessage,17);}
 					//if(!strcmp(uartreceive,"position\r")){
-					if(!strcmp(uartreceive,"position")){
-						uart.puts("> ");
-						uart.puts("analog Reading: ");
-						uart.puts(ptr);
-						uart.puts("\r\n");
-						uart.Rxflush();
-					}
+					//if(!strcmp(uartreceive,"position")){
+						//uart.puts("> ");
+						//uart.puts("analog Reading: ");
+						//uart.puts(ptr);
+						//uart.puts("\r\n");
+						//uart.Rxflush();
+					//}
 					//if(!strcmp(uartreceive,"time\r")){
-					if(!strcmp(uartreceive,"time")){
+					//if(!strcmp(uartreceive,"time")){
 						//uart.putc('>');uart.puts("analog Reading: ");uart.puts(ptr);uart.puts("\r\n");
-						uart.puts(function.ui16toa(rtc.bcd2dec(tm.hours)));
-						uart.putc(':');
-						uart.puts(function.ui16toa(rtc.bcd2dec(tm.minutes)));
-						uart.putc(':');
-						uart.puts(function.ui16toa(rtc.bcd2dec(tm.VL_seconds)));
-						uart.puts("\r\n");
-						uart.Rxflush();
-					}
+						//uart.puts(function.ui16toa(rtc.bcd2dec(tm.hours)));
+						//uart.putc(':');
+						//uart.puts(function.ui16toa(rtc.bcd2dec(tm.minutes)));
+						//uart.putc(':');
+						//uart.puts(function.ui16toa(rtc.bcd2dec(tm.VL_seconds)));
+						//uart.puts("\r\n");
+						//uart.Rxflush();
+					//}
 				break;
 			/***MENU 2***/
 			case '2': // Manual position override 
 				if(!strcmp(keypad.get().string,"A")){Menu='3';keypad.flush();lcd0.clear();break;}
 				if(!strcmp(keypad.get().string,"B")){Menu='1';keypad.flush();lcd0.clear();break;}
-				if(!strcmp(keypad.get().string,"C")){Menu='1';keypad.flush();lcd0.clear();uart.puts("Manual exit\r\n");break;}
+				if(!strcmp(keypad.get().string,"C")){Menu='1';keypad.flush();lcd0.clear();break;}
 					lcd0.gotoxy(0,0);
 					lcd0.string_size("Manual: ",8);
 					lcd0.string_size(mstr,3);
@@ -196,7 +200,7 @@ int main(void)
 			case '3': //Set Time and Date
 				if(!strcmp(keypad.get().string,"A")){Menu='1';keypad.flush();lcd0.clear();break;}
 				if(!strcmp(keypad.get().string,"B")){Menu='2';keypad.flush();lcd0.clear();break;}
-				if(!strcmp(keypad.get().string,"C")){Menu='1';cal='0';keypad.flush();lcd0.clear();uart.puts("Clock exit\r\n");break;}
+				if(!strcmp(keypad.get().string,"C")){Menu='1';cal='0';keypad.flush();lcd0.clear();break;}
 					/*** Menu to set RTC Time and Date ***/
 					lcd0.gotoxy(0,0);
 					lcd0.string_size("Date and Time Setup",19);

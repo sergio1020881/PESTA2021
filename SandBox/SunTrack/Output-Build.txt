@@ -1,23 +1,112 @@
-﻿------ Build started: Project: Atmega128, Configuration: Debug AVR ------
+﻿------ Rebuild All started: Project: Atmega128, Configuration: Debug AVR ------
+Build started.
+Project "Atmega128.cproj" (Clean target(s)):
+Target "Clean" in file "C:\Program Files (x86)\Atmel\Studio\7.0\Vs\Compiler.targets" from project "C:\Users\sergi\Documents\GITHUB\PESTA2021\SandBox\SunTrack\Atmega128\Atmega128.cproj" (entry point):
+	Task "RunCompilerTask"
+		Shell Utils Path C:\Program Files (x86)\Atmel\Studio\7.0\shellUtils
+		C:\Program Files (x86)\Atmel\Studio\7.0\shellUtils\make.exe clean 
+		rm -rf  Libraria/74hc595.o Libraria/atmega128analog.o Libraria/atmega128i2c.o Libraria/atmega128timer.o Libraria/atmega128uart.o Libraria/clock.o Libraria/eeprom.o Libraria/function.o Libraria/keypad.o Libraria/lcd.o Libraria/lfsm.o Libraria/mm74c923.o Libraria/pcf8563rtc.o Libraria/rotenc.o Libraria/znpid.o main.o   
+		rm -rf  Libraria/74hc595.d Libraria/atmega128analog.d Libraria/atmega128i2c.d Libraria/atmega128timer.d Libraria/atmega128uart.d Libraria/clock.d Libraria/eeprom.d Libraria/function.d Libraria/keypad.d Libraria/lcd.d Libraria/lfsm.d Libraria/mm74c923.d Libraria/pcf8563rtc.d Libraria/rotenc.d Libraria/znpid.d main.d   
+		rm -rf "Atmega128.elf" "Atmega128.a" "Atmega128.hex" "Atmega128.lss" "Atmega128.eep" "Atmega128.map" "Atmega128.srec" "Atmega128.usersignatures"
+	Done executing task "RunCompilerTask".
+Done building target "Clean" in project "Atmega128.cproj".
+Done building project "Atmega128.cproj".
+
+Build succeeded.
+------ Rebuild All started: Project: Atmega128, Configuration: Debug AVR ------
 Build started.
 Project "Atmega128.cproj" (default targets):
 Target "PreBuildEvent" skipped, due to false condition; ('$(PreBuildEvent)'!='') was evaluated as (''!='').
-Target "CoreBuild" in file "C:\Program Files (x86)\Atmel\Studio\7.0\Vs\Compiler.targets" from project "C:\Users\sergi\Documents\GITHUB\LABSIS20202021\Relatorio_2\Trabalho\SunTrack\Atmega128\Atmega128.cproj" (target "Build" depends on it):
+Target "CoreBuild" in file "C:\Program Files (x86)\Atmel\Studio\7.0\Vs\Compiler.targets" from project "C:\Users\sergi\Documents\GITHUB\PESTA2021\SandBox\SunTrack\Atmega128\Atmega128.cproj" (target "Build" depends on it):
 	Task "RunCompilerTask"
 		Shell Utils Path C:\Program Files (x86)\Atmel\Studio\7.0\shellUtils
 		C:\Program Files (x86)\Atmel\Studio\7.0\shellUtils\make.exe all --jobs 4 --output-sync 
-		make: Nothing to be done for 'all'.
+		Building file: ../Libraria/74hc595.c
+		Invoking: AVR/GNU C Compiler : 5.4.0
+		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe"  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\include" -I"../Libraria"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\gcc\dev\atmega128" -c -std=gnu99 -MD -MP -MF "Libraria/74hc595.d" -MT"Libraria/74hc595.d" -MT"Libraria/74hc595.o"   -o "Libraria/74hc595.o" "../Libraria/74hc595.c" 
+		Finished building: ../Libraria/74hc595.c
+		Building file: ../Libraria/atmega128analog.c
+		Invoking: AVR/GNU C Compiler : 5.4.0
+		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe"  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\include" -I"../Libraria"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\gcc\dev\atmega128" -c -std=gnu99 -MD -MP -MF "Libraria/atmega128analog.d" -MT"Libraria/atmega128analog.d" -MT"Libraria/atmega128analog.o"   -o "Libraria/atmega128analog.o" "../Libraria/atmega128analog.c" 
+		Finished building: ../Libraria/atmega128analog.c
+		Building file: ../Libraria/atmega128i2c.c
+		Invoking: AVR/GNU C Compiler : 5.4.0
+		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe"  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\include" -I"../Libraria"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\gcc\dev\atmega128" -c -std=gnu99 -MD -MP -MF "Libraria/atmega128i2c.d" -MT"Libraria/atmega128i2c.d" -MT"Libraria/atmega128i2c.o"   -o "Libraria/atmega128i2c.o" "../Libraria/atmega128i2c.c" 
+		Finished building: ../Libraria/atmega128i2c.c
+		Building file: ../Libraria/atmega128timer.c
+		Invoking: AVR/GNU C Compiler : 5.4.0
+		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe"  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\include" -I"../Libraria"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\gcc\dev\atmega128" -c -std=gnu99 -MD -MP -MF "Libraria/atmega128timer.d" -MT"Libraria/atmega128timer.d" -MT"Libraria/atmega128timer.o"   -o "Libraria/atmega128timer.o" "../Libraria/atmega128timer.c" 
+		Finished building: ../Libraria/atmega128timer.c
+		Building file: ../Libraria/clock.c
+		Invoking: AVR/GNU C Compiler : 5.4.0
+		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe"  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\include" -I"../Libraria"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\gcc\dev\atmega128" -c -std=gnu99 -MD -MP -MF "Libraria/clock.d" -MT"Libraria/clock.d" -MT"Libraria/clock.o"   -o "Libraria/clock.o" "../Libraria/clock.c" 
+		Finished building: ../Libraria/clock.c
+		Building file: ../Libraria/atmega128uart.c
+		Invoking: AVR/GNU C Compiler : 5.4.0
+		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe"  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\include" -I"../Libraria"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\gcc\dev\atmega128" -c -std=gnu99 -MD -MP -MF "Libraria/atmega128uart.d" -MT"Libraria/atmega128uart.d" -MT"Libraria/atmega128uart.o"   -o "Libraria/atmega128uart.o" "../Libraria/atmega128uart.c" 
+		Finished building: ../Libraria/atmega128uart.c
+		Building file: ../Libraria/eeprom.c
+		Invoking: AVR/GNU C Compiler : 5.4.0
+		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe"  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\include" -I"../Libraria"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\gcc\dev\atmega128" -c -std=gnu99 -MD -MP -MF "Libraria/eeprom.d" -MT"Libraria/eeprom.d" -MT"Libraria/eeprom.o"   -o "Libraria/eeprom.o" "../Libraria/eeprom.c" 
+		Finished building: ../Libraria/eeprom.c
+		Building file: ../Libraria/keypad.c
+		Invoking: AVR/GNU C Compiler : 5.4.0
+		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe"  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\include" -I"../Libraria"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\gcc\dev\atmega128" -c -std=gnu99 -MD -MP -MF "Libraria/keypad.d" -MT"Libraria/keypad.d" -MT"Libraria/keypad.o"   -o "Libraria/keypad.o" "../Libraria/keypad.c" 
+		Finished building: ../Libraria/keypad.c
+		Building file: ../Libraria/function.c
+		Invoking: AVR/GNU C Compiler : 5.4.0
+		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe"  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\include" -I"../Libraria"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\gcc\dev\atmega128" -c -std=gnu99 -MD -MP -MF "Libraria/function.d" -MT"Libraria/function.d" -MT"Libraria/function.o"   -o "Libraria/function.o" "../Libraria/function.c" 
+		Finished building: ../Libraria/function.c
+		Building file: ../Libraria/lcd.c
+		Invoking: AVR/GNU C Compiler : 5.4.0
+		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe"  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\include" -I"../Libraria"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\gcc\dev\atmega128" -c -std=gnu99 -MD -MP -MF "Libraria/lcd.d" -MT"Libraria/lcd.d" -MT"Libraria/lcd.o"   -o "Libraria/lcd.o" "../Libraria/lcd.c" 
+		Finished building: ../Libraria/lcd.c
+		Building file: ../Libraria/lfsm.c
+		Invoking: AVR/GNU C Compiler : 5.4.0
+		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe"  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\include" -I"../Libraria"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\gcc\dev\atmega128" -c -std=gnu99 -MD -MP -MF "Libraria/lfsm.d" -MT"Libraria/lfsm.d" -MT"Libraria/lfsm.o"   -o "Libraria/lfsm.o" "../Libraria/lfsm.c" 
+		Finished building: ../Libraria/lfsm.c
+		Building file: ../Libraria/mm74c923.c
+		Invoking: AVR/GNU C Compiler : 5.4.0
+		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe"  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\include" -I"../Libraria"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\gcc\dev\atmega128" -c -std=gnu99 -MD -MP -MF "Libraria/mm74c923.d" -MT"Libraria/mm74c923.d" -MT"Libraria/mm74c923.o"   -o "Libraria/mm74c923.o" "../Libraria/mm74c923.c" 
+		Finished building: ../Libraria/mm74c923.c
+		Building file: ../Libraria/pcf8563rtc.c
+		Invoking: AVR/GNU C Compiler : 5.4.0
+		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe"  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\include" -I"../Libraria"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\gcc\dev\atmega128" -c -std=gnu99 -MD -MP -MF "Libraria/pcf8563rtc.d" -MT"Libraria/pcf8563rtc.d" -MT"Libraria/pcf8563rtc.o"   -o "Libraria/pcf8563rtc.o" "../Libraria/pcf8563rtc.c" 
+		Finished building: ../Libraria/pcf8563rtc.c
+		Building file: ../Libraria/rotenc.c
+		Invoking: AVR/GNU C Compiler : 5.4.0
+		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe"  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\include" -I"../Libraria"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\gcc\dev\atmega128" -c -std=gnu99 -MD -MP -MF "Libraria/rotenc.d" -MT"Libraria/rotenc.d" -MT"Libraria/rotenc.o"   -o "Libraria/rotenc.o" "../Libraria/rotenc.c" 
+		Finished building: ../Libraria/rotenc.c
+		Building file: ../Libraria/znpid.c
+		Invoking: AVR/GNU C Compiler : 5.4.0
+		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe"  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\include" -I"../Libraria"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\gcc\dev\atmega128" -c -std=gnu99 -MD -MP -MF "Libraria/znpid.d" -MT"Libraria/znpid.d" -MT"Libraria/znpid.o"   -o "Libraria/znpid.o" "../Libraria/znpid.c" 
+		Finished building: ../Libraria/znpid.c
+		Building file: .././main.c
+		Invoking: AVR/GNU C Compiler : 5.4.0
+		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe"  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\include" -I"../Libraria"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\gcc\dev\atmega128" -c -std=gnu99 -MD -MP -MF "main.d" -MT"main.d" -MT"main.o"   -o "main.o" ".././main.c" 
+		Finished building: .././main.c
+		Building target: Atmega128.elf
+		Invoking: AVR/GNU Linker : 5.4.0
+		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe" -o Atmega128.elf  Libraria/74hc595.o Libraria/atmega128analog.o Libraria/atmega128i2c.o Libraria/atmega128timer.o Libraria/atmega128uart.o Libraria/clock.o Libraria/eeprom.o Libraria/function.o Libraria/keypad.o Libraria/lcd.o Libraria/lfsm.o Libraria/mm74c923.o Libraria/pcf8563rtc.o Libraria/rotenc.o Libraria/znpid.o main.o   -Wl,-Map="Atmega128.map" -Wl,--start-group -Wl,-lm  -Wl,--end-group -Wl,--gc-sections -mrelax -mmcu=atmega128 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\gcc\dev\atmega128"  
+		Finished building target: Atmega128.elf
+		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-objcopy.exe" -O ihex -R .eeprom -R .fuse -R .lock -R .signature -R .user_signatures  "Atmega128.elf" "Atmega128.hex"
+		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-objcopy.exe" -j .eeprom  --set-section-flags=.eeprom=alloc,load --change-section-lma .eeprom=0  --no-change-warnings -O ihex "Atmega128.elf" "Atmega128.eep" || exit 0
+		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-objdump.exe" -h -S "Atmega128.elf" > "Atmega128.lss"
+		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-objcopy.exe" -O srec -R .eeprom -R .fuse -R .lock -R .signature -R .user_signatures "Atmega128.elf" "Atmega128.srec"
+		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-size.exe" "Atmega128.elf"
+		   text	   data	    bss	    dec	    hex	filename
+		  15810	    218	    707	  16735	   415f	Atmega128.elf
 	Done executing task "RunCompilerTask".
 	Task "RunOutputFileVerifyTask"
-				Program Memory Usage 	:	16360 bytes   12.5 % Full
-				Data Memory Usage 		:	989 bytes   24.1 % Full
+				Program Memory Usage 	:	16028 bytes   12.2 % Full
+				Data Memory Usage 		:	925 bytes   22.6 % Full
 				Warning: Memory Usage estimation may not be accurate if there are sections other than .text sections in ELF file
 	Done executing task "RunOutputFileVerifyTask".
 Done building target "CoreBuild" in project "Atmega128.cproj".
 Target "PostBuildEvent" skipped, due to false condition; ('$(PostBuildEvent)' != '') was evaluated as ('' != '').
-Target "Build" in file "C:\Program Files (x86)\Atmel\Studio\7.0\Vs\Avr.common.targets" from project "C:\Users\sergi\Documents\GITHUB\LABSIS20202021\Relatorio_2\Trabalho\SunTrack\Atmega128\Atmega128.cproj" (entry point):
+Target "Build" in file "C:\Program Files (x86)\Atmel\Studio\7.0\Vs\Avr.common.targets" from project "C:\Users\sergi\Documents\GITHUB\PESTA2021\SandBox\SunTrack\Atmega128\Atmega128.cproj" (entry point):
 Done building target "Build" in project "Atmega128.cproj".
 Done building project "Atmega128.cproj".
 
 Build succeeded.
-========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========
+========== Rebuild All: 1 succeeded, 0 failed, 0 skipped ==========
