@@ -21,7 +21,7 @@ struct znpid{
 	float kd;
 	float dy; // difference error y axis points.
 	float sy; // sum error points
-	float Yi; // inicial value as zero, previous error value.
+	float Yp; // inicial value as zero, previous error value.
 	float dx; // difference time x axis points.
 	float delta; // rate of growth (tangent), or derivative
 	float setpoint; // desired output
@@ -30,14 +30,14 @@ struct znpid{
 	/******
 	Taking down notes for what is desired to build library:
 	Yf=setpoint-feedback;
-	dy=Yf-Yi;
-	sy=Yf+Yi;
-	dx=Xf-Xi;
+	dy=Yf-Yp;
+	sy=Yf+Yp;
+	dx=Xf-Xp;
 	tmp=sy*dx;
 	tmp/=2;
 	integral+=tmp; // put watchdog on this value, if above setpoint*dx*1.5 do not let it integrate anymore and wait. Trapezio.
 	delta=dy/dx; //put watchdog on this value, if overshoot specified rate put in standby until drops bellow.
-	Yi=Yf;
+	Yp=Yf;
 	result=kp*Yf;
 	tmp=ki*integral;
 	result+=tmp
