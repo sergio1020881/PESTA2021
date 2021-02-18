@@ -22,15 +22,13 @@ Comment:
 #endif
 #define ZERO 0
 /***Global File Variable***/
-uint8_t ZNPID_datapin;
-uint8_t ZNPID_clkpin; 
-uint8_t ZNPID_outpin;
 /***Header***/
-void ZNPID_shift_bit(uint8_t bool);
-void ZNPID_shift_byte(uint8_t byte);
-void ZNPID_shift_out(void);
+void ZNPID_set_kp(ZNPID* self, float kp);
+void ZNPID_set_ki(ZNPID* self, float ki);
+void ZNPID_set_kd(ZNPID* self, float kp);
+void ZNPID_setpoint(ZNPID* self, float setpoint);
 /***Procedure & Function***/
-ZNPID ZNPIDenable(ZNPID* self, uint8_t datapin, uint8_t clkpin, uint8_t outpin)
+ZNPID ZNPIDenable(void)
 {
 	//LOCAL VARIABLES
 	uint8_t tSREG;
@@ -39,34 +37,38 @@ ZNPID ZNPIDenable(ZNPID* self, uint8_t datapin, uint8_t clkpin, uint8_t outpin)
 	//ALLOCAÇÂO MEMORIA PARA Estrutura
 	ZNPID znpid;
 	//import parametros
-	ZNPID_datapin=datapin;
-	ZNPID_clkpin=clkpin;
-	ZNPID_outpin=outpin;
-	//inic variables
-    
+	znpid.Ep=0;
+	znpid.kp=1;
+	znpid.ki=0;
+	znpid.kd=0;
+	znpid.integral=0;
+	znpid.derivative=0;
+	znpid.OP=0;
+	//inic variables   
 	//Direccionar apontadores para PROTOTIPOS
-	znpid.bit=ZNPID_shift_bit;
-	znpid.byte=ZNPID_shift_byte;
-	znpid.out=ZNPID_shift_out;
+	znpid.set_kp=ZNPID_set_kp;
+	znpid.set_ki=ZNPID_set_ki;
+	znpid.set_kd=ZNPID_set_kd;
+	znpid.setpoint=ZNPID_setpoint;
 	SREG=tSREG;
 	//
 	return znpid;
 }
-void ZNPID_shift_bit(uint8_t bool)
+void ZNPID_set_kp(ZNPID* self, float kp)
 {
-		
+	self->kp=kp;
 }
-void ZNPID_shift_byte(uint8_t byte)
+void ZNPID_set_ki(ZNPID* self, float ki)
 {
-	uint8_t i;
-	for(i=0;i<8;i++)
-		ZNPID_shift_bit(byte & (1<<i));
-	ZNPID_shift_out();
+	self->ki=ki;
 }
-void ZNPID_shift_out(void)
+void ZNPID_set_kd(ZNPID* self, float kd)
+{	
+	self->kd=kd;
+}
+void ZNPID_setpoint(ZNPID* self, float setpoint)
 {
-	
-	
+	self->SP=setpoint;
 }
 /***Interrupt***/
 /***EOF***/
