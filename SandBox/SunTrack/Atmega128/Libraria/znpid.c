@@ -44,6 +44,7 @@ ZNPID ZNPIDenable(void)
 	//ALLOCAÇÂO MEMORIA PARA Estrutura
 	ZNPID znpid;
 	//import parametros
+	//inic variables
 	znpid.Ep=0;
 	znpid.kc=1;
 	znpid.ki=0;
@@ -51,7 +52,6 @@ ZNPID ZNPIDenable(void)
 	znpid.integral=0;
 	znpid.derivative=0;
 	znpid.OP=0;
-	//inic variables   
 	//Direccionar apontadores para PROTOTIPOS
 	znpid.set_kc=ZNPID_set_kc;
 	znpid.set_ki=ZNPID_set_ki;
@@ -104,6 +104,7 @@ float derivative(ZNPID* self, float PV, float timelapse)
 float ZNPID_output(ZNPID* self, float PV, float timelapse)
 {
 	float result;
+	self->PV=PV;
 	result=product(self->kc, self->Ep);
 	tmp=product(self->ki, integral(self, PV, timelapse));
 	result=sum(result, tmp);
