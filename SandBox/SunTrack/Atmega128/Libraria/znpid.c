@@ -105,11 +105,12 @@ float ZNPID_output(ZNPID* self, float PV, float timelapse)
 {
 	float result;
 	self->PV=PV;
+	self->dx=timelapse;
 	result=product(self->kc, self->Ep);
 	tmp=product(self->ki, integral(self, PV, timelapse));
 	result=sum(result, tmp);
 	tmp=product(self->kd, derivative(self, PV, timelapse));
-	result=sum(result, tmp);;
+	result=sum(result, tmp);
 	self->Ep = self->SetP - PV;
 	self->OP=result;
 	return result;
