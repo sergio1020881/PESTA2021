@@ -48,11 +48,13 @@ Comment:
 struct time tm; // time struct RTC
 struct date dt; // date struct RTC
 HC595 shift;
-//UART1 uart;
 FUNC function;
+ZNPID pid;
 uint8_t count=0; // 1Hz
 uint8_t increment=0; // 1Hz
 char* ptr=NULL; // pointing to analog reading string
+uint16_t adcvalue; // analog reading
+float pid_out;
 /*
 ** Header
 */
@@ -69,10 +71,9 @@ int main(void)
 	TIMER_COUNTER0 timer0 = TIMER_COUNTER0enable(2,2); // 1Hz to HC595
 	TIMER_COUNTER1 timer1 = TIMER_COUNTER1enable(9,0); // PWM Positioning
 	shift = HC595enable(&DDRG,&PORTG,2,0,1);
-	ZNPID pid = ZNPIDenable();
+	pid = ZNPIDenable();
 	/******/
 	char Menu='1'; // Main menu selector
-	uint16_t adcvalue; // analog reading
 	char str[6]="0"; // analog vector
 	int16_t mvalue=90; // manual position reading
 	int16_t m_value; // manual positioning
@@ -84,8 +85,9 @@ int main(void)
 	timer1.compoutmodeB(2);
 	timer1.compareA(20000);
 	timer1.start(8);
-	pid.set_kd(&pid, 1);
-	pid.set_ki(&pid, 0.01);
+	pid.set_kc(&pid, 1);
+	pid.set_kd(&pid, 10000); //
+	pid.set_ki(&pid, 0.01); // will provoke overshoot, to much acceleration limit max value and minimum value.
 	pid.set_SP(&pid, 520);
 	/**********/
 	//TODO:: Please write your application code
@@ -113,8 +115,8 @@ int main(void)
 					
 					// PID output
 					lcd0.gotoxy(0,13);
-					strcpy(str,function.i32toa(pid.output(&pid,adcvalue,1)));
-					lcd0.string_size(str,4);
+					strcpy(str,function.i32toa(pid_out));
+					lcd0.string_size(str,6);
 					
 					
 					
@@ -181,6 +183,7 @@ ISR(TIMER0_COMP_vect) // 1Hz and usart Tx
 	Sreg=SREG;
 	SREG&=~(1<<7);
 	if(count>59){ //59 -> 1Hz
+		pid_out=pid.output(&pid,adcvalue,1);
 		increment++;
 		if((increment & 0x0F) < 8){
 			shift.bit(0);
