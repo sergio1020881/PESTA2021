@@ -5692,7 +5692,7 @@ int main(void)
     22b0:	88 e0       	ldi	r24, 0x08	; 8
     22b2:	90 e0       	ldi	r25, 0x00	; 0
     22b4:	09 95       	icall
-	pid.set_kd(&pid, 6);
+	pid.set_kd(&pid, 1);
     22b6:	c2 55       	subi	r28, 0x52	; 82
     22b8:	df 4f       	sbci	r29, 0xFF	; 255
     22ba:	e8 81       	ld	r30, Y
@@ -5701,23 +5701,23 @@ int main(void)
     22c0:	d0 40       	sbci	r29, 0x00	; 0
     22c2:	40 e0       	ldi	r20, 0x00	; 0
     22c4:	50 e0       	ldi	r21, 0x00	; 0
-    22c6:	60 ec       	ldi	r22, 0xC0	; 192
-    22c8:	70 e4       	ldi	r23, 0x40	; 64
+    22c6:	60 e8       	ldi	r22, 0x80	; 128
+    22c8:	7f e3       	ldi	r23, 0x3F	; 63
     22ca:	ce 01       	movw	r24, r28
     22cc:	8a 58       	subi	r24, 0x8A	; 138
     22ce:	9f 4f       	sbci	r25, 0xFF	; 255
     22d0:	09 95       	icall
-	pid.set_ki(&pid, 12);
+	pid.set_ki(&pid, 0.01);
     22d2:	c4 55       	subi	r28, 0x54	; 84
     22d4:	df 4f       	sbci	r29, 0xFF	; 255
     22d6:	e8 81       	ld	r30, Y
     22d8:	f9 81       	ldd	r31, Y+1	; 0x01
     22da:	cc 5a       	subi	r28, 0xAC	; 172
     22dc:	d0 40       	sbci	r29, 0x00	; 0
-    22de:	40 e0       	ldi	r20, 0x00	; 0
-    22e0:	50 e0       	ldi	r21, 0x00	; 0
-    22e2:	60 e4       	ldi	r22, 0x40	; 64
-    22e4:	71 e4       	ldi	r23, 0x41	; 65
+    22de:	4a e0       	ldi	r20, 0x0A	; 10
+    22e0:	57 ed       	ldi	r21, 0xD7	; 215
+    22e2:	63 e2       	ldi	r22, 0x23	; 35
+    22e4:	7c e3       	ldi	r23, 0x3C	; 60
     22e6:	ce 01       	movw	r24, r28
     22e8:	8a 58       	subi	r24, 0x8A	; 138
     22ea:	9f 4f       	sbci	r25, 0xFF	; 255

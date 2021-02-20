@@ -84,8 +84,8 @@ int main(void)
 	timer1.compoutmodeB(2);
 	timer1.compareA(20000);
 	timer1.start(8);
-	pid.set_kd(&pid, 6);
-	pid.set_ki(&pid, 12);
+	pid.set_kd(&pid, 1);
+	pid.set_ki(&pid, 0.01);
 	pid.set_SP(&pid, 520);
 	/**********/
 	//TODO:: Please write your application code
