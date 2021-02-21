@@ -86,8 +86,8 @@ int main(void)
 	timer1.compareA(20000);
 	timer1.start(8);
 	pid.set_kc(&pid, 1);
-	pid.set_kd(&pid, 10000); //
-	pid.set_ki(&pid, 0.01); // will provoke overshoot, to much acceleration limit max value and minimum value.
+	pid.set_kd(&pid, 1); //
+	pid.set_ki(&pid, 0.1); // will provoke overshoot, to much acceleration limit max value and minimum value.
 	pid.set_SP(&pid, 520);
 	/**********/
 	//TODO:: Please write your application code
@@ -199,5 +199,5 @@ ISR(TIMER0_COMP_vect) // 1Hz and usart Tx
 }
 /***EOF***/
 /**** Comment:
-
+The past only exists if the present comes to be. There is no future only possibilities.
 ****/

@@ -123,5 +123,7 @@ float ZNPID_output(ZNPID* self, float PV, float timelapse)
 	return result;
 }
 /***Interrupt***/
-The past only exists if the present comes to be. There is no future only posibilities.
+/****comment:
+nicely done !
+*************/
 /***EOF***/

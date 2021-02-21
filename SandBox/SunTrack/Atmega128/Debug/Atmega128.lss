@@ -5830,28 +5830,28 @@ int main(void)
     23a4:	7f e3       	ldi	r23, 0x3F	; 63
     23a6:	c8 01       	movw	r24, r16
     23a8:	09 95       	icall
-	pid.set_kd(&pid, 10000); //
+	pid.set_kd(&pid, 1); //
     23aa:	d8 01       	movw	r26, r16
     23ac:	d0 96       	adiw	r26, 0x30	; 48
     23ae:	ed 91       	ld	r30, X+
     23b0:	fc 91       	ld	r31, X
     23b2:	d1 97       	sbiw	r26, 0x31	; 49
     23b4:	40 e0       	ldi	r20, 0x00	; 0
-    23b6:	50 e4       	ldi	r21, 0x40	; 64
-    23b8:	6c e1       	ldi	r22, 0x1C	; 28
-    23ba:	76 e4       	ldi	r23, 0x46	; 70
+    23b6:	50 e0       	ldi	r21, 0x00	; 0
+    23b8:	60 e8       	ldi	r22, 0x80	; 128
+    23ba:	7f e3       	ldi	r23, 0x3F	; 63
     23bc:	c8 01       	movw	r24, r16
     23be:	09 95       	icall
-	pid.set_ki(&pid, 0.01); // will provoke overshoot, to much acceleration limit max value and minimum value.
+	pid.set_ki(&pid, 0.1); // will provoke overshoot, to much acceleration limit max value and minimum value.
     23c0:	d8 01       	movw	r26, r16
     23c2:	9e 96       	adiw	r26, 0x2e	; 46
     23c4:	ed 91       	ld	r30, X+
     23c6:	fc 91       	ld	r31, X
     23c8:	9f 97       	sbiw	r26, 0x2f	; 47
-    23ca:	4a e0       	ldi	r20, 0x0A	; 10
-    23cc:	57 ed       	ldi	r21, 0xD7	; 215
-    23ce:	63 e2       	ldi	r22, 0x23	; 35
-    23d0:	7c e3       	ldi	r23, 0x3C	; 60
+    23ca:	4d ec       	ldi	r20, 0xCD	; 205
+    23cc:	5c ec       	ldi	r21, 0xCC	; 204
+    23ce:	6c ec       	ldi	r22, 0xCC	; 204
+    23d0:	7d e3       	ldi	r23, 0x3D	; 61
     23d2:	c8 01       	movw	r24, r16
     23d4:	09 95       	icall
 	pid.set_SP(&pid, 520);
