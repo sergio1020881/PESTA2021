@@ -13,20 +13,19 @@ Comment:
 /***Library***/
 #include <inttypes.h>
 /***Constant & Macro***/
+
 /***Global Variable***/
 
 struct znpid{
 	float kc; // constant p
 	float ki; // constant i
 	float kd; // constant d
+	float Err_past; // Last Error reading
 	float dy; // difference error y axis points.
-	float sy; // sum error points
-	float Ep; // Last Error reading
-	float Xp; // Last time reading
 	float dx; // difference time x axis points.
 	float derivative; // rate of growth (tangent), or derivative
 	float integral; // progression
-	float SetP; // desired output
+	float SetPoint; // desired output
 	float PV; // output feedback
 	float OP; // output signal
 	/******/

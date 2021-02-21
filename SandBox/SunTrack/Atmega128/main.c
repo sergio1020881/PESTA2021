@@ -199,5 +199,5 @@ ISR(TIMER0_COMP_vect) // 1Hz and usart Tx
 }
 /***EOF***/
 /**** Comment:
-To not work with the hardware directly but just by code is the primordial objective.
+
 ****/

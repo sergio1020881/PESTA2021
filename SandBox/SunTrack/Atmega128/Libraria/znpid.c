@@ -21,6 +21,8 @@ Comment:
 	#define GLOBAL_INTERRUPT_ENABLE 7
 #endif
 #define ZERO 0
+#define ZNPID_outMAX 1023
+#define ZNPID_outMIN -1023
 /***Global File Variable***/
 float tmp;
 /***Header***/
@@ -45,7 +47,7 @@ ZNPID ZNPIDenable(void)
 	ZNPID znpid;
 	//import parametros
 	//inic variables
-	znpid.Ep=0;
+	znpid.Err_past=0;
 	znpid.kc=1;
 	znpid.ki=0;
 	znpid.kd=0;
@@ -76,7 +78,7 @@ void ZNPID_set_kd(ZNPID* self, float kd)
 }
 void ZNPID_set_SP(ZNPID* self, float setpoint)
 {
-	self->SetP=setpoint;
+	self->SetPoint=setpoint;
 }
 float delta(float present_value, float past_value)
 {
@@ -92,28 +94,34 @@ float product(float value_1, float value_2)
 }
 float integral(ZNPID* self, float PV, float timelapse)
 {
-	tmp=product(sum(delta(self->SetP, PV), self->Ep), timelapse);
+	tmp=product(sum(delta(self->SetPoint, PV), self->Err_past), timelapse);
 	tmp/=2;
 	return (self->integral += tmp);
 }
 float derivative(ZNPID* self, float PV, float timelapse)
 {
-	tmp=delta(delta(self->SetP, PV),self->Ep);
+	tmp=delta(delta(self->SetPoint, PV),self->Err_past);
 	return (self->derivative /= timelapse);
 }
 float ZNPID_output(ZNPID* self, float PV, float timelapse)
 {
 	float result;
 	self->PV=PV;
+	self->dy=delta(self->SetPoint, PV);
 	self->dx=timelapse;
-	result=product(self->kc, self->Ep);
+	result=product(self->kc, self->dy);
 	tmp=product(self->ki, integral(self, PV, timelapse));
 	result=sum(result, tmp);
 	tmp=product(self->kd, derivative(self, PV, timelapse));
 	result=sum(result, tmp);
-	self->Ep = self->SetP - PV;
+	self->Err_past = self->dy;
 	self->OP=result;
+	if(result > ZNPID_outMAX)
+		self->integral=ZNPID_outMAX - (self->dy * self->dx) - (self->derivative * self->dx * self->dx);
+	else if(result < ZNPID_outMIN)
+		self->integral=ZNPID_outMIN - (self->dy * self->dx) - (self->derivative * self->dx * self->dx);
 	return result;
 }
 /***Interrupt***/
+The past only exists if the present comes to be. There is no future only posibilities.
 /***EOF***/
