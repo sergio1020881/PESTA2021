@@ -24,8 +24,8 @@ struct znpid{
 	float Err_past; // Last Error reading
 	float dy; // difference error y axis points.
 	float dx; // difference time x axis points.
-	float derivative; // rate of growth (tangent), or derivative
 	float integral; // progression
+	float derivative; // rate of growth (tangent), or derivative
 	float SetPoint; // desired output
 	float PV; // output feedback
 	float OP; // output signal

@@ -54,12 +54,16 @@ ZNPID ZNPIDenable(void)
 	ZNPID znpid;
 	//import parametros
 	//inic variables
-	znpid.Err_past=0;
 	znpid.kc=1;
 	znpid.ki=0;
 	znpid.kd=0;
+	znpid.Err_past=0;
+	znpid.dy=0;
+	znpid.dx=0;
 	znpid.integral=0;
 	znpid.derivative=0;
+	znpid.SetPoint=0;
+	znpid.PV=0;
 	znpid.OP=0;
 	//Direccionar apontadores para PROTOTIPOS
 	znpid.set_kc=ZNPID_set_kc;
@@ -108,7 +112,7 @@ float integral(ZNPID* self, float PV, float timelapse)
 float derivative(ZNPID* self, float PV, float timelapse)
 {
 	tmp=delta(delta(self->SetPoint, PV),self->Err_past);
-	return (self->derivative /= timelapse);
+	return (self->derivative = (tmp / timelapse));
 }
 float ZNPID_output(ZNPID* self, float PV, float timelapse)
 {

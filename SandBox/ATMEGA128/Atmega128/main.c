@@ -54,6 +54,7 @@ char* ptr=NULL; // pointing to analog reading string
 uint16_t adcvalue; // analog reading
 float pid_out_1;
 float pid_out_2;
+int32_t tmp; 
 /*
 ** Header
 */
@@ -86,14 +87,14 @@ int main(void)
 	timer1.compareA(20000);
 	timer1.start(8);
 	pid_1.set_kc(&pid_1, 1);
-	pid_1.set_kd(&pid_1, 1); //
-	pid_1.set_ki(&pid_1, 0.1); // will provoke overshoot, to much acceleration limit max value and minimum value.
-	pid_1.set_SP(&pid_1, 520);
+	pid_1.set_kd(&pid_1, 0.2); //
+	pid_1.set_ki(&pid_1, 0.5); // will provoke overshoot, to much acceleration limit max value and minimum value.
+	pid_1.set_SP(&pid_1, 650);
 	/***Another one woopy ti dooo***/
-	pid_2.set_kc(&pid_2, 1);
+	pid_2.set_kc(&pid_2, 0.5);
 	pid_2.set_kd(&pid_2, 1); //
 	pid_2.set_ki(&pid_2, 0.01); // will provoke overshoot, to much acceleration limit max value and minimum value.
-	pid_2.set_SP(&pid_2, 520);
+	pid_2.set_SP(&pid_2, 125);
 	/**********/
 	//TODO:: Please write your application code
 	while(TRUE){
@@ -118,10 +119,32 @@ int main(void)
 					strcpy(str,function.i16toa(adcvalue));
 					lcd0.string_size(str,4);
 					
+					if(pid_out_1 >-1024 && pid_out_1 <1024){
+						tmp=function.trimmer(pid_out_1,-1023,1023,Min,Max);
+						timer1.compareB(tmp);
+						lcd0.gotoxy(1,0);
+						strcpy(str,function.i16toa(tmp));
+						lcd0.string_size(str,4);
+					}
+					
+					//lcd0.gotoxy(1,0);
+					//strcpy(str,function.i32toa(pid_1.SetPoint));
+					//lcd0.string_size(str,6);
+					//lcd0.gotoxy(2,0);
+					//strcpy(str,function.i32toa(pid_1.PV));
+					//lcd0.string_size(str,6);
+					//if(pid_1.derivative>0){
+						lcd0.gotoxy(3,0);
+						strcpy(str,function.i32toa(pid_1.derivative));
+						lcd0.string_size(str,6);
+					//}
+					
+					
 					// PID_1 output
 					lcd0.gotoxy(0,13);
 					strcpy(str,function.i32toa(pid_out_1));
 					lcd0.string_size(str,6);
+					
 					// PID_2 output
 					lcd0.gotoxy(1,13);
 					strcpy(str,function.i32toa(pid_out_2));
@@ -210,4 +233,6 @@ ISR(TIMER0_COMP_vect) // 1Hz and usart Tx
 /***EOF***/
 /**** Comment:
 The past only exists if the present comes to be. There is no future only possibilities.
+
+calibrating and testing, fix error differencial.
 ****/
