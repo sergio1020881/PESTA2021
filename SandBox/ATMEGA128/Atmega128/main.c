@@ -46,12 +46,14 @@ Comment:
 */
 HC595 shift;
 FUNC function;
-ZNPID pid;
+ZNPID pid_1;
+ZNPID pid_2;
 uint8_t count=0; // 1Hz
 uint8_t increment=0; // 1Hz
 char* ptr=NULL; // pointing to analog reading string
 uint16_t adcvalue; // analog reading
-float pid_out;
+float pid_out_1;
+float pid_out_2;
 /*
 ** Header
 */
@@ -68,7 +70,8 @@ int main(void)
 	TIMER_COUNTER0 timer0 = TIMER_COUNTER0enable(2,2); // 1Hz to HC595
 	TIMER_COUNTER1 timer1 = TIMER_COUNTER1enable(9,0); // PWM Positioning
 	shift = HC595enable(&DDRG,&PORTG,2,0,1);
-	pid = ZNPIDenable();
+	pid_1 = ZNPIDenable();
+	pid_2 = ZNPIDenable();
 	/******/
 	char Menu='1'; // Main menu selector
 	char str[6]="0"; // analog vector
@@ -82,10 +85,15 @@ int main(void)
 	timer1.compoutmodeB(2);
 	timer1.compareA(20000);
 	timer1.start(8);
-	pid.set_kc(&pid, 1);
-	pid.set_kd(&pid, 1); //
-	pid.set_ki(&pid, 0.1); // will provoke overshoot, to much acceleration limit max value and minimum value.
-	pid.set_SP(&pid, 520);
+	pid_1.set_kc(&pid_1, 1);
+	pid_1.set_kd(&pid_1, 1); //
+	pid_1.set_ki(&pid_1, 0.1); // will provoke overshoot, to much acceleration limit max value and minimum value.
+	pid_1.set_SP(&pid_1, 520);
+	/***Another one woopy ti dooo***/
+	pid_2.set_kc(&pid_2, 1);
+	pid_2.set_kd(&pid_2, 1); //
+	pid_2.set_ki(&pid_2, 0.01); // will provoke overshoot, to much acceleration limit max value and minimum value.
+	pid_2.set_SP(&pid_2, 520);
 	/**********/
 	//TODO:: Please write your application code
 	while(TRUE){
@@ -110,9 +118,13 @@ int main(void)
 					strcpy(str,function.i16toa(adcvalue));
 					lcd0.string_size(str,4);
 					
-					// PID output
+					// PID_1 output
 					lcd0.gotoxy(0,13);
-					strcpy(str,function.i32toa(pid_out));
+					strcpy(str,function.i32toa(pid_out_1));
+					lcd0.string_size(str,6);
+					// PID_2 output
+					lcd0.gotoxy(1,13);
+					strcpy(str,function.i32toa(pid_out_2));
 					lcd0.string_size(str,6);
 					
 					
@@ -180,7 +192,8 @@ ISR(TIMER0_COMP_vect) // 1Hz and usart Tx
 	Sreg=SREG;
 	SREG&=~(1<<7);
 	if(count>59){ //59 -> 1Hz
-		pid_out=pid.output(&pid,adcvalue,0.5);
+		pid_out_1=pid_1.output(&pid_1,adcvalue,0.5);
+		pid_out_2=pid_2.output(&pid_2,adcvalue,0.5);
 		increment++;
 		if((increment & 0x0F) < 8){
 			shift.bit(0);
