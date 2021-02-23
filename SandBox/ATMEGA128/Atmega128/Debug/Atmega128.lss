@@ -4089,25 +4089,25 @@ uint8_t KEYPADhl(uint8_t xi, uint8_t xf)
     17b6:	94 30       	cpi	r25, 0x04	; 4
     17b8:	19 f4       	brne	.+6      	; 0x17c0 <KEYPAD_getkey+0x214>
 						c=keypadvalue[3][0];
-    17ba:	80 91 0c 01 	lds	r24, 0x010C	; 0x80010c <__DATA_REGION_ORIGIN__+0xc>
+    17ba:	80 91 0c 01 	lds	r24, 0x010C	; 0x80010c <__data_start+0xc>
     17be:	0a c0       	rjmp	.+20     	; 0x17d4 <KEYPAD_getkey+0x228>
 					if(HL == (1<<KEYPADDATA_2))
     17c0:	90 31       	cpi	r25, 0x10	; 16
     17c2:	19 f4       	brne	.+6      	; 0x17ca <KEYPAD_getkey+0x21e>
 						c=keypadvalue[3][1];
-    17c4:	80 91 0d 01 	lds	r24, 0x010D	; 0x80010d <__DATA_REGION_ORIGIN__+0xd>
+    17c4:	80 91 0d 01 	lds	r24, 0x010D	; 0x80010d <__data_start+0xd>
     17c8:	09 c0       	rjmp	.+18     	; 0x17dc <KEYPAD_getkey+0x230>
 					if(HL == (1<<KEYPADDATA_3))
     17ca:	90 32       	cpi	r25, 0x20	; 32
     17cc:	19 f4       	brne	.+6      	; 0x17d4 <KEYPAD_getkey+0x228>
 						c=keypadvalue[3][2];
-    17ce:	80 91 0e 01 	lds	r24, 0x010E	; 0x80010e <__DATA_REGION_ORIGIN__+0xe>
+    17ce:	80 91 0e 01 	lds	r24, 0x010E	; 0x80010e <__data_start+0xe>
     17d2:	04 c0       	rjmp	.+8      	; 0x17dc <KEYPAD_getkey+0x230>
 					if(HL == (1<<KEYPADDATA_4))
     17d4:	90 34       	cpi	r25, 0x40	; 64
     17d6:	11 f4       	brne	.+4      	; 0x17dc <KEYPAD_getkey+0x230>
 						c=keypadvalue[3][3];
-    17d8:	80 91 0f 01 	lds	r24, 0x010F	; 0x80010f <__DATA_REGION_ORIGIN__+0xf>
+    17d8:	80 91 0f 01 	lds	r24, 0x010F	; 0x80010f <__data_start+0xf>
 				}
 				*keypad_DDR&=~(1<<KEYPADLINE_4);
     17dc:	e0 91 3c 03 	lds	r30, 0x033C	; 0x80033c <keypad_DDR>
@@ -5931,7 +5931,7 @@ int main(void)
     2470:	7f e3       	ldi	r23, 0x3F	; 63
     2472:	c8 01       	movw	r24, r16
     2474:	09 95       	icall
-	pid_2.set_kd(&pid_2, 1); //
+	pid_2.set_kd(&pid_2, 1);
     2476:	d8 01       	movw	r26, r16
     2478:	d0 96       	adiw	r26, 0x30	; 48
     247a:	ed 91       	ld	r30, X+
@@ -5943,7 +5943,7 @@ int main(void)
     2486:	7f e3       	ldi	r23, 0x3F	; 63
     2488:	c8 01       	movw	r24, r16
     248a:	09 95       	icall
-	pid_2.set_ki(&pid_2, 0.01); // will provoke overshoot, to much acceleration limit max value and minimum value.
+	pid_2.set_ki(&pid_2, 0.01);
     248c:	d8 01       	movw	r26, r16
     248e:	9e 96       	adiw	r26, 0x2e	; 46
     2490:	ed 91       	ld	r30, X+

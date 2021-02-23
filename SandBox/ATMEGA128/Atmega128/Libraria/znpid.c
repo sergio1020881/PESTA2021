@@ -111,7 +111,7 @@ float integral(ZNPID* self, float PV, float timelapse)
 }
 float derivative(ZNPID* self, float PV, float timelapse)
 {
-	tmp=delta(delta(self->SetPoint, PV),self->Err_past);
+	tmp=delta(delta(self->SetPoint, PV), self->Err_past);
 	return (self->derivative = (tmp / timelapse));
 }
 float ZNPID_output(ZNPID* self, float PV, float timelapse)
@@ -136,5 +136,8 @@ float ZNPID_output(ZNPID* self, float PV, float timelapse)
 /***Interrupt***/
 /****comment:
 nicely done !
+The output then has to be filtered in order to comply with the parameters of the controlled system, 
+in other words the linear curve may have to be shifted up to become only positive values and scaled
+to have different minimum and maximum values that the controlled system accepts.
 *************/
 /***EOF***/

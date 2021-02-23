@@ -12,7 +12,7 @@ Hardware: Atmega128 by ETT ET-BASE
 	-PORTG HC595
 License: GNU General Public License
 Comment:
-	Nice
+
 ************************************************************************/
 #define F_CPU 16000000UL
 /*
@@ -92,8 +92,8 @@ int main(void)
 	pid_1.set_SP(&pid_1, 650);
 	/***Another one woopy ti dooo***/
 	pid_2.set_kc(&pid_2, 0.5);
-	pid_2.set_kd(&pid_2, 1); //
-	pid_2.set_ki(&pid_2, 0.01); // will provoke overshoot, to much acceleration limit max value and minimum value.
+	pid_2.set_kd(&pid_2, 1);
+	pid_2.set_ki(&pid_2, 0.01);
 	pid_2.set_SP(&pid_2, 125);
 	/**********/
 	//TODO:: Please write your application code
@@ -234,5 +234,5 @@ ISR(TIMER0_COMP_vect) // 1Hz and usart Tx
 /**** Comment:
 The past only exists if the present comes to be. There is no future only possibilities.
 
-calibrating and testing, fix error differencial.
+calibrating and testing, fix error differential.
 ****/
