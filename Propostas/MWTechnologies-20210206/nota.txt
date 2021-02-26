@@ -2,7 +2,7 @@ TEC control electronic circuit using a microcontroller for laser
 diodes temperature stabilization, control de temperatura com pid. 
 MCU da STM32 como proposta de substituição.
 
-Perto e good.
+Perto.
 
 Posso juntar o util ao agradavel e dominar o stm ao mesmo nivel dos AVR.
 
