@@ -1,5 +1,0 @@
-Also when bying pcb circuits, realize that the vias are gold plated, 
-because sparkfun boards are not and they get corroded very fast.
-
-That means the buyer is fooled getting a poorer product for a higher price.
-
