@@ -1,0 +1,51 @@
+\begin{thebibliography}{1}
+  \providebibliographyfont{name}{}%
+  \providebibliographyfont{lastname}{}%
+  \providebibliographyfont{title}{\emph}%
+  \providebibliographyfont{jtitle}{\btxtitlefont}%
+  \providebibliographyfont{etal}{\emph}%
+  \providebibliographyfont{journal}{}%
+  \providebibliographyfont{volume}{}%
+  \providebibliographyfont{ISBN}{\MakeUppercase}%
+  \providebibliographyfont{ISSN}{\MakeUppercase}%
+  \providebibliographyfont{url}{\url}%
+  \providebibliographyfont{numeral}{}%
+  \expandafter\btxselectlanguage\expandafter {\btxfallbacklanguage}
+
+\expandafter\btxselectlanguage\expandafter {\btxfallbacklanguage}
+\bibitem {book_1}
+\btxnamefont {\btxlastnamefont {Bird}, John}\btxauthorcolon\ \btxtitlefont
+  {HIGHER ENGINEERING MATHEMATICS, Fifth Edition}.
+\newblock \btxpublisherfont {Elsevier Ltd}, 2006.
+
+\bibitem {book_2}
+\btxnamefont {\btxlastnamefont {Bird}, John}\btxauthorcolon\ \btxtitlefont
+  {HIGHER ENGINEERING MATHEMATICS, Sixth Edition}.
+\newblock \btxpublisherfont {Elsevier Ltd}, 2010.
+
+\bibitem {book_5}
+\btxnamefont {\btxlastnamefont {Bishop}, Richard\btxfnamespacelong
+  C.\btxfnamespacelong Dorf\btxfnamespacelong Robert\btxfnamespacelong
+  H.}\btxauthorcolon\ \btxtitlefont {Modern Control Systems, Thirteenth
+  Edition}.
+\newblock \btxpublisherfont {Pearson Education, Inc}, 2017.
+
+\bibitem {book_6}
+\btxnamefont {\btxlastnamefont {James}, Glyn}\btxauthorcolon\ \btxtitlefont
+  {MODERN ENGINEERING MATHEMATICS, Fifth Edition}.
+\newblock \btxpublisherfont {PEARSON EDUCATION LIMITED}, 2015.
+
+\bibitem {book_4}
+\btxnamefont {\btxlastnamefont {Resnick}, JEARL\btxfnamespacelong
+  WALKER\btxfnamespacelong David\btxfnamespacelong Halliday}\btxauthorcolon\
+  \btxtitlefont {FUNDAMENTALS OF PHYSICS, Halliday and Resnick 10th edition}.
+\newblock \btxpublisherfont {John Wiley and Sons, Inc}, 2014.
+
+\bibitem {book_3}
+\btxnamefont {\btxlastnamefont {TIPLER}, PAUL\btxfnamespacelong A.} \btxandlong
+  {}\ \btxnamefont {GENE \btxlastnamefont {MOSCA}}\btxauthorcolon\
+  \btxtitlefont {PHYSICS FOR SCIENTISTS AND ENGINEERS, Extended Version fifth
+  edition}.
+\newblock \btxpublisherfont {W. H. Freeman and Company}, 1999.
+
+\end{thebibliography}
