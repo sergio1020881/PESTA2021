@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  27 FEB 2021 00:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  27 FEB 2021 01:49
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
@@ -1071,7 +1071,7 @@ babelbib: Using the BibTeX style's default font for `numeral'.
 Here is how much of TeX's memory you used:
  32643 strings out of 480790
  773820 string characters out of 2907055
- 1293258 words of memory out of 3000000
+ 1293259 words of memory out of 3000000
  48085 multiletter control sequences out of 15000+200000
  553764 words of font info for 74 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
