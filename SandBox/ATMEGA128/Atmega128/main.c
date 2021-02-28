@@ -41,8 +41,7 @@ Comment:
 #define ZERO 0
 #define Min 500     // 450 PWM servo motor
 #define Max 2350    // 2450 PWM servo motor
-#define repeat_1 1000
-#define repeat_2 2000
+#define repeat 59
 /*
 ** Global File variable
 */
@@ -82,7 +81,6 @@ int main(void)
 	int16_t m_value; // manual positioning
 	char mstr[6]="90"; // manual position vector
 	ptr=str;
-	uint8_t i=0, j=0;
 	/***Parameters timers***/
 	timer0.compare(249);
 	timer0.start(64);
@@ -192,97 +190,10 @@ int main(void)
 					lcd0.string_size("Not being used",19);
 					
 					/***Play around***/
-					for(i=0;i<8;i++){
-						shift.bit(1);
-						shift.out();
-						_delay_ms(repeat_1);
-					}
-					for(i=0;i<8;i++){
-						shift.bit(0);
-						shift.out();
-						_delay_ms(repeat_1);
-					}
-					for(i=0;i<8;i++){
-						shift.bit(1);
-						shift.out();
-						_delay_ms(repeat_1);
-						shift.bit(0);
-						shift.out();
-						_delay_ms(repeat_1);
-					}
-					
-					for(i=7;i;i--){
-						shift.bit(1);
-						shift.out();
-						_delay_ms(repeat_1);
-					}
-					for(i=7;i;i--){
-						shift.bit(0);
-						shift.out();
-						_delay_ms(repeat_1);
-					}
-					for(i=7;i;i--){
-						shift.bit(1);
-						shift.out();
-						_delay_ms(repeat_1);
-						shift.bit(0);
-						shift.out();
-						_delay_ms(repeat_1);
-					}
-					for(i=0;i<8;i++){
-						shift.byte(1<<i);
-						_delay_ms(repeat_1);
-					}
-					for(j=0;j<10;j++){
-						for(i=0;i<8;i++){
-							shift.byte(~(1<<i));
-							_delay_ms(repeat_1);
-						}
-						for(i=6;i;i--){
-							shift.byte(~(1<<i));
-							_delay_ms(repeat_1);
-						}
-					}
-					for(j=0;j<10;j++){
-						for(i=0;i<8;i++){
-							shift.byte(~(3<<i));
-							_delay_ms(repeat_1);
-						}
-						for(i=6;i;i--){
-							shift.byte(~(3<<i));
-							_delay_ms(repeat_1);
-						}
-					}
-					for(j=0;j<10;j++){
-						for(i=0;i<8;i++){
-							shift.byte(~(7<<i));
-							_delay_ms(repeat_1);
-						}
-						for(i=6;i;i--){
-							shift.byte(~(7<<i));
-							_delay_ms(repeat_1);
-						}
-					}
-					for(j=0;j<10;j++){
-						for(i=0;i<8;i++){
-							shift.byte(~(0x0F<<i));
-							_delay_ms(repeat_1);
-						}
-						for(i=6;i;i--){
-							shift.byte(~(0x0F<<i));
-							_delay_ms(repeat_1);
-						}
-					}
-					for(j=0;j<20;j++){
-						for(i=0;i<8;i++){
-							shift.byte(~(0x05<<i));
-							_delay_ms(repeat_1);
-						}
-						for(i=6;i;i--){
-							shift.byte(~(0x05<<i));
-							_delay_ms(repeat_1);
-						}
-					}
+				
+				
+				
+				
 				break;
 				/********************************************************************/
 			default:
@@ -310,7 +221,7 @@ ISR(TIMER0_COMP_vect) // 1Hz and usart Tx
 	uint8_t Sreg;
 	Sreg=SREG;
 	SREG&=~(1<<7);
-	if(count>59){ //59 -> 1Hz
+	if(count>repeat){ //59 -> 1Hz
 		pid_out_1=pid_1.output(&pid_1,adcvalue,0.5);
 		pid_out_2=pid_2.output(&pid_2,adcvalue,0.5);
 		increment++;
@@ -321,6 +232,7 @@ ISR(TIMER0_COMP_vect) // 1Hz and usart Tx
 			shift.bit(1);
 			shift.out();
 		}
+		
 		count=0;
 	}else
 		count++;
