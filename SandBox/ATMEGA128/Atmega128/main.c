@@ -41,6 +41,8 @@ Comment:
 #define ZERO 0
 #define Min 500     // 450 PWM servo motor
 #define Max 2350    // 2450 PWM servo motor
+#define repeat_1 1000
+#define repeat_2 2000
 /*
 ** Global File variable
 */
@@ -80,6 +82,7 @@ int main(void)
 	int16_t m_value; // manual positioning
 	char mstr[6]="90"; // manual position vector
 	ptr=str;
+	uint8_t i=0, j=0;
 	/***Parameters timers***/
 	timer0.compare(249);
 	timer0.start(64);
@@ -187,6 +190,99 @@ int main(void)
 				if(!strcmp(keypad.get().string,"C")){Menu='1';keypad.flush();lcd0.clear();break;}
 					lcd0.gotoxy(0,0);
 					lcd0.string_size("Not being used",19);
+					
+					/***Play around***/
+					for(i=0;i<8;i++){
+						shift.bit(1);
+						shift.out();
+						_delay_ms(repeat_1);
+					}
+					for(i=0;i<8;i++){
+						shift.bit(0);
+						shift.out();
+						_delay_ms(repeat_1);
+					}
+					for(i=0;i<8;i++){
+						shift.bit(1);
+						shift.out();
+						_delay_ms(repeat_1);
+						shift.bit(0);
+						shift.out();
+						_delay_ms(repeat_1);
+					}
+					
+					for(i=7;i;i--){
+						shift.bit(1);
+						shift.out();
+						_delay_ms(repeat_1);
+					}
+					for(i=7;i;i--){
+						shift.bit(0);
+						shift.out();
+						_delay_ms(repeat_1);
+					}
+					for(i=7;i;i--){
+						shift.bit(1);
+						shift.out();
+						_delay_ms(repeat_1);
+						shift.bit(0);
+						shift.out();
+						_delay_ms(repeat_1);
+					}
+					for(i=0;i<8;i++){
+						shift.byte(1<<i);
+						_delay_ms(repeat_1);
+					}
+					for(j=0;j<10;j++){
+						for(i=0;i<8;i++){
+							shift.byte(~(1<<i));
+							_delay_ms(repeat_1);
+						}
+						for(i=6;i;i--){
+							shift.byte(~(1<<i));
+							_delay_ms(repeat_1);
+						}
+					}
+					for(j=0;j<10;j++){
+						for(i=0;i<8;i++){
+							shift.byte(~(3<<i));
+							_delay_ms(repeat_1);
+						}
+						for(i=6;i;i--){
+							shift.byte(~(3<<i));
+							_delay_ms(repeat_1);
+						}
+					}
+					for(j=0;j<10;j++){
+						for(i=0;i<8;i++){
+							shift.byte(~(7<<i));
+							_delay_ms(repeat_1);
+						}
+						for(i=6;i;i--){
+							shift.byte(~(7<<i));
+							_delay_ms(repeat_1);
+						}
+					}
+					for(j=0;j<10;j++){
+						for(i=0;i<8;i++){
+							shift.byte(~(0x0F<<i));
+							_delay_ms(repeat_1);
+						}
+						for(i=6;i;i--){
+							shift.byte(~(0x0F<<i));
+							_delay_ms(repeat_1);
+						}
+					}
+					for(j=0;j<20;j++){
+						for(i=0;i<8;i++){
+							shift.byte(~(0x05<<i));
+							_delay_ms(repeat_1);
+						}
+						for(i=6;i;i--){
+							shift.byte(~(0x05<<i));
+							_delay_ms(repeat_1);
+						}
+					}
 				break;
 				/********************************************************************/
 			default:
