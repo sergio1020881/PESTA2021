@@ -14,6 +14,7 @@ Comment:
 #include <avr/pgmspace.h>
 #include <stdarg.h>
 #include <inttypes.h>
+#include <math.h>
 /***pc use***
 #include<stdio.h>
 #include<stdlib.h>
@@ -67,6 +68,9 @@ unsigned char FUNCbin2bcd(unsigned val);
 long FUNCgcd1(long a, long b);
 uint8_t FUNCpincheck(uint8_t port, uint8_t pin);
 char* FUNCprint_binary(uint8_t number);
+void FUNCreverse(char* str, int len);
+int FUNCintToStr(int x, char str[], int d);
+void FUNCftoa(float n, char* res, int afterpoint);
 uint8_t  bintobcd(uint8_t bin);
 /***pc use***
 char* FUNCfltos(FILE* stream);
@@ -124,6 +128,7 @@ FUNC FUNCenable( void )
 	func.gcd1=FUNCgcd1;
 	func.pincheck=FUNCpincheck;
 	func.print_binary=FUNCprint_binary;
+	func.ftoa=FUNCftoa;
 	/***pc use***
 	func.fltos=FUNCfltos;
 	func.ftos=FUNCftos;
@@ -524,7 +529,61 @@ uint8_t  bintobcd(uint8_t bin)
 {
 	return (((bin) / 10) << 4) + ((bin) % 10);
 }
-/***
+/******
+Thanks to:
+https://www.geeksforgeeks.org/convert-floating-point-number-string/
+******/
+void FUNCreverse(char* str, int len)
+{
+	int i = 0, j = len - 1, temp;
+	while (i < j) {
+		temp = str[i];
+		str[i] = str[j];
+		str[j] = temp;
+		i++;
+		j--;
+	}
+}
+int FUNCintToStr(int x, char str[], int d)
+{
+	int i = 0; 
+    while (x) { 
+        str[i++] = (x % 10) + '0'; 
+        x = x / 10; 
+    } 
+    // If number of digits required is more, then 
+    // add 0s at the beginning 
+    while (i < d) 
+        str[i++] = '0';
+	
+    FUNCreverse(str, i); 
+    str[i] = '\0'; 
+    return i; 
+}
+void FUNCftoa(float n, char* res, int afterpoint)
+{
+	// Extract integer part
+	int ipart = (int)n;
+	
+	// Extract floating part
+	float fpart = n - (float)ipart;
+	
+	// convert integer part to string
+	int i =	FUNCintToStr(ipart, res, 1);
+	
+	// check for display option after point
+	if (afterpoint != 0) {
+		res[i] = '.'; // add dot
+	
+		// Get the value of fraction part up to given no.
+		// of points after dot. The third parameter
+		// is needed to handle cases like 233.007
+		fpart = fpart * pow(10, afterpoint);
+	
+		FUNCintToStr((int)fpart, res + i + 1, afterpoint);
+	}
+}
+/******
 int gcd( int a, int b ) {
     int result ;
     // Compute Greatest Common Divisor using Euclid's Algorithm

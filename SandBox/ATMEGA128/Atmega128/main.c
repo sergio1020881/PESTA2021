@@ -1,6 +1,6 @@
 /************************************************************************
 Title: PID_TEST.c
-Author: Sergio Manuel Santos 
+Author: Sergio Manuel Santos
 	<sergio.salazar.santos@gmail.com>
 File: $Id: MAIN,v 1.8.2.1 21/02/2021 Exp $
 Software: Atmel Studio 7 (ver 7.0.129)
@@ -8,7 +8,6 @@ Hardware: Atmega128 by ETT ET-BASE
 	-PORTA LCD
 	-PORTE Keyboard
 	-PF0 Sensor LDR
-	-PB6 Servo Motor
 	-PORTG HC595
 License: GNU General Public License
 Comment:
@@ -22,6 +21,8 @@ Comment:
 #include <avr/pgmspace.h>
 #include <avr/interrupt.h>
 #include <util/delay.h>
+#include <math.h>
+#include <stdio.h> //sprintf
 #include <inttypes.h>
 #include <stdlib.h>
 #include <string.h>
@@ -116,7 +117,7 @@ int main(void)
 					/***Reading analog***/
 					adcvalue=analog.read(0);
 					lcd0.gotoxy(0,0);
-					lcd0.string_size("Sense: ",7);
+					lcd0.string_size("Output: ",7);
 					strcpy(str,function.i16toa(adcvalue));
 					lcd0.string_size(str,4);
 					
@@ -128,9 +129,9 @@ int main(void)
 						lcd0.string_size(str,4);
 					}
 					
-					//lcd0.gotoxy(1,0);
-					//strcpy(str,function.i32toa(pid_1.SetPoint));
-					//lcd0.string_size(str,6);
+					function.ftoa(35.00567,str,6);
+					lcd0.gotoxy(2,0);
+					lcd0.string_size(str,12);
 					//lcd0.gotoxy(2,0);
 					//strcpy(str,function.i32toa(pid_1.PV));
 					//lcd0.string_size(str,6);

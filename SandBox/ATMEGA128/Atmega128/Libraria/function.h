@@ -53,6 +53,7 @@ struct fnctn{
 	long (*gcd1)(long a, long b);
 	uint8_t (*pincheck)(uint8_t port, uint8_t pin);
 	char* (*print_binary)(uint8_t number);
+	void (*ftoa)(float n, char* res, int afterpoint);
 	/***pc use***
 	char* (*fltos)(FILE* stream);
 	char* (*ftos)(FILE* stream);
