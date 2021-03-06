@@ -243,5 +243,7 @@ ISR(TIMER0_COMP_vect) // 1Hz and usart Tx
 /**** Comment:
 The past only exists if the present comes to be. There is no future only possibilities.
 
+polling is for pussies.
+
 calibrating and testing, fix error differential.
 ****/
