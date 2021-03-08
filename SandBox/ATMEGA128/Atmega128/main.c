@@ -34,6 +34,7 @@ Comment:
 #include "keypad.h"
 #include "74hc595.h"
 #include "znpid.h"
+#include "x711.h"
 //#include "atmega128uart.h"
 /*
 ** Constant and Macro

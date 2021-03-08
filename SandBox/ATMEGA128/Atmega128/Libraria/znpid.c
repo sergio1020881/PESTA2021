@@ -37,11 +37,11 @@ void ZNPID_set_kc(ZNPID* self, float kc);
 void ZNPID_set_ki(ZNPID* self, float ki);
 void ZNPID_set_kd(ZNPID* self, float kp);
 void ZNPID_set_SP(ZNPID* self, float setpoint);
-float delta(float present_value, float past_value);
-float sum(float value_1, float value_2);
-float product(float value_1, float value_2);
-float integral(ZNPID* self, float PV, float timelapse);
-float derivative(ZNPID* self, float PV, float timelapse);
+float ZNPID_delta(float present_value, float past_value);
+float ZNPID_sum(float value_1, float value_2);
+float ZNPID_product(float value_1, float value_2);
+float ZNPID_integral(ZNPID* self, float PV, float timelapse);
+float ZNPID_derivative(ZNPID* self, float PV, float timelapse);
 float ZNPID_output(ZNPID* self, float PV, float timelapse);
 /***Procedure & Function***/
 ZNPID ZNPIDenable(void)
@@ -91,40 +91,40 @@ void ZNPID_set_SP(ZNPID* self, float setpoint)
 {
 	self->SetPoint=setpoint;
 }
-float delta(float present_value, float past_value)
+float ZNPID_delta(float present_value, float past_value)
 {
 	return (present_value - past_value);
 }
-float sum(float value_1, float value_2)
+float ZNPID_sum(float value_1, float value_2)
 {
 	return (value_1 + value_2);
 }
-float product(float value_1, float value_2)
+float ZNPID_product(float value_1, float value_2)
 {
 	return (value_1 * value_2);
 }
-float integral(ZNPID* self, float PV, float timelapse)
+float ZNPID_integral(ZNPID* self, float PV, float timelapse)
 {
-	tmp=product(sum(delta(self->SetPoint, PV), self->Err_past), timelapse);
+	tmp=ZNPID_product(ZNPID_sum(ZNPID_delta(self->SetPoint, PV), self->Err_past), timelapse);
 	tmp/=2;
 	return (self->integral += tmp);
 }
-float derivative(ZNPID* self, float PV, float timelapse)
+float ZNPID_derivative(ZNPID* self, float PV, float timelapse)
 {
-	tmp=delta(delta(self->SetPoint, PV), self->Err_past);
+	tmp=ZNPID_delta(ZNPID_delta(self->SetPoint, PV), self->Err_past);
 	return (self->derivative = (tmp / timelapse));
 }
 float ZNPID_output(ZNPID* self, float PV, float timelapse)
 {
 	float result;
 	self->PV=PV;
-	self->dy=delta(self->SetPoint, PV);
+	self->dy=ZNPID_delta(self->SetPoint, PV);
 	self->dx=timelapse;
-	result=product(self->kc, self->dy);
-	tmp=product(self->ki, integral(self, PV, timelapse));
-	result=sum(result, tmp);
-	tmp=product(self->kd, derivative(self, PV, timelapse));
-	result=sum(result, tmp);
+	result=ZNPID_product(self->kc, self->dy);
+	tmp=ZNPID_product(self->ki, ZNPID_integral(self, PV, timelapse));
+	result=ZNPID_sum(result, tmp);
+	tmp=ZNPID_product(self->kd, ZNPID_derivative(self, PV, timelapse));
+	result=ZNPID_sum(result, tmp);
 	self->Err_past = self->dy;
 	self->OP=result;
 	if(result > ZNPID_outMAX)

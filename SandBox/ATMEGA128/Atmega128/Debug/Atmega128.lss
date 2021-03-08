@@ -7,27 +7,27 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, DATA
   1 .text         000035de  00000000  00000000  00000094  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .bss          000002fa  00800154  00800154  000036c6  2**0
+  2 .bss          00000300  00800154  00800154  000036c6  2**0
                   ALLOC
   3 .comment      00000030  00000000  00000000  000036c6  2**0
                   CONTENTS, READONLY
   4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000036f8  2**2
                   CONTENTS, READONLY
-  5 .debug_aranges 00000670  00000000  00000000  00003734  2**0
+  5 .debug_aranges 00000700  00000000  00000000  00003734  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_info   00007764  00000000  00000000  00003da4  2**0
+  6 .debug_info   00007f3e  00000000  00000000  00003e34  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 00001cf4  00000000  00000000  0000b508  2**0
+  7 .debug_abbrev 00001f10  00000000  00000000  0000bd72  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   00004071  00000000  00000000  0000d1fc  2**0
+  8 .debug_line   00004349  00000000  00000000  0000dc82  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_frame  00001338  00000000  00000000  00011270  2**2
+  9 .debug_frame  000014f4  00000000  00000000  00011fcc  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    0000156a  00000000  00000000  000125a8  2**0
+ 10 .debug_str    0000167b  00000000  00000000  000134c0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    00006970  00000000  00000000  00013b12  2**0
+ 11 .debug_loc    000071d8  00000000  00000000  00014b3b  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 000005d0  00000000  00000000  0001a482  2**0
+ 12 .debug_ranges 00000650  00000000  00000000  0001bd13  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -228,7 +228,7 @@ Disassembly of section .text:
      172:	1d 92       	st	X+, r1
 
 00000174 <.do_clear_bss_start>:
-     174:	ae 34       	cpi	r26, 0x4E	; 78
+     174:	a4 35       	cpi	r26, 0x54	; 84
      176:	b2 07       	cpc	r27, r18
      178:	e1 f7       	brne	.-8      	; 0x172 <.do_clear_bss_loop>
      17a:	0e 94 0b 12 	call	0x2416	; 0x2416 <main>
@@ -4845,7 +4845,7 @@ void LCD0_reboot(void)
 00002092 <ZNPID_set_kc>:
 	return (value_1 + value_2);
 }
-float product(float value_1, float value_2)
+float ZNPID_product(float value_1, float value_2)
 {
 	return (value_1 * value_2);
 }
@@ -4958,8 +4958,8 @@ float product(float value_1, float value_2)
     2156:	cf 01       	movw	r24, r30
     2158:	08 95       	ret
 
-0000215a <integral>:
-float integral(ZNPID* self, float PV, float timelapse)
+0000215a <ZNPID_integral>:
+float ZNPID_integral(ZNPID* self, float PV, float timelapse)
 {
     215a:	cf 92       	push	r12
     215c:	df 92       	push	r13
@@ -4972,7 +4972,7 @@ float integral(ZNPID* self, float PV, float timelapse)
     216a:	ec 01       	movw	r28, r24
     216c:	68 01       	movw	r12, r16
     216e:	79 01       	movw	r14, r18
-	tmp=product(sum(delta(self->SetPoint, PV), self->Err_past), timelapse);
+	tmp=ZNPID_product(ZNPID_sum(ZNPID_delta(self->SetPoint, PV), self->Err_past), timelapse);
 	tmp/=2;
     2170:	9a 01       	movw	r18, r20
     2172:	ab 01       	movw	r20, r22
@@ -5021,7 +5021,7 @@ float integral(ZNPID* self, float PV, float timelapse)
 
 000021cc <ZNPID_output>:
 {
-	tmp=delta(delta(self->SetPoint, PV), self->Err_past);
+	tmp=ZNPID_delta(ZNPID_delta(self->SetPoint, PV), self->Err_past);
 	return (self->derivative = (tmp / timelapse));
 }
 float ZNPID_output(ZNPID* self, float PV, float timelapse)
@@ -5065,7 +5065,7 @@ float ZNPID_output(ZNPID* self, float PV, float timelapse)
 {
 	self->SetPoint=setpoint;
 }
-float delta(float present_value, float past_value)
+float ZNPID_delta(float present_value, float past_value)
 {
 	return (present_value - past_value);
     2210:	9a 01       	movw	r18, r20
@@ -5082,7 +5082,7 @@ float ZNPID_output(ZNPID* self, float PV, float timelapse)
 {
 	float result;
 	self->PV=PV;
-	self->dy=delta(self->SetPoint, PV);
+	self->dy=ZNPID_delta(self->SetPoint, PV);
     2222:	ed 81       	ldd	r30, Y+5	; 0x05
     2224:	fe 81       	ldd	r31, Y+6	; 0x06
     2226:	60 8b       	std	Z+16, r22	; 0x10
@@ -5097,7 +5097,7 @@ float ZNPID_output(ZNPID* self, float PV, float timelapse)
 {
 	return (value_1 + value_2);
 }
-float product(float value_1, float value_2)
+float ZNPID_product(float value_1, float value_2)
 {
 	return (value_1 * value_2);
     2236:	20 81       	ld	r18, Z
@@ -5109,21 +5109,21 @@ float product(float value_1, float value_2)
     2242:	3c 01       	movw	r6, r24
 	float result;
 	self->PV=PV;
-	self->dy=delta(self->SetPoint, PV);
+	self->dy=ZNPID_delta(self->SetPoint, PV);
 	self->dx=timelapse;
-	result=product(self->kc, self->dy);
-	tmp=product(self->ki, integral(self, PV, timelapse));
+	result=ZNPID_product(self->kc, self->dy);
+	tmp=ZNPID_product(self->ki, ZNPID_integral(self, PV, timelapse));
     2244:	95 01       	movw	r18, r10
     2246:	84 01       	movw	r16, r8
     2248:	b7 01       	movw	r22, r14
     224a:	a6 01       	movw	r20, r12
     224c:	8d 81       	ldd	r24, Y+5	; 0x05
     224e:	9e 81       	ldd	r25, Y+6	; 0x06
-    2250:	84 df       	rcall	.-248    	; 0x215a <integral>
+    2250:	84 df       	rcall	.-248    	; 0x215a <ZNPID_integral>
 {
 	return (present_value - past_value);
 }
-float sum(float value_1, float value_2)
+float ZNPID_sum(float value_1, float value_2)
 {
 	return (value_1 + value_2);
     2252:	ed 81       	ldd	r30, Y+5	; 0x05
@@ -5140,9 +5140,9 @@ float sum(float value_1, float value_2)
     2268:	3c 01       	movw	r6, r24
 	return (self->integral += tmp);
 }
-float derivative(ZNPID* self, float PV, float timelapse)
+float ZNPID_derivative(ZNPID* self, float PV, float timelapse)
 {
-	tmp=delta(delta(self->SetPoint, PV), self->Err_past);
+	tmp=ZNPID_delta(ZNPID_delta(self->SetPoint, PV), self->Err_past);
 	return (self->derivative = (tmp / timelapse));
     226a:	a7 01       	movw	r20, r14
     226c:	96 01       	movw	r18, r12
@@ -5178,7 +5178,7 @@ float derivative(ZNPID* self, float PV, float timelapse)
 {
 	return (value_1 + value_2);
 }
-float product(float value_1, float value_2)
+float ZNPID_product(float value_1, float value_2)
 {
 	return (value_1 * value_2);
     22a8:	18 96       	adiw	r26, 0x08	; 8
@@ -5191,19 +5191,19 @@ float product(float value_1, float value_2)
     22b6:	9b 01       	movw	r18, r22
     22b8:	ac 01       	movw	r20, r24
     22ba:	60 93 82 03 	sts	0x0382, r22	; 0x800382 <tmp>
-	self->dy=delta(self->SetPoint, PV);
+	self->dy=ZNPID_delta(self->SetPoint, PV);
 	self->dx=timelapse;
-	result=product(self->kc, self->dy);
-	tmp=product(self->ki, integral(self, PV, timelapse));
-	result=sum(result, tmp);
-	tmp=product(self->kd, derivative(self, PV, timelapse));
+	result=ZNPID_product(self->kc, self->dy);
+	tmp=ZNPID_product(self->ki, ZNPID_integral(self, PV, timelapse));
+	result=ZNPID_sum(result, tmp);
+	tmp=ZNPID_product(self->kd, ZNPID_derivative(self, PV, timelapse));
     22be:	70 93 83 03 	sts	0x0383, r23	; 0x800383 <tmp+0x1>
     22c2:	80 93 84 03 	sts	0x0384, r24	; 0x800384 <tmp+0x2>
     22c6:	90 93 85 03 	sts	0x0385, r25	; 0x800385 <tmp+0x3>
 {
 	return (present_value - past_value);
 }
-float sum(float value_1, float value_2)
+float ZNPID_sum(float value_1, float value_2)
 {
 	return (value_1 + value_2);
     22ca:	c3 01       	movw	r24, r6
@@ -5212,11 +5212,11 @@ float sum(float value_1, float value_2)
     22d0:	6b 01       	movw	r12, r22
     22d2:	7c 01       	movw	r14, r24
     22d4:	ed 81       	ldd	r30, Y+5	; 0x05
-	result=product(self->kc, self->dy);
-	tmp=product(self->ki, integral(self, PV, timelapse));
-	result=sum(result, tmp);
-	tmp=product(self->kd, derivative(self, PV, timelapse));
-	result=sum(result, tmp);
+	result=ZNPID_product(self->kc, self->dy);
+	tmp=ZNPID_product(self->ki, ZNPID_integral(self, PV, timelapse));
+	result=ZNPID_sum(result, tmp);
+	tmp=ZNPID_product(self->kd, ZNPID_derivative(self, PV, timelapse));
+	result=ZNPID_sum(result, tmp);
 	self->Err_past = self->dy;
     22d6:	fe 81       	ldd	r31, Y+6	; 0x06
     22d8:	40 88       	ldd	r4, Z+16	; 0x10
@@ -5425,7 +5425,7 @@ int main(void)
     2438:	fe 01       	movw	r30, r28
     243a:	ee 57       	subi	r30, 0x7E	; 126
     243c:	ff 4f       	sbci	r31, 0xFF	; 255
-    243e:	ac e8       	ldi	r26, 0x8C	; 140
+    243e:	a2 e9       	ldi	r26, 0x92	; 146
     2440:	b3 e0       	ldi	r27, 0x03	; 3
     2442:	01 90       	ld	r0, Z+
     2444:	0d 92       	st	X+, r0
@@ -5550,12 +5550,12 @@ int main(void)
     252c:	84 e6       	ldi	r24, 0x64	; 100
     252e:	90 e0       	ldi	r25, 0x00	; 0
     2530:	0e 94 46 01 	call	0x28c	; 0x28c <HC595enable>
-    2534:	20 93 86 03 	sts	0x0386, r18	; 0x800386 <shift>
-    2538:	30 93 87 03 	sts	0x0387, r19	; 0x800387 <shift+0x1>
-    253c:	40 93 88 03 	sts	0x0388, r20	; 0x800388 <shift+0x2>
-    2540:	50 93 89 03 	sts	0x0389, r21	; 0x800389 <shift+0x3>
-    2544:	60 93 8a 03 	sts	0x038A, r22	; 0x80038a <shift+0x4>
-    2548:	70 93 8b 03 	sts	0x038B, r23	; 0x80038b <shift+0x5>
+    2534:	20 93 8c 03 	sts	0x038C, r18	; 0x80038c <shift>
+    2538:	30 93 8d 03 	sts	0x038D, r19	; 0x80038d <shift+0x1>
+    253c:	40 93 8e 03 	sts	0x038E, r20	; 0x80038e <shift+0x2>
+    2540:	50 93 8f 03 	sts	0x038F, r21	; 0x80038f <shift+0x3>
+    2544:	60 93 90 03 	sts	0x0390, r22	; 0x800390 <shift+0x4>
+    2548:	70 93 91 03 	sts	0x0391, r23	; 0x800391 <shift+0x5>
 	pid_1 = ZNPIDenable();
     254c:	ce 01       	movw	r24, r28
     254e:	8e 57       	subi	r24, 0x7E	; 126
@@ -5565,7 +5565,7 @@ int main(void)
     2556:	fe 01       	movw	r30, r28
     2558:	ee 57       	subi	r30, 0x7E	; 126
     255a:	ff 4f       	sbci	r31, 0xFF	; 255
-    255c:	ae ed       	ldi	r26, 0xDE	; 222
+    255c:	a4 ee       	ldi	r26, 0xE4	; 228
     255e:	b3 e0       	ldi	r27, 0x03	; 3
     2560:	01 90       	ld	r0, Z+
     2562:	0d 92       	st	X+, r0
@@ -5580,7 +5580,7 @@ int main(void)
     2572:	fe 01       	movw	r30, r28
     2574:	ee 57       	subi	r30, 0x7E	; 126
     2576:	ff 4f       	sbci	r31, 0xFF	; 255
-    2578:	a4 e1       	ldi	r26, 0x14	; 20
+    2578:	aa e1       	ldi	r26, 0x1A	; 26
     257a:	b4 e0       	ldi	r27, 0x04	; 4
     257c:	01 90       	ld	r0, Z+
     257e:	0d 92       	st	X+, r0
@@ -5665,7 +5665,7 @@ int main(void)
     2606:	88 e0       	ldi	r24, 0x08	; 8
     2608:	90 e0       	ldi	r25, 0x00	; 0
     260a:	09 95       	icall
-    260c:	0e ed       	ldi	r16, 0xDE	; 222
+    260c:	04 ee       	ldi	r16, 0xE4	; 228
 	pid_1.set_kc(&pid_1, 1);
     260e:	13 e0       	ldi	r17, 0x03	; 3
     2610:	d8 01       	movw	r26, r16
@@ -5715,7 +5715,7 @@ int main(void)
     2662:	74 e4       	ldi	r23, 0x44	; 68
     2664:	c8 01       	movw	r24, r16
     2666:	09 95       	icall
-    2668:	04 e1       	ldi	r16, 0x14	; 20
+    2668:	0a e1       	ldi	r16, 0x1A	; 26
 	/***Another one woopy ti dooo***/
 	pid_2.set_kc(&pid_2, 0.5);
     266a:	14 e0       	ldi	r17, 0x04	; 4
@@ -5872,8 +5872,8 @@ int main(void)
     276c:	c2 5d       	subi	r28, 0xD2	; 210
     276e:	d0 40       	sbci	r29, 0x00	; 0
     2770:	09 95       	icall
-    2772:	90 93 dd 03 	sts	0x03DD, r25	; 0x8003dd <adcvalue+0x1>
-    2776:	80 93 dc 03 	sts	0x03DC, r24	; 0x8003dc <adcvalue>
+    2772:	90 93 e3 03 	sts	0x03E3, r25	; 0x8003e3 <adcvalue+0x1>
+    2776:	80 93 e2 03 	sts	0x03E2, r24	; 0x8003e2 <adcvalue>
     277a:	60 e0       	ldi	r22, 0x00	; 0
 					lcd0.gotoxy(0,0);
     277c:	70 e0       	ldi	r23, 0x00	; 0
@@ -5887,11 +5887,11 @@ int main(void)
     278a:	91 e0       	ldi	r25, 0x01	; 1
     278c:	f3 01       	movw	r30, r6
     278e:	09 95       	icall
-    2790:	e0 91 ac 03 	lds	r30, 0x03AC	; 0x8003ac <function+0x20>
+    2790:	e0 91 b2 03 	lds	r30, 0x03B2	; 0x8003b2 <function+0x20>
 					strcpy(str,function.i16toa(adcvalue));
-    2794:	f0 91 ad 03 	lds	r31, 0x03AD	; 0x8003ad <function+0x21>
-    2798:	80 91 dc 03 	lds	r24, 0x03DC	; 0x8003dc <adcvalue>
-    279c:	90 91 dd 03 	lds	r25, 0x03DD	; 0x8003dd <adcvalue+0x1>
+    2794:	f0 91 b3 03 	lds	r31, 0x03B3	; 0x8003b3 <function+0x21>
+    2798:	80 91 e2 03 	lds	r24, 0x03E2	; 0x8003e2 <adcvalue>
+    279c:	90 91 e3 03 	lds	r25, 0x03E3	; 0x8003e3 <adcvalue+0x1>
     27a0:	09 95       	icall
     27a2:	bc 01       	movw	r22, r24
     27a4:	ce 01       	movw	r24, r28
@@ -5905,12 +5905,12 @@ int main(void)
     27b2:	9f 4f       	sbci	r25, 0xFF	; 255
     27b4:	f3 01       	movw	r30, r6
     27b6:	09 95       	icall
-    27b8:	c0 90 4a 04 	lds	r12, 0x044A	; 0x80044a <pid_out_1>
+    27b8:	c0 90 50 04 	lds	r12, 0x0450	; 0x800450 <pid_out_1>
 					
 					if(pid_out_1 >-1024 && pid_out_1 <1024){
-    27bc:	d0 90 4b 04 	lds	r13, 0x044B	; 0x80044b <pid_out_1+0x1>
-    27c0:	e0 90 4c 04 	lds	r14, 0x044C	; 0x80044c <pid_out_1+0x2>
-    27c4:	f0 90 4d 04 	lds	r15, 0x044D	; 0x80044d <pid_out_1+0x3>
+    27bc:	d0 90 51 04 	lds	r13, 0x0451	; 0x800451 <pid_out_1+0x1>
+    27c0:	e0 90 52 04 	lds	r14, 0x0452	; 0x800452 <pid_out_1+0x2>
+    27c4:	f0 90 53 04 	lds	r15, 0x0453	; 0x800453 <pid_out_1+0x3>
     27c8:	20 e0       	ldi	r18, 0x00	; 0
     27ca:	30 e0       	ldi	r19, 0x00	; 0
     27cc:	40 e8       	ldi	r20, 0x80	; 128
@@ -5941,8 +5941,8 @@ int main(void)
     27fc:	ff 93       	push	r31
     27fe:	2e e2       	ldi	r18, 0x2E	; 46
     2800:	2f 93       	push	r18
-    2802:	e0 91 ca 03 	lds	r30, 0x03CA	; 0x8003ca <function+0x3e>
-    2806:	f0 91 cb 03 	lds	r31, 0x03CB	; 0x8003cb <function+0x3f>
+    2802:	e0 91 d0 03 	lds	r30, 0x03D0	; 0x8003d0 <function+0x3e>
+    2806:	f0 91 d1 03 	lds	r31, 0x03D1	; 0x8003d1 <function+0x3f>
     280a:	0f 2e       	mov	r0, r31
     280c:	f4 ef       	ldi	r31, 0xF4	; 244
     280e:	af 2e       	mov	r10, r31
@@ -5982,9 +5982,9 @@ int main(void)
     2856:	90 e0       	ldi	r25, 0x00	; 0
     2858:	f2 01       	movw	r30, r4
     285a:	09 95       	icall
-    285c:	e0 91 ac 03 	lds	r30, 0x03AC	; 0x8003ac <function+0x20>
+    285c:	e0 91 b2 03 	lds	r30, 0x03B2	; 0x8003b2 <function+0x20>
 						strcpy(str,function.i16toa(tmp));
-    2860:	f0 91 ad 03 	lds	r31, 0x03AD	; 0x8003ad <function+0x21>
+    2860:	f0 91 b3 03 	lds	r31, 0x03B3	; 0x8003b3 <function+0x21>
     2864:	80 91 82 03 	lds	r24, 0x0382	; 0x800382 <tmp>
     2868:	90 91 83 03 	lds	r25, 0x0383	; 0x800383 <tmp+0x1>
     286c:	09 95       	icall
@@ -6004,11 +6004,11 @@ int main(void)
     2886:	0f 90       	pop	r0
     2888:	0f 90       	pop	r0
     288a:	0f 90       	pop	r0
-    288c:	e0 91 d6 03 	lds	r30, 0x03D6	; 0x8003d6 <function+0x4a>
+    288c:	e0 91 dc 03 	lds	r30, 0x03DC	; 0x8003dc <function+0x4a>
 					}
 					
 					function.ftoa(35.00567,str,6);
-    2890:	f0 91 d7 03 	lds	r31, 0x03D7	; 0x8003d7 <function+0x4b>
+    2890:	f0 91 dd 03 	lds	r31, 0x03DD	; 0x8003dd <function+0x4b>
     2894:	26 e0       	ldi	r18, 0x06	; 6
     2896:	30 e0       	ldi	r19, 0x00	; 0
     2898:	ae 01       	movw	r20, r28
@@ -6045,13 +6045,13 @@ int main(void)
     28c8:	f2 01       	movw	r30, r4
     28ca:	09 95       	icall
 						strcpy(str,function.i32toa(pid_1.derivative));
-    28cc:	60 91 fa 03 	lds	r22, 0x03FA	; 0x8003fa <pid_1+0x1c>
-    28d0:	70 91 fb 03 	lds	r23, 0x03FB	; 0x8003fb <pid_1+0x1d>
-    28d4:	80 91 fc 03 	lds	r24, 0x03FC	; 0x8003fc <pid_1+0x1e>
-    28d8:	90 91 fd 03 	lds	r25, 0x03FD	; 0x8003fd <pid_1+0x1f>
+    28cc:	60 91 00 04 	lds	r22, 0x0400	; 0x800400 <pid_1+0x1c>
+    28d0:	70 91 01 04 	lds	r23, 0x0401	; 0x800401 <pid_1+0x1d>
+    28d4:	80 91 02 04 	lds	r24, 0x0402	; 0x800402 <pid_1+0x1e>
+    28d8:	90 91 03 04 	lds	r25, 0x0403	; 0x800403 <pid_1+0x1f>
     28dc:	1a d3       	rcall	.+1588   	; 0x2f12 <__fixsfsi>
-    28de:	e0 91 b0 03 	lds	r30, 0x03B0	; 0x8003b0 <function+0x24>
-    28e2:	f0 91 b1 03 	lds	r31, 0x03B1	; 0x8003b1 <function+0x25>
+    28de:	e0 91 b6 03 	lds	r30, 0x03B6	; 0x8003b6 <function+0x24>
+    28e2:	f0 91 b7 03 	lds	r31, 0x03B7	; 0x8003b7 <function+0x25>
     28e6:	09 95       	icall
     28e8:	bc 01       	movw	r22, r24
     28ea:	ce 01       	movw	r24, r28
@@ -6077,13 +6077,13 @@ int main(void)
     2906:	f2 01       	movw	r30, r4
     2908:	09 95       	icall
 					strcpy(str,function.i32toa(pid_out_1));
-    290a:	60 91 4a 04 	lds	r22, 0x044A	; 0x80044a <pid_out_1>
-    290e:	70 91 4b 04 	lds	r23, 0x044B	; 0x80044b <pid_out_1+0x1>
-    2912:	80 91 4c 04 	lds	r24, 0x044C	; 0x80044c <pid_out_1+0x2>
-    2916:	90 91 4d 04 	lds	r25, 0x044D	; 0x80044d <pid_out_1+0x3>
+    290a:	60 91 50 04 	lds	r22, 0x0450	; 0x800450 <pid_out_1>
+    290e:	70 91 51 04 	lds	r23, 0x0451	; 0x800451 <pid_out_1+0x1>
+    2912:	80 91 52 04 	lds	r24, 0x0452	; 0x800452 <pid_out_1+0x2>
+    2916:	90 91 53 04 	lds	r25, 0x0453	; 0x800453 <pid_out_1+0x3>
     291a:	fb d2       	rcall	.+1526   	; 0x2f12 <__fixsfsi>
-    291c:	e0 91 b0 03 	lds	r30, 0x03B0	; 0x8003b0 <function+0x24>
-    2920:	f0 91 b1 03 	lds	r31, 0x03B1	; 0x8003b1 <function+0x25>
+    291c:	e0 91 b6 03 	lds	r30, 0x03B6	; 0x8003b6 <function+0x24>
+    2920:	f0 91 b7 03 	lds	r31, 0x03B7	; 0x8003b7 <function+0x25>
     2924:	09 95       	icall
     2926:	bc 01       	movw	r22, r24
     2928:	ce 01       	movw	r24, r28
@@ -6107,13 +6107,13 @@ int main(void)
     2944:	f2 01       	movw	r30, r4
     2946:	09 95       	icall
 					strcpy(str,function.i32toa(pid_out_2));
-    2948:	60 91 d8 03 	lds	r22, 0x03D8	; 0x8003d8 <pid_out_2>
-    294c:	70 91 d9 03 	lds	r23, 0x03D9	; 0x8003d9 <pid_out_2+0x1>
-    2950:	80 91 da 03 	lds	r24, 0x03DA	; 0x8003da <pid_out_2+0x2>
-    2954:	90 91 db 03 	lds	r25, 0x03DB	; 0x8003db <pid_out_2+0x3>
+    2948:	60 91 de 03 	lds	r22, 0x03DE	; 0x8003de <pid_out_2>
+    294c:	70 91 df 03 	lds	r23, 0x03DF	; 0x8003df <pid_out_2+0x1>
+    2950:	80 91 e0 03 	lds	r24, 0x03E0	; 0x8003e0 <pid_out_2+0x2>
+    2954:	90 91 e1 03 	lds	r25, 0x03E1	; 0x8003e1 <pid_out_2+0x3>
     2958:	dc d2       	rcall	.+1464   	; 0x2f12 <__fixsfsi>
-    295a:	e0 91 b0 03 	lds	r30, 0x03B0	; 0x8003b0 <function+0x24>
-    295e:	f0 91 b1 03 	lds	r31, 0x03B1	; 0x8003b1 <function+0x25>
+    295a:	e0 91 b6 03 	lds	r30, 0x03B6	; 0x8003b6 <function+0x24>
+    295e:	f0 91 b7 03 	lds	r31, 0x03B7	; 0x8003b7 <function+0x25>
     2962:	09 95       	icall
     2964:	bc 01       	movw	r22, r24
     2966:	ce 01       	movw	r24, r28
@@ -6241,9 +6241,9 @@ int main(void)
     2a38:	84 58       	subi	r24, 0x84	; 132
     2a3a:	9f 4f       	sbci	r25, 0xFF	; 255
     2a3c:	bf d5       	rcall	.+2942   	; 0x35bc <strncpy>
-    2a3e:	e0 91 b8 03 	lds	r30, 0x03B8	; 0x8003b8 <function+0x2c>
+    2a3e:	e0 91 be 03 	lds	r30, 0x03BE	; 0x8003be <function+0x2c>
 						mvalue=function.strToInt(mstr);
-    2a42:	f0 91 b9 03 	lds	r31, 0x03B9	; 0x8003b9 <function+0x2d>
+    2a42:	f0 91 bf 03 	lds	r31, 0x03BF	; 0x8003bf <function+0x2d>
     2a46:	ce 01       	movw	r24, r28
     2a48:	84 58       	subi	r24, 0x84	; 132
     2a4a:	9f 4f       	sbci	r25, 0xFF	; 255
@@ -6264,8 +6264,8 @@ int main(void)
     2a62:	ff 93       	push	r31
     2a64:	2e e2       	ldi	r18, 0x2E	; 46
     2a66:	2f 93       	push	r18
-    2a68:	e0 91 ca 03 	lds	r30, 0x03CA	; 0x8003ca <function+0x3e>
-    2a6c:	f0 91 cb 03 	lds	r31, 0x03CB	; 0x8003cb <function+0x3f>
+    2a68:	e0 91 d0 03 	lds	r30, 0x03D0	; 0x8003d0 <function+0x3e>
+    2a6c:	f0 91 d1 03 	lds	r31, 0x03D1	; 0x8003d1 <function+0x3f>
     2a70:	0f 2e       	mov	r0, r31
     2a72:	f4 ef       	ldi	r31, 0xF4	; 244
     2a74:	af 2e       	mov	r10, r31
@@ -6607,47 +6607,47 @@ ISR(TIMER0_COMP_vect) // 1Hz and usart Tx
     2c7a:	08 f4       	brcc	.+2      	; 0x2c7e <__vector_15+0x3e>
     2c7c:	5f c0       	rjmp	.+190    	; 0x2d3c <__vector_15+0xfc>
 		pid_out_1=pid_1.output(&pid_1,adcvalue,0.5);
-    2c7e:	60 91 dc 03 	lds	r22, 0x03DC	; 0x8003dc <adcvalue>
-    2c82:	70 91 dd 03 	lds	r23, 0x03DD	; 0x8003dd <adcvalue+0x1>
+    2c7e:	60 91 e2 03 	lds	r22, 0x03E2	; 0x8003e2 <adcvalue>
+    2c82:	70 91 e3 03 	lds	r23, 0x03E3	; 0x8003e3 <adcvalue+0x1>
     2c86:	80 e0       	ldi	r24, 0x00	; 0
     2c88:	90 e0       	ldi	r25, 0x00	; 0
     2c8a:	74 d1       	rcall	.+744    	; 0x2f74 <__floatunsisf>
     2c8c:	ab 01       	movw	r20, r22
     2c8e:	bc 01       	movw	r22, r24
-    2c90:	e0 91 12 04 	lds	r30, 0x0412	; 0x800412 <pid_1+0x34>
-    2c94:	f0 91 13 04 	lds	r31, 0x0413	; 0x800413 <pid_1+0x35>
+    2c90:	e0 91 18 04 	lds	r30, 0x0418	; 0x800418 <pid_1+0x34>
+    2c94:	f0 91 19 04 	lds	r31, 0x0419	; 0x800419 <pid_1+0x35>
     2c98:	00 e0       	ldi	r16, 0x00	; 0
     2c9a:	10 e0       	ldi	r17, 0x00	; 0
     2c9c:	20 e0       	ldi	r18, 0x00	; 0
     2c9e:	3f e3       	ldi	r19, 0x3F	; 63
-    2ca0:	8e ed       	ldi	r24, 0xDE	; 222
+    2ca0:	84 ee       	ldi	r24, 0xE4	; 228
     2ca2:	93 e0       	ldi	r25, 0x03	; 3
     2ca4:	09 95       	icall
-    2ca6:	60 93 4a 04 	sts	0x044A, r22	; 0x80044a <pid_out_1>
-    2caa:	70 93 4b 04 	sts	0x044B, r23	; 0x80044b <pid_out_1+0x1>
-    2cae:	80 93 4c 04 	sts	0x044C, r24	; 0x80044c <pid_out_1+0x2>
-    2cb2:	90 93 4d 04 	sts	0x044D, r25	; 0x80044d <pid_out_1+0x3>
+    2ca6:	60 93 50 04 	sts	0x0450, r22	; 0x800450 <pid_out_1>
+    2caa:	70 93 51 04 	sts	0x0451, r23	; 0x800451 <pid_out_1+0x1>
+    2cae:	80 93 52 04 	sts	0x0452, r24	; 0x800452 <pid_out_1+0x2>
+    2cb2:	90 93 53 04 	sts	0x0453, r25	; 0x800453 <pid_out_1+0x3>
 		pid_out_2=pid_2.output(&pid_2,adcvalue,0.5);
-    2cb6:	60 91 dc 03 	lds	r22, 0x03DC	; 0x8003dc <adcvalue>
-    2cba:	70 91 dd 03 	lds	r23, 0x03DD	; 0x8003dd <adcvalue+0x1>
+    2cb6:	60 91 e2 03 	lds	r22, 0x03E2	; 0x8003e2 <adcvalue>
+    2cba:	70 91 e3 03 	lds	r23, 0x03E3	; 0x8003e3 <adcvalue+0x1>
     2cbe:	80 e0       	ldi	r24, 0x00	; 0
     2cc0:	90 e0       	ldi	r25, 0x00	; 0
     2cc2:	58 d1       	rcall	.+688    	; 0x2f74 <__floatunsisf>
     2cc4:	ab 01       	movw	r20, r22
     2cc6:	bc 01       	movw	r22, r24
-    2cc8:	e0 91 48 04 	lds	r30, 0x0448	; 0x800448 <pid_2+0x34>
-    2ccc:	f0 91 49 04 	lds	r31, 0x0449	; 0x800449 <pid_2+0x35>
+    2cc8:	e0 91 4e 04 	lds	r30, 0x044E	; 0x80044e <pid_2+0x34>
+    2ccc:	f0 91 4f 04 	lds	r31, 0x044F	; 0x80044f <pid_2+0x35>
     2cd0:	00 e0       	ldi	r16, 0x00	; 0
     2cd2:	10 e0       	ldi	r17, 0x00	; 0
     2cd4:	20 e0       	ldi	r18, 0x00	; 0
     2cd6:	3f e3       	ldi	r19, 0x3F	; 63
-    2cd8:	84 e1       	ldi	r24, 0x14	; 20
+    2cd8:	8a e1       	ldi	r24, 0x1A	; 26
     2cda:	94 e0       	ldi	r25, 0x04	; 4
     2cdc:	09 95       	icall
-    2cde:	60 93 d8 03 	sts	0x03D8, r22	; 0x8003d8 <pid_out_2>
-    2ce2:	70 93 d9 03 	sts	0x03D9, r23	; 0x8003d9 <pid_out_2+0x1>
-    2ce6:	80 93 da 03 	sts	0x03DA, r24	; 0x8003da <pid_out_2+0x2>
-    2cea:	90 93 db 03 	sts	0x03DB, r25	; 0x8003db <pid_out_2+0x3>
+    2cde:	60 93 de 03 	sts	0x03DE, r22	; 0x8003de <pid_out_2>
+    2ce2:	70 93 df 03 	sts	0x03DF, r23	; 0x8003df <pid_out_2+0x1>
+    2ce6:	80 93 e0 03 	sts	0x03E0, r24	; 0x8003e0 <pid_out_2+0x2>
+    2cea:	90 93 e1 03 	sts	0x03E1, r25	; 0x8003e1 <pid_out_2+0x3>
 		increment++;
     2cee:	80 91 7f 01 	lds	r24, 0x017F	; 0x80017f <increment>
     2cf2:	8f 5f       	subi	r24, 0xFF	; 255
@@ -6658,7 +6658,7 @@ ISR(TIMER0_COMP_vect) // 1Hz and usart Tx
     2cfc:	08 97       	sbiw	r24, 0x08	; 8
     2cfe:	74 f4       	brge	.+28     	; 0x2d1c <__vector_15+0xdc>
 			shift.bit(0);
-    2d00:	06 e8       	ldi	r16, 0x86	; 134
+    2d00:	0c e8       	ldi	r16, 0x8C	; 140
     2d02:	13 e0       	ldi	r17, 0x03	; 3
     2d04:	d8 01       	movw	r26, r16
     2d06:	ed 91       	ld	r30, X+
@@ -6675,7 +6675,7 @@ ISR(TIMER0_COMP_vect) // 1Hz and usart Tx
     2d1a:	0d c0       	rjmp	.+26     	; 0x2d36 <__vector_15+0xf6>
 		}else{
 			shift.bit(1);
-    2d1c:	06 e8       	ldi	r16, 0x86	; 134
+    2d1c:	0c e8       	ldi	r16, 0x8C	; 140
     2d1e:	13 e0       	ldi	r17, 0x03	; 3
     2d20:	d8 01       	movw	r26, r16
     2d22:	ed 91       	ld	r30, X+

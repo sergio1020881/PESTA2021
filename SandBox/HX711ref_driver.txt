@@ -8,7 +8,9 @@ unsigned char i;
 ADDO=1;
 ADSK=0;
 Count=0;
+/*******************************/
 while(ADDO);
+/*******************************/
 for (i=0;i<24;i++){
 ADSK=1;
 Count=Count<<1;

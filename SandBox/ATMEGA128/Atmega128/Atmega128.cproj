@@ -211,6 +211,12 @@
     <Compile Include="Libraria\rotenc.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="Libraria\x711.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Libraria\x711.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Libraria\znpid.c">
       <SubType>compile</SubType>
     </Compile>

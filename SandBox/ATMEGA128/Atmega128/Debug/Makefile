@@ -52,6 +52,7 @@ C_SRCS +=  \
 ../Libraria/mm74c923.c \
 ../Libraria/pcf8563rtc.c \
 ../Libraria/rotenc.c \
+../Libraria/x711.c \
 ../Libraria/znpid.c \
 ../main.c
 
@@ -77,6 +78,7 @@ Libraria/lfsm.o \
 Libraria/mm74c923.o \
 Libraria/pcf8563rtc.o \
 Libraria/rotenc.o \
+Libraria/x711.o \
 Libraria/znpid.o \
 main.o
 
@@ -95,6 +97,7 @@ Libraria/lfsm.o \
 Libraria/mm74c923.o \
 Libraria/pcf8563rtc.o \
 Libraria/rotenc.o \
+Libraria/x711.o \
 Libraria/znpid.o \
 main.o
 
@@ -113,6 +116,7 @@ Libraria/lfsm.d \
 Libraria/mm74c923.d \
 Libraria/pcf8563rtc.d \
 Libraria/rotenc.d \
+Libraria/x711.d \
 Libraria/znpid.d \
 main.d
 
@@ -131,6 +135,7 @@ Libraria/lfsm.d \
 Libraria/mm74c923.d \
 Libraria/pcf8563rtc.d \
 Libraria/rotenc.d \
+Libraria/x711.d \
 Libraria/znpid.d \
 main.d
 
@@ -240,6 +245,13 @@ Libraria/pcf8563rtc.o: ../Libraria/pcf8563rtc.c
 	
 
 Libraria/rotenc.o: ../Libraria/rotenc.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\include" -I"../Libraria"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\gcc\dev\atmega128" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+Libraria/x711.o: ../Libraria/x711.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\include" -I"../Libraria"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\gcc\dev\atmega128" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
