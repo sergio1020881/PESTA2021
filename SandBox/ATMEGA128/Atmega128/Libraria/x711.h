@@ -18,27 +18,26 @@ Comment:
 
 
 struct x711{
-	float kc; // constant p
-	float ki; // constant i
-	float kd; // constant d
+	uint8_t readflag; // indicate start of bit shifting
+	uint8_t n_clk; // number of clock cycles
+	uint8_t bitcount; // index shifted bit
 	float Err_past; // Last Error reading
 	float dy; // difference error y axis points.
 	float dx; // difference time x axis points.
 	float integral; // progression
 	float derivative; // rate of growth (tangent), or derivative
-	float SetPoint; // desired output
 	float PV; // output feedback
-	float OP; // output signal
+	uint32_t OP; // output signal
 	/******/
-	void (*set_kc)(struct x711* self, float kc);
-	void (*set_ki)(struct x711* self, float ki);
-	void (*set_kd)(struct x711* self, float kd);
-	void (*set_SP)(struct x711* self, float setpoint);
-	float (*output)(struct x711* self, float PV, float timelapse);
+	void (*set_readflag)(struct x711* self);
+	void (*reset_readflag)(struct x711* self);
+	uint8_t (*read_bit)(void);
+	void (*set_amplify)(struct x711* self, uint8_t amplify);
+	float (*shift_bit)(struct x711* self, float PV, float timelapse);
 };
 typedef struct x711 X711;
 /***Header***/
-X711 X711enable(volatile uint8_t *ddr, volatile uint8_t *port, uint8_t datapin, uint8_t clkpin);
+X711 X711enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t *port, uint8_t datapin, uint8_t clkpin);
 #endif
 /***EOF***/
 /***COMMENT***
