@@ -1,5 +1,5 @@
 /************************************************************************
-Title: PID_TEST.c
+Title: HX711_TEST.c
 Author: Sergio Manuel Santos
 	<sergio.salazar.santos@gmail.com>
 File: $Id: MAIN,v 1.8.2.1 21/02/2021 Exp $
@@ -164,5 +164,5 @@ ISR(TIMER0_COMP_vect)
 /***EOF***/
 /**** Comment:
 The past only exists if the present comes to be. There is no future only possibilities.
-because 24 bit will have to create a vector pointer of the size of 32 bit, then at the end do a cast to (int32_t*)*ptr
+because 24 bit will have to create a vector pointer of the size of 32 bit, then at the end do a cast to *((int32_t*)ptr)
 ****/
