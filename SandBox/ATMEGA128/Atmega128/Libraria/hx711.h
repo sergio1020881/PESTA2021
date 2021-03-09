@@ -23,7 +23,7 @@ struct hx711{
 	uint8_t bitcount; // count down 24 bit value
 	uint8_t buffer[4]; // reading buffer
 	uint8_t bufferindex; // buffer index
-	uint32_t reading; // reading to be published
+	int32_t reading; // reading to be published
 	/******/
 	void (*set_readflag)(struct hx711* self);
 	void (*reset_readflag)(struct hx711* self);

@@ -118,11 +118,13 @@ void HX711_set_amplify(HX711* self, uint8_t amplify)
 }
 uint32_t HX711_shift_bits(HX711* self)
 {
-	uint8_t bindex;
-	bindex = self->bufferindex-1;
+	uint8_t aindex, bindex;
+	uint32_t value;
+	aindex = self->bufferindex-1;
+	bindex = self->bitcount-1;
 	if(self->readflag){
 		if(self->bitcount){
-			if (HX711_read_bit()) self->buffer[bindex] |= ONE<<((self->bitcount-1)-(bindex*8));
+			if (HX711_read_bit()) self->buffer[aindex] |= ONE<<(bindex-(aindex*8));
 			self->bitcount--;
 			if(self->bitcount==16)
 				self->bufferindex=2;
@@ -133,13 +135,17 @@ uint32_t HX711_shift_bits(HX711* self)
 				HX711_read_bit();
 				self->ampcount--;
 			}else{
-				self->reading=*((uint32_t*)self->buffer);
+				value=*((int32_t*)self->buffer);
+				if(value>8388607)
+					value-=16777216;
+				self->reading=value;
 				self->bitcount=HX711_ADC_bits;
 				self->bufferindex=HX711_VECT_SIZE;
 				self->ampcount=self->amplify;
 				self->buffer[0]=0;
 				self->buffer[1]=0;
 				self->buffer[2]=0;
+				self->buffer[3]=0;
 				HX711_reset_readflag(self);
 			}
 		}

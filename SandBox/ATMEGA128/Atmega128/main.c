@@ -144,7 +144,7 @@ ISR(TIMER0_COMP_vect)
 	PORTC&=~(1<<0);
 	}
 	
-	value=16777215-hx.shift_bits(&hx);
+	value=hx.shift_bits(&hx);
 	
 	if(count_1 > 0){
 		count_2++;
