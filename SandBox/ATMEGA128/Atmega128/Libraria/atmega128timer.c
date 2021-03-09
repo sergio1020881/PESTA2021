@@ -387,6 +387,7 @@ clk T 0 S /1024 (From prescaler); default - clk T 0 S /1024 (From prescaler).
 				TIMER_COUNTER0_CONTROL_REGISTER|=(7<<CS00);
 				break;
 		}
+		STATUS_REGISTER|=1<<GLOBAL_INTERRUPT_ENABLE;
 		timer0_state=1;
 	}	
 }
@@ -404,16 +405,19 @@ default-Normal port operation, OC0 disconnected.
 			break;
 		case 1: // Reserved
 				// Toggle OC0 on compare match
+				DDRB=0x10;
 			TIMER_COUNTER0_CONTROL_REGISTER|=(1<<COM00);
 			break;
 		case 2: // Clear OC0 on compare match when up-counting. Set OC0 on compare
 				// match when downcounting.
 				// Clear OC0 on compare match
+				DDRB=0x10;
 			TIMER_COUNTER0_CONTROL_REGISTER|=(1<<COM01);
 			break;
 		case 3: // Set OC0 on compare match when up-counting. Clear OC0 on compare
 				// match when downcounting.
 				// Set OC0 on compare match
+				DDRB=0x10;
 			TIMER_COUNTER0_CONTROL_REGISTER|=(1<<COM00) | (1<<COM01);
 			break;
 		default:
@@ -472,6 +476,7 @@ External clock source on Tn pin. Clock on rising edge; default - clk T 0 S /1024
 				TIMER_COUNTER1B_CONTROL_REGISTER|=(5<<CS10);
 				break;
 		}
+		STATUS_REGISTER|=1<<GLOBAL_INTERRUPT_ENABLE;
 		timer1_state=1;
 	}	
 }
@@ -607,6 +612,7 @@ External clock source on Tn pin. Clock on rising edge; default - clk T 0 S /1024
 				TIMER_COUNTER2_CONTROL_REGISTER|=(5<<CS20);
 				break;
 		}
+		STATUS_REGISTER|=1<<GLOBAL_INTERRUPT_ENABLE;
 		timer2_state=1;
 	}	
 }
@@ -821,6 +827,7 @@ External clock source on Tn pin. Clock on rising edge; default - clk T 0 S /1024
 				TIMER_COUNTER3B_CONTROL_REGISTER|=(5<<CS30);
 				break;
 		}
+		STATUS_REGISTER|=1<<GLOBAL_INTERRUPT_ENABLE;
 		timer3_state=1;
 	}	
 }

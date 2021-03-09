@@ -30,7 +30,7 @@ Libraria\pcf8563rtc.c
 
 Libraria\rotenc.c
 
-Libraria\x711.c
+Libraria\hx711.c
 
 Libraria\znpid.c
 

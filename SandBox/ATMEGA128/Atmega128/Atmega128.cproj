@@ -47,8 +47,7 @@
       <ToolOptions>
         <InterfaceProperties>
         </InterfaceProperties>
-        <InterfaceName>
-        </InterfaceName>
+        <InterfaceName>ISP</InterfaceName>
       </ToolOptions>
       <ToolType>com.atmel.avrdbg.tool.simulator</ToolType>
       <ToolNumber>
@@ -68,6 +67,17 @@
       <ToolName>Atmel-ICE</ToolName>
     </com_atmel_avrdbg_tool_atmelice>
     <avrtoolinterfaceclock>125000</avrtoolinterfaceclock>
+    <custom>
+      <ToolOptions xmlns="">
+        <InterfaceProperties>
+        </InterfaceProperties>
+        <InterfaceName>ISP</InterfaceName>
+      </ToolOptions>
+      <ToolType xmlns="">custom</ToolType>
+      <ToolNumber xmlns="">
+      </ToolNumber>
+      <ToolName xmlns="">Custom Programming Tool</ToolName>
+    </custom>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <ToolchainSettings>
@@ -211,10 +221,10 @@
     <Compile Include="Libraria\rotenc.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Libraria\x711.c">
+    <Compile Include="Libraria\hx711.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Libraria\x711.h">
+    <Compile Include="Libraria\hx711.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Libraria\znpid.c">
