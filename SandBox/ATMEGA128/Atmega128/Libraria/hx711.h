@@ -18,7 +18,7 @@ Comment:
 
 struct hx711{
 	uint8_t readflag; // indicate start of bit shifting
-	uint8_t amplify; // number of clock cycles
+	uint8_t amplify; // number of end clock cycles
 	uint8_t ampcount; // count down final amplify pulses
 	uint8_t bitcount; // count down 24 bit value
 	uint8_t buffer[4]; // reading buffer

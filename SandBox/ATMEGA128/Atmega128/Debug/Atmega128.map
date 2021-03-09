@@ -253,11 +253,11 @@ Discarded input sections
  .text.TIMER_COUNTER1_start
                 0x00000000       0x94 Libraria/atmega128timer.o
  .text.TIMER_COUNTER1_compoutmodeA
-                0x00000000       0x2a Libraria/atmega128timer.o
+                0x00000000       0x30 Libraria/atmega128timer.o
  .text.TIMER_COUNTER1_compoutmodeB
-                0x00000000       0x2a Libraria/atmega128timer.o
+                0x00000000       0x30 Libraria/atmega128timer.o
  .text.TIMER_COUNTER1_compoutmodeC
-                0x00000000       0x2a Libraria/atmega128timer.o
+                0x00000000       0x30 Libraria/atmega128timer.o
  .text.TIMER_COUNTER1_compareA
                 0x00000000        0x6 Libraria/atmega128timer.o
  .text.TIMER_COUNTER1_compareB
@@ -269,7 +269,7 @@ Discarded input sections
  .text.TIMER_COUNTER2_start
                 0x00000000       0x90 Libraria/atmega128timer.o
  .text.TIMER_COUNTER2_compoutmode
-                0x00000000       0x2a Libraria/atmega128timer.o
+                0x00000000       0x30 Libraria/atmega128timer.o
  .text.TIMER_COUNTER2_compare
                 0x00000000        0x4 Libraria/atmega128timer.o
  .text.TIMER_COUNTER2_stop
@@ -277,11 +277,11 @@ Discarded input sections
  .text.TIMER_COUNTER3_start
                 0x00000000       0xbc Libraria/atmega128timer.o
  .text.TIMER_COUNTER3_compoutmodeA
-                0x00000000       0x36 Libraria/atmega128timer.o
+                0x00000000       0x3c Libraria/atmega128timer.o
  .text.TIMER_COUNTER3_compoutmodeB
-                0x00000000       0x36 Libraria/atmega128timer.o
+                0x00000000       0x3c Libraria/atmega128timer.o
  .text.TIMER_COUNTER3_compoutmodeC
-                0x00000000       0x36 Libraria/atmega128timer.o
+                0x00000000       0x3c Libraria/atmega128timer.o
  .text.TIMER_COUNTER3_compareA
                 0x00000000        0xa Libraria/atmega128timer.o
  .text.TIMER_COUNTER3_compareB
@@ -1821,16 +1821,16 @@ END GROUP
  .debug_abbrev  0x00001307      0x1da Libraria/hx711.o
  .debug_abbrev  0x000014e1      0x1b7 main.o
 
-.debug_line     0x00000000     0x31d0
+.debug_line     0x00000000     0x324e
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x169 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51/crtatmega128.o
  .debug_line    0x00000169      0x312 Libraria/atmega128analog.o
- .debug_line    0x0000047b      0xbb0 Libraria/atmega128timer.o
- .debug_line    0x0000102b      0x888 Libraria/atmega128uart.o
- .debug_line    0x000018b3      0x8fb Libraria/function.o
- .debug_line    0x000021ae      0xbcb Libraria/lcd.o
- .debug_line    0x00002d79      0x2aa Libraria/hx711.o
- .debug_line    0x00003023      0x1ad main.o
+ .debug_line    0x0000047b      0xc2e Libraria/atmega128timer.o
+ .debug_line    0x000010a9      0x888 Libraria/atmega128uart.o
+ .debug_line    0x00001931      0x8fb Libraria/function.o
+ .debug_line    0x0000222c      0xbcb Libraria/lcd.o
+ .debug_line    0x00002df7      0x2aa Libraria/hx711.o
+ .debug_line    0x000030a1      0x1ad main.o
 
 .debug_frame    0x00000000      0xee4
  *(.debug_frame)
