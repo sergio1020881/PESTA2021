@@ -84,10 +84,10 @@ int main(void)
 				//lcd0.string_size("program running",15);
 				
 				/***Play around***/
-				if(!(PINF & 64)){
-					hx.set_readflag(&hx);
+				//if(!(PINF & 64)){
+					//hx.set_readflag(&hx);
 					//PORTC&=~(1<<0);
-				}
+				//}
 				
 				
 				//lcd0.gotoxy(3,0);
@@ -137,16 +137,23 @@ ISR(TIMER0_COMP_vect)
 	uint8_t Sreg;
 	Sreg=SREG;
 	SREG&=~(1<<7);
+	uint32_t value;
 	
+	if(!(PINF & 64)){
+	hx.set_readflag(&hx);
+	PORTC&=~(1<<0);
+	}
+	
+	value=16777215-hx.shift_bits(&hx);
 	
 	if(count_1 > 0){
 		count_2++;
 		lcd0.gotoxy(0,0);
 		lcd0.string_size(function.i16toa(count_2),15);
 		lcd0.gotoxy(1,0);
-		lcd0.string_size(function.i32toa(hx.reading),15);
+		lcd0.string_size(function.i32toa(value),15);
 		PORTC|=(1<<0);
-		hx.shift_bits(&hx);
+		
 		
 		
 		count_1=0;

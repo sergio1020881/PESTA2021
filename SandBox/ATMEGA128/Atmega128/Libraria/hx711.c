@@ -22,7 +22,7 @@ Comment:
 #endif
 #define ZERO 0
 #define ONE 1
-#define HX711_ticks 0
+#define HX711_ticks 100
 #define HX711_ADC_bits 24
 #define HX711_VECT_SIZE 3
 /***Global File Variable***/
@@ -88,7 +88,7 @@ uint8_t HX711_read_bit(void)
 	uint16_t bool;
 	*hx711_PORT|=(1<<hx711_clkpin);
 	/**0.1us min**/
-	//for(bool=0;bool<HX711_ticks;bool++);
+	for(bool=0;bool<HX711_ticks;bool++);
 	bool=*hx711_PIN & (1<<hx711_datapin);
 	*hx711_PORT&=~(1<<hx711_clkpin);
 	return bool;
