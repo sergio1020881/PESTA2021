@@ -19,15 +19,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
   7 .debug_abbrev 00001689  00000000  00000000  00007e7d  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   0000323f  00000000  00000000  00009506  2**0
+  8 .debug_line   00003239  00000000  00000000  00009506  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_frame  00000ec4  00000000  00000000  0000c748  2**2
+  9 .debug_frame  00000ec4  00000000  00000000  0000c740  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    0000118d  00000000  00000000  0000d60c  2**0
+ 10 .debug_str    0000118d  00000000  00000000  0000d604  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    00004a1a  00000000  00000000  0000e799  2**0
+ 11 .debug_loc    00004a1a  00000000  00000000  0000e791  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 000004c8  00000000  00000000  000131b3  2**0
+ 12 .debug_ranges 000004c8  00000000  00000000  000131ab  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -3629,7 +3629,7 @@ void HX711_set_readflag(HX711* self)
 uint8_t HX711_read_bit(void)
 {	
 	uint16_t bool;
-	*hx711_PORT|=(1<<hx711_clkpin);
+	*hx711_PORT|=(ONE<<hx711_clkpin);
     19a0:	e0 91 e2 02 	lds	r30, 0x02E2	; 0x8002e2 <hx711_PORT>
     19a4:	f0 91 e3 02 	lds	r31, 0x02E3	; 0x8002e3 <hx711_PORT+0x1>
     19a8:	20 81       	ld	r18, Z
@@ -3649,7 +3649,7 @@ uint8_t HX711_read_bit(void)
 	/**0.1us minimum**/
 	for(bool=0;bool<HX711_ticks;bool++);
     19c6:	f1 f7       	brne	.-4      	; 0x19c4 <HX711_read_bit+0x24>
-	bool=*hx711_PIN & (1<<hx711_datapin);
+	bool=*hx711_PIN & (ONE<<hx711_datapin);
     19c8:	e0 91 e0 02 	lds	r30, 0x02E0	; 0x8002e0 <hx711_PIN>
     19cc:	f0 91 e1 02 	lds	r31, 0x02E1	; 0x8002e1 <hx711_PIN+0x1>
     19d0:	40 81       	ld	r20, Z
@@ -3662,7 +3662,7 @@ uint8_t HX711_read_bit(void)
     19e0:	99 1f       	adc	r25, r25
     19e2:	0a 94       	dec	r0
     19e4:	e2 f7       	brpl	.-8      	; 0x19de <HX711_read_bit+0x3e>
-	*hx711_PORT&=~(1<<hx711_clkpin);
+	*hx711_PORT&=~(ONE<<hx711_clkpin);
     19e6:	e0 91 e2 02 	lds	r30, 0x02E2	; 0x8002e2 <hx711_PORT>
     19ea:	f0 91 e3 02 	lds	r31, 0x02E3	; 0x8002e3 <hx711_PORT+0x1>
     19ee:	90 81       	ld	r25, Z
@@ -3780,7 +3780,7 @@ void HX711_set_readflag(HX711* self)
 	/***Detect query for reading***/
 	if((!(*hx711_PIN & ONE << hx711_datapin)) && !self->readflag){
 		HX711_set_readflag(self);
-		PORTC&=~(1<<0);
+		PORTC&=~(1<<0); // indicator remove when finished
     1a7e:	a8 98       	cbi	0x15, 0	; 21
 	}
 	/***Interrupt 24 times sequence***/
@@ -3793,10 +3793,11 @@ void HX711_set_readflag(HX711* self)
     1a88:	8b 81       	ldd	r24, Y+3	; 0x03
     1a8a:	88 23       	and	r24, r24
     1a8c:	29 f1       	breq	.+74     	; 0x1ad8 <HX711_read+0x9a>
-			if (HX711_read_bit()) self->buffer[aindex] |= ONE<<(bindex-(aindex*8));
+			if (HX711_read_bit())
     1a8e:	88 df       	rcall	.-240    	; 0x19a0 <HX711_read_bit>
     1a90:	88 23       	and	r24, r24
     1a92:	a9 f0       	breq	.+42     	; 0x1abe <HX711_read+0x80>
+				self->buffer[aindex] |= ONE<<(bindex-(aindex*8));
     1a94:	11 50       	subi	r17, 0x01	; 1
     1a96:	81 2f       	mov	r24, r17
     1a98:	90 e0       	ldi	r25, 0x00	; 0

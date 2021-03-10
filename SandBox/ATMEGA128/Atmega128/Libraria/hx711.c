@@ -22,7 +22,7 @@ Comment:
 #endif
 #define ZERO 0
 #define ONE 1
-#define HX711_ticks 110 // 16Mhz between 100 and 200, make a macro for this value.
+#define HX711_ticks 110 // 16Mhz between 100 and 200, make a macro for this value dependent on CPU clock.
 #define HX711_ADC_bits 24
 #define HX711_VECT_SIZE 4
 /***Global File Variable***/
@@ -83,11 +83,11 @@ void HX711_reset_readflag(HX711* self)
 uint8_t HX711_read_bit(void)
 {	
 	uint16_t bool;
-	*hx711_PORT|=(1<<hx711_clkpin);
+	*hx711_PORT|=(ONE<<hx711_clkpin);
 	/**0.1us minimum**/
 	for(bool=0;bool<HX711_ticks;bool++);
-	bool=*hx711_PIN & (1<<hx711_datapin);
-	*hx711_PORT&=~(1<<hx711_clkpin);
+	bool=*hx711_PIN & (ONE<<hx711_datapin);
+	*hx711_PORT&=~(ONE<<hx711_clkpin);
 	return bool;
 }
 // Gain selector
@@ -113,6 +113,9 @@ void HX711_set_amplify(HX711* self, uint8_t amplify)
 			break;
 	}
 }
+/***
+Function to be used in the interrupt routine with appropriate cycle period.
+***/
 uint32_t HX711_read(HX711* self)
 {
 	uint8_t aindex, bindex;
@@ -123,12 +126,13 @@ uint32_t HX711_read(HX711* self)
 	/***Detect query for reading***/
 	if((!(*hx711_PIN & ONE << hx711_datapin)) && !self->readflag){
 		HX711_set_readflag(self);
-		PORTC&=~(1<<0);
+		PORTC&=~(1<<0); // indicator remove when finished
 	}
 	/***Interrupt 24 times sequence***/
 	if(self->readflag){
 		if(self->bitcount){
-			if (HX711_read_bit()) self->buffer[aindex] |= ONE<<(bindex-(aindex*8));
+			if (HX711_read_bit())
+				self->buffer[aindex] |= ONE<<(bindex-(aindex*8));
 			self->bitcount--;
 			if(self->bitcount==16)
 				self->bufferindex=2;
@@ -159,5 +163,6 @@ uint32_t HX711_read(HX711* self)
 }
 /***Interrupt***/
 /****comment:
+Have to use vector to store 32 bit size word, then do a cast (int32_t*) to retrieve the value.
 *************/
 /***EOF***/
