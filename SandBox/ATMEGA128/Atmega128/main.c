@@ -56,7 +56,8 @@ int main(void)
 	/***INICIALIZE OBJECTS***/
 	function = FUNCenable();
 	lcd0 = LCD0enable(&DDRA,&PINA,&PORTA);
-	TIMER_COUNTER0 timer0 = TIMER_COUNTER0enable(2,2);
+	TIMER_COUNTER0 timer0 = TIMER_COUNTER0enable(2,2); //2,2
+	TIMER_COUNTER1 timer1 = TIMER_COUNTER1enable(4,0);
 	hx = HX711enable(&DDRF, &PINF, &PORTF, 6, 7);
 	/******/
 	char Menu='1'; // Main menu selector
@@ -66,8 +67,11 @@ int main(void)
 	//vector[2]=255;
 	//uint8_t* ptr=vector; 
 	timer0.compare(100);
-	timer0.start(1);
+	timer0.start(1);//1	1024
 	timer0.compoutmode(1);
+	timer1.compareA(50);
+	timer1.compoutmodeA(1);
+	timer1.start(256);
 	hx.set_amplify(&hx,64);
 	/**********/
 	//TODO:: Please write your application code
@@ -139,19 +143,14 @@ ISR(TIMER0_COMP_vect)
 	SREG&=~(1<<7);
 	uint32_t value;
 	
-	if(!(PINF & 64)){
-	hx.set_readflag(&hx);
-	PORTC&=~(1<<0);
-	}
-	
-	value=hx.shift_bits(&hx);
+	value=hx.read(&hx);
 	
 	if(count_1 > 0){
 		count_2++;
 		lcd0.gotoxy(0,0);
-		lcd0.string_size(function.i16toa(count_2),15);
+		lcd0.string_size(function.i16toa(count_2), 15);
 		lcd0.gotoxy(1,0);
-		lcd0.string_size(function.i32toa(value),15);
+		lcd0.string_size(function.i32toa(value), 15);
 		PORTC|=(1<<0);
 		
 		

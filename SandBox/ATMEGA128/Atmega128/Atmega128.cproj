@@ -179,6 +179,9 @@
     <Compile Include="Libraria\atmega128timer.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="Libraria\atmega128timer.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Libraria\atmega128uart.c">
       <SubType>compile</SubType>
     </Compile>

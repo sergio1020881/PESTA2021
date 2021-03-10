@@ -26,10 +26,9 @@ struct hx711{
 	int32_t reading; // reading to be published
 	/******/
 	void (*set_readflag)(struct hx711* self);
-	void (*reset_readflag)(struct hx711* self);
 	uint8_t (*read_bit)(void);
 	void (*set_amplify)(struct hx711* self, uint8_t amplify);
-	uint32_t (*shift_bits)(struct hx711* self);
+	uint32_t (*read)(struct hx711* self);
 };
 typedef struct hx711 HX711;
 /***Header***/
