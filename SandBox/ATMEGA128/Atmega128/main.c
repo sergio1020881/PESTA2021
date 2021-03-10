@@ -143,7 +143,7 @@ ISR(TIMER0_COMP_vect)
 	SREG&=~(1<<7);
 	uint32_t value;
 	
-	value=hx.read(&hx);
+	value=(hx.read(&hx)/100)-607;
 	
 	if(count_1 > 0){
 		count_2++;

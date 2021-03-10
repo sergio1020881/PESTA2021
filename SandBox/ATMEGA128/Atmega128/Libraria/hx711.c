@@ -22,7 +22,7 @@ Comment:
 #endif
 #define ZERO 0
 #define ONE 1
-#define HX711_ticks 110 // 16Mhz between 100 and 200
+#define HX711_ticks 110 // 16Mhz between 100 and 200, make a macro for this value.
 #define HX711_ADC_bits 24
 #define HX711_VECT_SIZE 4
 /***Global File Variable***/
@@ -54,15 +54,15 @@ HX711 HX711enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t
 	hx711_datapin=datapin;
 	hx711_clkpin=clkpin;
 	//inic variables
-	*hx711_DDR |= (1<<clkpin);
-	*hx711_PORT |= (1<<datapin);
-	hx711.readflag=0;
-	hx711.amplify=1;
-	hx711.ampcount=1;
+	*hx711_DDR |= (ONE<<clkpin);
+	*hx711_PORT |= (ONE<<datapin);
+	hx711.readflag=ZERO;
+	hx711.amplify=ONE;
+	hx711.ampcount=ONE;
 	hx711.bitcount=HX711_ADC_bits;
-	hx711.buffer[3]=0;
+	hx711.buffer[3]=ZERO;
 	hx711.bufferindex=3;
-	hx711.reading=0;
+	hx711.reading=ZERO;
 	//Direccionar apontadores para PROTOTIPOS
 	hx711.set_readflag=HX711_set_readflag;
 	hx711.read_bit=HX711_read_bit;
@@ -74,11 +74,11 @@ HX711 HX711enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t
 }
 void HX711_set_readflag(HX711* self)
 {
-	self->readflag=1;
+	self->readflag=ONE;
 }
 void HX711_reset_readflag(HX711* self)
 {
-	self->readflag=0;
+	self->readflag=ZERO;
 }
 uint8_t HX711_read_bit(void)
 {	
@@ -96,8 +96,8 @@ void HX711_set_amplify(HX711* self, uint8_t amplify)
 {
 	switch(amplify){
 		case 128:
-			self->amplify=1; //channel A
-			self->ampcount=1;
+			self->amplify=ONE; //channel A
+			self->ampcount=ONE;
 			break;
 		case 32:
 			self->amplify=2; //channel B
@@ -108,8 +108,8 @@ void HX711_set_amplify(HX711* self, uint8_t amplify)
 			self->ampcount=3;
 			break;
 		default:
-			self->amplify=1;
-			self->ampcount=1;
+			self->amplify=ONE;
+			self->ampcount=ONE;
 			break;
 	}
 }
@@ -117,8 +117,8 @@ uint32_t HX711_read(HX711* self)
 {
 	uint8_t aindex, bindex;
 	uint32_t value;
-	aindex = self->bufferindex-1;
-	bindex = self->bitcount-1;
+	aindex = self->bufferindex-ONE;
+	bindex = self->bitcount-ONE;
 	ptr=(int32_t*)self->buffer;
 	/***Detect query for reading***/
 	if((!(*hx711_PIN & ONE << hx711_datapin)) && !self->readflag){
@@ -133,7 +133,7 @@ uint32_t HX711_read(HX711* self)
 			if(self->bitcount==16)
 				self->bufferindex=2;
 			if(self->bitcount==8)
-				self->bufferindex=1;
+				self->bufferindex=ONE;
 		}else{
 			if(self->ampcount){
 				HX711_read_bit();
