@@ -67,7 +67,7 @@ int main(void)
 	//vector[2]=255;
 	//uint8_t* ptr=vector; 
 	timer0.compare(100);
-	timer0.start(1);//1	1024
+	timer0.start(128);//1 8 32 64 128 256 1024
 	timer0.compoutmode(1);
 	timer1.compareA(50);
 	timer1.compoutmodeA(1);
@@ -143,7 +143,7 @@ ISR(TIMER0_COMP_vect)
 	SREG&=~(1<<7);
 	uint32_t value;
 	
-	value=(hx.read(&hx)/100)-607;
+	value=(hx.read(hx.self)/100)-607;
 	
 	if(count_1 > 0){
 		count_2++;

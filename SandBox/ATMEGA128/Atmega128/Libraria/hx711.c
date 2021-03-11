@@ -47,6 +47,7 @@ HX711 HX711enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t
 	SREG&=~(1<<GLOBAL_INTERRUPT_ENABLE);
 	//ALLOCAÇÂO MEMORIA PARA Estrutura
 	HX711 hx711;
+	hx711.self = &hx711;
 	//import parametros
 	hx711_DDR=ddr;
 	hx711_PIN=pin;
