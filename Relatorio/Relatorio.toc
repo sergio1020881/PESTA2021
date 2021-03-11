@@ -7,6 +7,7 @@
 \contentsline {section}{\numberline {2}subsection}{5}%
 \contentsline {chapter}{\numberline {2}chapter}{6}%
 \contentsline {section}{\numberline {1}section}{6}%
+\contentsline {section}{\numberline {2}Material}{6}%
 \contentsline {chapter}{\numberline {3}chapter}{7}%
 \contentsline {chapter}{\numberline {A}\Large {Definições}}{9}%
 \babel@toc {portuguese}{}
