@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  11 MAR 2021 15:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  11 MAR 2021 16:29
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
@@ -1014,12 +1014,17 @@ Cap\'{\i }tulo 1.
  (input/page/Desenvolvimento.tex
 Cap\'{\i }tulo 2.
 
-Overfull \hbox (27.2254pt too wide) in paragraph at lines 12--32
+Overfull \hbox (27.2254pt too wide) in paragraph at lines 12--34
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--32
+Underfull \hbox (badness 10000) in paragraph at lines 12--34
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--40
 
  []
 
@@ -1092,9 +1097,9 @@ gi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Use
 rs\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <
 C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti0800
 .pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ec
-ti1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi
-600\ecrm1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/
-ec/dpi600\ecbx1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/pub
+rm1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi
+600\ecbx1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/
+ec/dpi600\ecti1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/pub
 lic/eurosym/dpi720\feymr10.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/lj
 four/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts
 /pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX
@@ -1111,9 +1116,9 @@ public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pf
 b><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program
  Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Relatorio.pdf (15 pages, 280665 bytes).
+Output written on Relatorio.pdf (15 pages, 281394 bytes).
 PDF statistics:
- 491 PDF objects out of 1000 (max. 8388607)
+ 492 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
