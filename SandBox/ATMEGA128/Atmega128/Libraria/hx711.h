@@ -15,9 +15,15 @@ Comment:
 /***Constant & Macro***/
 
 /***Global Variable***/
-
+//calibration
+struct HX711_calibration{
+	int32_t offset; // ZERO set point
+	uint8_t divfactor_1; // interval 1
+	uint8_t divfactor_2; // interval 2
+	uint8_t divfactor_3; // interval 3
+};
+//device
 struct hx711{
-	struct hx711* self;
 	uint8_t readflag; // indicate start of bit shifting
 	uint8_t amplify; // number of end clock cycles
 	uint8_t ampcount; // count down final amplify pulses
@@ -25,11 +31,12 @@ struct hx711{
 	uint8_t buffer[4]; // reading buffer
 	uint8_t bufferindex; // buffer index
 	int32_t reading; // reading to be published
+	struct HX711_calibration cal;
 	/******/
 	void (*set_readflag)(struct hx711* self);
 	uint8_t (*read_bit)(void);
 	void (*set_amplify)(struct hx711* self, uint8_t amplify);
-	uint32_t (*read)(struct hx711* self);
+	int32_t (*read)(struct hx711* self);
 };
 typedef struct hx711 HX711;
 /***Header***/

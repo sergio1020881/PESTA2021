@@ -37,7 +37,7 @@ void HX711_set_readflag(HX711* self);
 void HX711_reset_readflag(HX711* self);
 uint8_t HX711_read_bit(void);
 void HX711_set_amplify(HX711* self, uint8_t amplify);
-uint32_t HX711_read(HX711* self);
+int32_t HX711_read(HX711* self);
 /***Procedure & Function***/
 HX711 HX711enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t *port, uint8_t datapin, uint8_t clkpin)
 {
@@ -47,7 +47,6 @@ HX711 HX711enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t
 	SREG&=~(1<<GLOBAL_INTERRUPT_ENABLE);
 	//ALLOCAÇÂO MEMORIA PARA Estrutura
 	HX711 hx711;
-	hx711.self = &hx711;
 	//import parametros
 	hx711_DDR=ddr;
 	hx711_PIN=pin;
@@ -64,13 +63,17 @@ HX711 HX711enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t
 	hx711.buffer[3]=ZERO;
 	hx711.bufferindex=3;
 	hx711.reading=ZERO;
+	hx711.cal.offset=73850; // to subtract
+	hx711.cal.divfactor_1=46; // to divide
+	hx711.cal.divfactor_2=46; // to divide
+	hx711.cal.divfactor_3=46; // to divide
 	//Direccionar apontadores para PROTOTIPOS
 	hx711.set_readflag=HX711_set_readflag;
 	hx711.read_bit=HX711_read_bit;
 	hx711.set_amplify=HX711_set_amplify;
 	hx711.read=HX711_read;
 	SREG=tSREG;
-	//
+	// returns a copy
 	return hx711;
 }
 void HX711_set_readflag(HX711* self)
@@ -117,10 +120,10 @@ void HX711_set_amplify(HX711* self, uint8_t amplify)
 /***
 Function to be used in the interrupt routine with appropriate cycle period.
 ***/
-uint32_t HX711_read(HX711* self)
+int32_t HX711_read(HX711* self)
 {
 	uint8_t aindex, bindex;
-	uint32_t value;
+	int32_t value;
 	aindex = self->bufferindex-ONE;
 	bindex = self->bitcount-ONE;
 	ptr=(int32_t*)self->buffer;

@@ -69,8 +69,8 @@ long FUNCgcd1(long a, long b);
 uint8_t FUNCpincheck(uint8_t port, uint8_t pin);
 char* FUNCprint_binary(uint8_t number);
 void FUNCreverse(char* str, int len);
-int FUNCintToStr(int x, char str[], int d);
-void FUNCftoa(float n, char* res, int afterpoint);
+int FUNCintToStr(int32_t x, char str[], int d);
+char* FUNCftoa(float n, char* res, int afterpoint);
 uint8_t  bintobcd(uint8_t bin);
 /***pc use***
 char* FUNCfltos(FILE* stream);
@@ -266,7 +266,7 @@ char* FUNCi32toa(int32_t n)
 		FUNCstr[i++] = n % 10 + '0'; // get next digit
 	}while ((n /= 10) > 0); // delete it
 	if (sign < 0)
-	FUNCstr[i++] = '-';
+		FUNCstr[i++] = '-';
 	FUNCstr[i] = '\0';
 	Reverse(FUNCstr);
 	return FUNCstr;
@@ -544,9 +544,12 @@ void FUNCreverse(char* str, int len)
 		j--;
 	}
 }
-int FUNCintToStr(int x, char str[], int d)
+int FUNCintToStr(int32_t x, char str[], int d)
 {
-	int i = 0; 
+	int i = 0;
+	int32_t sign;
+	if ((sign = x) < 0) // record sign
+		x = -x; // make n positive
     while (x) { 
         str[i++] = (x % 10) + '0'; 
         x = x / 10; 
@@ -555,15 +558,16 @@ int FUNCintToStr(int x, char str[], int d)
     // add 0s at the beginning 
     while (i < d) 
         str[i++] = '0';
-	
+	if (sign < 0)
+		str[i++] = '-';
     FUNCreverse(str, i); 
     str[i] = '\0'; 
-    return i; 
+    return i;
 }
-void FUNCftoa(float n, char* res, int afterpoint)
+char* FUNCftoa(float n, char* res, int afterpoint)
 {
 	// Extract integer part
-	int ipart = (int)n;
+	int32_t ipart = (int32_t)n;
 	
 	// Extract floating part
 	float fpart = n - (float)ipart;
@@ -579,9 +583,12 @@ void FUNCftoa(float n, char* res, int afterpoint)
 		// of points after dot. The third parameter
 		// is needed to handle cases like 233.007
 		fpart = fpart * pow(10, afterpoint);
+		if (fpart < 0) // record sign
+			fpart = -fpart; // make fpart positive
 	
 		FUNCintToStr((int)fpart, res + i + 1, afterpoint);
 	}
+	return res;
 }
 /******
 int gcd( int a, int b ) {

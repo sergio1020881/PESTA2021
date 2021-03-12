@@ -43,7 +43,8 @@ uint8_t count_1=0;
 uint8_t count_2=0;
 uint8_t ADD0;
 uint32_t hx_adc;
-//uint8_t vector[4];
+float value;
+char result[20];
 /*
 ** Header
 */
@@ -96,6 +97,16 @@ int main(void)
 				
 				//lcd0.gotoxy(3,0);
 				//lcd0.string_size(function.i32toa(*((int32_t*)ptr)),15);
+				
+				
+				
+				
+				lcd0.gotoxy(0,0);
+				lcd0.string_size(function.i16toa(count_2), 15);
+				lcd0.gotoxy(1,0);
+				lcd0.string_size(function.ftoa((value-73950)/46,result,2), 8); lcd0.string_size("gram", 4);
+				
+				
 					
 				break;
 			/***MENU 2***/
@@ -141,19 +152,13 @@ ISR(TIMER0_COMP_vect)
 	uint8_t Sreg;
 	Sreg=SREG;
 	SREG&=~(1<<7);
-	uint32_t value;
 	
-	value=(hx.read(hx.self)/100)-607;
+	value=hx.read(&hx);
 	
 	if(count_1 > 0){
 		count_2++;
-		lcd0.gotoxy(0,0);
-		lcd0.string_size(function.i16toa(count_2), 15);
-		lcd0.gotoxy(1,0);
-		lcd0.string_size(function.i32toa(value), 15);
+		
 		PORTC|=(1<<0);
-		
-		
 		
 		count_1=0;
 	}
