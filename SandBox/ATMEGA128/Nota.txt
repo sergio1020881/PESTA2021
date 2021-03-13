@@ -9,3 +9,6 @@ Ideia para libraria do HX711, interrupção de
 leitura que depois faz saltar para interrupção 
 do timer para fazer as respetcivas leituras. 
 
+fazer agora um apanhado das contas para o relatorio.
+melhorar funcao float to asci, já corigi sinal agora 
+falta afinaçao valor positivo para negativo.
