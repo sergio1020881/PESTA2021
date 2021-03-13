@@ -25,15 +25,17 @@ struct HX711_calibration{
 //device
 struct hx711{
 	uint8_t readflag; // indicate start of bit shifting
+	uint8_t trigger; // pickup signal
 	uint8_t amplify; // number of end clock cycles
 	uint8_t ampcount; // count down final amplify pulses
-	uint8_t bitcount; // count down 24 bit value
+	uint8_t bitcount; // count down 24 bit
 	uint8_t buffer[4]; // reading buffer
 	uint8_t bufferindex; // buffer index
 	int32_t reading; // reading to be published
 	struct HX711_calibration cal;
 	/******/
 	void (*set_readflag)(struct hx711* self);
+	uint8_t (*check_readflag)(struct hx711* self);
 	uint8_t (*read_bit)(void);
 	void (*set_amplify)(struct hx711* self, uint8_t amplify);
 	int32_t (*read)(struct hx711* self);

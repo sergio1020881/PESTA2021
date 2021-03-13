@@ -44,6 +44,9 @@ uint8_t count_2=0;
 uint8_t ADD0;
 uint32_t hx_adc;
 float value;
+uint8_t i;
+uint32_t tmp;
+uint32_t itmp;
 char result[20];
 /*
 ** Header
@@ -62,6 +65,8 @@ int main(void)
 	hx = HX711enable(&DDRF, &PINF, &PORTF, 6, 7);
 	/******/
 	char Menu='1'; // Main menu selector
+	i=0;
+	tmp=0;
 	/***Parameters timers***/
 	//vector[0]=255;
 	//vector[1]=255;
@@ -97,14 +102,28 @@ int main(void)
 				
 				//lcd0.gotoxy(3,0);
 				//lcd0.string_size(function.i32toa(*((int32_t*)ptr)),15);
-				
-				
+				// my average function
+				if(hx.trigger){
+					if(i<10){
+						itmp+=tmp;
+						i++;
+						lcd0.gotoxy(3,0);
+						lcd0.string_size(function.i16toa(tmp),3);
+					}else{
+						i=0;
+						value=itmp/10;
+						itmp=0;
+						itmp+=tmp;
+						i++;
+					}
+					hx.trigger=ZERO;
+				}
 				
 				
 				lcd0.gotoxy(0,0);
 				lcd0.string_size(function.i16toa(count_2), 15);
 				lcd0.gotoxy(1,0);
-				lcd0.string_size(function.ftoa((value-73950)/46,result,2), 8); lcd0.string_size("gram", 4);
+				lcd0.string_size(function.ftoa((value-74050)/46,result,2), 8); lcd0.string_size("gram", 4);
 				
 				
 					
@@ -153,7 +172,11 @@ ISR(TIMER0_COMP_vect)
 	Sreg=SREG;
 	SREG&=~(1<<7);
 	
-	value=hx.read(&hx);
+	
+	
+	
+	tmp=hx.read(&hx);
+	
 	
 	if(count_1 > 0){
 		count_2++;

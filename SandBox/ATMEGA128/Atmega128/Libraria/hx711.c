@@ -35,9 +35,11 @@ int32_t* ptr;
 /***Header***/
 void HX711_set_readflag(HX711* self);
 void HX711_reset_readflag(HX711* self);
+uint8_t HX711_check_readflag(HX711* self);
 uint8_t HX711_read_bit(void);
 void HX711_set_amplify(HX711* self, uint8_t amplify);
 int32_t HX711_read(HX711* self);
+uint8_t HX711_hl(uint8_t xi, uint8_t xf);
 /***Procedure & Function***/
 HX711 HX711enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t *port, uint8_t datapin, uint8_t clkpin)
 {
@@ -57,9 +59,13 @@ HX711 HX711enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t
 	*hx711_DDR |= (ONE<<clkpin);
 	*hx711_PORT |= (ONE<<datapin);
 	hx711.readflag=ZERO;
+	hx711.trigger=ZERO;
 	hx711.amplify=ONE;
 	hx711.ampcount=ONE;
 	hx711.bitcount=HX711_ADC_bits;
+	hx711.buffer[0]=ZERO;
+	hx711.buffer[1]=ZERO;
+	hx711.buffer[2]=ZERO;
 	hx711.buffer[3]=ZERO;
 	hx711.bufferindex=3;
 	hx711.reading=ZERO;
@@ -69,6 +75,7 @@ HX711 HX711enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t
 	hx711.cal.divfactor_3=46; // to divide
 	//Direccionar apontadores para PROTOTIPOS
 	hx711.set_readflag=HX711_set_readflag;
+	hx711.check_readflag=HX711_check_readflag;
 	hx711.read_bit=HX711_read_bit;
 	hx711.set_amplify=HX711_set_amplify;
 	hx711.read=HX711_read;
@@ -83,6 +90,10 @@ void HX711_set_readflag(HX711* self)
 void HX711_reset_readflag(HX711* self)
 {
 	self->readflag=ZERO;
+}
+uint8_t HX711_check_readflag(HX711* self)
+{
+	return self->readflag;	
 }
 uint8_t HX711_read_bit(void)
 {	
@@ -158,12 +169,20 @@ int32_t HX711_read(HX711* self)
 				self->buffer[1]=ZERO;
 				self->buffer[2]=ZERO;
 				self->buffer[3]=ZERO;
+				self->trigger=ONE;
 				/***Reset ready for next query***/
 				HX711_reset_readflag(self);
 			}
 		}
 	}
 	return self->reading;
+}
+uint8_t HX711_hl(uint8_t xi, uint8_t xf)
+{
+	uint8_t i;
+	i=xf^xi;
+	i&=xi;
+	return i;
 }
 /***Interrupt***/
 /****comment:
