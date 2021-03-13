@@ -6,7 +6,7 @@ License: GNU General Public License
 Hardware: Atmega 128
 Date: 08032021_start
 Comment:
-
+	Nice
 ************************************************************************/
 #ifndef F_CPU
 /***Mandatory to use util/delay.h***/
@@ -69,7 +69,7 @@ HX711 HX711enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t
 	hx711.buffer[3]=ZERO;
 	hx711.bufferindex=3;
 	hx711.reading=ZERO;
-	hx711.cal.offset=73850; // to subtract
+	hx711.cal.offset=73990; // to subtract
 	hx711.cal.divfactor_1=46; // to divide
 	hx711.cal.divfactor_2=46; // to divide
 	hx711.cal.divfactor_3=46; // to divide

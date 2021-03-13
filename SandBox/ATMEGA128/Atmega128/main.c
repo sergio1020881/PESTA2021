@@ -102,6 +102,10 @@ int main(void)
 				
 				//lcd0.gotoxy(3,0);
 				//lcd0.string_size(function.i32toa(*((int32_t*)ptr)),15);
+				
+				//tmp=hx.read(&hx);
+				
+				
 				// my average function
 				if(hx.trigger){
 					if(i<10){
@@ -125,7 +129,7 @@ int main(void)
 				lcd0.gotoxy(1,0);
 				lcd0.string_size(function.ftoa((value-73990)/46,result,0), 8); lcd0.string_size("gram", 4);
 				
-				
+				//(value-73990)/46
 					
 				break;
 			/***MENU 2***/

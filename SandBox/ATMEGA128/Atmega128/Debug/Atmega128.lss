@@ -4082,8 +4082,8 @@ HX711 HX711enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t
     1c46:	13 86       	std	Z+11, r1	; 0x0b
     1c48:	14 86       	std	Z+12, r1	; 0x0c
     1c4a:	15 86       	std	Z+13, r1	; 0x0d
-    1c4c:	8a e7       	ldi	r24, 0x7A	; 122
-    1c4e:	90 e2       	ldi	r25, 0x20	; 32
+    1c4c:	86 e0       	ldi	r24, 0x06	; 6
+    1c4e:	91 e2       	ldi	r25, 0x21	; 33
     1c50:	a1 e0       	ldi	r26, 0x01	; 1
     1c52:	b0 e0       	ldi	r27, 0x00	; 0
     1c54:	86 87       	std	Z+14, r24	; 0x0e
@@ -4285,9 +4285,9 @@ int main(void)
     1d90:	0d e5       	ldi	r16, 0x5D	; 93
     1d92:	13 e0       	ldi	r17, 0x03	; 3
 				
+				//tmp=hx.read(&hx);
 				
-				//lcd0.gotoxy(3,0);
-				//lcd0.string_size(function.i32toa(*((int32_t*)ptr)),15);
+				
 				// my average function
 				if(hx.trigger){
     1d94:	0f 2e       	mov	r0, r31
@@ -4341,9 +4341,9 @@ int main(void)
     1dc4:	55 97       	sbiw	r26, 0x15	; 21
     1dc6:	09 95       	icall
 				
+				//tmp=hx.read(&hx);
 				
-				//lcd0.gotoxy(3,0);
-				//lcd0.string_size(function.i32toa(*((int32_t*)ptr)),15);
+				
 				// my average function
 				if(hx.trigger){
     1dc8:	f6 01       	movw	r30, r12
@@ -4519,7 +4519,7 @@ int main(void)
     1f3c:	91 e0       	ldi	r25, 0x01	; 1
     1f3e:	09 95       	icall
 				
-				
+				//(value-73990)/46
 					
 				break;
     1f40:	3d cf       	rjmp	.-390    	; 0x1dbc <main+0x120>
