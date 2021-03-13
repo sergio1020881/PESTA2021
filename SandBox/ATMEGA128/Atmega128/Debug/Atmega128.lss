@@ -4321,7 +4321,7 @@ int main(void)
 				lcd0.gotoxy(0,0);
 				lcd0.string_size(function.i16toa(count_2), 15);
 				lcd0.gotoxy(1,0);
-				lcd0.string_size(function.ftoa((value-74050)/46,result,2), 8); lcd0.string_size("gram", 4);
+				lcd0.string_size(function.ftoa((value-73990)/46,result,0), 8); lcd0.string_size("gram", 4);
     1db0:	0f 2e       	mov	r0, r31
     1db2:	f6 e4       	ldi	r31, 0x46	; 70
     1db4:	8f 2e       	mov	r8, r31
@@ -4480,12 +4480,12 @@ int main(void)
     1ee8:	81 e0       	ldi	r24, 0x01	; 1
     1eea:	90 e0       	ldi	r25, 0x00	; 0
     1eec:	09 95       	icall
-				lcd0.string_size(function.ftoa((value-74050)/46,result,2), 8); lcd0.string_size("gram", 4);
+				lcd0.string_size(function.ftoa((value-73990)/46,result,0), 8); lcd0.string_size("gram", 4);
     1eee:	f8 01       	movw	r30, r16
     1ef0:	e4 84       	ldd	r14, Z+12	; 0x0c
     1ef2:	f5 84       	ldd	r15, Z+13	; 0x0d
     1ef4:	20 e0       	ldi	r18, 0x00	; 0
-    1ef6:	31 ea       	ldi	r19, 0xA1	; 161
+    1ef6:	33 e8       	ldi	r19, 0x83	; 131
     1ef8:	40 e9       	ldi	r20, 0x90	; 144
     1efa:	57 e4       	ldi	r21, 0x47	; 71
     1efc:	60 91 92 03 	lds	r22, 0x0392	; 0x800392 <value>
@@ -4501,7 +4501,7 @@ int main(void)
     1f18:	d4 01       	movw	r26, r8
     1f1a:	ed 91       	ld	r30, X+
     1f1c:	fc 91       	ld	r31, X
-    1f1e:	22 e0       	ldi	r18, 0x02	; 2
+    1f1e:	20 e0       	ldi	r18, 0x00	; 0
     1f20:	30 e0       	ldi	r19, 0x00	; 0
     1f22:	49 e4       	ldi	r20, 0x49	; 73
     1f24:	53 e0       	ldi	r21, 0x03	; 3

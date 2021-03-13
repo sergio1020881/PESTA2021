@@ -123,7 +123,7 @@ int main(void)
 				lcd0.gotoxy(0,0);
 				lcd0.string_size(function.i16toa(count_2), 15);
 				lcd0.gotoxy(1,0);
-				lcd0.string_size(function.ftoa((value-74050)/46,result,2), 8); lcd0.string_size("gram", 4);
+				lcd0.string_size(function.ftoa((value-73990)/46,result,0), 8); lcd0.string_size("gram", 4);
 				
 				
 					
