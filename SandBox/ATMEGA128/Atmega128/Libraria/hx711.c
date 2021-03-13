@@ -71,8 +71,8 @@ HX711 HX711enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t
 	hx711.reading=ZERO;
 	// offset para mesa usada.
 	hx711.cal.offset_32=37122; // to subtract A
-	hx711.cal.offset_64=74100; // to subtract B 64
-	hx711.cal.offset_128=147400; // to subtract B 128
+	hx711.cal.offset_64=74055; // to subtract B 64
+	hx711.cal.offset_128=147355; // to subtract B 128
 	//div factor
 	hx711.cal.divfactor_32=23; // to divide
 	hx711.cal.divfactor_64=46; // to divide
@@ -163,8 +163,8 @@ int32_t HX711_readraw(HX711* self)
 				self->ampcount--;
 			}else{
 				value=*(ptr);
-				if(value>8388607)
-					value-=16777216;
+				//if(value>8388607) // (2^24)/2 = 8388608
+					//value-=16777215; // 2^24 = 16777216
 				self->reading=value;
 				self->bitcount=HX711_ADC_bits;
 				self->bufferindex=HX711_VECT_SIZE-ONE;
