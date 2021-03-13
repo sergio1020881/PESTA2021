@@ -127,6 +127,7 @@ interrupt: off; overflow; output compare; both; default - non.
 {
 	TIMER_COUNTER0 timer0;
 	timer0_state=0;
+	TIMER_COUNTER0_COMPARE_REGISTER=0XFF;
 	TIMER_COUNTER0_CONTROL_REGISTER&=~((1<<WGM00) | (1<<WGM01));
 	switch(wavegenmode){
 		case 0: // Normal
@@ -180,6 +181,7 @@ for more information read datasheet.
 {
 	TIMER_COUNTER1 timer1;
 	timer1_state=0;
+	TIMER_COUNTER1A_COMPARE_REGISTER=0XFFFF;
 	TIMER_COUNTER1A_CONTROL_REGISTER&=~((1<<WGM11) | (1<<WGM10));
 	TIMER_COUNTER1B_CONTROL_REGISTER&=~((1<<WGM13) | (1<<WGM12));
 	switch(wavegenmode){
@@ -310,6 +312,7 @@ interrupt: off; overflow; output compare; both; default - non.
 {
 	TIMER_COUNTER2 timer2;
 	timer2_state=0;
+	TIMER_COUNTER2_COMPARE_REGISTER=0XFF;
 	TIMER_COUNTER2_CONTROL_REGISTER&=~((1<<WGM20) | (1<<WGM21));
 	switch(wavegenmode){
 		case 0: // Normal
@@ -352,14 +355,13 @@ interrupt: off; overflow; output compare; both; default - non.
 void TIMER_COUNTER0_start(unsigned int prescaler)
 /***
 PARAMETER SETTING
-Frequency oscilator devision factor or prescaler.
+Frequency oscillator devision factor or prescaler.
 prescaler: clk T0S /(No prescaling); clk T0S /8 (From prescaler); clk T0S /32 (From prescaler);
 clk T0S /64 (From prescaler); clk T0S /128 (From prescaler); clk T 0 S /256 (From prescaler);
 clk T 0 S /1024 (From prescaler); default - clk T 0 S /1024 (From prescaler).
 ***/
 {
 	if(timer0_state==0){ // oneshot
-		TIMER_COUNTER0_COMPARE_REGISTER=0XFF;
 		TIMER_COUNTER0_CONTROL_REGISTER&=~(7<<CS00); // No clock source. (Timer/Counter stopped)
 		switch(prescaler){
 			case 1: // clk T0S /(No prescaling)
@@ -441,14 +443,13 @@ stops timer by setting prescaler to zero
 void TIMER_COUNTER1_start(unsigned int prescaler)
 /***
 PARAMETER SETTING
-Frequency oscilator devision factor or prescaler.
+Frequency oscillator devision factor or prescaler.
 prescaler: clk T0S /(No prescaling); clk T0S /8 (From prescaler); clk T0S /64 (From prescaler);
 clk T0S /256 (From prescaler); clk T0S /1024 (From prescaler); External clock source on Tn pin. Clock on falling edge;
 External clock source on Tn pin. Clock on rising edge; default - clk T 0 S /1024 (From prescaler).
 ***/
 {
 	if(timer1_state==0){ // oneshot
-		TIMER_COUNTER1A_COMPARE_REGISTER=0XFFFF;
 		TIMER_COUNTER1B_CONTROL_REGISTER&=~(7<<CS10); // No clock source. (Timer/Counter stopped)
 		switch(prescaler){
 			case 1: // clkI/O/1 (No prescaling
@@ -593,7 +594,6 @@ External clock source on Tn pin. Clock on rising edge; default - clk T 0 S /1024
 ***/
 {
 	if(timer2_state==0){ // oneshot
-		TIMER_COUNTER2_COMPARE_REGISTER=0XFF;
 		TIMER_COUNTER2_CONTROL_REGISTER&=~(7<<CS20); // No clock source. (Timer/Counter stopped)
 		switch(prescaler){
 			case 1: // clkI/O/(No prescaling)
@@ -684,6 +684,7 @@ for more information read datasheet.
 {
 	TIMER_COUNTER3 timer3;
 	timer3_state=0;
+	TIMER_COUNTER3A_COMPARE_REGISTER=0XFFFF;
 	TIMER_COUNTER3A_CONTROL_REGISTER&=~((1<<WGM31) | (1<<WGM30));
 	TIMER_COUNTER3B_CONTROL_REGISTER&=~((1<<WGM33) | (1<<WGM32));
 	switch(wavegenmode){
@@ -811,7 +812,6 @@ External clock source on Tn pin. Clock on rising edge; default - clk T 0 S /1024
 ***/
 {
 	if(timer3_state==0){ // oneshot
-		TIMER_COUNTER3A_COMPARE_REGISTER=0XFFFF;
 		TIMER_COUNTER3B_CONTROL_REGISTER&=~(7<<CS30); // No clock source. (Timer/Counter stopped)
 		switch(prescaler){
 			case 1: // clkI/O/1 (No prescaling

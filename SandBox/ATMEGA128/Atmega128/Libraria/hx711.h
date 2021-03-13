@@ -17,10 +17,19 @@ Comment:
 /***Global Variable***/
 //calibration
 struct HX711_calibration{
-	int32_t offset; // ZERO set point
-	uint8_t divfactor_1; // interval 1
-	uint8_t divfactor_2; // interval 2
-	uint8_t divfactor_3; // interval 3
+	int32_t offset_32; // ZERO set point A
+	int32_t offset_64; // ZERO set point B 64
+	int32_t offset_128; // ZERO set point B 128
+	uint8_t divfactor_32; // interval A
+	uint8_t divfactor_32_1; // interval A 1
+	uint8_t divfactor_32_2; // interval A 2
+	uint8_t divfactor_64; // interval B
+	uint8_t divfactor_64_1; // interval B 1
+	uint8_t divfactor_64_2; // interval B 2
+	uint8_t divfactor_128; // interval B
+	uint8_t divfactor_128_1; // interval B 1
+	uint8_t divfactor_128_2; // interval B 2
+	 
 };
 //device
 struct hx711{
@@ -38,7 +47,7 @@ struct hx711{
 	uint8_t (*check_readflag)(struct hx711* self);
 	uint8_t (*read_bit)(void);
 	void (*set_amplify)(struct hx711* self, uint8_t amplify);
-	int32_t (*read)(struct hx711* self);
+	int32_t (*readraw)(struct hx711* self);
 };
 typedef struct hx711 HX711;
 /***Header***/

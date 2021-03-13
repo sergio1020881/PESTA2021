@@ -38,7 +38,7 @@ void HX711_reset_readflag(HX711* self);
 uint8_t HX711_check_readflag(HX711* self);
 uint8_t HX711_read_bit(void);
 void HX711_set_amplify(HX711* self, uint8_t amplify);
-int32_t HX711_read(HX711* self);
+int32_t HX711_readraw(HX711* self);
 uint8_t HX711_hl(uint8_t xi, uint8_t xf);
 /***Procedure & Function***/
 HX711 HX711enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t *port, uint8_t datapin, uint8_t clkpin)
@@ -69,16 +69,20 @@ HX711 HX711enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t
 	hx711.buffer[3]=ZERO;
 	hx711.bufferindex=3;
 	hx711.reading=ZERO;
-	hx711.cal.offset=73990; // to subtract
-	hx711.cal.divfactor_1=46; // to divide
-	hx711.cal.divfactor_2=46; // to divide
-	hx711.cal.divfactor_3=46; // to divide
+	// offset para mesa usada.
+	hx711.cal.offset_32=37122; // to subtract A
+	hx711.cal.offset_64=74100; // to subtract B 64
+	hx711.cal.offset_128=147400; // to subtract B 128
+	//div factor
+	hx711.cal.divfactor_32=23; // to divide
+	hx711.cal.divfactor_64=46; // to divide
+	hx711.cal.divfactor_128=92; // to divide
 	//Direccionar apontadores para PROTOTIPOS
 	hx711.set_readflag=HX711_set_readflag;
 	hx711.check_readflag=HX711_check_readflag;
 	hx711.read_bit=HX711_read_bit;
 	hx711.set_amplify=HX711_set_amplify;
-	hx711.read=HX711_read;
+	hx711.readraw=HX711_readraw;
 	SREG=tSREG;
 	// returns a copy
 	return hx711;
@@ -131,7 +135,7 @@ void HX711_set_amplify(HX711* self, uint8_t amplify)
 /***
 Function to be used in the interrupt routine with appropriate cycle period.
 ***/
-int32_t HX711_read(HX711* self)
+int32_t HX711_readraw(HX711* self)
 {
 	uint8_t aindex, bindex;
 	int32_t value;

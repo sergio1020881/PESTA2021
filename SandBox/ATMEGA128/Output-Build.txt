@@ -41,14 +41,14 @@ Target "CoreBuild" in file "C:\Program Files (x86)\Atmel\Studio\7.0\Vs\Compiler.
 		Invoking: AVR/GNU C Compiler : 5.4.0
 		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe"  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\include" -I"../Libraria"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\gcc\dev\atmega128" -c -std=gnu99 -MD -MP -MF "Libraria/eeprom.d" -MT"Libraria/eeprom.d" -MT"Libraria/eeprom.o"   -o "Libraria/eeprom.o" "../Libraria/eeprom.c" 
 		Finished building: ../Libraria/eeprom.c
-		Building file: ../Libraria/clock.c
-		Invoking: AVR/GNU C Compiler : 5.4.0
-		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe"  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\include" -I"../Libraria"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\gcc\dev\atmega128" -c -std=gnu99 -MD -MP -MF "Libraria/clock.d" -MT"Libraria/clock.d" -MT"Libraria/clock.o"   -o "Libraria/clock.o" "../Libraria/clock.c" 
-		Finished building: ../Libraria/clock.c
 		Building file: ../Libraria/atmega128uart.c
 		Invoking: AVR/GNU C Compiler : 5.4.0
 		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe"  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\include" -I"../Libraria"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\gcc\dev\atmega128" -c -std=gnu99 -MD -MP -MF "Libraria/atmega128uart.d" -MT"Libraria/atmega128uart.d" -MT"Libraria/atmega128uart.o"   -o "Libraria/atmega128uart.o" "../Libraria/atmega128uart.c" 
 		Finished building: ../Libraria/atmega128uart.c
+		Building file: ../Libraria/clock.c
+		Invoking: AVR/GNU C Compiler : 5.4.0
+		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe"  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\include" -I"../Libraria"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\gcc\dev\atmega128" -c -std=gnu99 -MD -MP -MF "Libraria/clock.d" -MT"Libraria/clock.d" -MT"Libraria/clock.o"   -o "Libraria/clock.o" "../Libraria/clock.c" 
+		Finished building: ../Libraria/clock.c
 		Building file: ../Libraria/keypad.c
 		Invoking: AVR/GNU C Compiler : 5.4.0
 		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe"  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\include" -I"../Libraria"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\gcc\dev\atmega128" -c -std=gnu99 -MD -MP -MF "Libraria/keypad.d" -MT"Libraria/keypad.d" -MT"Libraria/keypad.o"   -o "Libraria/keypad.o" "../Libraria/keypad.c" 
@@ -99,11 +99,11 @@ Target "CoreBuild" in file "C:\Program Files (x86)\Atmel\Studio\7.0\Vs\Compiler.
 		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-objcopy.exe" -O srec -R .eeprom -R .fuse -R .lock -R .signature -R .user_signatures "Atmega128.elf" "Atmega128.srec"
 		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-size.exe" "Atmega128.elf"
 		   text	   data	    bss	    dec	    hex	filename
-		  10244	      6	    656	  10906	   2a9a	Atmega128.elf
+		  10280	      6	    662	  10948	   2ac4	Atmega128.elf
 	Done executing task "RunCompilerTask".
 	Task "RunOutputFileVerifyTask"
-				Program Memory Usage 	:	10250 bytes   7.8 % Full
-				Data Memory Usage 		:	662 bytes   16.2 % Full
+				Program Memory Usage 	:	10286 bytes   7.8 % Full
+				Data Memory Usage 		:	668 bytes   16.3 % Full
 				Warning: Memory Usage estimation may not be accurate if there are sections other than .text sections in ELF file
 	Done executing task "RunOutputFileVerifyTask".
 Done building target "CoreBuild" in project "Atmega128.cproj".

@@ -71,14 +71,15 @@ int main(void)
 	//vector[0]=255;
 	//vector[1]=255;
 	//vector[2]=255;
-	//uint8_t* ptr=vector; 
-	timer0.compare(100);
-	timer0.start(128);//1 8 32 64 128 256 1024
+	//uint8_t* ptr=vector;
 	timer0.compoutmode(1);
+	timer0.compare(159);
+	timer0.start(1);// 1 -> 32 us , 8 32 64 128 256 1024
+	
 	timer1.compareA(50);
 	timer1.compoutmodeA(1);
 	timer1.start(256);
-	hx.set_amplify(&hx,64);
+	hx.set_amplify(&hx,64); // 32 64 128
 	/**********/
 	//TODO:: Please write your application code
 	while(TRUE){
@@ -90,21 +91,6 @@ int main(void)
 				//if(!strcmp(keypad.get().string,"A")){Menu='2';keypad.flush();lcd0.clear();break;}
 				//if(!strcmp(keypad.get().string,"B")){Menu='3';keypad.flush();lcd0.clear();break;}					
 		
-				//lcd0.gotoxy(0,0);
-				//lcd0.string_size("program running",15);
-				
-				/***Play around***/
-				//if(!(PINF & 64)){
-					//hx.set_readflag(&hx);
-					//PORTC&=~(1<<0);
-				//}
-				
-				
-				//lcd0.gotoxy(3,0);
-				//lcd0.string_size(function.i32toa(*((int32_t*)ptr)),15);
-				
-				//tmp=hx.read(&hx);
-				
 				
 				// my average function
 				if(hx.trigger){
@@ -126,8 +112,12 @@ int main(void)
 				
 				lcd0.gotoxy(0,0);
 				lcd0.string_size(function.i16toa(count_2), 15);
-				lcd0.gotoxy(1,0);
-				lcd0.string_size(function.ftoa((value-73990)/46,result,0), 8); lcd0.string_size("gram", 4);
+				//lcd0.gotoxy(1,0);
+				//lcd0.string_size(function.ftoa((value-hx.cal.offset_32)/hx.cal.divfactor_32,result,0), 8); lcd0.string_size("gram", 4);
+				lcd0.gotoxy(2,0);
+				lcd0.string_size(function.ftoa((value-hx.cal.offset_64)/hx.cal.divfactor_64,result,0), 8); lcd0.string_size("gram", 4);
+				//lcd0.gotoxy(3,0);
+				//lcd0.string_size(function.ftoa((value-hx.cal.offset_128)/hx.cal.divfactor_128,result,0), 8); lcd0.string_size("gram", 4);
 				
 				//(value-73990)/46
 					
@@ -172,14 +162,15 @@ void PORTINIT(void)
 */
 ISR(TIMER0_COMP_vect)
 {
+	/***Block other interrupts during this procedure***/
 	uint8_t Sreg;
 	Sreg=SREG;
 	SREG&=~(1<<7);
+	/***Block other interrupts during this procedure***/
 	
 	
 	
-	
-	tmp=hx.read(&hx);
+	tmp=hx.readraw(&hx);
 	
 	
 	if(count_1 > 0){
@@ -190,6 +181,8 @@ ISR(TIMER0_COMP_vect)
 		count_1=0;
 	}
 	count_1++;
+	
+	/***enable interrupts again***/
 	SREG=Sreg;
 }
 /***EOF***/
