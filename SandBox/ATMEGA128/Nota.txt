@@ -12,3 +12,11 @@ do timer para fazer as respetcivas leituras.
 fazer agora um apanhado das contas para o relatorio.
 melhorar funcao float to asci, já corigi sinal agora 
 falta afinaçao valor positivo para negativo.
+
+Funcão média feito, falta acrescentar libraria da 
+eeprom para guardar o defult e depois os de offset, 
+depois ver se acrescento mais algo.
+
+It is looking good up to now.
+
+

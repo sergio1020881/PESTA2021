@@ -559,6 +559,8 @@ int FUNCintToStr(float n, char str[])
 		
 	if (sign < 0)
 		str[i++] = '-';
+	else
+		str[i++] = ' ';
     FUNCreverse(str, i); 
     str[i] = '\0';
     return i;

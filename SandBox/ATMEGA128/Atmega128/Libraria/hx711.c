@@ -39,6 +39,7 @@ uint8_t HX711_check_readflag(HX711* self);
 uint8_t HX711_read_bit(void);
 void HX711_set_amplify(HX711* self, uint8_t amplify);
 int32_t HX711_readraw(HX711* self);
+float HX711_average(HX711* self, int32_t raw_reading,  uint8_t n);
 uint8_t HX711_hl(uint8_t xi, uint8_t xf);
 /***Procedure & Function***/
 HX711 HX711enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t *port, uint8_t datapin, uint8_t clkpin)
@@ -68,7 +69,7 @@ HX711 HX711enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t
 	hx711.buffer[2]=ZERO;
 	hx711.buffer[3]=ZERO;
 	hx711.bufferindex=3;
-	hx711.reading=ZERO;
+	hx711.raw_reading=ZERO;
 	// offset para mesa usada.
 	hx711.cal.offset_32=37122; // to subtract B
 	hx711.cal.offset_64=74320; // to subtract A 64
@@ -83,6 +84,7 @@ HX711 HX711enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t
 	hx711.read_bit=HX711_read_bit;
 	hx711.set_amplify=HX711_set_amplify;
 	hx711.readraw=HX711_readraw;
+	hx711.average=HX711_average;
 	SREG=tSREG;
 	// returns a copy
 	return hx711;
@@ -163,7 +165,7 @@ int32_t HX711_readraw(HX711* self)
 				self->ampcount--;
 			}else{
 				value=*(ptr);
-				self->reading=value;
+				self->raw_reading=value;
 				self->bitcount=HX711_ADC_bits;
 				self->bufferindex=HX711_VECT_SIZE-ONE;
 				self->ampcount=self->amplify;
@@ -177,7 +179,24 @@ int32_t HX711_readraw(HX711* self)
 			}
 		}
 	}
-	return self->reading;
+	return self->raw_reading;
+}
+float HX711_average(HX711* self, int32_t raw_reading ,uint8_t n)
+{
+	if(self->trigger){
+		if(self->av_n < n){
+			self->sum+=raw_reading;
+			self->av_n++;
+			}else{
+			self->av_n=0;
+			self->mean=self->sum/n;
+			self->sum=0;
+			self->sum+=raw_reading;
+			self->av_n++;
+		}
+		self->trigger=ZERO;
+	}
+	return self->mean;
 }
 uint8_t HX711_hl(uint8_t xi, uint8_t xf)
 {

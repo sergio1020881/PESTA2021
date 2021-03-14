@@ -40,7 +40,10 @@ struct hx711{
 	uint8_t bitcount; // count down 24 bit
 	uint8_t buffer[4]; // reading buffer
 	uint8_t bufferindex; // buffer index
-	int32_t reading; // reading to be published
+	int32_t raw_reading; // reading to be published
+	int32_t sum;
+	uint8_t av_n;
+	float mean;
 	struct HX711_calibration cal;
 	/******/
 	void (*set_readflag)(struct hx711* self);
@@ -48,6 +51,7 @@ struct hx711{
 	uint8_t (*read_bit)(void);
 	void (*set_amplify)(struct hx711* self, uint8_t amplify);
 	int32_t (*readraw)(struct hx711* self);
+	float (*average)(struct hx711* self, int32_t raw_reading, uint8_t n);
 };
 typedef struct hx711 HX711;
 /***Header***/

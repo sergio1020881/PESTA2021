@@ -20,11 +20,11 @@ Target "CoreBuild" in file "C:\Program Files (x86)\Atmel\Studio\7.0\Vs\Compiler.
 		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-objcopy.exe" -O srec -R .eeprom -R .fuse -R .lock -R .signature -R .user_signatures "Atmega128.elf" "Atmega128.srec"
 		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-size.exe" "Atmega128.elf"
 		   text	   data	    bss	    dec	    hex	filename
-		  10406	     10	    556	  10972	   2adc	Atmega128.elf
+		  10190	     10	    567	  10767	   2a0f	Atmega128.elf
 	Done executing task "RunCompilerTask".
 	Task "RunOutputFileVerifyTask"
-				Program Memory Usage 	:	10416 bytes   7.9 % Full
-				Data Memory Usage 		:	566 bytes   13.8 % Full
+				Program Memory Usage 	:	10200 bytes   7.8 % Full
+				Data Memory Usage 		:	577 bytes   14.1 % Full
 				Warning: Memory Usage estimation may not be accurate if there are sections other than .text sections in ELF file
 	Done executing task "RunOutputFileVerifyTask".
 Done building target "CoreBuild" in project "Atmega128.cproj".
