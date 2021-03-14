@@ -26,6 +26,8 @@ Comment:
 #ifndef GLOBAL_INTERRUPT_ENABLE
 	#define GLOBAL_INTERRUPT_ENABLE 7
 #endif
+#define ZERO 0
+#define ONE 1
 #define FUNCSTRSIZE 20
 /***Global File Variable***/
 char FUNCstr[FUNCSTRSIZE+1];
@@ -69,7 +71,7 @@ long FUNCgcd1(long a, long b);
 uint8_t FUNCpincheck(uint8_t port, uint8_t pin);
 char* FUNCprint_binary(uint8_t number);
 void FUNCreverse(char* str, int len);
-int FUNCintToStr(int32_t x, char str[], int d);
+int FUNCintToStr(float x, char str[]);
 char* FUNCftoa(float n, char* res, int afterpoint);
 uint8_t  bintobcd(uint8_t bin);
 /***pc use***
@@ -529,10 +531,7 @@ uint8_t  bintobcd(uint8_t bin)
 {
 	return (((bin) / 10) << 4) + ((bin) % 10);
 }
-/******
-Thanks to:
-https://www.geeksforgeeks.org/convert-floating-point-number-string/
-******/
+/************/
 void FUNCreverse(char* str, int len)
 {
 	int i = 0, j = len - 1, temp;
@@ -544,49 +543,45 @@ void FUNCreverse(char* str, int len)
 		j--;
 	}
 }
-int FUNCintToStr(int32_t x, char str[], int d)
+int FUNCintToStr(float n, char str[])
 {
 	int i = 0;
-	int32_t sign;
-	if ((sign = x) < 0) // record sign
-		x = -x; // make n positive
-    while (x) { 
+	int8_t sign=0;
+	int32_t x;
+	if (n < 0){
+		n = -n;
+		sign=-ONE;
+	}
+	x = (int32_t)n;
+    do{ 
         str[i++] = (x % 10) + '0'; 
-        x = x / 10; 
-    } 
-    // If number of digits required is more, then 
-    // add 0s at the beginning 
-    while (i < d) 
-        str[i++] = '0';
+    }while((x/=10)>0);
+		
 	if (sign < 0)
 		str[i++] = '-';
     FUNCreverse(str, i); 
-    str[i] = '\0'; 
+    str[i] = '\0';
     return i;
 }
 char* FUNCftoa(float n, char* res, int afterpoint)
 {
-	// Extract integer part
 	int32_t ipart = (int32_t)n;
 	
 	// Extract floating part
 	float fpart = n - (float)ipart;
+	if(fpart < 0)
+		fpart = -fpart;
 	
-	// convert integer part to string
-	int i =	FUNCintToStr(ipart, res, 1);
+	// string part decimal
+	int i =	FUNCintToStr(n, res);
 	
-	// check for display option after point
+	// part fraccional
 	if (afterpoint != 0) {
-		res[i] = '.'; // add dot
-	
-		// Get the value of fraction part up to given no.
-		// of points after dot. The third parameter
-		// is needed to handle cases like 233.007
+		res[i] = '.';
+		
 		fpart = fpart * pow(10, afterpoint);
-		if (fpart < 0) // record sign
-			fpart = -fpart; // make fpart positive
-	
-		FUNCintToStr((int)fpart, res + i + 1, afterpoint);
+		
+		FUNCintToStr((float)fpart, res + i + 1);
 	}
 	return res;
 }

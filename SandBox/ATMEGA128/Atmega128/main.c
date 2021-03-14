@@ -73,7 +73,7 @@ int main(void)
 	timer1.compareA(50);
 	timer1.compoutmodeA(1);
 	timer1.start(256);
-	hx.set_amplify(&hx,128); // 32 64 128
+	hx.set_amplify(&hx,64); // 32 64 128
 	/**********/
 	//TODO:: Please write your application code
 	while(TRUE){
@@ -104,14 +104,17 @@ int main(void)
 					hx.trigger=ZERO;
 				}
 				/**/
-				//value=tmp;
+				//value=0.45;
 				
 				lcd0.gotoxy(0,0);
 				lcd0.string_size(function.i32toa(tmp), 8); lcd0.string_size("raw", 3);
 				lcd0.gotoxy(1,0);
-				lcd0.string_size(function.ftoa((value-hx.cal.offset_64)/hx.cal.divfactor_64,result,0), 8); lcd0.string_size("gram", 4);
+				lcd0.string_size(function.ftoa((value-hx.cal.offset_64)/hx.cal.divfactor_64,result,0), 12); lcd0.string_size("gram", 4);
 				lcd0.gotoxy(2,0);
-				lcd0.string_size(function.ftoa((value-hx.cal.offset_128)/hx.cal.divfactor_128,result,0), 8); lcd0.string_size("gram", 4);
+				lcd0.string_size(function.ftoa((value-hx.cal.offset_128)/hx.cal.divfactor_128,result,0), 12); lcd0.string_size("gram", 4);
+				
+				//lcd0.gotoxy(3,0);
+				//lcd0.string_size(function.ftoa(value,result,2), 8);
 				
 				//(value-73990)/46
 					

@@ -71,7 +71,7 @@ HX711 HX711enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t
 	hx711.reading=ZERO;
 	// offset para mesa usada.
 	hx711.cal.offset_32=37122; // to subtract B
-	hx711.cal.offset_64=74125; // to subtract A 64
+	hx711.cal.offset_64=74320; // to subtract A 64
 	hx711.cal.offset_128=147500; // to subtract A 128
 	//div factor
 	hx711.cal.divfactor_32=23; // to divide
