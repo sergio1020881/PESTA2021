@@ -66,8 +66,8 @@ int main(void)
 	//vector[2]=255;
 	//uint8_t* ptr=vector;
 	timer0.compoutmode(1);
-	timer0.compare(79); // 1 -> 159 -> 20us, 1 -> 79 -> 10 us, 8 -> 99 -> 100 us
-	timer0.start(1); // 1 -> 32 us , 8 -> 256 us , 32 64 128 256 1024
+	timer0.compare(79); // 1 -> 159 -> 20 us, 1 -> 79 -> 10 us, 1 -> 15 -> 2 us, 8 -> 99 -> 100 us, 8 -> 79 -> 80 us
+	timer0.start(8); // 1 -> 32 us , 8 -> 256 us , 32 64 128 256 1024
 	
 	// to be used to jump menu for calibration in progress
 	timer1.compareA(50);
@@ -91,7 +91,9 @@ int main(void)
 				lcd0.gotoxy(0,0);
 				lcd0.string_size(function.i32toa(tmp), 8); lcd0.string_size("raw", 3); // RAW_READING
 				
-				value_64=hx.raw_average(&hx, 4);
+				value_64=hx.raw_average(&hx, 25); // 25 50, smaller means faster or more readings
+				lcd0.gotoxy(1,0);
+				lcd0.string_size(function.ftoa(value_64,result,0), 12); lcd0.string_size("raw_av", 6);
 				value_128=(value_64-hx.cal.offset_128)/hx.cal.divfactor_128;
 				value_64=(value_64-hx.cal.offset_64)/hx.cal.divfactor_64;
 				
@@ -160,9 +162,6 @@ ISR(TIMER0_COMP_vect)
 	SREG&=~(1<<7);
 	/***Block other interrupts during this procedure***/	
 	tmp=hx.read_raw(&hx);
-
-	PORTC^=(1<<0);
-	
 	/***enable interrupts again***/
 	SREG=Sreg;
 }
