@@ -6,25 +6,11 @@ Target "CoreBuild" in file "C:\Program Files (x86)\Atmel\Studio\7.0\Vs\Compiler.
 	Task "RunCompilerTask"
 		Shell Utils Path C:\Program Files (x86)\Atmel\Studio\7.0\shellUtils
 		C:\Program Files (x86)\Atmel\Studio\7.0\shellUtils\make.exe all --jobs 4 --output-sync 
-		Building file: .././main.c
-		Invoking: AVR/GNU C Compiler : 5.4.0
-		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe"  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\include" -I"../Libraria"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\gcc\dev\atmega128" -c -std=gnu99 -MD -MP -MF "main.d" -MT"main.d" -MT"main.o"   -o "main.o" ".././main.c" 
-		Finished building: .././main.c
-		Building target: Atmega128.elf
-		Invoking: AVR/GNU Linker : 5.4.0
-		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe" -o Atmega128.elf  Libraria/74hc595.o Libraria/atmega128analog.o Libraria/atmega128i2c.o Libraria/atmega128timer.o Libraria/atmega128uart.o Libraria/clock.o Libraria/eeprom.o Libraria/function.o Libraria/keypad.o Libraria/lcd.o Libraria/lfsm.o Libraria/mm74c923.o Libraria/pcf8563rtc.o Libraria/rotenc.o Libraria/hx711.o Libraria/znpid.o main.o   -Wl,-Map="Atmega128.map" -Wl,--start-group -Wl,-lm  -Wl,--end-group -Wl,--gc-sections -mrelax -mmcu=atmega128 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\gcc\dev\atmega128"  
-		Finished building target: Atmega128.elf
-		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-objcopy.exe" -O ihex -R .eeprom -R .fuse -R .lock -R .signature -R .user_signatures  "Atmega128.elf" "Atmega128.hex"
-		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-objcopy.exe" -j .eeprom  --set-section-flags=.eeprom=alloc,load --change-section-lma .eeprom=0  --no-change-warnings -O ihex "Atmega128.elf" "Atmega128.eep" || exit 0
-		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-objdump.exe" -h -S "Atmega128.elf" > "Atmega128.lss"
-		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-objcopy.exe" -O srec -R .eeprom -R .fuse -R .lock -R .signature -R .user_signatures "Atmega128.elf" "Atmega128.srec"
-		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-size.exe" "Atmega128.elf"
-		   text	   data	    bss	    dec	    hex	filename
-		  10190	     10	    567	  10767	   2a0f	Atmega128.elf
+		make: Nothing to be done for 'all'.
 	Done executing task "RunCompilerTask".
 	Task "RunOutputFileVerifyTask"
-				Program Memory Usage 	:	10200 bytes   7.8 % Full
-				Data Memory Usage 		:	577 bytes   14.1 % Full
+				Program Memory Usage 	:	10220 bytes   7.8 % Full
+				Data Memory Usage 		:	579 bytes   14.1 % Full
 				Warning: Memory Usage estimation may not be accurate if there are sections other than .text sections in ELF file
 	Done executing task "RunOutputFileVerifyTask".
 Done building target "CoreBuild" in project "Atmega128.cproj".

@@ -68,7 +68,7 @@ HX711 HX711enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t
 	hx711.buffer[1]=ZERO;
 	hx711.buffer[2]=ZERO;
 	hx711.buffer[3]=ZERO;
-	hx711.bufferindex=3;
+	hx711.bufferindex=HX711_VECT_SIZE-ONE;
 	hx711.raw_reading=ZERO;
 	// offset para mesa usada.
 	hx711.cal.offset_32=37122; // to subtract B
