@@ -100,7 +100,7 @@ int main(void)
 				//lcd0.gotoxy(2,0);
 				//lcd0.string_size(function.ftoa(value,result,0), 12); lcd0.string_size("Kg", 4);
 				//Display
-				if (value > 999 || value < -999){
+				if (value > 1000 || value < -1000){
 					value = value/1000;
 					lcd0.gotoxy(3,0);
 					lcd0.string_size(function.ftoa(value,result,3), 12); lcd0.string_size("Kg", 4);
