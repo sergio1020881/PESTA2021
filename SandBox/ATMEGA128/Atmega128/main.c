@@ -57,7 +57,8 @@ int main(void)
 	hx = HX711enable(&DDRF, &PINF, &PORTF, 6, 7);
 	/******/
 	char Menu='1'; // Main menu selector
-	float value=0;
+	float value_64=0;
+	float value_128=0;
 	tmp=0;
 	/***Parameters timers***/
 	//vector[0]=255;
@@ -72,7 +73,7 @@ int main(void)
 	timer1.compareA(50);
 	timer1.compoutmodeA(1);
 	timer1.start(256);
-	hx.set_amplify(&hx,64); // 32 64 128
+	hx.set_amplify(&hx,128); // 32 64 128
 	/**********/
 	//TODO:: Please write your application code
 	while(TRUE){
@@ -85,28 +86,29 @@ int main(void)
 				//if(!strcmp(keypad.get().string,"A")){Menu='2';keypad.flush();lcd0.clear();break;}
 				//if(!strcmp(keypad.get().string,"B")){Menu='3';keypad.flush();lcd0.clear();break;}					
 		
-				value=hx.raw_average(&hx, 4);
-				value=(value-hx.cal.offset_64)/hx.cal.divfactor_64;
 				
 				//Just to keep track
 				lcd0.gotoxy(0,0);
 				lcd0.string_size(function.i32toa(tmp), 8); lcd0.string_size("raw", 3); // RAW_READING
-				//lcd0.gotoxy(1,0);
-				//lcd0.string_size(function.ftoa(value,result,2), 8);
-				//lcd0.gotoxy(2,0);
-				//lcd0.string_size(function.ftoa((value-hx.cal.offset_128)/hx.cal.divfactor_128,result,0), 12); lcd0.string_size("gram", 4);
 				
+				value_64=hx.raw_average(&hx, 4);
+				value_128=(value_64-hx.cal.offset_128)/hx.cal.divfactor_128;
+				value_64=(value_64-hx.cal.offset_64)/hx.cal.divfactor_64;
 				
-				//lcd0.gotoxy(2,0);
-				//lcd0.string_size(function.ftoa(value,result,0), 12); lcd0.string_size("Kg", 4);
 				//Display
-				if (value > 1000 || value < -1000){
-					value = value/1000;
+				if (value_128 > 1000 || value_128 < -1000){
+					value_64 = value_64/1000;
+					value_128 = value_128/1000;
+					//lcd0.gotoxy(2,0);
+					//lcd0.string_size(function.ftoa(value_64,result,3), 12); lcd0.string_size("Kg", 4);
 					lcd0.gotoxy(3,0);
-					lcd0.string_size(function.ftoa(value,result,3), 12); lcd0.string_size("Kg", 4);
+					lcd0.string_size(function.ftoa(value_128,result,3), 12); lcd0.string_size("Kg", 4);
+					
 				}else{
+					//lcd0.gotoxy(2,0);
+					//lcd0.string_size(function.ftoa(value_64,result,0), 12); lcd0.string_size("gram", 4);
 					lcd0.gotoxy(3,0);
-					lcd0.string_size(function.ftoa(value,result,0), 12); lcd0.string_size("gram", 4);
+					lcd0.string_size(function.ftoa(value_128,result,0), 12); lcd0.string_size("gram", 4);
 				}
 				
 				//(value-73990)/46
