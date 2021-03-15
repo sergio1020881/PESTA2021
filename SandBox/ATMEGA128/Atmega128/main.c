@@ -78,6 +78,7 @@ int main(void)
 	while(TRUE){
 		/***PREAMBLE***/
 		lcd0.reboot();
+		/**************/
 		switch(Menu){
 			/***MENU 1***/
 			case '1': // Main Program Menu
