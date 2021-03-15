@@ -38,8 +38,8 @@ void HX711_reset_readflag(HX711* self);
 uint8_t HX711_check_readflag(HX711* self);
 uint8_t HX711_read_bit(void);
 void HX711_set_amplify(HX711* self, uint8_t amplify);
-int32_t HX711_readraw(HX711* self);
-float HX711_average(HX711* self, int32_t raw_reading,  uint8_t n);
+int32_t HX711_read_raw(HX711* self);
+float HX711_raw_average(HX711* self, uint8_t n);
 uint8_t HX711_hl(uint8_t xi, uint8_t xf);
 /***Procedure & Function***/
 HX711 HX711enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t *port, uint8_t datapin, uint8_t clkpin)
@@ -70,6 +70,9 @@ HX711 HX711enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t
 	hx711.buffer[3]=ZERO;
 	hx711.bufferindex=HX711_VECT_SIZE-ONE;
 	hx711.raw_reading=ZERO;
+	hx711.sum=ZERO;
+	hx711.av_n=ZERO;
+	hx711.raw_mean=ZERO;
 	// offset para mesa usada.
 	hx711.cal.offset_32=37122; // to subtract B
 	hx711.cal.offset_64=74320; // to subtract A 64
@@ -83,8 +86,8 @@ HX711 HX711enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t
 	hx711.check_readflag=HX711_check_readflag;
 	hx711.read_bit=HX711_read_bit;
 	hx711.set_amplify=HX711_set_amplify;
-	hx711.readraw=HX711_readraw;
-	hx711.average=HX711_average;
+	hx711.read_raw=HX711_read_raw;
+	hx711.raw_average=HX711_raw_average;
 	SREG=tSREG;
 	// returns a copy
 	return hx711;
@@ -137,7 +140,7 @@ void HX711_set_amplify(HX711* self, uint8_t amplify)
 /***
 Function to be used in the interrupt routine with appropriate cycle period.
 ***/
-int32_t HX711_readraw(HX711* self)
+int32_t HX711_read_raw(HX711* self)
 {
 	uint8_t aindex, bindex;
 	int32_t value;
@@ -181,22 +184,22 @@ int32_t HX711_readraw(HX711* self)
 	}
 	return self->raw_reading;
 }
-float HX711_average(HX711* self, int32_t raw_reading ,uint8_t n)
+float HX711_raw_average(HX711* self, uint8_t n)
 {
 	if(self->trigger){
 		if(self->av_n < n){
-			self->sum+=raw_reading;
+			self->sum+=self->raw_reading;
 			self->av_n++;
 			}else{
 			self->av_n=0;
-			self->mean=self->sum/n;
+			self->raw_mean=self->sum/n;
 			self->sum=0;
-			self->sum+=raw_reading;
+			self->sum+=self->raw_reading;
 			self->av_n++;
 		}
 		self->trigger=ZERO;
 	}
-	return self->mean;
+	return self->raw_mean;
 }
 uint8_t HX711_hl(uint8_t xi, uint8_t xf)
 {

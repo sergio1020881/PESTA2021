@@ -43,15 +43,15 @@ struct hx711{
 	int32_t raw_reading; // reading to be published
 	int32_t sum;
 	uint8_t av_n;
-	float mean;
+	float raw_mean;
 	struct HX711_calibration cal;
 	/******/
 	void (*set_readflag)(struct hx711* self);
 	uint8_t (*check_readflag)(struct hx711* self);
 	uint8_t (*read_bit)(void);
 	void (*set_amplify)(struct hx711* self, uint8_t amplify);
-	int32_t (*readraw)(struct hx711* self);
-	float (*average)(struct hx711* self, int32_t raw_reading, uint8_t n);
+	int32_t (*read_raw)(struct hx711* self);
+	float (*raw_average)(struct hx711* self, uint8_t n);
 };
 typedef struct hx711 HX711;
 /***Header***/
