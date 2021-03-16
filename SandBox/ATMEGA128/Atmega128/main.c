@@ -6,7 +6,7 @@ File: $Id: MAIN,v 1.8.2.1 21/02/2021 Exp $
 Software: Atmel Studio 7 (ver 7.0.129)
 Hardware: Atmega128 by ETT ET-BASE
 	-PORTA LCD
-	-PORTE Keyboard
+	-PORTF pin 6,7 HX711, pin 0 to 5 Buttons.
 License: GNU General Public License
 Comment:
 
