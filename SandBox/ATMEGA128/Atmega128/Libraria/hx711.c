@@ -75,12 +75,15 @@ HX711 HX711enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t
 	hx711.raw_mean=ZERO;
 	// offset para mesa usada.
 	hx711.cal.offset_32=37122; // to subtract B
-	hx711.cal.offset_64=73690; // to subtract A 64
+	//hx711.cal.offset_64=73690; // to subtract A 64
+	hx711.cal.offset_64=73900; // to subtract A 64
+	//hx711.cal.offset_128=146650; // to subtract A 128
 	hx711.cal.offset_128=146650; // to subtract A 128
 	//div factor
 	hx711.cal.divfactor_32=23; // to divide
 	hx711.cal.divfactor_64=46; // to divide
 	hx711.cal.divfactor_128=92; // to divide
+	hx711.cal.status=0;
 	//Direccionar apontadores para PROTOTIPOS
 	hx711.set_readflag=HX711_set_readflag;
 	hx711.check_readflag=HX711_check_readflag;
@@ -150,7 +153,6 @@ int32_t HX711_read_raw(HX711* self)
 	/***Detect query for reading***/
 	if((!(*hx711_PIN & ONE << hx711_datapin)) && !self->readflag){
 		HX711_set_readflag(self);
-		PORTC&=~(1<<0); // indicator remove when finished
 	}
 	/***Interrupt 24 times sequence***/
 	if(self->readflag){

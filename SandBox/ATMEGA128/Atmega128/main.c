@@ -27,6 +27,7 @@ Comment:
 #include "function.h"
 #include "lcd.h"
 #include "hx711.h"
+#include "eeprom.h"
 /*
 ** Constant and Macro
 */
@@ -55,6 +56,7 @@ int main(void)
 	TIMER_COUNTER0 timer0 = TIMER_COUNTER0enable(2,2); //2,2
 	TIMER_COUNTER1 timer1 = TIMER_COUNTER1enable(4,0);
 	hx = HX711enable(&DDRF, &PINF, &PORTF, 6, 7);
+	EEPROM eprom = EEPROMenable();
 	/******/
 	char Menu='1'; // Main menu selector
 	float value_64=0;
@@ -148,8 +150,8 @@ int main(void)
 */
 void PORTINIT(void)
 {
-	DDRC=0xFF;
-	PORTC=0xFF;
+	//DDRC=0xFF;
+	//PORTC=0xFF;
 	//DDRB=0x10;
 	//PORTB=0x10;
 }

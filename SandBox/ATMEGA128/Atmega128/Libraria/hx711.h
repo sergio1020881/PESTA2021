@@ -29,7 +29,7 @@ struct HX711_calibration{
 	uint8_t divfactor_128; // interval B
 	uint8_t divfactor_128_1; // interval B 1
 	uint8_t divfactor_128_2; // interval B 2
-	 
+	uint8_t status;
 };
 //device
 struct hx711{

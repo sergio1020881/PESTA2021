@@ -5,18 +5,22 @@ funcionalidade ou iguais mas totalmente independentes.
 
 As librarias serem não dependent do hardware.
 
-Ideia para libraria do HX711, interrupção de 
-leitura que depois faz saltar para interrupção 
-do timer para fazer as respetcivas leituras. 
+Ideia para libraria do HX711, (interrupção de 
+leitura -> basta o timer) que depois faz saltar para interrupção 
+do timer para fazer as respetcivas leituras. done.
 
 fazer agora um apanhado das contas para o relatorio.
-melhorar funcao float to asci, já corigi sinal agora 
-falta afinaçao valor positivo para negativo.
+melhorar funcao float to ascii, já corigi sinal agora 
+falta afinaçao valor positivo para negativo. done.
 
 Funcão média feito, falta acrescentar libraria da 
-eeprom para guardar o defult e depois os de offset, 
+eeprom para guardar o default e depois os de offset, 
 depois ver se acrescento mais algo.
 
 It is looking good up to now.
+
+dont forget sleep function.
+
+Starting eeprom store calibration values.
 
 
