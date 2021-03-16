@@ -104,7 +104,7 @@ int main(void)
 	eprom.read_block(HX711_ptr, (const void*) ZERO, sizeblock);
 	if(HX711_ptr->status == 1){
 		memcpy ( hx.ptrcal(&hx), HX711_ptr, sizeblock );
-		PORTC^=1; //for troubleshooting
+		PORTC^=(ONE<<5); // troubleshooting
 	}
 	/***********************************************************************************************/
 	while(TRUE){
@@ -129,7 +129,7 @@ int main(void)
 				lcd0.string_size(function.ftoa(value_64, result, 0), 12); lcd0.string_size("raw_av", 6);
 				
 				if(F.hl(&F) & ONE){ // calibrate offset by pressing button 1
-					PORTC^=1; //for troubleshooting
+					PORTC^=(ONE<<5); // troubleshooting
 					HX711_data.offset_64=value_64;
 					//HX711_data.divfactor_64=46; //for troubleshooting
 					HX711_data.status=1;
@@ -197,7 +197,7 @@ void PORTINIT(void)
 /*
 ** interrupt
 */
-ISR(TIMER0_COMP_vect)
+ISR(TIMER0_COMP_vect) // 20 us intervals
 {
 	/***Block other interrupts during this procedure***/
 	uint8_t Sreg;
@@ -208,7 +208,7 @@ ISR(TIMER0_COMP_vect)
 	/***enable interrupts again***/
 	SREG=Sreg;
 }
-ISR(TIMER1_COMPA_vect)
+ISR(TIMER1_COMPA_vect) // 1 second intervals
 {
 	
 	if(F.ll(&F) & ONE)
@@ -217,13 +217,13 @@ ISR(TIMER1_COMPA_vect)
 	if(counter_1 > _5sec){
 		counter_1=_5sec+ONE; //lock in place
 		
-		PORTC&=~ONE;
+		PORTC^=(ONE<<5); // troubleshooting
 		
 		if(F.ll(&F) & 2){
 			// Delete eerpom memory ZERO
 			HX711_data.status=0;
 			eprom.update_block(HX711_ptr, (void*) ZERO, sizeblock);
-			PORTC|=ONE;
+			PORTC^=(ONE<<5); // troubleshooting
 			counter_1=ZERO;
 		}
 	}

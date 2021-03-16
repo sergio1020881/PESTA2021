@@ -1,4 +1,4 @@
-/*************************************************************************
+/********************************************************************
 	EXPLODE
 Author: Sergio Santos
 	<sergio.salazar.santos@gmail.com> 
@@ -6,20 +6,25 @@ License: GNU General Public License
 Hardware: all
 Date: 16032021
 Comment:
-    Pin Analises
-*************************************************************************/
+    Pin Analysis
+********************************************************************/
 /***Library***/
 #include <avr/io.h>
 #include <inttypes.h>
 #include"explode.h"
 /***Constant & Macro***/
 #ifndef GLOBAL_INTERRUPT_ENABLE
+	#define STATUS_REGISTER SREG
 	#define GLOBAL_INTERRUPT_ENABLE 7
 #endif
+#define ZERO 0
+#define ONE 1
 /***Global File Variable***/
 /***Header***/
+uint8_t EXPLODEPwr(uint8_t bs, uint8_t n);
 /************/
 void EXPLODEboot(EXPLODE* self, uint8_t x);
+uint8_t EXPLODEmayia(EXPLODE* self, uint8_t nbits);
 uint8_t EXPLODEhh(EXPLODE* self);
 uint8_t EXPLODEll(EXPLODE* self);
 uint8_t EXPLODElh(EXPLODE* self);
@@ -30,8 +35,8 @@ uint8_t EXPLODEdata(EXPLODE* self);
 EXPLODE EXPLODEenable( void )
 {
 	uint8_t tSREG;
-	tSREG=SREG;
-	SREG&=~(1<<GLOBAL_INTERRUPT_ENABLE);
+	tSREG=STATUS_REGISTER;
+	STATUS_REGISTER&=~(1<<GLOBAL_INTERRUPT_ENABLE);
 	// struct object
 	struct expld explode;
 	// inic VAR
@@ -39,13 +44,14 @@ EXPLODE EXPLODEenable( void )
 	explode.XF=0;
 	// function pointers
 	explode.boot=EXPLODEboot;
+	explode.mayia=EXPLODEmayia;
 	explode.hh=EXPLODEhh;
 	explode.ll=EXPLODEll;
 	explode.lh=EXPLODElh;
 	explode.hl=EXPLODEhl;
 	explode.diff=EXPLODEdiff;
 	explode.data=EXPLODEdata;
-	SREG=tSREG;
+	STATUS_REGISTER=tSREG;
 	/******/
 	return explode;
 }
@@ -54,6 +60,19 @@ void EXPLODEboot(EXPLODE* self, uint8_t x)
 {
 	self->XI = self->XF;
 	self->XF = x;
+}
+// mayia
+uint8_t EXPLODEmayia(EXPLODE* self, uint8_t nbits)
+{//magic formula
+	unsigned int mask;
+	unsigned int diff;
+	unsigned int trans;
+	mask=EXPLODEPwr(2,nbits)-1;
+	self->XI&=mask;
+	self->XF&=mask;
+	diff=self->XF^self->XI;
+	trans=diff&self->XF;
+	return (trans<<nbits)|diff;
 }
 // hh
 uint8_t EXPLODEhh(EXPLODE* self)
@@ -93,6 +112,16 @@ uint8_t EXPLODEdiff(EXPLODE* self)
 uint8_t EXPLODEdata(EXPLODE* self)
 {
 	return self->XF;	
+}
+/*******************************************************************/
+// power: raise base to n-th power; n >= 0
+uint8_t EXPLODEPwr(uint8_t bs, uint8_t n)
+{
+	uint8_t i, p;
+	p = 1;
+	for (i = 1; i <= n; ++i)
+	p = p * bs;
+	return p;
 }
 /***Interrupt***/
 /***EOF***/
