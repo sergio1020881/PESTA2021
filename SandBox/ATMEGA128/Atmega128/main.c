@@ -34,16 +34,23 @@ Comment:
 */
 #define TRUE 1
 #define ZERO 0
+#define ONE 1
 #define average_n 3
+#define _5sec 5
+#define _10sec 10
 /*
 ** Global File variable
 */
 EXPLODE F;
-
+struct HX711_calibration HX711_data;
+struct HX711_calibration* HX711_ptr;
+const uint8_t sizeblock=sizeof(struct HX711_calibration);
 HX711 hx;
 int32_t tmp;
+EEPROM eprom;
 
 char result[20];
+uint8_t counter_1=0;
 /*
 ** Header
 */
@@ -51,20 +58,30 @@ void PORTINIT();
 /****MAIN****/
 int main(void)
 {
-	//SREG|=1<<7;
+	HX711_ptr=&HX711_data;
+	
 	PORTINIT();
 	/***INICIALIZE OBJECTS***/
 	F = EXPLODEenable();
 	FUNC function = FUNCenable();
 	LCD0 lcd0 = LCD0enable(&DDRA,&PINA,&PORTA);
 	TIMER_COUNTER0 timer0 = TIMER_COUNTER0enable(2,2); //2,2
-	TIMER_COUNTER1 timer1 = TIMER_COUNTER1enable(4,0);
+	TIMER_COUNTER1 timer1 = TIMER_COUNTER1enable(4,2);
 	hx = HX711enable(&DDRF, &PINF, &PORTF, 6, 7);
-	EEPROM eprom = EEPROMenable();
+	eprom = EEPROMenable();
 	/******/
 	char Menu='1'; // Main menu selector
 	float value_64=0;
 	float value_128=0;
+	
+	// Get default values to memory
+	HX711_data.offset_32=hx.get_offset_32(&hx);
+	HX711_data.offset_64=hx.get_offset_64(&hx);
+	HX711_data.offset_128=hx.get_offset_128(&hx);
+	HX711_data.divfactor_32=hx.get_divfactor_32(&hx);
+	HX711_data.divfactor_64=hx.get_divfactor_64(&hx);
+	HX711_data.divfactor_128=hx.get_divfactor_128(&hx);
+
 	tmp=0;
 	/***Parameters timers***/
 	//vector[0]=255;
@@ -82,8 +99,14 @@ int main(void)
 	
 	// HX711 Gain
 	hx.set_amplify(&hx,64); // 32 64 128
-	/**********/
-	//TODO:: Please write your application code
+	
+	//Get stored calibration values and put them to effect
+	eprom.read_block(HX711_ptr, (const void*) ZERO, sizeblock);
+	if(HX711_ptr->status == 1){
+		memcpy ( hx.ptrcal(&hx), HX711_ptr, sizeblock );
+		PORTC^=1; //for troubleshooting
+	}
+	/***********************************************************************************************/
 	while(TRUE){
 		/******PREAMBLE******/
 		lcd0.reboot();
@@ -96,21 +119,29 @@ int main(void)
 			case '1': // Main Program Menu
 				//if(!strcmp(keypad.get().string,"A")){Menu='2';keypad.flush();lcd0.clear();break;}
 				//if(!strcmp(keypad.get().string,"B")){Menu='3';keypad.flush();lcd0.clear();break;}					
-		
-				if(F.hl(&F) & 1)
-					PORTC&=~1;
-				if(F.lh(&F) & 2)
-					PORTC|=1;
 				
 				//Just to keep track
-				//lcd0.gotoxy(0,0);
-				//lcd0.string_size(function.i32toa(tmp), 8); lcd0.string_size("raw", 3); // RAW_READING
+				//lcd0.gotoxy(0,0); //for troubleshooting
+				//lcd0.string_size(function.i32toa(tmp), 8); lcd0.string_size("raw", 3); // RAW_READING //for troubleshooting
 				
 				value_64=hx.raw_average(&hx, 25); // 25 50, smaller means faster or more readings
 				lcd0.gotoxy(1,0);
-				lcd0.string_size(function.ftoa(value_64,result,0), 12); lcd0.string_size("raw_av", 6);
-				value_128=(value_64-hx.cal.offset_128)/hx.cal.divfactor_128;
-				value_64=(value_64-hx.cal.offset_64)/hx.cal.divfactor_64;
+				lcd0.string_size(function.ftoa(value_64, result, 0), 12); lcd0.string_size("raw_av", 6);
+				
+				if(F.hl(&F) & ONE){ // calibrate offset by pressing button 1
+					PORTC^=1; //for troubleshooting
+					HX711_data.offset_64=value_64;
+					//HX711_data.divfactor_64=46; //for troubleshooting
+					HX711_data.status=1;
+					eprom.update_block(HX711_ptr, (void*) ZERO, sizeblock);
+					//lcd0.gotoxy(2,0); //for troubleshooting
+					//lcd0.string_size(function.i32toa(hx.get_offset_64(&hx)), 8); //for troubleshooting
+					//lcd0.string_size(function.i16toa(hx.get_divfactor_64(&hx)), 8); //for troubleshooting
+					memcpy ( hx.ptrcal(&hx), HX711_ptr, sizeblock ); // Update new values
+				}
+				
+				//value_128=(value_64-hx.cal.offset_128)/hx.cal.divfactor_128;
+				value_64=(value_64-hx.cal.offset_64)/hx.cal.divfactor_64; //value to be published to LCD
 				
 				//Display
 				if (value_64 > 1000 || value_64 < -1000){
@@ -119,17 +150,13 @@ int main(void)
 					lcd0.gotoxy(3,0);
 					lcd0.string_size(function.ftoa(value_64,result,3), 12); lcd0.string_size("Kg", 4);
 					//lcd0.gotoxy(3,0);
-					//lcd0.string_size(function.ftoa(value_128,result,3), 12); lcd0.string_size("Kg", 4);
-					
+					//lcd0.string_size(function.ftoa(value_128,result,3), 12); lcd0.string_size("Kg", 4);	
 				}else{
 					lcd0.gotoxy(3,0);
 					lcd0.string_size(function.ftoa(value_64,result,0), 12); lcd0.string_size("gram", 4);
 					//lcd0.gotoxy(3,0);
 					//lcd0.string_size(function.ftoa(value_128,result,0), 12); lcd0.string_size("gram", 4);
-				}
-				
-				//(value-73990)/46
-					
+				}		
 				break;
 			/***MENU 2***/
 			case '2': //  
@@ -161,7 +188,9 @@ int main(void)
 */
 void PORTINIT(void)
 {
+	//Control buttons
 	PORTF|=0x3F;
+	//troubleshooting output
 	DDRC=0xFF;
 	PORTC=0xFF;
 }
@@ -173,11 +202,31 @@ ISR(TIMER0_COMP_vect)
 	/***Block other interrupts during this procedure***/
 	uint8_t Sreg;
 	Sreg=SREG;
-	SREG&=~(1<<7);
+	SREG&=~(ONE<<7);
 	/***Block other interrupts during this procedure***/	
 	tmp=hx.read_raw(&hx);
 	/***enable interrupts again***/
 	SREG=Sreg;
+}
+ISR(TIMER1_COMPA_vect)
+{
+	
+	if(F.ll(&F) & ONE)
+		counter_1++;
+		
+	if(counter_1 > _5sec){
+		counter_1=_5sec+ONE; //lock in place
+		
+		PORTC&=~ONE;
+		
+		if(F.ll(&F) & 2){
+			// Delete eerpom memory ZERO
+			HX711_data.status=0;
+			eprom.update_block(HX711_ptr, (void*) ZERO, sizeblock);
+			PORTC|=ONE;
+			counter_1=ZERO;
+		}
+	}
 }
 /***EOF***/
 /**** Comment:
@@ -185,13 +234,16 @@ The past only exists if the present comes to be. There is no future only possibi
 because 24 bit will have to create a vector pointer of the size of 32 bit, then at the 
 end do a cast to *((int32_t*)ptr).
 
-Have to make function for average, then offset.
+Have to make function for average, then offset. DONE.
 
-After that create a calibration section.
+After that create a calibration section. In progress.
 
 Then it is all extras.
 
-changed rate in HX711 to 80Hz, 10Hz is to slow. Though there is more noise.
+changed rate in HX711 to 80Hz, 10Hz is to slow. Though there is more noise. DONE.
 
 Temos aparelhos de medida para não ter necessidade de recorrer a calculos complexos, cut out all the red tape.
+
+There is a bug with this program, sometimes does not accept changed code, only by checking using print to 
+LCD makes it accept it. Stupid bugs, makes you think something is wrong when there is non, the damn compiler fails.
 ****/

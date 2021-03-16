@@ -950,7 +950,7 @@ stops timer by setting prescaler to zero
 //ISR(TIMER0_COMP_vect){ }
 ISR(TIMER0_OVF_vect){ }
 ISR(TIMER1_CAPT_vect){ }
-ISR(TIMER1_COMPA_vect){ }
+//ISR(TIMER1_COMPA_vect){ }
 ISR(TIMER1_COMPB_vect){ }
 ISR(TIMER1_COMPC_vect){ }
 ISR(TIMER1_OVF_vect){ }

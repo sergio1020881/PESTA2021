@@ -9,8 +9,8 @@ Target "CoreBuild" in file "C:\Program Files (x86)\Atmel\Studio\7.0\Vs\Compiler.
 		make: Nothing to be done for 'all'.
 	Done executing task "RunCompilerTask".
 	Task "RunOutputFileVerifyTask"
-				Program Memory Usage 	:	10810 bytes   8.2 % Full
-				Data Memory Usage 		:	604 bytes   14.7 % Full
+				Program Memory Usage 	:	11442 bytes   8.7 % Full
+				Data Memory Usage 		:	643 bytes   15.7 % Full
 				Warning: Memory Usage estimation may not be accurate if there are sections other than .text sections in ELF file
 	Done executing task "RunOutputFileVerifyTask".
 Done building target "CoreBuild" in project "Atmega128.cproj".

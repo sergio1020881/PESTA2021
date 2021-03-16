@@ -18,6 +18,7 @@ Comment:
 #include "hx711.h"
 /***Constant & Macro***/
 #ifndef GLOBAL_INTERRUPT_ENABLE
+	#define STATUS_REGISTER SREG
 	#define GLOBAL_INTERRUPT_ENABLE 7
 #endif
 #define ZERO 0
@@ -40,7 +41,13 @@ uint8_t HX711_read_bit(void);
 void HX711_set_amplify(HX711* self, uint8_t amplify);
 int32_t HX711_read_raw(HX711* self);
 float HX711_raw_average(HX711* self, uint8_t n);
-uint8_t HX711_hl(uint8_t xi, uint8_t xf);
+struct HX711_calibration* HX711_ptrcal(HX711* self);
+int32_t HX711_get_offset_32(HX711* self);
+int32_t HX711_get_offset_64(HX711* self);
+int32_t HX711_get_offset_128(HX711* self);
+int8_t HX711_get_divfactor_32(HX711* self);
+int8_t HX711_get_divfactor_64(HX711* self);
+int8_t HX711_get_divfactor_128(HX711* self);
 /***Procedure & Function***/
 HX711 HX711enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t *port, uint8_t datapin, uint8_t clkpin)
 {
@@ -91,6 +98,13 @@ HX711 HX711enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t
 	hx711.set_amplify=HX711_set_amplify;
 	hx711.read_raw=HX711_read_raw;
 	hx711.raw_average=HX711_raw_average;
+	hx711.ptrcal=HX711_ptrcal;
+	hx711.get_offset_32=HX711_get_offset_32;
+	hx711.get_offset_64=HX711_get_offset_64;
+	hx711.get_offset_128=HX711_get_offset_128;
+	hx711.get_divfactor_32=HX711_get_divfactor_32;
+	hx711.get_divfactor_64=HX711_get_divfactor_64;
+	hx711.get_divfactor_128=HX711_get_divfactor_128;
 	SREG=tSREG;
 	// returns a copy
 	return hx711;
@@ -203,12 +217,33 @@ float HX711_raw_average(HX711* self, uint8_t n)
 	}
 	return self->raw_mean;
 }
-uint8_t HX711_hl(uint8_t xi, uint8_t xf)
+struct HX711_calibration* HX711_ptrcal(HX711* self)
 {
-	uint8_t i;
-	i=xf^xi;
-	i&=xi;
-	return i;
+	return &(self->cal);
+}
+int32_t HX711_get_offset_32(HX711* self)
+{
+	return self->cal.offset_32;
+}
+int32_t HX711_get_offset_64(HX711* self)
+{
+	return self->cal.offset_64;
+}
+int32_t HX711_get_offset_128(HX711* self)
+{
+	return self->cal.offset_128;
+}
+int8_t HX711_get_divfactor_32(HX711* self)
+{
+	return self->cal.divfactor_32;
+}
+int8_t HX711_get_divfactor_64(HX711* self)
+{
+	return self->cal.divfactor_64;
+}
+int8_t HX711_get_divfactor_128(HX711* self)
+{
+	return self->cal.divfactor_128;
 }
 /***Interrupt***/
 /****comment:

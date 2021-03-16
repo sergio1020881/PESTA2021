@@ -52,6 +52,13 @@ struct hx711{
 	void (*set_amplify)(struct hx711* self, uint8_t amplify);
 	int32_t (*read_raw)(struct hx711* self);
 	float (*raw_average)(struct hx711* self, uint8_t n);
+	struct HX711_calibration* (*ptrcal)(struct hx711* self);
+	int32_t (*get_offset_32)(struct hx711* self);
+	int32_t (*get_offset_64)(struct hx711* self);
+	int32_t (*get_offset_128)(struct hx711* self);
+	int8_t (*get_divfactor_32)(struct hx711* self);
+	int8_t (*get_divfactor_64)(struct hx711* self);
+	int8_t (*get_divfactor_128)(struct hx711* self);
 };
 typedef struct hx711 HX711;
 /***Header***/
