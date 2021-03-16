@@ -3997,7 +3997,7 @@ uint8_t HX711_read_bit(void)
     1b80:	e2 f7       	brpl	.-8      	; 0x1b7a <HX711_read_bit+0x14>
     1b82:	82 2b       	or	r24, r18
     1b84:	80 83       	st	Z, r24
-    1b86:	8e e6       	ldi	r24, 0x6E	; 110
+    1b86:	87 e3       	ldi	r24, 0x37	; 55
     1b88:	90 e0       	ldi	r25, 0x00	; 0
     1b8a:	01 97       	sbiw	r24, 0x01	; 1
 	/**0.1us minimum**/
