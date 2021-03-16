@@ -16,6 +16,8 @@ Libraria\clock.c
 
 Libraria\eeprom.c
 
+Libraria\explode.c
+
 Libraria\function.c
 
 Libraria\keypad.c

@@ -35,6 +35,7 @@ char FUNCstr[FUNCSTRSIZE+1];
 unsigned int Pwr(uint8_t bs, uint8_t n);
 int StringLength (const char string[]);
 void Reverse(char s[]);
+uint8_t  bintobcd(uint8_t bin);
 /******/
 unsigned int FUNCmayia(unsigned int xi, unsigned int xf, uint8_t nbits);
 uint8_t FUNCpinmatch(uint8_t match, uint8_t pin, uint8_t HL);
@@ -73,7 +74,6 @@ char* FUNCprint_binary(uint8_t number);
 void FUNCreverse(char* str, int len);
 int FUNCintToStr(int32_t x, char str[], uint8_t n_digit);
 char* FUNCftoa(float n, char* res, uint8_t afterpoint);
-uint8_t  bintobcd(uint8_t bin);
 /***pc use***
 char* FUNCfltos(FILE* stream);
 char* FUNCftos(FILE* stream);

@@ -194,6 +194,12 @@
     <Compile Include="Libraria\eeprom.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="Libraria\explode.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Libraria\explode.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Libraria\function.c">
       <SubType>compile</SubType>
     </Compile>

@@ -45,6 +45,7 @@ C_SRCS +=  \
 ../Libraria/atmega128uart.c \
 ../Libraria/clock.c \
 ../Libraria/eeprom.c \
+../Libraria/explode.c \
 ../Libraria/function.c \
 ../Libraria/keypad.c \
 ../Libraria/lcd.c \
@@ -71,6 +72,7 @@ Libraria/atmega128timer.o \
 Libraria/atmega128uart.o \
 Libraria/clock.o \
 Libraria/eeprom.o \
+Libraria/explode.o \
 Libraria/function.o \
 Libraria/keypad.o \
 Libraria/lcd.o \
@@ -90,6 +92,7 @@ Libraria/atmega128timer.o \
 Libraria/atmega128uart.o \
 Libraria/clock.o \
 Libraria/eeprom.o \
+Libraria/explode.o \
 Libraria/function.o \
 Libraria/keypad.o \
 Libraria/lcd.o \
@@ -109,6 +112,7 @@ Libraria/atmega128timer.d \
 Libraria/atmega128uart.d \
 Libraria/clock.d \
 Libraria/eeprom.d \
+Libraria/explode.d \
 Libraria/function.d \
 Libraria/keypad.d \
 Libraria/lcd.d \
@@ -128,6 +132,7 @@ Libraria/atmega128timer.d \
 Libraria/atmega128uart.d \
 Libraria/clock.d \
 Libraria/eeprom.d \
+Libraria/explode.d \
 Libraria/function.d \
 Libraria/keypad.d \
 Libraria/lcd.d \
@@ -196,6 +201,13 @@ Libraria/clock.o: ../Libraria/clock.c
 	
 
 Libraria/eeprom.o: ../Libraria/eeprom.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\include" -I"../Libraria"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\gcc\dev\atmega128" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+Libraria/explode.o: ../Libraria/explode.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\include" -I"../Libraria"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega128 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\gcc\dev\atmega128" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 

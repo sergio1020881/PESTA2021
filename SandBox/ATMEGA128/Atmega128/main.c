@@ -23,6 +23,7 @@ Comment:
 #include <inttypes.h>
 #include <stdlib.h>
 #include <string.h>
+#include "explode.h"
 #include "atmega128timer.h"
 #include "function.h"
 #include "lcd.h"
@@ -37,6 +38,8 @@ Comment:
 /*
 ** Global File variable
 */
+EXPLODE F;
+
 HX711 hx;
 int32_t tmp;
 
@@ -51,6 +54,7 @@ int main(void)
 	//SREG|=1<<7;
 	PORTINIT();
 	/***INICIALIZE OBJECTS***/
+	F = EXPLODEenable();
 	FUNC function = FUNCenable();
 	LCD0 lcd0 = LCD0enable(&DDRA,&PINA,&PORTA);
 	TIMER_COUNTER0 timer0 = TIMER_COUNTER0enable(2,2); //2,2
@@ -81,15 +85,22 @@ int main(void)
 	/**********/
 	//TODO:: Please write your application code
 	while(TRUE){
-		/***PREAMBLE***/
+		/******PREAMBLE******/
 		lcd0.reboot();
-		/**************/
+		/*******INPUT*******/
+		F.boot(&F,PINF);
+		
+		/*******************/
 		switch(Menu){
 			/***MENU 1***/
 			case '1': // Main Program Menu
 				//if(!strcmp(keypad.get().string,"A")){Menu='2';keypad.flush();lcd0.clear();break;}
 				//if(!strcmp(keypad.get().string,"B")){Menu='3';keypad.flush();lcd0.clear();break;}					
 		
+				if(F.hl(&F) & 1)
+					PORTC&=~1;
+				if(F.lh(&F) & 2)
+					PORTC|=1;
 				
 				//Just to keep track
 				//lcd0.gotoxy(0,0);
@@ -150,10 +161,9 @@ int main(void)
 */
 void PORTINIT(void)
 {
-	//DDRC=0xFF;
-	//PORTC=0xFF;
-	//DDRB=0x10;
-	//PORTB=0x10;
+	PORTF|=0x3F;
+	DDRC=0xFF;
+	PORTC=0xFF;
 }
 /*
 ** interrupt
