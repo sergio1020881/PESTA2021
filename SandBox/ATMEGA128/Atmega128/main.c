@@ -121,7 +121,8 @@ int main(void)
 				//if(!strcmp(keypad.get().string,"B")){Menu='3';keypad.flush();lcd0.clear();break;}					
 				
 				//Just to keep track
-				//lcd0.gotoxy(0,0); //for troubleshooting
+				lcd0.gotoxy(0,4); //for troubleshooting
+				lcd0.string_size("Weight Scale", 12); //for troubleshooting
 				//lcd0.string_size(function.i32toa(tmp), 8); lcd0.string_size("raw", 3); // RAW_READING //for troubleshooting
 				
 				value_64=hx.raw_average(&hx, 25); // 25 50, smaller means faster or more readings
@@ -148,12 +149,12 @@ int main(void)
 					value_64 = value_64/1000;
 					value_128 = value_128/1000;
 					lcd0.gotoxy(3,0);
-					lcd0.string_size(function.ftoa(value_64,result,3), 12); lcd0.string_size("Kg", 4);
+					lcd0.string_size(function.ftoa(value_64,result,3), 10); lcd0.string_size("Kg", 4);
 					//lcd0.gotoxy(3,0);
 					//lcd0.string_size(function.ftoa(value_128,result,3), 12); lcd0.string_size("Kg", 4);	
 				}else{
 					lcd0.gotoxy(3,0);
-					lcd0.string_size(function.ftoa(value_64,result,0), 12); lcd0.string_size("gram", 4);
+					lcd0.string_size(function.ftoa(value_64,result,0), 10); lcd0.string_size("gram", 4);
 					//lcd0.gotoxy(3,0);
 					//lcd0.string_size(function.ftoa(value_128,result,0), 12); lcd0.string_size("gram", 4);
 				}		
