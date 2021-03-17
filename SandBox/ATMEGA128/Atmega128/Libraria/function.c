@@ -72,7 +72,7 @@ long FUNCgcd1(long a, long b);
 uint8_t FUNCpincheck(uint8_t port, uint8_t pin);
 char* FUNCprint_binary(uint8_t number);
 void FUNCreverse(char* str, int len);
-int FUNCintToStr(int32_t x, char str[], uint8_t n_digit);
+int FUNCintToStr(float x, char str[], uint8_t n_digit);
 char* FUNCftoa(float n, char* res, uint8_t afterpoint);
 /***pc use***
 char* FUNCfltos(FILE* stream);
@@ -543,14 +543,16 @@ void FUNCreverse(char* str, int len)
 		j--;
 	}
 }
-int FUNCintToStr(int32_t n, char str[], uint8_t n_digit)
+int FUNCintToStr(float m, char str[], uint8_t n_digit)
 {
 	int k = 0;
+	int32_t n;
 	int8_t sign=0;
-	if (n < 0){
-		n = -n;
+	if (m < 0){
+		m = -m;
 		sign=-ONE;
 	}
+	n = (int32_t) m;
     do{ 
         str[k++] = (n % 10) + '0'; 
     }while((n/=10)>0 || k < n_digit);
@@ -572,7 +574,7 @@ char* FUNCftoa(float n, char* res, uint8_t afterpoint)
 	fpart = n - (float)ipart;
 	
 	// string part decimal
-	l =	FUNCintToStr(ipart, res, 0);
+	l =	FUNCintToStr(n, res, 0);
 	
 	// part fraccional
 	if (afterpoint != 0) {
