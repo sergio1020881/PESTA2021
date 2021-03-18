@@ -5147,7 +5147,7 @@ int main(void)
     22be:	70 e0       	ldi	r23, 0x00	; 0
     22c0:	82 e0       	ldi	r24, 0x02	; 2
     22c2:	90 e0       	ldi	r25, 0x00	; 0
-					lcd0.string_size(function.ftoa(value_64,result,3), 13); lcd0.string_size("Kg", 2);
+					lcd0.string_size(function.ftoa(value_64,result,3), 13); lcd0.string_size("Kg", 4);
     22c4:	09 95       	icall
     22c6:	f8 01       	movw	r30, r16
     22c8:	a4 84       	ldd	r10, Z+12	; 0x0c
@@ -5172,13 +5172,13 @@ int main(void)
     22ee:	ed 91       	ld	r30, X+
     22f0:	fc 91       	ld	r31, X
     22f2:	1d 97       	sbiw	r26, 0x0d	; 13
-    22f4:	62 e0       	ldi	r22, 0x02	; 2
+    22f4:	64 e0       	ldi	r22, 0x04	; 4
     22f6:	8e e0       	ldi	r24, 0x0E	; 14
     22f8:	91 e0       	ldi	r25, 0x01	; 1
     22fa:	09 95       	icall
     22fc:	20 c0       	rjmp	.+64     	; 0x233e <main+0x41a>
 					//lcd0.gotoxy(3,0);
-					//lcd0.string_size(function.ftoa(value_128,result,3), 13); lcd0.string_size("Kg", 2);	
+					//lcd0.string_size(function.ftoa(value_128,result,3), 13); lcd0.string_size("Kg", 4);	
 				}else{
 					lcd0.gotoxy(2,0);
     22fe:	d8 01       	movw	r26, r16
