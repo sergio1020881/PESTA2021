@@ -42,6 +42,7 @@ Comment:
 ** Global File variable
 */
 EXPLODE F;
+LCD0 lcd0;
 struct HX711_calibration HX711_data;
 struct HX711_calibration* HX711_ptr;
 const uint8_t sizeblock=sizeof(struct HX711_calibration);
@@ -50,7 +51,10 @@ int32_t tmp;
 EEPROM eprom;
 
 char result[32];
+char Menu='1'; // Main menu selector
 uint8_t counter_1=0;
+uint8_t counter_2=0;
+uint8_t signal=0;
 /*
 ** Header
 */
@@ -64,13 +68,13 @@ int main(void)
 	/***INICIALIZE OBJECTS***/
 	F = EXPLODEenable();
 	FUNC function = FUNCenable();
-	LCD0 lcd0 = LCD0enable(&DDRA,&PINA,&PORTA);
+	lcd0 = LCD0enable(&DDRA,&PINA,&PORTA);
 	TIMER_COUNTER0 timer0 = TIMER_COUNTER0enable(2,2); //2,2
 	TIMER_COUNTER1 timer1 = TIMER_COUNTER1enable(4,2);
 	hx = HX711enable(&DDRF, &PINF, &PORTF, 6, 7);
 	eprom = EEPROMenable();
 	/******/
-	char Menu='1'; // Main menu selector
+	
 	float value_64=0;
 	float value_128=0;
 	
@@ -114,13 +118,19 @@ int main(void)
 		F.boot(&F,PINF);
 		// tmp also entry from interrupt routine
 		
-		
 		/****************************/
 		switch(Menu){
 			/***MENU 1***/
 			case '1': // Main Program Menu
 				//if(!strcmp(keypad.get().string,"A")){Menu='2';keypad.flush();lcd0.clear();break;}
-				//if(!strcmp(keypad.get().string,"B")){Menu='3';keypad.flush();lcd0.clear();break;}					
+				//if(!strcmp(keypad.get().string,"B")){Menu='3';keypad.flush();lcd0.clear();break;}
+				
+				
+				
+				
+								
+				lcd0.gotoxy(0,0); //for troubleshooting
+				lcd0.string_size(function.i16toa(counter_2), 3); //for troubleshooting
 				
 				//Just to keep track
 				lcd0.gotoxy(0,4); //for troubleshooting
@@ -159,25 +169,40 @@ int main(void)
 					lcd0.string_size(function.ftoa(value_64,result,0), 12); lcd0.string_size("gram", 4);
 					//lcd0.gotoxy(3,0);
 					//lcd0.string_size(function.ftoa(value_128,result,0), 12); lcd0.string_size("gram", 4);
-				}		
+				}
+				
+				
+				// Jump Menu signal
+				if(signal==1){
+					Menu='2';
+					lcd0.clear();
+				}
+					
 				break;
 			/***MENU 2***/
 			case '2': //  
 				//if(!strcmp(keypad.get().string,"A")){Menu='3';keypad.flush();lcd0.clear();break;}
 				//if(!strcmp(keypad.get().string,"B")){Menu='1';keypad.flush();lcd0.clear();break;}
 				//if(!strcmp(keypad.get().string,"C")){Menu='1';keypad.flush();lcd0.clear();break;}
-					lcd0.gotoxy(0,0);
-					lcd0.string_size("Not being used",19);
-					/***Play around***/
+				
+				
+				lcd0.gotoxy(0,3);
+				lcd0.string_size("SETUP DIVFACTOR",15);
+				
+				// Jump Menus signal
+				if(signal==2){
+					Menu='1';
+					lcd0.clear();
+				}
 				break;
 			/***MENU 3***/
 			case '3': //Set Time and Date
 				//if(!strcmp(keypad.get().string,"A")){Menu='1';keypad.flush();lcd0.clear();break;}
 				//if(!strcmp(keypad.get().string,"B")){Menu='2';keypad.flush();lcd0.clear();break;}
 				//if(!strcmp(keypad.get().string,"C")){Menu='1';keypad.flush();lcd0.clear();break;}
-					lcd0.gotoxy(0,0);
-					lcd0.string_size("Not being used",19);
-					/***Play around***/
+				lcd0.gotoxy(0,0);
+				lcd0.string_size("Not being used",19);
+				/***Play around***/
 				break;
 				/********************************************************************/
 			default:
@@ -214,15 +239,16 @@ ISR(TIMER0_COMP_vect) // 20 us intervals
 ISR(TIMER1_COMPA_vect) // 1 second intervals
 {
 	
-	if(F.ll(&F) & ONE)
+	if((F.ll(&F) & 0x3F) == ONE)
 		counter_1++;
-		
+	
+	if((F.ll(&F) & 0x3F) == 3)
+		counter_2++;
+	
 	if(counter_1 > _5sec){
 		counter_1=_5sec+ONE; //lock in place
-		
 		PORTC^=(ONE<<5); // troubleshooting
-		
-		if(F.ll(&F) & 2){
+		if((F.ll(&F) & 0x3F) == 2){
 			// Delete eerpom memory ZERO
 			HX711_data.status=0;
 			eprom.update_block(HX711_ptr, (void*) ZERO, sizeblock);
@@ -230,6 +256,21 @@ ISR(TIMER1_COMPA_vect) // 1 second intervals
 			counter_1=ZERO;
 		}
 	}
+	
+	if(counter_2 > _5sec){
+		counter_2=_5sec+ONE; //lock in place
+		signal=1;
+		
+		PORTC^=(ONE<<5); // troubleshooting
+
+		if((F.ll(&F) & 0x3F) == 1){
+			signal=2;
+			PORTC^=(ONE<<5); // troubleshooting
+			counter_2=ZERO;
+		}
+	}
+	
+	
 }
 /***EOF***/
 /**** Comment:
