@@ -110,10 +110,12 @@ int main(void)
 	while(TRUE){
 		/******PREAMBLE******/
 		lcd0.reboot();
-		/*******INPUT*******/
+		/************INPUT***********/
 		F.boot(&F,PINF);
+		// tmp also entry from interrupt routine
 		
-		/*******************/
+		
+		/****************************/
 		switch(Menu){
 			/***MENU 1***/
 			case '1': // Main Program Menu
@@ -127,7 +129,7 @@ int main(void)
 				
 				value_64=hx.raw_average(&hx, 25); // 25 50, smaller means faster or more readings
 				lcd0.gotoxy(1,0);
-				lcd0.string_size(function.ftoa(value_64, result, 0), 12); lcd0.string_size("raw_av", 6);
+				lcd0.string_size(function.ftoa(value_64, result, ZERO), 12); lcd0.string_size("raw_av", 6);
 				
 				if(F.hl(&F) & ONE){ // calibrate offset by pressing button 1
 					PORTC^=(ONE<<5); // troubleshooting
@@ -247,4 +249,6 @@ Temos aparelhos de medida para não ter necessidade de recorrer a calculos comple
 
 There is a bug with this program, sometimes does not accept changed code, only by checking using print to 
 LCD makes it accept it. Stupid bugs, makes you think something is wrong when there is non, the damn compiler fails.
+
+Very hard stuff.
 ****/

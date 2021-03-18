@@ -558,7 +558,7 @@ char* FUNCftoa(float n, char* res, uint8_t afterpoint)
 	if (sign < ZERO)
 		res[k++] = '-';
 	else
-		res[k++] = '+';
+		res[k++] = ' ';
 	res[k]='\0';
 	Reverse(res);
 	if (afterpoint > ZERO) {

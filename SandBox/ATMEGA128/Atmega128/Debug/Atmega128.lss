@@ -3129,7 +3129,7 @@ char* FUNCftoa(float n, char* res, uint8_t afterpoint)
     1586:	8d e2       	ldi	r24, 0x2D	; 45
     1588:	80 83       	st	Z, r24
 	else
-		res[k++] = '+';
+		res[k++] = ' ';
 	res[k]='\0';
     158a:	6e 01       	movw	r12, r28
     158c:	cf 0c       	add	r12, r15
@@ -3208,13 +3208,13 @@ char* FUNCftoa(float n, char* res, uint8_t afterpoint)
 	if (sign < ZERO)
 		res[k++] = '-';
 	else
-		res[k++] = '+';
+		res[k++] = ' ';
     1608:	f3 94       	inc	r15
     160a:	f8 0e       	add	r15, r24
     160c:	fe 01       	movw	r30, r28
     160e:	e8 0f       	add	r30, r24
     1610:	f1 1d       	adc	r31, r1
-    1612:	8b e2       	ldi	r24, 0x2B	; 43
+    1612:	80 e2       	ldi	r24, 0x20	; 32
     1614:	80 83       	st	Z, r24
     1616:	b9 cf       	rjmp	.-142    	; 0x158a <FUNCftoa+0x74>
     1618:	ce 01       	movw	r24, r28
@@ -4915,7 +4915,7 @@ int main(void)
 	while(TRUE){
 		/******PREAMBLE******/
 		lcd0.reboot();
-		/*******INPUT*******/
+		/************INPUT***********/
 		F.boot(&F,PINF);
     214c:	0f 2e       	mov	r0, r31
     214e:	f9 ea       	ldi	r31, 0xA9	; 169
@@ -4942,7 +4942,7 @@ int main(void)
     2160:	ff ad       	ldd	r31, Y+63	; 0x3f
     2162:	a3 97       	sbiw	r28, 0x23	; 35
     2164:	09 95       	icall
-		/*******INPUT*******/
+		/************INPUT***********/
 		F.boot(&F,PINF);
     2166:	60 b1       	in	r22, 0x00	; 0
     2168:	d7 01       	movw	r26, r14
@@ -4990,7 +4990,7 @@ int main(void)
     21a6:	90 e0       	ldi	r25, 0x00	; 0
     21a8:	f5 01       	movw	r30, r10
     21aa:	09 95       	icall
-				lcd0.string_size(function.ftoa(value_64, result, 0), 12); lcd0.string_size("raw_av", 6);
+				lcd0.string_size(function.ftoa(value_64, result, ZERO), 12); lcd0.string_size("raw_av", 6);
     21ac:	20 e0       	ldi	r18, 0x00	; 0
     21ae:	42 e4       	ldi	r20, 0x42	; 66
     21b0:	53 e0       	ldi	r21, 0x03	; 3
