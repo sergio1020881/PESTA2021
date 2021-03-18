@@ -4938,7 +4938,7 @@ int main(void)
     216a:	f0 2d       	mov	r31, r0
 				//lcd0.string_size(function.i16toa(counter_2), 3); //for troubleshooting
 				
-				lcd0.gotoxy(0,4); //TITLE
+				lcd0.gotoxy(0,3); //TITLE
 				lcd0.string_size("Weight Scale", 12); //TITLE
 				
 				value_64=hx.raw_average(&hx, 25); // 25 50, smaller means faster or more readings
@@ -4982,7 +4982,7 @@ int main(void)
 		
 		/****************************/
 		switch(Menu){
-    219a:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <Menu>
+    219a:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
     219e:	82 33       	cpi	r24, 0x32	; 50
     21a0:	09 f4       	brne	.+2      	; 0x21a4 <main+0x280>
     21a2:	dc c0       	rjmp	.+440    	; 0x235c <main+0x438>
@@ -4997,13 +4997,13 @@ int main(void)
 				//lcd0.gotoxy(0,0); //for troubleshooting
 				//lcd0.string_size(function.i16toa(counter_2), 3); //for troubleshooting
 				
-				lcd0.gotoxy(0,4); //TITLE
+				lcd0.gotoxy(0,3); //TITLE
     21b0:	d8 01       	movw	r26, r16
     21b2:	52 96       	adiw	r26, 0x12	; 18
     21b4:	ed 91       	ld	r30, X+
     21b6:	fc 91       	ld	r31, X
     21b8:	53 97       	sbiw	r26, 0x13	; 19
-    21ba:	64 e0       	ldi	r22, 0x04	; 4
+    21ba:	63 e0       	ldi	r22, 0x03	; 3
     21bc:	70 e0       	ldi	r23, 0x00	; 0
     21be:	80 e0       	ldi	r24, 0x00	; 0
     21c0:	90 e0       	ldi	r25, 0x00	; 0
@@ -5226,7 +5226,7 @@ int main(void)
     2346:	1b cf       	rjmp	.-458    	; 0x217e <main+0x25a>
 					Menu='2';
     2348:	b2 e3       	ldi	r27, 0x32	; 50
-    234a:	b0 93 00 01 	sts	0x0100, r27	; 0x800100 <Menu>
+    234a:	b0 93 00 01 	sts	0x0100, r27	; 0x800100 <__DATA_REGION_ORIGIN__>
 					lcd0.clear();
     234e:	d8 01       	movw	r26, r16
     2350:	50 96       	adiw	r26, 0x10	; 16
@@ -5269,7 +5269,7 @@ int main(void)
     2388:	09 f0       	breq	.+2      	; 0x238c <main+0x468>
     238a:	f9 ce       	rjmp	.-526    	; 0x217e <main+0x25a>
 					Menu='1';
-    238c:	90 92 00 01 	sts	0x0100, r9	; 0x800100 <Menu>
+    238c:	90 92 00 01 	sts	0x0100, r9	; 0x800100 <__DATA_REGION_ORIGIN__>
 					lcd0.clear();
     2390:	d8 01       	movw	r26, r16
     2392:	50 96       	adiw	r26, 0x10	; 16
@@ -5309,7 +5309,7 @@ int main(void)
 				/********************************************************************/
 			default:
 				Menu='1';
-    23c6:	90 92 00 01 	sts	0x0100, r9	; 0x800100 <Menu>
+    23c6:	90 92 00 01 	sts	0x0100, r9	; 0x800100 <__DATA_REGION_ORIGIN__>
 				break;
     23ca:	d9 ce       	rjmp	.-590    	; 0x217e <main+0x25a>
 

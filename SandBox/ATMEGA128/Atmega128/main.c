@@ -1,5 +1,5 @@
 /************************************************************************
-Title: HX711_TEST.c
+Title: BALANÇA COMERCIAL
 Author: Sergio Manuel Santos
 	<sergio.salazar.santos@gmail.com>
 File: $Id: MAIN,v 1.8.2.1 21/02/2021 Exp $
@@ -9,7 +9,7 @@ Hardware: Atmega128 by ETT ET-BASE
 	-PORTF pin 6,7 HX711, pin 0 to 5 Buttons.
 License: GNU General Public License
 Comment:
-
+	Excellent
 ************************************************************************/
 #define F_CPU 16000000UL
 /*
@@ -125,7 +125,7 @@ int main(void)
 				//lcd0.gotoxy(0,0); //for troubleshooting
 				//lcd0.string_size(function.i16toa(counter_2), 3); //for troubleshooting
 				
-				lcd0.gotoxy(0,4); //TITLE
+				lcd0.gotoxy(0,3); //TITLE
 				lcd0.string_size("Weight Scale", 12); //TITLE
 				
 				value_64=hx.raw_average(&hx, 25); // 25 50, smaller means faster or more readings
