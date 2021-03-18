@@ -121,54 +121,41 @@ int main(void)
 		/****************************/
 		switch(Menu){
 			/***MENU 1***/
-			case '1': // Main Program Menu
-				//if(!strcmp(keypad.get().string,"A")){Menu='2';keypad.flush();lcd0.clear();break;}
-				//if(!strcmp(keypad.get().string,"B")){Menu='3';keypad.flush();lcd0.clear();break;}
+			case '1': // Main Program Menu			
+				//lcd0.gotoxy(0,0); //for troubleshooting
+				//lcd0.string_size(function.i16toa(counter_2), 3); //for troubleshooting
 				
-				
-				
-				
-								
-				lcd0.gotoxy(0,0); //for troubleshooting
-				lcd0.string_size(function.i16toa(counter_2), 3); //for troubleshooting
-				
-				//Just to keep track
-				lcd0.gotoxy(0,4); //for troubleshooting
-				lcd0.string_size("Weight Scale", 12); //for troubleshooting
-				//lcd0.string_size(function.i32toa(tmp), 8); lcd0.string_size("raw", 3); // RAW_READING //for troubleshooting
+				lcd0.gotoxy(0,4); //TITLE
+				lcd0.string_size("Weight Scale", 12); //TITLE
 				
 				value_64=hx.raw_average(&hx, 25); // 25 50, smaller means faster or more readings
-				lcd0.gotoxy(1,0);
-				lcd0.string_size(function.ftoa(value_64, result, ZERO), 12); lcd0.string_size("raw_av", 6);
+				//lcd0.gotoxy(1,0);
+				//lcd0.string_size(function.ftoa(value_64, result, ZERO), 13); lcd0.string_size("raw_av", 6);
 				
 				if(F.hl(&F) & ONE){ // calibrate offset by pressing button 1
 					PORTC^=(ONE<<5); // troubleshooting
 					HX711_data.offset_64=value_64;
-					//HX711_data.divfactor_64=46; //for troubleshooting
 					HX711_data.status=1;
 					eprom.update_block(HX711_ptr, (void*) ZERO, sizeblock);
-					//lcd0.gotoxy(2,0); //for troubleshooting
-					//lcd0.string_size(function.i32toa(hx.get_offset_64(&hx)), 8); //for troubleshooting
-					//lcd0.string_size(function.i16toa(hx.get_divfactor_64(&hx)), 8); //for troubleshooting
 					memcpy ( hx.ptrcal(&hx), HX711_ptr, sizeblock ); // Update new values
 				}
 				
-				//value_128=(value_64-hx.cal.offset_128)/hx.cal.divfactor_128;
+				//value_128=(value_64-hx.cal.offset_128)/hx.cal.divfactor_128; //value to be published to LCD
 				value_64=(value_64-hx.cal.offset_64)/hx.cal.divfactor_64; //value to be published to LCD
 				
 				//Display
 				if (value_64 > 1000 || value_64 < -1000){
 					value_64 = value_64/1000;
 					value_128 = value_128/1000;
-					lcd0.gotoxy(3,0);
-					lcd0.string_size(function.ftoa(value_64,result,3), 12); lcd0.string_size("Kg", 4);
+					lcd0.gotoxy(2,0);
+					lcd0.string_size(function.ftoa(value_64,result,3), 13); lcd0.string_size("Kg", 2);
 					//lcd0.gotoxy(3,0);
-					//lcd0.string_size(function.ftoa(value_128,result,3), 12); lcd0.string_size("Kg", 4);	
+					//lcd0.string_size(function.ftoa(value_128,result,3), 13); lcd0.string_size("Kg", 2);	
 				}else{
-					lcd0.gotoxy(3,0);
-					lcd0.string_size(function.ftoa(value_64,result,0), 12); lcd0.string_size("gram", 4);
+					lcd0.gotoxy(2,0);
+					lcd0.string_size(function.ftoa(value_64,result,ZERO), 13); lcd0.string_size("gram", 4);
 					//lcd0.gotoxy(3,0);
-					//lcd0.string_size(function.ftoa(value_128,result,0), 12); lcd0.string_size("gram", 4);
+					//lcd0.string_size(function.ftoa(value_128,result,0), 13); lcd0.string_size("gram", 4);
 				}
 				
 				
@@ -180,12 +167,7 @@ int main(void)
 					
 				break;
 			/***MENU 2***/
-			case '2': //  
-				//if(!strcmp(keypad.get().string,"A")){Menu='3';keypad.flush();lcd0.clear();break;}
-				//if(!strcmp(keypad.get().string,"B")){Menu='1';keypad.flush();lcd0.clear();break;}
-				//if(!strcmp(keypad.get().string,"C")){Menu='1';keypad.flush();lcd0.clear();break;}
-				
-				
+			case '2': //
 				lcd0.gotoxy(0,3);
 				lcd0.string_size("SETUP DIVFACTOR",15);
 				
@@ -196,10 +178,7 @@ int main(void)
 				}
 				break;
 			/***MENU 3***/
-			case '3': //Set Time and Date
-				//if(!strcmp(keypad.get().string,"A")){Menu='1';keypad.flush();lcd0.clear();break;}
-				//if(!strcmp(keypad.get().string,"B")){Menu='2';keypad.flush();lcd0.clear();break;}
-				//if(!strcmp(keypad.get().string,"C")){Menu='1';keypad.flush();lcd0.clear();break;}
+			case '3': //
 				lcd0.gotoxy(0,0);
 				lcd0.string_size("Not being used",19);
 				/***Play around***/
