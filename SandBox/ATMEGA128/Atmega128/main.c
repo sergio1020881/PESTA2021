@@ -151,12 +151,12 @@ int main(void)
 					value_64 = value_64/1000;
 					value_128 = value_128/1000;
 					lcd0.gotoxy(3,0);
-					lcd0.string_size(function.ftoa(value_64,result,3), 12); //lcd0.string_size("Kg", 4);
+					lcd0.string_size(function.ftoa(value_64,result,3), 12); lcd0.string_size("Kg", 4);
 					//lcd0.gotoxy(3,0);
 					//lcd0.string_size(function.ftoa(value_128,result,3), 12); lcd0.string_size("Kg", 4);	
 				}else{
 					lcd0.gotoxy(3,0);
-					lcd0.string_size(function.ftoa(value_64,result,0), 12); //lcd0.string_size("gram", 4);
+					lcd0.string_size(function.ftoa(value_64,result,0), 12); lcd0.string_size("gram", 4);
 					//lcd0.gotoxy(3,0);
 					//lcd0.string_size(function.ftoa(value_128,result,0), 12); lcd0.string_size("gram", 4);
 				}		
