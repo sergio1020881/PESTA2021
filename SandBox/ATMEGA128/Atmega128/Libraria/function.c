@@ -28,7 +28,7 @@ Comment:
 #endif
 #define ZERO 0
 #define ONE 1
-#define FUNCSTRSIZE 20
+#define FUNCSTRSIZE 32
 /***Global File Variable***/
 char FUNCstr[FUNCSTRSIZE+1];
 /***Header***/
@@ -72,7 +72,7 @@ long FUNCgcd1(long a, long b);
 uint8_t FUNCpincheck(uint8_t port, uint8_t pin);
 char* FUNCprint_binary(uint8_t number);
 void FUNCreverse(char* str, int len);
-int FUNCintToStr(float x, char str[], uint8_t n_digit);
+uint8_t FUNCintinvstr(int32_t n, char* res, uint8_t n_digit);
 char* FUNCftoa(float n, char* res, uint8_t afterpoint);
 /***pc use***
 char* FUNCfltos(FILE* stream);
@@ -531,61 +531,41 @@ uint8_t  bintobcd(uint8_t bin)
 {
 	return (((bin) / 10) << 4) + ((bin) % 10);
 }
-/************/
-void FUNCreverse(char* str, int len)
+/***intinvstr***/
+uint8_t FUNCintinvstr(int32_t n, char* res, uint8_t n_digit)
 {
-	int i = 0, j = len - 1, temp;
-	while (i < j) {
-		temp = str[i];
-		str[i] = str[j];
-		str[j] = temp;
-		i++;
-		j--;
-	}
+	uint8_t k=0;
+	for(res[k++] = (n % 10) + '0' ; (n/=10) > ZERO ; res[k++] = (n % 10) + '0');
+	for( ; k < n_digit ; res[k++] = '0');
+	res[k]='\0';
+	return k;
 }
-int FUNCintToStr(float m, char str[], uint8_t n_digit)
-{
-	int k = 0;
-	int32_t n;
-	int8_t sign=0;
-	if (m < 0){
-		m = -m;
-		sign=-ONE;
-	}
-	n = (int32_t) m;
-    do{ 
-        str[k++] = (n % 10) + '0'; 
-    }while((n/=10)>0 || k < n_digit);
-		
-	if (sign < 0)
-		str[k++] = '-';
-	else
-		str[k++] = ' ';
-    FUNCreverse(str, k); 
-    str[k] = '\0';
-    return k;
-}
+/***ftoa***/
 char* FUNCftoa(float n, char* res, uint8_t afterpoint)
 {
-	int l;
-	int32_t ipart = (int32_t)n;
+	uint8_t k=ZERO;
+	int32_t ipart;
 	float fpart;
-	
+	int8_t sign;
+	if (n < ZERO){
+		n = -n;
+		sign=-ONE;
+	}else
+		sign=ONE;
+	ipart = (int32_t) n;
 	fpart = n - (float)ipart;
-	
-	// string part decimal
-	l =	FUNCintToStr(n, res, 0);
-	
-	// part fraccional
-	if (afterpoint != 0) {
-		res[l] = '.';
-		
-		ipart = fpart * pow(10, afterpoint);
-		if(ipart < 0)
-			ipart = -ipart;
-		
-		FUNCintToStr(ipart, res + l + 1, afterpoint);
-	}
+	k=FUNCintinvstr( ipart, res, ONE );
+	if (sign < ZERO)
+		res[k++] = '-';
+	else
+		res[k++] = '+';
+	res[k]='\0';
+	Reverse(res);
+	if (afterpoint > ZERO) {
+		res[k++] = '.';
+		FUNCintinvstr( fpart * pow(10, afterpoint), res+k, afterpoint );
+		Reverse(res+k);
+	}	
 	return res;
 }
 /******
@@ -757,4 +737,9 @@ int FUNCreadint(int nmin, int nmax)
 }
 ***/
 /***Interrupt***/
+/***Comment
+Compiler is starting to fail, whenever passing var from function it does 
+not allow to change during execution inside function.
+
+***/
 /***EOF***/

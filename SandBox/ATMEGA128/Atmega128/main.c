@@ -49,7 +49,7 @@ HX711 hx;
 int32_t tmp;
 EEPROM eprom;
 
-char result[20];
+char result[32];
 uint8_t counter_1=0;
 /*
 ** Header
@@ -149,12 +149,12 @@ int main(void)
 					value_64 = value_64/1000;
 					value_128 = value_128/1000;
 					lcd0.gotoxy(3,0);
-					lcd0.string_size(function.ftoa(value_64,result,3), 10); lcd0.string_size("Kg", 4);
+					lcd0.string_size(function.ftoa(value_64,result,3), 12); //lcd0.string_size("Kg", 4);
 					//lcd0.gotoxy(3,0);
 					//lcd0.string_size(function.ftoa(value_128,result,3), 12); lcd0.string_size("Kg", 4);	
 				}else{
 					lcd0.gotoxy(3,0);
-					lcd0.string_size(function.ftoa(value_64,result,0), 10); lcd0.string_size("gram", 4);
+					lcd0.string_size(function.ftoa(value_64,result,0), 12); //lcd0.string_size("gram", 4);
 					//lcd0.gotoxy(3,0);
 					//lcd0.string_size(function.ftoa(value_128,result,0), 12); lcd0.string_size("gram", 4);
 				}		

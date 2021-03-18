@@ -1,23 +1,16 @@
-﻿------ Build started: Project: Atmega128, Configuration: Debug AVR ------
+﻿------ Clean started: Project: Atmega128, Configuration: Debug AVR ------
 Build started.
-Project "Atmega128.cproj" (default targets):
-Target "PreBuildEvent" skipped, due to false condition; ('$(PreBuildEvent)'!='') was evaluated as (''!='').
-Target "CoreBuild" in file "C:\Program Files (x86)\Atmel\Studio\7.0\Vs\Compiler.targets" from project "C:\Users\sergi\Documents\GITHUB\PESTA2021\SandBox\ATMEGA128\Atmega128\Atmega128.cproj" (target "Build" depends on it):
+Project "Atmega128.cproj" (Clean target(s)):
+Target "Clean" in file "C:\Program Files (x86)\Atmel\Studio\7.0\Vs\Compiler.targets" from project "C:\Users\sergi\Documents\GITHUB\PESTA2021\SandBox\ATMEGA128\Atmega128\Atmega128.cproj" (entry point):
 	Task "RunCompilerTask"
 		Shell Utils Path C:\Program Files (x86)\Atmel\Studio\7.0\shellUtils
-		C:\Program Files (x86)\Atmel\Studio\7.0\shellUtils\make.exe all --jobs 4 --output-sync 
-		make: Nothing to be done for 'all'.
+		C:\Program Files (x86)\Atmel\Studio\7.0\shellUtils\make.exe clean 
+		rm -rf  Libraria/74hc595.o Libraria/atmega128analog.o Libraria/atmega128i2c.o Libraria/atmega128timer.o Libraria/atmega128uart.o Libraria/clock.o Libraria/eeprom.o Libraria/explode.o Libraria/function.o Libraria/keypad.o Libraria/lcd.o Libraria/lfsm.o Libraria/mm74c923.o Libraria/pcf8563rtc.o Libraria/rotenc.o Libraria/hx711.o Libraria/znpid.o main.o   
+		rm -rf  Libraria/74hc595.d Libraria/atmega128analog.d Libraria/atmega128i2c.d Libraria/atmega128timer.d Libraria/atmega128uart.d Libraria/clock.d Libraria/eeprom.d Libraria/explode.d Libraria/function.d Libraria/keypad.d Libraria/lcd.d Libraria/lfsm.d Libraria/mm74c923.d Libraria/pcf8563rtc.d Libraria/rotenc.d Libraria/hx711.d Libraria/znpid.d main.d   
+		rm -rf "Atmega128.elf" "Atmega128.a" "Atmega128.hex" "Atmega128.lss" "Atmega128.eep" "Atmega128.map" "Atmega128.srec" "Atmega128.usersignatures"
 	Done executing task "RunCompilerTask".
-	Task "RunOutputFileVerifyTask"
-				Program Memory Usage 	:	11572 bytes   8.8 % Full
-				Data Memory Usage 		:	685 bytes   16.7 % Full
-				Warning: Memory Usage estimation may not be accurate if there are sections other than .text sections in ELF file
-	Done executing task "RunOutputFileVerifyTask".
-Done building target "CoreBuild" in project "Atmega128.cproj".
-Target "PostBuildEvent" skipped, due to false condition; ('$(PostBuildEvent)' != '') was evaluated as ('' != '').
-Target "Build" in file "C:\Program Files (x86)\Atmel\Studio\7.0\Vs\Avr.common.targets" from project "C:\Users\sergi\Documents\GITHUB\PESTA2021\SandBox\ATMEGA128\Atmega128\Atmega128.cproj" (entry point):
-Done building target "Build" in project "Atmega128.cproj".
+Done building target "Clean" in project "Atmega128.cproj".
 Done building project "Atmega128.cproj".
 
 Build succeeded.
-========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========
+========== Clean: 1 succeeded, 0 failed, 0 skipped ==========
