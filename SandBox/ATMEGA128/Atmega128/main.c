@@ -35,7 +35,7 @@ Comment:
 #define TRUE 1
 #define ZERO 0
 #define ONE 1
-#define average_n 3
+#define average_n 30
 #define _5sec 5
 #define _10sec 10
 /*
@@ -128,7 +128,7 @@ int main(void)
 				lcd0.gotoxy(0,3); //TITLE
 				lcd0.string_size("Weight Scale", 12); //TITLE
 				
-				value_64=hx.raw_average(&hx, 25); // 25 50, smaller means faster or more readings
+				value_64=hx.raw_average(&hx, average_n); // 25 50, smaller means faster or more readings
 				//lcd0.gotoxy(1,0);
 				//lcd0.string_size(function.ftoa(value_64, result, ZERO), 13); lcd0.string_size("raw_av", 6);
 				

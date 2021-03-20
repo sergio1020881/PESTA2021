@@ -210,7 +210,7 @@ Discarded input sections
                 0x00000000       0x38 Libraria/74hc595.o
  .debug_ranges  0x00000000       0x28 Libraria/74hc595.o
  .debug_line    0x00000000      0x184 Libraria/74hc595.o
- .debug_str     0x00000000      0x236 Libraria/74hc595.o
+ .debug_str     0x00000000      0x237 Libraria/74hc595.o
  .comment       0x00000000       0x31 Libraria/74hc595.o
  .debug_frame   0x00000000       0x88 Libraria/74hc595.o
  COMMON         0x00000000        0x7 Libraria/74hc595.o

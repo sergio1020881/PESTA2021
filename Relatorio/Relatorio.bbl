@@ -30,6 +30,11 @@
   Edition}.
 \newblock \btxpublisherfont {Pearson Education, Inc}, 2017.
 
+\bibitem {book_7}
+\btxnamefont {\btxlastnamefont {Hawking}, Stephen}\btxauthorcolon\
+  \btxtitlefont {AOS OMBROS de GIGANTES}.
+\newblock \btxpublisherfont {Texto Editores, Lda}, 2017.
+
 \bibitem {book_6}
 \btxnamefont {\btxlastnamefont {James}, Glyn}\btxauthorcolon\ \btxtitlefont
   {MODERN ENGINEERING MATHEMATICS, Fifth Edition}.

@@ -28,7 +28,7 @@ uint8_t HC595_datapin;
 uint8_t HC595_clkpin; 
 uint8_t HC595_outpin;
 /***Header***/
-void HC595_shift_bit(uint8_t bool);
+void HC595_shift_bit(uint8_t _bool);
 void HC595_shift_byte(uint8_t byte);
 void HC595_shift_out(void);
 /***Procedure & Function***/
@@ -57,9 +57,9 @@ HC595 HC595enable(volatile uint8_t *ddr, volatile uint8_t *port, uint8_t datapin
 	//
 	return hc595;
 }
-void HC595_shift_bit(uint8_t bool)
+void HC595_shift_bit(uint8_t _bool)
 {
-	if (bool)
+	if (_bool)
 		*hc595_PORT |= (1<<HC595_datapin); //Data bit HIGH
 	else
 		*hc595_PORT &= ~(1<<HC595_datapin); //Data bit LOW

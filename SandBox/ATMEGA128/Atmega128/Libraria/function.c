@@ -30,7 +30,7 @@ Comment:
 #define ONE 1
 #define FUNCSTRSIZE 32
 /***Global File Variable***/
-char FUNCstr[FUNCSTRSIZE+1];
+char FUNCstr[FUNCSTRSIZE+ONE];
 /***Header***/
 unsigned int Pwr(uint8_t bs, uint8_t n);
 int StringLength (const char string[]);
@@ -738,8 +738,5 @@ int FUNCreadint(int nmin, int nmax)
 ***/
 /***Interrupt***/
 /***Comment
-Compiler is starting to fail, whenever passing var from function it does 
-not allow to change during execution inside function.
-
 ***/
 /***EOF***/

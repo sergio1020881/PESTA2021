@@ -4941,7 +4941,7 @@ int main(void)
 				lcd0.gotoxy(0,3); //TITLE
 				lcd0.string_size("Weight Scale", 12); //TITLE
 				
-				value_64=hx.raw_average(&hx, 25); // 25 50, smaller means faster or more readings
+				value_64=hx.raw_average(&hx, average_n); // 25 50, smaller means faster or more readings
     216c:	0f 2e       	mov	r0, r31
     216e:	fc e9       	ldi	r31, 0x9C	; 156
     2170:	cf 2e       	mov	r12, r31
@@ -5019,13 +5019,13 @@ int main(void)
     21d2:	91 e0       	ldi	r25, 0x01	; 1
     21d4:	09 95       	icall
 				
-				value_64=hx.raw_average(&hx, 25); // 25 50, smaller means faster or more readings
+				value_64=hx.raw_average(&hx, average_n); // 25 50, smaller means faster or more readings
     21d6:	d6 01       	movw	r26, r12
     21d8:	d7 96       	adiw	r26, 0x37	; 55
     21da:	ed 91       	ld	r30, X+
     21dc:	fc 91       	ld	r31, X
     21de:	d8 97       	sbiw	r26, 0x38	; 56
-    21e0:	69 e1       	ldi	r22, 0x19	; 25
+    21e0:	6e e1       	ldi	r22, 0x1E	; 30
     21e2:	c6 01       	movw	r24, r12
     21e4:	09 95       	icall
     21e6:	2b 01       	movw	r4, r22
