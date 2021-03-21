@@ -1451,15 +1451,15 @@ void EXPLODEboot(EXPLODE* self, uint8_t x)
      a10:	08 95       	ret
 
 00000a12 <EXPLODEhh>:
-	trans=diff&self->XF;
-	return (trans<<nbits)|diff;
+	trans = diff & self->XF;
+	return (trans << nbits) | diff;
 }
 // hh
 uint8_t EXPLODEhh(EXPLODE* self)
 {
      a12:	fc 01       	movw	r30, r24
 	uint8_t i;
-	i=self->XI&self->XF;
+	i = self->XI & self->XF;
 	return i;
      a14:	90 81       	ld	r25, Z
      a16:	82 81       	ldd	r24, Z+2	; 0x02
@@ -1473,7 +1473,7 @@ uint8_t EXPLODEll(EXPLODE* self)
 {
      a1c:	fc 01       	movw	r30, r24
 	uint8_t i;
-	i=self->XI|self->XF;
+	i = self->XI | self->XF;
 	return ~i;
      a1e:	90 81       	ld	r25, Z
      a20:	82 81       	ldd	r24, Z+2	; 0x02
@@ -1488,11 +1488,11 @@ uint8_t EXPLODElh(EXPLODE* self)
 {
      a28:	fc 01       	movw	r30, r24
 	uint8_t i;
-	i=self->XI^self->XF;
+	i = self->XI ^ self->XF;
      a2a:	92 81       	ldd	r25, Z+2	; 0x02
      a2c:	80 81       	ld	r24, Z
      a2e:	89 27       	eor	r24, r25
-	i&=self->XF;
+	i &= self->XF;
 	return i;
 }
      a30:	89 23       	and	r24, r25
@@ -1504,11 +1504,11 @@ uint8_t EXPLODEhl(EXPLODE* self)
 {
      a34:	fc 01       	movw	r30, r24
 	uint8_t i;
-	i=self->XF^self->XI;
+	i = self->XF ^ self->XI;
      a36:	90 81       	ld	r25, Z
      a38:	82 81       	ldd	r24, Z+2	; 0x02
      a3a:	89 27       	eor	r24, r25
-	i&=self->XI;
+	i &= self->XI;
 	return i;
 }
      a3c:	89 23       	and	r24, r25
@@ -1519,7 +1519,7 @@ uint8_t EXPLODEhl(EXPLODE* self)
 uint8_t EXPLODEdiff(EXPLODE* self)
 {
      a40:	fc 01       	movw	r30, r24
-	return self->XF^self->XI;
+	return self->XF ^ self->XI;
      a42:	92 81       	ldd	r25, Z+2	; 0x02
      a44:	80 81       	ld	r24, Z
 }
@@ -1547,8 +1547,8 @@ uint8_t EXPLODEmayia(EXPLODE* self, uint8_t nbits)
 uint8_t EXPLODEPwr(uint8_t bs, uint8_t n)
 {
 	uint8_t i, p;
-	p = 1;
-	for (i = 1; i <= n; ++i)
+	p = ONE;
+	for (i = ONE; i <= n; ++i)
      a52:	66 23       	and	r22, r22
      a54:	39 f0       	breq	.+14     	; 0xa64 <EXPLODEmayia+0x14>
      a56:	91 e0       	ldi	r25, 0x01	; 1
@@ -1559,8 +1559,8 @@ uint8_t EXPLODEPwr(uint8_t bs, uint8_t n)
 uint8_t EXPLODEPwr(uint8_t bs, uint8_t n)
 {
 	uint8_t i, p;
-	p = 1;
-	for (i = 1; i <= n; ++i)
+	p = ONE;
+	for (i = ONE; i <= n; ++i)
      a5c:	9f 5f       	subi	r25, 0xFF	; 255
      a5e:	69 17       	cp	r22, r25
      a60:	e0 f7       	brcc	.-8      	; 0xa5a <EXPLODEmayia+0xa>
@@ -1570,18 +1570,18 @@ uint8_t EXPLODEPwr(uint8_t bs, uint8_t n)
 uint8_t EXPLODEPwr(uint8_t bs, uint8_t n)
 {
 	uint8_t i, p;
-	p = 1;
+	p = ONE;
      a64:	21 e0       	ldi	r18, 0x01	; 1
 uint8_t EXPLODEmayia(EXPLODE* self, uint8_t nbits)
 {//magic formula
 	unsigned int mask;
 	unsigned int diff;
 	unsigned int trans;
-	mask=EXPLODEPwr(2,nbits)-1;
+	mask = EXPLODEPwr(2,nbits)-ONE;
      a66:	30 e0       	ldi	r19, 0x00	; 0
      a68:	21 50       	subi	r18, 0x01	; 1
      a6a:	31 09       	sbc	r19, r1
-	self->XI&=mask;
+	self->XI &= mask;
      a6c:	ed 91       	ld	r30, X+
      a6e:	fc 91       	ld	r31, X
      a70:	11 97       	sbiw	r26, 0x01	; 1
@@ -1590,7 +1590,7 @@ uint8_t EXPLODEmayia(EXPLODE* self, uint8_t nbits)
      a76:	11 96       	adiw	r26, 0x01	; 1
      a78:	fc 93       	st	X, r31
      a7a:	ee 93       	st	-X, r30
-	self->XF&=mask;
+	self->XF &= mask;
      a7c:	12 96       	adiw	r26, 0x02	; 2
      a7e:	4d 91       	ld	r20, X+
      a80:	5c 91       	ld	r21, X
@@ -1601,12 +1601,12 @@ uint8_t EXPLODEmayia(EXPLODE* self, uint8_t nbits)
      a8a:	3c 93       	st	X, r19
      a8c:	2e 93       	st	-X, r18
      a8e:	12 97       	sbiw	r26, 0x02	; 2
-	diff=self->XF^self->XI;
+	diff = self->XF ^ self->XI;
      a90:	cf 01       	movw	r24, r30
      a92:	82 27       	eor	r24, r18
      a94:	93 27       	eor	r25, r19
-	trans=diff&self->XF;
-	return (trans<<nbits)|diff;
+	trans = diff & self->XF;
+	return (trans << nbits) | diff;
      a96:	28 23       	and	r18, r24
      a98:	39 23       	and	r19, r25
      a9a:	02 c0       	rjmp	.+4      	; 0xaa0 <EXPLODEmayia+0x50>
@@ -1627,18 +1627,18 @@ EXPLODE EXPLODEenable( void )
 {
      aa8:	fc 01       	movw	r30, r24
 	uint8_t tSREG;
-	tSREG=STATUS_REGISTER;
+	tSREG = STATUS_REGISTER;
      aaa:	9f b7       	in	r25, 0x3f	; 63
-	STATUS_REGISTER&=~(1<<GLOBAL_INTERRUPT_ENABLE);
+	STATUS_REGISTER &= ~(1<<GLOBAL_INTERRUPT_ENABLE);
      aac:	8f b7       	in	r24, 0x3f	; 63
      aae:	8f 77       	andi	r24, 0x7F	; 127
      ab0:	8f bf       	out	0x3f, r24	; 63
-	explode.ll=EXPLODEll;
-	explode.lh=EXPLODElh;
-	explode.hl=EXPLODEhl;
-	explode.diff=EXPLODEdiff;
-	explode.data=EXPLODEdata;
-	STATUS_REGISTER=tSREG;
+	explode.ll = EXPLODEll;
+	explode.lh = EXPLODElh;
+	explode.hl = EXPLODEhl;
+	explode.diff = EXPLODEdiff;
+	explode.data = EXPLODEdata;
+	STATUS_REGISTER = tSREG;
      ab2:	9f bf       	out	0x3f, r25	; 63
 	/******/
 	return explode;
@@ -4590,17 +4590,17 @@ HX711 HX711enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t
 void PORTINIT(void)
 {
 	//Control buttons
-	PORTF|=0x3F;
+	PORTF |= 0x3F;
     1f12:	e2 e6       	ldi	r30, 0x62	; 98
     1f14:	f0 e0       	ldi	r31, 0x00	; 0
     1f16:	80 81       	ld	r24, Z
     1f18:	8f 63       	ori	r24, 0x3F	; 63
     1f1a:	80 83       	st	Z, r24
 	//troubleshooting output
-	DDRC=0xFF;
+	DDRC = 0xFF;
     1f1c:	8f ef       	ldi	r24, 0xFF	; 255
     1f1e:	84 bb       	out	0x14, r24	; 20
-	PORTC=0xFF;
+	PORTC = 0xFF;
     1f20:	85 bb       	out	0x15, r24	; 21
     1f22:	08 95       	ret
 
@@ -5342,14 +5342,14 @@ ISR(TIMER0_COMP_vect) // 20 us intervals
     23f2:	ff 93       	push	r31
 	/***Block other interrupts during this procedure***/
 	uint8_t Sreg;
-	Sreg=SREG;
+	Sreg = SREG;
     23f4:	cf b7       	in	r28, 0x3f	; 63
-	SREG&=~(ONE<<7);
+	SREG &= ~(ONE<<7);
     23f6:	8f b7       	in	r24, 0x3f	; 63
     23f8:	8f 77       	andi	r24, 0x7F	; 127
     23fa:	8f bf       	out	0x3f, r24	; 63
 	/***Block other interrupts during this procedure***/	
-	tmp=hx.read_raw(&hx);
+	tmp = hx.read_raw(&hx);
     23fc:	e0 91 d1 03 	lds	r30, 0x03D1	; 0x8003d1 <hx+0x35>
     2400:	f0 91 d2 03 	lds	r31, 0x03D2	; 0x8003d2 <hx+0x36>
     2404:	8c e9       	ldi	r24, 0x9C	; 156
@@ -5360,7 +5360,7 @@ ISR(TIMER0_COMP_vect) // 20 us intervals
     2412:	80 93 2e 03 	sts	0x032E, r24	; 0x80032e <tmp+0x2>
     2416:	90 93 2f 03 	sts	0x032F, r25	; 0x80032f <tmp+0x3>
 	/***enable interrupts again***/
-	SREG=Sreg;
+	SREG = Sreg;
     241a:	cf bf       	out	0x3f, r28	; 63
 }
     241c:	ff 91       	pop	r31
@@ -5439,10 +5439,10 @@ ISR(TIMER1_COMPA_vect) // 1 second intervals
     24a6:	80 91 61 01 	lds	r24, 0x0161	; 0x800161 <counter_1>
     24aa:	86 30       	cpi	r24, 0x06	; 6
     24ac:	30 f1       	brcs	.+76     	; 0x24fa <__vector_12+0xb6>
-		counter_1=_5sec+ONE; //lock in place
+		counter_1 = _5sec+ONE; //lock in place
     24ae:	86 e0       	ldi	r24, 0x06	; 6
     24b0:	80 93 61 01 	sts	0x0161, r24	; 0x800161 <counter_1>
-		PORTC^=(ONE<<5); // troubleshooting
+		PORTC ^= (ONE << 5); // troubleshooting
     24b4:	95 b3       	in	r25, 0x15	; 21
     24b6:	80 e2       	ldi	r24, 0x20	; 32
     24b8:	89 27       	eor	r24, r25
@@ -5457,7 +5457,7 @@ ISR(TIMER1_COMPA_vect) // 1 second intervals
     24cc:	82 30       	cpi	r24, 0x02	; 2
     24ce:	a9 f4       	brne	.+42     	; 0x24fa <__vector_12+0xb6>
 			// Delete eerpom memory ZERO
-			HX711_data.status=0;
+			HX711_data.status = ZERO;
     24d0:	10 92 63 03 	sts	0x0363, r1	; 0x800363 <HX711_data+0x15>
 			eprom.update_block(HX711_ptr, (void*) ZERO, sizeblock);
     24d4:	e0 91 4c 03 	lds	r30, 0x034C	; 0x80034c <eprom+0x1c>
@@ -5469,12 +5469,12 @@ ISR(TIMER1_COMPA_vect) // 1 second intervals
     24e4:	80 91 64 03 	lds	r24, 0x0364	; 0x800364 <HX711_ptr>
     24e8:	90 91 65 03 	lds	r25, 0x0365	; 0x800365 <HX711_ptr+0x1>
     24ec:	09 95       	icall
-			PORTC^=(ONE<<5); // troubleshooting
+			PORTC ^= (ONE << 5); // troubleshooting
     24ee:	95 b3       	in	r25, 0x15	; 21
     24f0:	80 e2       	ldi	r24, 0x20	; 32
     24f2:	89 27       	eor	r24, r25
     24f4:	85 bb       	out	0x15, r24	; 21
-			counter_1=ZERO;
+			counter_1 = ZERO;
     24f6:	10 92 61 01 	sts	0x0161, r1	; 0x800161 <counter_1>
 		}
 	}
@@ -5483,14 +5483,14 @@ ISR(TIMER1_COMPA_vect) // 1 second intervals
     24fa:	80 91 60 01 	lds	r24, 0x0160	; 0x800160 <counter_2>
     24fe:	86 30       	cpi	r24, 0x06	; 6
     2500:	e8 f0       	brcs	.+58     	; 0x253c <__vector_12+0xf8>
-		counter_2=_5sec+ONE; //lock in place
+		counter_2 = _5sec+ONE; //lock in place
     2502:	86 e0       	ldi	r24, 0x06	; 6
     2504:	80 93 60 01 	sts	0x0160, r24	; 0x800160 <counter_2>
-		signal=1;
+		signal = ONE;
     2508:	81 e0       	ldi	r24, 0x01	; 1
     250a:	80 93 5f 01 	sts	0x015F, r24	; 0x80015f <signal>
 		
-		PORTC^=(ONE<<5); // troubleshooting
+		PORTC ^= (ONE << 5); // troubleshooting
     250e:	95 b3       	in	r25, 0x15	; 21
     2510:	80 e2       	ldi	r24, 0x20	; 32
     2512:	89 27       	eor	r24, r25
@@ -5505,15 +5505,15 @@ ISR(TIMER1_COMPA_vect) // 1 second intervals
     2524:	8f 73       	andi	r24, 0x3F	; 63
     2526:	81 30       	cpi	r24, 0x01	; 1
     2528:	49 f4       	brne	.+18     	; 0x253c <__vector_12+0xf8>
-			signal=2;
+			signal = 2;
     252a:	82 e0       	ldi	r24, 0x02	; 2
     252c:	80 93 5f 01 	sts	0x015F, r24	; 0x80015f <signal>
-			PORTC^=(ONE<<5); // troubleshooting
+			PORTC ^= (ONE << 5); // troubleshooting
     2530:	95 b3       	in	r25, 0x15	; 21
     2532:	80 e2       	ldi	r24, 0x20	; 32
     2534:	89 27       	eor	r24, r25
     2536:	85 bb       	out	0x15, r24	; 21
-			counter_2=ZERO;
+			counter_2 = ZERO;
     2538:	10 92 60 01 	sts	0x0160, r1	; 0x800160 <counter_2>
 		}
 	}

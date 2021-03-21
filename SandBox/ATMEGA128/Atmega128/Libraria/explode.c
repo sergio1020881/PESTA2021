@@ -35,23 +35,23 @@ uint8_t EXPLODEdata(EXPLODE* self);
 EXPLODE EXPLODEenable( void )
 {
 	uint8_t tSREG;
-	tSREG=STATUS_REGISTER;
-	STATUS_REGISTER&=~(1<<GLOBAL_INTERRUPT_ENABLE);
+	tSREG = STATUS_REGISTER;
+	STATUS_REGISTER &= ~(1<<GLOBAL_INTERRUPT_ENABLE);
 	// struct object
 	struct expld explode;
 	// inic VAR
-	explode.XI=0;
-	explode.XF=0;
+	explode.XI = ZERO;
+	explode.XF = ZERO;
 	// function pointers
-	explode.boot=EXPLODEboot;
-	explode.mayia=EXPLODEmayia;
-	explode.hh=EXPLODEhh;
-	explode.ll=EXPLODEll;
-	explode.lh=EXPLODElh;
-	explode.hl=EXPLODEhl;
-	explode.diff=EXPLODEdiff;
-	explode.data=EXPLODEdata;
-	STATUS_REGISTER=tSREG;
+	explode.boot = EXPLODEboot;
+	explode.mayia = EXPLODEmayia;
+	explode.hh = EXPLODEhh;
+	explode.ll = EXPLODEll;
+	explode.lh = EXPLODElh;
+	explode.hl = EXPLODEhl;
+	explode.diff = EXPLODEdiff;
+	explode.data = EXPLODEdata;
+	STATUS_REGISTER = tSREG;
 	/******/
 	return explode;
 }
@@ -67,47 +67,47 @@ uint8_t EXPLODEmayia(EXPLODE* self, uint8_t nbits)
 	unsigned int mask;
 	unsigned int diff;
 	unsigned int trans;
-	mask=EXPLODEPwr(2,nbits)-1;
-	self->XI&=mask;
-	self->XF&=mask;
-	diff=self->XF^self->XI;
-	trans=diff&self->XF;
-	return (trans<<nbits)|diff;
+	mask = EXPLODEPwr(2,nbits)-ONE;
+	self->XI &= mask;
+	self->XF &= mask;
+	diff = self->XF ^ self->XI;
+	trans = diff & self->XF;
+	return (trans << nbits) | diff;
 }
 // hh
 uint8_t EXPLODEhh(EXPLODE* self)
 {
 	uint8_t i;
-	i=self->XI&self->XF;
+	i = self->XI & self->XF;
 	return i;
 }
 // ll
 uint8_t EXPLODEll(EXPLODE* self)
 {
 	uint8_t i;
-	i=self->XI|self->XF;
+	i = self->XI | self->XF;
 	return ~i;
 }
 // lh
 uint8_t EXPLODElh(EXPLODE* self)
 {
 	uint8_t i;
-	i=self->XI^self->XF;
-	i&=self->XF;
+	i = self->XI ^ self->XF;
+	i &= self->XF;
 	return i;
 }
 // hl
 uint8_t EXPLODEhl(EXPLODE* self)
 {
 	uint8_t i;
-	i=self->XF^self->XI;
-	i&=self->XI;
+	i = self->XF ^ self->XI;
+	i &= self->XI;
 	return i;
 }
 // diff
 uint8_t EXPLODEdiff(EXPLODE* self)
 {
-	return self->XF^self->XI;
+	return self->XF ^ self->XI;
 }
 uint8_t EXPLODEdata(EXPLODE* self)
 {
@@ -118,8 +118,8 @@ uint8_t EXPLODEdata(EXPLODE* self)
 uint8_t EXPLODEPwr(uint8_t bs, uint8_t n)
 {
 	uint8_t i, p;
-	p = 1;
-	for (i = 1; i <= n; ++i)
+	p = ONE;
+	for (i = ONE; i <= n; ++i)
 	p = p * bs;
 	return p;
 }

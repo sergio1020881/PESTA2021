@@ -196,10 +196,10 @@ int main(void)
 void PORTINIT(void)
 {
 	//Control buttons
-	PORTF|=0x3F;
+	PORTF |= 0x3F;
 	//troubleshooting output
-	DDRC=0xFF;
-	PORTC=0xFF;
+	DDRC = 0xFF;
+	PORTC = 0xFF;
 }
 /*
 ** interrupt
@@ -208,12 +208,12 @@ ISR(TIMER0_COMP_vect) // 20 us intervals
 {
 	/***Block other interrupts during this procedure***/
 	uint8_t Sreg;
-	Sreg=SREG;
-	SREG&=~(ONE<<7);
+	Sreg = SREG;
+	SREG &= ~(ONE<<7);
 	/***Block other interrupts during this procedure***/	
-	tmp=hx.read_raw(&hx);
+	tmp = hx.read_raw(&hx);
 	/***enable interrupts again***/
-	SREG=Sreg;
+	SREG = Sreg;
 }
 ISR(TIMER1_COMPA_vect) // 1 second intervals
 {
@@ -225,27 +225,27 @@ ISR(TIMER1_COMPA_vect) // 1 second intervals
 		counter_2++;
 	
 	if(counter_1 > _5sec){
-		counter_1=_5sec+ONE; //lock in place
-		PORTC^=(ONE<<5); // troubleshooting
+		counter_1 = _5sec+ONE; //lock in place
+		PORTC ^= (ONE << 5); // troubleshooting
 		if((F.ll(&F) & 0x3F) == 2){
 			// Delete eerpom memory ZERO
-			HX711_data.status=0;
+			HX711_data.status = ZERO;
 			eprom.update_block(HX711_ptr, (void*) ZERO, sizeblock);
-			PORTC^=(ONE<<5); // troubleshooting
-			counter_1=ZERO;
+			PORTC ^= (ONE << 5); // troubleshooting
+			counter_1 = ZERO;
 		}
 	}
 	
 	if(counter_2 > _5sec){
-		counter_2=_5sec+ONE; //lock in place
-		signal=1;
+		counter_2 = _5sec+ONE; //lock in place
+		signal = ONE;
 		
-		PORTC^=(ONE<<5); // troubleshooting
+		PORTC ^= (ONE << 5); // troubleshooting
 
 		if((F.ll(&F) & 0x3F) == 1){
-			signal=2;
-			PORTC^=(ONE<<5); // troubleshooting
-			counter_2=ZERO;
+			signal = 2;
+			PORTC ^= (ONE << 5); // troubleshooting
+			counter_2 = ZERO;
 		}
 	}
 	
