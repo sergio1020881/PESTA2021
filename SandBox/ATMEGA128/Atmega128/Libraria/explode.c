@@ -36,7 +36,7 @@ EXPLODE EXPLODEenable( void )
 {
 	uint8_t tSREG;
 	tSREG = STATUS_REGISTER;
-	STATUS_REGISTER &= ~(1<<GLOBAL_INTERRUPT_ENABLE);
+	STATUS_REGISTER &= ~(ONE<<GLOBAL_INTERRUPT_ENABLE);
 	// struct object
 	struct expld explode;
 	// inic VAR
