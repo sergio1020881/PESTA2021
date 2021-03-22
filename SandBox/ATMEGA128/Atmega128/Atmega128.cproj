@@ -161,37 +161,16 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Libraria\74hc595.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Libraria\74hc595.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Libraria\atmega128analog.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Libraria\atmega128i2c.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Libraria\atmega128i2c.h">
-      <SubType>compile</SubType>
-    </Compile>
     <Compile Include="Libraria\atmega128timer.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Libraria\atmega128timer.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Libraria\atmega128uart.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Libraria\atmega128uart.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Libraria\clock.c">
-      <SubType>compile</SubType>
-    </Compile>
     <Compile Include="Libraria\eeprom.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Libraria\eeprom.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Libraria\explode.c">
@@ -206,28 +185,7 @@
     <Compile Include="Libraria\function.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Libraria\keypad.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Libraria\keypad.h">
-      <SubType>compile</SubType>
-    </Compile>
     <Compile Include="Libraria\lcd.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Libraria\lfsm.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Libraria\mm74c923.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Libraria\pcf8563rtc.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Libraria\pcf8563rtc.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Libraria\rotenc.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Libraria\hx711.c">
@@ -236,10 +194,7 @@
     <Compile Include="Libraria\hx711.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Libraria\znpid.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Libraria\znpid.h">
+    <Compile Include="Libraria\lcd.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="main.c">
