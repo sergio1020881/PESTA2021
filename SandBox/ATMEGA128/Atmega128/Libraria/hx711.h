@@ -21,14 +21,8 @@ struct HX711_calibration{
 	int32_t offset_64; // ZERO set point B 64
 	int32_t offset_128; // ZERO set point B 128
 	uint8_t divfactor_32; // interval A
-	uint8_t divfactor_32_1; // interval A 1
-	uint8_t divfactor_32_2; // interval A 2
 	uint8_t divfactor_64; // interval B
-	uint8_t divfactor_64_1; // interval B 1
-	uint8_t divfactor_64_2; // interval B 2
 	uint8_t divfactor_128; // interval B
-	uint8_t divfactor_128_1; // interval B 1
-	uint8_t divfactor_128_2; // interval B 2
 	uint8_t status;
 };
 //device
