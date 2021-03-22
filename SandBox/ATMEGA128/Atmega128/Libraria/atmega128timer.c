@@ -2,6 +2,7 @@
 	ATMEGA128TIMER
 Author: Sergio Santos 
 	<sergio.salazar.santos@gmail.com>
+License: GNU General Public License
 Hardware: ATmega128
 Date: 25102020
 Comment:
@@ -960,4 +961,6 @@ ISR(TIMER3_COMPA_vect){ }
 ISR(TIMER3_COMPB_vect){ }
 ISR(TIMER3_COMPC_vect){ }
 ISR(TIMER3_OVF_vect){ }
+/***Comment***
+*************/
 /***EOF***/

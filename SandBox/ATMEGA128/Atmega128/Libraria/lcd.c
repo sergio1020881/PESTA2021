@@ -493,4 +493,6 @@ unsigned int LCD_ticks(unsigned int num)
 	return count;
 }
 /***Interrupt***/
+/***Comment***
+*************/
 /***EOF***/

@@ -737,6 +737,6 @@ int FUNCreadint(int nmin, int nmax)
 }
 ***/
 /***Interrupt***/
-/***Comment
-***/
+/***Comment***
+*************/
 /***EOF***/

@@ -246,7 +246,7 @@ int8_t HX711_get_divfactor_128(HX711* self)
 	return self->cal.divfactor_128;
 }
 /***Interrupt***/
-/****comment:
+/***comment***
 Have to use vector to store 32 bit size word, then do a cast (int32_t*) to retrieve the value.
 *************/
 /***EOF***/

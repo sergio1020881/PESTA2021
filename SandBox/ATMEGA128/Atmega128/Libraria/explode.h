@@ -32,4 +32,6 @@ typedef struct expld EXPLODE;
 /***Header***/
 EXPLODE EXPLODEenable(void);
 #endif
+/***Comment***
+*************/
 /***EOF***/

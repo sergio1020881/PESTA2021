@@ -68,4 +68,6 @@ typedef struct fnctn FUNC;
 /***Header***/
 FUNC FUNCenable(void);
 #endif
+/***Comment***
+*************/
 /***EOF***/

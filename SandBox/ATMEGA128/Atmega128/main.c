@@ -257,18 +257,7 @@ The past only exists if the present comes to be. There is no future only possibi
 because 24 bit will have to create a vector pointer of the size of 32 bit, then at the 
 end do a cast to *((int32_t*)ptr).
 
-Have to make function for average, then offset. DONE.
+need sleep function for HX711, then finish the calibration menu of div factor, also add functionality for batch counting.
+Take a break.
 
-After that create a calibration section. In progress.
-
-Then it is all extras.
-
-changed rate in HX711 to 80Hz, 10Hz is to slow. Though there is more noise. DONE.
-
-Temos aparelhos de medida para não ter necessidade de recorrer a calculos complexos, cut out all the red tape.
-
-There is a bug with this program, sometimes does not accept changed code, only by checking using print to 
-LCD makes it accept it. Stupid bugs, makes you think something is wrong when there is non, the damn compiler fails.
-
-Very hard stuff.
 ****/

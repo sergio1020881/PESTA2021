@@ -40,4 +40,6 @@ typedef struct prm EEPROM;
 /***Header***/
 EEPROM EEPROMenable();
 #endif
+/***Comment***
+*************/
 /***EOF***/

@@ -2,6 +2,7 @@
 	ATMEGA128TIMER
 Author: Sergio Santos 
 	<sergio.salazar.santos@gmail.com>
+License: GNU General Public License
 Hardware: ATmega128
 Date: 25102020
 Comment:
@@ -75,4 +76,6 @@ TIMER_COUNTER1 TIMER_COUNTER1enable(unsigned char wavegenmode, unsigned char int
 TIMER_COUNTER2 TIMER_COUNTER2enable(unsigned char wavegenmode, unsigned char interrupt);
 TIMER_COUNTER3 TIMER_COUNTER3enable(unsigned char wavegenmode, unsigned char interrupt);
 #endif
+/***Comment***
+*************/
 /***EOF***/
