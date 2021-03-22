@@ -1629,7 +1629,7 @@ EXPLODE EXPLODEenable( void )
 	uint8_t tSREG;
 	tSREG = STATUS_REGISTER;
      aaa:	9f b7       	in	r25, 0x3f	; 63
-	STATUS_REGISTER &= ~(1<<GLOBAL_INTERRUPT_ENABLE);
+	STATUS_REGISTER &= ~(ONE<<GLOBAL_INTERRUPT_ENABLE);
      aac:	8f b7       	in	r24, 0x3f	; 63
      aae:	8f 77       	andi	r24, 0x7F	; 127
      ab0:	8f bf       	out	0x3f, r24	; 63

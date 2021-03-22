@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  20 MAR 2021 15:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  21 MAR 2021 16:40
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
@@ -1009,11 +1009,61 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--14
 
  (input/page/Introducao.tex
 Cap\'{\i }tulo 1.
-) [5
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--16
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--16
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--16
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--16
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--16
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--16
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--16
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--21
+
+ []
+
+[5
 
 
 
-]
+]) [6]
 \openout2 = `./input/page/Desenvolvimento.aux'.
 
  (input/page/Desenvolvimento.tex
@@ -1033,7 +1083,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--40
 
  []
 
-) [6
+) [7
 
 
 
@@ -1042,11 +1092,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--40
 
  (input/page/Conclusao.tex
 Cap\'{\i }tulo 3.
-) [7
+) [8
 
 
 
-] (input/excerpt/sample.tex) [8
+] (input/excerpt/sample.tex) [9
 
 
 ]
@@ -1064,10 +1114,10 @@ Overfull \hbox (46.71495pt too wide) in paragraph at lines 35--55
 [][] [] 
  []
 
-[9
+[10
 
 
-] (Relatorio.bbl [10
+] (Relatorio.bbl [11
 
 
 ]
@@ -1082,9 +1132,9 @@ babelbib: Using the BibTeX style's default font for `ISBN'.
 babelbib: Using the BibTeX style's default font for `ISSN'.
 babelbib: Using the BibTeX style's default font for `url'.
 babelbib: Using the BibTeX style's default font for `numeral'.
-) [11
+) [12
 
-] [12] (Relatorio.aux (include/CAPAREPORT.aux)
+] [13] (Relatorio.aux (include/CAPAREPORT.aux)
 (include/Acknowledgement.aux) (include/Abstract.aux) (include/Acronym.aux)
 (input/page/Introducao.aux) (input/page/Desenvolvimento.aux)
 (input/page/Conclusao.aux) (input/excerpt/DEFINICAO.aux)) ) 
@@ -1095,7 +1145,7 @@ Here is how much of TeX's memory you used:
  48091 multiletter control sequences out of 15000+200000
  553881 words of font info for 75 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 65i,15n,74p,460b,590s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 65i,15n,74p,910b,590s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\sergi\App
 Data\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\ser
 gi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Use
@@ -1121,9 +1171,9 @@ public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pf
 b><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program
  Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Relatorio.pdf (15 pages, 281119 bytes).
+Output written on Relatorio.pdf (16 pages, 287269 bytes).
 PDF statistics:
- 491 PDF objects out of 1000 (max. 8388607)
+ 503 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

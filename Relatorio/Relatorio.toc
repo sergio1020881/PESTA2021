@@ -1,15 +1,15 @@
 \babel@toc {portuguese}{}
 \babel@toc {portuguese}{}
-\contentsline {chapter}{\numberline {1}chapter}{5}%
-\contentsline {section}{\numberline {1}section}{5}%
-\contentsline {subsection}{\numberline {1.1}subsection}{5}%
-\contentsline {subsection}{\numberline {1.2}subsection}{5}%
-\contentsline {section}{\numberline {2}subsection}{5}%
-\contentsline {chapter}{\numberline {2}chapter}{6}%
+\contentsline {chapter}{\numberline {1}Balança}{5}%
 \contentsline {section}{\numberline {1}section}{6}%
-\contentsline {section}{\numberline {2}Material}{6}%
-\contentsline {chapter}{\numberline {3}chapter}{7}%
-\contentsline {chapter}{\numberline {A}\Large {Definições}}{9}%
+\contentsline {subsection}{\numberline {1.1}subsection}{6}%
+\contentsline {subsection}{\numberline {1.2}subsection}{6}%
+\contentsline {section}{\numberline {2}subsection}{6}%
+\contentsline {chapter}{\numberline {2}chapter}{7}%
+\contentsline {section}{\numberline {1}section}{7}%
+\contentsline {section}{\numberline {2}Material}{7}%
+\contentsline {chapter}{\numberline {3}chapter}{8}%
+\contentsline {chapter}{\numberline {A}\Large {Definições}}{10}%
 \babel@toc {portuguese}{}
 \babel@toc {portuguese}{}
 \babel@toc {portuguese}{}
