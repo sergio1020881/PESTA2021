@@ -32,9 +32,13 @@ Comment:
 /*
 ** Constant and Macro
 */
-#define TRUE 1
+#ifndef STATUS_REGISTER
+	#define STATUS_REGISTER SREG
+	#define INTERRUPT 7
+#endif
 #define ZERO 0
 #define ONE 1
+#define TRUE 1
 #define average_n 25
 #define _5sec 5
 #define _10sec 10
@@ -50,10 +54,10 @@ HX711 hx;
 EEPROM eprom;
 
 char result[32];
-char Menu='1'; // Main menu selector
-uint8_t counter_1=0;
-uint8_t counter_2=0;
-uint8_t signal=0;
+char Menu = '1'; // Main menu selector
+uint8_t counter_1 = 0;
+uint8_t counter_2 = 0;
+uint8_t signal = 0;
 /*
 ** Header
 */
@@ -63,7 +67,7 @@ int main(void)
 {
 	PORTINIT();
 	
-	HX711_ptr=&HX711_data; // CALIBRATION DATA BUS
+	HX711_ptr = &HX711_data; // CALIBRATION DATA BUS
 	
 	/***INICIALIZE OBJECTS***/
 	F = EXPLODEenable();
@@ -123,7 +127,7 @@ int main(void)
 				
 				tmp = hx.raw_average(&hx, average_n); // 25 50, smaller means faster or more readings
 				
-				//lcd0.gotoxy(3,0);
+				//lcd0.gotoxy(3,0); // for troubleshooting
 				//lcd0.string_size(function.ftoa(value, result, ZERO), 13); lcd0.string_size("raw_av", 6);
 				//lcd0.string_size(function.ftoa(hx.get_divfactor_64(&hx), result, ZERO), 13);
 				//lcd0.string_size(function.ftoa(HX711_data.divfactor_128, result, ZERO), 13);
@@ -154,14 +158,15 @@ int main(void)
 					lcd0.gotoxy(2,0);
 					lcd0.string_size(function.ftoa(publish, result, 3), 13); lcd0.string_size("Kg", 4);
 				}else{
+					publish = value;
 					lcd0.gotoxy(2,0);
-					lcd0.string_size(function.ftoa(value, result, ZERO), 13); lcd0.string_size("gram", 4);
+					lcd0.string_size(function.ftoa(publish, result, ZERO), 13); lcd0.string_size("gram", 4);
 				}
 				
 				
 				// Jump Menu signal
 				if(signal==1){
-					Menu='2';
+					Menu = '2';
 					lcd0.clear();
 				}
 					
@@ -185,7 +190,7 @@ int main(void)
 				break;
 				/********************************************************************/
 			default:
-				Menu='1';
+				Menu = '1';
 				break;
 		};
 	}
@@ -208,12 +213,12 @@ ISR(TIMER0_COMP_vect) // 20 us intervals
 {
 	/***Block other interrupts during this procedure***/
 	uint8_t Sreg;
-	Sreg = SREG;
-	SREG &= ~(ONE<<7);
+	Sreg = STATUS_REGISTER;
+	STATUS_REGISTER &= ~(ONE << INTERRUPT);
 	/***Block other interrupts during this procedure***/	
 	hx.read_raw(&hx);
 	/***enable interrupts again***/
-	SREG = Sreg;
+	STATUS_REGISTER = Sreg;
 }
 ISR(TIMER1_COMPA_vect) // 1 second intervals
 {

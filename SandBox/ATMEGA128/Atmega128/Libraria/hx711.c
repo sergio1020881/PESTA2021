@@ -17,7 +17,7 @@ Comment:
 #include <inttypes.h>
 #include "hx711.h"
 /***Constant & Macro***/
-#ifndef GLOBAL_INTERRUPT_ENABLE
+#ifndef STATUS_REGISTER
 	#define STATUS_REGISTER SREG
 	#define GLOBAL_INTERRUPT_ENABLE 7
 #endif

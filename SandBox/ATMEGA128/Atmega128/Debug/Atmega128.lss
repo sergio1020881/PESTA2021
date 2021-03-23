@@ -19,15 +19,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
   7 .debug_abbrev 00001589  00000000  00000000  00009479  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   000032c5  00000000  00000000  0000aa02  2**0
+  8 .debug_line   000032c6  00000000  00000000  0000aa02  2**0
                   CONTENTS, READONLY, DEBUGGING
   9 .debug_frame  00000d68  00000000  00000000  0000dcc8  2**2
                   CONTENTS, READONLY, DEBUGGING
  10 .debug_str    000010d0  00000000  00000000  0000ea30  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    00003f51  00000000  00000000  0000fb00  2**0
+ 11 .debug_loc    00003f67  00000000  00000000  0000fb00  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00000498  00000000  00000000  00013a51  2**0
+ 12 .debug_ranges 00000498  00000000  00000000  00013a67  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -4246,7 +4246,7 @@ int main(void)
 	PORTINIT();
     1c88:	eb df       	rcall	.-42     	; 0x1c60 <PORTINIT>
 	
-	HX711_ptr=&HX711_data; // CALIBRATION DATA BUS
+	HX711_ptr = &HX711_data; // CALIBRATION DATA BUS
     1c8a:	0f 2e       	mov	r0, r31
     1c8c:	f4 e9       	ldi	r31, 0x94	; 148
     1c8e:	cf 2e       	mov	r12, r31
@@ -4616,7 +4616,7 @@ int main(void)
 		
 		/****************************/
 		switch(Menu){
-    1ef2:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+    1ef2:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <Menu>
     1ef6:	82 33       	cpi	r24, 0x32	; 50
     1ef8:	09 f4       	brne	.+2      	; 0x1efc <main+0x28a>
     1efa:	0b c1       	rjmp	.+534    	; 0x2112 <main+0x4a0>
@@ -4865,6 +4865,7 @@ int main(void)
     20a6:	09 95       	icall
     20a8:	25 c0       	rjmp	.+74     	; 0x20f4 <main+0x482>
 				}else{
+					publish = value;
 					lcd0.gotoxy(2,0);
     20aa:	d8 01       	movw	r26, r16
     20ac:	52 96       	adiw	r26, 0x12	; 18
@@ -4876,7 +4877,7 @@ int main(void)
     20b8:	82 e0       	ldi	r24, 0x02	; 2
     20ba:	90 e0       	ldi	r25, 0x00	; 0
     20bc:	09 95       	icall
-					lcd0.string_size(function.ftoa(value, result, ZERO), 13); lcd0.string_size("gram", 4);
+					lcd0.string_size(function.ftoa(publish, result, ZERO), 13); lcd0.string_size("gram", 4);
     20be:	f8 01       	movw	r30, r16
     20c0:	a4 84       	ldd	r10, Z+12	; 0x0c
     20c2:	b5 84       	ldd	r11, Z+13	; 0x0d
@@ -4913,9 +4914,9 @@ int main(void)
     20f8:	81 30       	cpi	r24, 0x01	; 1
     20fa:	09 f0       	breq	.+2      	; 0x20fe <main+0x48c>
     20fc:	ec ce       	rjmp	.-552    	; 0x1ed6 <main+0x264>
-					Menu='2';
+					Menu = '2';
     20fe:	b2 e3       	ldi	r27, 0x32	; 50
-    2100:	b0 93 00 01 	sts	0x0100, r27	; 0x800100 <__DATA_REGION_ORIGIN__>
+    2100:	b0 93 00 01 	sts	0x0100, r27	; 0x800100 <Menu>
 					lcd0.clear();
     2104:	d8 01       	movw	r26, r16
     2106:	50 96       	adiw	r26, 0x10	; 16
@@ -4958,7 +4959,7 @@ int main(void)
     213e:	09 f0       	breq	.+2      	; 0x2142 <main+0x4d0>
     2140:	ca ce       	rjmp	.-620    	; 0x1ed6 <main+0x264>
 					Menu='1';
-    2142:	30 92 00 01 	sts	0x0100, r3	; 0x800100 <__DATA_REGION_ORIGIN__>
+    2142:	30 92 00 01 	sts	0x0100, r3	; 0x800100 <Menu>
 					lcd0.clear();
     2146:	d8 01       	movw	r26, r16
     2148:	50 96       	adiw	r26, 0x10	; 16
@@ -4997,8 +4998,8 @@ int main(void)
     217a:	ad ce       	rjmp	.-678    	; 0x1ed6 <main+0x264>
 				/********************************************************************/
 			default:
-				Menu='1';
-    217c:	30 92 00 01 	sts	0x0100, r3	; 0x800100 <__DATA_REGION_ORIGIN__>
+				Menu = '1';
+    217c:	30 92 00 01 	sts	0x0100, r3	; 0x800100 <Menu>
 				break;
     2180:	aa ce       	rjmp	.-684    	; 0x1ed6 <main+0x264>
 
@@ -5031,9 +5032,9 @@ ISR(TIMER0_COMP_vect) // 20 us intervals
     21a8:	ff 93       	push	r31
 	/***Block other interrupts during this procedure***/
 	uint8_t Sreg;
-	Sreg = SREG;
+	Sreg = STATUS_REGISTER;
     21aa:	cf b7       	in	r28, 0x3f	; 63
-	SREG &= ~(ONE<<7);
+	STATUS_REGISTER &= ~(ONE << INTERRUPT);
     21ac:	8f b7       	in	r24, 0x3f	; 63
     21ae:	8f 77       	andi	r24, 0x7F	; 127
     21b0:	8f bf       	out	0x3f, r24	; 63
@@ -5045,7 +5046,7 @@ ISR(TIMER0_COMP_vect) // 20 us intervals
     21bc:	91 e0       	ldi	r25, 0x01	; 1
     21be:	09 95       	icall
 	/***enable interrupts again***/
-	SREG = Sreg;
+	STATUS_REGISTER = Sreg;
     21c0:	cf bf       	out	0x3f, r28	; 63
 }
     21c2:	ff 91       	pop	r31
