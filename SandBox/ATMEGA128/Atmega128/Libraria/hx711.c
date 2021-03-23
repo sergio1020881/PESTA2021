@@ -53,39 +53,37 @@ HX711 HX711enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t
 {
 	//LOCAL VARIABLES
 	uint8_t tSREG;
-	tSREG=SREG;
-	SREG&=~(1<<GLOBAL_INTERRUPT_ENABLE);
+	tSREG = STATUS_REGISTER;
+	STATUS_REGISTER &= ~(1<<GLOBAL_INTERRUPT_ENABLE);
 	//ALLOCAÇÂO MEMORIA PARA Estrutura
 	HX711 hx711;
 	//import parametros
-	hx711_DDR=ddr;
-	hx711_PIN=pin;
-	hx711_PORT=port;
-	hx711_datapin=datapin;
-	hx711_clkpin=clkpin;
+	hx711_DDR = ddr;
+	hx711_PIN = pin;
+	hx711_PORT = port;
+	hx711_datapin = datapin;
+	hx711_clkpin = clkpin;
 	//inic variables
 	*hx711_DDR |= (ONE<<clkpin);
 	*hx711_PORT |= (ONE<<datapin);
-	hx711.readflag=ZERO;
-	hx711.trigger=ZERO;
-	hx711.amplify=ONE;
-	hx711.ampcount=ONE;
-	hx711.bitcount=HX711_ADC_bits;
-	hx711.buffer[0]=ZERO;
-	hx711.buffer[1]=ZERO;
-	hx711.buffer[2]=ZERO;
-	hx711.buffer[3]=ZERO;
-	hx711.bufferindex=HX711_VECT_SIZE-ONE;
-	hx711.raw_reading=ZERO;
-	hx711.sum=ZERO;
-	hx711.av_n=ZERO;
-	hx711.raw_mean=ZERO;
+	hx711.readflag = ZERO;
+	hx711.trigger = ZERO;
+	hx711.amplify = ONE;
+	hx711.ampcount = ONE;
+	hx711.bitcount = HX711_ADC_bits;
+	hx711.buffer[0] = ZERO;
+	hx711.buffer[1] = ZERO;
+	hx711.buffer[2] = ZERO;
+	hx711.buffer[3] = ZERO;
+	hx711.bufferindex = HX711_VECT_SIZE-ONE;
+	hx711.raw_reading = ZERO;
+	hx711.sum = ZERO;
+	hx711.av_n = ZERO;
+	hx711.raw_mean = ZERO;
 	// offset para mesa usada.
-	hx711.cal_data.offset_32=36800; // to subtract B
-	//hx711.cal_data.offset_64=73690; // to subtract A 64
-	hx711.cal_data.offset_64=73600; // to subtract A 64
-	//hx711.cal_data.offset_128=146650; // to subtract A 128
-	hx711.cal_data.offset_128=147200; // to subtract A 128
+	hx711.cal_data.offset_32 = 36800; // to subtract B
+	hx711.cal_data.offset_64 = 73600; // to subtract A 64
+	hx711.cal_data.offset_128 = 147200; // to subtract A 128
 	//div factor
 	hx711.cal_data.divfactor_32=23; // to divide
 	hx711.cal_data.divfactor_64=46; // to divide
@@ -105,7 +103,7 @@ HX711 HX711enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t
 	hx711.get_divfactor_32=HX711_get_divfactor_32;
 	hx711.get_divfactor_64=HX711_get_divfactor_64;
 	hx711.get_divfactor_128=HX711_get_divfactor_128;
-	SREG=tSREG;
+	STATUS_REGISTER = tSREG;
 	// returns a copy
 	return hx711;
 }
@@ -137,20 +135,20 @@ void HX711_set_amplify(HX711* self, uint8_t amplify)
 {
 	switch(amplify){
 		case 128:
-			self->amplify=ONE; //channel A
-			self->ampcount=ONE;
+			self->amplify = ONE; //channel A
+			self->ampcount = ONE;
 			break;
 		case 32:
-			self->amplify=2; //channel B
-			self->ampcount=2; 
+			self->amplify = 2; //channel B
+			self->ampcount = 2; 
 			break;
 		case 64:
-			self->amplify=3; //channel A
-			self->ampcount=3;
+			self->amplify = 3; //channel A
+			self->ampcount = 3;
 			break;
 		default:
-			self->amplify=ONE;
-			self->ampcount=ONE;
+			self->amplify = ONE;
+			self->ampcount = ONE;
 			break;
 	}
 }
@@ -174,25 +172,25 @@ int32_t HX711_read_raw(HX711* self)
 			if (HX711_read_bit())
 				self->buffer[aindex] |= ONE<<(bindex-(aindex*8));
 			self->bitcount--;
-			if(self->bitcount==16)
+			if(self->bitcount == 16)
 				self->bufferindex=2;
-			if(self->bitcount==8)
+			if(self->bitcount == 8)
 				self->bufferindex=ONE;
 		}else{
 			if(self->ampcount){
 				HX711_read_bit();
 				self->ampcount--;
 			}else{
-				value=*(ptr);
-				self->raw_reading=value;
-				self->bitcount=HX711_ADC_bits;
-				self->bufferindex=HX711_VECT_SIZE-ONE;
-				self->ampcount=self->amplify;
-				self->buffer[0]=ZERO;
-				self->buffer[1]=ZERO;
-				self->buffer[2]=ZERO;
-				self->buffer[3]=ZERO;
-				self->trigger=ONE;
+				value = *(ptr);
+				self->raw_reading = value;
+				self->bitcount = HX711_ADC_bits;
+				self->bufferindex = HX711_VECT_SIZE-ONE;
+				self->ampcount = self->amplify;
+				self->buffer[0] = ZERO;
+				self->buffer[1] = ZERO;
+				self->buffer[2] = ZERO;
+				self->buffer[3] = ZERO;
+				self->trigger = ONE;
 				/***Reset ready for next query***/
 				HX711_reset_readflag(self);
 			}
@@ -204,16 +202,16 @@ float HX711_raw_average(HX711* self, uint8_t n)
 {
 	if(self->trigger){
 		if(self->av_n < n){
-			self->sum+=self->raw_reading;
+			self->sum += self->raw_reading;
 			self->av_n++;
 			}else{
-			self->av_n=0;
-			self->raw_mean=self->sum/n;
-			self->sum=0;
-			self->sum+=self->raw_reading;
+			self->av_n = ZERO;
+			self->raw_mean = self->sum / n;
+			self->sum = ZERO;
+			self->sum += self->raw_reading;
 			self->av_n++;
 		}
-		self->trigger=ZERO;
+		self->trigger = ZERO;
 	}
 	return self->raw_mean;
 }
