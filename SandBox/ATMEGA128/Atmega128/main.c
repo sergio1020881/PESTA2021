@@ -35,7 +35,7 @@ Comment:
 #define TRUE 1
 #define ZERO 0
 #define ONE 1
-#define average_n 30
+#define average_n 25
 #define _5sec 5
 #define _10sec 10
 /*
@@ -45,9 +45,8 @@ EXPLODE F;
 LCD0 lcd0;
 struct HX711_calibration HX711_data;
 struct HX711_calibration* HX711_ptr;
-const uint8_t sizeblock=sizeof(struct HX711_calibration);
+const uint8_t sizeblock = sizeof(struct HX711_calibration);
 HX711 hx;
-int32_t tmp;
 EEPROM eprom;
 
 char result[32];
@@ -62,36 +61,33 @@ void PORTINIT();
 /****MAIN****/
 int main(void)
 {
-	HX711_ptr=&HX711_data;
-	
 	PORTINIT();
+	
+	HX711_ptr=&HX711_data; // CALIBRATION DATA BUS
+	
 	/***INICIALIZE OBJECTS***/
 	F = EXPLODEenable();
 	FUNC function = FUNCenable();
 	lcd0 = LCD0enable(&DDRA,&PINA,&PORTA);
 	TIMER_COUNTER0 timer0 = TIMER_COUNTER0enable(2,2); //2,2
-	TIMER_COUNTER1 timer1 = TIMER_COUNTER1enable(4,2);
-	hx = HX711enable(&DDRF, &PINF, &PORTF, 6, 7);
+	TIMER_COUNTER1 timer1 = TIMER_COUNTER1enable(4,2); //4,2
+	hx = HX711enable(&DDRF, &PINF, &PORTF, 6, 7); //6,7
 	eprom = EEPROMenable();
 	/******/
 	
-	float value_64=0;
-	float value_128=0;
+	float tmp;
+	float value=0;
+	float publish=0;
 	
 	// Get default values to memory
-	HX711_data.offset_32=hx.get_offset_32(&hx);
-	HX711_data.offset_64=hx.get_offset_64(&hx);
-	HX711_data.offset_128=hx.get_offset_128(&hx);
-	HX711_data.divfactor_32=hx.get_divfactor_32(&hx);
-	HX711_data.divfactor_64=hx.get_divfactor_64(&hx);
-	HX711_data.divfactor_128=hx.get_divfactor_128(&hx);
-
-	tmp=0;
+	HX711_data.offset_32 = hx.get_offset_32(&hx);
+	HX711_data.offset_64 = hx.get_offset_64(&hx);
+	HX711_data.offset_128 = hx.get_offset_128(&hx);
+	HX711_data.divfactor_32 = hx.get_divfactor_32(&hx);
+	HX711_data.divfactor_64 = hx.get_divfactor_64(&hx);
+	HX711_data.divfactor_128 = hx.get_divfactor_128(&hx);
+	
 	/***Parameters timers***/
-	//vector[0]=255;
-	//vector[1]=255;
-	//vector[2]=255;
-	//uint8_t* ptr=vector;
 	timer0.compoutmode(1);
 	timer0.compare(79); // 1 -> 159 -> 20 us, 1 -> 79 -> 10 us, 1 -> 15 -> 2 us, 8 -> 99 -> 100 us, 8 -> 79 -> 80 us
 	timer0.start(8); // 1 -> 32 us , 8 -> 256 us , 32 64 128 256 1024
@@ -102,13 +98,13 @@ int main(void)
 	timer1.start(256);
 	
 	// HX711 Gain
-	hx.set_amplify(&hx,64); // 32 64 128
+	hx.set_amplify(&hx, 64); // 32 64 128
 	
 	//Get stored calibration values and put them to effect
 	eprom.read_block(HX711_ptr, (const void*) ZERO, sizeblock);
 	if(HX711_ptr->status == 1){
-		memcpy ( hx.ptrcal(&hx), HX711_ptr, sizeblock );
-		PORTC^=(ONE<<5); // troubleshooting
+		memcpy ( hx.get_cal(&hx), HX711_ptr, sizeblock );
+		PORTC ^= (ONE << 5); // troubleshooting
 	}
 	/***********************************************************************************************/
 	while(TRUE){
@@ -121,41 +117,45 @@ int main(void)
 		/****************************/
 		switch(Menu){
 			/***MENU 1***/
-			case '1': // Main Program Menu			
-				//lcd0.gotoxy(0,0); //for troubleshooting
-				//lcd0.string_size(function.i16toa(counter_2), 3); //for troubleshooting
-				
+			case '1': // Main Program Menu
 				lcd0.gotoxy(0,3); //TITLE
 				lcd0.string_size("Weight Scale", 12); //TITLE
 				
-				value_64=hx.raw_average(&hx, average_n); // 25 50, smaller means faster or more readings
-				//lcd0.gotoxy(1,0);
-				//lcd0.string_size(function.ftoa(value_64, result, ZERO), 13); lcd0.string_size("raw_av", 6);
+				tmp = hx.raw_average(&hx, average_n); // 25 50, smaller means faster or more readings
+				
+				//lcd0.gotoxy(3,0);
+				//lcd0.string_size(function.ftoa(value, result, ZERO), 13); lcd0.string_size("raw_av", 6);
+				//lcd0.string_size(function.ftoa(hx.get_divfactor_64(&hx), result, ZERO), 13);
+				//lcd0.string_size(function.ftoa(HX711_data.divfactor_128, result, ZERO), 13);
+				//lcd0.string_size(function.ftoa(hx.get_divfactor_128(&hx), result, ZERO), 13);
 				
 				if(F.hl(&F) & ONE){ // calibrate offset by pressing button 1
 					PORTC^=(ONE<<5); // troubleshooting
-					HX711_data.offset_64=value_64;
-					HX711_data.status=1;
+					HX711_data.offset_32 = value;
+					HX711_data.offset_64 = value;
+					HX711_data.offset_128 = value;
+					HX711_data.divfactor_32 = hx.get_divfactor_32(&hx);
+					HX711_data.divfactor_64 = hx.get_divfactor_64(&hx);
+					HX711_data.divfactor_128 = hx.get_divfactor_128(&hx);
+					HX711_data.status = ONE;
 					eprom.update_block(HX711_ptr, (void*) ZERO, sizeblock);
-					memcpy ( hx.ptrcal(&hx), HX711_ptr, sizeblock ); // Update new values
+					memcpy ( hx.get_cal(&hx), HX711_ptr, sizeblock ); // Update new values
 				}
 				
-				//value_128=(value_64-hx.cal.offset_128)/hx.cal.divfactor_128; //value to be published to LCD
-				value_64=(value_64-hx.cal.offset_64)/hx.cal.divfactor_64; //value to be published to LCD
+				//value = (value - hx.get_offset_128(&hx)) / hx.get_divfactor_128(&hx); //value to be published to LCD
+				value = (tmp - hx.get_offset_64(&hx)) / hx.get_divfactor_64(&hx); //value to be published to LCD
+				
+				//lcd0.gotoxy(3,0);
+				//lcd0.string_size(function.ftoa(value, result, ZERO), 13);
 				
 				//Display
-				if (value_64 > 1000 || value_64 < -1000){
-					value_64 = value_64/1000;
-					value_128 = value_128/1000;
+				if (value > 1000 || value < -1000){
+					publish = value / 1000;
 					lcd0.gotoxy(2,0);
-					lcd0.string_size(function.ftoa(value_64,result,3), 13); lcd0.string_size("Kg", 4);
-					//lcd0.gotoxy(3,0);
-					//lcd0.string_size(function.ftoa(value_128,result,3), 13); lcd0.string_size("Kg", 4);	
+					lcd0.string_size(function.ftoa(publish, result, 3), 13); lcd0.string_size("Kg", 4);
 				}else{
 					lcd0.gotoxy(2,0);
-					lcd0.string_size(function.ftoa(value_64,result,ZERO), 13); lcd0.string_size("gram", 4);
-					//lcd0.gotoxy(3,0);
-					//lcd0.string_size(function.ftoa(value_128,result,0), 13); lcd0.string_size("gram", 4);
+					lcd0.string_size(function.ftoa(value, result, ZERO), 13); lcd0.string_size("gram", 4);
 				}
 				
 				
@@ -211,7 +211,7 @@ ISR(TIMER0_COMP_vect) // 20 us intervals
 	Sreg = SREG;
 	SREG &= ~(ONE<<7);
 	/***Block other interrupts during this procedure***/	
-	tmp = hx.read_raw(&hx);
+	hx.read_raw(&hx);
 	/***enable interrupts again***/
 	SREG = Sreg;
 }
