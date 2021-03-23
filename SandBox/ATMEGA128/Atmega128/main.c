@@ -131,9 +131,9 @@ int main(void)
 				
 				if(F.hl(&F) & ONE){ // calibrate offset by pressing button 1
 					PORTC^=(ONE<<5); // troubleshooting
-					HX711_data.offset_32 = value;
-					HX711_data.offset_64 = value;
-					HX711_data.offset_128 = value;
+					HX711_data.offset_32 = tmp;
+					HX711_data.offset_64 = tmp;
+					HX711_data.offset_128 = tmp;
 					HX711_data.divfactor_32 = hx.get_divfactor_32(&hx);
 					HX711_data.divfactor_64 = hx.get_divfactor_64(&hx);
 					HX711_data.divfactor_128 = hx.get_divfactor_128(&hx);
