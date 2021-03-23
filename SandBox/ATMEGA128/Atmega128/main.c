@@ -260,4 +260,7 @@ end do a cast to *((int32_t*)ptr).
 need sleep function for HX711, then finish the calibration menu of div factor, also add functionality for batch counting.
 Take a break.
 
+
+Something is getting wrong with this compiler, sometimes when read for a second 
+time a variable it seems it has been reset to a garbage value. Or the chip is getting saturated ??????
 ****/
