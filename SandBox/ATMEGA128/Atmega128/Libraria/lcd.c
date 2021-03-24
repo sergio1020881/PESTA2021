@@ -314,7 +314,7 @@ void LCD1_inic(void)
 	//LCD INIC
 	*lcd1_DDR=(1<<RS)|(1<<RW)|(1<<EN)|(0<<NC);
 	*lcd1_PORT=(1<<NC);
-	/***INICIALIZACAO LCD**datasheet*/
+	/***INICIALIZACAO**LCD**datasheet***/
 	_delay_ms(40);
 	LCD1_write(0x33,INST); //function set
 	_delay_us(39);

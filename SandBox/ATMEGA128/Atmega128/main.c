@@ -116,8 +116,7 @@ int main(void)
 		lcd0.reboot();
 		/************INPUT***********/
 		F.boot(&F,PINF);
-		// tmp also entry from interrupt routine
-		
+		tmp = hx.raw_average(&hx, average_n); // 25 50, smaller means faster or more readings
 		/****************************/
 		switch(Menu){
 			/***MENU 1***/
@@ -125,15 +124,13 @@ int main(void)
 				lcd0.gotoxy(0,3); //TITLE
 				lcd0.string_size("Weight Scale", 12); //TITLE
 				
-				tmp = hx.raw_average(&hx, average_n); // 25 50, smaller means faster or more readings
-				
 				//lcd0.gotoxy(3,0); // for troubleshooting
 				//lcd0.string_size(function.ftoa(value, result, ZERO), 13); lcd0.string_size("raw_av", 6);
 				//lcd0.string_size(function.ftoa(hx.get_divfactor_64(&hx), result, ZERO), 13);
 				//lcd0.string_size(function.ftoa(HX711_data.divfactor_128, result, ZERO), 13);
 				//lcd0.string_size(function.ftoa(hx.get_divfactor_128(&hx), result, ZERO), 13);
 				
-				if(F.hl(&F) & ONE){ // calibrate offset by pressing button 1
+				if(F.lh(&F) & ONE){ // calibrate offset by pressing button 1
 					PORTC^=(ONE<<5); // troubleshooting
 					HX711_data.offset_32 = tmp;
 					HX711_data.offset_64 = tmp;
@@ -163,9 +160,8 @@ int main(void)
 					lcd0.string_size(function.ftoa(publish, result, ZERO), 13); lcd0.string_size("gram", 4);
 				}
 				
-				
 				// Jump Menu signal
-				if(signal==1){
+				if(signal == 1){
 					Menu = '2';
 					lcd0.clear();
 				}
@@ -177,8 +173,8 @@ int main(void)
 				lcd0.string_size("SETUP DIVFACTOR",15);
 				
 				// Jump Menus signal
-				if(signal==2){
-					Menu='1';
+				if(signal == 2){
+					Menu = '1';
 					lcd0.clear();
 				}
 				break;

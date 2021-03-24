@@ -25,9 +25,9 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
  10 .debug_str    000010d0  00000000  00000000  0000ea30  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    00003f67  00000000  00000000  0000fb00  2**0
+ 11 .debug_loc    00003f7d  00000000  00000000  0000fb00  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00000498  00000000  00000000  00013a67  2**0
+ 12 .debug_ranges 00000498  00000000  00000000  00013a7d  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -4542,43 +4542,38 @@ int main(void)
 	while(TRUE){
 		/******PREAMBLE******/
 		lcd0.reboot();
-    1ea0:	06 ec       	ldi	r16, 0xC6	; 198
-    1ea2:	11 e0       	ldi	r17, 0x01	; 1
+    1ea0:	0f 2e       	mov	r0, r31
+    1ea2:	f6 ec       	ldi	r31, 0xC6	; 198
+    1ea4:	ef 2e       	mov	r14, r31
+    1ea6:	f1 e0       	ldi	r31, 0x01	; 1
+    1ea8:	ff 2e       	mov	r15, r31
+    1eaa:	f0 2d       	mov	r31, r0
 		/************INPUT***********/
 		F.boot(&F,PINF);
-    1ea4:	0f 2e       	mov	r0, r31
-    1ea6:	fd e1       	ldi	r31, 0x1D	; 29
-    1ea8:	ef 2e       	mov	r14, r31
-    1eaa:	f2 e0       	ldi	r31, 0x02	; 2
-    1eac:	ff 2e       	mov	r15, r31
-    1eae:	f0 2d       	mov	r31, r0
+    1eac:	0f 2e       	mov	r0, r31
+    1eae:	fd e1       	ldi	r31, 0x1D	; 29
+    1eb0:	cf 2e       	mov	r12, r31
+    1eb2:	f2 e0       	ldi	r31, 0x02	; 2
+    1eb4:	df 2e       	mov	r13, r31
+    1eb6:	f0 2d       	mov	r31, r0
+		tmp = hx.raw_average(&hx, average_n); // 25 50, smaller means faster or more readings
+    1eb8:	0c ed       	ldi	r16, 0xDC	; 220
+    1eba:	11 e0       	ldi	r17, 0x01	; 1
 				lcd0.gotoxy(0,3);
 				lcd0.string_size("SETUP DIVFACTOR",15);
 				
 				// Jump Menus signal
-				if(signal==2){
-					Menu='1';
-    1eb0:	0f 2e       	mov	r0, r31
-    1eb2:	f1 e3       	ldi	r31, 0x31	; 49
-    1eb4:	3f 2e       	mov	r3, r31
-    1eb6:	f0 2d       	mov	r31, r0
-			/***MENU 1***/
-			case '1': // Main Program Menu
-				lcd0.gotoxy(0,3); //TITLE
-				lcd0.string_size("Weight Scale", 12); //TITLE
-				
-				tmp = hx.raw_average(&hx, average_n); // 25 50, smaller means faster or more readings
-    1eb8:	0f 2e       	mov	r0, r31
-    1eba:	fc ed       	ldi	r31, 0xDC	; 220
-    1ebc:	cf 2e       	mov	r12, r31
-    1ebe:	f1 e0       	ldi	r31, 0x01	; 1
-    1ec0:	df 2e       	mov	r13, r31
+				if(signal == 2){
+					Menu = '1';
+    1ebc:	0f 2e       	mov	r0, r31
+    1ebe:	f1 e3       	ldi	r31, 0x31	; 49
+    1ec0:	3f 2e       	mov	r3, r31
     1ec2:	f0 2d       	mov	r31, r0
 				//lcd0.string_size(function.ftoa(hx.get_divfactor_64(&hx), result, ZERO), 13);
 				//lcd0.string_size(function.ftoa(HX711_data.divfactor_128, result, ZERO), 13);
 				//lcd0.string_size(function.ftoa(hx.get_divfactor_128(&hx), result, ZERO), 13);
 				
-				if(F.hl(&F) & ONE){ // calibrate offset by pressing button 1
+				if(F.lh(&F) & ONE){ // calibrate offset by pressing button 1
 					PORTC^=(ONE<<5); // troubleshooting
     1ec4:	68 94       	set
     1ec6:	22 24       	eor	r2, r2
@@ -4596,7 +4591,7 @@ int main(void)
 	while(TRUE){
 		/******PREAMBLE******/
 		lcd0.reboot();
-    1ed6:	d8 01       	movw	r26, r16
+    1ed6:	d7 01       	movw	r26, r14
     1ed8:	54 96       	adiw	r26, 0x14	; 20
     1eda:	ed 91       	ld	r30, X+
     1edc:	fc 91       	ld	r31, X
@@ -4605,74 +4600,71 @@ int main(void)
 		/************INPUT***********/
 		F.boot(&F,PINF);
     1ee2:	60 b1       	in	r22, 0x00	; 0
-    1ee4:	d7 01       	movw	r26, r14
+    1ee4:	d6 01       	movw	r26, r12
     1ee6:	14 96       	adiw	r26, 0x04	; 4
     1ee8:	ed 91       	ld	r30, X+
     1eea:	fc 91       	ld	r31, X
     1eec:	15 97       	sbiw	r26, 0x05	; 5
-    1eee:	c7 01       	movw	r24, r14
+    1eee:	c6 01       	movw	r24, r12
     1ef0:	09 95       	icall
-		// tmp also entry from interrupt routine
-		
+		tmp = hx.raw_average(&hx, average_n); // 25 50, smaller means faster or more readings
+    1ef2:	d8 01       	movw	r26, r16
+    1ef4:	d1 96       	adiw	r26, 0x31	; 49
+    1ef6:	ed 91       	ld	r30, X+
+    1ef8:	fc 91       	ld	r31, X
+    1efa:	d2 97       	sbiw	r26, 0x32	; 50
+    1efc:	69 e1       	ldi	r22, 0x19	; 25
+    1efe:	c8 01       	movw	r24, r16
+    1f00:	09 95       	icall
+    1f02:	2b 01       	movw	r4, r22
+    1f04:	3c 01       	movw	r6, r24
 		/****************************/
 		switch(Menu){
-    1ef2:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <Menu>
-    1ef6:	82 33       	cpi	r24, 0x32	; 50
-    1ef8:	09 f4       	brne	.+2      	; 0x1efc <main+0x28a>
-    1efa:	0b c1       	rjmp	.+534    	; 0x2112 <main+0x4a0>
-    1efc:	83 33       	cpi	r24, 0x33	; 51
-    1efe:	09 f4       	brne	.+2      	; 0x1f02 <main+0x290>
-    1f00:	29 c1       	rjmp	.+594    	; 0x2154 <main+0x4e2>
-    1f02:	81 33       	cpi	r24, 0x31	; 49
-    1f04:	09 f0       	breq	.+2      	; 0x1f08 <main+0x296>
-    1f06:	3a c1       	rjmp	.+628    	; 0x217c <main+0x50a>
+    1f06:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+    1f0a:	82 33       	cpi	r24, 0x32	; 50
+    1f0c:	09 f4       	brne	.+2      	; 0x1f10 <main+0x29e>
+    1f0e:	01 c1       	rjmp	.+514    	; 0x2112 <main+0x4a0>
+    1f10:	83 33       	cpi	r24, 0x33	; 51
+    1f12:	09 f4       	brne	.+2      	; 0x1f16 <main+0x2a4>
+    1f14:	1f c1       	rjmp	.+574    	; 0x2154 <main+0x4e2>
+    1f16:	81 33       	cpi	r24, 0x31	; 49
+    1f18:	09 f0       	breq	.+2      	; 0x1f1c <main+0x2aa>
+    1f1a:	30 c1       	rjmp	.+608    	; 0x217c <main+0x50a>
 			/***MENU 1***/
 			case '1': // Main Program Menu
 				lcd0.gotoxy(0,3); //TITLE
-    1f08:	d8 01       	movw	r26, r16
-    1f0a:	52 96       	adiw	r26, 0x12	; 18
-    1f0c:	ed 91       	ld	r30, X+
-    1f0e:	fc 91       	ld	r31, X
-    1f10:	53 97       	sbiw	r26, 0x13	; 19
-    1f12:	63 e0       	ldi	r22, 0x03	; 3
-    1f14:	70 e0       	ldi	r23, 0x00	; 0
-    1f16:	80 e0       	ldi	r24, 0x00	; 0
-    1f18:	90 e0       	ldi	r25, 0x00	; 0
-    1f1a:	09 95       	icall
-				lcd0.string_size("Weight Scale", 12); //TITLE
-    1f1c:	d8 01       	movw	r26, r16
-    1f1e:	1c 96       	adiw	r26, 0x0c	; 12
+    1f1c:	d7 01       	movw	r26, r14
+    1f1e:	52 96       	adiw	r26, 0x12	; 18
     1f20:	ed 91       	ld	r30, X+
     1f22:	fc 91       	ld	r31, X
-    1f24:	1d 97       	sbiw	r26, 0x0d	; 13
-    1f26:	6c e0       	ldi	r22, 0x0C	; 12
-    1f28:	81 e0       	ldi	r24, 0x01	; 1
-    1f2a:	91 e0       	ldi	r25, 0x01	; 1
-    1f2c:	09 95       	icall
-				
-				tmp = hx.raw_average(&hx, average_n); // 25 50, smaller means faster or more readings
-    1f2e:	d6 01       	movw	r26, r12
-    1f30:	d1 96       	adiw	r26, 0x31	; 49
-    1f32:	ed 91       	ld	r30, X+
-    1f34:	fc 91       	ld	r31, X
-    1f36:	d2 97       	sbiw	r26, 0x32	; 50
-    1f38:	69 e1       	ldi	r22, 0x19	; 25
-    1f3a:	c6 01       	movw	r24, r12
-    1f3c:	09 95       	icall
-    1f3e:	2b 01       	movw	r4, r22
-    1f40:	3c 01       	movw	r6, r24
+    1f24:	53 97       	sbiw	r26, 0x13	; 19
+    1f26:	63 e0       	ldi	r22, 0x03	; 3
+    1f28:	70 e0       	ldi	r23, 0x00	; 0
+    1f2a:	80 e0       	ldi	r24, 0x00	; 0
+    1f2c:	90 e0       	ldi	r25, 0x00	; 0
+    1f2e:	09 95       	icall
+				lcd0.string_size("Weight Scale", 12); //TITLE
+    1f30:	d7 01       	movw	r26, r14
+    1f32:	1c 96       	adiw	r26, 0x0c	; 12
+    1f34:	ed 91       	ld	r30, X+
+    1f36:	fc 91       	ld	r31, X
+    1f38:	1d 97       	sbiw	r26, 0x0d	; 13
+    1f3a:	6c e0       	ldi	r22, 0x0C	; 12
+    1f3c:	81 e0       	ldi	r24, 0x01	; 1
+    1f3e:	91 e0       	ldi	r25, 0x01	; 1
+    1f40:	09 95       	icall
 				//lcd0.string_size(function.ftoa(value, result, ZERO), 13); lcd0.string_size("raw_av", 6);
 				//lcd0.string_size(function.ftoa(hx.get_divfactor_64(&hx), result, ZERO), 13);
 				//lcd0.string_size(function.ftoa(HX711_data.divfactor_128, result, ZERO), 13);
 				//lcd0.string_size(function.ftoa(hx.get_divfactor_128(&hx), result, ZERO), 13);
 				
-				if(F.hl(&F) & ONE){ // calibrate offset by pressing button 1
-    1f42:	d7 01       	movw	r26, r14
-    1f44:	1e 96       	adiw	r26, 0x0e	; 14
+				if(F.lh(&F) & ONE){ // calibrate offset by pressing button 1
+    1f42:	d6 01       	movw	r26, r12
+    1f44:	1c 96       	adiw	r26, 0x0c	; 12
     1f46:	ed 91       	ld	r30, X+
     1f48:	fc 91       	ld	r31, X
-    1f4a:	1f 97       	sbiw	r26, 0x0f	; 15
-    1f4c:	c7 01       	movw	r24, r14
+    1f4a:	1d 97       	sbiw	r26, 0x0d	; 13
+    1f4c:	c6 01       	movw	r24, r12
     1f4e:	09 95       	icall
     1f50:	80 ff       	sbrs	r24, 0
     1f52:	4e c0       	rjmp	.+156    	; 0x1ff0 <main+0x37e>
@@ -4700,22 +4692,22 @@ int main(void)
     1f76:	82 87       	std	Z+10, r24	; 0x0a
     1f78:	93 87       	std	Z+11, r25	; 0x0b
 					HX711_data.divfactor_32 = hx.get_divfactor_32(&hx);
-    1f7a:	d6 01       	movw	r26, r12
+    1f7a:	d8 01       	movw	r26, r16
     1f7c:	db 96       	adiw	r26, 0x3b	; 59
     1f7e:	ed 91       	ld	r30, X+
     1f80:	fc 91       	ld	r31, X
     1f82:	dc 97       	sbiw	r26, 0x3c	; 60
-    1f84:	c6 01       	movw	r24, r12
+    1f84:	c8 01       	movw	r24, r16
     1f86:	09 95       	icall
     1f88:	f4 01       	movw	r30, r8
     1f8a:	84 87       	std	Z+12, r24	; 0x0c
 					HX711_data.divfactor_64 = hx.get_divfactor_64(&hx);
-    1f8c:	d6 01       	movw	r26, r12
+    1f8c:	d8 01       	movw	r26, r16
     1f8e:	dd 96       	adiw	r26, 0x3d	; 61
     1f90:	ed 91       	ld	r30, X+
     1f92:	fc 91       	ld	r31, X
     1f94:	de 97       	sbiw	r26, 0x3e	; 62
-    1f96:	c6 01       	movw	r24, r12
+    1f96:	c8 01       	movw	r24, r16
     1f98:	09 95       	icall
     1f9a:	f4 01       	movw	r30, r8
     1f9c:	85 87       	std	Z+13, r24	; 0x0d
@@ -4724,7 +4716,7 @@ int main(void)
     1fa0:	b2 e0       	ldi	r27, 0x02	; 2
     1fa2:	ed 91       	ld	r30, X+
     1fa4:	fc 91       	ld	r31, X
-    1fa6:	c6 01       	movw	r24, r12
+    1fa6:	c8 01       	movw	r24, r16
     1fa8:	09 95       	icall
     1faa:	f4 01       	movw	r30, r8
     1fac:	86 87       	std	Z+14, r24	; 0x0e
@@ -4744,12 +4736,12 @@ int main(void)
 					memcpy ( hx.get_cal(&hx), HX711_ptr, sizeblock ); // Update new values
     1fcc:	a0 90 a4 01 	lds	r10, 0x01A4	; 0x8001a4 <HX711_ptr>
     1fd0:	b0 90 a5 01 	lds	r11, 0x01A5	; 0x8001a5 <HX711_ptr+0x1>
-    1fd4:	d6 01       	movw	r26, r12
+    1fd4:	d8 01       	movw	r26, r16
     1fd6:	d3 96       	adiw	r26, 0x33	; 51
     1fd8:	ed 91       	ld	r30, X+
     1fda:	fc 91       	ld	r31, X
     1fdc:	d4 97       	sbiw	r26, 0x34	; 52
-    1fde:	c6 01       	movw	r24, r12
+    1fde:	c8 01       	movw	r24, r16
     1fe0:	09 95       	icall
     1fe2:	dc 01       	movw	r26, r24
     1fe4:	90 e1       	ldi	r25, 0x10	; 16
@@ -4762,12 +4754,12 @@ int main(void)
 				
 				//value = (value - hx.get_offset_128(&hx)) / hx.get_divfactor_128(&hx); //value to be published to LCD
 				value = (tmp - hx.get_offset_64(&hx)) / hx.get_divfactor_64(&hx); //value to be published to LCD
-    1ff0:	d6 01       	movw	r26, r12
+    1ff0:	d8 01       	movw	r26, r16
     1ff2:	d7 96       	adiw	r26, 0x37	; 55
     1ff4:	ed 91       	ld	r30, X+
     1ff6:	fc 91       	ld	r31, X
     1ff8:	d8 97       	sbiw	r26, 0x38	; 56
-    1ffa:	c6 01       	movw	r24, r12
+    1ffa:	c8 01       	movw	r24, r16
     1ffc:	09 95       	icall
     1ffe:	88 d2       	rcall	.+1296   	; 0x2510 <__floatsisf>
     2000:	9b 01       	movw	r18, r22
@@ -4777,12 +4769,12 @@ int main(void)
     2008:	7f d1       	rcall	.+766    	; 0x2308 <__subsf3>
     200a:	2b 01       	movw	r4, r22
     200c:	3c 01       	movw	r6, r24
-    200e:	d6 01       	movw	r26, r12
+    200e:	d8 01       	movw	r26, r16
     2010:	dd 96       	adiw	r26, 0x3d	; 61
     2012:	ed 91       	ld	r30, X+
     2014:	fc 91       	ld	r31, X
     2016:	de 97       	sbiw	r26, 0x3e	; 62
-    2018:	c6 01       	movw	r24, r12
+    2018:	c8 01       	movw	r24, r16
     201a:	09 95       	icall
     201c:	68 2f       	mov	r22, r24
     201e:	70 e0       	ldi	r23, 0x00	; 0
@@ -4820,7 +4812,7 @@ int main(void)
     2052:	5c f5       	brge	.+86     	; 0x20aa <main+0x438>
 					publish = value / 1000;
 					lcd0.gotoxy(2,0);
-    2054:	d8 01       	movw	r26, r16
+    2054:	d7 01       	movw	r26, r14
     2056:	52 96       	adiw	r26, 0x12	; 18
     2058:	ed 91       	ld	r30, X+
     205a:	fc 91       	ld	r31, X
@@ -4831,7 +4823,7 @@ int main(void)
     2064:	90 e0       	ldi	r25, 0x00	; 0
 					lcd0.string_size(function.ftoa(publish, result, 3), 13); lcd0.string_size("Kg", 4);
     2066:	09 95       	icall
-    2068:	f8 01       	movw	r30, r16
+    2068:	f7 01       	movw	r30, r14
     206a:	a4 84       	ldd	r10, Z+12	; 0x0c
     206c:	b5 84       	ldd	r11, Z+13	; 0x0d
     206e:	20 e0       	ldi	r18, 0x00	; 0
@@ -4854,7 +4846,7 @@ int main(void)
     2090:	6d e0       	ldi	r22, 0x0D	; 13
     2092:	f5 01       	movw	r30, r10
     2094:	09 95       	icall
-    2096:	d8 01       	movw	r26, r16
+    2096:	d7 01       	movw	r26, r14
     2098:	1c 96       	adiw	r26, 0x0c	; 12
     209a:	ed 91       	ld	r30, X+
     209c:	fc 91       	ld	r31, X
@@ -4867,7 +4859,7 @@ int main(void)
 				}else{
 					publish = value;
 					lcd0.gotoxy(2,0);
-    20aa:	d8 01       	movw	r26, r16
+    20aa:	d7 01       	movw	r26, r14
     20ac:	52 96       	adiw	r26, 0x12	; 18
     20ae:	ed 91       	ld	r30, X+
     20b0:	fc 91       	ld	r31, X
@@ -4878,7 +4870,7 @@ int main(void)
     20ba:	90 e0       	ldi	r25, 0x00	; 0
     20bc:	09 95       	icall
 					lcd0.string_size(function.ftoa(publish, result, ZERO), 13); lcd0.string_size("gram", 4);
-    20be:	f8 01       	movw	r30, r16
+    20be:	f7 01       	movw	r30, r14
     20c0:	a4 84       	ldd	r10, Z+12	; 0x0c
     20c2:	b5 84       	ldd	r11, Z+13	; 0x0d
     20c4:	20 e0       	ldi	r18, 0x00	; 0
@@ -4896,7 +4888,7 @@ int main(void)
     20dc:	6d e0       	ldi	r22, 0x0D	; 13
     20de:	f5 01       	movw	r30, r10
     20e0:	09 95       	icall
-    20e2:	d8 01       	movw	r26, r16
+    20e2:	d7 01       	movw	r26, r14
     20e4:	1c 96       	adiw	r26, 0x0c	; 12
     20e6:	ed 91       	ld	r30, X+
     20e8:	fc 91       	ld	r31, X
@@ -4907,18 +4899,17 @@ int main(void)
     20f2:	09 95       	icall
 				}
 				
-				
 				// Jump Menu signal
-				if(signal==1){
+				if(signal == 1){
     20f4:	80 91 36 01 	lds	r24, 0x0136	; 0x800136 <__data_end>
     20f8:	81 30       	cpi	r24, 0x01	; 1
     20fa:	09 f0       	breq	.+2      	; 0x20fe <main+0x48c>
     20fc:	ec ce       	rjmp	.-552    	; 0x1ed6 <main+0x264>
 					Menu = '2';
     20fe:	b2 e3       	ldi	r27, 0x32	; 50
-    2100:	b0 93 00 01 	sts	0x0100, r27	; 0x800100 <Menu>
+    2100:	b0 93 00 01 	sts	0x0100, r27	; 0x800100 <__DATA_REGION_ORIGIN__>
 					lcd0.clear();
-    2104:	d8 01       	movw	r26, r16
+    2104:	d7 01       	movw	r26, r14
     2106:	50 96       	adiw	r26, 0x10	; 16
     2108:	ed 91       	ld	r30, X+
     210a:	fc 91       	ld	r31, X
@@ -4931,7 +4922,7 @@ int main(void)
 			/***MENU 2***/
 			case '2': //
 				lcd0.gotoxy(0,3);
-    2112:	d8 01       	movw	r26, r16
+    2112:	d7 01       	movw	r26, r14
     2114:	52 96       	adiw	r26, 0x12	; 18
     2116:	ed 91       	ld	r30, X+
     2118:	fc 91       	ld	r31, X
@@ -4942,7 +4933,7 @@ int main(void)
     2122:	90 e0       	ldi	r25, 0x00	; 0
     2124:	09 95       	icall
 				lcd0.string_size("SETUP DIVFACTOR",15);
-    2126:	d8 01       	movw	r26, r16
+    2126:	d7 01       	movw	r26, r14
     2128:	1c 96       	adiw	r26, 0x0c	; 12
     212a:	ed 91       	ld	r30, X+
     212c:	fc 91       	ld	r31, X
@@ -4953,15 +4944,15 @@ int main(void)
     2136:	09 95       	icall
 				
 				// Jump Menus signal
-				if(signal==2){
+				if(signal == 2){
     2138:	80 91 36 01 	lds	r24, 0x0136	; 0x800136 <__data_end>
     213c:	82 30       	cpi	r24, 0x02	; 2
     213e:	09 f0       	breq	.+2      	; 0x2142 <main+0x4d0>
     2140:	ca ce       	rjmp	.-620    	; 0x1ed6 <main+0x264>
-					Menu='1';
-    2142:	30 92 00 01 	sts	0x0100, r3	; 0x800100 <Menu>
+					Menu = '1';
+    2142:	30 92 00 01 	sts	0x0100, r3	; 0x800100 <__DATA_REGION_ORIGIN__>
 					lcd0.clear();
-    2146:	d8 01       	movw	r26, r16
+    2146:	d7 01       	movw	r26, r14
     2148:	50 96       	adiw	r26, 0x10	; 16
     214a:	ed 91       	ld	r30, X+
     214c:	fc 91       	ld	r31, X
@@ -4973,7 +4964,7 @@ int main(void)
 			/***MENU 3***/
 			case '3': //
 				lcd0.gotoxy(0,0);
-    2154:	d8 01       	movw	r26, r16
+    2154:	d7 01       	movw	r26, r14
     2156:	52 96       	adiw	r26, 0x12	; 18
     2158:	ed 91       	ld	r30, X+
     215a:	fc 91       	ld	r31, X
@@ -4984,7 +4975,7 @@ int main(void)
     2164:	90 e0       	ldi	r25, 0x00	; 0
     2166:	09 95       	icall
 				lcd0.string_size("Not being used",19);
-    2168:	d8 01       	movw	r26, r16
+    2168:	d7 01       	movw	r26, r14
     216a:	1c 96       	adiw	r26, 0x0c	; 12
     216c:	ed 91       	ld	r30, X+
     216e:	fc 91       	ld	r31, X
@@ -4999,7 +4990,7 @@ int main(void)
 				/********************************************************************/
 			default:
 				Menu = '1';
-    217c:	30 92 00 01 	sts	0x0100, r3	; 0x800100 <Menu>
+    217c:	30 92 00 01 	sts	0x0100, r3	; 0x800100 <__DATA_REGION_ORIGIN__>
 				break;
     2180:	aa ce       	rjmp	.-684    	; 0x1ed6 <main+0x264>
 

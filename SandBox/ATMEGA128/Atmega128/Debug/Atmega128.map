@@ -1509,14 +1509,14 @@ END GROUP
  .debug_str     0x00001049       0x87 main.o
                                 0x71c (size before relaxing)
 
-.debug_loc      0x00000000     0x3f67
+.debug_loc      0x00000000     0x3f7d
  *(.debug_loc)
  .debug_loc     0x00000000      0x8f5 Libraria/atmega128timer.o
  .debug_loc     0x000008f5      0x39e Libraria/explode.o
  .debug_loc     0x00000c93     0x1b02 Libraria/function.o
  .debug_loc     0x00002795     0x1128 Libraria/lcd.o
  .debug_loc     0x000038bd      0x410 Libraria/hx711.o
- .debug_loc     0x00003ccd      0x29a main.o
+ .debug_loc     0x00003ccd      0x2b0 main.o
 
 .debug_macinfo
  *(.debug_macinfo)
