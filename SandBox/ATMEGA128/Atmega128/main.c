@@ -165,7 +165,7 @@ int main(void)
 					Menu = '2';
 					lcd0.clear();
 				}
-					
+				
 				break;
 			/***MENU 2***/
 			case '2': //
