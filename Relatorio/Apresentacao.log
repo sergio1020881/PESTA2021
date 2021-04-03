@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  27 FEB 2021 01:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  3 APR 2021 17:40
 entering extended mode
 **./Apresentacao.tex
 (Apresentacao.tex
@@ -946,7 +946,7 @@ File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 
 
 Writing index file Apresentacao.idx
-) (Apresentacao.aux (include/CAPABEAMER.aux))
+) (Apresentacao.aux (include/CAPA/CAPABEAMER.aux))
 \openout1 = `Apresentacao.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
@@ -1132,14 +1132,14 @@ File: portuguese.bdf 2019/03/11 v1.32 babelbib: multilingual bibliographies (HH
 babelbib extension \bibsportuguese added to \extrasportuguese
 babelbib extension \btxifchangecaseoff added to \extrasportuguese
 ) (Apresentacao.nav)
-\openout2 = `./include/CAPABEAMER.aux'.
+\openout2 = `./include/CAPA/CAPABEAMER.aux'.
 
- (include/CAPABEAMER.tex
-<./image/Career_Path/Progressao.png, id=43, 618.31pt x 350.30875pt>
-File: ./image/Career_Path/Progressao.png Graphic file (type png)
-<use ./image/Career_Path/Progressao.png>
-Package pdftex.def Info: ./image/Career_Path/Progressao.png  used on input line
- 22.
+ (include/CAPA/CAPABEAMER.tex
+<./image/CORGA/Career_Path/Progressao.png, id=43, 618.31pt x 350.30875pt>
+File: ./image/CORGA/Career_Path/Progressao.png Graphic file (type png)
+<use ./image/CORGA/Career_Path/Progressao.png>
+Package pdftex.def Info: ./image/CORGA/Career_Path/Progressao.png  used on inpu
+t line 22.
 (pdftex.def)             Requested size: 216.41174pt x 122.6099pt.
 
 Overfull \hbox (17.24245pt too wide) in paragraph at lines 22--22
@@ -1164,43 +1164,43 @@ ut line 22.
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
-<./image/Career_Path/Old_Age.jpeg, id=45, 164.615pt x 252.945pt>
-File: ./image/Career_Path/Old_Age.jpeg Graphic file (type jpg)
-<use ./image/Career_Path/Old_Age.jpeg>
-Package pdftex.def Info: ./image/Career_Path/Old_Age.jpeg  used on input line 2
-2.
+<./image/CORGA/Career_Path/Old_Age.jpeg, id=45, 164.615pt x 252.945pt>
+File: ./image/CORGA/Career_Path/Old_Age.jpeg Graphic file (type jpg)
+<use ./image/CORGA/Career_Path/Old_Age.jpeg>
+Package pdftex.def Info: ./image/CORGA/Career_Path/Old_Age.jpeg  used on input 
+line 22.
 (pdftex.def)             Requested size: 41.15364pt x 63.23608pt.
-<./image/Career_Path/Burial.jpeg, id=46, 1284.8pt x 722.7pt>
-File: ./image/Career_Path/Burial.jpeg Graphic file (type jpg)
-<use ./image/Career_Path/Burial.jpeg>
-Package pdftex.def Info: ./image/Career_Path/Burial.jpeg  used on input line 22
-.
+<./image/CORGA/Career_Path/Burial.jpeg, id=46, 1284.8pt x 722.7pt>
+File: ./image/CORGA/Career_Path/Burial.jpeg Graphic file (type jpg)
+<use ./image/CORGA/Career_Path/Burial.jpeg>
+Package pdftex.def Info: ./image/CORGA/Career_Path/Burial.jpeg  used on input l
+ine 22.
 (pdftex.def)             Requested size: 128.48752pt x 72.27423pt.
 
 [1{C:/Users/sergi/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
 
 
- <./image/Career_Path/Progressao.png> <./image/Career_Path/Old_Age.jpeg> <./ima
-ge/Career_Path/Burial.jpeg>]) (input/slide/Introducao.tex (Apresentacao.toc) [2
+ <./image/CORGA/Career_Path/Progressao.png> <./image/CORGA/Career_Path/Old_Age.
+jpeg> <./image/CORGA/Career_Path/Burial.jpeg>]) (input/slide/Introducao.tex (Ap
+resentacao.toc) [2
 
 
 ] [3
 
 ] [4
 
-]
-[5
+] [5
 
 ]) (input/slide/Desenvolvimento.tex (Apresentacao.toc) [6
 
-] [7
+]
+[7
 
 ] [8
 
 ] [9
 
-])
-(input/slide/Conclusao.tex (Apresentacao.toc) [10
+]) (input/slide/Conclusao.tex (Apresentacao.toc) [10
 
 ] [11
 
@@ -1216,8 +1216,8 @@ ge/Career_Path/Burial.jpeg>]) (input/slide/Introducao.tex (Apresentacao.toc) [2
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 29.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 29.
- (Apresentacao.aux
-(include/CAPABEAMER.aux))
+
+(Apresentacao.aux (include/CAPA/CAPABEAMER.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 29.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 29.
 Package rerunfilecheck Info: File `Apresentacao.out' has not changed.
@@ -1225,8 +1225,8 @@ Package rerunfilecheck Info: File `Apresentacao.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  24235 strings out of 480790
- 468341 string characters out of 2907055
- 748202 words of memory out of 3000000
+ 468502 string characters out of 2907055
+ 748203 words of memory out of 3000000
  39575 multiletter control sequences out of 15000+200000
  543876 words of font info for 53 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1237,7 +1237,7 @@ Here is how much of TeX's memory you used:
 /dpi600\ecss0800.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
 pen/ec/dpi600\ecss1440.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour
 /jknappen/ec/dpi600\ecss0600.pk>
-Output written on Apresentacao.pdf (11 pages, 266891 bytes).
+Output written on Apresentacao.pdf (11 pages, 266903 bytes).
 PDF statistics:
  577 PDF objects out of 1000 (max. 8388607)
  26 named destinations out of 1000 (max. 500000)
