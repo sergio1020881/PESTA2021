@@ -11,28 +11,12 @@
 \renewcommand\thesubsection{\thesection.\arabic{subsection}}
 \renewcommand\thesubsubsection{\thesection.\thesubsection.\arabic{subsubsection}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\include{./include/CAPAREPORT}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{./include/CAPA/CAPAREPORT}
 \include{./include/Acknowledgement}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \include{./include/Abstract}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\tableofcontents
-\newpage
-\listoffigures
-\newpage
-\listoftables
-\newpage
+\include{./include/ContentFigureTable}
 \include{./include/Acronym}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\pagestyle{plain} %plain headings empty
-%\setcounter{chapter}{0}
-%\numberwithin{page}{section}
-%\renewcommand{\abstractname}{Executive Summary}
-%\captionsetup{justification = raggedright, singlelinecheck = false}
-%\setcounter{section}{1}
-\setlength{\parindent}{0in}
-\newpage
+\include{./include/configure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \include{./input/page/Introducao}
@@ -46,16 +30,14 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{./input/excerpt/sample}
-\newpage
-%\input{./input/excerpt/MCU}
-%\newpage
-%\input{./input/excerpt/PRLC}
+%%%\input{./input/excerpt/MCU}
+%%%\newpage
+%%%\input{./input/excerpt/PRLC}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%\include{./input/excerpt/DEFINICAO}
+%%%\clearpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
-\include{./input/excerpt/DEFINICAO}
-\clearpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\cite{*}
 \bibliography{./bibliography/Bibliography}
 \bibliographystyle{plain}
 \newpage
@@ -63,6 +45,22 @@
 \end{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\begin{comment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+	%%% [H] [ht]
+	%%% \captionsetup{justification=raggedright,singlelinecheck=false}
+	%%% \flushleft
+	%%% \centering
+	%%% \begin{center}
+	%%%	\vspace{2.4in}
+	%%% \includegraphics[scale=0.52]{./image.jpg}
+	%%% \end{center}
+	%%% \caption{caption}
+	%%% \label{label}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 %\end{comment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

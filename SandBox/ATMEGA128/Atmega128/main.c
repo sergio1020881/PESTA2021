@@ -221,6 +221,8 @@ ISR(TIMER1_COMPA_vect) // 1 second intervals
 	
 	if((F.ll(&F) & 0x3F) == ONE)
 		counter_1++;
+	else if(counter_1 < _5sec+ONE)
+		counter_1=0;
 	
 	if((F.ll(&F) & 0x3F) == 3)
 		counter_2++;

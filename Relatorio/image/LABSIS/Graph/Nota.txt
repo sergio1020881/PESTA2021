@@ -1,0 +1,8 @@
+The graph below shows the effect of adjusting the tilt. The turquoise line 
+shows the amount of solar energy you would get each day if the panel is fixed 
+at the full year angle. The red line shows how much you would get by adjusting 
+the tilt four times a year as described below. For comparison, the green line 
+shows the energy you would get from two-axis tracking, which always points the 
+panel directly at the sun. (The violet line is the solar energy per day if the 
+panel is fixed at the winter angle, discussed below.) These figures are calculated 
+for 40° latitude. 
