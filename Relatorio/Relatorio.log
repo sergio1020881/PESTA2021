@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  3 APR 2021 17:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  3 APR 2021 17:33
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
@@ -827,26 +827,26 @@ File: tikzlibrarypositioning.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 
 
 Writing index file Relatorio.idx
-) (Relatorio.aux (include/CAPA/CAPAREPORT.aux) (include/Acknowledgement.aux)
-(include/Abstract.aux) (include/ContentFigureTable.aux) (include/Acronym.aux)
-(include/configure.aux) (input/page/Introducao.aux)
-(input/page/Desenvolvimento.aux) (input/page/Conclusao.aux))
+) (Relatorio.aux (include/CAPA/CAPAREPORT.aux)
+(include/SETUP/Acknowledgement.aux) (include/SETUP/Abstract.aux)
+(include/SETUP/ContentFigureTable.aux) (include/SETUP/Acronym.aux)
+(include/SETUP/ConfigurePage.aux))
 \openout1 = `Relatorio.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
 
 ("C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -912,10 +912,11 @@ File: portuguese.bdf 2019/03/11 v1.32 babelbib: multilingual bibliographies (HH
 
 babelbib extension \bibsportuguese added to \extrasportuguese
 babelbib extension \btxifchangecaseoff added to \extrasportuguese
-) ABD: EveryShipout initializing macros
+) ABD: EveryShipout initializing macros (input/Inic.tex
 \openout2 = `./include/CAPA/CAPAREPORT.aux'.
 
- (include/CAPA/CAPAREPORT.tex
+
+(include/CAPA/CAPAREPORT.tex
 <./image/capa/ISEP_marca_cor_grande.png, id=4, 730.6497pt x 278.2395pt>
 File: ./image/capa/ISEP_marca_cor_grande.png Graphic file (type png)
 <use ./image/capa/ISEP_marca_cor_grande.png>
@@ -934,7 +935,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 35.
 ("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
-Overfull \hbox (17.62482pt too wide) in paragraph at lines 33--14
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 33--9
 []$[]$ 
  []
 
@@ -946,17 +947,17 @@ Overfull \hbox (17.62482pt too wide) in paragraph at lines 33--14
 {C:/Users/sergi/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
 
  <./image/capa/ISEP_marca_cor_grande.png>]
-\openout2 = `./include/Acknowledgement.aux'.
+\openout2 = `./include/SETUP/Acknowledgement.aux'.
 
- (include/Acknowledgement.tex) [2
+ (include/SETUP/Acknowledgement.tex) [2
 
 
 
 ]
-\openout2 = `./include/Abstract.aux'.
+\openout2 = `./include/SETUP/Abstract.aux'.
 
 
-(include/Abstract.tex
+(include/SETUP/Abstract.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--14
 
  []
@@ -980,9 +981,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--14
 
 
 ])
-\openout2 = `./include/ContentFigureTable.aux'.
+\openout2 = `./include/SETUP/ContentFigureTable.aux'.
 
- (include/ContentFigureTable.tex (Relatorio.toc)
+ (include/SETUP/ContentFigureTable.tex (Relatorio.toc)
 \tf@toc=\write5
 \openout5 = `Relatorio.toc'.
 
@@ -990,24 +991,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--14
 
 
 
-] (Relatorio.lof
-
-LaTeX Warning: Citation `book_11' on page 2 undefined on input line 9.
-
-
-LaTeX Warning: Citation `article_1' on page 2 undefined on input line 12.
-
-
-LaTeX Warning: Citation `article_1' on page 2 undefined on input line 13.
-
-
-LaTeX Warning: Citation `article_1' on page 2 undefined on input line 14.
-
-)
+] (Relatorio.lof)
 \tf@lof=\write6
 \openout6 = `Relatorio.lof'.
 
- [2
+
+[2
 
 ] (Relatorio.lot)
 \tf@lot=\write7
@@ -1016,19 +1005,16 @@ LaTeX Warning: Citation `article_1' on page 2 undefined on input line 14.
  [3
 
 ])
-\openout2 = `./include/Acronym.aux'.
+\openout2 = `./include/SETUP/Acronym.aux'.
 
- (include/Acronym.tex) [4
+ (include/SETUP/Acronym.tex) [4
 
 
 ]
-\openout2 = `./include/configure.aux'.
-
- (include/configure.tex)
-\openout2 = `./input/page/Introducao.aux'.
+\openout2 = `./include/SETUP/ConfigurePage.aux'.
 
 
-(input/page/Introducao.tex
+(include/SETUP/ConfigurePage.tex)) (input/page/Introducao.tex
 Cap\'{\i }tulo 1.
 <./image/PESTA/general/balanca_1.jpg, id=41, 642.4pt x 481.8pt>
 File: ./image/PESTA/general/balanca_1.jpg Graphic file (type jpg)
@@ -1076,7 +1062,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--23
 
 
 
-
  <./image/PESTA/general/balanca_1.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 24--28
 
@@ -1092,10 +1077,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--28
 
  []
 
-) [6]
-\openout2 = `./input/page/Desenvolvimento.aux'.
-
- (input/page/Desenvolvimento.tex
+) [6] (input/page/Desenvolvimento.tex
 Cap\'{\i }tulo 2.
 
 Overfull \hbox (27.2254pt too wide) in paragraph at lines 12--34
@@ -1114,640 +1096,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--40
 
 ) [7
 
-
-
-]
-\openout2 = `./input/page/Conclusao.aux'.
-
- (input/page/Conclusao.tex
+] (input/page/Conclusao.tex
 Cap\'{\i }tulo 3.
 ) [8
 
-
-
-] (input/excerpt/sample.tex
-<./image/CORGA/OB/OB_contributions.jpg, id=57, 587.19376pt x 627.34375pt>
-File: ./image/CORGA/OB/OB_contributions.jpg Graphic file (type jpg)
-<use ./image/CORGA/OB/OB_contributions.jpg>
-Package pdftex.def Info: ./image/CORGA/OB/OB_contributions.jpg  used on input l
-ine 42.
-(pdftex.def)             Requested size: 305.34251pt x 326.22063pt.
-<./image/CORGA/OB/OB_MUltilevelmodelCulture.jpg, id=58, 575.14874pt x 578.16pt>
-
-File: ./image/CORGA/OB/OB_MUltilevelmodelCulture.jpg Graphic file (type jpg)
-<use ./image/CORGA/OB/OB_MUltilevelmodelCulture.jpg>
-Package pdftex.def Info: ./image/CORGA/OB/OB_MUltilevelmodelCulture.jpg  used o
-n input line 49.
-(pdftex.def)             Requested size: 172.54594pt x 173.44933pt.
-
-Overfull \hbox (40.23929pt too wide) in paragraph at lines 49--50
-[]  
- []
-
-<./image/CORGA/OB/Hofstede_pt.jpg, id=59, 673.51625pt x 340.27126pt>
-File: ./image/CORGA/OB/Hofstede_pt.jpg Graphic file (type jpg)
-<use ./image/CORGA/OB/Hofstede_pt.jpg>
-Package pdftex.def Info: ./image/CORGA/OB/Hofstede_pt.jpg  used on input line 5
-4.
-(pdftex.def)             Requested size: 296.34807pt x 149.7198pt.
-
-Overfull \hbox (119.94368pt too wide) in paragraph at lines 54--55
-[]  
- []
-
-
-LaTeX Warning: Citation `book_11' on page 9 undefined on input line 56.
-
-
-LaTeX Warning: Citation `book_11' on page 9 undefined on input line 56.
-
-[9
-
-
-]
-<./image/CORGA/OB/OC_Dimensions.jpg, id=63, 721.69624pt x 331.2375pt>
-File: ./image/CORGA/OB/OC_Dimensions.jpg Graphic file (type jpg)
-<use ./image/CORGA/OB/OC_Dimensions.jpg>
-Package pdftex.def Info: ./image/CORGA/OB/OC_Dimensions.jpg  used on input line
- 62.
-(pdftex.def)             Requested size: 288.67339pt x 132.49265pt.
- [10 <./image/CORGA/OB/OB_contributions.jpg> <./image/CORGA/OB/OB_MUltilevelmod
-elCulture.jpg> <./image/CORGA/OB/Hofstede_pt.jpg>]
-<./image/CORGA/ROQ/maquinas/ECO-P18_600x600-2-275x275.jpg, id=68, 276.03125pt x
- 276.03125pt>
-File: ./image/CORGA/ROQ/maquinas/ECO-P18_600x600-2-275x275.jpg Graphic file (ty
-pe jpg)
-<use ./image/CORGA/ROQ/maquinas/ECO-P18_600x600-2-275x275.jpg>
-Package pdftex.def Info: ./image/CORGA/ROQ/maquinas/ECO-P18_600x600-2-275x275.j
-pg  used on input line 71.
-(pdftex.def)             Requested size: 138.01527pt x 138.01527pt.
-<./image/CORGA/ROQ/maquinas/EVO-600x600-275x275.jpg, id=69, 276.03125pt x 276.0
-3125pt>
-File: ./image/CORGA/ROQ/maquinas/EVO-600x600-275x275.jpg Graphic file (type jpg
-)
-<use ./image/CORGA/ROQ/maquinas/EVO-600x600-275x275.jpg>
-Package pdftex.def Info: ./image/CORGA/ROQ/maquinas/EVO-600x600-275x275.jpg  us
-ed on input line 72.
-(pdftex.def)             Requested size: 138.01527pt x 138.01527pt.
-<./image/CORGA/ROQ/maquinas/nanop10-275x275.jpg, id=70, 276.03125pt x 276.03125
-pt>
-File: ./image/CORGA/ROQ/maquinas/nanop10-275x275.jpg Graphic file (type jpg)
-<use ./image/CORGA/ROQ/maquinas/nanop10-275x275.jpg>
-Package pdftex.def Info: ./image/CORGA/ROQ/maquinas/nanop10-275x275.jpg  used o
-n input line 73.
-(pdftex.def)             Requested size: 138.01527pt x 138.01527pt.
-<./image/CORGA/ROQ/maquinas/NEXTP18-600x6001-275x275.jpg, id=71, 276.03125pt x 
-276.03125pt>
-File: ./image/CORGA/ROQ/maquinas/NEXTP18-600x6001-275x275.jpg Graphic file (typ
-e jpg)
-<use ./image/CORGA/ROQ/maquinas/NEXTP18-600x6001-275x275.jpg>
-Package pdftex.def Info: ./image/CORGA/ROQ/maquinas/NEXTP18-600x6001-275x275.jp
-g  used on input line 74.
-(pdftex.def)             Requested size: 138.01527pt x 138.01527pt.
-<./image/CORGA/ROQ/maquinas/PRO-600x600-275x275.jpg, id=72, 276.03125pt x 276.0
-3125pt>
-File: ./image/CORGA/ROQ/maquinas/PRO-600x600-275x275.jpg Graphic file (type jpg
-)
-<use ./image/CORGA/ROQ/maquinas/PRO-600x600-275x275.jpg>
-Package pdftex.def Info: ./image/CORGA/ROQ/maquinas/PRO-600x600-275x275.jpg  us
-ed on input line 75.
-(pdftex.def)             Requested size: 138.01527pt x 138.01527pt.
-<./image/CORGA/ROQ/maquinas/You-600x600-275x275.jpg, id=73, 276.03125pt x 276.0
-3125pt>
-File: ./image/CORGA/ROQ/maquinas/You-600x600-275x275.jpg Graphic file (type jpg
-)
-<use ./image/CORGA/ROQ/maquinas/You-600x600-275x275.jpg>
-Package pdftex.def Info: ./image/CORGA/ROQ/maquinas/You-600x600-275x275.jpg  us
-ed on input line 76.
-(pdftex.def)             Requested size: 138.01527pt x 138.01527pt.
- [11 <./image/CORGA/OB/OC_Dimensions.jpg> <./image/CORGA/ROQ/maquinas/ECO-P18_6
-00x600-2-275x275.jpg> <./image/CORGA/ROQ/maquinas/EVO-600x600-275x275.jpg> <./i
-mage/CORGA/ROQ/maquinas/nanop10-275x275.jpg> <./image/CORGA/ROQ/maquinas/NEXTP1
-8-600x6001-275x275.jpg> <./image/CORGA/ROQ/maquinas/PRO-600x600-275x275.jpg> <.
-/image/CORGA/ROQ/maquinas/You-600x600-275x275.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 105--111
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 115--121
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 133--135
-\T1/cmr/m/n/12 (Liderança de su-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 135--137
-\T1/cmr/m/n/12 (Liderança Ins-tru-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 154--155
-[]\T1/cmr/m/n/12 Taxa cres-ci-mento
- []
-
-<./image/CORGA/OB/Leadership.jpg, id=78, 1072.005pt x 559.08875pt>
-File: ./image/CORGA/OB/Leadership.jpg Graphic file (type jpg)
-<use ./image/CORGA/OB/Leadership.jpg>
-Package pdftex.def Info: ./image/CORGA/OB/Leadership.jpg  used on input line 16
-4.
-(pdftex.def)             Requested size: 536.00119pt x 279.54369pt.
-
-Overfull \hbox (94.98346pt too wide) in paragraph at lines 164--164
- [][] 
- []
-
-
-LaTeX Warning: Citation `article_1' on page 12 undefined on input line 165.
-
-
-LaTeX Warning: Citation `article_1' on page 12 undefined on input line 165.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 128--166
-
- []
-
-[12]
-<./image/CORGA/OB/Culture.jpg, id=82, 891.33pt x 558.085pt>
-File: ./image/CORGA/OB/Culture.jpg Graphic file (type jpg)
-<use ./image/CORGA/OB/Culture.jpg>
-Package pdftex.def Info: ./image/CORGA/OB/Culture.jpg  used on input line 171.
-(pdftex.def)             Requested size: 534.80214pt x 334.85359pt.
-
-Overfull \hbox (93.78441pt too wide) in paragraph at lines 171--171
- [][] 
- []
-
-
-LaTeX Warning: Citation `article_1' on page 13 undefined on input line 172.
-
-
-LaTeX Warning: Citation `article_1' on page 13 undefined on input line 172.
-
-[13 <./image/CORGA/OB/Leadership.jpg>]
-<./image/CORGA/OB/Ogbonna_Harris.jpg, id=86, 1222.5675pt x 610.28pt>
-File: ./image/CORGA/OB/Ogbonna_Harris.jpg Graphic file (type jpg)
-<use ./image/CORGA/OB/Ogbonna_Harris.jpg>
-Package pdftex.def Info: ./image/CORGA/OB/Ogbonna_Harris.jpg  used on input lin
-e 177.
-(pdftex.def)             Requested size: 427.90503pt x 213.6012pt.
-
-
-LaTeX Warning: Citation `article_1' on page 14 undefined on input line 178.
-
-
-LaTeX Warning: Citation `article_1' on page 14 undefined on input line 178.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<./image/CORGA/Leadership/Leadership_Models.jpg, id=87, 532.99126pt x 507.8975p
-t>
-File: ./image/CORGA/Leadership/Leadership_Models.jpg Graphic file (type jpg)
-<use ./image/CORGA/Leadership/Leadership_Models.jpg>
-Package pdftex.def Info: ./image/CORGA/Leadership/Leadership_Models.jpg  used o
-n input line 243.
-(pdftex.def)             Requested size: 277.15704pt x 264.10823pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 238--246
-
- []
-
-[14 <./image/CORGA/OB/Culture.jpg> <./image/CORGA/OB/Ogbonna_Harris.jpg>]
-Overfull \vbox (89.80527pt too high) has occurred while \output is active []
-
-
-[15 <./image/CORGA/Leadership/Leadership_Models.jpg>]
-(input/excerpt/Competencias.tex
-Underfull \hbox (badness 10000) in paragraph at lines 248--2
-
- []
-
-
-LaTeX Warning: Citation `article_1' on page 16 undefined on input line 2.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 8--12
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--14
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--26
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 26--27
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--34
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 39--42
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 42--46
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 46--50
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 50--56
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 56--62
-
- []
-
-) (input/excerpt/sergio1020881.tex
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 4--1
-[] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--1
-
- []
-
-
-LaTeX Warning: Citation `book_9' on page 16 undefined on input line 5.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--14
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--26
-
- []
-
-<./image/CORGA/Skills/Managerial_Skills_for_the_Global_Marketplace.jpg, id=98, 
-942.52126pt x 480.79625pt>
-File: ./image/CORGA/Skills/Managerial_Skills_for_the_Global_Marketplace.jpg Gra
-phic file (type jpg)
-<use ./image/CORGA/Skills/Managerial_Skills_for_the_Global_Marketplace.jpg>
-Package pdftex.def Info: ./image/CORGA/Skills/Managerial_Skills_for_the_Global_
-Marketplace.jpg  used on input line 30.
-(pdftex.def)             Requested size: 282.75856pt x 144.23997pt.
-
-Overfull \hbox (26.68376pt too wide) in paragraph at lines 30--31
-[]  
- []
-
-
-Overfull \hbox (45.2896pt too wide) in paragraph at lines 2--38
-[]$ $[]$ 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2--38
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2--38
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2--38
-
- []
-
-[16] [17 <./image/CORGA/Skills/Managerial_Skills_for_the_Global_Marketplace.jpg
->]
-Underfull \hbox (badness 10000) in paragraph at lines 40--78
-
- []
-
-
-Overfull \hbox (14.63141pt too wide) in paragraph at lines 40--78
-[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 79--85
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 79--85
-
- []
-
-[18]
-
-LaTeX Warning: Citation `book_12' on page 19 undefined on input line 86.
-
-)
-Overfull \hbox (213.86046pt too wide) in paragraph at lines 260--286
-[][] 
- []
-
-
-Overfull \hbox (440.93864pt too wide) detected at line 293
-[]
- []
-
-
-Overfull \hbox (50.38667pt too wide) in paragraph at lines 298--316
-[][]
- []
-
-<./image/ESTAT/TEE.png, id=109, 566.86781pt x 255.95625pt>
-File: ./image/ESTAT/TEE.png Graphic file (type png)
-<use ./image/ESTAT/TEE.png>
-Package pdftex.def Info: ./image/ESTAT/TEE.png  used on input line 322.
-(pdftex.def)             Requested size: 283.43321pt x 127.9778pt.
-
-Overfull \hbox (107.02882pt too wide) in paragraph at lines 322--323
- [][] 
- []
-
-
-Overfull \hbox (122.68771pt too wide) detected at line 365
-[]
- []
-
-
-Overfull \hbox (55.61626pt too wide) detected at line 372
-[]
- []
-
-
-Overfull \hbox (316.39835pt too wide) detected at line 376
-[] \OT1/cmr/m/n/12 = [] \OMS/cmsy/m/n/12   []  \U/msa/m/n/12 v \OML/cmm/m/it/12
- N []  \OT1/cmr/m/n/12 ;  [] + []  [] 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 6558
- []
-
-
-Overfull \hbox (453.53749pt too wide) detected at line 386
-\OML/cmm/m/it/12 z[]  \OT1/cmr/m/n/12 =  []  []  \OMS/cmsy/m/n/12  \OT1/cmr/m/n
-/12 1\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 8523 \OML/cmm/m/it/12 RC[]  \OT1/cmr/m/n
-/12 =  []  \OML/cmm/m/it/12 pvalue  \OT1/cmr/m/n/12 =  \OML/cmm/m/it/12 P\OT1/c
-mr/m/n/12 (\OML/cmm/m/it/12 Z < z[]\OT1/cmr/m/n/12 )  =  0\OML/cmm/m/it/12 :\OT
-1/cmr/m/n/12 032
- []
-
-
-Overfull \hbox (55.61626pt too wide) detected at line 395
-[]
- []
-
-
-Overfull \hbox (309.26295pt too wide) detected at line 399
-[] \OT1/cmr/m/n/12 = [] \OMS/cmsy/m/n/12   []  \U/msa/m/n/12 v \OML/cmm/m/it/12
- N []  \OT1/cmr/m/n/12 ;  [] + []  [] 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 1296
- []
-
-
-Overfull \hbox (441.78761pt too wide) detected at line 410
-\OML/cmm/m/it/12 z[]  \OT1/cmr/m/n/12 =  []  []  \OMS/cmsy/m/n/12  \OT1/cmr/m/n
-/12 2\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 5 \OML/cmm/m/it/12 RC[]  \OT1/cmr/m/n/12
- =  []  \OML/cmm/m/it/12 pvalue  \OT1/cmr/m/n/12 =  \OML/cmm/m/it/12 P\OT1/cmr/
-m/n/12 (\OML/cmm/m/it/12 Z < z[]\OT1/cmr/m/n/12 )  =  0\OML/cmm/m/it/12 :\OT1/c
-mr/m/n/12 0062
- []
-
-
-Overfull \hbox (180.61122pt too wide) detected at line 419
-[]
- []
-
-
-Overfull \hbox (174.73628pt too wide) detected at line 429
-[]
- []
-
-<./image/ESTAT/TEE_DIFF.png, id=110, 602.25pt x 401.5pt>
-File: ./image/ESTAT/TEE_DIFF.png Graphic file (type png)
-<use ./image/ESTAT/TEE_DIFF.png>
-Package pdftex.def Info: ./image/ESTAT/TEE_DIFF.png  used on input line 442.
-(pdftex.def)             Requested size: 240.89572pt x 160.59715pt.
-
-Overfull \hbox (42.4391pt too wide) in paragraph at lines 442--443
- [][] 
- []
-
-<./image/ESTAT/NEE_DIFF.png, id=111, 602.25pt x 401.5pt>
-File: ./image/ESTAT/NEE_DIFF.png Graphic file (type png)
-<use ./image/ESTAT/NEE_DIFF.png>
-Package pdftex.def Info: ./image/ESTAT/NEE_DIFF.png  used on input line 451.
-(pdftex.def)             Requested size: 240.89572pt x 160.59715pt.
-
-Overfull \hbox (42.4391pt too wide) in paragraph at lines 451--452
- [][] 
- []
-
-
-Overfull \hbox (172.4007pt too wide) detected at line 465
-[]
- []
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 468.
-
-Missing character: There is no é in font cmr12!
-
-LaTeX Warning: Command \' invalid in math mode on input line 472.
-
-Missing character: There is no é in font cmr12!
-
-Overfull \hbox (169.46634pt too wide) detected at line 480
-[]
- []
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 483.
-
-Missing character: There is no é in font cmr12!
-
-LaTeX Warning: Command \' invalid in math mode on input line 487.
-
-Missing character: There is no é in font cmr12!
-<./image/ESTAT/TEE_NORM_DIST.png, id=112, 602.25pt x 401.5pt>
-File: ./image/ESTAT/TEE_NORM_DIST.png Graphic file (type png)
-<use ./image/ESTAT/TEE_NORM_DIST.png>
-Package pdftex.def Info: ./image/ESTAT/TEE_NORM_DIST.png  used on input line 49
-2.
-(pdftex.def)             Requested size: 240.89572pt x 160.59715pt.
-
-Overfull \hbox (42.4391pt too wide) in paragraph at lines 492--493
- [][] 
- []
-
-<./image/ESTAT/NEE_NORM_DIST.png, id=113, 602.25pt x 401.5pt>
-File: ./image/ESTAT/NEE_NORM_DIST.png Graphic file (type png)
-<use ./image/ESTAT/NEE_NORM_DIST.png>
-Package pdftex.def Info: ./image/ESTAT/NEE_NORM_DIST.png  used on input line 50
-1.
-(pdftex.def)             Requested size: 240.89572pt x 160.59715pt.
-
-Overfull \hbox (42.4391pt too wide) in paragraph at lines 501--502
- [][] 
- []
-
-<./image/ESTAT/TEE_MEDIA_DIST.png, id=114, 602.25pt x 401.5pt>
-File: ./image/ESTAT/TEE_MEDIA_DIST.png Graphic file (type png)
-<use ./image/ESTAT/TEE_MEDIA_DIST.png>
-Package pdftex.def Info: ./image/ESTAT/TEE_MEDIA_DIST.png  used on input line 5
-10.
-(pdftex.def)             Requested size: 240.89572pt x 160.59715pt.
-
-Overfull \hbox (42.4391pt too wide) in paragraph at lines 510--511
- [][] 
- []
-
-<./image/ESTAT/NEE_MEDIA_DIST.png, id=115, 602.25pt x 401.5pt>
-File: ./image/ESTAT/NEE_MEDIA_DIST.png Graphic file (type png)
-<use ./image/ESTAT/NEE_MEDIA_DIST.png>
-Package pdftex.def Info: ./image/ESTAT/NEE_MEDIA_DIST.png  used on input line 5
-19.
-(pdftex.def)             Requested size: 240.89572pt x 160.59715pt.
-
-Overfull \hbox (42.4391pt too wide) in paragraph at lines 519--520
- [][] 
- []
-
-)
-Underfull \hbox (badness 10000) in paragraph at lines 86--40
-
- []
-
-
-Overfull \hbox (20.3528pt too wide) in paragraph at lines 86--40
-[]$   $[]$ $\OML/cmm/m/it/12 IC[] \OT1/cmr/m/n/12 =
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--40
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--40
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--40
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--40
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--40
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--40
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--40
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--40
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--40
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--40
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--40
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--40
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--40
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--40
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--40
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--40
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--40
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--40
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--40
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--40
-
- []
-
-[19] [20 <./image/ESTAT/TEE.png (PNG copy)>] [21 <./image/ESTAT/TEE_DIFF.png> <
-./image/ESTAT/NEE_DIFF.png>] (Relatorio.bbl [22 <./image/ESTAT/TEE_NORM_DIST.pn
-g> <./image/ESTAT/NEE_NORM_DIST.png> <./image/ESTAT/TEE_MEDIA_DIST.png> <./imag
-e/ESTAT/NEE_MEDIA_DIST.png>]
+] (input/End.tex (Relatorio.bbl
 babelbib: Using the BibTeX style's default font for `name'.
 babelbib: Using the BibTeX style's default font for `lastname'.
 babelbib: Using the BibTeX style's default font for `title'.
@@ -1759,56 +1112,42 @@ babelbib: Using the BibTeX style's default font for `ISBN'.
 babelbib: Using the BibTeX style's default font for `ISSN'.
 babelbib: Using the BibTeX style's default font for `url'.
 babelbib: Using the BibTeX style's default font for `numeral'.
-) [23
+) [9
 
-] [24] (Relatorio.aux (include/CAPA/CAPAREPORT.aux)
-(include/Acknowledgement.aux) (include/Abstract.aux)
-(include/ContentFigureTable.aux) (include/Acronym.aux) (include/configure.aux)
-(input/page/Introducao.aux) (input/page/Desenvolvimento.aux)
-(input/page/Conclusao.aux))
-
-LaTeX Warning: There were undefined references.
-
- ) 
+]) [10] (Relatorio.aux (include/CAPA/CAPAREPORT.aux)
+(include/SETUP/Acknowledgement.aux) (include/SETUP/Abstract.aux)
+(include/SETUP/ContentFigureTable.aux) (include/SETUP/Acronym.aux)
+(include/SETUP/ConfigurePage.aux)) ) 
 Here is how much of TeX's memory you used:
- 32856 strings out of 480790
- 781026 string characters out of 2907055
- 1319805 words of memory out of 3000000
- 48252 multiletter control sequences out of 15000+200000
- 555159 words of font info for 81 fonts, out of 3000000 for 9000
+ 32648 strings out of 480790
+ 774164 string characters out of 2907055
+ 1289401 words of memory out of 3000000
+ 48088 multiletter control sequences out of 15000+200000
+ 552508 words of font info for 73 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 65i,18n,74p,910b,590s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm
-1000.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
-0\ecrm0700.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
-/dpi600\ecrm0800.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
-pen/ec/dpi600\tcrm1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour
-/public/eurosym/dpi720\feymr10.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/p
-k/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\f
-onts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\sergi\AppData\Local\Mi
-KTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\sergi\AppData\Lo
-cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\sergi\AppD
-ata\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\serg
-i\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\User
-s\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C
-:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1440.
-pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecr
-m1440.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi6
-00\ecbx1440.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/e
-c/dpi600\ecrm2074.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-ex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:
-/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Fil
-es/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/c
-m/cmr6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:
-/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Fil
-es/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fon
-ts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX/fonts/type
-1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Relatorio.pdf (27 pages, 1394571 bytes).
+ 65i,15n,74p,908b,590s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\sergi\AppData\Local\MiKTeX\fonts
+/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\sergi\AppData\Local\MiKTeX
+\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\sergi\AppData\Local\
+MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\sergi\AppData\
+Local\MiKTeX\fonts/pk/ljfour/public/eurosym/dpi720\feymr10.pk> <C:\Users\sergi\
+AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\
+sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\
+Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk
+> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1
+200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600
+\ecbx1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/
+dpi600\ecrm1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknapp
+en/ec/dpi600\ecbx1728.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/
+jknappen/ec/dpi600\ecti1440.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/l
+jfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\sergi\AppData\Local\MiKTeX\font
+s/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\sergi\AppData\Local\MiKTe
+X\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2074.pk><C:/Program Files/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmmi12.pfb>
+Output written on Relatorio.pdf (13 pages, 330728 bytes).
 PDF statistics:
- 661 PDF objects out of 1000 (max. 8388607)
+ 446 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 133 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
