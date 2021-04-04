@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  4 APR 2021 13:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  4 APR 2021 16:58
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
@@ -628,7 +628,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--14
 
 ] (Relatorio.lof
 
-LaTeX Warning: Citation `book_11' on page 2 undefined on input line 12.
+LaTeX Warning: Citation `book_11' on page 2 undefined on input line 13.
 
 )
 \tf@lof=\write5
@@ -658,32 +658,84 @@ Cap\'{\i }tulo 1.
 File: ./image/PESTA/general/balanca_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/general/balanca_1.jpg>
 Package pdftex.def Info: ./image/PESTA/general/balanca_1.jpg  used on input lin
-e 11.
-(pdftex.def)             Requested size: 334.04993pt x 250.53743pt.
+e 12.
+(pdftex.def)             Requested size: 265.552pt x 199.16928pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--14
-
+Overfull \hbox (67.09538pt too wide) in paragraph at lines 12--13
+ [][] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--14
-
- []
-
-<./image/PESTA/general/public_body_scales_1.jpg, id=39, 383.18156pt x 248.42813
+<./image/PESTA/general/balanca_4.jpg, id=39, 160.4394pt x 192.9609pt>
+File: ./image/PESTA/general/balanca_4.jpg Graphic file (type jpg)
+<use ./image/PESTA/general/balanca_4.jpg>
+Package pdftex.def Info: ./image/PESTA/general/balanca_4.jpg  used on input lin
+e 21.
+(pdftex.def)             Requested size: 165.60695pt x 199.16928pt.
+<./image/PESTA/general/Public_Body_Scales_1.jpg, id=40, 383.18156pt x 248.42813
 pt>
-File: ./image/PESTA/general/public_body_scales_1.jpg Graphic file (type jpg)
-<use ./image/PESTA/general/public_body_scales_1.jpg>
-Package pdftex.def Info: ./image/PESTA/general/public_body_scales_1.jpg  used o
-n input line 21.
-(pdftex.def)             Requested size: 344.86021pt x 223.58325pt.
+File: ./image/PESTA/general/Public_Body_Scales_1.jpg Graphic file (type jpg)
+<use ./image/PESTA/general/Public_Body_Scales_1.jpg>
+Package pdftex.def Info: ./image/PESTA/general/Public_Body_Scales_1.jpg  used o
+n input line 37.
+(pdftex.def)             Requested size: 307.20636pt x 199.16928pt.
+<./image/PESTA/general/Balanca_Mola_1.jpg, id=41, 97.8054pt x 204.5241pt>
+File: ./image/PESTA/general/Balanca_Mola_1.jpg Graphic file (type jpg)
+<use ./image/PESTA/general/Balanca_Mola_1.jpg>
+Package pdftex.def Info: ./image/PESTA/general/Balanca_Mola_1.jpg  used on inpu
+t line 39.
+(pdftex.def)             Requested size: 95.24718pt x 199.16928pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--24
+Underfull \hbox (badness 10000) in paragraph at lines 4--54
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--24
+Overfull \hbox (23.71245pt too wide) in paragraph at lines 4--54
+[]$   $[]$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--54
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--54
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--54
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--54
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--54
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--54
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--54
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--54
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--54
 
  []
 
@@ -692,28 +744,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--24
 
 
 
- <./image/PESTA/general/balanca_1.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 25--32
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--32
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--32
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--32
-
- []
-
-) [6 <./image/PESTA/general/public_body_scales_1.jpg>]
-(input/page/Desenvolvimento.tex
+ <./image/PESTA/general/balanca_1.jpg> <./image/PESTA/general/balanca_4.jpg>]) 
+[6 <./image/PESTA/general/Public_Body_Scales_1.jpg> <./image/PESTA/general/Bala
+nca_Mola_1.jpg>] (input/page/Desenvolvimento.tex
 Cap\'{\i }tulo 2.
 
 Overfull \hbox (27.2254pt too wide) in paragraph at lines 12--34
@@ -745,7 +778,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--42
 
  []
 
-<./image/PESTA/material/Load_Cell_1.jpg, id=49, 2337.73375pt x 1152.305pt>
+<./image/PESTA/material/Load_Cell_1.jpg, id=51, 2337.73375pt x 1152.305pt>
 File: ./image/PESTA/material/Load_Cell_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/material/Load_Cell_1.jpg>
 Package pdftex.def Info: ./image/PESTA/material/Load_Cell_1.jpg  used on input 
@@ -759,13 +792,13 @@ Overfull \hbox (26.52074pt too wide) in paragraph at lines 47--48
 [7
 
 ]
-<./image/PESTA/material/HX711_board_1.jpg, id=54, 2114.90125pt x 1071.00125pt>
+<./image/PESTA/material/HX711_board_1.jpg, id=56, 2114.90125pt x 1071.00125pt>
 File: ./image/PESTA/material/HX711_board_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/material/HX711_board_1.jpg>
 Package pdftex.def Info: ./image/PESTA/material/HX711_board_1.jpg  used on inpu
 t line 55.
 (pdftex.def)             Requested size: 211.50252pt x 107.1064pt.
-<./image/PESTA/schematic/HX711_Schematic_1.jpg, id=55, 628.59843pt x 310.91156p
+<./image/PESTA/schematic/HX711_Schematic_1.jpg, id=57, 628.59843pt x 310.91156p
 t>
 File: ./image/PESTA/schematic/HX711_Schematic_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/schematic/HX711_Schematic_1.jpg>
@@ -780,7 +813,7 @@ Cap\'{\i }tulo 3.
 
 ] (input/excerpt/Sample_1.tex
 Cap\'{\i }tulo 4.
-<./image/CORGA/OB/OB_MUltilevelmodelCulture.jpg, id=62, 575.14874pt x 578.16pt>
+<./image/CORGA/OB/OB_MUltilevelmodelCulture.jpg, id=64, 575.14874pt x 578.16pt>
 
 File: ./image/CORGA/OB/OB_MUltilevelmodelCulture.jpg Graphic file (type jpg)
 <use ./image/CORGA/OB/OB_MUltilevelmodelCulture.jpg>
@@ -792,7 +825,7 @@ Overfull \hbox (40.23929pt too wide) in paragraph at lines 36--37
 []  
  []
 
-<./image/CORGA/OB/Hofstede_pt.jpg, id=63, 673.51625pt x 340.27126pt>
+<./image/CORGA/OB/Hofstede_pt.jpg, id=65, 673.51625pt x 340.27126pt>
 File: ./image/CORGA/OB/Hofstede_pt.jpg Graphic file (type jpg)
 <use ./image/CORGA/OB/Hofstede_pt.jpg>
 Package pdftex.def Info: ./image/CORGA/OB/Hofstede_pt.jpg  used on input line 4
@@ -832,7 +865,7 @@ Overfull \hbox (50.38667pt too wide) in paragraph at lines 193--211
 [][]
  []
 
-<./image/ESTAT/TEE.png, id=72, 566.86781pt x 255.95625pt>
+<./image/ESTAT/TEE.png, id=74, 566.86781pt x 255.95625pt>
 File: ./image/ESTAT/TEE.png Graphic file (type png)
 <use ./image/ESTAT/TEE.png>
 Package pdftex.def Info: ./image/ESTAT/TEE.png  used on input line 217.
@@ -842,7 +875,7 @@ Overfull \hbox (107.02882pt too wide) in paragraph at lines 217--218
  [][] 
  []
 
-<./image/ESTAT/TEE_DIFF.png, id=73, 602.25pt x 401.5pt>
+<./image/ESTAT/TEE_DIFF.png, id=75, 602.25pt x 401.5pt>
 File: ./image/ESTAT/TEE_DIFF.png Graphic file (type png)
 <use ./image/ESTAT/TEE_DIFF.png>
 Package pdftex.def Info: ./image/ESTAT/TEE_DIFF.png  used on input line 229.
@@ -852,7 +885,7 @@ Overfull \hbox (42.4391pt too wide) in paragraph at lines 229--230
  [][] 
  []
 
-<./image/ESTAT/NEE_DIFF.png, id=74, 602.25pt x 401.5pt>
+<./image/ESTAT/NEE_DIFF.png, id=76, 602.25pt x 401.5pt>
 File: ./image/ESTAT/NEE_DIFF.png Graphic file (type png)
 <use ./image/ESTAT/NEE_DIFF.png>
 Package pdftex.def Info: ./image/ESTAT/NEE_DIFF.png  used on input line 238.
@@ -862,7 +895,7 @@ Overfull \hbox (42.4391pt too wide) in paragraph at lines 238--239
  [][] 
  []
 
-<./image/ESTAT/TEE_NORM_DIST.png, id=75, 602.25pt x 401.5pt>
+<./image/ESTAT/TEE_NORM_DIST.png, id=77, 602.25pt x 401.5pt>
 File: ./image/ESTAT/TEE_NORM_DIST.png Graphic file (type png)
 <use ./image/ESTAT/TEE_NORM_DIST.png>
 Package pdftex.def Info: ./image/ESTAT/TEE_NORM_DIST.png  used on input line 24
@@ -873,7 +906,7 @@ Overfull \hbox (42.4391pt too wide) in paragraph at lines 247--248
  [][] 
  []
 
-<./image/ESTAT/NEE_NORM_DIST.png, id=76, 602.25pt x 401.5pt>
+<./image/ESTAT/NEE_NORM_DIST.png, id=78, 602.25pt x 401.5pt>
 File: ./image/ESTAT/NEE_NORM_DIST.png Graphic file (type png)
 <use ./image/ESTAT/NEE_NORM_DIST.png>
 Package pdftex.def Info: ./image/ESTAT/NEE_NORM_DIST.png  used on input line 25
@@ -884,7 +917,7 @@ Overfull \hbox (42.4391pt too wide) in paragraph at lines 256--257
  [][] 
  []
 
-<./image/ESTAT/TEE_MEDIA_DIST.png, id=77, 602.25pt x 401.5pt>
+<./image/ESTAT/TEE_MEDIA_DIST.png, id=79, 602.25pt x 401.5pt>
 File: ./image/ESTAT/TEE_MEDIA_DIST.png Graphic file (type png)
 <use ./image/ESTAT/TEE_MEDIA_DIST.png>
 Package pdftex.def Info: ./image/ESTAT/TEE_MEDIA_DIST.png  used on input line 2
@@ -895,7 +928,7 @@ Overfull \hbox (42.4391pt too wide) in paragraph at lines 265--266
  [][] 
  []
 
-<./image/ESTAT/NEE_MEDIA_DIST.png, id=78, 602.25pt x 401.5pt>
+<./image/ESTAT/NEE_MEDIA_DIST.png, id=80, 602.25pt x 401.5pt>
 File: ./image/ESTAT/NEE_MEDIA_DIST.png Graphic file (type png)
 <use ./image/ESTAT/NEE_MEDIA_DIST.png>
 Package pdftex.def Info: ./image/ESTAT/NEE_MEDIA_DIST.png  used on input line 2
@@ -1132,10 +1165,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 8982 strings out of 480790
- 143733 string characters out of 2907055
+ 8995 strings out of 480790
+ 144183 string characters out of 2907055
  569174 words of memory out of 3000000
- 24696 multiletter control sequences out of 15000+200000
+ 24707 multiletter control sequences out of 15000+200000
  557404 words of font info for 88 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,19n,52p,467b,590s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1171,9 +1204,9 @@ c/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm
 s/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/publi
 c/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfo
 nts/symbols/msbm10.pfb>
-Output written on Relatorio.pdf (26 pages, 2401550 bytes).
+Output written on Relatorio.pdf (26 pages, 2954107 bytes).
 PDF statistics:
- 684 PDF objects out of 1000 (max. 8388607)
+ 685 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
 
