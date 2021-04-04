@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  4 APR 2021 18:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  4 APR 2021 21:48
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
@@ -682,57 +682,52 @@ Package pdftex.def Info: ./image/PESTA/general/Balanca_Mola_1.jpg  used on inpu
 t line 39.
 (pdftex.def)             Requested size: 95.24718pt x 199.16928pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--54
+Underfull \hbox (badness 10000) in paragraph at lines 4--56
 
  []
 
 
-Overfull \hbox (23.71245pt too wide) in paragraph at lines 4--54
+Overfull \hbox (23.71245pt too wide) in paragraph at lines 4--56
 []$   $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--54
+Underfull \hbox (badness 10000) in paragraph at lines 4--56
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--54
+Underfull \hbox (badness 10000) in paragraph at lines 4--56
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--54
+Underfull \hbox (badness 10000) in paragraph at lines 4--56
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--54
+Underfull \hbox (badness 10000) in paragraph at lines 4--56
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--54
+Underfull \hbox (badness 10000) in paragraph at lines 4--56
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--54
+Underfull \hbox (badness 10000) in paragraph at lines 4--56
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--54
+Underfull \hbox (badness 10000) in paragraph at lines 4--56
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--54
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--54
+Underfull \hbox (badness 10000) in paragraph at lines 4--56
 
  []
 
@@ -746,89 +741,65 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--54
 nca_Mola_1.jpg>] (input/page/Desenvolvimento.tex
 Cap\'{\i }tulo 2.
 
-Overfull \hbox (27.2254pt too wide) in paragraph at lines 12--34
+Overfull \hbox (27.2254pt too wide) in paragraph at lines 7--29
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--34
+Underfull \hbox (badness 10000) in paragraph at lines 7--29
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--42
+Underfull \hbox (badness 10000) in paragraph at lines 32--37
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--42
+Underfull \hbox (badness 10000) in paragraph at lines 32--37
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--42
+Underfull \hbox (badness 10000) in paragraph at lines 32--37
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--42
+Underfull \hbox (badness 10000) in paragraph at lines 32--37
 
  []
 
-<./image/PESTA/material/Load_Cell_1.jpg, id=51, 2337.73375pt x 1152.305pt>
+<./image/PESTA/material/Load_Cell_1.jpg, id=55, 2337.73375pt x 1152.305pt>
 File: ./image/PESTA/material/Load_Cell_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/material/Load_Cell_1.jpg>
 Package pdftex.def Info: ./image/PESTA/material/Load_Cell_1.jpg  used on input 
-line 47.
-(pdftex.def)             Requested size: 467.53847pt x 230.45691pt.
-
-Overfull \hbox (26.52074pt too wide) in paragraph at lines 47--48
-[]  
- []
-
+line 42.
+(pdftex.def)             Requested size: 350.64493pt x 172.83829pt.
 [7
 
 ]
-<./image/PESTA/material/HX711_board_1.jpg, id=56, 2114.90125pt x 1071.00125pt>
-File: ./image/PESTA/material/HX711_board_1.jpg Graphic file (type jpg)
-<use ./image/PESTA/material/HX711_board_1.jpg>
-Package pdftex.def Info: ./image/PESTA/material/HX711_board_1.jpg  used on inpu
-t line 55.
-(pdftex.def)             Requested size: 211.50252pt x 107.1064pt.
-<./image/PESTA/schematic/HX711_Schematic_1.jpg, id=57, 628.59843pt x 310.91156p
+<./image/PESTA/schematic/HX711_Schematic_1.jpg, id=60, 628.59843pt x 310.91156p
 t>
 File: ./image/PESTA/schematic/HX711_Schematic_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/schematic/HX711_Schematic_1.jpg>
 Package pdftex.def Info: ./image/PESTA/schematic/HX711_Schematic_1.jpg  used on
- input line 63.
-(pdftex.def)             Requested size: 440.0159pt x 217.6366pt.
-) [8 <./image/PESTA/material/Load_Cell_1.jpg> <./image/PESTA/material/HX711_boa
-rd_1.jpg> <./image/PESTA/schematic/HX711_Schematic_1.jpg>]
+ input line 50.
+(pdftex.def)             Requested size: 220.01274pt x 108.82066pt.
+<./image/PESTA/material/HX711_board_1.jpg, id=61, 2004.48875pt x 1071.00125pt>
+File: ./image/PESTA/material/HX711_board_1.jpg Graphic file (type jpg)
+<use ./image/PESTA/material/HX711_board_1.jpg>
+Package pdftex.def Info: ./image/PESTA/material/HX711_board_1.jpg  used on inpu
+t line 51.
+(pdftex.def)             Requested size: 200.46062pt x 107.1064pt.
+) [8 <./image/PESTA/material/Load_Cell_1.jpg> <./image/PESTA/schematic/HX711_Sc
+hematic_1.jpg> <./image/PESTA/material/HX711_board_1.jpg>]
 (input/page/Conclusao.tex
 Cap\'{\i }tulo 3.
 ) [9
 
-] (input/excerpt/Definition_1.tex
+] (input/excerpt/Physic_1.tex
 Cap\'{\i }tulo 4.
-
-Overfull \hbox (46.71495pt too wide) in paragraph at lines 4--36
-[] []
- []
-
-) (input/excerpt/Physic_1.tex
-Overfull \hbox (46.71495pt too wide) in paragraph at lines 37--1
-[][] []
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 37--1
-
- []
-
-[10
-
-]
-Cap\'{\i }tulo 5.
 
 Underfull \hbox (badness 10000) in paragraph at lines 6--23
 
@@ -879,160 +850,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--66
 
  []
 
-[11
+[10
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 67--74
 
  []
 
-
-Overfull \hbox (440.93864pt too wide) detected at line 99
-[]
- []
-
-
-Overfull \hbox (122.68771pt too wide) detected at line 164
-[]
- []
-
-
-Overfull \hbox (55.61626pt too wide) detected at line 173
-[]
- []
-
-
-Overfull \hbox (316.39835pt too wide) detected at line 177
-[] \OT1/cmr/m/n/12 = [] \OMS/cmsy/m/n/12   []  \U/msa/m/n/12 v \OML/cmm/m/it/12
- N []  \OT1/cmr/m/n/12 ;  [] + []  [] 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 6558
- []
-
-
-Overfull \hbox (453.53749pt too wide) detected at line 189
-\OML/cmm/m/it/12 z[]  \OT1/cmr/m/n/12 =  []  []  \OMS/cmsy/m/n/12  \OT1/cmr/m/n
-/12 1\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 8523 \OML/cmm/m/it/12 RC[]  \OT1/cmr/m/n
-/12 =  []  \OML/cmm/m/it/12 pvalue  \OT1/cmr/m/n/12 =  \OML/cmm/m/it/12 P\OT1/c
-mr/m/n/12 (\OML/cmm/m/it/12 Z < z[]\OT1/cmr/m/n/12 )  =  0\OML/cmm/m/it/12 :\OT
-1/cmr/m/n/12 032
- []
-
-
-Overfull \hbox (55.61626pt too wide) detected at line 199
-[]
- []
-
-
-Overfull \hbox (309.26295pt too wide) detected at line 203
-[] \OT1/cmr/m/n/12 = [] \OMS/cmsy/m/n/12   []  \U/msa/m/n/12 v \OML/cmm/m/it/12
- N []  \OT1/cmr/m/n/12 ;  [] + []  [] 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 1296
- []
-
-
-Overfull \hbox (441.78761pt too wide) detected at line 215
-\OML/cmm/m/it/12 z[]  \OT1/cmr/m/n/12 =  []  []  \OMS/cmsy/m/n/12  \OT1/cmr/m/n
-/12 2\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 5 \OML/cmm/m/it/12 RC[]  \OT1/cmr/m/n/12
- =  []  \OML/cmm/m/it/12 pvalue  \OT1/cmr/m/n/12 =  \OML/cmm/m/it/12 P\OT1/cmr/
-m/n/12 (\OML/cmm/m/it/12 Z < z[]\OT1/cmr/m/n/12 )  =  0\OML/cmm/m/it/12 :\OT1/c
-mr/m/n/12 0062
- []
-
-
-Overfull \hbox (180.61122pt too wide) detected at line 225
-[]
- []
-
-
-Overfull \hbox (174.73628pt too wide) detected at line 236
-[]
- []
-
-
-Overfull \hbox (122.68771pt too wide) detected at line 297
-[]
- []
-
-
-Overfull \hbox (55.61626pt too wide) detected at line 306
-[]
- []
-
-
-Overfull \hbox (316.39835pt too wide) detected at line 310
-[] \OT1/cmr/m/n/12 = [] \OMS/cmsy/m/n/12   []  \U/msa/m/n/12 v \OML/cmm/m/it/12
- N []  \OT1/cmr/m/n/12 ;  [] + []  [] 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 6558
- []
-
-
-Overfull \hbox (453.53749pt too wide) detected at line 322
-\OML/cmm/m/it/12 z[]  \OT1/cmr/m/n/12 =  []  []  \OMS/cmsy/m/n/12  \OT1/cmr/m/n
-/12 1\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 8523 \OML/cmm/m/it/12 RC[]  \OT1/cmr/m/n
-/12 =  []  \OML/cmm/m/it/12 pvalue  \OT1/cmr/m/n/12 =  \OML/cmm/m/it/12 P\OT1/c
-mr/m/n/12 (\OML/cmm/m/it/12 Z < z[]\OT1/cmr/m/n/12 )  =  0\OML/cmm/m/it/12 :\OT
-1/cmr/m/n/12 032
- []
-
-
-Overfull \hbox (55.61626pt too wide) detected at line 332
-[]
- []
-
-
-Overfull \hbox (309.26295pt too wide) detected at line 336
-[] \OT1/cmr/m/n/12 = [] \OMS/cmsy/m/n/12   []  \U/msa/m/n/12 v \OML/cmm/m/it/12
- N []  \OT1/cmr/m/n/12 ;  [] + []  [] 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 1296
- []
-
-
-Overfull \hbox (441.78761pt too wide) detected at line 348
-\OML/cmm/m/it/12 z[]  \OT1/cmr/m/n/12 =  []  []  \OMS/cmsy/m/n/12  \OT1/cmr/m/n
-/12 2\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 5 \OML/cmm/m/it/12 RC[]  \OT1/cmr/m/n/12
- =  []  \OML/cmm/m/it/12 pvalue  \OT1/cmr/m/n/12 =  \OML/cmm/m/it/12 P\OT1/cmr/
-m/n/12 (\OML/cmm/m/it/12 Z < z[]\OT1/cmr/m/n/12 )  =  0\OML/cmm/m/it/12 :\OT1/c
-mr/m/n/12 0062
- []
-
-
-Overfull \hbox (180.61122pt too wide) detected at line 358
-[]
- []
-
-
-Overfull \hbox (174.73628pt too wide) detected at line 369
-[]
- []
-
-
-Overfull \hbox (172.4007pt too wide) detected at line 391
-[]
- []
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 396.
-
-Missing character: There is no é in font cmr12!
-
-LaTeX Warning: Command \' invalid in math mode on input line 400.
-
-Missing character: There is no é in font cmr12!
-
-Overfull \hbox (169.46634pt too wide) detected at line 410
-[]
- []
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 415.
-
-Missing character: There is no é in font cmr12!
-
-LaTeX Warning: Command \' invalid in math mode on input line 419.
-
-Missing character: There is no é in font cmr12!
 ) (input/End.tex
 Underfull \hbox (badness 10000) in paragraph at lines 75--1
 
  []
 
-[12] [13] [14] [15] [16] (Relatorio.bbl [17]
+(Relatorio.bbl [11]
 babelbib: Using the BibTeX style's default font for `name'.
 babelbib: Using the BibTeX style's default font for `lastname'.
 babelbib: Using the BibTeX style's default font for `title'.
@@ -1044,57 +874,51 @@ babelbib: Using the BibTeX style's default font for `ISBN'.
 babelbib: Using the BibTeX style's default font for `ISSN'.
 babelbib: Using the BibTeX style's default font for `url'.
 babelbib: Using the BibTeX style's default font for `numeral'.
-) [18
+) [12
 
-]) [19] (Relatorio.aux (include/CAPA/CAPAREPORT.aux)
+]) [13] (Relatorio.aux (include/CAPA/CAPAREPORT.aux)
 (include/SETUP/Acknowledgement.aux) (include/SETUP/Abstract.aux)
 (include/SETUP/ContentFigureTable.aux) (include/SETUP/Acronym.aux)
 (include/SETUP/ConfigurePage.aux)) ) 
 Here is how much of TeX's memory you used:
- 8921 strings out of 480790
- 142180 string characters out of 2907055
- 569174 words of memory out of 3000000
- 24642 multiletter control sequences out of 15000+200000
- 557269 words of font info for 84 fonts, out of 3000000 for 9000
+ 8910 strings out of 480790
+ 141951 string characters out of 2907055
+ 540174 words of memory out of 3000000
+ 24637 multiletter control sequences out of 15000+200000
+ 555130 words of font info for 81 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,15n,52p,467b,590s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,15n,52p,543b,590s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\sergi\AppData\Local\MiKTeX\fonts
 /pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\sergi\AppData\Local\MiKTeX
 \fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\sergi\AppData\Local\
 MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\sergi\AppData\
 Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcti1200.pk> <C:\Users\sergi\Ap
 pData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\se
-rgi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti0800.pk> <C:\Us
-ers\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/eurosym/dpi720\feymr10.pk
-> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi1
-200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600
-\ecrm1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/
-dpi600\ecbx1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknapp
-en/ec/dpi600\ecbx2488.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/
-jknappen/ec/dpi600\ecti1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/l
-jfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\font
-s/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\sergi\AppData\Local\MiKTe
-X\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\sergi\AppData\Local
-\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1440.pk> <C:\Users\sergi\AppData
-\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\sergi\A
-ppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\s
-ergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2074.pk><C:/Pr
-ogram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/publi
-c/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C
-:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Fil
-es/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX/fonts/type1/publi
-c/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C
-:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Fil
-es/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKT
-eX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Relatorio.pdf (22 pages, 2722413 bytes).
+rgi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/eurosym/dpi720\feymr10.pk> <C:\
+Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi1200.pk
+> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1
+095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600
+\ecbx1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/
+dpi600\ecbx2488.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknapp
+en/ec/dpi600\ecti1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/
+jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/l
+jfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\font
+s/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\sergi\AppData\Local\MiKTe
+X\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1440.pk> <C:\Users\sergi\AppData\Local
+\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\sergi\AppData
+\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\sergi\A
+ppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2074.pk><C:/Program 
+Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10
+.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Prog
+ram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmsy10.pfb>
+Output written on Relatorio.pdf (16 pages, 2600282 bytes).
 PDF statistics:
- 645 PDF objects out of 1000 (max. 8388607)
+ 577 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
