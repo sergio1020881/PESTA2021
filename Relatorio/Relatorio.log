@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  4 APR 2021 22:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  4 APR 2021 22:20
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
@@ -742,32 +742,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--60
 ) [7] (input/page/Desenvolvimento.tex
 Cap\'{\i }tulo 2.
 
-Overfull \hbox (27.2254pt too wide) in paragraph at lines 7--29
+Overfull \hbox (27.2254pt too wide) in paragraph at lines 10--32
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--29
+Underfull \hbox (badness 10000) in paragraph at lines 10--32
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--37
+Underfull \hbox (badness 10000) in paragraph at lines 35--40
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--37
+Underfull \hbox (badness 10000) in paragraph at lines 35--40
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--37
+Underfull \hbox (badness 10000) in paragraph at lines 35--40
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--37
+Underfull \hbox (badness 10000) in paragraph at lines 35--40
 
  []
 
@@ -775,7 +775,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--37
 File: ./image/PESTA/material/Load_Cell_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/material/Load_Cell_1.jpg>
 Package pdftex.def Info: ./image/PESTA/material/Load_Cell_1.jpg  used on input 
-line 42.
+line 45.
 (pdftex.def)             Requested size: 350.64493pt x 172.83829pt.
 [8
 
@@ -785,13 +785,13 @@ t>
 File: ./image/PESTA/schematic/HX711_Schematic_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/schematic/HX711_Schematic_1.jpg>
 Package pdftex.def Info: ./image/PESTA/schematic/HX711_Schematic_1.jpg  used on
- input line 50.
+ input line 53.
 (pdftex.def)             Requested size: 220.01274pt x 108.82066pt.
 <./image/PESTA/material/HX711_board_1.jpg, id=65, 2004.48875pt x 1071.00125pt>
 File: ./image/PESTA/material/HX711_board_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/material/HX711_board_1.jpg>
 Package pdftex.def Info: ./image/PESTA/material/HX711_board_1.jpg  used on inpu
-t line 51.
+t line 54.
 (pdftex.def)             Requested size: 200.46062pt x 107.1064pt.
 ) [9 <./image/PESTA/material/Load_Cell_1.jpg> <./image/PESTA/schematic/HX711_Sc
 hematic_1.jpg> <./image/PESTA/material/HX711_board_1.jpg>]
@@ -917,9 +917,9 @@ onts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10
 ram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiK
 TeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type
 1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Relatorio.pdf (17 pages, 2794711 bytes).
+Output written on Relatorio.pdf (17 pages, 2797345 bytes).
 PDF statistics:
- 583 PDF objects out of 1000 (max. 8388607)
+ 588 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
