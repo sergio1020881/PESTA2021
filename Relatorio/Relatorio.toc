@@ -10,8 +10,8 @@
 \contentsline {section}{\numberline {2}Material}{7}%
 \contentsline {chapter}{\numberline {3}chapter}{9}%
 \contentsline {section}{\numberline {1}Validação}{9}%
-\contentsline {chapter}{\numberline {4}Testing Code Area}{10}%
-\contentsline {chapter}{\numberline {5}Physics}{15}%
+\contentsline {chapter}{\numberline {4}\Large {Definições}}{10}%
+\contentsline {chapter}{\numberline {5}Physics}{11}%
 \babel@toc {portuguese}{}
 \babel@toc {portuguese}{}
 \babel@toc {portuguese}{}
