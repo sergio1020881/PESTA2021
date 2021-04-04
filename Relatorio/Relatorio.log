@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  4 APR 2021 17:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  4 APR 2021 18:12
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
@@ -811,17 +811,17 @@ Cap\'{\i }tulo 3.
 ] (input/excerpt/Definition_1.tex
 Cap\'{\i }tulo 4.
 
-Overfull \hbox (46.71495pt too wide) in paragraph at lines 4--34
+Overfull \hbox (46.71495pt too wide) in paragraph at lines 4--36
 [] []
  []
 
 ) (input/excerpt/Physic_1.tex
-Overfull \hbox (46.71495pt too wide) in paragraph at lines 35--1
+Overfull \hbox (46.71495pt too wide) in paragraph at lines 37--1
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--1
+Underfull \hbox (badness 10000) in paragraph at lines 37--1
 
  []
 
@@ -1051,10 +1051,10 @@ babelbib: Using the BibTeX style's default font for `numeral'.
 (include/SETUP/ContentFigureTable.aux) (include/SETUP/Acronym.aux)
 (include/SETUP/ConfigurePage.aux)) ) 
 Here is how much of TeX's memory you used:
- 8922 strings out of 480790
- 142188 string characters out of 2907055
+ 8921 strings out of 480790
+ 142180 string characters out of 2907055
  569174 words of memory out of 3000000
- 24643 multiletter control sequences out of 15000+200000
+ 24642 multiletter control sequences out of 15000+200000
  557269 words of font info for 84 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,15n,52p,467b,590s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1092,9 +1092,9 @@ cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C
 :/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Fil
 es/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKT
 eX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Relatorio.pdf (22 pages, 2721368 bytes).
+Output written on Relatorio.pdf (22 pages, 2722413 bytes).
 PDF statistics:
- 644 PDF objects out of 1000 (max. 8388607)
+ 645 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
