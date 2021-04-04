@@ -42,6 +42,11 @@
   \btxtitlefont {À Descoberta da Física 9º Ano de Escolaridade 1º. Volume}.
 \newblock \btxpublisherfont {Porto Editora, Lda}, 1993.
 
+\bibitem {book_8}
+\btxnamefont {\btxlastnamefont {Ogata}, Katsuhiko}\btxauthorcolon\
+  \btxtitlefont {Modern Control Engineering Fifth Edition}.
+\newblock \btxpublisherfont {Prentice Hall}, 2010.
+
 \bibitem {book_3}
 \btxnamefont {\btxlastnamefont {Resnick}, JEARL\btxfnamespacelong
   WALKER\btxfnamespacelong David\btxfnamespacelong Halliday}\btxauthorcolon\

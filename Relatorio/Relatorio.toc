@@ -1,11 +1,11 @@
 \babel@toc {portuguese}{}
 \babel@toc {portuguese}{}
 \contentsline {chapter}{\numberline {1}Balança}{5}%
-\contentsline {chapter}{\numberline {2}Projecto}{7}%
-\contentsline {section}{\numberline {1}Material}{7}%
-\contentsline {chapter}{\numberline {3}chapter}{9}%
-\contentsline {section}{\numberline {1}Validação}{9}%
-\contentsline {chapter}{\numberline {4}Physics}{10}%
+\contentsline {chapter}{\numberline {2}Projecto}{8}%
+\contentsline {section}{\numberline {1}Material}{8}%
+\contentsline {chapter}{\numberline {3}chapter}{10}%
+\contentsline {section}{\numberline {1}Validação}{10}%
+\contentsline {chapter}{\numberline {4}Physics}{11}%
 \babel@toc {portuguese}{}
 \babel@toc {portuguese}{}
 \babel@toc {portuguese}{}

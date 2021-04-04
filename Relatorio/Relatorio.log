@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  4 APR 2021 21:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  4 APR 2021 22:12
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
@@ -668,66 +668,39 @@ File: ./image/PESTA/general/balanca_4.jpg Graphic file (type jpg)
 Package pdftex.def Info: ./image/PESTA/general/balanca_4.jpg  used on input lin
 e 21.
 (pdftex.def)             Requested size: 165.60695pt x 199.16928pt.
-<./image/PESTA/general/Public_Body_Scales_1.jpg, id=40, 383.18156pt x 248.42813
-pt>
-File: ./image/PESTA/general/Public_Body_Scales_1.jpg Graphic file (type jpg)
-<use ./image/PESTA/general/Public_Body_Scales_1.jpg>
-Package pdftex.def Info: ./image/PESTA/general/Public_Body_Scales_1.jpg  used o
-n input line 37.
-(pdftex.def)             Requested size: 307.20636pt x 199.16928pt.
-<./image/PESTA/general/Balanca_Mola_1.jpg, id=41, 97.8054pt x 204.5241pt>
-File: ./image/PESTA/general/Balanca_Mola_1.jpg Graphic file (type jpg)
-<use ./image/PESTA/general/Balanca_Mola_1.jpg>
-Package pdftex.def Info: ./image/PESTA/general/Balanca_Mola_1.jpg  used on inpu
-t line 39.
-(pdftex.def)             Requested size: 95.24718pt x 199.16928pt.
+<./image/PESTA/general/Weigh_Scale_Salter_1.jpg, id=40, 803.0pt x 982.67125pt>
+File: ./image/PESTA/general/Weigh_Scale_Salter_1.jpg Graphic file (type jpg)
+<use ./image/PESTA/general/Weigh_Scale_Salter_1.jpg>
+Package pdftex.def Info: ./image/PESTA/general/Weigh_Scale_Salter_1.jpg  used o
+n input line 35.
+(pdftex.def)             Requested size: 162.75365pt x 199.16928pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--56
+Underfull \hbox (badness 10000) in paragraph at lines 4--38
 
  []
 
 
-Overfull \hbox (23.71245pt too wide) in paragraph at lines 4--56
+Overfull \hbox (23.71245pt too wide) in paragraph at lines 4--38
 []$   $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--56
+Underfull \hbox (badness 10000) in paragraph at lines 4--38
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--56
+Underfull \hbox (badness 10000) in paragraph at lines 4--38
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--56
+Underfull \hbox (badness 10000) in paragraph at lines 4--38
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--56
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--56
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--56
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--56
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--56
+Underfull \hbox (badness 10000) in paragraph at lines 4--38
 
  []
 
@@ -736,9 +709,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--56
 
 
 
- <./image/PESTA/general/balanca_1.jpg> <./image/PESTA/general/balanca_4.jpg>]) 
-[6 <./image/PESTA/general/Public_Body_Scales_1.jpg> <./image/PESTA/general/Bala
-nca_Mola_1.jpg>] (input/page/Desenvolvimento.tex
+ <./image/PESTA/general/balanca_1.jpg> <./image/PESTA/general/balanca_4.jpg>]
+<./image/PESTA/general/Public_Body_Scales_1.jpg, id=51, 383.18156pt x 248.42813
+pt>
+File: ./image/PESTA/general/Public_Body_Scales_1.jpg Graphic file (type jpg)
+<use ./image/PESTA/general/Public_Body_Scales_1.jpg>
+Package pdftex.def Info: ./image/PESTA/general/Public_Body_Scales_1.jpg  used o
+n input line 46.
+(pdftex.def)             Requested size: 307.20636pt x 199.16928pt.
+<./image/PESTA/general/Balanca_Mola_1.jpg, id=52, 97.8054pt x 204.5241pt>
+File: ./image/PESTA/general/Balanca_Mola_1.jpg Graphic file (type jpg)
+<use ./image/PESTA/general/Balanca_Mola_1.jpg>
+Package pdftex.def Info: ./image/PESTA/general/Balanca_Mola_1.jpg  used on inpu
+t line 48.
+(pdftex.def)             Requested size: 95.24718pt x 199.16928pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--53
+
+ []
+
+[6 <./image/PESTA/general/Weigh_Scale_Salter_1.jpg> <./image/PESTA/general/Publ
+ic_Body_Scales_1.jpg> <./image/PESTA/general/Balanca_Mola_1.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 54--60
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--60
+
+ []
+
+) [7] (input/page/Desenvolvimento.tex
 Cap\'{\i }tulo 2.
 
 Overfull \hbox (27.2254pt too wide) in paragraph at lines 7--29
@@ -770,33 +771,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--37
 
  []
 
-<./image/PESTA/material/Load_Cell_1.jpg, id=55, 2337.73375pt x 1152.305pt>
+<./image/PESTA/material/Load_Cell_1.jpg, id=59, 2337.73375pt x 1152.305pt>
 File: ./image/PESTA/material/Load_Cell_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/material/Load_Cell_1.jpg>
 Package pdftex.def Info: ./image/PESTA/material/Load_Cell_1.jpg  used on input 
 line 42.
 (pdftex.def)             Requested size: 350.64493pt x 172.83829pt.
-[7
+[8
 
 ]
-<./image/PESTA/schematic/HX711_Schematic_1.jpg, id=60, 628.59843pt x 310.91156p
+<./image/PESTA/schematic/HX711_Schematic_1.jpg, id=64, 628.59843pt x 310.91156p
 t>
 File: ./image/PESTA/schematic/HX711_Schematic_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/schematic/HX711_Schematic_1.jpg>
 Package pdftex.def Info: ./image/PESTA/schematic/HX711_Schematic_1.jpg  used on
  input line 50.
 (pdftex.def)             Requested size: 220.01274pt x 108.82066pt.
-<./image/PESTA/material/HX711_board_1.jpg, id=61, 2004.48875pt x 1071.00125pt>
+<./image/PESTA/material/HX711_board_1.jpg, id=65, 2004.48875pt x 1071.00125pt>
 File: ./image/PESTA/material/HX711_board_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/material/HX711_board_1.jpg>
 Package pdftex.def Info: ./image/PESTA/material/HX711_board_1.jpg  used on inpu
 t line 51.
 (pdftex.def)             Requested size: 200.46062pt x 107.1064pt.
-) [8 <./image/PESTA/material/Load_Cell_1.jpg> <./image/PESTA/schematic/HX711_Sc
+) [9 <./image/PESTA/material/Load_Cell_1.jpg> <./image/PESTA/schematic/HX711_Sc
 hematic_1.jpg> <./image/PESTA/material/HX711_board_1.jpg>]
 (input/page/Conclusao.tex
 Cap\'{\i }tulo 3.
-) [9
+) [10
 
 ] (input/excerpt/Physic_1.tex
 Cap\'{\i }tulo 4.
@@ -850,7 +851,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--66
 
  []
 
-[10
+[11
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 67--74
@@ -862,7 +863,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 75--1
 
  []
 
-(Relatorio.bbl [11]
+(Relatorio.bbl [12]
 babelbib: Using the BibTeX style's default font for `name'.
 babelbib: Using the BibTeX style's default font for `lastname'.
 babelbib: Using the BibTeX style's default font for `title'.
@@ -874,17 +875,17 @@ babelbib: Using the BibTeX style's default font for `ISBN'.
 babelbib: Using the BibTeX style's default font for `ISSN'.
 babelbib: Using the BibTeX style's default font for `url'.
 babelbib: Using the BibTeX style's default font for `numeral'.
-) [12
+) [13
 
-]) [13] (Relatorio.aux (include/CAPA/CAPAREPORT.aux)
+]) [14] (Relatorio.aux (include/CAPA/CAPAREPORT.aux)
 (include/SETUP/Acknowledgement.aux) (include/SETUP/Abstract.aux)
 (include/SETUP/ContentFigureTable.aux) (include/SETUP/Acronym.aux)
 (include/SETUP/ConfigurePage.aux)) ) 
 Here is how much of TeX's memory you used:
- 8910 strings out of 480790
- 141951 string characters out of 2907055
+ 8918 strings out of 480790
+ 142254 string characters out of 2907055
  540174 words of memory out of 3000000
- 24637 multiletter control sequences out of 15000+200000
+ 24644 multiletter control sequences out of 15000+200000
  555130 words of font info for 81 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,15n,52p,543b,590s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -916,9 +917,9 @@ onts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10
 ram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiK
 TeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type
 1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Relatorio.pdf (16 pages, 2600282 bytes).
+Output written on Relatorio.pdf (17 pages, 2794711 bytes).
 PDF statistics:
- 577 PDF objects out of 1000 (max. 8388607)
+ 583 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
