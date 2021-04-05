@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  5 APR 2021 20:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  5 APR 2021 22:00
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
@@ -438,6 +438,10 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@loff=\dimen187
 \@vwid@roff=\dimen188
 ))
+("C:\Program Files\MiKTeX\tex/latex/url\url.sty"
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
 ("C:\Program Files\MiKTeX\tex/latex/setspace\setspace.sty"
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
@@ -887,10 +891,10 @@ babelbib: Using the BibTeX style's default font for `numeral'.
 (include/SETUP/ContentFigureTable.aux) (include/SETUP/Acronym.aux)
 (include/SETUP/ConfigurePage.aux)) ) 
 Here is how much of TeX's memory you used:
- 8918 strings out of 480790
- 142254 string characters out of 2907055
+ 8989 strings out of 480790
+ 143116 string characters out of 2907055
  540174 words of memory out of 3000000
- 24644 multiletter control sequences out of 15000+200000
+ 24712 multiletter control sequences out of 15000+200000
  555130 words of font info for 81 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,15n,52p,543b,590s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -922,9 +926,9 @@ onts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10
 ram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiK
 TeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type
 1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Relatorio.pdf (17 pages, 2797489 bytes).
+Output written on Relatorio.pdf (17 pages, 2797868 bytes).
 PDF statistics:
- 588 PDF objects out of 1000 (max. 8388607)
+ 589 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -12,52 +12,53 @@
   \providebibliographyfont{numeral}{}%
   \expandafter\btxselectlanguage\expandafter {\btxfallbacklanguage}
 
-\expandafter\btxselectlanguage\expandafter {\btxfallbacklanguage}
-\bibitem {book_1}
+\bibitem {book-1}
 \btxnamefont {\btxlastnamefont {Bird}, John}\btxauthorcolon\ \btxtitlefont
   {HIGHER ENGINEERING MATHEMATICS, Sixth Edition}.
 \newblock \btxpublisherfont {Elsevier Ltd}, 2010.
 
-\bibitem {book_4}
-\btxnamefont {\btxlastnamefont {Bishop}, Richard\btxfnamespacelong
-  C.\btxfnamespacelong Dorf\btxfnamespacelong Robert\btxfnamespacelong
-  H.}\btxauthorcolon\ \btxtitlefont {Modern Control Systems, Thirteenth
+\expandafter\btxselectlanguage\expandafter {\btxfallbacklanguage}
+\bibitem {book-7}
+\btxnamefont {\btxlastnamefont {Cruz}, Maria\btxfnamespacelong Natália},
+  \btxnamefont {Isabel\btxfnamespacelong Pinheiro \btxlastnamefont
+  {Martins}}\btxandcomma {} \btxandlong {}\ \btxnamefont {Anabela
+  \btxlastnamefont {Martins}}\btxauthorcolon\ \btxtitlefont {À Descoberta da
+  Física 9º Ano de Escolaridade 1º. Volume}.
+\newblock \btxpublisherfont {Porto Editora, Lda}, 1993.
+
+\bibitem {book-4}
+\btxnamefont {\btxlastnamefont {Dorf}, Richard\btxfnamespacelong C.}
+  \btxandlong {}\ \btxnamefont {Robert\btxfnamespacelong H. \btxlastnamefont
+  {Bishop}}\btxauthorcolon\ \btxtitlefont {Modern Control Systems, Thirteenth
   Edition}.
 \newblock \btxpublisherfont {Pearson Education, Inc}, 2017.
 
-\bibitem {book_6}
+\bibitem {book-6}
 \btxnamefont {\btxlastnamefont {Hawking}, Stephen}\btxauthorcolon\
   \btxtitlefont {AOS OMBROS de GIGANTES}.
 \newblock \btxpublisherfont {Texto Editores, Lda}, 2017.
 
-\bibitem {book_5}
+\bibitem {book-5}
 \btxnamefont {\btxlastnamefont {James}, Glyn}\btxauthorcolon\ \btxtitlefont
   {MODERN ENGINEERING MATHEMATICS, Fifth Edition}.
 \newblock \btxpublisherfont {PEARSON EDUCATION LIMITED}, 2015.
 
-\bibitem {book_7}
-\btxnamefont {\btxlastnamefont {Martins}, Maria\btxfnamespacelong
-  Natália\btxfnamespacelong Cruz\btxfnamespacelong Isabel\btxfnamespacelong
-  Pinheiro\btxfnamespacelong Martins\btxfnamespacelong Anabela}\btxauthorcolon\
-  \btxtitlefont {À Descoberta da Física 9º Ano de Escolaridade 1º. Volume}.
-\newblock \btxpublisherfont {Porto Editora, Lda}, 1993.
-
-\bibitem {book_8}
+\bibitem {book-8}
 \btxnamefont {\btxlastnamefont {Ogata}, Katsuhiko}\btxauthorcolon\
   \btxtitlefont {Modern Control Engineering Fifth Edition}.
 \newblock \btxpublisherfont {Prentice Hall}, 2010.
 
-\bibitem {book_3}
-\btxnamefont {\btxlastnamefont {Resnick}, JEARL\btxfnamespacelong
-  WALKER\btxfnamespacelong David\btxfnamespacelong Halliday}\btxauthorcolon\
-  \btxtitlefont {FUNDAMENTALS OF PHYSICS, Halliday and Resnick 10th edition}.
-\newblock \btxpublisherfont {John Wiley and Sons, Inc}, 2014.
-
-\bibitem {book_2}
+\bibitem {book-2}
 \btxnamefont {\btxlastnamefont {TIPLER}, PAUL\btxfnamespacelong A.} \btxandlong
   {}\ \btxnamefont {GENE \btxlastnamefont {MOSCA}}\btxauthorcolon\
   \btxtitlefont {PHYSICS FOR SCIENTISTS AND ENGINEERS, Extended Version fifth
   edition}.
 \newblock \btxpublisherfont {W. H. Freeman and Company}, 1999.
+
+\bibitem {book-3}
+\btxnamefont {\btxlastnamefont {WALKER}, JEARL} \btxandlong {}\ \btxnamefont
+  {David\btxfnamespacelong Halliday \btxlastnamefont {Resnick}}\btxauthorcolon\
+  \btxtitlefont {FUNDAMENTALS OF PHYSICS, Halliday and Resnick 10th edition}.
+\newblock \btxpublisherfont {John Wiley \& Sons, Inc}, 2014.
 
 \end{thebibliography}
