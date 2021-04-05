@@ -1,0 +1,60 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Relatorio.aux
+Reallocating 'name_of_file' (item size: 1) to 6 items.
+The style file: plain.bst
+Reallocating 'name_of_file' (item size: 1) to 30 items.
+A level-1 auxiliary file: ./include/CAPA/CAPAREPORT.aux
+Reallocating 'name_of_file' (item size: 1) to 36 items.
+A level-1 auxiliary file: ./include/SETUP/Acknowledgement.aux
+Reallocating 'name_of_file' (item size: 1) to 29 items.
+A level-1 auxiliary file: ./include/SETUP/Abstract.aux
+Reallocating 'name_of_file' (item size: 1) to 39 items.
+A level-1 auxiliary file: ./include/SETUP/ContentFigureTable.aux
+Reallocating 'name_of_file' (item size: 1) to 28 items.
+A level-1 auxiliary file: ./include/SETUP/Acronym.aux
+Reallocating 'name_of_file' (item size: 1) to 34 items.
+A level-1 auxiliary file: ./include/SETUP/ConfigurePage.aux
+Reallocating 'name_of_file' (item size: 1) to 28 items.
+Database file #1: ./bibliography/Bibliography.bib
+You've used 8 entries,
+            2118 wiz_defined-function locations,
+            541 strings with 5037 characters,
+and the built_in function-call counts, 1915 in all, are:
+= -- 166
+> -- 85
+< -- 0
++ -- 34
+- -- 26
+* -- 87
+:= -- 343
+add.period$ -- 24
+call.type$ -- 8
+change.case$ -- 29
+chr.to.int$ -- 0
+cite$ -- 8
+duplicate$ -- 96
+empty$ -- 177
+format.name$ -- 26
+if$ -- 402
+int.to.chr$ -- 0
+int.to.str$ -- 8
+missing$ -- 16
+newline$ -- 43
+num.names$ -- 16
+pop$ -- 69
+preamble$ -- 1
+purify$ -- 29
+quote$ -- 0
+skip$ -- 51
+stack$ -- 0
+substring$ -- 40
+swap$ -- 8
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 16
+warning$ -- 0
+while$ -- 16
+width$ -- 9
+write$ -- 82

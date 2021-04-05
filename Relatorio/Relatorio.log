@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  5 APR 2021 22:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  5 APR 2021 23:09
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
@@ -63,6 +63,10 @@ File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
 Language: portuges 2020/05/04 v1.2r Portuguese support from the babel system
 Package babel Info: Making " an active character on input line 143.
 ))
+("C:\Program Files\MiKTeX\tex/latex/babelbib\babelbib.sty"
+Package: babelbib 2019/03/11 v1.32 babelbib: multilingual bibliographies (HH)
+\c@btxromaniannumeral=\count178
+)
 ("C:\Program Files\MiKTeX\tex/latex/hyphenat\hyphenat.sty"
 Package: hyphenat 2009/09/02 v2.3c hyphenation utilities
 \langwohyphens=\language80
@@ -106,8 +110,8 @@ Package: caption3 2020/08/30 v2.0 caption3 kernel (AR)
 \caption@hangindent=\dimen144
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count178
-\c@continuedfloat=\count179
+\c@caption@flags=\count179
+\c@continuedfloat=\count180
 )
 ("C:\Program Files\MiKTeX\tex/latex/graphics\color.sty"
 Package: color 2019/11/23 v1.2a Standard LaTeX Color (DPC)
@@ -142,7 +146,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package xcolor Info: Package option `usenames' ignored on input line 216.
 Package xcolor Info: Driver file: pdftex.def on input line 225.
 LaTeX Info: Redefining \color on input line 709.
-\rownum=\count180
+\rownum=\count181
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
@@ -168,9 +172,9 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 ("C:\Program Files\MiKTeX\tex/generic/iftex\iftex.sty"
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 ))
-\Gm@cnth=\count181
-\Gm@cntv=\count182
-\c@Gm@tempcnt=\count183
+\Gm@cnth=\count182
+\Gm@cntv=\count183
+\c@Gm@tempcnt=\count184
 \Gm@bindingoffset=\dimen147
 \Gm@wd@mp=\dimen148
 \Gm@odd@mp=\dimen149
@@ -192,7 +196,7 @@ Package: paralist 2017/01/22 v2.7 Extended list environments
 )
 ("C:\Program Files\MiKTeX\tex/latex/float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count184
+\c@float@type=\count185
 \float@exts=\toks22
 \float@box=\box47
 \@float@everytoks=\toks23
@@ -210,17 +214,17 @@ Package: expl3 2020-06-18 L3 programming layer (loader)
 
 ("C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdfmode.def"
 File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count185
+\l__kernel_color_stack_int=\count186
 \l__pdf_internal_box=\box49
 ))
 ("C:\Program Files\MiKTeX\tex/latex/l3packages/xparse\xparse.sty"
 Package: xparse 2020-05-15 L3 Experimental document command parser
 
 ("C:\Program Files\MiKTeX\tex/latex/l3packages/xparse\xparse-generic.tex"
-\l__xparse_current_arg_int=\count186
-\g__xparse_grabber_int=\count187
-\l__xparse_m_args_int=\count188
-\l__xparse_v_nesting_int=\count189
+\l__xparse_current_arg_int=\count187
+\g__xparse_grabber_int=\count188
+\l__xparse_m_args_int=\count189
+\l__xparse_v_nesting_int=\count190
 ))
 Package: lipsum 2019/01/02 v2.2 150 paragraphs of Lorem Ipsum dummy text
 
@@ -229,14 +233,14 @@ File: lipsum.ltd.tex 2019/01/02 v2.2 The Lorem ipsum dummy text
 ))
 ("C:\Program Files\MiKTeX\tex/latex/tools\multicol.sty"
 Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
-\c@tracingmulticols=\count190
+\c@tracingmulticols=\count191
 \mult@box=\box50
 \multicol@leftmargin=\dimen155
-\c@unbalance=\count191
-\c@collectmore=\count192
-\doublecol@number=\count193
-\multicoltolerance=\count194
-\multicolpretolerance=\count195
+\c@unbalance=\count192
+\c@collectmore=\count193
+\doublecol@number=\count194
+\multicoltolerance=\count195
+\multicolpretolerance=\count196
 \full@width=\dimen156
 \page@free=\dimen157
 \premulticols=\dimen158
@@ -287,32 +291,28 @@ Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
 \@tempa=\box91
 \@tempa=\box92
 \@tempa=\box93
-\c@minrows=\count196
-\c@columnbadness=\count197
-\c@finalcolumnbadness=\count198
+\c@minrows=\count197
+\c@columnbadness=\count198
+\c@finalcolumnbadness=\count199
 \last@try=\dimen161
 \multicolovershoot=\dimen162
 \multicolundershoot=\dimen163
 \mult@nat@firstbox=\box94
 \colbreak@box=\box95
-\mc@col@check@num=\count199
+\mc@col@check@num=\count266
 )
 ("C:\Program Files\MiKTeX\tex/latex/multirow\multirow.sty"
 Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
 \multirow@colwidth=\skip58
-\multirow@cntb=\count266
+\multirow@cntb=\count267
 \multirow@dima=\skip59
 \bigstrutjot=\dimen164
 )
 ("C:\Program Files\MiKTeX\tex/latex/makecell\makecell.sty"
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 \rotheadsize=\dimen165
-\c@nlinenum=\count267
+\c@nlinenum=\count268
 \TeXr@lab=\toks26
-)
-("C:\Program Files\MiKTeX\tex/latex/babelbib\babelbib.sty"
-Package: babelbib 2019/03/11 v1.32 babelbib: multilingual bibliographies (HH)
-\c@btxromaniannumeral=\count268
 )
 ("C:\Program Files\MiKTeX\tex/latex/amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
@@ -488,7 +488,15 @@ LaTeX Font Info:    ... okay on input line 3.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
 
-("C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii"
+babelbib: Use citation-dependent languages in bibliography
+babelbib: Set bibliography fall-back language to portuguese
+("C:\Program Files\MiKTeX\tex/latex/babelbib\portuguese.bdf"
+File: portuguese.bdf 2019/03/11 v1.32 babelbib: multilingual bibliographies (HH
+)
+
+babelbib extension \bibsportuguese added to \extrasportuguese
+babelbib extension \btxifchangecaseoff added to \extrasportuguese
+) ("C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count290
 \scratchdimen=\dimen190
@@ -544,18 +552,15 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-babelbib: Use citation-dependent languages in bibliography
-babelbib: Set bibliography fall-back language to portuguese
-("C:\Program Files\MiKTeX\tex/latex/babelbib\portuguese.bdf"
-File: portuguese.bdf 2019/03/11 v1.32 babelbib: multilingual bibliographies (HH
-)
+(input/Inic.tex
 
-babelbib extension \bibsportuguese added to \extrasportuguese
-babelbib extension \btxifchangecaseoff added to \extrasportuguese
-) (input/Inic.tex
+Package babelbib Warning: Command \selectbiblanguage used without package
+(babelbib)                option fixlanguage. Ignored on input line 5.
+
+babelbib: Set bibliography fall-back language to english
 \openout2 = `./include/CAPA/CAPAREPORT.aux'.
 
- (include/CAPA/CAPAREPORT.tex
+(include/CAPA/CAPAREPORT.tex
 <./image/capa/ISEP_marca_cor_grande.png, id=1, 730.6497pt x 278.2395pt>
 File: ./image/capa/ISEP_marca_cor_grande.png Graphic file (type png)
 <use ./image/capa/ISEP_marca_cor_grande.png>
@@ -574,7 +579,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 35.
 ("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
-Overfull \hbox (17.62482pt too wide) in paragraph at lines 33--9
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 33--12
 []$[]$ 
  []
 
@@ -872,32 +877,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 75--1
 
  []
 
-(Relatorio.bbl [12]
-babelbib: Using the BibTeX style's default font for `name'.
-babelbib: Using the BibTeX style's default font for `lastname'.
-babelbib: Using the BibTeX style's default font for `title'.
-babelbib: Using the BibTeX style's default font for `jtitle'.
-babelbib: Using the BibTeX style's default font for `etal'.
-babelbib: Using the BibTeX style's default font for `journal'.
-babelbib: Using the BibTeX style's default font for `volume'.
-babelbib: Using the BibTeX style's default font for `ISBN'.
-babelbib: Using the BibTeX style's default font for `ISSN'.
-babelbib: Using the BibTeX style's default font for `url'.
-babelbib: Using the BibTeX style's default font for `numeral'.
-) [13
+(Relatorio.bbl [12]) [13
 
 ]) [14] (Relatorio.aux (include/CAPA/CAPAREPORT.aux)
 (include/SETUP/Acknowledgement.aux) (include/SETUP/Abstract.aux)
 (include/SETUP/ContentFigureTable.aux) (include/SETUP/Acronym.aux)
 (include/SETUP/ConfigurePage.aux)) ) 
 Here is how much of TeX's memory you used:
- 8989 strings out of 480790
- 143116 string characters out of 2907055
- 540174 words of memory out of 3000000
- 24712 multiletter control sequences out of 15000+200000
+ 8990 strings out of 480790
+ 143123 string characters out of 2907055
+ 544949 words of memory out of 3000000
+ 24713 multiletter control sequences out of 15000+200000
  555130 words of font info for 81 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,15n,52p,543b,590s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,15n,52p,543b,464s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\sergi\AppData\Local\MiKTeX\fonts
 /pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\sergi\AppData\Local\MiKTeX
 \fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\sergi\AppData\Local\
@@ -926,9 +919,9 @@ onts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10
 ram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiK
 TeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type
 1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Relatorio.pdf (17 pages, 2797868 bytes).
+Output written on Relatorio.pdf (17 pages, 2797643 bytes).
 PDF statistics:
- 589 PDF objects out of 1000 (max. 8388607)
+ 588 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

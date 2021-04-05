@@ -8,7 +8,3 @@
 \contentsline {chapter}{\numberline {3}Conclusão}{10}%
 \contentsline {section}{\numberline {1}aspectos}{10}%
 \contentsline {chapter}{\numberline {4}Physics}{11}%
-\babel@toc {portuguese}{}
-\babel@toc {portuguese}{}
-\babel@toc {portuguese}{}
-\babel@toc {portuguese}{}
