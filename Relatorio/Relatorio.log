@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  5 APR 2021 23:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  5 APR 2021 23:29
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
@@ -855,13 +855,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--48
 
  []
 
+<./image/PESTA/general/Einstein.jpg, id=73, 255.95625pt x 179.16937pt>
+File: ./image/PESTA/general/Einstein.jpg Graphic file (type jpg)
+<use ./image/PESTA/general/Einstein.jpg>
+Package pdftex.def Info: ./image/PESTA/general/Einstein.jpg  used on input line
+ 60.
+(pdftex.def)             Requested size: 153.57492pt x 107.50244pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--58
-
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 49--66
+$[]$ $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--66
+Underfull \hbox (badness 10000) in paragraph at lines 49--66
 
  []
 
@@ -872,56 +878,61 @@ Underfull \hbox (badness 10000) in paragraph at lines 67--74
 
  []
 
-) (input/End.tex
-Underfull \hbox (badness 10000) in paragraph at lines 75--1
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--82
 
  []
 
-(Relatorio.bbl [12]) [13
+) (input/End.tex
+Underfull \hbox (badness 10000) in paragraph at lines 83--1
 
-]) [14] (Relatorio.aux (include/CAPA/CAPAREPORT.aux)
-(include/SETUP/Acknowledgement.aux) (include/SETUP/Abstract.aux)
-(include/SETUP/ContentFigureTable.aux) (include/SETUP/Acronym.aux)
-(include/SETUP/ConfigurePage.aux)) ) 
+ []
+
+(Relatorio.bbl [12 <./image/PESTA/general/Einstein.jpg>]) [13
+
+]) [14]
+(Relatorio.aux (include/CAPA/CAPAREPORT.aux) (include/SETUP/Acknowledgement.aux
+) (include/SETUP/Abstract.aux) (include/SETUP/ContentFigureTable.aux)
+(include/SETUP/Acronym.aux) (include/SETUP/ConfigurePage.aux)) ) 
 Here is how much of TeX's memory you used:
- 8990 strings out of 480790
- 143123 string characters out of 2907055
+ 8997 strings out of 480790
+ 143334 string characters out of 2907055
  544949 words of memory out of 3000000
- 24713 multiletter control sequences out of 15000+200000
+ 24719 multiletter control sequences out of 15000+200000
  555130 words of font info for 81 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,15n,52p,543b,464s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\sergi\AppData\Local\MiKTeX\fonts
-/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\sergi\AppData\Local\MiKTeX
-\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\sergi\AppData\Local\
-MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\sergi\AppData\
-Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcti1200.pk> <C:\Users\sergi\Ap
-pData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\se
-rgi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/eurosym/dpi720\feymr10.pk> <C:\
-Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi1200.pk
-> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1
-095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600
-\ecbx1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/
-dpi600\ecbx2488.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknapp
-en/ec/dpi600\ecti1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/
-jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/l
-jfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\font
-s/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\sergi\AppData\Local\MiKTe
-X\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1440.pk> <C:\Users\sergi\AppData\Local
-\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\sergi\AppData
-\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\sergi\A
-ppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2074.pk><C:/Program 
-Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10
-.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Prog
-ram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Relatorio.pdf (17 pages, 2797643 bytes).
+ <C:\Users\serg
+i\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\User
+s\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C
+:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.
+pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tct
+i1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi6
+00\ecrm1728.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/eur
+osym/dpi720\feymr10.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jk
+nappen/ec/dpi600\ecbi1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljf
+our/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/
+pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\
+fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\sergi\AppData\Local\M
+iKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\sergi\AppData\L
+ocal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\sergi\App
+Data\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\ser
+gi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Use
+rs\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1440.pk> <
+C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440
+.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ec
+bx1440.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi
+600\ecrm2074.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.
+pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Prog
+ram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr
+17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Pro
+gram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on Relatorio.pdf (17 pages, 2813724 bytes).
 PDF statistics:
- 588 PDF objects out of 1000 (max. 8388607)
+ 589 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
