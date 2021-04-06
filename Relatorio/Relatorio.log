@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  6 APR 2021 18:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  6 APR 2021 18:43
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
@@ -808,24 +808,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--52
  []
 
 [2 <./image/PESTA/general/Weigh_Scale_Salter_1.jpg> <./image/PESTA/general/Publ
-ic_Body_Scales_1.jpg> <./image/PESTA/general/Balanca_Mola_1.jpg>])
-Underfull \hbox (badness 10000) in paragraph at lines 53--7
+ic_Body_Scales_1.jpg> <./image/PESTA/general/Balanca_Mola_1.jpg>]
+<./image/PESTA/general/Scale_1.jpg, id=71, 1330.9725pt x 1039.63406pt>
+File: ./image/PESTA/general/Scale_1.jpg Graphic file (type jpg)
+<use ./image/PESTA/general/Scale_1.jpg>
+Package pdftex.def Info: ./image/PESTA/general/Scale_1.jpg  used on input line 
+56.
+(pdftex.def)             Requested size: 254.97922pt x 199.16928pt.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 60--7
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--7
+Underfull \hbox (badness 10000) in paragraph at lines 60--7
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 53--7
-
- []
-
-[3] (input/page/Desenvolvimento.tex
+[3 <./image/PESTA/general/Scale_1.jpg>] (input/page/Desenvolvimento.tex
 Cap\'{\i }tulo 2.
-<./image/PESTA/kit/Kit_Desenvolvimento_2.jpg, id=74, 3014.26125pt x 1704.3675pt
+<./image/PESTA/kit/Kit_Desenvolvimento_2.jpg, id=75, 3014.26125pt x 1704.3675pt
 >
 File: ./image/PESTA/kit/Kit_Desenvolvimento_2.jpg Graphic file (type jpg)
 <use ./image/PESTA/kit/Kit_Desenvolvimento_2.jpg>
@@ -855,7 +857,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--37
 [4
 
  <./image/PESTA/kit/Kit_Desenvolvimento_2.jpg>]
-<./image/PESTA/material/Load_Cell_1.jpg, id=78, 2337.73375pt x 1152.305pt>
+<./image/PESTA/material/Load_Cell_1.jpg, id=79, 2337.73375pt x 1152.305pt>
 File: ./image/PESTA/material/Load_Cell_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/material/Load_Cell_1.jpg>
 Package pdftex.def Info: ./image/PESTA/material/Load_Cell_1.jpg  used on input 
@@ -881,14 +883,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--51
 
  []
 
-<./image/PESTA/schematic/HX711_Schematic_1.jpg, id=79, 628.59843pt x 310.91156p
+<./image/PESTA/schematic/HX711_Schematic_1.jpg, id=80, 628.59843pt x 310.91156p
 t>
 File: ./image/PESTA/schematic/HX711_Schematic_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/schematic/HX711_Schematic_1.jpg>
 Package pdftex.def Info: ./image/PESTA/schematic/HX711_Schematic_1.jpg  used on
  input line 55.
 (pdftex.def)             Requested size: 220.01274pt x 108.82066pt.
-<./image/PESTA/material/HX711_board_1.jpg, id=80, 2004.48875pt x 1071.00125pt>
+<./image/PESTA/material/HX711_board_1.jpg, id=81, 2004.48875pt x 1071.00125pt>
 File: ./image/PESTA/material/HX711_board_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/material/HX711_board_1.jpg>
 Package pdftex.def Info: ./image/PESTA/material/HX711_board_1.jpg  used on inpu
@@ -976,7 +978,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--48
 
  []
 
-<./image/PESTA/general/Einstein.jpg, id=99, 255.95625pt x 179.16937pt>
+<./image/PESTA/general/Einstein.jpg, id=100, 255.95625pt x 179.16937pt>
 File: ./image/PESTA/general/Einstein.jpg Graphic file (type jpg)
 <use ./image/PESTA/general/Einstein.jpg>
 Package pdftex.def Info: ./image/PESTA/general/Einstein.jpg  used on input line
@@ -1007,10 +1009,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--1
 (include/SETUP/Abstract.aux) (include/SETUP/ContentFigureTable.aux)
 (include/SETUP/Acronym.aux)) ) 
 Here is how much of TeX's memory you used:
- 12038 strings out of 480790
- 212867 string characters out of 2907055
- 592846 words of memory out of 3000000
- 27695 multiletter control sequences out of 15000+200000
+ 12045 strings out of 480790
+ 213068 string characters out of 2907055
+ 593856 words of memory out of 3000000
+ 27701 multiletter control sequences out of 15000+200000
  561049 words of font info for 98 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  46i,15n,54p,878b,461s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1046,9 +1048,9 @@ es/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/font
 s/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/publ
 ic/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/c
 m/cmsy8.pfb>
-Output written on Relatorio.pdf (23 pages, 4358127 bytes).
+Output written on Relatorio.pdf (23 pages, 4700832 bytes).
 PDF statistics:
- 660 PDF objects out of 1000 (max. 8388607)
+ 663 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
