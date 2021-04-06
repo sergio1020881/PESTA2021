@@ -1,3 +1,4 @@
+%%%INIC%%%
 %%%\bibliographystyle{apacite}
 %%%\bibliographystyle{babplain}
 %%%\bibliographystyle{bstfilename}
@@ -9,10 +10,23 @@
 \renewcommand\thesubsection{\thesection.\arabic{subsection}}
 \renewcommand\thesubsubsection{\thesection.\thesubsection.\arabic{subsubsection}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\include{./include/CAPA/CAPAREPORT}
+\pagenumbering{roman}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{./include/SETUP/ConfigurePage}
+\include{./include/CAPA/CAPAREPORT_2}
+\setcounter{page}{0}
+\include{./include/CONTRACAPA/CONTRACAPAREPORT_2}
 \include{./include/SETUP/Acknowledgement}
 \include{./include/SETUP/Abstract}
+\null
+\newpage
+\renewcommand*\contentsname{Índice}
+\renewcommand*\listfigurename{Índice de Figuras}
+\renewcommand*\listtablename{Índice de Tabelas}
 \include{./include/SETUP/ContentFigureTable}
 \include{./include/SETUP/Acronym}
-\include{./include/SETUP/ConfigurePage}
+\null
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagenumbering{arabic}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
