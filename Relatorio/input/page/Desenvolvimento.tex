@@ -1,6 +1,8 @@
 \chapter{Projecto}
 \section{Hardware}
-Para o desenvolvimento deste projeto, foi criado um kit de desenvolvimento, para facilitar sua implementação, testar e efetuar alterações e melhoramentos.
+Para o desenvolvimento deste projeto, foi criado um kit de desenvolvimento, para facilitar sua implementação, testar e efetuar alterações e melhoramentos.\\
+\\
+Abaixo pode-se ver a montagem em esqueleto do equipamento utilizado.
 \newline
 \begin{figure}[H]
 	\centering
@@ -8,8 +10,10 @@ Para o desenvolvimento deste projeto, foi criado um kit de desenvolvimento, para
 	\caption{Kit de Desenvolvimento}
 	\label{Kit_Desenvolvimento_2}
 \end{figure}
-\vspace{.3cm}
-\section{Material}
+\newpage
+\subsection{Material}
+Abaixo esta indicado uma tabela dos materiais usados, assim como os preços. Também imagem da célula de carga de 50Kg e placa de amplificação.\\
+\\
 \begin{table}[H]
 	{\rowcolors{3}{green!80!yellow!50}{green!70!yellow!40}
 		\begin{tabular}{ |p{12cm}|c|p{2cm}|  }
@@ -37,11 +41,6 @@ Para o desenvolvimento deste projeto, foi criado um kit de desenvolvimento, para
 	\caption{Lista de material}
 	\label{material}
 \end{table}
-Sem contar com as despesas no equipamento para a programação do hardware que em principio só se gasta uma vez, isto é, se não se estragar. No caso do programador \textbf{Atmel-ICE} pode custar até \EUR{185.55}.\\
-\\
-É de ter em conta que os preços são \textbf{PVP}, que no caso se for preços comerciais são dez vezes inferior, e se for para produção em grande escala também tem descontos por quantidade.\\
-\\
-\\
 \begin{figure}[H]
 	\captionsetup{justification=raggedright,singlelinecheck=false}
 	\flushleft
@@ -57,6 +56,11 @@ Sem contar com as despesas no equipamento para a programação do hardware que e
 	\caption{Load Cell Amplifier [HX711]}
 	\label{HX711_Schematic_1}
 \end{figure}
+\section{Funcionamento}
+A ligação destes componentes é intuitivo e fácil de se perceber, o que é complexo neste trabalho é a interligação destes equipamentos com o micro-controlador e criar o driver de comunicação para a placa do amplificador de sinal, já que o protocolo é proprietário.\\
+\\
+Foi criado uma livraria (driver) recorrendo a interrupções quando o sinal de \textit{data} vai para a massa, na qual indica que tem um pacote de leitura pronto a ser transmitido.\\
+Como indicado abaixo no gratifico em que a linha amarela é a informação e a linha azul o respetivo \textit{clock} que é gerado pelas interrupções do micro-controlador fazendo \textit{shift} dos 24 bits, que depois no fim transmite para o amplificador o ganho de amplificação a ser usado pelo numero excedente de \textit{clock cycles}, que nesta demonstração é um, e corresponde a ganho de 64.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.65]{./image/PESTA/graph/DataClkPacket_1.JPG}
@@ -65,6 +69,16 @@ Sem contar com as despesas no equipamento para a programação do hardware que e
 \end{figure}
 
 
+
+
+
+
 \section{Validação}
 To validate is to justify why the choices made and alternatives that could be chosen.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
+Sem contar com as despesas no equipamento para a programação do hardware que em principio só se gasta uma vez, isto é, se não se estragar. No caso do programador \textbf{Atmel-ICE} pode custar até \EUR{185.55}.\\
+\\
+É de ter em conta que os preços são \textbf{PVP}, que no caso se for preços comerciais são dez vezes inferior, e se for para produção em grande escala também tem descontos por quantidade.\\
+\end{comment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
