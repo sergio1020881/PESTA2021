@@ -13,21 +13,21 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
   4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00002e98  2**2
                   CONTENTS, READONLY
-  5 .debug_aranges 00000640  00000000  00000000  00002ed8  2**3
+  5 .debug_aranges 00000630  00000000  00000000  00002ed8  2**3
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_info   0000600e  00000000  00000000  00003518  2**0
+  6 .debug_info   00005f8e  00000000  00000000  00003508  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 00001590  00000000  00000000  00009526  2**0
+  7 .debug_abbrev 0000157a  00000000  00000000  00009496  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   00003290  00000000  00000000  0000aab6  2**0
+  8 .debug_line   00003262  00000000  00000000  0000aa10  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_frame  00000d18  00000000  00000000  0000dd48  2**2
+  9 .debug_frame  00000cf8  00000000  00000000  0000dc74  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    000010a0  00000000  00000000  0000ea60  2**0
+ 10 .debug_str    00001078  00000000  00000000  0000e96c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    00003eaf  00000000  00000000  0000fb00  2**0
+ 11 .debug_loc    00003e87  00000000  00000000  0000f9e4  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00000470  00000000  00000000  000139af  2**0
+ 12 .debug_ranges 00000460  00000000  00000000  0001386b  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -3559,8 +3559,8 @@ void LCD0_reboot(void)
     18c0:	08 95       	ret
 
 000018c2 <HX711_read_bit>:
-	return self->readflag;	
-}
+	//return self->readflag;	
+//}
 uint8_t HX711_read_bit(void)
 {	
 	uint16_t bool;
@@ -3664,280 +3664,276 @@ void HX711_set_amplify(HX711* self, uint8_t amplify)
     195c:	23 83       	std	Z+3, r18	; 0x03
     195e:	08 95       	ret
 
-00001960 <HX711_raw_average>:
-		}
-	}
-	return self->raw_reading;
-}
-float HX711_raw_average(HX711* self, uint8_t n)
-{
-    1960:	0f 93       	push	r16
-    1962:	1f 93       	push	r17
-    1964:	cf 93       	push	r28
-    1966:	df 93       	push	r29
-    1968:	ec 01       	movw	r28, r24
-	if(self->trigger){
-    196a:	89 81       	ldd	r24, Y+1	; 0x01
-    196c:	88 23       	and	r24, r24
-    196e:	91 f1       	breq	.+100    	; 0x19d4 <HX711_raw_average+0x74>
-		if(self->av_n < n){
-    1970:	8a 89       	ldd	r24, Y+18	; 0x12
-    1972:	86 17       	cp	r24, r22
-    1974:	98 f4       	brcc	.+38     	; 0x199c <HX711_raw_average+0x3c>
-			self->sum += self->raw_reading;
-    1976:	0e 85       	ldd	r16, Y+14	; 0x0e
-    1978:	1f 85       	ldd	r17, Y+15	; 0x0f
-    197a:	28 89       	ldd	r18, Y+16	; 0x10
-    197c:	39 89       	ldd	r19, Y+17	; 0x11
-    197e:	4a 85       	ldd	r20, Y+10	; 0x0a
-    1980:	5b 85       	ldd	r21, Y+11	; 0x0b
-    1982:	6c 85       	ldd	r22, Y+12	; 0x0c
-    1984:	7d 85       	ldd	r23, Y+13	; 0x0d
-    1986:	40 0f       	add	r20, r16
-    1988:	51 1f       	adc	r21, r17
-    198a:	62 1f       	adc	r22, r18
-    198c:	73 1f       	adc	r23, r19
-    198e:	4e 87       	std	Y+14, r20	; 0x0e
-    1990:	5f 87       	std	Y+15, r21	; 0x0f
-    1992:	68 8b       	std	Y+16, r22	; 0x10
-    1994:	79 8b       	std	Y+17, r23	; 0x11
-			self->av_n++;
-    1996:	8f 5f       	subi	r24, 0xFF	; 255
-    1998:	8a 8b       	std	Y+18, r24	; 0x12
-    199a:	1b c0       	rjmp	.+54     	; 0x19d2 <HX711_raw_average+0x72>
-			}else{
-			self->av_n = ZERO;
-			self->raw_mean = self->sum / n;
-    199c:	26 2f       	mov	r18, r22
-    199e:	30 e0       	ldi	r19, 0x00	; 0
-    19a0:	40 e0       	ldi	r20, 0x00	; 0
-    19a2:	50 e0       	ldi	r21, 0x00	; 0
-    19a4:	6e 85       	ldd	r22, Y+14	; 0x0e
-    19a6:	7f 85       	ldd	r23, Y+15	; 0x0f
-    19a8:	88 89       	ldd	r24, Y+16	; 0x10
-    19aa:	99 89       	ldd	r25, Y+17	; 0x11
-    19ac:	0e 94 f2 15 	call	0x2be4	; 0x2be4 <__divmodsi4>
-    19b0:	ca 01       	movw	r24, r20
-    19b2:	b9 01       	movw	r22, r18
-    19b4:	79 d6       	rcall	.+3314   	; 0x26a8 <__floatsisf>
-    19b6:	6b 8b       	std	Y+19, r22	; 0x13
-    19b8:	7c 8b       	std	Y+20, r23	; 0x14
-    19ba:	8d 8b       	std	Y+21, r24	; 0x15
-    19bc:	9e 8b       	std	Y+22, r25	; 0x16
-			self->sum = ZERO;
-			self->sum += self->raw_reading;
-    19be:	8a 85       	ldd	r24, Y+10	; 0x0a
-    19c0:	9b 85       	ldd	r25, Y+11	; 0x0b
-    19c2:	ac 85       	ldd	r26, Y+12	; 0x0c
-    19c4:	bd 85       	ldd	r27, Y+13	; 0x0d
-    19c6:	8e 87       	std	Y+14, r24	; 0x0e
-    19c8:	9f 87       	std	Y+15, r25	; 0x0f
-    19ca:	a8 8b       	std	Y+16, r26	; 0x10
-    19cc:	b9 8b       	std	Y+17, r27	; 0x11
-			self->av_n++;
-    19ce:	81 e0       	ldi	r24, 0x01	; 1
-    19d0:	8a 8b       	std	Y+18, r24	; 0x12
-		}
-		self->trigger = ZERO;
-    19d2:	19 82       	std	Y+1, r1	; 0x01
-	}
-	return self->raw_mean;
-    19d4:	6b 89       	ldd	r22, Y+19	; 0x13
-    19d6:	7c 89       	ldd	r23, Y+20	; 0x14
-    19d8:	8d 89       	ldd	r24, Y+21	; 0x15
-    19da:	9e 89       	ldd	r25, Y+22	; 0x16
-}
-    19dc:	df 91       	pop	r29
-    19de:	cf 91       	pop	r28
-    19e0:	1f 91       	pop	r17
-    19e2:	0f 91       	pop	r16
-    19e4:	08 95       	ret
-
-000019e6 <HX711_get_cal>:
-struct HX711_calibration* HX711_get_cal(HX711* self)
-{
-	return &(self->cal_data);
-}
-    19e6:	47 96       	adiw	r24, 0x17	; 23
-    19e8:	08 95       	ret
-
-000019ea <HX711_read_raw>:
-}
-/***
-Function to be used in the interrupt routine with appropriate cycle period.
-***/
-int32_t HX711_read_raw(HX711* self)
-{
-    19ea:	0f 93       	push	r16
-    19ec:	1f 93       	push	r17
-    19ee:	cf 93       	push	r28
-    19f0:	df 93       	push	r29
-    19f2:	ec 01       	movw	r28, r24
-	uint8_t aindex, bindex;
-	int32_t value;
-	aindex = self->bufferindex-ONE;
-    19f4:	09 85       	ldd	r16, Y+9	; 0x09
-	bindex = self->bitcount-ONE;
-    19f6:	1c 81       	ldd	r17, Y+4	; 0x04
-	ptr=(int32_t*)self->buffer;
-    19f8:	05 96       	adiw	r24, 0x05	; 5
-    19fa:	90 93 72 01 	sts	0x0172, r25	; 0x800172 <ptr+0x1>
-    19fe:	80 93 71 01 	sts	0x0171, r24	; 0x800171 <ptr>
-	//if((!(*hx711_PIN & ONE << hx711_datapin)) && !self->readflag){
-		//HX711_set_readflag(self);
-	//}
-	//HX711_query(self);
-	/***Interrupt 24 times sequence***/
-	if(self->readflag){
-    1a02:	88 81       	ld	r24, Y
-    1a04:	88 23       	and	r24, r24
-    1a06:	09 f4       	brne	.+2      	; 0x1a0a <HX711_read_raw+0x20>
-    1a08:	44 c0       	rjmp	.+136    	; 0x1a92 <HX711_read_raw+0xa8>
-		if(self->bitcount){
-    1a0a:	11 23       	and	r17, r17
-    1a0c:	29 f1       	breq	.+74     	; 0x1a58 <HX711_read_raw+0x6e>
-			if (HX711_read_bit())
-    1a0e:	59 df       	rcall	.-334    	; 0x18c2 <HX711_read_bit>
-    1a10:	88 23       	and	r24, r24
-    1a12:	a9 f0       	breq	.+42     	; 0x1a3e <HX711_read_raw+0x54>
-				self->buffer[aindex] |= ONE<<(bindex-(aindex*8));
-    1a14:	01 50       	subi	r16, 0x01	; 1
-    1a16:	80 2f       	mov	r24, r16
-    1a18:	90 e0       	ldi	r25, 0x00	; 0
-    1a1a:	fe 01       	movw	r30, r28
-    1a1c:	e8 0f       	add	r30, r24
-    1a1e:	f9 1f       	adc	r31, r25
-    1a20:	11 50       	subi	r17, 0x01	; 1
-    1a22:	28 e0       	ldi	r18, 0x08	; 8
-    1a24:	02 9f       	mul	r16, r18
-    1a26:	10 19       	sub	r17, r0
-    1a28:	11 24       	eor	r1, r1
-    1a2a:	81 e0       	ldi	r24, 0x01	; 1
-    1a2c:	90 e0       	ldi	r25, 0x00	; 0
-    1a2e:	02 c0       	rjmp	.+4      	; 0x1a34 <HX711_read_raw+0x4a>
-    1a30:	88 0f       	add	r24, r24
-    1a32:	99 1f       	adc	r25, r25
-    1a34:	1a 95       	dec	r17
-    1a36:	e2 f7       	brpl	.-8      	; 0x1a30 <HX711_read_raw+0x46>
-    1a38:	95 81       	ldd	r25, Z+5	; 0x05
-    1a3a:	89 2b       	or	r24, r25
-    1a3c:	85 83       	std	Z+5, r24	; 0x05
-			self->bitcount--;
-    1a3e:	8c 81       	ldd	r24, Y+4	; 0x04
-    1a40:	81 50       	subi	r24, 0x01	; 1
-    1a42:	8c 83       	std	Y+4, r24	; 0x04
-			if(self->bitcount == 16)
-    1a44:	80 31       	cpi	r24, 0x10	; 16
-    1a46:	19 f4       	brne	.+6      	; 0x1a4e <HX711_read_raw+0x64>
-				self->bufferindex=2;
-    1a48:	82 e0       	ldi	r24, 0x02	; 2
-    1a4a:	89 87       	std	Y+9, r24	; 0x09
-    1a4c:	22 c0       	rjmp	.+68     	; 0x1a92 <HX711_read_raw+0xa8>
-			if(self->bitcount == 8)
-    1a4e:	88 30       	cpi	r24, 0x08	; 8
-    1a50:	01 f5       	brne	.+64     	; 0x1a92 <HX711_read_raw+0xa8>
-				self->bufferindex=ONE;
-    1a52:	81 e0       	ldi	r24, 0x01	; 1
-    1a54:	89 87       	std	Y+9, r24	; 0x09
-    1a56:	1d c0       	rjmp	.+58     	; 0x1a92 <HX711_read_raw+0xa8>
-		}else{
-			if(self->ampcount){
-    1a58:	8b 81       	ldd	r24, Y+3	; 0x03
-    1a5a:	88 23       	and	r24, r24
-				HX711_read_bit();
-    1a5c:	29 f0       	breq	.+10     	; 0x1a68 <HX711_read_raw+0x7e>
-    1a5e:	31 df       	rcall	.-414    	; 0x18c2 <HX711_read_bit>
-				self->ampcount--;
-    1a60:	8b 81       	ldd	r24, Y+3	; 0x03
-    1a62:	81 50       	subi	r24, 0x01	; 1
-    1a64:	8b 83       	std	Y+3, r24	; 0x03
-    1a66:	15 c0       	rjmp	.+42     	; 0x1a92 <HX711_read_raw+0xa8>
-			}else{
-				value = *(ptr);
-				self->raw_reading = value;
-    1a68:	8d 81       	ldd	r24, Y+5	; 0x05
-    1a6a:	9e 81       	ldd	r25, Y+6	; 0x06
-    1a6c:	af 81       	ldd	r26, Y+7	; 0x07
-    1a6e:	b8 85       	ldd	r27, Y+8	; 0x08
-    1a70:	8a 87       	std	Y+10, r24	; 0x0a
-    1a72:	9b 87       	std	Y+11, r25	; 0x0b
-    1a74:	ac 87       	std	Y+12, r26	; 0x0c
-    1a76:	bd 87       	std	Y+13, r27	; 0x0d
-				self->bitcount = HX711_ADC_bits;
-    1a78:	88 e1       	ldi	r24, 0x18	; 24
-    1a7a:	8c 83       	std	Y+4, r24	; 0x04
-				self->bufferindex = HX711_VECT_SIZE-ONE;
-    1a7c:	83 e0       	ldi	r24, 0x03	; 3
-    1a7e:	89 87       	std	Y+9, r24	; 0x09
-				self->ampcount = self->amplify;
-    1a80:	8a 81       	ldd	r24, Y+2	; 0x02
-    1a82:	8b 83       	std	Y+3, r24	; 0x03
-				self->buffer[0] = ZERO;
-    1a84:	1d 82       	std	Y+5, r1	; 0x05
-				self->buffer[1] = ZERO;
-    1a86:	1e 82       	std	Y+6, r1	; 0x06
-				self->buffer[2] = ZERO;
-    1a88:	1f 82       	std	Y+7, r1	; 0x07
-				self->buffer[3] = ZERO;
-    1a8a:	18 86       	std	Y+8, r1	; 0x08
-				self->trigger = ONE;
-    1a8c:	81 e0       	ldi	r24, 0x01	; 1
-    1a8e:	89 83       	std	Y+1, r24	; 0x01
-{
-	self->readflag=ON;
-}
-void HX711_reset_readflag(HX711* self)
-{
-	self->readflag=OFF;
-    1a90:	18 82       	st	Y, r1
-				/***Reset ready for next query***/
-				HX711_reset_readflag(self);
-			}
-		}
-	}
-	return self->raw_reading;
-    1a92:	6a 85       	ldd	r22, Y+10	; 0x0a
-    1a94:	7b 85       	ldd	r23, Y+11	; 0x0b
-    1a96:	8c 85       	ldd	r24, Y+12	; 0x0c
-    1a98:	9d 85       	ldd	r25, Y+13	; 0x0d
-}
-    1a9a:	df 91       	pop	r29
-    1a9c:	cf 91       	pop	r28
-    1a9e:	1f 91       	pop	r17
-    1aa0:	0f 91       	pop	r16
-    1aa2:	08 95       	ret
-
-00001aa4 <HX711_query>:
+00001960 <HX711_query>:
 			break;
 	}
 }
 void HX711_query(HX711* self)
 {
 	if((!(*hx711_PIN & ONE << hx711_datapin)) && !self->readflag){
-    1aa4:	e0 91 6d 01 	lds	r30, 0x016D	; 0x80016d <hx711_PIN>
-    1aa8:	f0 91 6e 01 	lds	r31, 0x016E	; 0x80016e <hx711_PIN+0x1>
-    1aac:	20 81       	ld	r18, Z
-    1aae:	30 e0       	ldi	r19, 0x00	; 0
-    1ab0:	00 90 6c 01 	lds	r0, 0x016C	; 0x80016c <hx711_datapin>
-    1ab4:	02 c0       	rjmp	.+4      	; 0x1aba <HX711_query+0x16>
-    1ab6:	35 95       	asr	r19
-    1ab8:	27 95       	ror	r18
-    1aba:	0a 94       	dec	r0
-    1abc:	e2 f7       	brpl	.-8      	; 0x1ab6 <HX711_query+0x12>
-    1abe:	20 fd       	sbrc	r18, 0
-    1ac0:	06 c0       	rjmp	.+12     	; 0x1ace <HX711_query+0x2a>
-    1ac2:	fc 01       	movw	r30, r24
-    1ac4:	20 81       	ld	r18, Z
-    1ac6:	21 11       	cpse	r18, r1
-    1ac8:	02 c0       	rjmp	.+4      	; 0x1ace <HX711_query+0x2a>
-	// returns a copy
-	return hx711;
+    1960:	e0 91 6d 01 	lds	r30, 0x016D	; 0x80016d <hx711_PIN>
+    1964:	f0 91 6e 01 	lds	r31, 0x016E	; 0x80016e <hx711_PIN+0x1>
+    1968:	20 81       	ld	r18, Z
+    196a:	30 e0       	ldi	r19, 0x00	; 0
+    196c:	00 90 6c 01 	lds	r0, 0x016C	; 0x80016c <hx711_datapin>
+    1970:	02 c0       	rjmp	.+4      	; 0x1976 <HX711_query+0x16>
+    1972:	35 95       	asr	r19
+    1974:	27 95       	ror	r18
+    1976:	0a 94       	dec	r0
+    1978:	e2 f7       	brpl	.-8      	; 0x1972 <HX711_query+0x12>
+    197a:	20 fd       	sbrc	r18, 0
+    197c:	06 c0       	rjmp	.+12     	; 0x198a <HX711_query+0x2a>
+    197e:	fc 01       	movw	r30, r24
+    1980:	20 81       	ld	r18, Z
+    1982:	21 11       	cpse	r18, r1
+    1984:	02 c0       	rjmp	.+4      	; 0x198a <HX711_query+0x2a>
+		//HX711_set_readflag(self);
+		self->readflag=ON;
+    1986:	2f ef       	ldi	r18, 0xFF	; 255
+    1988:	20 83       	st	Z, r18
+    198a:	08 95       	ret
+
+0000198c <HX711_raw_average>:
+		}
+	}
+	return self->raw_reading;
 }
-void HX711_set_readflag(HX711* self)
+float HX711_raw_average(HX711* self, uint8_t n)
 {
-	self->readflag=ON;
-    1aca:	2f ef       	ldi	r18, 0xFF	; 255
-    1acc:	20 83       	st	Z, r18
+    198c:	0f 93       	push	r16
+    198e:	1f 93       	push	r17
+    1990:	cf 93       	push	r28
+    1992:	df 93       	push	r29
+    1994:	ec 01       	movw	r28, r24
+	if(self->trigger){
+    1996:	89 81       	ldd	r24, Y+1	; 0x01
+    1998:	88 23       	and	r24, r24
+    199a:	91 f1       	breq	.+100    	; 0x1a00 <HX711_raw_average+0x74>
+		if(self->av_n < n){
+    199c:	8a 89       	ldd	r24, Y+18	; 0x12
+    199e:	86 17       	cp	r24, r22
+    19a0:	98 f4       	brcc	.+38     	; 0x19c8 <HX711_raw_average+0x3c>
+			self->sum += self->raw_reading;
+    19a2:	0e 85       	ldd	r16, Y+14	; 0x0e
+    19a4:	1f 85       	ldd	r17, Y+15	; 0x0f
+    19a6:	28 89       	ldd	r18, Y+16	; 0x10
+    19a8:	39 89       	ldd	r19, Y+17	; 0x11
+    19aa:	4a 85       	ldd	r20, Y+10	; 0x0a
+    19ac:	5b 85       	ldd	r21, Y+11	; 0x0b
+    19ae:	6c 85       	ldd	r22, Y+12	; 0x0c
+    19b0:	7d 85       	ldd	r23, Y+13	; 0x0d
+    19b2:	40 0f       	add	r20, r16
+    19b4:	51 1f       	adc	r21, r17
+    19b6:	62 1f       	adc	r22, r18
+    19b8:	73 1f       	adc	r23, r19
+    19ba:	4e 87       	std	Y+14, r20	; 0x0e
+    19bc:	5f 87       	std	Y+15, r21	; 0x0f
+    19be:	68 8b       	std	Y+16, r22	; 0x10
+    19c0:	79 8b       	std	Y+17, r23	; 0x11
+			self->av_n++;
+    19c2:	8f 5f       	subi	r24, 0xFF	; 255
+    19c4:	8a 8b       	std	Y+18, r24	; 0x12
+    19c6:	1b c0       	rjmp	.+54     	; 0x19fe <HX711_raw_average+0x72>
+			}else{
+			self->av_n = ZERO;
+			self->raw_mean = self->sum / n;
+    19c8:	26 2f       	mov	r18, r22
+    19ca:	30 e0       	ldi	r19, 0x00	; 0
+    19cc:	40 e0       	ldi	r20, 0x00	; 0
+    19ce:	50 e0       	ldi	r21, 0x00	; 0
+    19d0:	6e 85       	ldd	r22, Y+14	; 0x0e
+    19d2:	7f 85       	ldd	r23, Y+15	; 0x0f
+    19d4:	88 89       	ldd	r24, Y+16	; 0x10
+    19d6:	99 89       	ldd	r25, Y+17	; 0x11
+    19d8:	0e 94 f2 15 	call	0x2be4	; 0x2be4 <__divmodsi4>
+    19dc:	ca 01       	movw	r24, r20
+    19de:	b9 01       	movw	r22, r18
+    19e0:	63 d6       	rcall	.+3270   	; 0x26a8 <__floatsisf>
+    19e2:	6b 8b       	std	Y+19, r22	; 0x13
+    19e4:	7c 8b       	std	Y+20, r23	; 0x14
+    19e6:	8d 8b       	std	Y+21, r24	; 0x15
+    19e8:	9e 8b       	std	Y+22, r25	; 0x16
+			self->sum = ZERO;
+			self->sum += self->raw_reading;
+    19ea:	8a 85       	ldd	r24, Y+10	; 0x0a
+    19ec:	9b 85       	ldd	r25, Y+11	; 0x0b
+    19ee:	ac 85       	ldd	r26, Y+12	; 0x0c
+    19f0:	bd 85       	ldd	r27, Y+13	; 0x0d
+    19f2:	8e 87       	std	Y+14, r24	; 0x0e
+    19f4:	9f 87       	std	Y+15, r25	; 0x0f
+    19f6:	a8 8b       	std	Y+16, r26	; 0x10
+    19f8:	b9 8b       	std	Y+17, r27	; 0x11
+			self->av_n++;
+    19fa:	81 e0       	ldi	r24, 0x01	; 1
+    19fc:	8a 8b       	std	Y+18, r24	; 0x12
+		}
+		self->trigger = ZERO;
+    19fe:	19 82       	std	Y+1, r1	; 0x01
+	}
+	return self->raw_mean;
+    1a00:	6b 89       	ldd	r22, Y+19	; 0x13
+    1a02:	7c 89       	ldd	r23, Y+20	; 0x14
+    1a04:	8d 89       	ldd	r24, Y+21	; 0x15
+    1a06:	9e 89       	ldd	r25, Y+22	; 0x16
+}
+    1a08:	df 91       	pop	r29
+    1a0a:	cf 91       	pop	r28
+    1a0c:	1f 91       	pop	r17
+    1a0e:	0f 91       	pop	r16
+    1a10:	08 95       	ret
+
+00001a12 <HX711_get_cal>:
+struct HX711_calibration* HX711_get_cal(HX711* self)
+{
+	return &(self->cal_data);
+}
+    1a12:	47 96       	adiw	r24, 0x17	; 23
+    1a14:	08 95       	ret
+
+00001a16 <HX711_read_raw>:
+}
+/***
+Function to be used in the interrupt routine with appropriate cycle period.
+***/
+int32_t HX711_read_raw(HX711* self)
+{
+    1a16:	0f 93       	push	r16
+    1a18:	1f 93       	push	r17
+    1a1a:	cf 93       	push	r28
+    1a1c:	df 93       	push	r29
+    1a1e:	ec 01       	movw	r28, r24
+	uint8_t aindex, bindex;
+	int32_t value;
+	aindex = self->bufferindex-ONE;
+    1a20:	09 85       	ldd	r16, Y+9	; 0x09
+	bindex = self->bitcount-ONE;
+    1a22:	1c 81       	ldd	r17, Y+4	; 0x04
+	ptr=(int32_t*)self->buffer;
+    1a24:	05 96       	adiw	r24, 0x05	; 5
+    1a26:	90 93 72 01 	sts	0x0172, r25	; 0x800172 <ptr+0x1>
+    1a2a:	80 93 71 01 	sts	0x0171, r24	; 0x800171 <ptr>
+	//if((!(*hx711_PIN & ONE << hx711_datapin)) && !self->readflag){
+		//HX711_set_readflag(self);
+	//}
+	//HX711_query(self);
+	/***Interrupt 24 times sequence***/
+	if(self->readflag){
+    1a2e:	88 81       	ld	r24, Y
+    1a30:	88 23       	and	r24, r24
+    1a32:	09 f4       	brne	.+2      	; 0x1a36 <HX711_read_raw+0x20>
+    1a34:	44 c0       	rjmp	.+136    	; 0x1abe <HX711_read_raw+0xa8>
+		if(self->bitcount){
+    1a36:	11 23       	and	r17, r17
+    1a38:	29 f1       	breq	.+74     	; 0x1a84 <HX711_read_raw+0x6e>
+			if (HX711_read_bit())
+    1a3a:	43 df       	rcall	.-378    	; 0x18c2 <HX711_read_bit>
+    1a3c:	88 23       	and	r24, r24
+    1a3e:	a9 f0       	breq	.+42     	; 0x1a6a <HX711_read_raw+0x54>
+				self->buffer[aindex] |= ONE<<(bindex-(aindex*8));
+    1a40:	01 50       	subi	r16, 0x01	; 1
+    1a42:	80 2f       	mov	r24, r16
+    1a44:	90 e0       	ldi	r25, 0x00	; 0
+    1a46:	fe 01       	movw	r30, r28
+    1a48:	e8 0f       	add	r30, r24
+    1a4a:	f9 1f       	adc	r31, r25
+    1a4c:	11 50       	subi	r17, 0x01	; 1
+    1a4e:	28 e0       	ldi	r18, 0x08	; 8
+    1a50:	02 9f       	mul	r16, r18
+    1a52:	10 19       	sub	r17, r0
+    1a54:	11 24       	eor	r1, r1
+    1a56:	81 e0       	ldi	r24, 0x01	; 1
+    1a58:	90 e0       	ldi	r25, 0x00	; 0
+    1a5a:	02 c0       	rjmp	.+4      	; 0x1a60 <HX711_read_raw+0x4a>
+    1a5c:	88 0f       	add	r24, r24
+    1a5e:	99 1f       	adc	r25, r25
+    1a60:	1a 95       	dec	r17
+    1a62:	e2 f7       	brpl	.-8      	; 0x1a5c <HX711_read_raw+0x46>
+    1a64:	95 81       	ldd	r25, Z+5	; 0x05
+    1a66:	89 2b       	or	r24, r25
+    1a68:	85 83       	std	Z+5, r24	; 0x05
+			self->bitcount--;
+    1a6a:	8c 81       	ldd	r24, Y+4	; 0x04
+    1a6c:	81 50       	subi	r24, 0x01	; 1
+    1a6e:	8c 83       	std	Y+4, r24	; 0x04
+			if(self->bitcount == 16)
+    1a70:	80 31       	cpi	r24, 0x10	; 16
+    1a72:	19 f4       	brne	.+6      	; 0x1a7a <HX711_read_raw+0x64>
+				self->bufferindex=2;
+    1a74:	82 e0       	ldi	r24, 0x02	; 2
+    1a76:	89 87       	std	Y+9, r24	; 0x09
+    1a78:	22 c0       	rjmp	.+68     	; 0x1abe <HX711_read_raw+0xa8>
+			if(self->bitcount == 8)
+    1a7a:	88 30       	cpi	r24, 0x08	; 8
+    1a7c:	01 f5       	brne	.+64     	; 0x1abe <HX711_read_raw+0xa8>
+				self->bufferindex=ONE;
+    1a7e:	81 e0       	ldi	r24, 0x01	; 1
+    1a80:	89 87       	std	Y+9, r24	; 0x09
+    1a82:	1d c0       	rjmp	.+58     	; 0x1abe <HX711_read_raw+0xa8>
+		}else{
+			if(self->ampcount){
+    1a84:	8b 81       	ldd	r24, Y+3	; 0x03
+    1a86:	88 23       	and	r24, r24
+				HX711_read_bit();
+    1a88:	29 f0       	breq	.+10     	; 0x1a94 <HX711_read_raw+0x7e>
+    1a8a:	1b df       	rcall	.-458    	; 0x18c2 <HX711_read_bit>
+				self->ampcount--;
+    1a8c:	8b 81       	ldd	r24, Y+3	; 0x03
+    1a8e:	81 50       	subi	r24, 0x01	; 1
+    1a90:	8b 83       	std	Y+3, r24	; 0x03
+    1a92:	15 c0       	rjmp	.+42     	; 0x1abe <HX711_read_raw+0xa8>
+			}else{
+				value = *(ptr);
+				self->raw_reading = value;
+    1a94:	8d 81       	ldd	r24, Y+5	; 0x05
+    1a96:	9e 81       	ldd	r25, Y+6	; 0x06
+    1a98:	af 81       	ldd	r26, Y+7	; 0x07
+    1a9a:	b8 85       	ldd	r27, Y+8	; 0x08
+    1a9c:	8a 87       	std	Y+10, r24	; 0x0a
+    1a9e:	9b 87       	std	Y+11, r25	; 0x0b
+    1aa0:	ac 87       	std	Y+12, r26	; 0x0c
+    1aa2:	bd 87       	std	Y+13, r27	; 0x0d
+				self->bitcount = HX711_ADC_bits;
+    1aa4:	88 e1       	ldi	r24, 0x18	; 24
+    1aa6:	8c 83       	std	Y+4, r24	; 0x04
+				self->bufferindex = HX711_VECT_SIZE-ONE;
+    1aa8:	83 e0       	ldi	r24, 0x03	; 3
+    1aaa:	89 87       	std	Y+9, r24	; 0x09
+				self->ampcount = self->amplify;
+    1aac:	8a 81       	ldd	r24, Y+2	; 0x02
+    1aae:	8b 83       	std	Y+3, r24	; 0x03
+				self->buffer[0] = ZERO;
+    1ab0:	1d 82       	std	Y+5, r1	; 0x05
+				self->buffer[1] = ZERO;
+    1ab2:	1e 82       	std	Y+6, r1	; 0x06
+				self->buffer[2] = ZERO;
+    1ab4:	1f 82       	std	Y+7, r1	; 0x07
+				self->buffer[3] = ZERO;
+    1ab6:	18 86       	std	Y+8, r1	; 0x08
+				self->trigger = ONE;
+    1ab8:	81 e0       	ldi	r24, 0x01	; 1
+    1aba:	89 83       	std	Y+1, r24	; 0x01
+//{
+	//self->readflag=ON;
+//}
+void HX711_reset_readflag(HX711* self)
+{
+	self->readflag=OFF;
+    1abc:	18 82       	st	Y, r1
+				/***Reset ready for next query***/
+				HX711_reset_readflag(self);
+			}
+		}
+	}
+	return self->raw_reading;
+    1abe:	6a 85       	ldd	r22, Y+10	; 0x0a
+    1ac0:	7b 85       	ldd	r23, Y+11	; 0x0b
+    1ac2:	8c 85       	ldd	r24, Y+12	; 0x0c
+    1ac4:	9d 85       	ldd	r25, Y+13	; 0x0d
+}
+    1ac6:	df 91       	pop	r29
+    1ac8:	cf 91       	pop	r28
+    1aca:	1f 91       	pop	r17
+    1acc:	0f 91       	pop	r16
     1ace:	08 95       	ret
 
 00001ad0 <HX711enable>:
@@ -4074,20 +4070,20 @@ HX711 HX711enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t
     1bae:	9c e0       	ldi	r25, 0x0C	; 12
     1bb0:	92 a7       	std	Z+42, r25	; 0x2a
     1bb2:	81 a7       	std	Z+41, r24	; 0x29
-    1bb4:	82 e5       	ldi	r24, 0x52	; 82
-    1bb6:	9d e0       	ldi	r25, 0x0D	; 13
+    1bb4:	80 eb       	ldi	r24, 0xB0	; 176
+    1bb6:	9c e0       	ldi	r25, 0x0C	; 12
     1bb8:	94 a7       	std	Z+44, r25	; 0x2c
     1bba:	83 a7       	std	Z+43, r24	; 0x2b
-    1bbc:	85 ef       	ldi	r24, 0xF5	; 245
-    1bbe:	9c e0       	ldi	r25, 0x0C	; 12
+    1bbc:	8b e0       	ldi	r24, 0x0B	; 11
+    1bbe:	9d e0       	ldi	r25, 0x0D	; 13
     1bc0:	96 a7       	std	Z+46, r25	; 0x2e
     1bc2:	85 a7       	std	Z+45, r24	; 0x2d
-    1bc4:	80 eb       	ldi	r24, 0xB0	; 176
+    1bc4:	86 ec       	ldi	r24, 0xC6	; 198
     1bc6:	9c e0       	ldi	r25, 0x0C	; 12
     1bc8:	90 ab       	std	Z+48, r25	; 0x30
     1bca:	87 a7       	std	Z+47, r24	; 0x2f
-    1bcc:	83 ef       	ldi	r24, 0xF3	; 243
-    1bce:	9c e0       	ldi	r25, 0x0C	; 12
+    1bcc:	89 e0       	ldi	r24, 0x09	; 9
+    1bce:	9d e0       	ldi	r25, 0x0D	; 13
     1bd0:	92 ab       	std	Z+50, r25	; 0x32
     1bd2:	81 ab       	std	Z+49, r24	; 0x31
 }

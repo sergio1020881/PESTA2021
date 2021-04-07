@@ -221,11 +221,7 @@ Discarded input sections
  .text          0x00000000        0x0 Libraria/hx711.o
  .data          0x00000000        0x0 Libraria/hx711.o
  .bss           0x00000000        0x0 Libraria/hx711.o
- .text.HX711_set_readflag
-                0x00000000        0x8 Libraria/hx711.o
  .text.HX711_reset_readflag
-                0x00000000        0x6 Libraria/hx711.o
- .text.HX711_check_readflag
                 0x00000000        0x6 Libraria/hx711.o
  .text          0x00000000        0x0 main.o
  .data          0x00000000        0x0 main.o
@@ -1005,18 +1001,18 @@ END GROUP
  .text.HX711_set_amplify
                 0x0000192a       0x36 Libraria/hx711.o
                 0x0000192a                HX711_set_amplify
- .text.HX711_raw_average
-                0x00001960       0x86 Libraria/hx711.o
-                0x00001960                HX711_raw_average
- .text.HX711_get_cal
-                0x000019e6        0x4 Libraria/hx711.o
-                0x000019e6                HX711_get_cal
- .text.HX711_read_raw
-                0x000019ea       0xba Libraria/hx711.o
-                0x000019ea                HX711_read_raw
  .text.HX711_query
-                0x00001aa4       0x2c Libraria/hx711.o
-                0x00001aa4                HX711_query
+                0x00001960       0x2c Libraria/hx711.o
+                0x00001960                HX711_query
+ .text.HX711_raw_average
+                0x0000198c       0x86 Libraria/hx711.o
+                0x0000198c                HX711_raw_average
+ .text.HX711_get_cal
+                0x00001a12        0x4 Libraria/hx711.o
+                0x00001a12                HX711_get_cal
+ .text.HX711_read_raw
+                0x00001a16       0xba Libraria/hx711.o
+                0x00001a16                HX711_read_raw
  .text.HX711enable
                 0x00001ad0      0x10c Libraria/hx711.o
                 0x00001ad0                HX711enable
@@ -1358,7 +1354,7 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0x640
+.debug_aranges  0x00000000      0x630
  *(.debug_aranges)
  .debug_aranges
                 0x00000000      0x150 Libraria/atmega128timer.o
@@ -1371,36 +1367,36 @@ END GROUP
  .debug_aranges
                 0x00000340      0x100 Libraria/lcd.o
  .debug_aranges
-                0x00000440       0x68 Libraria/hx711.o
+                0x00000440       0x58 Libraria/hx711.o
  .debug_aranges
-                0x000004a8       0x38 main.o
+                0x00000498       0x38 main.o
  .debug_aranges
-                0x000004e0       0x20 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eerd_block.o)
+                0x000004d0       0x20 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eerd_block.o)
  .debug_aranges
-                0x00000500       0x20 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eerd_byte.o)
+                0x000004f0       0x20 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eerd_byte.o)
  .debug_aranges
-                0x00000520       0x20 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eerd_word.o)
+                0x00000510       0x20 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eerd_word.o)
  .debug_aranges
-                0x00000540       0x20 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eeupd_block.o)
+                0x00000530       0x20 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eeupd_block.o)
  .debug_aranges
-                0x00000560       0x20 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eeupd_byte.o)
+                0x00000550       0x20 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eeupd_byte.o)
  .debug_aranges
-                0x00000580       0x20 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eeupd_dword.o)
+                0x00000570       0x20 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eeupd_dword.o)
  .debug_aranges
-                0x000005a0       0x20 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eeupd_word.o)
+                0x00000590       0x20 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eeupd_word.o)
  .debug_aranges
-                0x000005c0       0x20 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eewr_block.o)
+                0x000005b0       0x20 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eewr_block.o)
  .debug_aranges
-                0x000005e0       0x20 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eewr_byte.o)
+                0x000005d0       0x20 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eewr_byte.o)
  .debug_aranges
-                0x00000600       0x20 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eewr_dword.o)
+                0x000005f0       0x20 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eewr_dword.o)
  .debug_aranges
-                0x00000620       0x20 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eewr_word.o)
+                0x00000610       0x20 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eewr_word.o)
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x600e
+.debug_info     0x00000000     0x5f8e
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x780 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51/crtatmega128.o
  .debug_info    0x00000780      0x90d Libraria/atmega128timer.o
@@ -1408,21 +1404,21 @@ END GROUP
  .debug_info    0x0000136b      0x42a Libraria/explode.o
  .debug_info    0x00001795     0x13fc Libraria/function.o
  .debug_info    0x00002b91     0x11bc Libraria/lcd.o
- .debug_info    0x00003d4d      0x5fd Libraria/hx711.o
- .debug_info    0x0000434a     0x161d main.o
- .debug_info    0x00005967       0x9b C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eerd_block.o)
- .debug_info    0x00005a02       0x9a C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eerd_byte.o)
- .debug_info    0x00005a9c       0x9a C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eerd_word.o)
- .debug_info    0x00005b36       0x9c C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eeupd_block.o)
- .debug_info    0x00005bd2       0x9b C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eeupd_byte.o)
- .debug_info    0x00005c6d       0x9c C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eeupd_dword.o)
- .debug_info    0x00005d09       0x9b C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eeupd_word.o)
- .debug_info    0x00005da4       0x9b C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eewr_block.o)
- .debug_info    0x00005e3f       0x9a C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eewr_byte.o)
- .debug_info    0x00005ed9       0x9b C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eewr_dword.o)
- .debug_info    0x00005f74       0x9a C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eewr_word.o)
+ .debug_info    0x00003d4d      0x57d Libraria/hx711.o
+ .debug_info    0x000042ca     0x161d main.o
+ .debug_info    0x000058e7       0x9b C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eerd_block.o)
+ .debug_info    0x00005982       0x9a C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eerd_byte.o)
+ .debug_info    0x00005a1c       0x9a C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eerd_word.o)
+ .debug_info    0x00005ab6       0x9c C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eeupd_block.o)
+ .debug_info    0x00005b52       0x9b C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eeupd_byte.o)
+ .debug_info    0x00005bed       0x9c C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eeupd_dword.o)
+ .debug_info    0x00005c89       0x9b C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eeupd_word.o)
+ .debug_info    0x00005d24       0x9b C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eewr_block.o)
+ .debug_info    0x00005dbf       0x9a C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eewr_byte.o)
+ .debug_info    0x00005e59       0x9b C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eewr_dword.o)
+ .debug_info    0x00005ef4       0x9a C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eewr_word.o)
 
-.debug_abbrev   0x00000000     0x1590
+.debug_abbrev   0x00000000     0x157a
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x718 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51/crtatmega128.o
  .debug_abbrev  0x00000718      0x189 Libraria/atmega128timer.o
@@ -1430,21 +1426,21 @@ END GROUP
  .debug_abbrev  0x00000956      0x18c Libraria/explode.o
  .debug_abbrev  0x00000ae2      0x322 Libraria/function.o
  .debug_abbrev  0x00000e04      0x2ed Libraria/lcd.o
- .debug_abbrev  0x000010f1      0x20c Libraria/hx711.o
- .debug_abbrev  0x000012fd      0x1b7 main.o
- .debug_abbrev  0x000014b4       0x14 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eerd_block.o)
- .debug_abbrev  0x000014c8       0x14 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eerd_byte.o)
- .debug_abbrev  0x000014dc       0x14 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eerd_word.o)
- .debug_abbrev  0x000014f0       0x14 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eeupd_block.o)
- .debug_abbrev  0x00001504       0x14 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eeupd_byte.o)
- .debug_abbrev  0x00001518       0x14 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eeupd_dword.o)
- .debug_abbrev  0x0000152c       0x14 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eeupd_word.o)
- .debug_abbrev  0x00001540       0x14 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eewr_block.o)
- .debug_abbrev  0x00001554       0x14 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eewr_byte.o)
- .debug_abbrev  0x00001568       0x14 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eewr_dword.o)
- .debug_abbrev  0x0000157c       0x14 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eewr_word.o)
+ .debug_abbrev  0x000010f1      0x1f6 Libraria/hx711.o
+ .debug_abbrev  0x000012e7      0x1b7 main.o
+ .debug_abbrev  0x0000149e       0x14 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eerd_block.o)
+ .debug_abbrev  0x000014b2       0x14 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eerd_byte.o)
+ .debug_abbrev  0x000014c6       0x14 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eerd_word.o)
+ .debug_abbrev  0x000014da       0x14 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eeupd_block.o)
+ .debug_abbrev  0x000014ee       0x14 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eeupd_byte.o)
+ .debug_abbrev  0x00001502       0x14 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eeupd_dword.o)
+ .debug_abbrev  0x00001516       0x14 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eeupd_word.o)
+ .debug_abbrev  0x0000152a       0x14 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eewr_block.o)
+ .debug_abbrev  0x0000153e       0x14 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eewr_byte.o)
+ .debug_abbrev  0x00001552       0x14 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eewr_dword.o)
+ .debug_abbrev  0x00001566       0x14 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eewr_word.o)
 
-.debug_line     0x00000000     0x3290
+.debug_line     0x00000000     0x3262
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x169 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51/crtatmega128.o
  .debug_line    0x00000169      0xc17 Libraria/atmega128timer.o
@@ -1452,31 +1448,31 @@ END GROUP
  .debug_line    0x00000eac      0x218 Libraria/explode.o
  .debug_line    0x000010c4      0x8f4 Libraria/function.o
  .debug_line    0x000019b8      0xbef Libraria/lcd.o
- .debug_line    0x000025a7      0x309 Libraria/hx711.o
- .debug_line    0x000028b0      0x447 main.o
- .debug_line    0x00002cf7       0xab C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eerd_block.o)
- .debug_line    0x00002da2       0x7a C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eerd_byte.o)
- .debug_line    0x00002e1c       0x67 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eerd_word.o)
- .debug_line    0x00002e83       0xa5 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eeupd_block.o)
- .debug_line    0x00002f28       0xb0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eeupd_byte.o)
- .debug_line    0x00002fd8       0x7b C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eeupd_dword.o)
- .debug_line    0x00003053       0x62 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eeupd_word.o)
- .debug_line    0x000030b5       0x80 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eewr_block.o)
- .debug_line    0x00003135       0x98 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eewr_byte.o)
- .debug_line    0x000031cd       0x68 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eewr_dword.o)
- .debug_line    0x00003235       0x5b C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eewr_word.o)
+ .debug_line    0x000025a7      0x2db Libraria/hx711.o
+ .debug_line    0x00002882      0x447 main.o
+ .debug_line    0x00002cc9       0xab C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eerd_block.o)
+ .debug_line    0x00002d74       0x7a C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eerd_byte.o)
+ .debug_line    0x00002dee       0x67 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eerd_word.o)
+ .debug_line    0x00002e55       0xa5 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eeupd_block.o)
+ .debug_line    0x00002efa       0xb0 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eeupd_byte.o)
+ .debug_line    0x00002faa       0x7b C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eeupd_dword.o)
+ .debug_line    0x00003025       0x62 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eeupd_word.o)
+ .debug_line    0x00003087       0x80 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eewr_block.o)
+ .debug_line    0x00003107       0x98 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eewr_byte.o)
+ .debug_line    0x0000319f       0x68 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eewr_dword.o)
+ .debug_line    0x00003207       0x5b C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51\libatmega128.a(eewr_word.o)
 
-.debug_frame    0x00000000      0xd18
+.debug_frame    0x00000000      0xcf8
  *(.debug_frame)
  .debug_frame   0x00000000      0x328 Libraria/atmega128timer.o
  .debug_frame   0x00000328       0x24 Libraria/eeprom.o
  .debug_frame   0x0000034c       0xb4 Libraria/explode.o
  .debug_frame   0x00000400      0x4a0 Libraria/function.o
  .debug_frame   0x000008a0      0x294 Libraria/lcd.o
- .debug_frame   0x00000b34       0xe8 Libraria/hx711.o
- .debug_frame   0x00000c1c       0xfc main.o
+ .debug_frame   0x00000b34       0xc8 Libraria/hx711.o
+ .debug_frame   0x00000bfc       0xfc main.o
 
-.debug_str      0x00000000     0x10a0
+.debug_str      0x00000000     0x1078
  *(.debug_str)
  .debug_str     0x00000000      0x27d C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.3.300/gcc/dev/atmega128/avr51/crtatmega128.o
  .debug_str     0x0000027d      0x54d Libraria/atmega128timer.o
@@ -1489,19 +1485,19 @@ END GROUP
                                 0x585 (size before relaxing)
  .debug_str     0x00000c29      0x22e Libraria/lcd.o
                                 0x406 (size before relaxing)
- .debug_str     0x00000e57      0x1c2 Libraria/hx711.o
-                                0x3bf (size before relaxing)
- .debug_str     0x00001019       0x87 main.o
+ .debug_str     0x00000e57      0x19a Libraria/hx711.o
+                                0x397 (size before relaxing)
+ .debug_str     0x00000ff1       0x87 main.o
                                 0x6a7 (size before relaxing)
 
-.debug_loc      0x00000000     0x3eaf
+.debug_loc      0x00000000     0x3e87
  *(.debug_loc)
  .debug_loc     0x00000000      0x8f5 Libraria/atmega128timer.o
  .debug_loc     0x000008f5      0x39e Libraria/explode.o
  .debug_loc     0x00000c93     0x1b02 Libraria/function.o
  .debug_loc     0x00002795     0x1128 Libraria/lcd.o
- .debug_loc     0x000038bd      0x376 Libraria/hx711.o
- .debug_loc     0x00003c33      0x27c main.o
+ .debug_loc     0x000038bd      0x34e Libraria/hx711.o
+ .debug_loc     0x00003c0b      0x27c main.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -1521,15 +1517,15 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000      0x470
+.debug_ranges   0x00000000      0x460
  *(.debug_ranges)
  .debug_ranges  0x00000000      0x140 Libraria/atmega128timer.o
  .debug_ranges  0x00000140       0x10 Libraria/eeprom.o
  .debug_ranges  0x00000150       0x58 Libraria/explode.o
  .debug_ranges  0x000001a8      0x158 Libraria/function.o
  .debug_ranges  0x00000300       0xf0 Libraria/lcd.o
- .debug_ranges  0x000003f0       0x58 Libraria/hx711.o
- .debug_ranges  0x00000448       0x28 main.o
+ .debug_ranges  0x000003f0       0x48 Libraria/hx711.o
+ .debug_ranges  0x00000438       0x28 main.o
 
 .debug_macro
  *(.debug_macro)

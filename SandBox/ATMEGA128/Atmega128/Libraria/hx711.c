@@ -36,9 +36,9 @@ uint8_t hx711_datapin;
 uint8_t hx711_clkpin;
 int32_t* ptr;
 /***Header***/
-void HX711_set_readflag(HX711* self);
+//void HX711_set_readflag(HX711* self);
 void HX711_reset_readflag(HX711* self);
-uint8_t HX711_check_readflag(HX711* self);
+//uint8_t HX711_check_readflag(HX711* self);
 uint8_t HX711_read_bit(void);
 void HX711_set_amplify(HX711* self, uint8_t amplify);
 void HX711_query(HX711* self);
@@ -99,18 +99,18 @@ HX711 HX711enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t
 	// returns a copy
 	return hx711;
 }
-void HX711_set_readflag(HX711* self)
-{
-	self->readflag=ON;
-}
+//void HX711_set_readflag(HX711* self)
+//{
+	//self->readflag=ON;
+//}
 void HX711_reset_readflag(HX711* self)
 {
 	self->readflag=OFF;
 }
-uint8_t HX711_check_readflag(HX711* self)
-{
-	return self->readflag;	
-}
+//uint8_t HX711_check_readflag(HX711* self)
+//{
+	//return self->readflag;	
+//}
 uint8_t HX711_read_bit(void)
 {	
 	uint16_t bool;
@@ -147,7 +147,8 @@ void HX711_set_amplify(HX711* self, uint8_t amplify)
 void HX711_query(HX711* self)
 {
 	if((!(*hx711_PIN & ONE << hx711_datapin)) && !self->readflag){
-		HX711_set_readflag(self);
+		//HX711_set_readflag(self);
+		self->readflag=ON;
 	}
 }
 /***

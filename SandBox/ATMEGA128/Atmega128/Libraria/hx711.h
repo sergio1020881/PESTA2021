@@ -40,8 +40,6 @@ struct hx711{
 	float raw_mean;
 	struct HX711_calibration cal_data;
 	/******/
-	//void (*set_readflag)(struct hx711* self);
-	//uint8_t (*check_readflag)(struct hx711* self);
 	uint8_t (*read_bit)(void);
 	void (*set_amplify)(struct hx711* self, uint8_t amplify);
 	void (*query)(struct hx711* self);
