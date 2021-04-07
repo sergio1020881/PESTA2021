@@ -22,8 +22,10 @@ Comment:
 	#define GLOBAL_INTERRUPT_ENABLE 7
 #endif
 #define ZERO 0
+#define OFF 0
 #define ONE 1
-#define HX711_ticks 105 // 16Mhz between 100 and 200, make a macro for this value dependent on CPU clock. 55 -> 50% duty cycle
+#define ON 0xFF
+#define HX711_ticks 110 // 16Mhz between 100 and 200, make a macro for this value dependent on CPU clock. 55 -> 50% duty cycle
 #define HX711_ADC_bits 24
 #define HX711_VECT_SIZE 4
 /***Global File Variable***/
@@ -39,15 +41,10 @@ void HX711_reset_readflag(HX711* self);
 uint8_t HX711_check_readflag(HX711* self);
 uint8_t HX711_read_bit(void);
 void HX711_set_amplify(HX711* self, uint8_t amplify);
+void HX711_query(HX711* self);
 int32_t HX711_read_raw(HX711* self);
 float HX711_raw_average(HX711* self, uint8_t n);
 struct HX711_calibration* HX711_get_cal(HX711* self);
-int32_t HX711_get_offset_32(HX711* self);
-int32_t HX711_get_offset_64(HX711* self);
-int32_t HX711_get_offset_128(HX711* self);
-uint8_t HX711_get_divfactor_32(HX711* self);
-uint8_t HX711_get_divfactor_64(HX711* self);
-uint8_t HX711_get_divfactor_128(HX711* self);
 /***Procedure & Function***/
 HX711 HX711enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t *port, uint8_t datapin, uint8_t clkpin)
 {
@@ -82,7 +79,7 @@ HX711 HX711enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t
 	hx711.raw_mean = ZERO;
 	// offset para mesa usada.
 	hx711.cal_data.offset_32 = 36800; // to subtract B
-	hx711.cal_data.offset_64 = 73600; // to subtract A 64
+	hx711.cal_data.offset_64 = 72700; // to subtract A 64
 	hx711.cal_data.offset_128 = 147200; // to subtract A 128
 	//div factor
 	hx711.cal_data.divfactor_32=23; // to divide
@@ -90,30 +87,25 @@ HX711 HX711enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t
 	hx711.cal_data.divfactor_128=92; // to divide
 	hx711.cal_data.status=ZERO;
 	//Direccionar apontadores para PROTOTIPOS
-	hx711.set_readflag=HX711_set_readflag;
-	hx711.check_readflag=HX711_check_readflag;
+	//hx711.set_readflag=HX711_set_readflag;
+	//hx711.check_readflag=HX711_check_readflag;
 	hx711.read_bit=HX711_read_bit;
 	hx711.set_amplify=HX711_set_amplify;
+	hx711.query=HX711_query;
 	hx711.read_raw=HX711_read_raw;
 	hx711.raw_average=HX711_raw_average;
 	hx711.get_cal=HX711_get_cal;
-	hx711.get_offset_32=HX711_get_offset_32;
-	hx711.get_offset_64=HX711_get_offset_64;
-	hx711.get_offset_128=HX711_get_offset_128;
-	hx711.get_divfactor_32=HX711_get_divfactor_32;
-	hx711.get_divfactor_64=HX711_get_divfactor_64;
-	hx711.get_divfactor_128=HX711_get_divfactor_128;
 	STATUS_REGISTER = tSREG;
 	// returns a copy
 	return hx711;
 }
 void HX711_set_readflag(HX711* self)
 {
-	self->readflag=ONE;
+	self->readflag=ON;
 }
 void HX711_reset_readflag(HX711* self)
 {
-	self->readflag=ZERO;
+	self->readflag=OFF;
 }
 uint8_t HX711_check_readflag(HX711* self)
 {
@@ -152,6 +144,12 @@ void HX711_set_amplify(HX711* self, uint8_t amplify)
 			break;
 	}
 }
+void HX711_query(HX711* self)
+{
+	if((!(*hx711_PIN & ONE << hx711_datapin)) && !self->readflag){
+		HX711_set_readflag(self);
+	}
+}
 /***
 Function to be used in the interrupt routine with appropriate cycle period.
 ***/
@@ -163,9 +161,10 @@ int32_t HX711_read_raw(HX711* self)
 	bindex = self->bitcount-ONE;
 	ptr=(int32_t*)self->buffer;
 	/***Detect query for reading***/
-	if((!(*hx711_PIN & ONE << hx711_datapin)) && !self->readflag){
-		HX711_set_readflag(self);
-	}
+	//if((!(*hx711_PIN & ONE << hx711_datapin)) && !self->readflag){
+		//HX711_set_readflag(self);
+	//}
+	//HX711_query(self);
 	/***Interrupt 24 times sequence***/
 	if(self->readflag){
 		if(self->bitcount){
@@ -218,30 +217,6 @@ float HX711_raw_average(HX711* self, uint8_t n)
 struct HX711_calibration* HX711_get_cal(HX711* self)
 {
 	return &(self->cal_data);
-}
-int32_t HX711_get_offset_32(HX711* self)
-{
-	return self->cal_data.offset_32;
-}
-int32_t HX711_get_offset_64(HX711* self)
-{
-	return self->cal_data.offset_64;
-}
-int32_t HX711_get_offset_128(HX711* self)
-{
-	return self->cal_data.offset_128;
-}
-uint8_t HX711_get_divfactor_32(HX711* self)
-{
-	return self->cal_data.divfactor_32;
-}
-uint8_t HX711_get_divfactor_64(HX711* self)
-{
-	return self->cal_data.divfactor_64;
-}
-uint8_t HX711_get_divfactor_128(HX711* self)
-{
-	return self->cal_data.divfactor_128;
 }
 /***Interrupt***/
 /***comment***

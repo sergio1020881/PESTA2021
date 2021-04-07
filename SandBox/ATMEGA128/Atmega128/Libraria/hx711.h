@@ -40,19 +40,14 @@ struct hx711{
 	float raw_mean;
 	struct HX711_calibration cal_data;
 	/******/
-	void (*set_readflag)(struct hx711* self);
-	uint8_t (*check_readflag)(struct hx711* self);
+	//void (*set_readflag)(struct hx711* self);
+	//uint8_t (*check_readflag)(struct hx711* self);
 	uint8_t (*read_bit)(void);
 	void (*set_amplify)(struct hx711* self, uint8_t amplify);
+	void (*query)(struct hx711* self);
 	int32_t (*read_raw)(struct hx711* self);
 	float (*raw_average)(struct hx711* self, uint8_t n);
 	struct HX711_calibration* (*get_cal)(struct hx711* self);
-	int32_t (*get_offset_32)(struct hx711* self);
-	int32_t (*get_offset_64)(struct hx711* self);
-	int32_t (*get_offset_128)(struct hx711* self);
-	uint8_t (*get_divfactor_32)(struct hx711* self);
-	uint8_t (*get_divfactor_64)(struct hx711* self);
-	uint8_t (*get_divfactor_128)(struct hx711* self);
 };
 typedef struct hx711 HX711;
 /***Header***/
