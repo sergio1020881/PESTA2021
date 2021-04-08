@@ -39,7 +39,7 @@ Comment:
 #define ZERO 0
 #define ONE 1
 #define TRUE 1
-#define average_n 20
+#define average_n 24
 #define IMASK 0x3F
 #define _5sec 5
 #define _10sec 10
@@ -96,7 +96,7 @@ int main(void)
 	/***Parameters timers***/
 	timer0.compoutmode(1); // troubleshooting blinking PORTB
 	/***79 and 8  -> 80 us***/
-	timer0.compare(79); // 1 -> 159 -> 20 us, 1 -> 79 -> 10 us, 1 -> 15 -> 2 us, 8 -> 99 -> 100 us, 8 -> 79 -> 80 us
+	timer0.compare(60); // 1 -> 159 -> 20 us, 1 -> 79 -> 10 us, 1 -> 15 -> 2 us, 8 -> 99 -> 100 us, 8 -> 79 -> 80 us, 8 -> 60 -> 30.5us+bit
 	timer0.start(8); // 1 -> 32 us , 8 -> 256 us , 32 64 128 256 1024
 	
 	// to be used to jump menu for calibration in progress
@@ -130,8 +130,6 @@ int main(void)
 		/************INPUT***********/
 		F.boot(&F,PINF);
 		tmp = hx.raw_average(&hx, average_n); // average_n  25 or 50, smaller means faster or more readings
-		//lcd0.gotoxy(1,0); // for troubleshooting
-		//lcd0.string_size(function.ftoa(hx.read_raw(&hx), result, ZERO), 13);
 		/****************************/
 		switch(Menu){
 			/***MENU 1***/
@@ -140,10 +138,7 @@ int main(void)
 				lcd0.string_size("Weight Scale", 12); //TITLE
 				
 				//lcd0.gotoxy(1,0); // for troubleshooting
-				//lcd0.string_size(function.ftoa(hx.read_raw(&hx), result, ZERO), 13); lcd0.string_size("read_raw", 6);
-				//lcd0.string_size(function.ftoa(hx.get_cal(&hx)->divfactor_64, result, ZERO), 13);
-				//lcd0.string_size(function.ftoa(HX711_data.divfactor_128, result, ZERO), 13);
-				//lcd0.string_size(function.ftoa(hx.get_cal(&hx)->divfactor_128, result, ZERO), 13);
+				//lcd0.string_size(function.ftoa(hx.read_raw(&hx), result, ZERO), 13);
 				
 				if(F.hl(&F) & ONE){ // calibrate offset by pressing button 1
 					PORTC^=(ONE<<5); // troubleshooting

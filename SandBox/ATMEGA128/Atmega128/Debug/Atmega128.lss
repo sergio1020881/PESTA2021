@@ -19,7 +19,7 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
   7 .debug_abbrev 0000157a  00000000  00000000  00009496  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   00003262  00000000  00000000  0000aa10  2**0
+  8 .debug_line   00003261  00000000  00000000  0000aa10  2**0
                   CONTENTS, READONLY, DEBUGGING
   9 .debug_frame  00000cf8  00000000  00000000  0000dc74  2**2
                   CONTENTS, READONLY, DEBUGGING
@@ -3578,7 +3578,7 @@ uint8_t HX711_read_bit(void)
     18dc:	e2 f7       	brpl	.-8      	; 0x18d6 <HX711_read_bit+0x14>
     18de:	82 2b       	or	r24, r18
     18e0:	80 83       	st	Z, r24
-    18e2:	8e e6       	ldi	r24, 0x6E	; 110
+    18e2:	84 e2       	ldi	r24, 0x24	; 36
     18e4:	90 e0       	ldi	r25, 0x00	; 0
     18e6:	01 97       	sbiw	r24, 0x01	; 1
 	/**0.1us minimum**/
@@ -4372,12 +4372,12 @@ int main(void)
     1db8:	81 e0       	ldi	r24, 0x01	; 1
     1dba:	09 95       	icall
 	/***79 and 8  -> 80 us***/
-	timer0.compare(79); // 1 -> 159 -> 20 us, 1 -> 79 -> 10 us, 1 -> 15 -> 2 us, 8 -> 99 -> 100 us, 8 -> 79 -> 80 us
+	timer0.compare(60); // 1 -> 159 -> 20 us, 1 -> 79 -> 10 us, 1 -> 15 -> 2 us, 8 -> 99 -> 100 us, 8 -> 79 -> 80 us, 8 -> 60 -> 30.5us+bit
     1dbc:	65 96       	adiw	r28, 0x15	; 21
     1dbe:	ee ad       	ldd	r30, Y+62	; 0x3e
     1dc0:	ff ad       	ldd	r31, Y+63	; 0x3f
     1dc2:	65 97       	sbiw	r28, 0x15	; 21
-    1dc4:	8f e4       	ldi	r24, 0x4F	; 79
+    1dc4:	8c e3       	ldi	r24, 0x3C	; 60
     1dc6:	09 95       	icall
 	timer0.start(8); // 1 -> 32 us , 8 -> 256 us , 32 64 128 256 1024
     1dc8:	6b 96       	adiw	r28, 0x1b	; 27
@@ -4586,9 +4586,9 @@ int main(void)
     1f3c:	f1 e3       	ldi	r31, 0x31	; 49
     1f3e:	3f 2e       	mov	r3, r31
     1f40:	f0 2d       	mov	r31, r0
-				//lcd0.string_size(function.ftoa(hx.get_cal(&hx)->divfactor_64, result, ZERO), 13);
-				//lcd0.string_size(function.ftoa(HX711_data.divfactor_128, result, ZERO), 13);
-				//lcd0.string_size(function.ftoa(hx.get_cal(&hx)->divfactor_128, result, ZERO), 13);
+				
+				//lcd0.gotoxy(1,0); // for troubleshooting
+				//lcd0.string_size(function.ftoa(hx.read_raw(&hx), result, ZERO), 13);
 				
 				if(F.hl(&F) & ONE){ // calibrate offset by pressing button 1
 					PORTC^=(ONE<<5); // troubleshooting
@@ -4638,15 +4638,13 @@ int main(void)
     1f82:	ed 91       	ld	r30, X+
     1f84:	fc 91       	ld	r31, X
     1f86:	d0 97       	sbiw	r26, 0x30	; 48
-    1f88:	64 e1       	ldi	r22, 0x14	; 20
+    1f88:	68 e1       	ldi	r22, 0x18	; 24
     1f8a:	c8 01       	movw	r24, r16
     1f8c:	09 95       	icall
     1f8e:	60 93 76 01 	sts	0x0176, r22	; 0x800176 <tmp>
     1f92:	70 93 77 01 	sts	0x0177, r23	; 0x800177 <tmp+0x1>
     1f96:	80 93 78 01 	sts	0x0178, r24	; 0x800178 <tmp+0x2>
     1f9a:	90 93 79 01 	sts	0x0179, r25	; 0x800179 <tmp+0x3>
-		//lcd0.gotoxy(1,0); // for troubleshooting
-		//lcd0.string_size(function.ftoa(hx.read_raw(&hx), result, ZERO), 13);
 		/****************************/
 		switch(Menu){
     1f9e:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
@@ -4682,10 +4680,9 @@ int main(void)
     1fd4:	81 e0       	ldi	r24, 0x01	; 1
     1fd6:	91 e0       	ldi	r25, 0x01	; 1
     1fd8:	09 95       	icall
-				//lcd0.string_size(function.ftoa(hx.read_raw(&hx), result, ZERO), 13); lcd0.string_size("read_raw", 6);
-				//lcd0.string_size(function.ftoa(hx.get_cal(&hx)->divfactor_64, result, ZERO), 13);
-				//lcd0.string_size(function.ftoa(HX711_data.divfactor_128, result, ZERO), 13);
-				//lcd0.string_size(function.ftoa(hx.get_cal(&hx)->divfactor_128, result, ZERO), 13);
+				
+				//lcd0.gotoxy(1,0); // for troubleshooting
+				//lcd0.string_size(function.ftoa(hx.read_raw(&hx), result, ZERO), 13);
 				
 				if(F.hl(&F) & ONE){ // calibrate offset by pressing button 1
     1fda:	d6 01       	movw	r26, r12

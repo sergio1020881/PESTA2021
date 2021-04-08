@@ -25,7 +25,7 @@ Comment:
 #define OFF 0
 #define ONE 1
 #define ON 0xFF
-#define HX711_ticks 110 // 16Mhz between 100 and 200, make a macro for this value dependent on CPU clock. 55 -> 50% duty cycle
+#define HX711_ticks 36 // 16Mhz between 100 and 200, make a macro for this value dependent on CPU clock. 55 -> 50% duty cycle
 #define HX711_ADC_bits 24
 #define HX711_VECT_SIZE 4
 /***Global File Variable***/
