@@ -25,7 +25,7 @@ Comment:
 #define OFF 0
 #define ONE 1
 #define ON 0xFF
-#define HX711_ticks 36 // 16Mhz between 100 and 200, make a macro for this value dependent on CPU clock. 55 -> 50% duty cycle
+#define HX711_ticks 36 // fine tunned to 36
 #define HX711_ADC_bits 24
 #define HX711_VECT_SIZE 4
 /***Global File Variable***/
@@ -146,9 +146,13 @@ void HX711_set_amplify(HX711* self, uint8_t amplify)
 }
 void HX711_query(HX711* self)
 {
-	if((!(*hx711_PIN & ONE << hx711_datapin)) && !self->readflag){
+	//if((!(*hx711_PIN & ONE << hx711_datapin)) && !self->readflag){
 		//HX711_set_readflag(self);
-		self->readflag=ON;
+		//self->readflag=ON;
+	//}
+	if(!self->readflag){
+		if((!(*hx711_PIN & ONE << hx711_datapin)))
+			self->readflag=ON;
 	}
 }
 /***

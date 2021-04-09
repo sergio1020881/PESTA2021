@@ -84,7 +84,7 @@ int main(void)
 	float value=0;
 	float publish=0;
 	
-	// Get default values to memory
+	// Get default values to buss memory
 	HX711_data.offset_32 = hx.get_cal(&hx)->offset_32;
 	HX711_data.offset_64 = hx.get_cal(&hx)->offset_64;
 	HX711_data.offset_128 = hx.get_cal(&hx)->offset_128;
@@ -94,14 +94,14 @@ int main(void)
 	HX711_data.status = hx.get_cal(&hx)->status;
 	
 	/***Parameters timers***/
-	timer0.compoutmode(1); // troubleshooting blinking PORTB
+	timer0.compoutmode(1); // troubleshooting blinking PORTB 5
 	/***79 and 8  -> 80 us***/
-	timer0.compare(60); // 1 -> 159 -> 20 us, 1 -> 79 -> 10 us, 1 -> 15 -> 2 us, 8 -> 99 -> 100 us, 8 -> 79 -> 80 us, 8 -> 60 -> 30.5us+bit
+	timer0.compare(60); // 8 -> 79 -> 80 us, fine tunned = 8 -> 60 -> 30.4us
 	timer0.start(8); // 1 -> 32 us , 8 -> 256 us , 32 64 128 256 1024
 	
 	// to be used to jump menu for calibration in progress
-	timer1.compoutmodeA(1); // troubleshooting blinking PORTB
-	timer1.compareA(62800); // 256 -> 62800 -> 2 s
+	timer1.compoutmodeA(1); // troubleshooting blinking PORTB 6
+	timer1.compareA(62800); // Freq = 256 -> 62800 -> 2 s
 	timer1.start(256);
 	
 	// HX711 Gain
@@ -110,6 +110,7 @@ int main(void)
 	//Get stored calibration values and put them to effect
 	eprom.read_block(HX711_ptr, (const void*) ZERO, sizeblock);
 	if(HX711_ptr->status == 1){
+		//Load stored value 
 		hx.get_cal(&hx)->offset_32 = HX711_ptr->offset_32;
 		hx.get_cal(&hx)->offset_64 = HX711_ptr->offset_64;
 		hx.get_cal(&hx)->offset_128 = HX711_ptr->offset_128;
@@ -117,7 +118,7 @@ int main(void)
 		hx.get_cal(&hx)->divfactor_64 = HX711_ptr->divfactor_64;
 		hx.get_cal(&hx)->divfactor_128 = HX711_ptr->divfactor_128;
 		hx.get_cal(&hx)->status=ZERO;
-		PORTC ^= (ONE << 5); // troubleshooting
+		PORTC &= ~(ONE << 5); // troubleshooting
 	}
 	//lcd0.gotoxy(1,0); // for troubleshooting
 	//lcd0.string_size(function.ftoa(HX711_data.status, result, ZERO), 13);
@@ -127,8 +128,8 @@ int main(void)
 		/******PREAMBLE******/
 		lcd0.reboot();
 		hx.query(&hx);
-		/************INPUT***********/
 		F.boot(&F,PINF);
+		/************INPUT***********/
 		tmp = hx.raw_average(&hx, average_n); // average_n  25 or 50, smaller means faster or more readings
 		/****************************/
 		switch(Menu){
@@ -141,7 +142,6 @@ int main(void)
 				//lcd0.string_size(function.ftoa(hx.read_raw(&hx), result, ZERO), 13);
 				
 				if(F.hl(&F) & ONE){ // calibrate offset by pressing button 1
-					PORTC^=(ONE<<5); // troubleshooting
 					HX711_data.offset_32 = tmp;
 					HX711_data.offset_64 = tmp;
 					HX711_data.offset_128 = tmp;
@@ -228,15 +228,14 @@ ISR(TIMER0_COMP_vect) // 20 us intervals
 	/***Block other interrupts during this procedure***/
 	uint8_t Sreg;
 	Sreg = STATUS_REGISTER;
-	STATUS_REGISTER &= ~(ONE << INTERRUPT);
-	/***Block other interrupts during this procedure***/	
+	STATUS_REGISTER &= ~(ONE << INTERRUPT);	
 	hx.read_raw(&hx);
 	/***enable interrupts again***/
 	STATUS_REGISTER = Sreg;
 }
 ISR(TIMER1_COMPA_vect) // 1 second intervals
 {
-	/**/
+	/***/
 	
 	if((F.ll(&F) & IMASK) == ONE)
 		counter_1++;
@@ -248,12 +247,12 @@ ISR(TIMER1_COMPA_vect) // 1 second intervals
 	
 	if(counter_1 > _5sec){
 		counter_1 = _5sec+ONE; //lock in place
-		//PORTC ^= (ONE << 5); // troubleshooting
+		PORTC ^= (ONE << 6); // troubleshooting
 		if((F.ll(&F) & IMASK) == 2){
 			// Delete eerpom memory ZERO
 			HX711_data.status = ZERO;
 			eprom.update_block(HX711_ptr, (void*) ZERO, sizeblock);
-			PORTC ^= (ONE << 5); // troubleshooting
+			PORTC |= (ONE << 6); // troubleshooting
 			counter_1 = ZERO;
 		}
 	}
@@ -271,7 +270,7 @@ ISR(TIMER1_COMPA_vect) // 1 second intervals
 		}
 	}
 	
-	/**/
+	/***/
 }
 /***EOF***/
 /**** Comment:
@@ -279,7 +278,7 @@ The past only exists if the present comes to be. There is no future only possibi
 because 24 bit will have to create a vector pointer of the size of 32 bit, then at the 
 end do a cast to *((int32_t*)ptr).
 
-need sleep function for HX711, then finish the calibration menu of div factor, also add functionality for batch counting.
-Take a break.
+need sleep function for HX711, then finish the calibration menu of div factor, also add functionality for batch counting, lets see.
+finish code
 
 ****/
