@@ -60,7 +60,7 @@ Abaixo esta indicado uma tabela dos materiais usados, assim como os preços. Tam
 A ligação destes componentes é intuitivo e fácil de se perceber, o que é complexo neste trabalho é a interligação destes equipamentos com o micro-controlador e criar o driver de comunicação para a placa do amplificador de sinal, já que o protocolo é proprietário.\\
 \\
 Foi criado uma livraria (driver) recorrendo a interrupções quando o sinal de \textit{data} vai para a massa, na qual indica que tem um pacote de leitura pronto a ser transmitido.\\
-Como indicado abaixo no gratifico em que a linha amarela é a informação e a linha azul o respetivo \textit{clock} que é gerado pelas interrupções do micro-controlador fazendo \textit{shift} dos 24 bits, que depois no fim transmite para o amplificador o ganho de amplificação a ser usado pelo numero excedente de \textit{clock cycles}, que nesta demonstração é um, e corresponde a ganho de 64.
+Como indicado abaixo no gratifico em que a linha amarela é a informação e a linha azul o respetivo \textit{clock} que é gerado pelas interrupções do micro-controlador fazendo \textit{shift} dos 24 bits, que depois no fim transmite para o amplificador o ganho de amplificação a ser usado pelo numero excedente de \textit{clock cycles}, que nesta demonstração é um, e corresponde a ganho de 128.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.65]{./image/PESTA/graph/DataClkPacket_1.JPG}
@@ -74,10 +74,14 @@ $\begin{array}{l l l}
 	\overline{x} & = & \frac{1}{n}\sum_{i=1}^n x_i
 \end{array}$
 
-
-
 \section{Validação}
-To validate is to justify why the choices made and alternatives that could be chosen.
+%%%To validate is to justify why the choices made and alternatives that could be chosen.
+As escolhas feitas estão dentro dos parâmetros na qual a oferta nos disponibiliza, sendo que pouco se pode beneficiar. Apenas o conhecimento adquirido e aprofundar o funcionamento é o ganho mais evidente, facilitando a interpretação de situações e deteção de anomalias (\textit{troubleshooting}).\\
+\\
+Apostei na marca \textbf{Atmel} devido a experiência adquirida, conjunto de já conhecimentos adquiridos e de me ser familiar, sendo que se aposta-se noutra marca teria de enfrentar uma curva de aprendizagem e adaptação que no final a nível de custos beneficio seria desfavorável, muito trabalhoso.\\
+\\
+O sensor usado é o mais comum nesta pratica, e escolha demonstrada, o circuito de interface é indiferente a escolha apenas é baseada na sua precisão, ou seja, é de 24 \textit{bit}, e o chip apenas tem  de 10 \textit{bit} de resolução.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{comment}
 Sem contar com as despesas no equipamento para a programação do hardware que em principio só se gasta uma vez, isto é, se não se estragar. No caso do programador \textbf{Atmel-ICE} pode custar até \EUR{185.55}.\\

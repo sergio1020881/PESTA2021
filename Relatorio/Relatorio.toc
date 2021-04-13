@@ -6,5 +6,5 @@
 \contentsline {subsection}{\numberline {1.1}Material}{5}%
 \contentsline {section}{\numberline {2}Funcionamento}{6}%
 \contentsline {section}{\numberline {3}Validação}{6}%
-\contentsline {chapter}{\numberline {3}Conclusão}{7}%
-\contentsline {section}{\numberline {1}aspectos}{7}%
+\contentsline {chapter}{\numberline {3}Conclusão}{8}%
+\contentsline {chapter}{\numberline {A}Física}{9}%
