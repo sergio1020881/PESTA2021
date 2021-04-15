@@ -48,6 +48,7 @@ Comment:
 */
 EXPLODE F;
 LCD0 lcd0;
+TIMER_COUNTER0 timer0;
 struct HX711_calibration HX711_data;
 struct HX711_calibration* HX711_ptr;
 const uint8_t sizeblock = sizeof(struct HX711_calibration);
@@ -75,7 +76,7 @@ int main(void)
 	F = EXPLODEenable();
 	FUNC function = FUNCenable();
 	lcd0 = LCD0enable(&DDRA,&PINA,&PORTA);
-	TIMER_COUNTER0 timer0 = TIMER_COUNTER0enable(2,2); //2,2
+	timer0 = TIMER_COUNTER0enable(2,2); //2,2
 	TIMER_COUNTER1 timer1 = TIMER_COUNTER1enable(4,2); //4,2
 	hx = HX711enable(&DDRF, &PINF, &PORTF, 6, 7); //6,7
 	eprom = EEPROMenable();
@@ -128,6 +129,8 @@ int main(void)
 		/******PREAMBLE******/
 		lcd0.reboot();
 		hx.query(&hx);
+		//if(hx.query(&hx));
+			//timer0.start(8);
 		F.boot(&F,PINF);
 		/************INPUT***********/
 		tmp = hx.raw_average(&hx, average_n); // average_n  25 or 50, smaller means faster or more readings
@@ -189,6 +192,9 @@ int main(void)
 				lcd0.gotoxy(0,3);
 				lcd0.string_size("SETUP DIVFACTOR",15);
 				
+				
+				
+				
 				// Jump Menus signal
 				if(signal == 2){
 					Menu = '1';
@@ -215,7 +221,7 @@ int main(void)
 void PORTINIT(void)
 {
 	//Control buttons
-	PORTF |= 0x3F;
+	PORTF |= IMASK;
 	//troubleshooting output
 	DDRC = 0xFF;
 	PORTC = 0xFF;
@@ -223,32 +229,30 @@ void PORTINIT(void)
 /*
 ** interrupt
 */
-ISR(TIMER0_COMP_vect) // 20 us intervals
+ISR(TIMER0_COMP_vect) // 15.4 us intervals
 {
 	/***Block other interrupts during this procedure***/
 	uint8_t Sreg;
 	Sreg = STATUS_REGISTER;
 	STATUS_REGISTER &= ~(ONE << INTERRUPT);	
 	hx.read_raw(&hx);
+	//if(!hx.get_readflag(&hx))
+		//timer0.stop();
 	/***enable interrupts again***/
 	STATUS_REGISTER = Sreg;
 }
 ISR(TIMER1_COMPA_vect) // 1 second intervals
 {
-	/***/
-	
-	if((F.ll(&F) & IMASK) == ONE)
+	/***CLEAR EEPROM OFFSET SEQUENCE START***/
+	if((F.ll(&F) & IMASK) == (ONE << 3)) //button 4
 		counter_1++;
 	else if(counter_1 < _5sec+ONE)
 		counter_1=0;
-	
-	if((F.ll(&F) & IMASK) == 3)
-		counter_2++;
-	
+		
 	if(counter_1 > _5sec){
 		counter_1 = _5sec+ONE; //lock in place
 		PORTC ^= (ONE << 6); // troubleshooting
-		if((F.ll(&F) & IMASK) == 2){
+		if((F.ll(&F) & IMASK) == (ONE << 5)){ //button 6
 			// Delete eerpom memory ZERO
 			HX711_data.status = ZERO;
 			eprom.update_block(HX711_ptr, (void*) ZERO, sizeblock);
@@ -256,21 +260,25 @@ ISR(TIMER1_COMPA_vect) // 1 second intervals
 			counter_1 = ZERO;
 		}
 	}
+	/***CLEAR EEPROM OFFSET SEQUENCE END***/
+	
+	/***CAL DIVFACTOR DEFINE START***/
+	if((F.ll(&F) & IMASK) == (ONE << 4)) //button 5
+		counter_2++;
+	else if(counter_2 < _5sec+ONE)
+		counter_2=0;
 	
 	if(counter_2 > _5sec){
 		counter_2 = _5sec+ONE; //lock in place
 		signal = ONE;
-		
-		PORTC ^= (ONE << 5); // troubleshooting
-
-		if((F.ll(&F) & IMASK) == 1){
+		PORTC ^= (ONE << 7); // troubleshooting
+		if((F.ll(&F) & IMASK) == (ONE << 5)){ //button 6
 			signal = 2;
-			PORTC ^= (ONE << 5); // troubleshooting
+			PORTC |= (ONE << 7); // troubleshooting
 			counter_2 = ZERO;
 		}
 	}
-	
-	/***/
+	/***CAL DIVFACTOR DEFINE END***/
 }
 /***EOF***/
 /**** Comment:
@@ -280,5 +288,7 @@ end do a cast to *((int32_t*)ptr).
 
 need sleep function for HX711, then finish the calibration menu of div factor, also add functionality for batch counting, lets see.
 finish code
+
+MEMCP is not appreciated by this MCU, sometimes crashes.
 
 ****/

@@ -42,9 +42,10 @@ struct hx711{
 	/******/
 	uint8_t (*read_bit)(void);
 	void (*set_amplify)(struct hx711* self, uint8_t amplify);
-	void (*query)(struct hx711* self);
+	uint8_t (*query)(struct hx711* self);
 	int32_t (*read_raw)(struct hx711* self);
 	float (*raw_average)(struct hx711* self, uint8_t n);
+	uint8_t (*get_readflag)(struct hx711* self);
 	struct HX711_calibration* (*get_cal)(struct hx711* self);
 };
 typedef struct hx711 HX711;

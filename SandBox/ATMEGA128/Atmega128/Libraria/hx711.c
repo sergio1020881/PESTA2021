@@ -38,12 +38,12 @@ int32_t* ptr;
 /***Header***/
 //void HX711_set_readflag(HX711* self);
 void HX711_reset_readflag(HX711* self);
-//uint8_t HX711_check_readflag(HX711* self);
 uint8_t HX711_read_bit(void);
 void HX711_set_amplify(HX711* self, uint8_t amplify);
-void HX711_query(HX711* self);
+uint8_t HX711_query(HX711* self);
 int32_t HX711_read_raw(HX711* self);
 float HX711_raw_average(HX711* self, uint8_t n);
+uint8_t HX711_get_readflag(HX711* self);
 struct HX711_calibration* HX711_get_cal(HX711* self);
 /***Procedure & Function***/
 HX711 HX711enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t *port, uint8_t datapin, uint8_t clkpin)
@@ -88,12 +88,12 @@ HX711 HX711enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t
 	hx711.cal_data.status=ZERO;
 	//Direccionar apontadores para PROTOTIPOS
 	//hx711.set_readflag=HX711_set_readflag;
-	//hx711.check_readflag=HX711_check_readflag;
 	hx711.read_bit=HX711_read_bit;
 	hx711.set_amplify=HX711_set_amplify;
 	hx711.query=HX711_query;
 	hx711.read_raw=HX711_read_raw;
 	hx711.raw_average=HX711_raw_average;
+	hx711.get_readflag=HX711_get_readflag;
 	hx711.get_cal=HX711_get_cal;
 	STATUS_REGISTER = tSREG;
 	// returns a copy
@@ -107,10 +107,6 @@ void HX711_reset_readflag(HX711* self)
 {
 	self->readflag=OFF;
 }
-//uint8_t HX711_check_readflag(HX711* self)
-//{
-	//return self->readflag;	
-//}
 uint8_t HX711_read_bit(void)
 {	
 	uint16_t bool;
@@ -144,8 +140,9 @@ void HX711_set_amplify(HX711* self, uint8_t amplify)
 			break;
 	}
 }
-void HX711_query(HX711* self)
+uint8_t HX711_query(HX711* self)
 {
+	uint8_t flag=OFF;
 	//if((!(*hx711_PIN & ONE << hx711_datapin)) && !self->readflag){
 		//HX711_set_readflag(self);
 		//self->readflag=ON;
@@ -153,7 +150,9 @@ void HX711_query(HX711* self)
 	if(!self->readflag){
 		if((!(*hx711_PIN & ONE << hx711_datapin)))
 			self->readflag=ON;
+			flag=ON;
 	}
+	return flag;
 }
 /***
 Function to be used in the interrupt routine with appropriate cycle period.
@@ -218,6 +217,10 @@ float HX711_raw_average(HX711* self, uint8_t n)
 		self->trigger = ZERO;
 	}
 	return self->raw_mean;
+}
+uint8_t HX711_get_readflag(HX711* self)
+{
+	return self->readflag;
 }
 struct HX711_calibration* HX711_get_cal(HX711* self)
 {
