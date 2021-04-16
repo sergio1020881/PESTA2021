@@ -161,6 +161,12 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Libraria\atmega128interrupt.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Libraria\atmega128interrupt.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Libraria\atmega128timer.c">
       <SubType>compile</SubType>
     </Compile>

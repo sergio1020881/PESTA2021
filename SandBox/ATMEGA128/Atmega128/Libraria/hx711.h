@@ -27,7 +27,7 @@ struct HX711_calibration{
 };
 //device
 struct hx711{
-	uint8_t readflag; // indicate start of bit shifting
+	volatile uint8_t readflag; // indicate start of bit shifting
 	uint8_t trigger; // pickup signal
 	uint8_t amplify; // number of end clock cycles
 	uint8_t ampcount; // count down final amplify pulses

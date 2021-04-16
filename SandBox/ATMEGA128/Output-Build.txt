@@ -1,23 +1,13 @@
-﻿------ Build started: Project: Atmega128, Configuration: Debug AVR ------
-Build started.
-Project "Atmega128.cproj" (default targets):
-Target "PreBuildEvent" skipped, due to false condition; ('$(PreBuildEvent)'!='') was evaluated as (''!='').
-Target "CoreBuild" in file "C:\Program Files (x86)\Atmel\Studio\7.0\Vs\Compiler.targets" from project "C:\Users\sergi\Documents\GITHUB\PESTA2021\SandBox\ATMEGA128\Atmega128\Atmega128.cproj" (target "Build" depends on it):
+﻿Build started.
+Project "Atmega128.cproj" (Compile target(s)):
+Target "Compile" in file "C:\Program Files (x86)\Atmel\Studio\7.0\Vs\Compiler.targets" from project "C:\Users\sergi\Documents\GITHUB\PESTA2021\SandBox\ATMEGA128\Atmega128\Atmega128.cproj" (entry point):
+	Using "RunCompilerTask" task from assembly "C:\Program Files (x86)\Atmel\Studio\7.0\Extensions\Application\AvrGCC.dll".
 	Task "RunCompilerTask"
 		Shell Utils Path C:\Program Files (x86)\Atmel\Studio\7.0\shellUtils
-		C:\Program Files (x86)\Atmel\Studio\7.0\shellUtils\make.exe all --jobs 4 --output-sync 
-		make: Nothing to be done for 'all'.
+		C:\Program Files (x86)\Atmel\Studio\7.0\shellUtils\make.exe "main.o" 
+		make: 'main.o' is up to date.
 	Done executing task "RunCompilerTask".
-	Task "RunOutputFileVerifyTask"
-				Program Memory Usage 	:	11780 bytes   9.0 % Full
-				Data Memory Usage 		:	313 bytes   7.6 % Full
-				Warning: Memory Usage estimation may not be accurate if there are sections other than .text sections in ELF file
-	Done executing task "RunOutputFileVerifyTask".
-Done building target "CoreBuild" in project "Atmega128.cproj".
-Target "PostBuildEvent" skipped, due to false condition; ('$(PostBuildEvent)' != '') was evaluated as ('' != '').
-Target "Build" in file "C:\Program Files (x86)\Atmel\Studio\7.0\Vs\Avr.common.targets" from project "C:\Users\sergi\Documents\GITHUB\PESTA2021\SandBox\ATMEGA128\Atmega128\Atmega128.cproj" (entry point):
-Done building target "Build" in project "Atmega128.cproj".
+Done building target "Compile" in project "Atmega128.cproj".
 Done building project "Atmega128.cproj".
 
 Build succeeded.
-========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========

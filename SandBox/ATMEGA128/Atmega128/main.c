@@ -24,6 +24,7 @@ Comment:
 #include <stdlib.h>
 #include <string.h>
 #include "explode.h"
+#include "atmega128interrupt.h"
 #include "atmega128timer.h"
 #include "function.h"
 #include "lcd.h"
@@ -128,10 +129,12 @@ int main(void)
 	while(TRUE){
 		/******PREAMBLE******/
 		lcd0.reboot();
-		hx.query(&hx);
-		//if(hx.query(&hx));
-			//timer0.start(8);
 		F.boot(&F,PINF);
+		hx.query(&hx);
+		//if(hx.query(&hx)){ // one shot
+			//timer0.start(8);
+			//hx.read_raw(&hx);
+		//}
 		/************INPUT***********/
 		tmp = hx.raw_average(&hx, average_n); // average_n  25 or 50, smaller means faster or more readings
 		/****************************/
@@ -177,6 +180,7 @@ int main(void)
 					publish = value;
 					lcd0.gotoxy(2,0);
 					lcd0.string_size(function.ftoa(publish, result, ZERO), 13); lcd0.string_size("gram", 4);
+					hx.query(&hx);
 				}
 				
 				// Jump Menu signal

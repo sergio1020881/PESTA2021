@@ -109,13 +109,13 @@ void HX711_reset_readflag(HX711* self)
 }
 uint8_t HX711_read_bit(void)
 {	
-	uint16_t bool;
+	uint16_t ibool;
 	*hx711_PORT|=(ONE<<hx711_clkpin);
 	/**0.1us minimum**/
-	for(bool=0;bool<HX711_ticks;bool++);
-	bool=*hx711_PIN & (ONE<<hx711_datapin);
-	*hx711_PORT&=~(ONE<<hx711_clkpin);
-	return bool;
+	for(ibool=ZERO; ibool<HX711_ticks; ibool++); //inline delay
+	ibool=*hx711_PIN & (ONE<<hx711_datapin);
+	*hx711_PORT &= ~(ONE<<hx711_clkpin);
+	return ibool;
 }
 // Gain selector
 // AVDD connected to 5V, channel B gain=32
@@ -142,15 +142,12 @@ void HX711_set_amplify(HX711* self, uint8_t amplify)
 }
 uint8_t HX711_query(HX711* self)
 {
-	uint8_t flag=OFF;
-	//if((!(*hx711_PIN & ONE << hx711_datapin)) && !self->readflag){
-		//HX711_set_readflag(self);
-		//self->readflag=ON;
-	//}
+	uint8_t flag=OFF; // one shot
 	if(!self->readflag){
-		if((!(*hx711_PIN & ONE << hx711_datapin)))
+		if(!(*hx711_PIN & (ONE << hx711_datapin))){
 			self->readflag=ON;
 			flag=ON;
+		}
 	}
 	return flag;
 }
@@ -168,7 +165,6 @@ int32_t HX711_read_raw(HX711* self)
 	//if((!(*hx711_PIN & ONE << hx711_datapin)) && !self->readflag){
 		//HX711_set_readflag(self);
 	//}
-	//HX711_query(self);
 	/***Interrupt 24 times sequence***/
 	if(self->readflag){
 		if(self->bitcount){
@@ -207,7 +203,7 @@ float HX711_raw_average(HX711* self, uint8_t n)
 		if(self->av_n < n){
 			self->sum += self->raw_reading;
 			self->av_n++;
-			}else{
+		}else{
 			self->av_n = ZERO;
 			self->raw_mean = self->sum / n;
 			self->sum = ZERO;
