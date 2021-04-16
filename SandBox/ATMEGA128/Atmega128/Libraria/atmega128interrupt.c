@@ -37,6 +37,7 @@ Comment:
 /***Header***/
 void INTERRUPT_set(uint8_t channel, uint8_t sense);
 void INTERRUPT_off(uint8_t channel);
+void INTERRUPT_on(uint8_t channel);
 uint8_t INTERRUPT_reset_status(void);
 /***Procedure & Function***/
 INTERRUPT INTERRUPTenable(void)
@@ -49,6 +50,7 @@ Setup blank
 	/******/
 	interrupt.set=INTERRUPT_set;
 	interrupt.off=INTERRUPT_off;
+	interrupt.on=INTERRUPT_on;
 	interrupt.reset_status=INTERRUPT_reset_status;
 	return interrupt;
 }
@@ -246,29 +248,61 @@ void INTERRUPT_set(uint8_t channel, uint8_t sense)
 void INTERRUPT_off(uint8_t channel)
 {
 	switch( channel ){
-		case 0: // desable
+		case 0: // disable
 			External_Interrupt_Mask_Register &= ~(1<<INT0);
 			break;
-		case 1: // desable
+		case 1: // disable
 			External_Interrupt_Mask_Register &= ~(1<<INT1);
 			break;
-		case 2: // desable
+		case 2: // disable
 			External_Interrupt_Mask_Register &= ~(1<<INT2);
 			break;
-		case 3: // desable
+		case 3: // disable
 			External_Interrupt_Mask_Register &= ~(1<<INT3);
 			break;
-		case 4: // desable
+		case 4: // disable
 			External_Interrupt_Mask_Register &= ~(1<<INT4);
 			break;
-		case 5: // desable
+		case 5: // disable
 			External_Interrupt_Mask_Register &= ~(1<<INT5);
 			break;
-		case 6: // desable
+		case 6: // disable
 			External_Interrupt_Mask_Register &= ~(1<<INT6);
 			break;
-		case 7: // desable
+		case 7: // disable
 			External_Interrupt_Mask_Register &= ~(1<<INT7);
+			break;
+		default: // all disable
+			External_Interrupt_Mask_Register = 0X00;
+			break;
+	}
+}
+void INTERRUPT_on(uint8_t channel)
+{
+	switch( channel ){
+		case 0:
+			External_Interrupt_Mask_Register |= (1<<INT0);
+			break;
+		case 1:
+			External_Interrupt_Mask_Register |= (1<<INT1);
+			break;
+		case 2:
+			External_Interrupt_Mask_Register |= (1<<INT2);
+			break;
+		case 3:
+			External_Interrupt_Mask_Register |= (1<<INT3);
+			break;
+		case 4:
+			External_Interrupt_Mask_Register |= (1<<INT4);
+			break;
+		case 5:
+			External_Interrupt_Mask_Register |= (1<<INT5);
+			break;
+		case 6:
+			External_Interrupt_Mask_Register |= (1<<INT6);
+			break;
+		case 7:
+			External_Interrupt_Mask_Register |= (1<<INT7);
 			break;
 		default: // all disable
 			External_Interrupt_Mask_Register = 0X00;

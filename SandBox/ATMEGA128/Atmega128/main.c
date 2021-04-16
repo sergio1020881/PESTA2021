@@ -35,7 +35,7 @@ Comment:
 */
 #ifndef STATUS_REGISTER
 	#define STATUS_REGISTER SREG
-	#define INTERRUPT 7
+	#define GLOBAL_INTERRUPT_ENABLE 7
 #endif
 #define ZERO 0
 #define ONE 1
@@ -50,6 +50,7 @@ Comment:
 EXPLODE F;
 LCD0 lcd0;
 TIMER_COUNTER0 timer0;
+INTERRUPT intx;
 struct HX711_calibration HX711_data;
 struct HX711_calibration* HX711_ptr;
 const uint8_t sizeblock = sizeof(struct HX711_calibration);
@@ -81,6 +82,7 @@ int main(void)
 	TIMER_COUNTER1 timer1 = TIMER_COUNTER1enable(4,2); //4,2
 	hx = HX711enable(&DDRF, &PINF, &PORTF, 6, 7); //6,7
 	eprom = EEPROMenable();
+	intx = INTERRUPTenable();
 	/******/
 	
 	float value=0;
@@ -238,7 +240,7 @@ ISR(TIMER0_COMP_vect) // 15.4 us intervals
 	/***Block other interrupts during this procedure***/
 	uint8_t Sreg;
 	Sreg = STATUS_REGISTER;
-	STATUS_REGISTER &= ~(ONE << INTERRUPT);	
+	STATUS_REGISTER &= ~(ONE << GLOBAL_INTERRUPT_ENABLE);	
 	hx.read_raw(&hx);
 	//if(!hx.get_readflag(&hx))
 		//timer0.stop();
