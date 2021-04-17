@@ -312,7 +312,7 @@ void INTERRUPT_on(uint8_t channel)
 /***Interrupt***/
 // cross out the ones being used and redefine in main
 ISR(INT0_vect){ }
-ISR(INT1_vect){ }
+//ISR(INT1_vect){ }
 ISR(INT2_vect){ }
 ISR(INT3_vect){ }
 ISR(INT4_vect){ }

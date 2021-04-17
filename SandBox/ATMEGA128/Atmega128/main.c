@@ -108,6 +108,8 @@ int main(void)
 	timer1.compareA(62800); // Freq = 256 -> 62800 -> 2 s
 	timer1.start(256);
 	
+	intx.set(1,0);
+	
 	// HX711 Gain
 	hx.set_amplify(&hx, 64); // 32 64 128
 	
@@ -165,6 +167,7 @@ int main(void)
 					hx.get_cal(&hx)->divfactor_64 = HX711_ptr->divfactor_64;
 					hx.get_cal(&hx)->divfactor_128 = HX711_ptr->divfactor_128;
 					hx.get_cal(&hx)->status=ZERO;
+					intx.on(1);
 				}
 				
 				//value = (value - hx.get_cal(&hx)->offset_128) / hx.get_cal(&hx)->divfactor_128; //value to be published to LCD
@@ -229,12 +232,20 @@ void PORTINIT(void)
 	//Control buttons
 	PORTF |= IMASK;
 	//troubleshooting output
+	DDRC = 0x00;
+	PORTD=0xFF;
 	DDRC = 0xFF;
 	PORTC = 0xFF;
 }
 /*
 ** interrupt
 */
+ISR(INT1_vect){
+	
+	PORTC ^= (ONE << 7);
+	intx.off(1);
+	
+}
 ISR(TIMER0_COMP_vect) // 15.4 us intervals
 {
 	/***Block other interrupts during this procedure***/
