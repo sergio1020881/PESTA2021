@@ -87,8 +87,10 @@ int main(void)
 	//intx = INTERRUPTenable();
 	/******/
 	
-	float value=0;
-	float publish=0;
+	float value = 0;
+	float publish = 0;
+	uint8_t choice;
+	uint8_t divfactor = ZERO;
 	
 	// Get default values to buss memory
 	HX711_data.offset_32 = hx.get_cal(&hx)->offset_32;
@@ -114,7 +116,7 @@ int main(void)
 	
 	// HX711 Gain
 	hx.set_amplify(&hx, 64); // 32 64 128
-	
+	choice = hx.get_amplify(&hx);
 	//Get stored calibration values and put them to effect
 	eprom.read_block(HX711_ptr, (const void*) ZERO, sizeblock);
 	if(HX711_ptr->status == 1){
@@ -198,10 +200,24 @@ int main(void)
 				/**/
 				lcd0.gotoxy(0,3);
 				lcd0.string_size("SETUP DIVFACTOR",15);
-				
-				
-				
-				
+				switch(choice){
+					case 1:
+						break;
+					case 2:
+						break;
+					case 3:
+						divfactor=hx.get_cal(&hx)->divfactor_64;
+						choice=31;
+						break;
+					case 31:
+						lcd0.gotoxy(2,0);
+						
+						
+						lcd0.string_size(function.ui16toa(divfactor),6);
+						break;
+					default:
+						break;
+				};
 				// Jump Menus signal
 				if(signal == 2){
 					Menu = '1';
@@ -273,7 +289,6 @@ ISR(TIMER1_COMPA_vect) // 1 second intervals
 		}
 	}
 	/***CLEAR EEPROM OFFSET SEQUENCE END***/
-	
 	/***CAL DIVFACTOR DEFINE START***/
 	if((F.ll(&F) & IMASK) == (ONE << 4)) //button 5
 		counter_2++;

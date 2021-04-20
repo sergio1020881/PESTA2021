@@ -36,7 +36,7 @@ uint8_t hx711_datapin;
 uint8_t hx711_clkpin;
 int32_t* ptr;
 /***Header***/
-//void HX711_set_readflag(HX711* self);
+uint8_t HX711_get_amplify(HX711* self);
 void HX711_reset_readflag(HX711* self);
 uint8_t HX711_read_bit(void);
 void HX711_set_amplify(HX711* self, uint8_t amplify);
@@ -87,7 +87,7 @@ HX711 HX711enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t
 	hx711.cal_data.divfactor_128=92; // to divide
 	hx711.cal_data.status=ZERO;
 	//Direccionar apontadores para PROTOTIPOS
-	//hx711.set_readflag=HX711_set_readflag;
+	hx711.get_amplify=HX711_get_amplify;
 	hx711.read_bit=HX711_read_bit;
 	hx711.set_amplify=HX711_set_amplify;
 	hx711.query=HX711_query;
@@ -99,10 +99,10 @@ HX711 HX711enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t
 	// returns a copy
 	return hx711;
 }
-//void HX711_set_readflag(HX711* self)
-//{
-	//self->readflag=ON;
-//}
+uint8_t HX711_get_amplify(HX711* self)
+{
+	return self->amplify;
+}
 void HX711_reset_readflag(HX711* self)
 {
 	self->readflag=OFF;
