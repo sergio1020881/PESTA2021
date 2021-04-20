@@ -41,6 +41,7 @@ Comment:
 #define ONE 1
 #define TRUE 1
 #define average_n 24
+#define blink 8
 #define IMASK 0x3F
 #define _5sec 5
 #define _10sec 10
@@ -63,6 +64,7 @@ char Menu = '1'; // Main menu selector
 uint8_t counter_1 = 0;
 uint8_t counter_2 = 0;
 uint8_t signal = 0;
+uint8_t count=blink;
 /*
 ** Header
 */
@@ -82,7 +84,7 @@ int main(void)
 	TIMER_COUNTER1 timer1 = TIMER_COUNTER1enable(4,2); //4,2
 	hx = HX711enable(&DDRF, &PINF, &PORTF, 6, 7); //6,7
 	eprom = EEPROMenable();
-	intx = INTERRUPTenable();
+	//intx = INTERRUPTenable();
 	/******/
 	
 	float value=0;
@@ -108,7 +110,7 @@ int main(void)
 	timer1.compareA(62800); // Freq = 256 -> 62800 -> 2 s
 	timer1.start(256);
 	
-	intx.set(1,0);
+	//intx.set(1,0);
 	
 	// HX711 Gain
 	hx.set_amplify(&hx, 64); // 32 64 128
@@ -132,15 +134,13 @@ int main(void)
 	/***********************************************************************************************/
 	while(TRUE){
 		/******PREAMBLE******/
-		lcd0.reboot();
-		F.boot(&F,PINF);
-		hx.query(&hx);
-		//if(hx.query(&hx)){ // one shot
-			//timer0.start(8);
-			//hx.read_raw(&hx);
-		//}
+		lcd0.reboot(); //Reboot LCD
+		F.boot(&F,PINF); //PORTF INPUT READING
+		hx.query(&hx); //Start reading ADC
 		/************INPUT***********/
 		tmp = hx.raw_average(&hx, average_n); // average_n  25 or 50, smaller means faster or more readings
+		
+		
 		/****************************/
 		switch(Menu){
 			/***MENU 1***/
@@ -167,7 +167,6 @@ int main(void)
 					hx.get_cal(&hx)->divfactor_64 = HX711_ptr->divfactor_64;
 					hx.get_cal(&hx)->divfactor_128 = HX711_ptr->divfactor_128;
 					hx.get_cal(&hx)->status=ZERO;
-					intx.on(1);
 				}
 				
 				//value = (value - hx.get_cal(&hx)->offset_128) / hx.get_cal(&hx)->divfactor_128; //value to be published to LCD
@@ -185,7 +184,6 @@ int main(void)
 					publish = value;
 					lcd0.gotoxy(2,0);
 					lcd0.string_size(function.ftoa(publish, result, ZERO), 13); lcd0.string_size("gram", 4);
-					hx.query(&hx);
 				}
 				
 				// Jump Menu signal
@@ -232,29 +230,24 @@ void PORTINIT(void)
 	//Control buttons
 	PORTF |= IMASK;
 	//troubleshooting output
-	DDRC = 0x00;
-	PORTD=0xFF;
 	DDRC = 0xFF;
 	PORTC = 0xFF;
 }
 /*
 ** interrupt
 */
-ISR(INT1_vect){
-	
-	PORTC ^= (ONE << 7);
-	intx.off(1);
-	
-}
+//ISR(INT1_vect){	
+//	PORTC ^= (ONE << 7);
+//	intx.off(1);
+//}
 ISR(TIMER0_COMP_vect) // 15.4 us intervals
 {
 	/***Block other interrupts during this procedure***/
 	uint8_t Sreg;
 	Sreg = STATUS_REGISTER;
-	STATUS_REGISTER &= ~(ONE << GLOBAL_INTERRUPT_ENABLE);	
+	STATUS_REGISTER &= ~(ONE << GLOBAL_INTERRUPT_ENABLE);
+	//hx.query(&hx);	
 	hx.read_raw(&hx);
-	//if(!hx.get_readflag(&hx))
-		//timer0.stop();
 	/***enable interrupts again***/
 	STATUS_REGISTER = Sreg;
 }
@@ -265,16 +258,18 @@ ISR(TIMER1_COMPA_vect) // 1 second intervals
 		counter_1++;
 	else if(counter_1 < _5sec+ONE)
 		counter_1=0;
-		
 	if(counter_1 > _5sec){
 		counter_1 = _5sec+ONE; //lock in place
 		PORTC ^= (ONE << 6); // troubleshooting
-		if((F.ll(&F) & IMASK) == (ONE << 5)){ //button 6
-			// Delete eerpom memory ZERO
+		count--;
+		if(!count){ //button blink twice
+			// Delete eeprom memory ZERO
 			HX711_data.status = ZERO;
 			eprom.update_block(HX711_ptr, (void*) ZERO, sizeblock);
+			PORTC |= (ONE << 5); // troubleshooting
 			PORTC |= (ONE << 6); // troubleshooting
 			counter_1 = ZERO;
+			count=blink;
 		}
 	}
 	/***CLEAR EEPROM OFFSET SEQUENCE END***/
@@ -284,7 +279,6 @@ ISR(TIMER1_COMPA_vect) // 1 second intervals
 		counter_2++;
 	else if(counter_2 < _5sec+ONE)
 		counter_2=0;
-	
 	if(counter_2 > _5sec){
 		counter_2 = _5sec+ONE; //lock in place
 		signal = ONE;
@@ -303,9 +297,10 @@ The past only exists if the present comes to be. There is no future only possibi
 because 24 bit will have to create a vector pointer of the size of 32 bit, then at the 
 end do a cast to *((int32_t*)ptr).
 
-need sleep function for HX711, then finish the calibration menu of div factor, also add functionality for batch counting, lets see.
-finish code
+forget about sleep function for HX711 display is always on, then finish the calibration menu of div factor, also add functionality for batch counting, lets see.
+finish code, got lots of time.
+
+
 
 MEMCP is not appreciated by this MCU, sometimes crashes.
-
 ****/
