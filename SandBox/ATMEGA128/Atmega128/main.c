@@ -117,6 +117,7 @@ int main(void)
 	// HX711 Gain
 	hx.set_amplify(&hx, 64); // 32 64 128
 	choice = hx.get_amplify(&hx);
+	
 	//Get stored calibration values and put them to effect
 	eprom.read_block(HX711_ptr, (const void*) ZERO, sizeblock);
 	if(HX711_ptr->status == 1){
@@ -128,7 +129,7 @@ int main(void)
 		hx.get_cal(&hx)->divfactor_64 = HX711_ptr->divfactor_64;
 		hx.get_cal(&hx)->divfactor_128 = HX711_ptr->divfactor_128;
 		hx.get_cal(&hx)->status=ZERO;
-		PORTC &= ~(ONE << 5); // troubleshooting
+		PORTC |= (ONE << 5); // troubleshooting
 	}
 	//lcd0.gotoxy(1,0); // for troubleshooting
 	//lcd0.string_size(function.ftoa(HX711_data.status, result, ZERO), 13);
@@ -153,7 +154,7 @@ int main(void)
 				//lcd0.gotoxy(1,0); // for troubleshooting
 				//lcd0.string_size(function.ftoa(hx.read_raw(&hx), result, ZERO), 13);
 				
-				if(F.hl(&F) & ONE){ // calibrate offset by pressing button 1
+				if((F.hl(&F) & IMASK) & ONE){ // calibrate offset by pressing button 1
 					HX711_data.offset_32 = tmp;
 					HX711_data.offset_64 = tmp;
 					HX711_data.offset_128 = tmp;
@@ -211,8 +212,11 @@ int main(void)
 						break;
 					case 31:
 						lcd0.gotoxy(2,0);
-						
-						
+						if(F.hl(&F) == (ONE << 3))
+							divfactor++;
+						if(F.hl(&F) == (ONE << 4))
+							divfactor--;
+						HX711_data.divfactor_64 = divfactor;
 						lcd0.string_size(function.ui16toa(divfactor),6);
 						break;
 					default:
@@ -220,6 +224,21 @@ int main(void)
 				};
 				// Jump Menus signal
 				if(signal == 2){
+					HX711_data.offset_32 = hx.get_cal(&hx)->offset_32;
+					HX711_data.offset_64 = hx.get_cal(&hx)->offset_64;
+					HX711_data.offset_128 = hx.get_cal(&hx)->offset_128;
+					//HX711_data.divfactor_32 = hx.get_cal(&hx)->divfactor_32;
+					//HX711_data.divfactor_64 = hx.get_cal(&hx)->divfactor_64;
+					//HX711_data.divfactor_128 = hx.get_cal(&hx)->divfactor_128;
+					HX711_data.status = ONE;
+					eprom.update_block(HX711_ptr, (void*) ZERO, sizeblock);
+					hx.get_cal(&hx)->offset_32 = HX711_ptr->offset_32;
+					hx.get_cal(&hx)->offset_64 = HX711_ptr->offset_64;
+					hx.get_cal(&hx)->offset_128 = HX711_ptr->offset_128;
+					hx.get_cal(&hx)->divfactor_32 = HX711_ptr->divfactor_32;
+					hx.get_cal(&hx)->divfactor_64 = HX711_ptr->divfactor_64;
+					hx.get_cal(&hx)->divfactor_128 = HX711_ptr->divfactor_128;
+					hx.get_cal(&hx)->status=ZERO;
 					Menu = '1';
 					lcd0.clear();
 				}
