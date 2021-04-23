@@ -90,7 +90,7 @@ int main(void)
 	float value = 0;
 	float publish = 0;
 	uint8_t choice;
-	uint8_t divfactor = ZERO;
+	uint16_t divfactor = ONE;
 	
 	// Get default values to buss memory
 	HX711_data.offset_32 = hx.get_cal(&hx)->offset_32;
@@ -129,7 +129,7 @@ int main(void)
 		hx.get_cal(&hx)->divfactor_64 = HX711_ptr->divfactor_64;
 		hx.get_cal(&hx)->divfactor_128 = HX711_ptr->divfactor_128;
 		hx.get_cal(&hx)->status=ZERO;
-		PORTC |= (ONE << 5); // troubleshooting
+		PORTC &= ~(ONE << 5); // troubleshooting
 	}
 	//lcd0.gotoxy(1,0); // for troubleshooting
 	//lcd0.string_size(function.ftoa(HX711_data.status, result, ZERO), 13);
@@ -148,7 +148,7 @@ int main(void)
 		switch(Menu){
 			/***MENU 1***/
 			case '1': // Main Program Menu
-				lcd0.gotoxy(0,3); //TITLE
+				lcd0.gotoxy(0,4); //TITLE
 				lcd0.string_size("Weight Scale", 12); //TITLE
 				
 				//lcd0.gotoxy(1,0); // for troubleshooting
@@ -158,17 +158,11 @@ int main(void)
 					HX711_data.offset_32 = tmp;
 					HX711_data.offset_64 = tmp;
 					HX711_data.offset_128 = tmp;
-					HX711_data.divfactor_32 = hx.get_cal(&hx)->divfactor_32;
-					HX711_data.divfactor_64 = hx.get_cal(&hx)->divfactor_64;
-					HX711_data.divfactor_128 = hx.get_cal(&hx)->divfactor_128;
 					HX711_data.status = ONE;
 					eprom.update_block(HX711_ptr, (void*) ZERO, sizeblock);
 					hx.get_cal(&hx)->offset_32 = HX711_ptr->offset_32;
 					hx.get_cal(&hx)->offset_64 = HX711_ptr->offset_64;
 					hx.get_cal(&hx)->offset_128 = HX711_ptr->offset_128;
-					hx.get_cal(&hx)->divfactor_32 = HX711_ptr->divfactor_32;
-					hx.get_cal(&hx)->divfactor_64 = HX711_ptr->divfactor_64;
-					hx.get_cal(&hx)->divfactor_128 = HX711_ptr->divfactor_128;
 					hx.get_cal(&hx)->status=ZERO;
 				}
 				
@@ -181,11 +175,11 @@ int main(void)
 				//Display
 				if (value > 1000 || value < -1000){
 					publish = value / 1000;
-					lcd0.gotoxy(2,0);
+					lcd0.gotoxy(2,1);
 					lcd0.string_size(function.ftoa(publish, result, 3), 13); lcd0.string_size("Kg", 4);
 				}else{
 					publish = value;
-					lcd0.gotoxy(2,0);
+					lcd0.gotoxy(2,1);
 					lcd0.string_size(function.ftoa(publish, result, ZERO), 13); lcd0.string_size("gram", 4);
 				}
 				
@@ -197,25 +191,65 @@ int main(void)
 				
 				break;
 			/***MENU 2***/
-			case '2': //
+			case '2': // MANUAL CALIBRATE DIVFACTOR MENU
 				/**/
-				lcd0.gotoxy(0,3);
+				lcd0.gotoxy(0,2);
 				lcd0.string_size("SETUP DIVFACTOR",15);
 				switch(choice){
 					case 1:
+						divfactor=hx.get_cal(&hx)->divfactor_128;
+						choice=11;
+						break;
+					case 11:
+						lcd0.gotoxy(2,9);
+						if(F.hl(&F) == (ONE << 3)){
+							divfactor++;
+							if(divfactor > 255)
+							divfactor--;
+						}
+						if(F.hl(&F) == (ONE << 4)){
+							divfactor--;
+							if(divfactor < 1)
+							divfactor++;
+						}
+						HX711_data.divfactor_128 = divfactor;
+						lcd0.string_size(function.ui16toa(divfactor),6);
 						break;
 					case 2:
+						divfactor=hx.get_cal(&hx)->divfactor_32;
+						choice=21;
+						break;
+					case 21:
+						lcd0.gotoxy(2,9);
+						if(F.hl(&F) == (ONE << 3)){
+							divfactor++;
+							if(divfactor > 255)
+							divfactor--;
+						}
+						if(F.hl(&F) == (ONE << 4)){
+							divfactor--;
+							if(divfactor < 1)
+							divfactor++;
+						}
+						HX711_data.divfactor_32 = divfactor;
+						lcd0.string_size(function.ui16toa(divfactor),6);
 						break;
 					case 3:
 						divfactor=hx.get_cal(&hx)->divfactor_64;
 						choice=31;
 						break;
 					case 31:
-						lcd0.gotoxy(2,0);
-						if(F.hl(&F) == (ONE << 3))
+						lcd0.gotoxy(2,9);
+						if(F.hl(&F) == (ONE << 3)){
 							divfactor++;
-						if(F.hl(&F) == (ONE << 4))
+							if(divfactor > 255)
+								divfactor--;
+						}
+						if(F.hl(&F) == (ONE << 4)){
 							divfactor--;
+							if(divfactor < 1)
+								divfactor++;
+						}
 						HX711_data.divfactor_64 = divfactor;
 						lcd0.string_size(function.ui16toa(divfactor),6);
 						break;
@@ -224,21 +258,13 @@ int main(void)
 				};
 				// Jump Menus signal
 				if(signal == 2){
-					HX711_data.offset_32 = hx.get_cal(&hx)->offset_32;
-					HX711_data.offset_64 = hx.get_cal(&hx)->offset_64;
-					HX711_data.offset_128 = hx.get_cal(&hx)->offset_128;
-					//HX711_data.divfactor_32 = hx.get_cal(&hx)->divfactor_32;
-					//HX711_data.divfactor_64 = hx.get_cal(&hx)->divfactor_64;
-					//HX711_data.divfactor_128 = hx.get_cal(&hx)->divfactor_128;
 					HX711_data.status = ONE;
 					eprom.update_block(HX711_ptr, (void*) ZERO, sizeblock);
-					hx.get_cal(&hx)->offset_32 = HX711_ptr->offset_32;
-					hx.get_cal(&hx)->offset_64 = HX711_ptr->offset_64;
-					hx.get_cal(&hx)->offset_128 = HX711_ptr->offset_128;
-					hx.get_cal(&hx)->divfactor_32 = HX711_ptr->divfactor_32;
-					hx.get_cal(&hx)->divfactor_64 = HX711_ptr->divfactor_64;
-					hx.get_cal(&hx)->divfactor_128 = HX711_ptr->divfactor_128;
+					hx.get_cal(&hx)->divfactor_32=divfactor;
+					hx.get_cal(&hx)->divfactor_64=divfactor;
+					hx.get_cal(&hx)->divfactor_128=divfactor;
 					hx.get_cal(&hx)->status=ZERO;
+					PORTC &= ~(ONE << 5); // troubleshooting
 					Menu = '1';
 					lcd0.clear();
 				}
