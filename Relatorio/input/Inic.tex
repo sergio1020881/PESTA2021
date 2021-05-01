@@ -1,14 +1,3 @@
-%%%INIC%%%
-%%%\bibliographystyle{apacite}
-%%%\bibliographystyle{babplain}
-%%%\bibliographystyle{bstfilename}
-\bibliographystyle{plain}
-\selectbiblanguage{portuguese}
-\setbtxfallbacklanguage{english}
-%%%%%%%%%%%%%FIX SECTION NUMBERING IN CASE REPORT%%%%%%%%%%%%%%%
-\renewcommand\thesection{\arabic{section}}
-\renewcommand\thesubsection{\thesection.\arabic{subsection}}
-\renewcommand\thesubsubsection{\thesection.\thesubsection.\arabic{subsubsection}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \pagenumbering{roman}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -16,8 +5,9 @@
 \include{./include/CAPA/CAPAREPORT_2}
 \setcounter{page}{0}
 \include{./include/CONTRACAPA/CONTRACAPAREPORT_2}
-%%%\include{./include/SETUP/Acknowledgement}
+\include{./include/SETUP/Acknowledgement}
 \include{./include/SETUP/Abstract}
+\setcounter{page}{0}
 \null
 \newpage
 \renewcommand*\contentsname{Índice}

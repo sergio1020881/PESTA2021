@@ -1,13 +1,13 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  1 MAY 2021 13:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  1 MAY 2021 19:26
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-06-18>
-\@input{./include/preamble/PREAMBLEREPORT.aux}
-\openout2 = `./include/preamble/PREAMBLEREPORT.aux'.
+\@input{./include/PREAMBLE/PREAMBLEREPORT.aux}
+\openout2 = `./include/PREAMBLE/PREAMBLEREPORT.aux'.
 
-(include/preamble/PREAMBLEREPORT.tex
+(include/PREAMBLE/PREAMBLEREPORT.tex
 ("C:\Program Files\MiKTeX\tex/latex/base\report.cls"
 Document Class: report 2019/12/20 v1.4l Standard LaTeX document class
 ("C:\Program Files\MiKTeX\tex/latex/base\size12.clo"
@@ -503,10 +503,15 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 
 
 Writing index file Relatorio.idx
+
+Package babelbib Warning: Command \selectbiblanguage used without package
+(babelbib)                option fixlanguage. Ignored on input line 191.
+
+babelbib: Set bibliography fall-back language to english
 ) (Relatorio.aux (include/SETUP/ConfigurePage.aux)
 (include/CAPA/CAPAREPORT_2.aux) (include/CONTRACAPA/CONTRACAPAREPORT_2.aux)
-(include/SETUP/Abstract.aux) (include/SETUP/ContentFigureTable.aux)
-(include/SETUP/Acronym.aux))
+(include/SETUP/Acknowledgement.aux) (include/SETUP/Abstract.aux)
+(include/SETUP/ContentFigureTable.aux) (include/SETUP/Acronym.aux))
 \openout1 = `Relatorio.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
@@ -525,7 +530,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
 LaTeX Font Info:    ... okay on input line 3.
 
 babelbib: Use citation-dependent languages in bibliography
-babelbib: Set bibliography fall-back language to portuguese
+babelbib: Bibliography fall-back language unchanged (english)
 ("C:\Program Files\MiKTeX\tex/latex/babelbib\portuguese.bdf"
 File: portuguese.bdf 2019/03/11 v1.32 babelbib: multilingual bibliographies (HH
 )
@@ -589,17 +594,13 @@ Package caption Info: End \AtBeginDocument code.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 (input/Inic.tex
-
-Package babelbib Warning: Command \selectbiblanguage used without package
-(babelbib)                option fixlanguage. Ignored on input line 6.
-
-babelbib: Set bibliography fall-back language to english
 \openout2 = `./include/SETUP/ConfigurePage.aux'.
 
-(include/SETUP/ConfigurePage.tex)
+ (include/SETUP/ConfigurePage.tex)
 \openout2 = `./include/CAPA/CAPAREPORT_2.aux'.
 
- (include/CAPA/CAPAREPORT_2.tex
+
+(include/CAPA/CAPAREPORT_2.tex
 LaTeX Font Info:    Trying to load font information for U+msa on input line 49.
 
 
@@ -621,10 +622,10 @@ Overfull \hbox (12.0pt too wide) in paragraph at lines 49--49
  [][] 
  []
 
-<./image/capa/ISEP_marca_cor_grande.png, id=1, 730.6497pt x 278.2395pt>
-File: ./image/capa/ISEP_marca_cor_grande.png Graphic file (type png)
-<use ./image/capa/ISEP_marca_cor_grande.png>
-Package pdftex.def Info: ./image/capa/ISEP_marca_cor_grande.png  used on input 
+<./image/Capa/ISEP_marca_cor_grande.png, id=1, 730.6497pt x 278.2395pt>
+File: ./image/Capa/ISEP_marca_cor_grande.png Graphic file (type png)
+<use ./image/Capa/ISEP_marca_cor_grande.png>
+Package pdftex.def Info: ./image/Capa/ISEP_marca_cor_grande.png  used on input 
 line 49.
 (pdftex.def)             Requested size: 292.2547pt x 111.29382pt.
 
@@ -639,11 +640,12 @@ Overfull \hbox (71.74583pt too wide) in paragraph at lines 49--49
 
 
 
-{C:/Users/sergi/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./image/capa/IS
+{C:/Users/sergi/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./image/Capa/IS
 EP_marca_cor_grande.png>])
 \openout2 = `./include/CONTRACAPA/CONTRACAPAREPORT_2.aux'.
 
  (include/CONTRACAPA/CONTRACAPAREPORT_2.tex
+<./image/capa/ISEP_marca_cor_grande.png, id=15, 730.6497pt x 278.2395pt>
 File: ./image/capa/ISEP_marca_cor_grande.png Graphic file (type png)
 <use ./image/capa/ISEP_marca_cor_grande.png>
 Package pdftex.def Info: ./image/capa/ISEP_marca_cor_grande.png  used on input 
@@ -663,7 +665,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--37
 
 
 
-])
+ <./image/capa/ISEP_marca_cor_grande.png>])
+\openout2 = `./include/SETUP/Acknowledgement.aux'.
+
+
+(include/SETUP/Acknowledgement.tex) [1
+
+
+
+
+]
 \openout2 = `./include/SETUP/Abstract.aux'.
 
  (include/SETUP/Abstract.tex
@@ -689,8 +700,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--14
 [1
 
 
-
-]) [1
+]) [0
 
 ]
 \openout2 = `./include/SETUP/ContentFigureTable.aux'.
@@ -699,7 +709,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--14
 \tf@toc=\write4
 \openout4 = `Relatorio.toc'.
 
- [2
+ [1
 
 
 ]
@@ -707,26 +717,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--14
 \tf@lof=\write5
 \openout5 = `Relatorio.lof'.
 
- [3
+ [2
 
-] [4] (Relatorio.lot)
+] [3] (Relatorio.lot)
 \tf@lot=\write6
 \openout6 = `Relatorio.lot'.
 
- [5
+ [4
 
 ])
 \openout2 = `./include/SETUP/Acronym.aux'.
 
  (include/SETUP/Acronym.tex)
-[6
+[5
 
 
-] [7
+] [6
 
 ]) (input/page/Introducao.tex
 Cap\'{\i }tulo 1.
-<./image/PESTA/general/balanca_1.jpg, id=49, 642.4pt x 481.8pt>
+<./image/PESTA/general/balanca_1.jpg, id=55, 642.4pt x 481.8pt>
 File: ./image/PESTA/general/balanca_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/general/balanca_1.jpg>
 Package pdftex.def Info: ./image/PESTA/general/balanca_1.jpg  used on input lin
@@ -737,13 +747,13 @@ Overfull \hbox (67.09538pt too wide) in paragraph at lines 11--12
  [][] 
  []
 
-<./image/PESTA/general/balanca_4.jpg, id=50, 160.4394pt x 192.9609pt>
+<./image/PESTA/general/balanca_4.jpg, id=56, 160.4394pt x 192.9609pt>
 File: ./image/PESTA/general/balanca_4.jpg Graphic file (type jpg)
 <use ./image/PESTA/general/balanca_4.jpg>
 Package pdftex.def Info: ./image/PESTA/general/balanca_4.jpg  used on input lin
 e 20.
 (pdftex.def)             Requested size: 165.60695pt x 199.16928pt.
-<./image/PESTA/general/Weigh_Scale_Salter_1.jpg, id=51, 803.0pt x 982.67125pt>
+<./image/PESTA/general/Weigh_Scale_Salter_1.jpg, id=57, 803.0pt x 982.67125pt>
 File: ./image/PESTA/general/Weigh_Scale_Salter_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/general/Weigh_Scale_Salter_1.jpg>
 Package pdftex.def Info: ./image/PESTA/general/Weigh_Scale_Salter_1.jpg  used o
@@ -786,14 +796,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--39
 [1
 
  <./image/PESTA/general/balanca_1.jpg> <./image/PESTA/general/balanca_4.jpg>]
-<./image/PESTA/general/Public_Body_Scales_1.jpg, id=61, 383.18156pt x 248.42813
+<./image/PESTA/general/Public_Body_Scales_1.jpg, id=67, 383.18156pt x 248.42813
 pt>
 File: ./image/PESTA/general/Public_Body_Scales_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/general/Public_Body_Scales_1.jpg>
 Package pdftex.def Info: ./image/PESTA/general/Public_Body_Scales_1.jpg  used o
 n input line 47.
 (pdftex.def)             Requested size: 307.20636pt x 199.16928pt.
-<./image/PESTA/general/Balanca_Mola_1.jpg, id=62, 97.8054pt x 204.5241pt>
+<./image/PESTA/general/Balanca_Mola_1.jpg, id=68, 97.8054pt x 204.5241pt>
 File: ./image/PESTA/general/Balanca_Mola_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/general/Balanca_Mola_1.jpg>
 Package pdftex.def Info: ./image/PESTA/general/Balanca_Mola_1.jpg  used on inpu
@@ -806,7 +816,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--54
 
 [2 <./image/PESTA/general/Weigh_Scale_Salter_1.jpg> <./image/PESTA/general/Publ
 ic_Body_Scales_1.jpg> <./image/PESTA/general/Balanca_Mola_1.jpg>]
-<./image/PESTA/general/Scale_1.jpg, id=67, 1330.9725pt x 1039.63406pt>
+<./image/PESTA/general/Scale_1.jpg, id=74, 1330.9725pt x 1039.63406pt>
 File: ./image/PESTA/general/Scale_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/general/Scale_1.jpg>
 Package pdftex.def Info: ./image/PESTA/general/Scale_1.jpg  used on input line 
@@ -832,7 +842,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--70
 
  []
 
-<./image/PESTA/general/strain_gauge_1.jpg, id=68, 630.10406pt x 381.67593pt>
+<./image/PESTA/general/strain_gauge_1.jpg, id=75, 630.10406pt x 381.67593pt>
 File: ./image/PESTA/general/strain_gauge_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/general/strain_gauge_1.jpg>
 Package pdftex.def Info: ./image/PESTA/general/strain_gauge_1.jpg  used on inpu
@@ -851,7 +861,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 85--95
 [4 <./image/PESTA/general/strain_gauge_1.jpg>]) [5]
 (input/page/Desenvolvimento.tex
 Cap\'{\i }tulo 2.
-<./image/PESTA/kit/Kit_Desenvolvimento_2.jpg, id=80, 3014.26125pt x 1704.3675pt
+<./image/PESTA/kit/Kit_Desenvolvimento_2.jpg, id=85, 3014.26125pt x 1704.3675pt
 >
 File: ./image/PESTA/kit/Kit_Desenvolvimento_2.jpg Graphic file (type jpg)
 <use ./image/PESTA/kit/Kit_Desenvolvimento_2.jpg>
@@ -895,26 +905,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--43
 
  []
 
-<./image/PESTA/material/Load_Cell_1.jpg, id=84, 2337.73375pt x 1152.305pt>
+<./image/PESTA/material/Load_Cell_1.jpg, id=89, 2337.73375pt x 1152.305pt>
 File: ./image/PESTA/material/Load_Cell_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/material/Load_Cell_1.jpg>
 Package pdftex.def Info: ./image/PESTA/material/Load_Cell_1.jpg  used on input 
 line 47.
 (pdftex.def)             Requested size: 350.64493pt x 172.83829pt.
-<./image/PESTA/schematic/HX711_Schematic_1.jpg, id=85, 628.59843pt x 310.91156p
+<./image/PESTA/schematic/HX711_Schematic_1.jpg, id=90, 628.59843pt x 310.91156p
 t>
 File: ./image/PESTA/schematic/HX711_Schematic_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/schematic/HX711_Schematic_1.jpg>
 Package pdftex.def Info: ./image/PESTA/schematic/HX711_Schematic_1.jpg  used on
  input line 54.
 (pdftex.def)             Requested size: 220.01274pt x 108.82066pt.
-<./image/PESTA/material/HX711_board_1.jpg, id=86, 2004.48875pt x 1071.00125pt>
+<./image/PESTA/material/HX711_board_1.jpg, id=91, 2004.48875pt x 1071.00125pt>
 File: ./image/PESTA/material/HX711_board_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/material/HX711_board_1.jpg>
 Package pdftex.def Info: ./image/PESTA/material/HX711_board_1.jpg  used on inpu
 t line 55.
 (pdftex.def)             Requested size: 200.46062pt x 107.1064pt.
-<./image/PESTA/graph/DataClkPacket_1.JPG, id=87, 731.73375pt x 534.99875pt>
+<./image/PESTA/graph/DataClkPacket_1.JPG, id=92, 731.73375pt x 534.99875pt>
 File: ./image/PESTA/graph/DataClkPacket_1.JPG Graphic file (type jpg)
 <use ./image/PESTA/graph/DataClkPacket_1.JPG>
 Package pdftex.def Info: ./image/PESTA/graph/DataClkPacket_1.JPG  used on input
@@ -1062,7 +1072,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--48
 
  []
 
-<./image/General/Einstein.jpg, id=109, 255.95625pt x 179.16937pt>
+<./image/General/Einstein.jpg, id=114, 255.95625pt x 179.16937pt>
 File: ./image/General/Einstein.jpg Graphic file (type jpg)
 <use ./image/General/Einstein.jpg>
 Package pdftex.def Info: ./image/General/Einstein.jpg  used on input line 65.
@@ -1088,51 +1098,52 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--1
 
 ]) [15] (Relatorio.aux
 (include/SETUP/ConfigurePage.aux) (include/CAPA/CAPAREPORT_2.aux)
-(include/CONTRACAPA/CONTRACAPAREPORT_2.aux) (include/SETUP/Abstract.aux)
-(include/SETUP/ContentFigureTable.aux) (include/SETUP/Acronym.aux)) ) 
+(include/CONTRACAPA/CONTRACAPAREPORT_2.aux) (include/SETUP/Acknowledgement.aux)
+(include/SETUP/Abstract.aux) (include/SETUP/ContentFigureTable.aux)
+(include/SETUP/Acronym.aux)) ) 
 Here is how much of TeX's memory you used:
- 12069 strings out of 480790
- 213645 string characters out of 2907055
- 592444 words of memory out of 3000000
- 27723 multiletter control sequences out of 15000+200000
+ 12087 strings out of 480790
+ 214392 string characters out of 2907055
+ 592922 words of memory out of 3000000
+ 27733 multiletter control sequences out of 15000+200000
  561751 words of font info for 99 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  46i,22n,54p,969b,494s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users
-\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:
-\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.p
-k> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm
-0800.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
-0\ecti0800.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/euro
-sym/dpi720\feymr10.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jkn
-appen/ec/dpi600\ecbx1728.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfo
-ur/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/p
-k/ljfour/jknappen/ec/dpi600\ecbi1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\f
-onts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\sergi\AppData\Local\Mi
-KTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0800.pk> <C:\Users\sergi\AppData\Lo
-cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\sergi\AppD
-ata\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\serg
-i\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\User
-s\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C
-:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.
-pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecr
-m1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi6
-00\ecbx1440.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/e
-c/dpi600\ecrm1440.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jkna
-ppen/ec/dpi600\ecti1440.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfou
-r/jknappen/ec/dpi600\ecbx2074.pk><C:/Program Files/MiKTeX/fonts/type1/public/am
-sfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-mi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:
-/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program File
-s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/font
-s/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/publi
-c/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C
-:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Fil
-es/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Relatorio.pdf (25 pages, 4901502 bytes).
+ <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/lj
+four/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts
+/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\sergi\AppData\Local\MiKTeX
+\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\sergi\AppData\Local\
+MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti0800.pk> <C:\Users\sergi\AppData\
+Local\MiKTeX\fonts/pk/ljfour/public/eurosym/dpi720\feymr10.pk> <C:\Users\sergi\
+AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\
+sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi1200.pk> <C:\
+Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk
+> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0
+800.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600
+\ecbx2488.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/
+dpi600\ecti1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknapp
+en/ec/dpi600\ecbx1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/
+jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/l
+jfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\font
+s/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\sergi\AppData\Local\MiKTe
+X\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\sergi\AppData\Local
+\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\sergi\AppData
+\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\sergi\A
+ppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1440.pk> <C:\Users\s
+ergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk><C:/Pr
+ogram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C
+:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Fil
+es/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/font
+s/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmsy8.pfb>
+Output written on Relatorio.pdf (26 pages, 4966172 bytes).
 PDF statistics:
- 715 PDF objects out of 1000 (max. 8388607)
+ 720 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 76 words of extra memory for PDF output out of 10000 (max. 10000000)
 
