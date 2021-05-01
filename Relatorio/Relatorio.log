@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  1 MAY 2021 12:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  1 MAY 2021 12:49
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
@@ -1062,11 +1062,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--48
 
  []
 
-<./image/PESTA/general/Einstein.jpg, id=109, 255.95625pt x 179.16937pt>
-File: ./image/PESTA/general/Einstein.jpg Graphic file (type jpg)
-<use ./image/PESTA/general/Einstein.jpg>
-Package pdftex.def Info: ./image/PESTA/general/Einstein.jpg  used on input line
- 65.
+<./image/General/Einstein.jpg, id=109, 255.95625pt x 179.16937pt>
+File: ./image/General/Einstein.jpg Graphic file (type jpg)
+<use ./image/General/Einstein.jpg>
+Package pdftex.def Info: ./image/General/Einstein.jpg  used on input line 65.
 (pdftex.def)             Requested size: 153.57492pt x 107.50244pt.
 ) (Relatorio.bbl
 Overfull \hbox (2.61049pt too wide) in paragraph at lines 3--1
@@ -1085,15 +1084,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--1
 
 [12
 
- <./image/PESTA/general/Einstein.jpg>] [13]) [14
+ <./image/General/Einstein.jpg>] [13]) [14
 
 ]) [15] (Relatorio.aux
 (include/SETUP/ConfigurePage.aux) (include/CAPA/CAPAREPORT_2.aux)
 (include/CONTRACAPA/CONTRACAPAREPORT_2.aux) (include/SETUP/Abstract.aux)
 (include/SETUP/ContentFigureTable.aux) (include/SETUP/Acronym.aux)) ) 
 Here is how much of TeX's memory you used:
- 12068 strings out of 480790
- 213659 string characters out of 2907055
+ 12069 strings out of 480790
+ 213645 string characters out of 2907055
  592444 words of memory out of 3000000
  27723 multiletter control sequences out of 15000+200000
  561751 words of font info for 99 fonts, out of 3000000 for 9000
