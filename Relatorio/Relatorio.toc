@@ -7,4 +7,5 @@
 \contentsline {section}{\numberline {2}Funcionamento}{8}%
 \contentsline {section}{\numberline {3}Validação}{8}%
 \contentsline {chapter}{\numberline {3}Conclusão}{10}%
-\contentsline {chapter}{\numberline {A}Física}{11}%
+\contentsline {chapter}{\numberline {A}Definições}{11}%
+\contentsline {chapter}{\numberline {B}Física}{12}%
