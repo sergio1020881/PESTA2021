@@ -9,6 +9,8 @@ Reallocating 'name_of_file' (item size: 1) to 32 items.
 A level-1 auxiliary file: ./include/CAPA/CAPAREPORT_2.aux
 Reallocating 'name_of_file' (item size: 1) to 44 items.
 A level-1 auxiliary file: ./include/CONTRACAPA/CONTRACAPAREPORT_2.aux
+Reallocating 'name_of_file' (item size: 1) to 36 items.
+A level-1 auxiliary file: ./include/SETUP/Acknowledgement.aux
 Reallocating 'name_of_file' (item size: 1) to 29 items.
 A level-1 auxiliary file: ./include/SETUP/Abstract.aux
 Reallocating 'name_of_file' (item size: 1) to 39 items.
@@ -19,7 +21,7 @@ Reallocating 'name_of_file' (item size: 1) to 28 items.
 Database file #1: ./bibliography/Bibliography.bib
 You've used 8 entries,
             2118 wiz_defined-function locations,
-            541 strings with 5006 characters,
+            542 strings with 5041 characters,
 and the built_in function-call counts, 1946 in all, are:
 = -- 168
 > -- 90

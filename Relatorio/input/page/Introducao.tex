@@ -68,18 +68,21 @@ Também há outros tipos de células de peso tais como as pneumáticas e hidráu
 Pode-se dizer que em todos os casos determina-se a força resultante através do deslocamento no espaço.\\
 \\
 \section*{Sensor}
+Para medir a massa recorreu-se a uma célula de peso que consiste em determinar a pressão exercida num dado material, neste caso um bloco de alumínio como indicado na \textit{figura} \ref{Load_Cell_1}, para isso ser possível é utilizado sensores Piezoresistivos numa montagem em ponte \textit{wheatstone} sobre essa superfície em locais determinados.
 
-Piezoresistivity derives its name from the Greek word piezin, meaning “to press.” It is an effect exhibited by various materials that exhibit a change in resistivity due to an applied pressure. The effect was first discovered by Lord Kelvin in 1856, who noted that the resistance of copper and iron wires increased when in tension. He also observed that iron wires showed a larger change in resistance than those made of copper. The first application of the piezoresistive effect did not appear until the 1930s, some 75 years after Lord Kelvin’s discovery. Rather than using metal wires, these so-called strain gauges are generally made from a thin metal foil mounted on a backing film, which can be glued onto a surface. A typical metal foil strain gauge is depicted in Figure 5.1. \cite{book-9}
+Piezoresistividade deriva seu nome da palavra grega \textit{piezin}, que significa "pressionar". É um efeito exibido por vários materiais que exibem uma mudança na resistividade devido a uma pressão aplicada. O efeito foi descoberto pela primeira vez por Lord Kelvin em 1856, que notou que a resistência dos fios de cobre e ferro aumentava quando em tensão. Ele também observou que os fios de ferro apresentavam uma alteração maior na resistência do que os de cobre. A primeira aplicação do efeito piezoresistivo não apareceu até a década de 1930, cerca de 75 anos após a descoberta de Lord Kelvin. Em vez de usar fios de metal, esses assim chamados medidores de tensão são geralmente feitos de uma folha de metal fina montada em uma película de suporte, que pode ser colada em uma superfície. Um medidor de tensão de folha de metal típico é representado na \textit{figura} \ref{strain_gauge_1} \cite{book-9}
 \begin{figure}[H]
 	\centering
 	\includegraphics[height=5cm]{./image/PESTA/general/strain_gauge_1.jpg}
-	\caption{Metal foil strain gauge \cite{book-9}}
+	\caption{Fita metálica \textit{strain gauge} \cite{book-9}}
 	\label{strain_gauge_1}
 \end{figure}
 
 \section*{Amplificador}
-Amplification is usually a fundamental requirement, as most sensors tend to
-produce signal levels that are significantly lower than those used in the digital processor. Resistive sensors in a bridge configuration often require an instrumenta-tion amplifier; piezoelectric devices may need a charge amplifier. If possible, it is advantageous to have the gain as close as possible to the sensing element. In situations where a high gain is required, there can often be implications for han-dling any adverse effects such as noise. In terms of chip layout, the sharp transients associated with digital signals need to be kept well away from the front-end analog circuitry. \cite{book-9}
+A amplificação é geralmente um requisito fundamental, pois a maioria dos sensores tende a produzem níveis de sinal significativamente mais baixos do que aqueles usados no processador digital. Sensores resistivos podem precisar de um amplificador de carga. Se possível, é vantajoso ter o ganho o mais próximo possível do elemento sensor. Em situações onde um alto ganho é necessário, muitas vezes pode haver implicações para lidar 
+com quaisquer efeitos adversos, como ruído. \\ 
+Em termos de \textit{layout} do \textit{chip}, os transitórios agudos associados aos sinais digitais precisam 
+ser mantidos bem longe dos circuitos analógicos \textit{front-end}. \cite{book-9}
 
 \section*{Informação}
 Data conversion is the transition region between the continuous (real-world)
