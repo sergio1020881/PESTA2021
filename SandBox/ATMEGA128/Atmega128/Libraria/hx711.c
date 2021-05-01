@@ -29,6 +29,17 @@ Comment:
 #define HX711_ADC_bits 24
 #define HX711_VECT_SIZE 4
 /***Global File Variable***/
+/***/
+HX711_calibration HX711_Default_50Kg = {
+	.offset_32 = 36800,
+	.offset_64 = 72700,
+	.offset_128 = 147200,
+	.divfactor_32 = 23,
+	.divfactor_64 = 46,
+	.divfactor_128 = 92,
+	.status = ZERO
+};
+/***/
 volatile uint8_t *hx711_DDR;
 volatile uint8_t *hx711_PIN;
 volatile uint8_t *hx711_PORT;
@@ -44,7 +55,7 @@ uint8_t HX711_query(HX711* self);
 int32_t HX711_read_raw(HX711* self);
 float HX711_raw_average(HX711* self, uint8_t n);
 uint8_t HX711_get_readflag(HX711* self);
-struct HX711_calibration* HX711_get_cal(HX711* self);
+HX711_calibration* HX711_get_cal(HX711* self);
 /***Procedure & Function***/
 HX711 HX711enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t *port, uint8_t datapin, uint8_t clkpin)
 {
@@ -78,14 +89,15 @@ HX711 HX711enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t
 	hx711.av_n = ZERO;
 	hx711.raw_mean = ZERO;
 	// offset para mesa usada.
-	hx711.cal_data.offset_32 = 36800; // to subtract B
-	hx711.cal_data.offset_64 = 72700; // to subtract A 64
-	hx711.cal_data.offset_128 = 147200; // to subtract A 128
-	//div factor
-	hx711.cal_data.divfactor_32=23; // to divide
-	hx711.cal_data.divfactor_64=46; // to divide
-	hx711.cal_data.divfactor_128=92; // to divide
-	hx711.cal_data.status=ZERO;
+	hx711.cal_data.offset_32 = HX711_Default_50Kg.offset_32; // to subtract B
+	hx711.cal_data.offset_64 = HX711_Default_50Kg.offset_64; // to subtract A 64
+	hx711.cal_data.offset_128 = HX711_Default_50Kg.offset_128; // to subtract A 128
+	//GAIN FACTOR
+	hx711.cal_data.divfactor_32 = HX711_Default_50Kg.divfactor_32; // to divide
+	hx711.cal_data.divfactor_64 = HX711_Default_50Kg.divfactor_64; // to divide
+	hx711.cal_data.divfactor_128 = HX711_Default_50Kg.divfactor_128; // to divide
+	hx711.cal_data.status = HX711_Default_50Kg.status;
+	HX711_Default = &HX711_Default_50Kg;
 	//Direccionar apontadores para PROTOTIPOS
 	hx711.get_amplify=HX711_get_amplify;
 	hx711.read_bit=HX711_read_bit;
@@ -218,7 +230,7 @@ uint8_t HX711_get_readflag(HX711* self)
 {
 	return self->readflag;
 }
-struct HX711_calibration* HX711_get_cal(HX711* self)
+HX711_calibration* HX711_get_cal(HX711* self)
 {
 	return &(self->cal_data);
 }

@@ -7,7 +7,11 @@ License: GNU General Public License
 Software: Atmel Studio 7 (ver 7.0.129)
 Hardware: Atmega128 by ETT ET-BASE
 	-PORTA LCD
-	-PORTF pin 6,7 HX711, pin 0 to 5 Buttons.
+	-PORTF pin 6,7 HX711, pin 0 to 5 Buttons, 
+		PIN 0 -> OFFSET, 
+		PIN 3 -> DEFAULT 5sec press and up count for div factor, 
+		PIN 4 -> ENTER GAIN FACTOR MENU 5 sec press and down count for div factor, 
+		PIN 5 -> ENTER KEY to validate entered value and put in effect.
 Comment:
 	Excellent
 ************************************************************************/
@@ -52,9 +56,9 @@ EXPLODE F;
 LCD0 lcd0;
 TIMER_COUNTER0 timer0;
 INTERRUPT intx;
-struct HX711_calibration HX711_data;
-struct HX711_calibration* HX711_ptr;
-const uint8_t sizeblock = sizeof(struct HX711_calibration);
+HX711_calibration HX711_data;
+HX711_calibration* HX711_ptr;
+const uint8_t sizeblock = sizeof(HX711_calibration);
 HX711 hx;
 float tmp;
 EEPROM eprom;
@@ -65,6 +69,7 @@ uint8_t counter_1 = 0;
 uint8_t counter_2 = 0;
 uint8_t signal = 0;
 uint8_t count=blink;
+uint16_t divfactor;
 /*
 ** Header
 */
@@ -90,7 +95,6 @@ int main(void)
 	float value = 0;
 	float publish = 0;
 	uint8_t choice;
-	uint16_t divfactor = ONE;
 	
 	// Get default values to buss memory
 	HX711_data.offset_32 = hx.get_cal(&hx)->offset_32;
@@ -117,6 +121,7 @@ int main(void)
 	// HX711 Gain
 	hx.set_amplify(&hx, 64); // 32 64 128
 	choice = hx.get_amplify(&hx);
+	divfactor = (uint16_t) HX711_data.divfactor_64;
 	
 	//Get stored calibration values and put them to effect
 	eprom.read_block(HX711_ptr, (const void*) ZERO, sizeblock);
@@ -139,7 +144,8 @@ int main(void)
 		/******PREAMBLE******/
 		lcd0.reboot(); //Reboot LCD
 		F.boot(&F,PINF); //PORTF INPUT READING
-		hx.query(&hx); //Start reading ADC
+		hx.query(&hx); //Catches falling Edge instance, begins bit shifting.
+		/***geting data interval***/
 		/************INPUT***********/
 		tmp = hx.raw_average(&hx, average_n); // average_n  25 or 50, smaller means faster or more readings
 		
@@ -164,6 +170,7 @@ int main(void)
 					hx.get_cal(&hx)->offset_64 = HX711_ptr->offset_64;
 					hx.get_cal(&hx)->offset_128 = HX711_ptr->offset_128;
 					hx.get_cal(&hx)->status=ZERO;
+					PORTC &= ~(ONE << 5);
 				}
 				
 				//value = (value - hx.get_cal(&hx)->offset_128) / hx.get_cal(&hx)->divfactor_128; //value to be published to LCD
@@ -194,61 +201,61 @@ int main(void)
 			case '2': // MANUAL CALIBRATE DIVFACTOR MENU
 				/**/
 				lcd0.gotoxy(0,2);
-				lcd0.string_size("SETUP DIVFACTOR",15);
+				lcd0.string_size("SETUP GAIN FACTOR",15);
 				switch(choice){
-					case 1:
+					case 1: // case 128
 						divfactor=hx.get_cal(&hx)->divfactor_128;
 						choice=11;
 						break;
-					case 11:
+					case 11: // case 128
 						lcd0.gotoxy(2,9);
 						if(F.hl(&F) == (ONE << 3)){
 							divfactor++;
 							if(divfactor > 255)
-							divfactor--;
+								divfactor=255;
 						}
 						if(F.hl(&F) == (ONE << 4)){
 							divfactor--;
 							if(divfactor < 1)
-							divfactor++;
+								divfactor=ONE;
 						}
 						HX711_data.divfactor_128 = divfactor;
 						lcd0.string_size(function.ui16toa(divfactor),6);
 						break;
-					case 2:
+					case 2: // case 32
 						divfactor=hx.get_cal(&hx)->divfactor_32;
 						choice=21;
 						break;
-					case 21:
+					case 21: // case 32
 						lcd0.gotoxy(2,9);
 						if(F.hl(&F) == (ONE << 3)){
 							divfactor++;
 							if(divfactor > 255)
-							divfactor--;
+								divfactor=255;
 						}
 						if(F.hl(&F) == (ONE << 4)){
 							divfactor--;
 							if(divfactor < 1)
-							divfactor++;
+								divfactor=ONE;
 						}
 						HX711_data.divfactor_32 = divfactor;
 						lcd0.string_size(function.ui16toa(divfactor),6);
 						break;
-					case 3:
+					case 3: // case 64
 						divfactor=hx.get_cal(&hx)->divfactor_64;
 						choice=31;
 						break;
-					case 31:
+					case 31: // case 64
 						lcd0.gotoxy(2,9);
 						if(F.hl(&F) == (ONE << 3)){
 							divfactor++;
 							if(divfactor > 255)
-								divfactor--;
+								divfactor=255;
 						}
 						if(F.hl(&F) == (ONE << 4)){
 							divfactor--;
 							if(divfactor < 1)
-								divfactor++;
+								divfactor=ONE;
 						}
 						HX711_data.divfactor_64 = divfactor;
 						lcd0.string_size(function.ui16toa(divfactor),6);
@@ -257,7 +264,7 @@ int main(void)
 						break;
 				};
 				// Jump Menus signal
-				if(signal == 2){
+				if(signal == 2){ // EXIT AND STORE GAIN FACTOR
 					HX711_data.status = ONE;
 					eprom.update_block(HX711_ptr, (void*) ZERO, sizeblock);
 					hx.get_cal(&hx)->divfactor_32=divfactor;
@@ -323,10 +330,16 @@ ISR(TIMER1_COMPA_vect) // 1 second intervals
 		counter_1 = _5sec+ONE; //lock in place
 		PORTC ^= (ONE << 6); // troubleshooting
 		count--;
-		if(!count){ //button blink twice
+		if(!count){ //led blinks x times
 			// Delete eeprom memory ZERO
-			HX711_data.status = ZERO;
-			eprom.update_block(HX711_ptr, (void*) ZERO, sizeblock);
+			eprom.update_block(HX711_Default, (void*) ZERO, sizeblock);
+			hx.get_cal(&hx)->offset_32 = HX711_Default->offset_32;
+			hx.get_cal(&hx)->offset_64 = HX711_Default->offset_64;
+			hx.get_cal(&hx)->offset_128 = HX711_Default->offset_128;
+			hx.get_cal(&hx)->divfactor_32 = divfactor = HX711_Default->divfactor_32;
+			hx.get_cal(&hx)->divfactor_64 = divfactor = HX711_Default->divfactor_64;
+			hx.get_cal(&hx)->divfactor_128 = HX711_Default->divfactor_128;
+			hx.get_cal(&hx)->status=HX711_Default->status;
 			PORTC |= (ONE << 5); // troubleshooting
 			PORTC |= (ONE << 6); // troubleshooting
 			counter_1 = ZERO;
@@ -357,10 +370,10 @@ The past only exists if the present comes to be. There is no future only possibi
 because 24 bit will have to create a vector pointer of the size of 32 bit, then at the 
 end do a cast to *((int32_t*)ptr).
 
-forget about sleep function for HX711 display is always on, then finish the calibration menu of div factor, also add functionality for batch counting, lets see.
-finish code, got lots of time.
+forget about sleep function for HX711 display is always on, then finish the calibration menu of div factor DONE, 
+also add functionality for batch counting forget about batch counting already enough level of complexity,
 
-
+FINISHED LEAVING HAS IS. LATER MAYBE PLAY AROUND AND CLEANUP FOR BEATIES SAKE.
 
 MEMCP is not appreciated by this MCU, sometimes crashes.
 ****/
