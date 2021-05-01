@@ -1,11 +1,11 @@
 \babel@toc {portuguese}{}
 \babel@toc {portuguese}{}
 \contentsline {chapter}{\numberline {1}Introdução}{1}%
-\contentsline {chapter}{\numberline {2}Projecto}{6}%
-\contentsline {section}{\numberline {1}Hardware}{6}%
-\contentsline {subsection}{\numberline {1.1}Material}{7}%
-\contentsline {section}{\numberline {2}Funcionamento}{8}%
-\contentsline {section}{\numberline {3}Validação}{8}%
-\contentsline {chapter}{\numberline {3}Conclusão}{10}%
-\contentsline {chapter}{\numberline {A}Definições}{11}%
-\contentsline {chapter}{\numberline {B}Física}{12}%
+\contentsline {chapter}{\numberline {2}Projecto}{5}%
+\contentsline {section}{\numberline {1}Hardware}{5}%
+\contentsline {subsection}{\numberline {1.1}Material}{6}%
+\contentsline {section}{\numberline {2}Funcionamento}{7}%
+\contentsline {section}{\numberline {3}Validação}{7}%
+\contentsline {chapter}{\numberline {3}Conclusão}{9}%
+\contentsline {chapter}{\numberline {A}Definições}{10}%
+\contentsline {chapter}{\numberline {B}Física}{11}%

@@ -69,7 +69,8 @@ Pode-se dizer que em todos os casos determina-se a força resultante através do
 \\
 \section*{Sensor}
 Para medir a massa recorreu-se a uma célula de peso que consiste em determinar a pressão exercida num dado material, neste caso um bloco de alumínio como indicado na \textit{figura} \ref{Load_Cell_1}, para isso ser possível é utilizado sensores Piezoresistivos numa montagem em ponte \textit{wheatstone} sobre essa superfície em locais determinados.
-
+\\
+\\
 Piezoresistividade deriva seu nome da palavra grega \textit{piezin}, que significa "pressionar". É um efeito exibido por vários materiais que exibem uma mudança na resistividade devido a uma pressão aplicada. O efeito foi descoberto pela primeira vez por Lord Kelvin em 1856, que notou que a resistência dos fios de cobre e ferro aumentava quando em tensão. Ele também observou que os fios de ferro apresentavam uma alteração maior na resistência do que os de cobre. A primeira aplicação do efeito piezoresistivo não apareceu até a década de 1930, cerca de 75 anos após a descoberta de Lord Kelvin. Em vez de usar fios de metal, esses assim chamados medidores de tensão são geralmente feitos de uma folha de metal fina montada em uma película de suporte, que pode ser colada em uma superfície. Um medidor de tensão de folha de metal típico é representado na \textit{figura} \ref{strain_gauge_1} \cite{book-9}
 \begin{figure}[H]
 	\centering
@@ -85,15 +86,10 @@ Em termos de \textit{layout} do \textit{chip}, os transitórios agudos associado
 ser mantidos bem longe dos circuitos analógicos \textit{front-end}. \cite{book-9}
 
 \section*{Informação}
-Data conversion is the transition region between the continuous (real-world)
-signals and the discrete signals associated with the digital processor. Typically, this	stage comprises an analog-to-digital converter (ADC). Inputs from other sensors (monitoring) can be fed into the data conversion subsystem and may be used to implement compensation, say for temperature. Note that such signals may also require amplification before data conversion. Resonant sensors, whose signals are in the frequency domain, do not need a data conversion stage as their outputs can often be fed directly into the digital system. The digital processing element mainly concerns the software processes within the smart sensor. These may be simple routines such as those required for imple-menting sensor compensation (linearization, cross-sensitivity, offset), or they may be more sophisticated techniques such as pattern recognition methods (such as neu- ral networks) for sensor array devices.\cite{book-9}
-\\
-\\
-The data communications element deals with the routines necessary for pass-
-ing and receiving data and control signals to the sensor bus. It is often the case that the smart sensor is a single device within a multisensor system. Individual sensors can communicate with each other in addition to the host system. There are many examples of commercial protocols that are used in smart sensor systems, but we will not go into detail here. It is sufficient to be aware that the smart sensor will often have to deal with situations such as requests for data, calibration signals, error checking, and message identification. Of course, it is feasible in some applica-
-tions that the data communications may simply be a unit that provides an analog voltage or current signal. \cite{book-9}
-\\
-\\
-The control processor often takes the form of a microprocessor. It is generally the central component within the smart sensor and is connected to most of the other elements, as we have already seen. The software routines are implemented within the processor and these will be stored within the memory unit. The control processor may also issue requests for self-test routines or set the gain of the amplifier. \cite{book-9}
 
+A conversão de informação é a transição entre o sinal continuo da vida real para um sinal discreto associado ao mundo digital, tipicamente esta etapa consiste na conversão analógica para digital.
+\\
+O processamento digital pode consistir de rotinas para compensar os desvios por linearização, compensação da sensibilidade e \textit{offset}, ou podem ser técnicas mais sofisticadas como reconhecimento de padrões (tais como redes neuronais) para equipamentos de sensores vetoriais.\cite{book-9}
+\\
+A comunicação consiste em cuidar das rotinas necessárias para transferir e receber a informação e sinais de controle para a linha de comunicação com o sensor, o processador toma lugar como componente central na qual trata da informação, guardar os dados e fazer rotinas tais como de calibração, teste e controlo de ganho da amplificação. \cite{book-9}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
