@@ -50,7 +50,7 @@ A ligação destes componentes é intuitivo e fácil de se perceber, o que é co
 	\caption{Amplificador de Sinal [HX711]}
 	\label{HX711_Schematic_1}
 \end{figure}
-Foi criado uma livraria (driver) recorrendo a interrupções quando o sinal de \textit{data} vai para a massa, na qual indica que tem um pacote de leitura pronto a ser transmitido.\\
+A livraria (driver) recorre a interrupções quando o sinal de \textit{data} vai para a massa, na qual indica que tem um pacote de leitura pronto a ser transmitido.\\
 Como indicado abaixo no gratifico em que a linha amarela é a informação e a linha azul o respetivo \textit{clock} que é gerado pelas interrupções do micro-controlador fazendo \textit{shift} dos 24 bits, que depois no fim transmite para o amplificador o ganho de amplificação a ser usado pelo numero excedente de \textit{clock cycles}, que nesta demonstração é um, e corresponde a ganho de 128.
 \begin{figure}[H]
 	\centering
