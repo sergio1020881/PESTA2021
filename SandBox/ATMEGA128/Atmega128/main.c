@@ -49,6 +49,8 @@ Comment:
 #define IMASK 0x3F
 #define _5sec 5
 #define _10sec 10
+#define minDIV 1
+#define maxDIV 255
 /*
 ** Global File variable
 */
@@ -200,8 +202,8 @@ int main(void)
 			/***MENU 2***/
 			case '2': // MANUAL CALIBRATE DIVFACTOR MENU
 				/**/
-				lcd0.gotoxy(0,2);
-				lcd0.string_size("SETUP GAIN FACTOR",15);
+				lcd0.gotoxy(0,1);
+				lcd0.string_size("SETUP GAIN FACTOR",17);
 				switch(choice){
 					case 1: // case 128
 						divfactor=hx.get_cal(&hx)->divfactor_128;
@@ -211,13 +213,13 @@ int main(void)
 						lcd0.gotoxy(2,9);
 						if(F.hl(&F) == (ONE << 3)){
 							divfactor++;
-							if(divfactor > 255)
-								divfactor=255;
+							if(divfactor > maxDIV)
+								divfactor = maxDIV;
 						}
 						if(F.hl(&F) == (ONE << 4)){
 							divfactor--;
-							if(divfactor < 1)
-								divfactor=ONE;
+							if(divfactor < minDIV)
+								divfactor = minDIV;
 						}
 						HX711_data.divfactor_128 = divfactor;
 						lcd0.string_size(function.ui16toa(divfactor),6);
@@ -230,13 +232,13 @@ int main(void)
 						lcd0.gotoxy(2,9);
 						if(F.hl(&F) == (ONE << 3)){
 							divfactor++;
-							if(divfactor > 255)
-								divfactor=255;
+							if(divfactor > maxDIV)
+								divfactor = maxDIV;
 						}
 						if(F.hl(&F) == (ONE << 4)){
 							divfactor--;
-							if(divfactor < 1)
-								divfactor=ONE;
+							if(divfactor < minDIV)
+								divfactor=minDIV;
 						}
 						HX711_data.divfactor_32 = divfactor;
 						lcd0.string_size(function.ui16toa(divfactor),6);
@@ -249,13 +251,13 @@ int main(void)
 						lcd0.gotoxy(2,9);
 						if(F.hl(&F) == (ONE << 3)){
 							divfactor++;
-							if(divfactor > 255)
-								divfactor=255;
+							if(divfactor > maxDIV)
+								divfactor = maxDIV;
 						}
 						if(F.hl(&F) == (ONE << 4)){
 							divfactor--;
-							if(divfactor < 1)
-								divfactor=ONE;
+							if(divfactor < minDIV)
+								divfactor = minDIV;
 						}
 						HX711_data.divfactor_64 = divfactor;
 						lcd0.string_size(function.ui16toa(divfactor),6);
@@ -339,7 +341,7 @@ ISR(TIMER1_COMPA_vect) // 1 second intervals
 			hx.get_cal(&hx)->divfactor_32 = divfactor = HX711_Default->divfactor_32;
 			hx.get_cal(&hx)->divfactor_64 = divfactor = HX711_Default->divfactor_64;
 			hx.get_cal(&hx)->divfactor_128 = HX711_Default->divfactor_128;
-			hx.get_cal(&hx)->status=HX711_Default->status;
+			hx.get_cal(&hx)->status = HX711_Default->status;
 			PORTC |= (ONE << 5); // troubleshooting
 			PORTC |= (ONE << 6); // troubleshooting
 			counter_1 = ZERO;
