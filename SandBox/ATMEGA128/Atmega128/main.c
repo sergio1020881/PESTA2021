@@ -9,9 +9,10 @@ Hardware: Atmega128 by ETT ET-BASE
 	-PORTA LCD
 	-PORTF pin 6,7 HX711, pin 0 to 5 Buttons, 
 		PIN 0 -> OFFSET, 
-		PIN 3 -> DEFAULT 5sec press and up count for div factor, 
-		PIN 4 -> ENTER GAIN FACTOR MENU 5 sec press and down count for div factor, 
+		PIN 3 -> DEFAULT 5sec press, and up count for div factor, 
+		PIN 4 -> ENTER GAIN FACTOR MENU 5 sec press, and down count for div factor, 
 		PIN 5 -> ENTER KEY to validate entered value and put in effect.
+	-PORTB status indicator leds
 Comment:
 	Excellent
 ************************************************************************/
@@ -67,9 +68,9 @@ EEPROM eprom;
 
 char result[32];
 char Menu = '1'; // Main menu selector
-uint8_t counter_1 = 0;
-uint8_t counter_2 = 0;
-uint8_t signal = 0;
+uint8_t counter_1 = ZERO;
+uint8_t counter_2 = ZERO;
+uint8_t signal = ZERO;
 uint8_t count=blink;
 uint16_t divfactor;
 /*
@@ -118,7 +119,7 @@ int main(void)
 	timer1.compareA(62800); // Freq = 256 -> 62800 -> 2 s
 	timer1.start(256);
 	
-	//intx.set(1,0);
+	//intx.set(1,0); // Not necessary, if used move IDC from PORTF to PORTD with new config pinage.
 	
 	// HX711 Gain
 	hx.set_amplify(&hx, 64); // 32 64 128
@@ -306,7 +307,7 @@ void PORTINIT(void)
 /*
 ** interrupt
 */
-//ISR(INT1_vect){	
+//ISR(INT1_vect){ //Not necessary to be used.
 //	PORTC ^= (ONE << 7);
 //	intx.off(1);
 //}
@@ -378,4 +379,7 @@ also add functionality for batch counting forget about batch counting already en
 FINISHED LEAVING HAS IS. LATER MAYBE PLAY AROUND AND CLEANUP FOR BEATIES SAKE.
 
 MEMCP is not appreciated by this MCU, sometimes crashes.
+
+Endurance test over 2 months, noticed drift during days, but never geting over 20 grams. For a scale using a 50Kg cell is axcellente.
+Using offset corrects the drift and precision is concise to the gram.
 ****/
