@@ -15,7 +15,7 @@ Abaixo pode-se ver a montagem em esqueleto do equipamento utilizado.
 Abaixo esta indicado uma tabela dos materiais usados, assim como os preços. Também imagem da célula de carga de 50Kg e placa de amplificação.\\
 \\
 \begin{table}[H]
-	{\rowcolors{3}{green!80!yellow!50}{green!70!yellow!40}
+	{\rowcolors{3}{blue!80!yellow!50}{blue!70!yellow!40}
 		\begin{tabular}{ |p{12cm}|c|p{2cm}|  }
 			\hline
 			\multicolumn{3}{|c|}{Lista de Material} \\
@@ -84,9 +84,26 @@ O sensor usado é o mais comum nesta pratica, e escolha demonstrada, o circuito 
 \\
 \\
 
+\begin{table}[H]
+	\captionsetup{justification=raggedright,singlelinecheck=false}
+	\begin{tabular}{ | c | c | c |  }
+		\hline
+		\makecell[c]{PD\_SCK \\ Impulsos} & Entrada  & Ganho \\
+		\hline
+		\hline
+		25 & \textbf{A} & 128 \\
+		\hline
+		26 & \textbf{B} & 32 \\
+		\hline
+		27 & \textbf{A} & 64 \\
+		\hline
+	\end{tabular}	
+	\caption{HX711 Configuração Ganho}
+	\label{Gain_Selection}
+\end{table}
 
 
-
+\url{https://www.botnroll.com/en/flex-pressure-vibration/1638-sparkfun-load-cell-amplifier-hx711.html}
 
 The main emphasis of this text is on mechanical sensors,
 including pressure, force, acceleration, torque, inertial, and flow sensors. \cite{book-9}
