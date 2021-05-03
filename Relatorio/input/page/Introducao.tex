@@ -52,14 +52,14 @@ A balança por mola, como o nome implica, mede a pressão (ou sua tensão) exerc
 	\end{figure}
 \end{minipage}
 \newpage
-As balanças eletrónicas mais modernas utilizam resistências elétricas em materiais permeáveis e fazer passar uma corrente elétrica na qual é possível detetar a variação de condutividade das resistências em que é proporcional a pressão exercida sobre esse material, podendo dai se deduzir o peso dos objetos que se encontrem na balança.
+As balanças eletrónicas mais modernas utilizam resistências elétricas em materiais permeáveis e fazer passar uma corrente elétrica na qual é possível detetar a variação de condutividade das resistências em que é proporcional a pressão exercida sobre esse material, podendo dai se deduzir o peso dos objetos.
 \begin{figure}[H]
 	\centering
 	\includegraphics[height=7cm]{./image/PESTA/general/Scale_1.jpg}
 	\caption{Balança eletrónica}
 	\label{Sale}
 \end{figure}
-O que vai ser utilizado para o projeto vai ser um célula de peso que seque o principio acima mencionado, estes sensores tem quatro \textit{\textbf{strain gauges}} ligadas em ponte \textit{wheatstone} que vão detetar a distorção do material ou seja a célula de peso e gerar um sinal em tensão proporcional a força exercida. Seque o mesmo principio de uma mola $ [ \; K = \frac{\Delta l}{F} \; ] $.
+O que vai ser utilizado no projeto vai ser um célula de peso que seque o principio acima mencionado, estes sensores tem quatro \textit{\textbf{strain gauges}} ligadas em ponte \textit{wheatstone} que vão detetar a distorção (pressão) do material, ou seja, a célula de peso e gerar um sinal em tensão proporcional a força exercida. Seque o mesmo principio de uma mola $ [ \; K = \frac{\Delta l}{F} \; ] $.
 \\
 \\
 Também há outros tipos de células de peso tais como as pneumáticas e hidráulicas que convertem a pressão num sinal elétrico que é proporcional a força nela exercida $ [ \; P = \frac{F}{A} \; ] $. As células de peso capacitivas são outro exemplo de como obter um sinal proporcional a força imposta como carga, neste caso é medido sua capacidade pelo afastamento ou aproximação dos pratos dos elétrodos $ [ \; C = \varepsilon_{0} \; \varepsilon_{r} \; \frac{A}{d} \; ] $.
@@ -68,8 +68,13 @@ Também há outros tipos de células de peso tais como as pneumáticas e hidráu
 Pode-se dizer que em todos os casos determina-se a força resultante através do deslocamento no espaço.
 \section*{Sensor}
 Para medir a massa recorreu-se a uma \textbf{célula de peso} que determina a pressão exercida num dado material, neste caso é um bloco de alumínio como indicado na \textit{figura} \ref{Load_Cell_1}, para isso ser possível este utiliza sensores Piezoresistivos numa montagem em ponte \textit{wheatstone} sobre essa superfície em locais determinados.
-\\
-\\
+\begin{figure}[H]
+	\captionsetup{justification=raggedright,singlelinecheck=false}
+	\flushleft
+	\includegraphics[scale=0.15]{./image/PESTA/material/Load_Cell_1.jpg}
+	\caption{Célula de Peso 50Kg}
+	\label{Load_Cell_1}
+\end{figure}
 Piezoresistividade deriva seu nome da palavra grega \textit{piezin}, que significa "pressionar". É um efeito exibido por vários materiais que exibem uma mudança na resistividade devido a uma pressão aplicada. O efeito foi descoberto pela primeira vez por Lord Kelvin em 1856, que notou que a resistência dos fios de cobre e ferro aumentava quando em tensão. Ele também observou que os fios de ferro apresentavam uma alteração maior na resistência do que os de cobre. A primeira aplicação do efeito piezoresistivo não apareceu até a década de 1930, cerca de 75 anos após a descoberta de Lord Kelvin. Em vez de usar fios de metal, esses assim chamados medidores de tensão são geralmente feitos de uma folha de metal fina montada em uma película de suporte, que pode ser colada em uma superfície. Um medidor de tensão de folha de metal típico é representado na \textit{figura} \ref{strain_gauge_1} \cite{book-9}
 \begin{figure}[H]
 	\centering
@@ -77,15 +82,10 @@ Piezoresistividade deriva seu nome da palavra grega \textit{piezin}, que signifi
 	\caption{Fita metálica \textit{strain gauge} \cite{book-9}}
 	\label{strain_gauge_1}
 \end{figure}
-
 \section*{Amplificador}
-A amplificação é geralmente um requisito fundamental, pois a maioria dos sensores tende a produzem níveis de sinal significativamente mais baixos do que aqueles usados no processador digital. Sensores resistivos podem precisar de um amplificador de carga. Se possível, é vantajoso ter o ganho o mais próximo possível do elemento sensor. Em situações onde um alto ganho é necessário, muitas vezes pode haver implicações para lidar 
-com quaisquer efeitos adversos, como ruído. \\ 
-Em termos de \textit{layout} do \textit{chip}, os transitórios agudos associados aos sinais digitais precisam 
-ser mantidos bem longe dos circuitos analógicos \textit{front-end}. \cite{book-9}
-
+A amplificação é geralmente um requisito fundamental, pois a maioria dos sensores tende a produzir níveis de sinal significativamente mais baixos do que aqueles usados no processador digital. Sensores resistivos podem precisar de um amplificador de carga. Se possível, é vantajoso ter o ganho o mais próximo possível do elemento sensor. Em situações onde um alto ganho é necessário, muitas vezes pode haver implicações para lidar 
+com quaisquer efeitos adversos, como o ruído, também em termos de \textit{layout} do \textit{chip}, os transitórios agudos associados aos sinais digitais precisam ser mantidos bem longe dos circuitos analógicos \textit{front-end}. \cite{book-9}
 \section*{Informação}
-
 A conversão de informação é a transição entre o sinal continuo da vida real para um sinal discreto associado ao mundo digital, tipicamente esta etapa consiste na conversão analógica para digital.
 \\
 O processamento digital pode consistir de rotinas para compensar os desvios por linearização, compensação da sensibilidade e \textit{offset}, ou podem ser técnicas mais sofisticadas como reconhecimento de padrões (tais como redes neuronais) para equipamentos de sensores vetoriais.\cite{book-9}
