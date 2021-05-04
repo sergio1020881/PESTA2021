@@ -174,11 +174,11 @@ int main(void)
 					hx.get_cal(&hx)->status=ZERO;
 					PORTC &= ~(ONE << 5);
 				}
-				if(choice == 1)
+				if(choice == 1 || choice == 11)
 					value = (tmp - hx.get_cal(&hx)->offset_128) / hx.get_cal(&hx)->divfactor_128; //value to be published to LCD
-				if(choice == 2)
+				if(choice == 2 || choice == 21)
 					value = (tmp - hx.get_cal(&hx)->offset_32) / hx.get_cal(&hx)->divfactor_32; //value to be published to LCD
-				if(choice == 3)
+				if(choice == 3 || choice == 31)
 					value = (tmp - hx.get_cal(&hx)->offset_64) / hx.get_cal(&hx)->divfactor_64; //value to be published to LCD
 				/*********************************************/
 				//lcd0.gotoxy(3,0); // for troubleshooting
