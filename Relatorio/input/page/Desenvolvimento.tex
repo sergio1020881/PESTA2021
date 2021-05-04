@@ -1,6 +1,6 @@
 \chapter{Projecto}
 \section{Hardware}
-Para o desenvolvimento deste projeto, foi criado um kit de desenvolvimento, para facilitar sua implementação, testar e efetuar alterações e melhoramentos.\\
+Para o desenvolvimento deste projeto, foi criado um kit de desenvolvimento, para facilitar sua implementação, testar, efetuar alterações e melhoramentos.\\
 \\
 Abaixo pode-se ver a montagem em esqueleto do equipamento utilizado.
 \newline
@@ -50,20 +50,65 @@ A ligação destes componentes é intuitivo e fácil de se perceber, o que é co
 	\caption{Amplificador de Sinal [HX711]}
 	\label{HX711_Schematic_1}
 \end{figure}
-A livraria (driver) recorre a interrupções quando o sinal de \textit{data} vai para a massa, na qual indica que tem um pacote de leitura pronto a ser transmitido.\\
-Como indicado abaixo no gráfico em que a linha amarela é a informação e a linha azul o respetivo \textit{clock} que é gerado pelas interrupções do micro-controlador fazendo \textit{shift} dos 24 bits, que depois no fim transmite para o amplificador o ganho de amplificação a ser usado pelo numero excedente de \textit{clock cycles}, que nesta demonstração é um, e corresponde a ganho de 128.
+A placa pode ser programada fisicamente para determinar o numero de amostras por segundo a ser transmitido, tem opção de 10 amostras por segundo e 80 amostras, neste projeto optei pela segunda opção que necessita alteração na placa de circuito de impresso, isto é, abrir o \textit{jumper} respetivo de configuração.
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.65]{./image/PESTA/graph/DataClkPacket_1.JPG}
-	\caption{Comunicação}
-	\label{DataClkPacket_1}
+	\includegraphics[scale=0.55]{./image/PESTA/graph/80SPS64GAIN/SPS_80.JPG}
+	\caption{Amostras}
+	\label{SPS_64}
 \end{figure}
-
+A livraria (driver) recorre a interrupções quando o sinal de \textit{data} vai para a massa, indicando assim que tem um pacote de leitura pronto a ser transmitido.\\
+\\
+%%\begin{minipage}{\linewidth}
+\begin{minipage}[!b]{.40\linewidth}
+	\begin{table}[H]
+		\captionsetup{justification=raggedright,singlelinecheck=false}
+		\begin{tabular}{ | c | c | c |  }
+			\hline
+			\makecell[c]{PD\_SCK \\ Impulsos} & Entrada  & Ganho \\
+			\hline
+			\hline
+			25 & \textbf{A} & 128 \\
+			\hline
+			26 & \textbf{B} & 32 \\
+			\hline
+			27 & \textbf{A} & 64 \\
+			\hline
+		\end{tabular}	
+		\caption{Configuração Ganho}
+		\label{Gain_Selection}
+	\end{table}
+	\vfill
+\end{minipage}
+\begin{minipage}[l]{.6\linewidth}
+\vspace{.3cm}
+Como indicado abaixo no gráfico em que a linha amarela é a informação e a linha azul o respetivo \textit{clock} que é gerado pelas interrupções do micro-controlador fazendo \textit{shift} dos 24 bits, que depois no fim transmite para o amplificador o ganho de amplificação a ser usado pelo numero excedente de \textit{clock cycles}, que nesta demonstração é um [1], que corresponde a ganho de 128.
+\end{minipage}
+%%\end{minipage}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.55]{./image/PESTA/graph/80SPS128GAIN/Gain_128_example.JPG}
+	\caption{Ganho de 128}
+	\label{Gain_128_example}
+\end{figure}
+a sequir o exemplo com o ganho de 64, pois tem 3 impulsos excedentes.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.55]{./image/PESTA/graph/80SPS64GAIN/Gain_64_example.JPG}
+	\caption{Ganho de 64}
+	\label{Gain_64_example}
+\end{figure}
 
 $\begin{array}{l l l}
 	\text{Média} & & \\
 	\overline{x} & = & \frac{1}{n}\sum_{i=1}^n x_i
 \end{array}$
+
+
+
+
+
+
 
 \section{Validação}
 %%%To validate is to justify why the choices made and alternatives that could be chosen.
@@ -73,28 +118,6 @@ Apostei na marca \textbf{Atmel} devido a experiência adquirida, conjunto de já
 \\
 O sensor usado é o mais comum nesta pratica, e escolha demonstrada, o circuito de interface é indiferente a escolha apenas é baseada na sua precisão, ou seja, é de 24 \textit{bit}, e o \textit{chip} apenas tem  de 10 \textit{bit} de resolução.
 \\
-\\
-
-\begin{table}[H]
-	\captionsetup{justification=raggedright,singlelinecheck=false}
-	\begin{tabular}{ | c | c | c |  }
-		\hline
-		\makecell[c]{PD\_SCK \\ Impulsos} & Entrada  & Ganho \\
-		\hline
-		\hline
-		25 & \textbf{A} & 128 \\
-		\hline
-		26 & \textbf{B} & 32 \\
-		\hline
-		27 & \textbf{A} & 64 \\
-		\hline
-	\end{tabular}	
-	\caption{HX711 Configuração Ganho}
-	\label{Gain_Selection}
-\end{table}
-
-
-\url{https://www.botnroll.com/en/flex-pressure-vibration/1638-sparkfun-load-cell-amplifier-hx711.html}
 
 The main emphasis of this text is on mechanical sensors,
 including pressure, force, acceleration, torque, inertial, and flow sensors. \cite{book-9}
