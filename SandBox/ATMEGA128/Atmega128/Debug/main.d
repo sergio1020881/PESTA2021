@@ -18,9 +18,9 @@ main.d main.o: .././main.c \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\math.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdlib.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\string.h \
- ../Libraria/explode.h ../Libraria/atmega128interrupt.h \
- ../Libraria/atmega128timer.h ../Libraria/function.h ../Libraria/lcd.h \
- ../Libraria/hx711.h ../Libraria/eeprom.h \
+ ../Libraria/explode.h ../Libraria/atmega128timer.h \
+ ../Libraria/function.h ../Libraria/lcd.h ../Libraria/hx711.h \
+ ../Libraria/eeprom.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\eeprom.h
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h:
@@ -62,8 +62,6 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\string.h:
 
 ../Libraria/explode.h:
-
-../Libraria/atmega128interrupt.h:
 
 ../Libraria/atmega128timer.h:
 

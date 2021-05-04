@@ -1,5 +1,5 @@
 /************************************************************************
-Title: BALANÇA COMERCIAL
+Title: BALANCA COMERCIAL
 Author: Sergio Manuel Santos
 	<sergio.salazar.santos@gmail.com>
 File: $Id: MAIN,v 1.8.2.1 21/02/2021 Exp $
@@ -12,9 +12,13 @@ Hardware: Atmega128 by ETT ET-BASE
 		PIN 3 -> DEFAULT 5sec press, and up count for div factor, 
 		PIN 4 -> ENTER GAIN FACTOR MENU 5 sec press, and down count for div factor, 
 		PIN 5 -> ENTER KEY to validate entered value and put in effect.
+		PIN 6 and 7 -> dedicated to comunicate with Signal Amplifier
 	-PORTB status indicator leds
+		PIN 5 -> Indicate using stored values
+		PIN 6 -> Reset to default indicator (blinks four times)
+		PIN 7 -> In Calibratio Menu (blinking)
 Comment:
-	Excellent
+	nice
 ************************************************************************/
 #define F_CPU 16000000UL
 /*
@@ -29,7 +33,7 @@ Comment:
 #include <stdlib.h>
 #include <string.h>
 #include "explode.h"
-#include "atmega128interrupt.h"
+//#include "atmega128interrupt.h"
 #include "atmega128timer.h"
 #include "function.h"
 #include "lcd.h"
@@ -45,7 +49,7 @@ Comment:
 #define ZERO 0
 #define ONE 1
 #define TRUE 1
-#define average_n 24
+#define average_n 24 //64 -> 24
 #define blink 8
 #define IMASK 0x3F
 #define _5sec 5
@@ -58,7 +62,7 @@ Comment:
 EXPLODE F;
 LCD0 lcd0;
 TIMER_COUNTER0 timer0;
-INTERRUPT intx;
+//INTERRUPT intx;
 HX711_calibration HX711_data;
 HX711_calibration* HX711_ptr;
 const uint8_t sizeblock = sizeof(HX711_calibration);
@@ -81,9 +85,7 @@ void PORTINIT();
 int main(void)
 {
 	PORTINIT();
-	
 	HX711_ptr = &HX711_data; // CALIBRATION DATA BUS
-	
 	/***INICIALIZE OBJECTS***/
 	F = EXPLODEenable();
 	FUNC function = FUNCenable();
@@ -94,11 +96,9 @@ int main(void)
 	eprom = EEPROMenable();
 	//intx = INTERRUPTenable();
 	/******/
-	
 	float value = 0;
 	float publish = 0;
 	uint8_t choice;
-	
 	// Get default values to buss memory
 	HX711_data.offset_32 = hx.get_cal(&hx)->offset_32;
 	HX711_data.offset_64 = hx.get_cal(&hx)->offset_64;
@@ -107,25 +107,25 @@ int main(void)
 	HX711_data.divfactor_64 = hx.get_cal(&hx)->divfactor_64;
 	HX711_data.divfactor_128 = hx.get_cal(&hx)->divfactor_128;
 	HX711_data.status = hx.get_cal(&hx)->status;
-	
 	/***Parameters timers***/
 	timer0.compoutmode(1); // troubleshooting blinking PORTB 5
 	/***79 and 8  -> 80 us***/
 	timer0.compare(60); // 8 -> 79 -> 80 us, fine tunned = 8 -> 60 -> 30.4us
 	timer0.start(8); // 1 -> 32 us , 8 -> 256 us , 32 64 128 256 1024
-	
 	// to be used to jump menu for calibration in progress
 	timer1.compoutmodeA(1); // troubleshooting blinking PORTB 6
 	timer1.compareA(62800); // Freq = 256 -> 62800 -> 2 s
 	timer1.start(256);
-	
 	//intx.set(1,0); // Not necessary, if used move IDC from PORTF to PORTD with new config pinage.
-	
 	// HX711 Gain
 	hx.set_amplify(&hx, 64); // 32 64 128
 	choice = hx.get_amplify(&hx);
-	divfactor = (uint16_t) HX711_data.divfactor_64;
-	
+	if(choice == 1)
+		divfactor = (uint16_t) HX711_data.divfactor_128;
+	if(choice == 2)
+		divfactor = (uint16_t) HX711_data.divfactor_32;
+	if(choice == 3)
+		divfactor = (uint16_t) HX711_data.divfactor_64;
 	//Get stored calibration values and put them to effect
 	eprom.read_block(HX711_ptr, (const void*) ZERO, sizeblock);
 	if(HX711_ptr->status == 1){
@@ -139,30 +139,29 @@ int main(void)
 		hx.get_cal(&hx)->status=ZERO;
 		PORTC &= ~(ONE << 5); // troubleshooting
 	}
+	/*********************************************************/
 	//lcd0.gotoxy(1,0); // for troubleshooting
 	//lcd0.string_size(function.ftoa(HX711_data.status, result, ZERO), 13);
 	//lcd0.string_size(function.ftoa(hx.get_cal(&hx)->offset_64, result, ZERO), 13);
-	/***********************************************************************************************/
+	/*********************************************************/
 	while(TRUE){
 		/******PREAMBLE******/
 		lcd0.reboot(); //Reboot LCD
 		F.boot(&F,PINF); //PORTF INPUT READING
-		hx.query(&hx); //Catches falling Edge instance, begins bit shifting.
+		while(hx.query(&hx)); //Catches falling Edge instance, begins bit shifting.
 		/***geting data interval***/
 		/************INPUT***********/
 		tmp = hx.raw_average(&hx, average_n); // average_n  25 or 50, smaller means faster or more readings
-		
-		
 		/****************************/
 		switch(Menu){
 			/***MENU 1***/
 			case '1': // Main Program Menu
 				lcd0.gotoxy(0,4); //TITLE
 				lcd0.string_size("Weight Scale", 12); //TITLE
-				
+				/*********************************************/
 				//lcd0.gotoxy(1,0); // for troubleshooting
 				//lcd0.string_size(function.ftoa(hx.read_raw(&hx), result, ZERO), 13);
-				
+				/*********************************************/
 				if((F.hl(&F) & IMASK) & ONE){ // calibrate offset by pressing button 1
 					HX711_data.offset_32 = tmp;
 					HX711_data.offset_64 = tmp;
@@ -175,14 +174,18 @@ int main(void)
 					hx.get_cal(&hx)->status=ZERO;
 					PORTC &= ~(ONE << 5);
 				}
-				
-				//value = (value - hx.get_cal(&hx)->offset_128) / hx.get_cal(&hx)->divfactor_128; //value to be published to LCD
-				value = (tmp - hx.get_cal(&hx)->offset_64) / hx.get_cal(&hx)->divfactor_64; //value to be published to LCD
-				
-				//lcd0.gotoxy(3,0);
-				//lcd0.string_size(function.ftoa(hx.get_cal(&hx)->offset_64, result, ZERO), 13);
-				
-				//Display
+				if(choice == 1)
+					value = (tmp - hx.get_cal(&hx)->offset_128) / hx.get_cal(&hx)->divfactor_128; //value to be published to LCD
+				if(choice == 2)
+					value = (tmp - hx.get_cal(&hx)->offset_32) / hx.get_cal(&hx)->divfactor_32; //value to be published to LCD
+				if(choice == 3)
+					value = (tmp - hx.get_cal(&hx)->offset_64) / hx.get_cal(&hx)->divfactor_64; //value to be published to LCD
+				/*********************************************/
+				//lcd0.gotoxy(3,0); // for troubleshooting
+				//lcd0.string_size(function.ftoa(tmp, result, ZERO), 13);
+				//lcd0.string_size(function.ftoa(hx.get_cal(&hx)->divfactor_128, result, ZERO), 13);
+				//lcd0.string_size(function.ftoa(hx.get_cal(&hx)->offset_128, result, ZERO), 13);
+				/*********************************************/
 				if (value > 1000 || value < -1000){
 					publish = value / 1000;
 					lcd0.gotoxy(2,1);
@@ -192,13 +195,11 @@ int main(void)
 					lcd0.gotoxy(2,1);
 					lcd0.string_size(function.ftoa(publish, result, ZERO), 13); lcd0.string_size("gram", 4);
 				}
-				
 				// Jump Menu signal
 				if(signal == 1){
 					Menu = '2';
 					lcd0.clear();
 				}
-				
 				break;
 			/***MENU 2***/
 			case '2': // MANUAL CALIBRATE DIVFACTOR MENU
@@ -264,6 +265,7 @@ int main(void)
 						lcd0.string_size(function.ui16toa(divfactor),6);
 						break;
 					default:
+						choice = 3;
 						break;
 				};
 				// Jump Menus signal
@@ -279,12 +281,6 @@ int main(void)
 					lcd0.clear();
 				}
 				/**/
-				break;
-			/***MENU 3***/
-			case '3': //
-				lcd0.gotoxy(0,0);
-				lcd0.string_size("Not being used",19);
-				/***Play around***/
 				break;
 				/********************************************************************/
 			default:
@@ -307,10 +303,6 @@ void PORTINIT(void)
 /*
 ** interrupt
 */
-//ISR(INT1_vect){ //Not necessary to be used.
-//	PORTC ^= (ONE << 7);
-//	intx.off(1);
-//}
 ISR(TIMER0_COMP_vect) // 15.4 us intervals
 {
 	/***Block other interrupts during this procedure***/

@@ -31,9 +31,9 @@ Comment:
 /***Global File Variable***/
 /***/
 HX711_calibration HX711_Default_50Kg = {
-	.offset_32 = 36800,
-	.offset_64 = 72700,
-	.offset_128 = 147200,
+	.offset_32 = 35900,
+	.offset_64 = 72200,
+	.offset_128 = 143600,
 	.divfactor_32 = 23,
 	.divfactor_64 = 46,
 	.divfactor_128 = 92,
@@ -173,10 +173,6 @@ int32_t HX711_read_raw(HX711* self)
 	aindex = self->bufferindex-ONE;
 	bindex = self->bitcount-ONE;
 	ptr=(int32_t*)self->buffer;
-	/***Detect query for reading***/
-	//if((!(*hx711_PIN & ONE << hx711_datapin)) && !self->readflag){
-		//HX711_set_readflag(self);
-	//}
 	/***Interrupt 24 times sequence***/
 	if(self->readflag){
 		if(self->bitcount){
