@@ -50,7 +50,7 @@ A ligação destes componentes é intuitivo e fácil de se perceber, o que é co
 	\caption{Amplificador de Sinal [HX711]}
 	\label{HX711_Schematic_1}
 \end{figure}
-A placa pode ser programada fisicamente para determinar o numero de amostras por segundo a ser transmitido, tem opção de 10 amostras por segundo e 80 amostras, neste projeto optei pela segunda opção que necessita alteração na placa de circuito de impresso, isto é, abrir o \textit{jumper} respetivo de configuração.
+A placa pode ser programada fisicamente para determinar o numero de amostras por segundo a ser transmitido, tem opção de \textcolor{blue}{10} amostras por segundo e \textcolor{blue}{80} amostras, neste projeto optei pela segunda opção que necessita alteração na placa de circuito de impresso, isto é, abrir o \textit{jumper} respetivo de configuração.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.55]{./image/PESTA/graph/80SPS64GAIN/SPS_80.JPG}
@@ -82,7 +82,7 @@ A livraria (driver) recorre a interrupções quando o sinal de \textit{data} vai
 \end{minipage}
 \begin{minipage}[l]{.6\linewidth}
 \vspace{.3cm}
-Como indicado abaixo no gráfico em que a linha amarela é a informação e a linha azul o respetivo \textit{clock} que é gerado pelas interrupções do micro-controlador fazendo \textit{shift} dos 24 bits, que depois no fim transmite para o amplificador o ganho de amplificação a ser usado pelo numero excedente de \textit{clock cycles}, que nesta demonstração é um [1], que corresponde a ganho de 128.
+Como indicado abaixo no gráfico em que a linha amarela é a informação e a linha azul o respetivo \textit{clock} que é gerado pelas interrupções do micro-controlador fazendo \textit{shift} dos \textcolor{blue}{24} bits, que depois no fim transmite para o amplificador o ganho de amplificação a ser usado pelo numero excedente de \textit{clock cycles}, que nesta demonstração é \textcolor{blue}{um}, e corresponde a ganho de \textcolor{blue}{128}, respeitando a \textit{tabela} \ref{Gain_Selection}.
 \end{minipage}
 %%\end{minipage}
 \begin{figure}[H]
@@ -91,25 +91,25 @@ Como indicado abaixo no gráfico em que a linha amarela é a informação e a li
 	\caption{Ganho de 128}
 	\label{Gain_128_example}
 \end{figure}
-a sequir o exemplo com o ganho de 64, pois tem 3 impulsos excedentes.
+a sequir o exemplo com o ganho de \textcolor{blue}{64}, pois tem \textcolor{blue}{três} impulsos excedentes.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.55]{./image/PESTA/graph/80SPS64GAIN/Gain_64_example.JPG}
 	\caption{Ganho de 64}
 	\label{Gain_64_example}
 \end{figure}
-
-$\begin{array}{l l l}
-	\text{Média} & & \\
-	\overline{x} & = & \frac{1}{n}\sum_{i=1}^n x_i
-\end{array}$
-
-
-
-
-
-
-
+Para obter este resultado uma livraria driver para o \textit{Load Cell Amplifier} foi criado tendo em consideração que o microcontrolador é de \textcolor{blue}{8} bits. O pacote de informação consiste de \textcolor{blue}{24} bits na qual é transmitido primeiro o bit \textbf{MSB}. \\
+\\
+O codigo que executa esta rotina é demonstrado.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.8]{./image/PESTA/Code/read_raw.jpg}
+	\caption{Leitura ADC}
+	\label{read_raw}
+\end{figure}
+após obter um numero determinado de valores discretos é calculado sua média $\left( \overline{x}  =  \frac{1}{n}\sum_{i=1}^n x_i \right)$ para ser tratado e deduzido o valor correspondente de sua massa. \\
+\\
+Uma analise rápida do código também é possível de se perceber o funcionamento da livraria do driver que será anexado a este relatório e disponível no \textit{link}: \url{https://github.com/sergio1020881/PESTA2021/tree/main/SandBox/ATMEGA128/Atmega128}
 \section{Validação}
 %%%To validate is to justify why the choices made and alternatives that could be chosen.
 As escolhas feitas estão dentro dos parâmetros na qual a oferta nos disponibiliza, sendo que pouco se pode beneficiar. Apenas o conhecimento adquirido e aprofundar o funcionamento é o ganho mais evidente, facilitando a interpretação de situações e deteção de anomalias (\textit{troubleshooting}).\\
@@ -143,5 +143,9 @@ Sensitivity,Long-Term Drift e Temperature Effects (Span temperature hysteresis).
 Sem contar com as despesas no equipamento para a programação do hardware que em principio só se gasta uma vez, isto é, se não se estragar. No caso do programador \textbf{Atmel-ICE} pode custar até \EUR{185.55}.\\
 \\
 É de ter em conta que os preços são \textbf{PVP}, que no caso se for preços comerciais são dez vezes inferior, e se for para produção em grande escala também tem descontos por quantidade.\\
+$\begin{array}{l l l}
+\text{Média} & & \\
+\overline{x} & = & \frac{1}{n}\sum_{i=1}^n x_i
+\end{array}$
 \end{comment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

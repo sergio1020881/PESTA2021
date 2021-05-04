@@ -173,7 +173,7 @@ int32_t HX711_read_raw(HX711* self)
 	aindex = self->bufferindex-ONE;
 	bindex = self->bitcount-ONE;
 	ptr=(int32_t*)self->buffer;
-	/***Interrupt 24 times sequence***/
+	/***Interrupt 24 times sequence plus gain pulses***/
 	if(self->readflag){
 		if(self->bitcount){
 			if (HX711_read_bit())
