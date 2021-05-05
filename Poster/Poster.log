@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  5 MAY 2021 13:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  5 MAY 2021 14:59
 entering extended mode
 **./Poster.tex
 (Poster.tex
@@ -538,9 +538,6 @@ File: pgflibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \TP@noteheight=\dimen324
 \TP@notebox=\box84
 \notelinewidth=\dimen325
-
-Package tikzposter Warning: Unknown Option a3paper. on input line 204.
-
 ("C:\Program Files\MiKTeX\tex/latex/extsizes\extarticle.cls"
 Document Class: extarticle 1996/10/08 v1.0 Non Standard LaTeX document class
 ("C:\Program Files\MiKTeX\tex/latex/base\size10.clo"
@@ -875,12 +872,7 @@ Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
 \@input{./include/CAPA/TIKZPOSTERTITLE.aux}
 \openout2 = `./include/CAPA/TIKZPOSTERTITLE.aux'.
 
-(include/CAPA/TIKZPOSTERTITLE.tex)
-
-LaTeX Warning: Unused global option(s):
-    [a3paper].
-
-(Poster.aux)
+(include/CAPA/TIKZPOSTERTITLE.tex) (Poster.aux)
 \openout1 = `Poster.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
@@ -897,7 +889,8 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
- ABD: EveryShipout initializing macros
+
+ABD: EveryShipout initializing macros
 ("C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count323
@@ -950,6 +943,12 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+<./image/Capa/ISEP_marca_cor_grande.png, id=28, 730.6497pt x 278.2395pt>
+File: ./image/Capa/ISEP_marca_cor_grande.png Graphic file (type png)
+<use ./image/Capa/ISEP_marca_cor_grande.png>
+Package pdftex.def Info: ./image/Capa/ISEP_marca_cor_grande.png  used on input 
+line 4.
+(pdftex.def)             Requested size: 284.52756pt x 108.35162pt.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
 ("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -971,6 +970,16 @@ babelbib extension \btxifchangecaseoff added to \extrasportuguese
 Missing character: There is no 1 in font nullfont!
 Missing character: There is no = in font nullfont!
 Missing character: There is no 1 in font nullfont!
+File: ./image/Capa/ISEP_marca_cor_grande.png Graphic file (type png)
+<use ./image/Capa/ISEP_marca_cor_grande.png>
+Package pdftex.def Info: ./image/Capa/ISEP_marca_cor_grande.png  used on input 
+line 7.
+(pdftex.def)             Requested size: 284.52756pt x 108.35162pt.
+File: ./image/Capa/ISEP_marca_cor_grande.png Graphic file (type png)
+<use ./image/Capa/ISEP_marca_cor_grande.png>
+Package pdftex.def Info: ./image/Capa/ISEP_marca_cor_grande.png  used on input 
+line 7.
+(pdftex.def)             Requested size: 284.52756pt x 108.35162pt.
  (input/slide/Introducao.tex
 LaTeX Font Info:    Trying to load font information for TS1+aer on input line 1
 0.
@@ -983,57 +992,58 @@ LaTeX Font Warning: Font shape `TS1/aer/m/n' undefined
 
 
 Package blindtext Warning: portuguese not defined, using English instead.
-(blindtext)                 on input line 17.
+(blindtext)                 on input line 16.
 
 LaTeX Font Info:    Trying to load font information for T1+aett on input line 2
-3.
+2.
 ("C:\Program Files\MiKTeX\tex/latex/ae\t1aett.fd"
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
-<image/PESTA/kit/Kit_Desenvolvimento_2.jpg, id=30, 3014.26125pt x 1704.3675pt>
-File: image/PESTA/kit/Kit_Desenvolvimento_2.jpg Graphic file (type jpg)
-<use image/PESTA/kit/Kit_Desenvolvimento_2.jpg>
-Package pdftex.def Info: image/PESTA/kit/Kit_Desenvolvimento_2.jpg  used on inp
-ut line 34.
+<./image/PESTA/kit/Kit_Desenvolvimento_2.jpg, id=32, 3014.26125pt x 1704.3675pt
+>
+File: ./image/PESTA/kit/Kit_Desenvolvimento_2.jpg Graphic file (type jpg)
+<use ./image/PESTA/kit/Kit_Desenvolvimento_2.jpg>
+Package pdftex.def Info: ./image/PESTA/kit/Kit_Desenvolvimento_2.jpg  used on i
+nput line 33.
 (pdftex.def)             Requested size: 1675.00642pt x 947.10547pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--58
+Underfull \hbox (badness 10000) in paragraph at lines 57--57
 
  []
 
 
-Overfull \hbox (4.4pt too wide) in paragraph at lines 58--58
+Overfull \hbox (4.4pt too wide) in paragraph at lines 57--57
 [][] 
  []
 
 
-Overfull \hbox (3.9pt too wide) in paragraph at lines 58--58
+Overfull \hbox (3.9pt too wide) in paragraph at lines 57--57
 [][] 
  []
 
-<./image/PESTA/ISEP_marca_cor_grande.png, id=31, 730.6497pt x 278.2395pt>
+<./image/PESTA/ISEP_marca_cor_grande.png, id=33, 730.6497pt x 278.2395pt>
 File: ./image/PESTA/ISEP_marca_cor_grande.png Graphic file (type png)
 <use ./image/PESTA/ISEP_marca_cor_grande.png>
 Package pdftex.def Info: ./image/PESTA/ISEP_marca_cor_grande.png  used on input
- line 65.
+ line 64.
 (pdftex.def)             Requested size: 2239.23212pt x 852.89604pt.
 ) [1
 
 
 
-{C:/Users/sergi/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./image/PESTA/k
-it/Kit_Desenvolvimento_2.jpg> <./image/PESTA/ISEP_marca_cor_grande.png>]
-(Poster.aux)
+{C:/Users/sergi/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./image/Capa/IS
+EP_marca_cor_grande.png> <./image/PESTA/kit/Kit_Desenvolvimento_2.jpg> <./image
+/PESTA/ISEP_marca_cor_grande.png>] (Poster.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
  20561 strings out of 480790
- 432510 string characters out of 2907055
- 1036799 words of memory out of 3000000
- 36066 multiletter control sequences out of 15000+200000
- 580588 words of font info for 127 fonts, out of 3000000 for 9000
+ 432715 string characters out of 2907055
+ 1037944 words of memory out of 3000000
+ 36071 multiletter control sequences out of 15000+200000
+ 578722 words of font info for 121 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,14n,89p,853b,1822s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
@@ -1044,9 +1054,9 @@ ts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/publ
 ic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/
 cm/cmti12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pf
 b>
-Output written on Poster.pdf (1 page, 1668761 bytes).
+Output written on Poster.pdf (1 page, 1732973 bytes).
 PDF statistics:
- 73 PDF objects out of 1000 (max. 8388607)
+ 75 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 125 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 130 words of extra memory for PDF output out of 10000 (max. 10000000)
 
