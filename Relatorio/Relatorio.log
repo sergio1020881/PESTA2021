@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  5 MAY 2021 13:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  5 MAY 2021 23:50
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
@@ -1501,7 +1501,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--1
 Here is how much of TeX's memory you used:
  35872 strings out of 480790
  847962 string characters out of 2907055
- 1370767 words of memory out of 3000000
+ 1370734 words of memory out of 3000000
  51214 multiletter control sequences out of 15000+200000
  561674 words of font info for 99 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1539,9 +1539,9 @@ X/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1
 nts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.
 pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Progr
 am Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Relatorio.pdf (27 pages, 6118976 bytes).
+Output written on Relatorio.pdf (27 pages, 6119501 bytes).
 PDF statistics:
- 750 PDF objects out of 1000 (max. 8388607)
+ 751 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  108 words of extra memory for PDF output out of 10000 (max. 10000000)
 
