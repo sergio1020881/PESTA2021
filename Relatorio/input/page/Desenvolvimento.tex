@@ -4,6 +4,8 @@ Para o desenvolvimento deste projeto, foi criado um kit de desenvolvimento, para
 \\
 Abaixo pode-se ver a montagem em esqueleto do equipamento utilizado.
 \newline
+\\
+\\
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.15]{./image/PESTA/kit/Kit_Desenvolvimento_2.jpg}
@@ -11,6 +13,13 @@ Abaixo pode-se ver a montagem em esqueleto do equipamento utilizado.
 	\label{Kit_Desenvolvimento_2}
 \end{figure}
 \newpage
+A montagem da messa de medição,
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.15]{./image/PESTA/material/Prato.jpg}
+	\caption{Prato}
+	\label{Prato}
+\end{figure}
 \subsection{Material}
 Abaixo esta indicado uma tabela dos materiais usados, assim como os preços. 
 \begin{table}[H]
@@ -40,6 +49,7 @@ Abaixo esta indicado uma tabela dos materiais usados, assim como os preços.
 	\caption{Lista de material}
 	\label{material}
 \end{table}
+\newpage
 \section{Funcionamento}
 A ligação destes componentes é intuitivo e fácil de se perceber, o que é complexo neste trabalho é a interligação destes equipamentos com o micro-controlador e criar o driver de comunicação para a placa do amplificador de sinal, já que o protocolo é proprietário.
 \begin{figure}[H]
@@ -83,23 +93,24 @@ A livraria (driver) recorre a interrupções quando o sinal de \textit{data} vai
 \begin{minipage}[l]{.6\linewidth}
 \vspace{.3cm}
 Como indicado abaixo no gráfico em que a linha amarela é a informação e a linha azul o respetivo \textit{clock} que é gerado pelas interrupções do micro-controlador fazendo \textit{shift} dos \textcolor{blue}{24} bits, que depois no fim transmite para o amplificador o ganho de amplificação a ser usado pelo numero excedente de \textit{clock cycles}, que nesta demonstração é \textcolor{blue}{um}, e corresponde a ganho de \textcolor{blue}{128}, respeitando a \textit{tabela} \ref{Gain_Selection}.
-\end{minipage}
+\end{minipage}\\
+\\
 %%\end{minipage}
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.55]{./image/PESTA/graph/80SPS128GAIN/Gain_128_example.JPG}
+	\includegraphics[scale=0.35]{./image/PESTA/graph/80SPS128GAIN/Gain_128_example.JPG}
 	\caption{Ganho de 128}
 	\label{Gain_128_example}
 \end{figure}
 a sequir o exemplo com o ganho de \textcolor{blue}{64}, pois tem \textcolor{blue}{três} impulsos excedentes.
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.55]{./image/PESTA/graph/80SPS64GAIN/Gain_64_example.JPG}
+	\includegraphics[scale=0.35]{./image/PESTA/graph/80SPS64GAIN/Gain_64_example.JPG}
 	\caption{Ganho de 64}
 	\label{Gain_64_example}
 \end{figure}
-Para obter este resultado uma livraria driver para o \textit{Load Cell Amplifier} foi criado tendo em consideração que o microcontrolador é de \textcolor{blue}{8} bits. O pacote de informação consiste de \textcolor{blue}{24} bits na qual é transmitido primeiro o bit \textbf{MSB}. \\
-\\
+Para obter este resultado uma livraria driver para o \textit{Load Cell Amplifier} foi criado tendo em consideração que o microcontrolador é de \textcolor{blue}{8} bits. O pacote de informação consiste de \textcolor{blue}{24} bits na qual é transmitido primeiro o bit \textbf{MSB}.
+\newpage
 O codigo que executa esta rotina é demonstrado.
 \begin{figure}[H]
 	\centering
@@ -110,6 +121,7 @@ O codigo que executa esta rotina é demonstrado.
 após obter um numero determinado de valores discretos é calculado sua média $\left( \overline{x}  =  \frac{1}{n}\sum_{i=1}^n x_i \right)$ para ser tratado e deduzido o valor correspondente de sua massa. \\
 \\
 Uma analise rápida do código também é possível de se perceber o funcionamento da livraria do driver que será anexado a este relatório e disponível no \textit{link}: \url{https://github.com/sergio1020881/PESTA2021/tree/main/SandBox/ATMEGA128/Atmega128}
+\newpage
 \section{Validação}
 %%%To validate is to justify why the choices made and alternatives that could be chosen.
 As escolhas feitas estão dentro dos parâmetros na qual a oferta nos disponibiliza, sendo que pouco se pode beneficiar. Apenas o conhecimento adquirido e aprofundar o funcionamento é o ganho mais evidente, facilitando a interpretação de situações e deteção de anomalias (\textit{troubleshooting}).\\
