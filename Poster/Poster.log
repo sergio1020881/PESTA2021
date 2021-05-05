@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  4 MAY 2021 18:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  5 MAY 2021 13:53
 entering extended mode
 **./Poster.tex
 (Poster.tex
@@ -652,30 +652,53 @@ File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
 Language: portuges 2020/05/04 v1.2r Portuguese support from the babel system
 Package babel Info: Making " an active character on input line 143.
 ))
+("C:\Program Files\MiKTeX\tex/latex/lipsum\lipsum.sty"
+("C:\Program Files\MiKTeX\tex/latex/l3kernel\expl3.sty"
+Package: expl3 2020-06-18 L3 programming layer (loader) 
+
+("C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdfmode.def"
+File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count276
+\l__pdf_internal_box=\box89
+))
+("C:\Program Files\MiKTeX\tex/latex/l3packages/xparse\xparse.sty"
+Package: xparse 2020-05-15 L3 Experimental document command parser
+
+("C:\Program Files\MiKTeX\tex/latex/l3packages/xparse\xparse-generic.tex"
+\l__xparse_current_arg_int=\count277
+\g__xparse_grabber_int=\count278
+\l__xparse_m_args_int=\count279
+\l__xparse_v_nesting_int=\count280
+))
+Package: lipsum 2019/01/02 v2.2 150 paragraphs of Lorem Ipsum dummy text
+
+("C:\Program Files\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex"
+File: lipsum.ltd.tex 2019/01/02 v2.2 The Lorem ipsum dummy text
+))
 ("C:\Program Files\MiKTeX\tex/latex/blindtext\blindtext.sty"
 Package: blindtext 2012/01/06 V2.0 blindtext-Package
 
 ("C:\Program Files\MiKTeX\tex/latex/tools\xspace.sty"
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
-\c@blindtext=\count276
-\c@Blindtext=\count277
-\c@blind@countparstart=\count278
-\blind@countxx=\count279
-\blindtext@numBlindtext=\count280
-\blind@countyy=\count281
-\c@blindlist=\count282
-\c@blindlistlevel=\count283
-\c@blindlist@level=\count284
-\blind@listitem=\count285
-\c@blind@listcount=\count286
-\c@blind@levelcount=\count287
-\blind@mathformula=\count288
-\blind@Mathformula=\count289
-\c@blind@randomcount=\count290
-\c@blind@randommax=\count291
-\c@blind@pangramcount=\count292
-\c@blind@pangrammax=\count293
+\c@blindtext=\count281
+\c@Blindtext=\count282
+\c@blind@countparstart=\count283
+\blind@countxx=\count284
+\blindtext@numBlindtext=\count285
+\blind@countyy=\count286
+\c@blindlist=\count287
+\c@blindlistlevel=\count288
+\c@blindlist@level=\count289
+\blind@listitem=\count290
+\c@blind@listcount=\count291
+\c@blind@levelcount=\count292
+\blind@mathformula=\count293
+\blind@Mathformula=\count294
+\c@blind@randomcount=\count295
+\c@blind@randommax=\count296
+\c@blind@pangramcount=\count297
+\c@blind@pangrammax=\count298
 )
 ("C:\Program Files\MiKTeX\tex/latex/comment\comment.sty"
 \CommentStream=\write4
@@ -683,15 +706,15 @@ Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 Excluding comment 'comment')
 ("C:\Program Files\MiKTeX\tex/latex/babelbib\babelbib.sty"
 Package: babelbib 2019/03/11 v1.32 babelbib: multilingual bibliographies (HH)
-\c@btxromaniannumeral=\count294
+\c@btxromaniannumeral=\count299
 )
 ("C:\Program Files\MiKTeX\tex/latex/float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count295
+\c@float@type=\count300
 \float@exts=\toks32
-\float@box=\box89
+\float@box=\box90
 \@float@everytoks=\toks33
-\@floatcapt=\box90
+\@floatcapt=\box91
 )
 ("C:\Program Files\MiKTeX\tex/latex/amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
@@ -722,30 +745,30 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 ("C:\Program Files\MiKTeX\tex/latex/amsmath\amsopn.sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count296
+\inf@bad=\count301
 LaTeX Info: Redefining \frac on input line 227.
-\uproot@=\count297
-\leftroot@=\count298
+\uproot@=\count302
+\leftroot@=\count303
 LaTeX Info: Redefining \overline on input line 389.
-\classnum@=\count299
-\DOTSCASE@=\count300
+\classnum@=\count304
+\DOTSCASE@=\count305
 LaTeX Info: Redefining \ldots on input line 486.
 LaTeX Info: Redefining \dots on input line 489.
 LaTeX Info: Redefining \cdots on input line 610.
-\Mathstrutbox@=\box91
-\strutbox@=\box92
+\Mathstrutbox@=\box92
+\strutbox@=\box93
 \big@size=\dimen340
 LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
-\macc@depth=\count301
-\c@MaxMatrixCols=\count302
+\macc@depth=\count306
+\c@MaxMatrixCols=\count307
 \dotsspace@=\muskip16
-\c@parentequation=\count303
-\dspbrk@lvl=\count304
+\c@parentequation=\count308
+\dspbrk@lvl=\count309
 \tag@help=\toks36
-\row@=\count305
-\column@=\count306
-\maxfields@=\count307
+\row@=\count310
+\column@=\count311
+\maxfields@=\count312
 \andhelp@=\toks37
 \eqnshift@=\dimen341
 \alignsep@=\dimen342
@@ -769,25 +792,90 @@ Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
 ("C:\Program Files\MiKTeX\tex/latex/tools\array.sty"
 Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
 \col@sep=\dimen347
-\ar@mcellbox=\box93
+\ar@mcellbox=\box94
 \extrarowheight=\dimen348
 \NC@list=\toks40
 \extratabsurround=\skip55
 \backup@length=\skip56
-\ar@cellbox=\box94
+\ar@cellbox=\box95
 )
 \everycr=\toks41
 \minrowclearance=\skip57
+)
+("C:\Program Files\MiKTeX\tex/latex/tools\multicol.sty"
+Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
+\c@tracingmulticols=\count313
+\mult@box=\box96
+\multicol@leftmargin=\dimen349
+\c@unbalance=\count314
+\c@collectmore=\count315
+\doublecol@number=\count316
+\multicoltolerance=\count317
+\multicolpretolerance=\count318
+\full@width=\dimen350
+\page@free=\dimen351
+\premulticols=\dimen352
+\postmulticols=\dimen353
+\multicolsep=\skip58
+\multicolbaselineskip=\skip59
+\partial@page=\box97
+\last@line=\box98
+\maxbalancingoverflow=\dimen354
+\mult@rightbox=\box99
+\mult@grightbox=\box100
+\mult@gfirstbox=\box101
+\mult@firstbox=\box102
+\@tempa=\box103
+\@tempa=\box104
+\@tempa=\box105
+\@tempa=\box106
+\@tempa=\box107
+\@tempa=\box108
+\@tempa=\box109
+\@tempa=\box110
+\@tempa=\box111
+\@tempa=\box112
+\@tempa=\box113
+\@tempa=\box114
+\@tempa=\box115
+\@tempa=\box116
+\@tempa=\box117
+\@tempa=\box118
+\@tempa=\box119
+\@tempa=\box120
+\@tempa=\box121
+\@tempa=\box122
+\@tempa=\box123
+\@tempa=\box124
+\@tempa=\box125
+\@tempa=\box126
+\@tempa=\box127
+\@tempa=\box128
+\@tempa=\box129
+\@tempa=\box130
+\@tempa=\box131
+\@tempa=\box132
+\@tempa=\box133
+\@tempa=\box134
+\@tempa=\box135
+\@tempa=\box136
+\@tempa=\box137
+\@tempa=\box138
+\@tempa=\box139
+\c@minrows=\count319
+\c@columnbadness=\count320
+\c@finalcolumnbadness=\count321
+\last@try=\dimen355
+\multicolovershoot=\dimen356
+\multicolundershoot=\dimen357
+\mult@nat@firstbox=\box140
+\colbreak@box=\box141
+\mc@col@check@num=\count322
 ))
 \@input{./include/CAPA/TIKZPOSTERTITLE.aux}
 \openout2 = `./include/CAPA/TIKZPOSTERTITLE.aux'.
 
 (include/CAPA/TIKZPOSTERTITLE.tex)
-("C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdfmode.def"
-File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count308
-\l__pdf_internal_box=\box95
-)
 
 LaTeX Warning: Unused global option(s):
     [a3paper].
@@ -812,16 +900,16 @@ LaTeX Font Info:    ... okay on input line 4.
  ABD: EveryShipout initializing macros
 ("C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count309
-\scratchdimen=\dimen349
-\scratchbox=\box96
-\nofMPsegments=\count310
-\nofMParguments=\count311
+\scratchcounter=\count323
+\scratchdimen=\dimen358
+\scratchbox=\box142
+\nofMPsegments=\count324
+\nofMParguments=\count325
 \everyMPshowfont=\toks42
-\MPscratchCnt=\count312
-\MPscratchDim=\dimen350
-\MPnumerator=\count313
-\makeMPintoPDFobject=\count314
+\MPscratchCnt=\count326
+\MPscratchDim=\dimen359
+\MPnumerator=\count327
+\makeMPintoPDFobject=\count328
 \everyMPtoPDFconversion=\toks43
 ) ("C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -902,39 +990,63 @@ LaTeX Font Info:    Trying to load font information for T1+aett on input line 2
 ("C:\Program Files\MiKTeX\tex/latex/ae\t1aett.fd"
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
-<image/PESTA/kit/Kit_Desenvolvimento_2.jpg, id=33, 3014.26125pt x 1704.3675pt>
+<image/PESTA/kit/Kit_Desenvolvimento_2.jpg, id=30, 3014.26125pt x 1704.3675pt>
 File: image/PESTA/kit/Kit_Desenvolvimento_2.jpg Graphic file (type jpg)
 <use image/PESTA/kit/Kit_Desenvolvimento_2.jpg>
 Package pdftex.def Info: image/PESTA/kit/Kit_Desenvolvimento_2.jpg  used on inp
 ut line 34.
 (pdftex.def)             Requested size: 1675.00642pt x 947.10547pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--58
+
+ []
+
+
+Overfull \hbox (4.4pt too wide) in paragraph at lines 58--58
+[][] 
+ []
+
+
+Overfull \hbox (3.9pt too wide) in paragraph at lines 58--58
+[][] 
+ []
+
+<./image/PESTA/ISEP_marca_cor_grande.png, id=31, 730.6497pt x 278.2395pt>
+File: ./image/PESTA/ISEP_marca_cor_grande.png Graphic file (type png)
+<use ./image/PESTA/ISEP_marca_cor_grande.png>
+Package pdftex.def Info: ./image/PESTA/ISEP_marca_cor_grande.png  used on input
+ line 65.
+(pdftex.def)             Requested size: 2239.23212pt x 852.89604pt.
 ) [1
 
 
 
 {C:/Users/sergi/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./image/PESTA/k
-it/Kit_Desenvolvimento_2.jpg>] (Poster.aux)
+it/Kit_Desenvolvimento_2.jpg> <./image/PESTA/ISEP_marca_cor_grande.png>]
+(Poster.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 19692 strings out of 480790
- 409036 string characters out of 2907055
- 741385 words of memory out of 3000000
- 35221 multiletter control sequences out of 15000+200000
- 577166 words of font info for 119 fonts, out of 3000000 for 9000
+ 20561 strings out of 480790
+ 432510 string characters out of 2907055
+ 1036799 words of memory out of 3000000
+ 36066 multiletter control sequences out of 15000+200000
+ 580588 words of font info for 127 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,8n,89p,853b,1319s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 71i,14n,89p,853b,1822s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 2986.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmb10.pfb><C:/P
 rogram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program File
-s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/font
-s/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmtt12.pfb>
-Output written on Poster.pdf (1 page, 1579910 bytes).
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fon
+ts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/
+cm/cmti12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pf
+b>
+Output written on Poster.pdf (1 page, 1668761 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
+ 73 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 126 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 125 words of extra memory for PDF output out of 10000 (max. 10000000)
 
