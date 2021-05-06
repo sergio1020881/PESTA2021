@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Apresentacao.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+The style file: babplain.bst
+Reallocating 'name_of_file' (item size: 1) to 32 items.
+A level-1 auxiliary file: ./include/CAPA/CAPABEAMER_2.aux
+I found no \bibdata command---while reading file Apresentacao.aux
+Warning--I didn't find a database entry for "book-9"
+Reallocating 'singl_function' (item size: 4) to 100 items.
+You've used 0 entries,
+            2788 wiz_defined-function locations,
+            633 strings with 5938 characters,
+and the built_in function-call counts, 44 in all, are:
+= -- 0
+> -- 0
+< -- 0
++ -- 0
+- -- 0
+* -- 2
+:= -- 9
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 1
+int.to.chr$ -- 0
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 15
+num.names$ -- 0
+pop$ -- 0
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 1
+stack$ -- 0
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 0
+width$ -- 0
+write$ -- 14
+(There was 1 error message)

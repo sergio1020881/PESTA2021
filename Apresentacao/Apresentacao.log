@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  1 MAY 2021 17:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  6 MAY 2021 11:19
 entering extended mode
 **./Apresentacao.tex
 (Apresentacao.tex
@@ -1135,7 +1135,7 @@ babelbib extension \btxifchangecaseoff added to \extrasportuguese
 \openout2 = `./include/CAPA/CAPABEAMER_2.aux'.
 
  (include/CAPA/CAPABEAMER_2.tex
-<./image/PESTA/kit/Kit_Desenvolvimento_2.jpg, id=43, 3014.26125pt x 1704.3675pt
+<./image/PESTA/kit/Kit_Desenvolvimento_2.jpg, id=40, 3014.26125pt x 1704.3675pt
 >
 File: ./image/PESTA/kit/Kit_Desenvolvimento_2.jpg Graphic file (type jpg)
 <use ./image/PESTA/kit/Kit_Desenvolvimento_2.jpg>
@@ -1168,24 +1168,68 @@ thkerncmss.
 presentacao.toc) [2
 
 
-] [3
+]
+<./image/PESTA/material/Load_Cell_1.jpg, id=129, 2337.73375pt x 1152.305pt>
+File: ./image/PESTA/material/Load_Cell_1.jpg Graphic file (type jpg)
+<use ./image/PESTA/material/Load_Cell_1.jpg>
+Package pdftex.def Info: ./image/PESTA/material/Load_Cell_1.jpg  used on input 
+line 17.
+(pdftex.def)             Requested size: 187.02252pt x 92.18628pt.
+<./image/PESTA/general/strain_gauge_1.jpg, id=130, 630.10406pt x 381.67593pt>
+File: ./image/PESTA/general/strain_gauge_1.jpg Graphic file (type jpg)
+<use ./image/PESTA/general/strain_gauge_1.jpg>
+Package pdftex.def Info: ./image/PESTA/general/strain_gauge_1.jpg  used on inpu
+t line 17.
+(pdftex.def)             Requested size: 63.01408pt x 38.16982pt.
+<./image/PESTA/schematic/Wheatstone_Bridge_1.jpg, id=131, 419.31656pt x 243.158
+43pt>
+File: ./image/PESTA/schematic/Wheatstone_Bridge_1.jpg Graphic file (type jpg)
+<use ./image/PESTA/schematic/Wheatstone_Bridge_1.jpg>
+Package pdftex.def Info: ./image/PESTA/schematic/Wheatstone_Bridge_1.jpg  used 
+on input line 17.
+(pdftex.def)             Requested size: 125.79593pt x 72.94809pt.
+ [3
 
-] [4
+ <./image/PESTA/material/Load_Cell_1.jpg> <./image/PESTA/general/strain_gauge_1
+.jpg> <./image/PESTA/schematic/Wheatstone_Bridge_1.jpg>]
+<./image/PESTA/schematic/HX711_Schematic_1.jpg, id=167, 628.59843pt x 310.91156
+pt>
+File: ./image/PESTA/schematic/HX711_Schematic_1.jpg Graphic file (type jpg)
+<use ./image/PESTA/schematic/HX711_Schematic_1.jpg>
+Package pdftex.def Info: ./image/PESTA/schematic/HX711_Schematic_1.jpg  used on
+ input line 34.
+(pdftex.def)             Requested size: 157.14922pt x 77.72769pt.
+<./image/PESTA/material/HX711_board_1.jpg, id=168, 2004.48875pt x 1071.00125pt>
 
-] [5
+File: ./image/PESTA/material/HX711_board_1.jpg Graphic file (type jpg)
+<use ./image/PESTA/material/HX711_board_1.jpg>
+Package pdftex.def Info: ./image/PESTA/material/HX711_board_1.jpg  used on inpu
+t line 34.
+(pdftex.def)             Requested size: 100.2303pt x 53.55319pt.
+ [4
 
-]) (input/slide/Desenvolvimento.tex (Apresentacao.toc) [6
+ <./image/PESTA/schematic/HX711_Schematic_1.jpg> <./image/PESTA/material/HX711_
+board_1.jpg>]) (input/slide/Desenvolvimento.tex (Apresentacao.toc) [5
 
 ]
-[7
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
+3.
+
+("C:\Program Files\MiKTeX\tex/latex/base\t1cmtt.fd"
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+<./image/PESTA/kit/DevBoard_2.jpg, id=243, 228.10219pt x 171.64125pt>
+File: ./image/PESTA/kit/DevBoard_2.jpg Graphic file (type jpg)
+<use ./image/PESTA/kit/DevBoard_2.jpg>
+Package pdftex.def Info: ./image/PESTA/kit/DevBoard_2.jpg  used on input line 1
+3.
+(pdftex.def)             Requested size: 79.83694pt x 60.07532pt.
+ [6
+
+ <./image/PESTA/kit/DevBoard_2.jpg>]) (input/slide/Conclusao.tex (Apresentacao.
+toc) [7
 
 ] [8
-
-] [9
-
-]) (input/slide/Conclusao.tex (Apresentacao.toc) [10
-
-] [11
 
 ])
 \tf@nav=\write7
@@ -1204,25 +1248,27 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 29.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 29.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 29.
 Package rerunfilecheck Info: File `Apresentacao.out' has not changed.
-(rerunfilecheck)             Checksum: F7E23CFA9A1E09D9147CF22C1EAE1E0C;149.
+(rerunfilecheck)             Checksum: 0B3D8BB8FD3AC715C359053A6D89890F;142.
  ) 
 Here is how much of TeX's memory you used:
- 24226 strings out of 480790
- 468294 string characters out of 2907055
- 748203 words of memory out of 3000000
- 39568 multiletter control sequences out of 15000+200000
- 543876 words of font info for 53 fonts, out of 3000000 for 9000
+ 24318 strings out of 480790
+ 471519 string characters out of 2907055
+ 747203 words of memory out of 3000000
+ 39653 multiletter control sequences out of 15000+200000
+ 544245 words of font info for 54 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,20n,70p,849b,921s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx
-1440.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
-0\ecss1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
-/dpi600\ecss0800.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
-pen/ec/dpi600\ecss1440.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour
-/jknappen/ec/dpi600\ecss0600.pk>
-Output written on Apresentacao.pdf (11 pages, 1622591 bytes).
+1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
+0\ectt1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
+/dpi600\ecsi1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
+pen/ec/dpi600\ecss1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour
+/jknappen/ec/dpi600\ecss0800.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/
+ljfour/jknappen/ec/dpi600\ecss1440.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fon
+ts/pk/ljfour/jknappen/ec/dpi600\ecss0600.pk>
+Output written on Apresentacao.pdf (8 pages, 3314084 bytes).
 PDF statistics:
- 572 PDF objects out of 1000 (max. 8388607)
- 26 named destinations out of 1000 (max. 500000)
- 102 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 575 PDF objects out of 1000 (max. 8388607)
+ 20 named destinations out of 1000 (max. 500000)
+ 138 words of extra memory for PDF output out of 10000 (max. 10000000)
 
