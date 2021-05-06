@@ -8,7 +8,8 @@
 \contentsline {section}{\numberline {2.1}Hardware}{6}%
 \contentsline {subsection}{\numberline {2.1.1}Material}{7}%
 \contentsline {section}{\numberline {2.2}Funcionamento}{8}%
-\contentsline {section}{\numberline {2.3}Validação}{11}%
-\contentsline {chapter}{\numberline {3}Conclusão}{12}%
-\contentsline {chapter}{\numberline {A}Definições}{13}%
-\contentsline {chapter}{\numberline {B}Física}{14}%
+\contentsline {section}{\numberline {2.3}Software}{11}%
+\contentsline {section}{\numberline {2.4}Validação}{12}%
+\contentsline {chapter}{\numberline {3}Conclusão}{13}%
+\contentsline {chapter}{\numberline {A}Definições}{14}%
+\contentsline {chapter}{\numberline {B}Física}{15}%

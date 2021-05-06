@@ -1,9 +1,9 @@
 \chapter{Introdução}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-As balanças foram criadas por necessidade durante o desenvolvimento de comercio na antiguidade, os produtos que não recorriam a contagem por unidades, tais como objetos irregulares por exemplo o ouro tinham de se quantificar seu valor, e a forma de medir sua massa tornou-se numa variável de medição para troca de bens.\\
+As balanças foram criadas por necessidade durante o desenvolvimento do comercio na antiguidade, os produtos que não recorriam a contagem por unidades, tais como objetos irregulares por exemplo o ouro tinha de se quantificar seu valor, e a forma de medir sua massa tornou-se numa variável de medição para a troca de bens.\\
 \\
-A relíquia mais antiga de uma balança de medir massa foi descoberto na vila de \textit{Indus River}, perto do conhecido por hoje de Pakistão, e estima-se ser por volta de 2000 B.C.\\
-Estas primeiras balanças eram alavancas em equilíbrio $[ \; F_{1} \times b_{1c} = F_{2} \times b_{2c} \; ]$, onde nos extremos eram colocados cestos e se colocava os pesos, este estava centrado no seu centro de massa, assim se os pesos nos dois cestos serem iguais fica em equilíbrio (horizontal), era um sistema de comparar com pesos fixos estabelecidos como norma (\textit{contra-pesos}).
+A relíquia mais antiga de uma balança de medir massa foi descoberto na vila de \textit{Indus River}, perto do conhecido por hoje de Pakistão, e estima-se ser por volta de \textcolor{blue}{2000} B.C.\\
+Estas primeiras balanças eram alavancas em equilíbrio $[ \; F_{1} \times b_{1c} = F_{2} \times b_{2c} \; ]$, onde nos extremos eram colocados cestos e se colocava os pesos, este estava centrado no seu centro de massa, assim se os pesos nos dois cestos serem iguais fica em equilíbrio (na horizontal), era um sistema de comparar com pesos fixos estabelecidos como norma (\textbf{contra-pesos}).
 \\
 \begin{minipage}[!b]{0.45\linewidth}
 	\begin{figure}[H]
@@ -26,10 +26,10 @@ Estas primeiras balanças eram alavancas em equilíbrio $[ \; F_{1} \times b_{1c
 \newline
 \newline
 \newline
-Este sistema pode ter uma boa precisão, mas também pode facilmente ser adulterado.
+Este sistema pode ter uma boa precisão, mas também pode se facilmente ser adulterado.
 \\
 \\
-Os métodos de medir a massa de objetos não conheceu nenhumas melhorias tecnológicas relevantes até a era industrial. Só nos fins do século \textit{XVIII} é que o meio de medir a massa de objetos não dependia de \textbf{contra-pesos}. As balanças por molas foi inventado por \textbf{\textit{Richard Salter}}, um fabricante de balanças por volta dos anos de 1770 na Inglaterra.\\
+Os métodos de medir a massa de objetos não conheceu nenhumas melhorias tecnológicas relevantes até a era industrial. Só nos fins do século \textcolor{blue}{\textit{XVIII}} é que o meio de medir a massa de objetos não dependia de \textbf{contra-pesos}. As balanças por molas foi inventado por \textbf{\textit{Richard Salter}}, um fabricante de balanças por volta dos anos de \textcolor{blue}{1770} na Inglaterra.\\
 \begin{figure}[H]
 	\centering
 	\includegraphics[height=7cm]{./image/PESTA/general/Weigh_Scale_Salter_1.jpg}
@@ -37,7 +37,7 @@ Os métodos de medir a massa de objetos não conheceu nenhumas melhorias tecnol�
 	\url{https://en.wikipedia.org/wiki/Salter_Housewares}
 	\label{Weigh_Scale_Salter_1}
 \end{figure}
-A balança por mola, como o nome implica, mede a pressão (ou sua tensão) exercido sobre a mola para determinar a massa do objeto. Este tipo de balanças ainda são muito comum nos dias de hoje por serem bastante económicas de fabricar, mas não tem tanta precisão como as eletrónicas desenvolvidas e aperfeiçoadas durante o século \textit{XX}.
+A balança por mola, como o nome implica, mede a pressão (ou sua tensão) exercido sobre a mola para determinar a massa do objeto. Este tipo de balanças ainda são muito comum nos dias de hoje por serem bastante económicas de fabricar, mas não tem tanta precisão como as eletrónicas desenvolvidas e aperfeiçoadas durante o século \textcolor{blue}{\textit{XX}}.
 \newline
 \newline
 \begin{minipage}[!b]{\linewidth}
@@ -57,9 +57,9 @@ As balanças eletrónicas mais modernas utilizam resistências elétricas em mat
 	\centering
 	\includegraphics[height=7cm]{./image/PESTA/general/Scale_1.jpg}
 	\caption{Balança eletrónica}
-	\label{Sale}
+	\label{Scale_1}
 \end{figure}
-O que vai ser utilizado no projeto vai ser um célula de peso que seque o principio acima mencionado, estes sensores tem quatro \textit{\textbf{strain gauges}} ligadas em ponte \textit{wheatstone} que vão detetar a distorção (pressão) do material, ou seja, a célula de peso e gerar um sinal em tensão proporcional a força exercida. Seque o mesmo principio de uma mola $ [ \; K = \frac{\Delta l}{F} \; ] $.
+O que vai ser utilizado no projeto vai ser um \textbf{célula de peso} que seque o principio acima mencionado, estas células tem quatro sensores \textit{\textbf{strain gauges}} ligadas em ponte \textit{wheatstone} que vão detetar a distorção (pressão) do material, ou seja, a célula de peso e gerar um sinal em tensão proporcional a força exercida quando alimentada. Seque o mesmo principio de uma mola $ [ \; K = \frac{\Delta l}{F} \; ] $.
 \\
 \\
 Também há outros tipos de células de peso tais como as pneumáticas e hidráulicas que convertem a pressão num sinal elétrico que é proporcional a força nela exercida $ [ \; P = \frac{F}{A} \; ] $. As células de peso capacitivas são outro exemplo de como obter um sinal proporcional a força imposta como carga, neste caso é medido sua capacidade pelo afastamento ou aproximação dos pratos dos elétrodos $ [ \; C = \varepsilon_{0} \; \varepsilon_{r} \; \frac{A}{d} \; ] $.
@@ -67,7 +67,7 @@ Também há outros tipos de células de peso tais como as pneumáticas e hidráu
 \\
 Pode-se dizer que em todos os casos determina-se a força resultante através do deslocamento no espaço.
 \section{Sensor}
-Para medir a massa recorreu-se a uma \textbf{célula de peso} que determina a pressão exercida num dado material, neste caso é um bloco de alumínio como indicado na \textit{figura} \ref{Load_Cell_1}, para isso ser possível este utiliza sensores Piezoresistivos numa montagem em ponte \textit{wheatstone} sobre essa superfície em locais determinados.
+Para medir a massa recorreu-se a uma \textbf{célula de peso} que determina a pressão exercida por um dado objeto, neste caso é um bloco de alumínio como indicado na \textit{figura} \ref{Load_Cell_1}, para isso ser possível este utiliza sensores Piezoresistivos numa montagem em ponte \textit{wheatstone} sobre essa superfície em locais determinados.
 \begin{figure}[H]
 	\captionsetup{justification=raggedright,singlelinecheck=false}
 	\flushleft
@@ -75,7 +75,7 @@ Para medir a massa recorreu-se a uma \textbf{célula de peso} que determina a pr
 	\caption{Célula de Peso 50Kg}
 	\label{Load_Cell_1}
 \end{figure}
-Piezoresistividade deriva seu nome da palavra grega \textit{piezin}, que significa "pressionar". É um efeito exibido por vários materiais que exibem uma mudança na resistividade devido a uma pressão aplicada. O efeito foi descoberto pela primeira vez por Lord Kelvin em 1856, que notou que a resistência dos fios de cobre e ferro aumentava quando em tensão. Ele também observou que os fios de ferro apresentavam uma alteração maior na resistência do que os de cobre. A primeira aplicação do efeito piezoresistivo não apareceu até a década de 1930, cerca de 75 anos após a descoberta de Lord Kelvin. Em vez de usar fios de metal, esses assim chamados medidores de tensão são geralmente feitos de uma folha de metal fina montada em uma película de suporte, que pode ser colada em uma superfície. O sensor de fita de metal típico é representado na \textit{figura} \ref{strain_gauge_1} \cite{book-9}
+Piezoresistividade deriva seu nome da palavra grega \textit{piezin}, que significa "pressionar". É um efeito exibido por vários materiais que exibem uma mudança na resistividade devido a uma pressão aplicada. O efeito foi descoberto pela primeira vez por Lord Kelvin em \textcolor{blue}{1856}, que notou que a resistência dos fios de cobre e ferro aumentava quando em tensão. Ele também observou que os fios de ferro apresentavam uma alteração maior na resistência do que os de cobre. A primeira aplicação do efeito piezoresistivo não apareceu até a década de \textcolor{blue}{1930}, cerca de \textcolor{blue}{75} anos após a descoberta de Lord Kelvin. Em vez de usar fios de metal, esses assim chamados medidores de tensão são geralmente feitos de uma folha de metal fina montada em uma película de suporte, que pode ser colada em uma superfície. O sensor de fita de metal típico é representado na \textit{figura} \ref{strain_gauge_1} \cite{book-9}
 \begin{figure}[H]
 	\centering
 	\includegraphics[height=5cm]{./image/PESTA/general/strain_gauge_1.jpg}
