@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  6 MAY 2021 12:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  6 MAY 2021 21:05
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
@@ -1248,16 +1248,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--14
 <./image/PESTA/material/Prato.jpg, id=91, 2836.5975pt x 903.375pt>
 File: ./image/PESTA/material/Prato.jpg Graphic file (type jpg)
 <use ./image/PESTA/material/Prato.jpg>
-Package pdftex.def Info: ./image/PESTA/material/Prato.jpg  used on input line 1
-9.
+Package pdftex.def Info: ./image/PESTA/material/Prato.jpg  used on input line 2
+0.
 (pdftex.def)             Requested size: 425.47127pt x 135.5004pt.
 
-Overfull \hbox (27.2254pt too wide) in paragraph at lines 27--49
+Overfull \hbox (27.2254pt too wide) in paragraph at lines 28--50
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--49
+Underfull \hbox (badness 10000) in paragraph at lines 28--50
 
  []
 
@@ -1267,19 +1267,19 @@ t>
 File: ./image/PESTA/schematic/HX711_Schematic_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/schematic/HX711_Schematic_1.jpg>
 Package pdftex.def Info: ./image/PESTA/schematic/HX711_Schematic_1.jpg  used on
- input line 58.
+ input line 59.
 (pdftex.def)             Requested size: 220.01274pt x 108.82066pt.
 <./image/PESTA/material/HX711_board_1.jpg, id=97, 2004.48875pt x 1071.00125pt>
 File: ./image/PESTA/material/HX711_board_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/material/HX711_board_1.jpg>
 Package pdftex.def Info: ./image/PESTA/material/HX711_board_1.jpg  used on inpu
-t line 59.
+t line 60.
 (pdftex.def)             Requested size: 200.46062pt x 107.1064pt.
 <./image/PESTA/graph/80SPS64GAIN/SPS_80.JPG, id=98, 731.73375pt x 534.99875pt>
 File: ./image/PESTA/graph/80SPS64GAIN/SPS_80.JPG Graphic file (type jpg)
 <use ./image/PESTA/graph/80SPS64GAIN/SPS_80.JPG>
 Package pdftex.def Info: ./image/PESTA/graph/80SPS64GAIN/SPS_80.JPG  used on in
-put line 66.
+put line 67.
 (pdftex.def)             Requested size: 402.4548pt x 294.25021pt.
 <./image/PESTA/graph/80SPS128GAIN/Gain_128_example.JPG, id=99, 731.73375pt x 53
 4.99875pt>
@@ -1287,25 +1287,25 @@ File: ./image/PESTA/graph/80SPS128GAIN/Gain_128_example.JPG Graphic file (type
 jpg)
 <use ./image/PESTA/graph/80SPS128GAIN/Gain_128_example.JPG>
 Package pdftex.def Info: ./image/PESTA/graph/80SPS128GAIN/Gain_128_example.JPG 
- used on input line 101.
+ used on input line 102.
 (pdftex.def)             Requested size: 256.11064pt x 187.25237pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--104
+Underfull \hbox (badness 10000) in paragraph at lines 71--105
 
  []
 
 
-Overfull \hbox (2.61047pt too wide) in paragraph at lines 70--104
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 71--105
 []$ $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--104
+Underfull \hbox (badness 10000) in paragraph at lines 71--105
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--104
+Underfull \hbox (badness 10000) in paragraph at lines 71--105
 
  []
 
@@ -1317,7 +1317,7 @@ File: ./image/PESTA/graph/80SPS64GAIN/Gain_64_example.JPG Graphic file (type jp
 g)
 <use ./image/PESTA/graph/80SPS64GAIN/Gain_64_example.JPG>
 Package pdftex.def Info: ./image/PESTA/graph/80SPS64GAIN/Gain_64_example.JPG  u
-sed on input line 108.
+sed on input line 109.
 (pdftex.def)             Requested size: 256.11064pt x 187.25237pt.
  [9 <./image/PESTA/graph/80SPS128GAIN/Gain_128_example.JPG> <./image/PESTA/grap
 h/80SPS64GAIN/Gain_64_example.JPG>]
@@ -1325,32 +1325,41 @@ h/80SPS64GAIN/Gain_64_example.JPG>]
 File: ./image/PESTA/Code/read_raw.jpg Graphic file (type jpg)
 <use ./image/PESTA/Code/read_raw.jpg>
 Package pdftex.def Info: ./image/PESTA/Code/read_raw.jpg  used on input line 11
-7.
+8.
 (pdftex.def)             Requested size: 251.13857pt x 336.6582pt.
 
-Overfull \hbox (32.58614pt too wide) in paragraph at lines 121--124
+Overfull \hbox (32.58614pt too wide) in paragraph at lines 122--132
 []\T1/cmr/m/n/12 após ob-ter um nu-mero de-ter-mi-nado de va-lo-res dis-cre-tos
  é cal-cu-lado sua mé-dia $[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--124
+Underfull \hbox (badness 10000) in paragraph at lines 122--132
 
  []
 
 
-Overfull \hbox (3.47372pt too wide) in paragraph at lines 121--124
-\T1/cmtt/m/n/12 github . com / sergio1020881 / PESTA2021 / tree / main / SandBo
-x / ATMEGA128 / Atmega128$ 
+Underfull \hbox (badness 10000) in paragraph at lines 122--132
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--132
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--132
+
  []
 
 [10 <./image/PESTA/Code/read_raw.jpg>] [11]
-Underfull \hbox (badness 10000) in paragraph at lines 132--137
+Underfull \hbox (badness 10000) in paragraph at lines 140--145
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--137
+Underfull \hbox (badness 10000) in paragraph at lines 140--145
 
  []
 
@@ -1481,7 +1490,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--1
 Here is how much of TeX's memory you used:
  35872 strings out of 480790
  847965 string characters out of 2907055
- 1370734 words of memory out of 3000000
+ 1371734 words of memory out of 3000000
  51214 multiletter control sequences out of 15000+200000
  561674 words of font info for 99 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1519,9 +1528,9 @@ X/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1
 nts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.
 pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Progr
 am Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Relatorio.pdf (28 pages, 6120262 bytes).
+Output written on Relatorio.pdf (28 pages, 6122553 bytes).
 PDF statistics:
- 755 PDF objects out of 1000 (max. 8388607)
+ 758 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  108 words of extra memory for PDF output out of 10000 (max. 10000000)
 

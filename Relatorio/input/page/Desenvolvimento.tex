@@ -12,6 +12,7 @@ Abaixo pode-se ver a montagem em esqueleto do equipamento utilizado.
 	\caption{Kit de Desenvolvimento}
 	\label{Kit_Desenvolvimento_2}
 \end{figure}
+Para programar este microcontrolador (\textbf{Atmega 128}) foi utilizado o programador da marca da Atmel precisamente o \textbf{Atmel-ICE}, que para este equipamento tem disponível programação via ISP e JTAG.
 \newpage
 A montagem da mesa de medição,
 \begin{figure}[H]
@@ -120,7 +121,14 @@ O codigo que executa esta rotina é demonstrado.
 \end{figure}
 após obter um numero determinado de valores discretos é calculado sua média $\left( \overline{x}  =  \frac{1}{n}\sum_{i=1}^n x_i \right)$ para ser tratado e deduzido o valor correspondente de sua massa. \\
 \\
-Uma analise rápida do código também é possível de se perceber o funcionamento da livraria do driver que será anexado a este relatório e disponível no \textit{link}: \url{https://github.com/sergio1020881/PESTA2021/tree/main/SandBox/ATMEGA128/Atmega128}
+Quanto a funcionalidade no seu todo a balança tem \textcolor{blue}{quatro} botões e \textcolor{blue}{três} \textit{leds} ativados, um botão para fazer o \textit{offset} no \textcolor{green}{PORTF 0}, e dois botões com dupla função, fazer \textit{reset} para \textit{default} e incrementar, outro para entrar no menu de calibração e decrementar, o \textcolor{blue}{quarto} botão é reservado para \textit{enter} e assumir o valor introduzido na calibração.\\
+\\
+O botão \textcolor{green}{PORTF 3} quando premido durante cinco segundos faz um \textit{reset} para configuração \textit{default} depois de o \textit{led} no \textcolor{red}{PORTC 6} piscar \textcolor{blue}{quatro} vezes.\\
+\\
+O botão \textcolor{green}{PORTF 4} quando premido durante \textcolor{blue}{cinco} segundos entra no menu de calibração do valor do \textit{gain factor} e o \textit{led} no \textcolor{red}{PORTC 7} começa a piscar, usando os botões de incrementa e decrementar, isto é, o
+\textcolor{green}{PORTF 3} e \textcolor{green}{PORTF 4} pode-se alterar esse valor.\\
+\\
+Para assumir o valor e sair do menu de calibração basta premir o botão colocado no \textcolor{green}{PORTF 5}. Tanto no caso de calibração ou de \textit{offset} esses valores são guardados na \textit{eeprom} do microcontrolador, sendo que se retirar a alimentação este não perde os valores e o \textit{led} \textcolor{red}{PORTC 5} permanece ligado.
 \newpage
 \section{Software}
 software, flowchart, programming equipament.

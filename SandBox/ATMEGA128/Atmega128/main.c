@@ -13,7 +13,7 @@ Hardware: Atmega128 by ETT ET-BASE
 		PIN 4 -> ENTER GAIN FACTOR MENU 5 sec press, and down count for div factor, 
 		PIN 5 -> ENTER KEY to validate entered value and put in effect.
 		PIN 6 and 7 -> dedicated to comunicate with Signal Amplifier
-	-PORTB status indicator leds
+	-PORTC status indicator leds
 		PIN 5 -> Indicate using stored values
 		PIN 6 -> Reset to default indicator (blinks four times)
 		PIN 7 -> In Calibratio Menu (blinking)
