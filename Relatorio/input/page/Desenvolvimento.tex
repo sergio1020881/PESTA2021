@@ -52,7 +52,7 @@ Abaixo esta indicado uma tabela dos materiais usados, assim como os preços.
 \end{table}
 \newpage
 \section{Funcionamento}
-A ligação destes componentes é intuitivo e fácil de se perceber, o que é complexo neste trabalho é a interligação destes equipamentos com o micro-controlador e criar o driver de comunicação para a placa do amplificador de sinal, já que o protocolo é proprietário.
+A ligação destes componentes é intuitivo e fácil de se perceber, o que é complexo neste trabalho é a interligação destes equipamentos com o micro-controlador por meio de \textit{software} e criar o \textit{driver} de comunicação para a placa do amplificador de sinal, já que o protocolo de comunicação é proprietário.
 \begin{figure}[H]
 	\captionsetup{justification=raggedright,singlelinecheck=false}
 	\centering
@@ -61,14 +61,14 @@ A ligação destes componentes é intuitivo e fácil de se perceber, o que é co
 	\caption{Amplificador de Sinal [HX711]}
 	\label{HX711_Schematic_1}
 \end{figure}
-A placa pode ser programada fisicamente para determinar o numero de amostras por segundo a ser transmitido, tem opção de \textcolor{blue}{10} amostras por segundo e \textcolor{blue}{80} amostras, neste projeto optei pela segunda opção que necessita alteração na placa de circuito de impresso, isto é, abrir o \textit{jumper} respetivo de configuração.
+A placa \textit{Load Cell Amplifier }pode ser programada fisicamente para determinar o numero de amostras por segundo a ser transmitido, tem opção de \textcolor{blue}{10} amostras por segundo e \textcolor{blue}{80} amostras, neste projeto optei pela segunda opção que necessita alteração na placa de circuito de impresso, isto é, abrir o \textit{jumper} respetivo de configuração.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.55]{./image/PESTA/graph/80SPS64GAIN/SPS_80.JPG}
 	\caption{Amostras}
 	\label{SPS_64}
 \end{figure}
-A livraria (driver) recorre a interrupções quando o sinal de \textit{data} vai para a massa, indicando assim que tem um pacote de leitura pronto a ser transmitido.\\
+A livraria (driver) criada recorre a interrupções periódicas quando o sinal de \textit{data} vai para a massa, indicando assim que tem um pacote de leitura pronto a ser transmitido.\\
 \\
 %%\begin{minipage}{\linewidth}
 \begin{minipage}[!b]{.40\linewidth}
@@ -93,7 +93,7 @@ A livraria (driver) recorre a interrupções quando o sinal de \textit{data} vai
 \end{minipage}
 \begin{minipage}[l]{.6\linewidth}
 \vspace{.3cm}
-Como indicado abaixo no gráfico em que a linha amarela é a informação e a linha azul o respetivo \textit{clock} que é gerado pelas interrupções do micro-controlador fazendo \textit{shift} dos \textcolor{blue}{24} bits, que depois no fim transmite para o amplificador o ganho de amplificação a ser usado pelo numero excedente de \textit{clock cycles}, que nesta demonstração é \textcolor{blue}{um}, e corresponde a ganho de \textcolor{blue}{128}, respeitando a \textit{tabela} \ref{Gain_Selection}.
+Como indicado abaixo no gráfico em que a linha \textcolor{yellow}{amarela} é a informação e a linha \textcolor{BlueGreen}{azul} o respetivo \textit{clock} que é gerado pelas interrupções do micro-controlador fazendo \textit{shift} dos \textcolor{blue}{24} bits, que depois no fim transmite para o amplificador o ganho de amplificação a ser usado pelo numero excedente de \textit{clock cycles}, que nesta demonstração é \textcolor{blue}{um}, e corresponde a ganho de \textcolor{blue}{128}, respeitando a \textit{tabela} \ref{Gain_Selection}.
 \end{minipage}\\
 \\
 %%\end{minipage}
@@ -110,7 +110,7 @@ a sequir o exemplo com o ganho de \textcolor{blue}{64}, pois tem \textcolor{blue
 	\caption{Ganho de 64}
 	\label{Gain_64_example}
 \end{figure}
-Para obter este resultado uma livraria driver para o \textit{Load Cell Amplifier} foi criado tendo em consideração que o microcontrolador é de \textcolor{blue}{8} bits. O pacote de informação consiste de \textcolor{blue}{24} bits na qual é transmitido primeiro o bit \textbf{MSB}.
+Para obter este resultado a livraria driver para o \textit{Load Cell Amplifier} teve de ter em consideração que o microcontrolador é de \textcolor{blue}{8} bits, porque o pacote de informação consiste de \textcolor{blue}{24} \textit{bits} e em que é transmitido primeiro o \textit{bit} \textbf{MSB}.
 \newpage
 O codigo que executa esta rotina é demonstrado.
 \begin{figure}[H]
@@ -119,7 +119,7 @@ O codigo que executa esta rotina é demonstrado.
 	\caption{Leitura ADC}
 	\label{read_raw}
 \end{figure}
-após obter um numero determinado de valores discretos é calculado sua média $\left( \overline{x}  =  \frac{1}{n}\sum_{i=1}^n x_i \right)$ para ser tratado e deduzido o valor correspondente de sua massa. \\
+após obter um numero determinado de valores discretos é calculado sua média $\left( \overline{x}  =  \frac{1}{n}\sum_{i=1}^n x_i \right)$ para ser tratado e deduzido o valor correspondente da massa. \\
 \\
 Quanto a funcionalidade no seu todo a balança tem \textcolor{blue}{quatro} botões e \textcolor{blue}{três} \textit{leds} ativados, um botão para fazer o \textit{offset} no \textcolor{green}{PORTF 0}, e dois botões com dupla função, fazer \textit{reset} para \textit{default} e incrementar, outro para entrar no menu de calibração e decrementar, o \textcolor{blue}{quarto} botão é reservado para \textit{enter} e assumir o valor introduzido na calibração.\\
 \\
@@ -128,7 +128,7 @@ O botão \textcolor{green}{PORTF 3} quando premido durante cinco segundos faz um
 O botão \textcolor{green}{PORTF 4} quando premido durante \textcolor{blue}{cinco} segundos entra no menu de calibração do valor do \textit{gain factor} e o \textit{led} no \textcolor{red}{PORTC 7} começa a piscar, usando os botões de incrementa e decrementar, isto é, o
 \textcolor{green}{PORTF 3} e \textcolor{green}{PORTF 4} pode-se alterar esse valor.\\
 \\
-Para assumir o valor e sair do menu de calibração basta premir o botão colocado no \textcolor{green}{PORTF 5}. Tanto no caso de calibração ou de \textit{offset} esses valores são guardados na \textit{eeprom} do microcontrolador, sendo que se retirar a alimentação este não perde os valores e o \textit{led} \textcolor{red}{PORTC 5} permanece ligado.
+Para assumir o valor e sair do menu de calibração basta premir o botão colocado no \textcolor{green}{PORTF 5}. Tanto no caso de calibração ou de \textit{offset} os valores são guardados na \textbf{EEPROM} do microcontrolador, sendo que, se retirar a alimentação do circuito este não perde os valores e o \textit{led} \textcolor{red}{PORTC 5} permanece ligado.
 \newpage
 \section{Software}
 software, flowchart, programming equipament.
@@ -137,16 +137,11 @@ software, flowchart, programming equipament.
 \newpage
 \section{Validação}
 %%%To validate is to justify why the choices made and alternatives that could be chosen.
-As escolhas feitas estão dentro dos parâmetros na qual a oferta nos disponibiliza, sendo que pouco se pode beneficiar. Apenas o conhecimento adquirido e aprofundar o funcionamento é o ganho mais evidente, facilitando a interpretação de situações e deteção de anomalias (\textit{troubleshooting}).\\
+As escolhas feitas estão dentro dos parâmetros da oferta disponibilizada. Apenas o conhecimento adquirido ao aprofundar o funcionamento dos componentes é o ganho mais evidente, facilitando a interpretação de situações e deteção de anomalias (\textit{troubleshooting}), derivado aos custos dos materiais serem caros.\\
 \\
-Apostei na marca \textbf{Atmel} devido a experiência adquirida, conjunto de já conhecimentos adquiridos e de me ser familiar, sendo que se aposta-se noutra marca teria de enfrentar uma curva de aprendizagem e adaptação que no final a nível de custos beneficio seria desfavorável, muito trabalhoso.\\
+Apostei na marca \textbf{Atmel} devido a experiência e conhecimentos já adquiridos, se aposta-se noutra marca teria de enfrentar uma curva de aprendizagem e adaptação que no final a nível de custos beneficio seria desfavorável, pelo tempo a dispensar e de ser muito trabalhoso a refazer tudo novamente noutra arquitetura.\\
 \\
-O sensor usado é o mais comum nesta pratica, e escolha demonstrada, o circuito de interface é indiferente a escolha apenas é baseada na sua precisão, ou seja, é de \textcolor{blue}{24} \textit{bit}, e o \textit{chip} apenas tem  de \textcolor{blue}{10} \textit{bit} de resolução.
-
-
-
-
-
+O sensor usado é o mais comum nesta pratica, e escolha demonstrada, o circuito de interface é indiferente a escolha apenas é baseada na sua precisão, ou seja, é de \textcolor{blue}{24} \textit{bit} enquanto o \textbf{ADC} do \textbf{MCU} de \textcolor{blue}{10} \textit{bit}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{comment}
 Sem contar com as despesas no equipamento para a programação do hardware que em principio só se gasta uma vez, isto é, se não se estragar. No caso do programador \textbf{Atmel-ICE} pode custar até \EUR{185.55}.\\
