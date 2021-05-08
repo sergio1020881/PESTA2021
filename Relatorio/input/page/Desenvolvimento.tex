@@ -112,15 +112,34 @@ a sequir o exemplo com o ganho de \textcolor{blue}{64}, pois tem \textcolor{blue
 \end{figure}
 Para obter este resultado a livraria driver para o \textit{Load Cell Amplifier} teve de ter em consideração que o microcontrolador é de \textcolor{blue}{8} bits, porque o pacote de informação consiste de \textcolor{blue}{24} \textit{bits} e em que é transmitido primeiro o \textit{bit} \textbf{MSB}.
 \newpage
-O codigo que executa esta rotina é demonstrado.
+O codigo que executa esta rotina é demonstrado. \\
+\begin{minipage}[l]{\linewidth}
+\begin{minipage}[l]{.45\linewidth}
 \begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.8]{./image/PESTA/Code/read_raw.jpg}
+	\flushleft
+	\captionsetup{justification=raggedright,singlelinecheck=false}
+	\includegraphics[scale=0.6]{./image/PESTA/Code/read_raw.jpg}
 	\caption{Leitura ADC}
 	\label{read_raw}
 \end{figure}
-após obter um numero determinado de valores discretos é calculado sua média $\left( \overline{x}  =  \frac{1}{n}\sum_{i=1}^n x_i \right)$ para ser tratado e deduzido o valor correspondente da massa. \\
-\\
+\vspace{.7cm}
+\end{minipage}
+\begin{minipage}[l]{.35\linewidth}
+\begin{figure}[H]
+	\flushleft
+	\captionsetup{justification=raggedright,singlelinecheck=false}
+	\includegraphics[scale=0.6]{./image/PESTA/Code/Main_While_Balanca.jpg}
+	\caption{PROGRAM 1}
+	\label{Main_While_Balanca}
+\end{figure}
+\end{minipage}
+\end{minipage}
+\newline
+\vspace{.2cm}
+\newline
+Após obter um numero determinado de valores discretos é calculado sua média \\
+$\left( \overline{x}  =  \frac{1}{n}\sum_{i=1}^n x_i \right)$ para ser tratado e deduzido o valor correspondente da massa.
+\subsection*{Testar}
 Quanto a funcionalidade no seu todo a balança tem \textcolor{blue}{quatro} botões e \textcolor{blue}{três} \textit{leds} ativados, um botão para fazer o \textit{offset} no \textcolor{green}{PORTF 0}, e dois botões com dupla função, fazer \textit{reset} para \textit{default} e incrementar, outro para entrar no menu de calibração e decrementar, o \textcolor{blue}{quarto} botão é reservado para \textit{enter} e assumir o valor introduzido na calibração.\\
 \\
 O botão \textcolor{green}{PORTF 3} quando premido durante \textcolor{blue}{cinco} segundos faz um \textit{reset} para configuração \textit{default} depois de o \textit{led} no \textcolor{red}{PORTC 6} piscar \textcolor{blue}{quatro} vezes.\\
@@ -134,7 +153,7 @@ Para assumir o valor e sair do menu de calibração basta premir o botão coloca
 O \textbf{IDE} utilizado neste trabalho foi o \textbf{\textit{{Microchip Studio for AVR\textsuperscript{\textregistered} and SAM Devices}}} (\textit{verson: 7.0.2542}). A programação foi feita em Linguagem \textbf{C}, sua estrutura sintática esta abaixo mencionado:
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.7]{./image/PESTA/flowchart/Main_Program_1.jpg}
+	\includegraphics[scale=0.6]{./image/PESTA/flowchart/Main_Program_1.jpg}
 	\caption{Estrutura do Programa}
 	\label{Main_Program_1}
 \end{figure}
@@ -143,7 +162,7 @@ O \textit{PROGRAM 1} é onde corre o programa da balança, e o \textit{PROGRAM 2
 Todos os programas sequem uma estrutura sintatica recursiva usando o seguinte modelo.
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.43]{./image/PESTA/flowchart/Generic_structure.jpg}
+	\includegraphics[scale=0.40]{./image/PESTA/flowchart/Generic_structure.jpg}
 	\caption{Sintaxe Genérica dos programas}
 	\label{Geneic_structure}
 \end{figure}
@@ -165,6 +184,26 @@ Duas interrupções periódicas estão sempre a correr em \textit{background}, u
 	\label{Interrupt_2}
 \end{figure}
 \end{minipage}
+\newline
+\vspace{.1cm}
+\newline
+Consultar código para leitura das rotinas de interrupção nas folhas \textit{anexas}. \\
+\end{minipage}
+\begin{minipage}{.40\linewidth}
+\begin{figure}[H]
+	\flushleft
+	\captionsetup{justification=raggedright,singlelinecheck=false}
+	\includegraphics[scale=0.9]{./image/PESTA/Code/Livrarias.jpg}
+	\caption{Livrarias}
+	\label{Livrarias}
+\end{figure}
+\end{minipage}
+\begin{minipage}{.6\linewidth}
+Ao lado esta as livrarias usadas neste projeto, as que estão dentro da caixa amarela são as que foram criadas.
+A filosofia usada é de criar objetos que representam o hardware para o poder manipular via código. Como se pode observar foi criado uma livraria para os temporizadores, outra paras as interrupções e \textbf{EEPROM} depois criado livrarias para os componentes externos, isto é, o \textbf{LCD} e o integrado \textbf{HX711}. \\
+Uma abstração que torna simples executar qualquer algoritmo ou projeto, e isto só é possível depois de ultrapassar a barreira árdua e dolorosa de desenvolver as livrarias.\\
+\\
+\\
 \end{minipage}
 \newpage
 \section{Validação}
@@ -189,5 +228,8 @@ broad range of specially developed micromachining techniques. \cite{book-9}
 The three essential elements in conventional
 silicon processing are deposition, lithography, and etching. \cite{book-9}
 Sensitivity,Long-Term Drift e Temperature Effects (Span temperature hysteresis).
+%\newline
+%\vspace{.1cm}
+%\newline
 \end{comment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
