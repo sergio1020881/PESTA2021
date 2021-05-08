@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  8 MAY 2021 15:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  8 MAY 2021 18:09
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
@@ -1094,7 +1094,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--14
 
 
 ]
-Overfull \vbox (13.1675pt too high) has occurred while \output is active []
+Overfull \vbox (43.48111pt too high) has occurred while \output is active []
 
 
 [6] [7
@@ -1359,17 +1359,55 @@ Underfull \hbox (badness 10000) in paragraph at lines 122--132
 
  []
 
-[10 <./image/PESTA/Code/read_raw.jpg>] [11])
-Underfull \hbox (badness 10000) in paragraph at lines 140--10
+[10 <./image/PESTA/Code/read_raw.jpg>]
+<./image/PESTA/flowchart/Main_Program_1.jpg, id=116, 620.3175pt x 724.20563pt>
+File: ./image/PESTA/flowchart/Main_Program_1.jpg Graphic file (type jpg)
+<use ./image/PESTA/flowchart/Main_Program_1.jpg>
+Package pdftex.def Info: ./image/PESTA/flowchart/Main_Program_1.jpg  used on in
+put line 137.
+(pdftex.def)             Requested size: 434.2193pt x 506.94048pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
+
+ []
+
+[11 <./image/PESTA/flowchart/Main_Program_1.jpg>]
+<./image/PESTA/flowchart/Generic_structure.jpg, id=121, 1095.3422pt x 442.65375
+pt>
+File: ./image/PESTA/flowchart/Generic_structure.jpg Graphic file (type jpg)
+<use ./image/PESTA/flowchart/Generic_structure.jpg>
+Package pdftex.def Info: ./image/PESTA/flowchart/Generic_structure.jpg  used on
+ input line 146.
+(pdftex.def)             Requested size: 470.98796pt x 190.33739pt.
+
+Overfull \hbox (29.97023pt too wide) in paragraph at lines 146--147
+ [][] 
+ []
+
+<./image/PESTA/flowchart/Interrupt_1.jpg, id=122, 73.77562pt x 120.45pt>
+File: ./image/PESTA/flowchart/Interrupt_1.jpg Graphic file (type jpg)
+<use ./image/PESTA/flowchart/Interrupt_1.jpg>
+Package pdftex.def Info: ./image/PESTA/flowchart/Interrupt_1.jpg  used on input
+ line 155.
+(pdftex.def)             Requested size: 31.72289pt x 51.79248pt.
+<./image/PESTA/flowchart/Interrupt_2.jpg, id=123, 73.77562pt x 120.45pt>
+File: ./image/PESTA/flowchart/Interrupt_2.jpg Graphic file (type jpg)
+<use ./image/PESTA/flowchart/Interrupt_2.jpg>
+Package pdftex.def Info: ./image/PESTA/flowchart/Interrupt_2.jpg  used on input
+ line 163.
+(pdftex.def)             Requested size: 31.72289pt x 51.79248pt.
+[12 <./image/PESTA/flowchart/Generic_structure.jpg> <./image/PESTA/flowchart/In
+terrupt_1.jpg> <./image/PESTA/flowchart/Interrupt_2.jpg>])
+Underfull \hbox (badness 10000) in paragraph at lines 172--10
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--10
+Underfull \hbox (badness 10000) in paragraph at lines 172--10
 
  []
 
-[12] (input/page/Conclusao.tex
+[13] (input/page/Conclusao.tex
 Cap\'{\i }tulo 3.
 
 Underfull \hbox (badness 10000) in paragraph at lines 2--15
@@ -1402,7 +1440,7 @@ Overfull \hbox (5.89536pt too wide) in paragraph at lines 2--15
 mr/m/n/12 , e pos-sí-vel fa-zer \T1/cmr/m/it/12 down-load \T1/cmr/m/n/12 para
  []
 
-) [13
+) [14
 
 ] (input/End.tex (input/excerpt/Definition_1.tex
 Ap\^endice A.
@@ -1421,7 +1459,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 35--5
 
  []
 
-[14
+[15
 
 ] (input/excerpt/Physic_1.tex
 Ap\^endice B.
@@ -1465,7 +1503,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--48
 
  []
 
-<./image/General/Einstein.jpg, id=132, 255.95625pt x 179.16937pt>
+<./image/General/Einstein.jpg, id=141, 255.95625pt x 179.16937pt>
 File: ./image/General/Einstein.jpg Graphic file (type jpg)
 <use ./image/General/Einstein.jpg>
 Package pdftex.def Info: ./image/General/Einstein.jpg  used on input line 65.
@@ -1485,20 +1523,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--1
 
  []
 
-[15
+[16
 
- <./image/General/Einstein.jpg>] [16]) [17
+ <./image/General/Einstein.jpg>] [17]) [18
 
-]) [18] (Relatorio.aux
+]) [19] (Relatorio.aux
 (include/SETUP/ConfigurePage.aux) (include/CAPA/CAPAREPORT_2.aux)
 (include/CONTRACAPA/CONTRACAPAREPORT_2.aux) (include/SETUP/Abstract.aux)
 (include/SETUP/ContentFigureTable.aux) (include/SETUP/Acronym.aux)) ) 
 Here is how much of TeX's memory you used:
- 35872 strings out of 480790
- 847965 string characters out of 2907055
- 1373734 words of memory out of 3000000
- 51214 multiletter control sequences out of 15000+200000
- 561674 words of font info for 99 fonts, out of 3000000 for 9000
+ 35908 strings out of 480790
+ 849104 string characters out of 2907055
+ 1374780 words of memory out of 3000000
+ 51242 multiletter control sequences out of 15000+200000
+ 563123 words of font info for 102 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  65i,22n,74p,1042b,494s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users
@@ -1506,37 +1544,39 @@ Here is how much of TeX's memory you used:
 \Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.p
 k> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm
 0800.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
-0\ecti0800.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/euro
-sym/dpi720\feymr10.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jkn
-appen/ec/dpi600\ecti1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfo
-ur/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/p
-k/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\f
-onts/pk/ljfour/jknappen/ec/dpi600\ecbi1200.pk> <C:\Users\sergi\AppData\Local\Mi
-KTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\sergi\AppData\Lo
-cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0800.pk> <C:\Users\sergi\AppD
-ata\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\serg
-i\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\User
-s\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C
-:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.
-pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecr
-m1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi6
-00\ecrm1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/e
-c/dpi600\ecbx1440.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jkna
-ppen/ec/dpi600\ecrm1440.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfou
-r/jknappen/ec/dpi600\ecti1440.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk
-/ljfour/jknappen/ec/dpi600\ecbx2074.pk><C:/Program Files/MiKTeX/fonts/type1/pub
-lic/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.p
-fb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Progra
-m Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.
-pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Progr
-am Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Relatorio.pdf (29 pages, 6123621 bytes).
+0\ecti0800.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
+/dpi600\tcti1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
+pen/ec/dpi600\tcbi0800.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour
+/public/eurosym/dpi720\feymr10.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/p
+k/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\f
+onts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\sergi\AppData\Local\Mi
+KTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\sergi\AppData\Lo
+cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi1200.pk> <C:\Users\sergi\AppD
+ata\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\serg
+i\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0800.pk> <C:\User
+s\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C
+:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.
+pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecb
+x1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi6
+00\tcrm1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/e
+c/dpi600\ecrm1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jkna
+ppen/ec/dpi600\ecrm1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfou
+r/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk
+/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fo
+nts/pk/ljfour/jknappen/ec/dpi600\ecti1440.pk> <C:\Users\sergi\AppData\Local\MiK
+TeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk><C:/Program Files/MiKTeX/fon
+ts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts
+/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pf
+b><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program
+ Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfont
+s/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.p
+fb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on Relatorio.pdf (30 pages, 6428033 bytes).
 PDF statistics:
- 762 PDF objects out of 1000 (max. 8388607)
+ 799 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 108 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 128 words of extra memory for PDF output out of 10000 (max. 10000000)
 
