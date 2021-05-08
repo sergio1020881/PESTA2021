@@ -151,6 +151,12 @@ int main(void)
 		while(hx.query(&hx)); //Catches falling Edge instance, begins bit shifting.
 		/***geting data interval***/
 		/************INPUT***********/
+		// Jump Menu signal
+		if(signal == ONE){ //INPUT FROM INTERRUPT SINALS
+			Menu = '2';
+			signal = ZERO; // ONE SHOT
+			lcd0.clear();
+		}
 		tmp = hx.raw_average(&hx, average_n); // average_n  25 or 50, smaller means faster or more readings
 		/****************************/
 		switch(Menu){
@@ -194,11 +200,6 @@ int main(void)
 					publish = value;
 					lcd0.gotoxy(2,1);
 					lcd0.string_size(function.ftoa(publish, result, ZERO), 13); lcd0.string_size("gram", 4);
-				}
-				// Jump Menu signal
-				if(signal == 1){
-					Menu = '2';
-					lcd0.clear();
 				}
 				break;
 			/***MENU 2***/
@@ -268,8 +269,8 @@ int main(void)
 						choice = 3;
 						break;
 				};
-				// Jump Menus signal
-				if(signal == 2){ // EXIT AND STORE GAIN FACTOR
+				// Exit and store value
+				if((F.ll(&F) & IMASK) == (ONE << 5)){ // Button 6
 					HX711_data.status = ONE;
 					eprom.update_block(HX711_ptr, (void*) ZERO, sizeblock);
 					hx.get_cal(&hx)->divfactor_32=divfactor;
@@ -277,6 +278,8 @@ int main(void)
 					hx.get_cal(&hx)->divfactor_128=divfactor;
 					hx.get_cal(&hx)->status=ZERO;
 					PORTC &= ~(ONE << 5); // troubleshooting
+					PORTC |= (ONE << 7); // troubleshooting
+					counter_2 = ZERO;
 					Menu = '1';
 					lcd0.clear();
 				}
@@ -320,7 +323,7 @@ ISR(TIMER1_COMPA_vect) // 1 second intervals
 	if((F.ll(&F) & IMASK) == (ONE << 3)) //button 4
 		counter_1++;
 	else if(counter_1 < _5sec+ONE)
-		counter_1=0;
+		counter_1=ZERO;
 	if(counter_1 > _5sec){
 		counter_1 = _5sec+ONE; //lock in place
 		PORTC ^= (ONE << 6); // troubleshooting
@@ -346,16 +349,11 @@ ISR(TIMER1_COMPA_vect) // 1 second intervals
 	if((F.ll(&F) & IMASK) == (ONE << 4)) //button 5
 		counter_2++;
 	else if(counter_2 < _5sec+ONE)
-		counter_2=0;
+		counter_2=ZERO; //RESET TIMER
 	if(counter_2 > _5sec){
-		counter_2 = _5sec+ONE; //lock in place
+		counter_2 = ZERO; //RESET TIMER
 		signal = ONE;
-		PORTC ^= (ONE << 7); // troubleshooting
-		if((F.ll(&F) & IMASK) == (ONE << 5)){ //button 6
-			signal = 2;
-			PORTC |= (ONE << 7); // troubleshooting
-			counter_2 = ZERO;
-		}
+		PORTC &= ~(ONE << 7); // troubleshooting
 	}
 	/***CAL DIVFACTOR DEFINE END***/
 }
@@ -368,10 +366,10 @@ end do a cast to *((int32_t*)ptr).
 forget about sleep function for HX711 display is always on, then finish the calibration menu of div factor DONE, 
 also add functionality for batch counting forget about batch counting already enough level of complexity,
 
-FINISHED LEAVING HAS IS. LATER MAYBE PLAY AROUND AND CLEANUP FOR BEATIES SAKE.
+FINISHED LEAVING HAS IS. LATER MAYBE PLAY AROUND AND CLEANUP FOR BEAUTIES SAKE.
 
 MEMCP is not appreciated by this MCU, sometimes crashes.
 
-Endurance test over 2 months, noticed drift during days, but never geting over 20 grams. For a scale using a 50Kg cell is axcellente.
+Endurance test over 2 months, noticed drift during days, but never getting over 10 grams. For a scale using a 50Kg cell is Excellent.
 Using offset corrects the drift and precision is concise to the gram.
 ****/
