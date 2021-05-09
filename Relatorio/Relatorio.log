@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  9 MAY 2021 00:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  9 MAY 2021 17:19
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
@@ -208,23 +208,29 @@ Package: verbatim 2019/11/10 v1.5r LaTeX2e package for verbatim enhancements
 \verbatim@line=\toks25
 \verbatim@in@stream=\read3
 )
+("C:\Program Files\MiKTeX\tex/latex/moreverb\moreverb.sty"
+Package: moreverb 2008/06/03 v2.3a `more' verbatim facilities
+\tab@position=\count186
+\tab@size=\count187
+\listing@line=\count188
+)
 ("C:\Program Files\MiKTeX\tex/latex/lipsum\lipsum.sty"
 ("C:\Program Files\MiKTeX\tex/latex/l3kernel\expl3.sty"
 Package: expl3 2020-06-18 L3 programming layer (loader) 
 
 ("C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdfmode.def"
 File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count186
+\l__kernel_color_stack_int=\count189
 \l__pdf_internal_box=\box49
 ))
 ("C:\Program Files\MiKTeX\tex/latex/l3packages/xparse\xparse.sty"
 Package: xparse 2020-05-15 L3 Experimental document command parser
 
 ("C:\Program Files\MiKTeX\tex/latex/l3packages/xparse\xparse-generic.tex"
-\l__xparse_current_arg_int=\count187
-\g__xparse_grabber_int=\count188
-\l__xparse_m_args_int=\count189
-\l__xparse_v_nesting_int=\count190
+\l__xparse_current_arg_int=\count190
+\g__xparse_grabber_int=\count191
+\l__xparse_m_args_int=\count192
+\l__xparse_v_nesting_int=\count193
 ))
 Package: lipsum 2019/01/02 v2.2 150 paragraphs of Lorem Ipsum dummy text
 
@@ -233,14 +239,14 @@ File: lipsum.ltd.tex 2019/01/02 v2.2 The Lorem ipsum dummy text
 ))
 ("C:\Program Files\MiKTeX\tex/latex/tools\multicol.sty"
 Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
-\c@tracingmulticols=\count191
+\c@tracingmulticols=\count194
 \mult@box=\box50
 \multicol@leftmargin=\dimen155
-\c@unbalance=\count192
-\c@collectmore=\count193
-\doublecol@number=\count194
-\multicoltolerance=\count195
-\multicolpretolerance=\count196
+\c@unbalance=\count195
+\c@collectmore=\count196
+\doublecol@number=\count197
+\multicoltolerance=\count198
+\multicolpretolerance=\count199
 \full@width=\dimen156
 \page@free=\dimen157
 \premulticols=\dimen158
@@ -291,27 +297,27 @@ Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
 \@tempa=\box91
 \@tempa=\box92
 \@tempa=\box93
-\c@minrows=\count197
-\c@columnbadness=\count198
-\c@finalcolumnbadness=\count199
+\c@minrows=\count266
+\c@columnbadness=\count267
+\c@finalcolumnbadness=\count268
 \last@try=\dimen161
 \multicolovershoot=\dimen162
 \multicolundershoot=\dimen163
 \mult@nat@firstbox=\box94
 \colbreak@box=\box95
-\mc@col@check@num=\count266
+\mc@col@check@num=\count269
 )
 ("C:\Program Files\MiKTeX\tex/latex/multirow\multirow.sty"
 Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
 \multirow@colwidth=\skip58
-\multirow@cntb=\count267
+\multirow@cntb=\count270
 \multirow@dima=\skip59
 \bigstrutjot=\dimen164
 )
 ("C:\Program Files\MiKTeX\tex/latex/makecell\makecell.sty"
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 \rotheadsize=\dimen165
-\c@nlinenum=\count268
+\c@nlinenum=\count271
 \TeXr@lab=\toks26
 )
 ("C:\Program Files\MiKTeX\tex/latex/amsfonts\amsfonts.sty"
@@ -343,13 +349,13 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 ("C:\Program Files\MiKTeX\tex/latex/amsmath\amsopn.sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count269
+\inf@bad=\count272
 LaTeX Info: Redefining \frac on input line 227.
-\uproot@=\count270
-\leftroot@=\count271
+\uproot@=\count273
+\leftroot@=\count274
 LaTeX Info: Redefining \overline on input line 389.
-\classnum@=\count272
-\DOTSCASE@=\count273
+\classnum@=\count275
+\DOTSCASE@=\count276
 LaTeX Info: Redefining \ldots on input line 486.
 LaTeX Info: Redefining \dots on input line 489.
 LaTeX Info: Redefining \cdots on input line 610.
@@ -358,15 +364,15 @@ LaTeX Info: Redefining \cdots on input line 610.
 \big@size=\dimen168
 LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
-\macc@depth=\count274
-\c@MaxMatrixCols=\count275
+\macc@depth=\count277
+\c@MaxMatrixCols=\count278
 \dotsspace@=\muskip16
-\c@parentequation=\count276
-\dspbrk@lvl=\count277
+\c@parentequation=\count279
+\dspbrk@lvl=\count280
 \tag@help=\toks29
-\row@=\count278
-\column@=\count279
-\maxfields@=\count280
+\row@=\count281
+\column@=\count282
+\maxfields@=\count283
 \andhelp@=\toks30
 \eqnshift@=\dimen169
 \alignsep@=\dimen170
@@ -395,7 +401,7 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 \XKV@toks=\toks33
 \XKV@tempa@toks=\toks34
 )
-\XKV@depth=\count281
+\XKV@depth=\count284
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 ("C:\Program Files\MiKTeX\tex/latex/adjustbox\adjcalc.sty"
@@ -429,12 +435,12 @@ File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 
 ("C:\Program Files\MiKTeX\tex/latex/ifoddpage\ifoddpage.sty"
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count282
+\c@checkoddpage=\count285
 )
 ("C:\Program Files\MiKTeX\tex/latex/varwidth\varwidth.sty"
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box99
-\sift@deathcycles=\count283
+\sift@deathcycles=\count286
 \@vwid@loff=\dimen187
 \@vwid@roff=\dimen188
 ))
@@ -464,7 +470,7 @@ Package: tracklang 2020/06/30 v1.5 (NLCT) Track Languages
 ("C:\Program Files\MiKTeX\tex/generic/tracklang\tracklang.tex"))
 ("C:\Program Files\MiKTeX\tex/latex/etoolbox\etoolbox.sty"
 Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count284
+\etb@tempcnta=\count287
 )
 ("C:\Program Files\MiKTeX\tex/latex/datetime2-portuges\datetime2-portuges.ldf"
 File: datetime2-portuges.ldf 2018/08/21 v1.1
@@ -491,8 +497,8 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@outerparindent=\dimen189
 \enit@toks=\toks35
 \enit@inbox=\box101
-\enit@count@id=\count285
-\enitdp@description=\count286
+\enit@count@id=\count288
+\enitdp@description=\count289
 )
 ("C:\Program Files\MiKTeX\tex/latex/tools\enumerate.sty"
 Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
@@ -543,14 +549,14 @@ Package: pgfsys 2020/01/08 v3.1.5b (3.1.5b)
 \pgf@yd=\dimen257
 \w@pgf@writea=\write3
 \r@pgf@reada=\read4
-\c@pgf@counta=\count287
-\c@pgf@countb=\count288
-\c@pgf@countc=\count289
-\c@pgf@countd=\count290
+\c@pgf@counta=\count290
+\c@pgf@countb=\count291
+\c@pgf@countc=\count292
+\c@pgf@countd=\count293
 \t@pgf@toka=\toks41
 \t@pgf@tokb=\toks42
 \t@pgf@tokc=\toks43
-\pgf@sys@id@count=\count291
+\pgf@sys@id@count=\count294
 ("C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg"
 File: pgf.cfg 2020/01/08 v3.1.5b (3.1.5b)
 )
@@ -564,8 +570,8 @@ File: pgfsys-common-pdf.def 2020/01/08 v3.1.5b (3.1.5b)
 ))) ("C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.t
 ex"
 File: pgfsyssoftpath.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfsyssoftpath@smallbuffer@items=\count292
-\pgfsyssoftpath@bigbuffer@items=\count293
+\pgfsyssoftpath@smallbuffer@items=\count295
+\pgfsyssoftpath@bigbuffer@items=\count296
 ) ("C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex
 "
 File: pgfsysprotocol.code.tex 2020/01/08 v3.1.5b (3.1.5b)
@@ -577,7 +583,7 @@ Package: pgfcore 2020/01/08 v3.1.5b (3.1.5b)
 ("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathutil.code.tex")
 ("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathparser.code.tex"
 \pgfmath@dimen=\dimen258
-\pgfmath@count=\count294
+\pgfmath@count=\count297
 \pgfmath@box=\box103
 \pgfmath@toks=\toks44
 \pgfmath@stack@operand=\toks45
@@ -599,7 +605,7 @@ ode.tex")
 ("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmet
 ics.code.tex")))
 ("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfloat.code.tex"
-\c@pgfmathroundto@lastzeros=\count295
+\c@pgfmathroundto@lastzeros=\count298
 ))
 ("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfint.code.tex")
 ("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex"
@@ -634,7 +640,7 @@ File: pgfcorescopes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgfpic=\box104
 \pgf@hbox=\box105
 \pgf@layerbox@main=\box106
-\pgf@picture@serial@count=\count296
+\pgf@picture@serial@count=\count299
 )
 ("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.t
 ex"
@@ -665,8 +671,8 @@ File: pgfcorearrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex"
 File: pgfcoreshade.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgf@max=\dimen282
-\pgf@sys@shading@range@num=\count297
-\pgf@shadingcount=\count298
+\pgf@sys@shading@range@num=\count300
+\pgf@shadingcount=\count301
 )
 ("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex"
 File: pgfcoreimage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
@@ -720,7 +726,7 @@ Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
 ("C:\Program Files\MiKTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code
 .tex"
 File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@plot@mark@count=\count299
+\pgf@plot@mark@count=\count302
 \pgfplotmarksize=\dimen287
 )
 \tikz@lastx=\dimen288
@@ -735,18 +741,18 @@ File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \tikz@figbox@bg=\box110
 \tikz@tempbox=\box111
 \tikz@tempbox@bg=\box112
-\tikztreelevel=\count300
-\tikznumberofchildren=\count301
-\tikznumberofcurrentchild=\count302
-\tikz@fig@count=\count303
+\tikztreelevel=\count303
+\tikznumberofchildren=\count304
+\tikznumberofcurrentchild=\count305
+\tikz@fig@count=\count306
 
 ("C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmodulematrix.code.tex"
 File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfmatrixcurrentrow=\count304
-\pgfmatrixcurrentcolumn=\count305
-\pgf@matrix@numberofcolumns=\count306
+\pgfmatrixcurrentrow=\count307
+\pgfmatrixcurrentcolumn=\count308
+\pgf@matrix@numberofcolumns=\count309
 )
-\tikz@expandcount=\count307
+\tikz@expandcount=\count310
 
 ("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
 arytopaths.code.tex"
@@ -795,9 +801,9 @@ File: pgflibrarycurvilinear.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 aryfpu.code.tex"
 ("C:\Program Files\MiKTeX\tex/generic/pgf/libraries\pgflibraryfpu.code.tex"))
 ("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcirc.defines.tex"
-\pgf@circ@count@a=\count308
-\pgf@circ@count@b=\count309
-\pgf@circ@count@c=\count310
+\pgf@circ@count@a=\count311
+\pgf@circ@count@b=\count312
+\pgf@circ@count@c=\count313
 \pgf@circ@res@up=\dimen307
 \pgf@circ@res@down=\dimen308
 \pgf@circ@res@zero=\dimen309
@@ -815,7 +821,7 @@ aryfpu.code.tex"
 ("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircmonopoles.tex")
 ("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircbipoles.tex")
 ("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcirctripoles.tex"
-\pgf@circ@res@count=\count311
+\pgf@circ@res@count=\count314
 )
 ("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircquadpoles.tex")
 ("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircmultipoles.tex")
@@ -862,10 +868,10 @@ File: tikzlibrarytrees.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 arypositioning.code.tex"
 File: tikzlibrarypositioning.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )
-\c@theorem=\count312
-\c@lemma=\count313
-\c@definition=\count314
-\c@notation=\count315
+\c@theorem=\count315
+\c@lemma=\count316
+\c@definition=\count317
+\c@notation=\count318
 \@indexfile=\write4
 \openout4 = `Relatorio.idx'.
 
@@ -873,7 +879,7 @@ File: tikzlibrarypositioning.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 Writing index file Relatorio.idx
 
 Package babelbib Warning: Command \selectbiblanguage used without package
-(babelbib)                option fixlanguage. Ignored on input line 119.
+(babelbib)                option fixlanguage. Ignored on input line 121.
 
 babelbib: Set bibliography fall-back language to english
 ) (Relatorio.aux (include/SETUP/ConfigurePage.aux)
@@ -915,14 +921,14 @@ babelbib extension \btxifchangecaseoff added to \extrasportuguese
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
 * h-part:(L,W,R)=(85.35826pt, 441.01773pt, 71.13188pt)
-* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* v-part:(T,H,B)=(42.67912pt, 731.23584pt, 71.13188pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
 * \textwidth=441.01773pt
-* \textheight=702.78308pt
+* \textheight=731.23584pt
 * \oddsidemargin=13.08827pt
 * \evensidemargin=13.08827pt
-* \topmargin=-38.1381pt
+* \topmargin=-66.59087pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=12.0pt
@@ -942,16 +948,16 @@ babelbib extension \btxifchangecaseoff added to \extrasportuguese
 
 ("C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count316
+\scratchcounter=\count319
 \scratchdimen=\dimen320
 \scratchbox=\box113
-\nofMPsegments=\count317
-\nofMParguments=\count318
+\nofMPsegments=\count320
+\nofMParguments=\count321
 \everyMPshowfont=\toks49
-\MPscratchCnt=\count319
+\MPscratchCnt=\count322
 \MPscratchDim=\dimen321
-\MPnumerator=\count320
-\makeMPintoPDFobject=\count321
+\MPnumerator=\count323
+\makeMPintoPDFobject=\count324
 \everyMPtoPDFconversion=\toks50
 ) ("C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1206,8 +1212,8 @@ File: ./image/PESTA/general/strain_gauge_1.jpg Graphic file (type jpg)
 Package pdftex.def Info: ./image/PESTA/general/strain_gauge_1.jpg  used on inpu
 t line 81.
 (pdftex.def)             Requested size: 234.85587pt x 142.26378pt.
- [4 <./image/PESTA/material/Load_Cell_1.jpg> <./image/PESTA/general/strain_gaug
-e_1.jpg>]) [5]
+) [4 <./image/PESTA/material/Load_Cell_1.jpg> <./image/PESTA/general/strain_gau
+ge_1.jpg>] [5]
 (input/page/Desenvolvimento.tex
 Cap\'{\i }tulo 2.
 <./image/PESTA/kit/Kit_Desenvolvimento_2.jpg, id=87, 3014.26125pt x 1704.3675pt
@@ -1469,27 +1475,157 @@ mr/m/n/12 , e pos-sí-vel fa-zer \T1/cmr/m/it/12 down-load \T1/cmr/m/n/12 para
 
 [14
 
-] (input/End.tex (input/excerpt/Definition_1.tex
+] (input/End.tex
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(28.45274pt, 560.51923pt, 8.5359pt)
+* v-part:(T,H,B)=(28.45274pt, 808.0582pt, 8.5359pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=560.51923pt
+* \textheight=808.0582pt
+* \oddsidemargin=-43.81725pt
+* \evensidemargin=-43.81725pt
+* \topmargin=-80.81725pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
 Ap\^endice A.
+(input/excerpt/Code/main_c.tex [15
+
+
+] [16] [17]
+Overfull \hbox (7.44208pt too wide) in paragraph at lines 199--199
+[]        \T1/cmtt/m/n/12 //lcd0.string_size(function.ftoa(hx.get_cal(&hx)->div
+factor_128, result, ZERO), 13);[] 
+ []
+
+[18] [19] [20]) [21] (input/excerpt/Code/explode_h.tex) [22]
+(input/excerpt/Code/explode_c.tex [23] [24]) [25]
+(input/excerpt/Code/atmega128interrupt_h.tex
+Overfull \hbox (1.26859pt too wide) in paragraph at lines 16--16
+[]    \T1/cmtt/m/n/12 #error "This library requires AVR-GCC 3.4 or later, updat
+e to newer AVR-GCC compiler !"[] 
+ []
+
+) [26] (input/excerpt/Code/atmega128interrupt_c.tex [27] [28] [29]
+Overfull \hbox (1.26859pt too wide) in paragraph at lines 183--183
+[]            \T1/cmtt/m/n/12 // The falling edge between two samples of INTn g
+enerates an interrupt request.[] 
+ []
+
+
+Overfull \hbox (1.26859pt too wide) in paragraph at lines 205--205
+[]            \T1/cmtt/m/n/12 // The falling edge between two samples of INTn g
+enerates an interrupt request.[] 
+ []
+
+[30]
+Overfull \hbox (1.26859pt too wide) in paragraph at lines 227--227
+[]            \T1/cmtt/m/n/12 // The falling edge between two samples of INTn g
+enerates an interrupt request.[] 
+ []
+
+
+Overfull \hbox (1.26859pt too wide) in paragraph at lines 249--249
+[]            \T1/cmtt/m/n/12 // The falling edge between two samples of INTn g
+enerates an interrupt request.[] 
+ []
+
+[31] [32]) [33] (input/excerpt/Code/atmega128timer_h.tex
+Overfull \hbox (1.26859pt too wide) in paragraph at lines 17--17
+[]    \T1/cmtt/m/n/12 #error "This library requires AVR-GCC 3.4 or later, updat
+e to newer AVR-GCC compiler !"[] 
+ []
+
+[34]) [35] (input/excerpt/Code/atmega128timer_c.tex [36] [37] [38]
+Overfull \hbox (1.26859pt too wide) in paragraph at lines 173--173
+[]\T1/cmtt/m/n/12 /************************************************************
+*****************************/[] 
+ []
+
+[39] [40]
+Overfull \hbox (1.26859pt too wide) in paragraph at lines 311--311
+[]\T1/cmtt/m/n/12 /************************************************************
+*****************************/[] 
+ []
+
+[41] [42] [43]
+Overfull \hbox (1.26859pt too wide) in paragraph at lines 454--454
+[]\T1/cmtt/m/n/12 /************************************************************
+*****************************/[] 
+ []
+
+[44] [45]
+Overfull \hbox (1.26859pt too wide) in paragraph at lines 603--603
+[]\T1/cmtt/m/n/12 /************************************************************
+*****************************/[] 
+ []
+
+[46]
+Overfull \hbox (32.13605pt too wide) in paragraph at lines 617--617
+[]        \T1/cmtt/m/n/12 TIMER_COUNTER2_CONTROL_REGISTER&=~(7<<CS20); // No cl
+ock source. (Timer/Counter stopped)[] 
+ []
+
+[47]
+Overfull \hbox (1.26859pt too wide) in paragraph at lines 698--698
+[]\T1/cmtt/m/n/12 /************************************************************
+*****************************/[] 
+ []
+
+[48] [49] [50] [51] [52] [53]) [54] (input/excerpt/Code/function_h.tex [55])
+[56] (input/excerpt/Code/function_c.tex [57] [58] [59] [60] [61] [62] [63]
+[64] [65] [66] [67] [68] [69]) [70] (input/excerpt/Code/lcd_h.tex) [71]
+(input/excerpt/Code/lcd_c.tex [72] [73] [74] [75] [76] [77] [78] [79] [80])
+[81] (input/excerpt/Code/hx711_h.tex [82]) [83] (input/excerpt/Code/hx711_c.tex
+[84] [85] [86] [87]) [88] (input/excerpt/Code/eeprom_h.tex
+Overfull \hbox (1.26859pt too wide) in paragraph at lines 16--16
+[]    \T1/cmtt/m/n/12 #error "This library requires AVR-GCC 3.4 or later, updat
+e to newer AVR-GCC compiler !"[] 
+ []
+
+) [89] (input/excerpt/Code/eeprom_c.tex) [90] (input/excerpt/Definition_1.tex
+Ap\^endice B.
 
 Overfull \hbox (46.71495pt too wide) in paragraph at lines 3--34
 [] []
  []
 
 )
-Overfull \hbox (46.71495pt too wide) in paragraph at lines 35--5
+Overfull \hbox (46.71495pt too wide) in paragraph at lines 35--53
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--5
+Underfull \hbox (badness 10000) in paragraph at lines 35--53
 
  []
 
-[15
+[91
+
 
 ] (input/excerpt/Physic_1.tex
-Ap\^endice B.
+Ap\^endice C.
 
 Underfull \hbox (badness 10000) in paragraph at lines 6--23
 
@@ -1530,7 +1666,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--48
 
  []
 
-<./image/General/Einstein.jpg, id=140, 255.95625pt x 179.16937pt>
+<./image/General/Einstein.jpg, id=381, 255.95625pt x 179.16937pt>
 File: ./image/General/Einstein.jpg Graphic file (type jpg)
 <use ./image/General/Einstein.jpg>
 Package pdftex.def Info: ./image/General/Einstein.jpg  used on input line 65.
@@ -1550,20 +1686,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--1
 
  []
 
-[16
+[92
 
- <./image/General/Einstein.jpg>] [17]) [18
+ <./image/General/Einstein.jpg>] [93]) [94
 
-]) [19] (Relatorio.aux
+]) [95] (Relatorio.aux
 (include/SETUP/ConfigurePage.aux) (include/CAPA/CAPAREPORT_2.aux)
 (include/CONTRACAPA/CONTRACAPAREPORT_2.aux) (include/SETUP/Abstract.aux)
 (include/SETUP/ContentFigureTable.aux) (include/SETUP/Acronym.aux)) ) 
 Here is how much of TeX's memory you used:
- 35916 strings out of 480790
- 849472 string characters out of 2907055
- 1370802 words of memory out of 3000000
- 51248 multiletter control sequences out of 15000+200000
- 561575 words of font info for 96 fonts, out of 3000000 for 9000
+ 36027 strings out of 480790
+ 852712 string characters out of 2907055
+ 1371674 words of memory out of 3000000
+ 51307 multiletter control sequences out of 15000+200000
+ 562275 words of font info for 97 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  65i,22n,74p,1042b,485s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users
@@ -1572,38 +1708,39 @@ Here is how much of TeX's memory you used:
 k> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm
 0800.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
 0\ecti0800.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
-/dpi600\tcti1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
-pen/ec/dpi600\tcbi0800.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour
-/public/eurosym/dpi720\feymr10.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/p
-k/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\f
-onts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\sergi\AppData\Local\Mi
-KTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\sergi\AppData\Lo
-cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi1200.pk> <C:\Users\sergi\AppD
-ata\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\serg
-i\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0800.pk> <C:\User
-s\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C
-:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.
-pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecb
-x1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi6
-00\tcrm1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/e
-c/dpi600\ecrm1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jkna
-ppen/ec/dpi600\ecrm1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfou
-r/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk
-/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fo
-nts/pk/ljfour/jknappen/ec/dpi600\ecti1440.pk> <C:\Users\sergi\AppData\Local\MiK
-TeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk><C:/Program Files/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/pub
-lic/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pf
-b><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program
- Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/
-public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfont
-s/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.p
-fb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Relatorio.pdf (29 pages, 6587744 bytes).
+/dpi600\ecbi1728.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
+pen/ec/dpi600\tcti1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour
+/jknappen/ec/dpi600\tcbi0800.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/
+ljfour/public/eurosym/dpi720\feymr10.pk> <C:\Users\sergi\AppData\Local\MiKTeX\f
+onts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\sergi\AppData\Local\Mi
+KTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\sergi\AppData\Lo
+cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\sergi\AppD
+ata\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi1200.pk> <C:\Users\serg
+i\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\User
+s\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0800.pk> <C
+:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.
+pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ect
+i1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi6
+00\ecbx1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/e
+c/dpi600\tcrm1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jkna
+ppen/ec/dpi600\ecrm1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfou
+r/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk
+/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fo
+nts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\sergi\AppData\Local\MiK
+TeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1440.pk> <C:\Users\sergi\AppData\Loc
+al\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk><C:/Program Files/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cm
+mi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/P
+rogram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/c
+msy6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on Relatorio.pdf (105 pages, 6698958 bytes).
 PDF statistics:
- 790 PDF objects out of 1000 (max. 8388607)
+ 1112 PDF objects out of 1200 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  138 words of extra memory for PDF output out of 10000 (max. 10000000)
 

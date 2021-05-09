@@ -19,7 +19,7 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
   7 .debug_abbrev 0000171a  00000000  00000000  0000a160  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   00003a05  00000000  00000000  0000b87a  2**0
+  8 .debug_line   00003a06  00000000  00000000  0000b87a  2**0
                   CONTENTS, READONLY, DEBUGGING
   9 .debug_frame  00000e5c  00000000  00000000  0000f280  2**2
                   CONTENTS, READONLY, DEBUGGING
@@ -4642,12 +4642,13 @@ int main(void)
 	if(choice == 1)
     1f2e:	81 30       	cpi	r24, 0x01	; 1
     1f30:	41 f4       	brne	.+16     	; 0x1f42 <main+0x272>
-		divfactor = (uint16_t) HX711_data.divfactor_128;
+		divfactor = 
     1f32:	80 91 bc 01 	lds	r24, 0x01BC	; 0x8001bc <HX711_data+0xe>
     1f36:	90 e0       	ldi	r25, 0x00	; 0
     1f38:	90 93 2e 02 	sts	0x022E, r25	; 0x80022e <divfactor+0x1>
     1f3c:	80 93 2d 02 	sts	0x022D, r24	; 0x80022d <divfactor>
     1f40:	1d c0       	rjmp	.+58     	; 0x1f7c <main+0x2ac>
+		(uint16_t) HX711_data.divfactor_128;
 	if(choice == 2)
     1f42:	c2 54       	subi	r28, 0x42	; 66
     1f44:	df 4f       	sbci	r29, 0xFF	; 255
