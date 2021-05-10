@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  9 MAY 2021 19:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  10 MAY 2021 01:45
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
@@ -1385,13 +1385,18 @@ File: ./image/PESTA/flowchart/Interrupt_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/flowchart/Interrupt_1.jpg>
 Package pdftex.def Info: ./image/PESTA/flowchart/Interrupt_1.jpg  used on input
  line 174.
-(pdftex.def)             Requested size: 31.72289pt x 51.79248pt.
+(pdftex.def)             Requested size: 51.64256pt x 84.3144pt.
 <./image/PESTA/flowchart/Interrupt_2.jpg, id=121, 73.77562pt x 120.45pt>
 File: ./image/PESTA/flowchart/Interrupt_2.jpg Graphic file (type jpg)
 <use ./image/PESTA/flowchart/Interrupt_2.jpg>
 Package pdftex.def Info: ./image/PESTA/flowchart/Interrupt_2.jpg  used on input
  line 182.
-(pdftex.def)             Requested size: 31.72289pt x 51.79248pt.
+(pdftex.def)             Requested size: 51.64256pt x 84.3144pt.
+
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 171--191
+[]$[]$ $[]$ 
+ []
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 171--191
 
@@ -1697,7 +1702,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--1
 Here is how much of TeX's memory you used:
  36027 strings out of 480790
  852712 string characters out of 2907055
- 1371674 words of memory out of 3000000
+ 1371673 words of memory out of 3000000
  51307 multiletter control sequences out of 15000+200000
  562275 words of font info for 97 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1738,9 +1743,9 @@ MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/
 type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/a
 msfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/c
 msy6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Relatorio.pdf (105 pages, 6698949 bytes).
+Output written on Relatorio.pdf (105 pages, 6698571 bytes).
 PDF statistics:
- 1112 PDF objects out of 1200 (max. 8388607)
+ 1111 PDF objects out of 1200 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  138 words of extra memory for PDF output out of 10000 (max. 10000000)
 
