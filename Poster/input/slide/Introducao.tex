@@ -22,40 +22,64 @@
 }
 \column{0.5}
 \block{Informação e Controlo}{
-	Tratamento dos valores medidos, conversão de sinal medido pelo sensor para analógico e depois electrico, conversão de analógico para digital usando medidas discretas, tirando varias amostras para obter uma média depois dedução de sua massa.\\
-	Um \textit{Frontend} de controlo intuitivo, com respectivo offset e meio de calibração para a celula que estiver a ser usada.\\
-	Uma balança electrónica simples.
-	\vspace{.1cm}
+	Tratamento dos valores medidos, conversão de sinal medido pelo sensor para analógico, conversão de analógico para digital usando medidas discretas, tirando varias amostras para obter uma média depois dedução de sua massa.\\
+	Um \textit{Frontend} de controlo intuitivo, com respectivo \textit{offset} e meio de calibração para a celula que estiver a ser usada. \qquad Uma balança electrónica simples.
 }
 \end{columns}
 \begin{columns}
 \column{1}
 \block{Conclusões}{
 	\bigskip
-	you can even put stuff in color boxes.\\
 	\coloredbox{
-		send
-	}
-	\coloredbox{
-		\begin{minipage}[b!]{.2\linewidth}
-		Efeitos:
-		\begin{itemize}
-			\item Ruido
-			\item Temperatura
-			\item Humidade
-			\item \textit{Long term shift}
-			\item Histerese
-		\end{itemize}
+		\hspace{.2cm}
+		\textbf{Importancia:}\\ \\
+		\begin{minipage}[b!]{.37\linewidth}
+			\begin{itemize}
+				\item Acumolação de conhecimentos e documentação (\textbf{\textit{github}}).
+				\item Utilização das ferramentas (multimetro, osciloscopio, \textbf{IDE}, etc).
+				\item Leitura e interpretação de \textit{datasheets} e manuais.
+			\end{itemize}
 		\end{minipage}
-		\begin{minipage}[b!]{.8\linewidth}
-			explain eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-			\vfill
-		\end{minipage}	
+		\begin{minipage}[b!]{.3\linewidth}
+			\begin{itemize}
+				\item Criar uma methologia de trabalho estavel.
+				\item Pesquisar de literatura.
+				\item Dominar a linguagem \textbf{C}.
+			\end{itemize}
+		\end{minipage}
+		\begin{minipage}[b!]{.4\linewidth}
+			\begin{itemize}
+				\item Criar drivers e livrarias independentes.
+				\item Obter \textit{Know How} em diversas areas.
+				\item Experimentar.
+			\end{itemize}
+		\end{minipage}
 	}
 	\bigskip
+	\bigskip
+	\coloredbox{
+		\centering
+		\textbf{Efeitos Observados:} \\
+		\begin{minipage}[b!]{\linewidth}
+			\hspace{3cm}
+			\begin{minipage}[b!]{.2\linewidth}
+			\begin{itemize}
+				\item Ruido
+				\item Temperatura
+				\item Humidade
+				\item \textit{Long term shift}
+				\item Histerese
+			\end{itemize}
+			\end{minipage}
+			\begin{minipage}[b!]{.6\linewidth}
+				Ao executar este projecto teve de se ter em conta interferencia exteriores, tais como colocar o amplificador de sinal o mais proximo do sensor e afastado do ruido do circuito electrónico. Foi observado os efeito a longo prazo das leituras e seu desvio com fenomeno de histerese.
+				\vspace{1cm}
+			\end{minipage}
+		\end{minipage}
+	}
 	\vspace{5cm}
 }
-\note[targetoffsetx=-34cm, targetoffsety=-8cm, width=.3\linewidth]{
+\note[targetoffsetx=-34cm, targetoffsety=-8.5cm, width=.3\linewidth]{\bigskip
 	\texttt{https://github.com/sergio1020881/PESTA2021}
 }
 \end{columns}
