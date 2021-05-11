@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  11 MAY 2021 19:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  11 MAY 2021 22:06
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
@@ -884,8 +884,8 @@ Package babelbib Warning: Command \selectbiblanguage used without package
 babelbib: Set bibliography fall-back language to english
 ) (Relatorio.aux (include/SETUP/ConfigurePage.aux)
 (include/CAPA/CAPAREPORT_2.aux) (include/CONTRACAPA/CONTRACAPAREPORT_2.aux)
-(include/SETUP/Abstract.aux) (include/SETUP/ContentFigureTable.aux)
-(include/SETUP/Acronym.aux))
+(include/SETUP/Acknowledgement.aux) (include/SETUP/Abstract.aux)
+(include/SETUP/ContentFigureTable.aux) (include/SETUP/Acronym.aux))
 \openout1 = `Relatorio.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
@@ -1041,30 +1041,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--37
 
 
  <./image/capa/ISEP_marca_cor_grande.png>])
-\openout2 = `./include/SETUP/Abstract.aux'.
-
- (include/SETUP/Abstract.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--14
-
- []
+\openout2 = `./include/SETUP/Acknowledgement.aux'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--14
+(include/SETUP/Acknowledgement.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 5--10
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--14
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3--14
+Underfull \hbox (badness 10000) in paragraph at lines 5--10
 
  []
 
 [1
 
+
+
+
+]
+\openout2 = `./include/SETUP/Abstract.aux'.
+
+ (include/SETUP/Abstract.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--16
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--16
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--16
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--16
+
+ []
+
+[1
 
 
 ]) [0
@@ -1103,7 +1121,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--14
 
 ]) (input/page/Introducao.tex
 Cap\'{\i }tulo 1.
-<./image/PESTA/general/balanca_1.jpg, id=54, 642.4pt x 481.8pt>
+<./image/PESTA/general/balanca_1.jpg, id=58, 642.4pt x 481.8pt>
 File: ./image/PESTA/general/balanca_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/general/balanca_1.jpg>
 Package pdftex.def Info: ./image/PESTA/general/balanca_1.jpg  used on input lin
@@ -1114,13 +1132,13 @@ Overfull \hbox (67.09538pt too wide) in paragraph at lines 11--12
  [][] 
  []
 
-<./image/PESTA/general/balanca_4.jpg, id=55, 160.4394pt x 192.9609pt>
+<./image/PESTA/general/balanca_4.jpg, id=59, 160.4394pt x 192.9609pt>
 File: ./image/PESTA/general/balanca_4.jpg Graphic file (type jpg)
 <use ./image/PESTA/general/balanca_4.jpg>
 Package pdftex.def Info: ./image/PESTA/general/balanca_4.jpg  used on input lin
 e 20.
 (pdftex.def)             Requested size: 165.60695pt x 199.16928pt.
-<./image/PESTA/general/Weigh_Scale_Salter_1.jpg, id=56, 803.0pt x 982.67125pt>
+<./image/PESTA/general/Weigh_Scale_Salter_1.jpg, id=60, 803.0pt x 982.67125pt>
 File: ./image/PESTA/general/Weigh_Scale_Salter_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/general/Weigh_Scale_Salter_1.jpg>
 Package pdftex.def Info: ./image/PESTA/general/Weigh_Scale_Salter_1.jpg  used o
@@ -1163,14 +1181,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--39
 [1
 
  <./image/PESTA/general/balanca_1.jpg> <./image/PESTA/general/balanca_4.jpg>]
-<./image/PESTA/general/Public_Body_Scales_1.jpg, id=66, 383.18156pt x 248.42813
+<./image/PESTA/general/Public_Body_Scales_1.jpg, id=70, 383.18156pt x 248.42813
 pt>
 File: ./image/PESTA/general/Public_Body_Scales_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/general/Public_Body_Scales_1.jpg>
 Package pdftex.def Info: ./image/PESTA/general/Public_Body_Scales_1.jpg  used o
 n input line 47.
 (pdftex.def)             Requested size: 307.20636pt x 199.16928pt.
-<./image/PESTA/general/Balanca_Mola_1.jpg, id=67, 97.8054pt x 204.5241pt>
+<./image/PESTA/general/Balanca_Mola_1.jpg, id=71, 97.8054pt x 204.5241pt>
 File: ./image/PESTA/general/Balanca_Mola_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/general/Balanca_Mola_1.jpg>
 Package pdftex.def Info: ./image/PESTA/general/Balanca_Mola_1.jpg  used on inpu
@@ -1183,7 +1201,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--54
 
 [2 <./image/PESTA/general/Weigh_Scale_Salter_1.jpg> <./image/PESTA/general/Publ
 ic_Body_Scales_1.jpg> <./image/PESTA/general/Balanca_Mola_1.jpg>]
-<./image/PESTA/general/Scale_1.jpg, id=72, 1330.9725pt x 1039.63406pt>
+<./image/PESTA/general/Scale_1.jpg, id=77, 1330.9725pt x 1039.63406pt>
 File: ./image/PESTA/general/Scale_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/general/Scale_1.jpg>
 Package pdftex.def Info: ./image/PESTA/general/Scale_1.jpg  used on input line 
@@ -1199,14 +1217,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--69
 
  []
 
-<./image/PESTA/material/Load_Cell_1.jpg, id=73, 2337.73375pt x 1152.305pt>
+<./image/PESTA/material/Load_Cell_1.jpg, id=78, 2337.73375pt x 1152.305pt>
 File: ./image/PESTA/material/Load_Cell_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/material/Load_Cell_1.jpg>
 Package pdftex.def Info: ./image/PESTA/material/Load_Cell_1.jpg  used on input 
 line 74.
 (pdftex.def)             Requested size: 350.64493pt x 172.83829pt.
 [3 <./image/PESTA/general/Scale_1.jpg>]
-<./image/PESTA/general/strain_gauge_1.jpg, id=79, 630.10406pt x 381.67593pt>
+<./image/PESTA/general/strain_gauge_1.jpg, id=82, 630.10406pt x 381.67593pt>
 File: ./image/PESTA/general/strain_gauge_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/general/strain_gauge_1.jpg>
 Package pdftex.def Info: ./image/PESTA/general/strain_gauge_1.jpg  used on inpu
@@ -1216,7 +1234,7 @@ t line 81.
 ge_1.jpg>] [5]
 (input/page/Desenvolvimento.tex
 Cap\'{\i }tulo 2.
-<./image/PESTA/kit/Kit_Desenvolvimento_2.jpg, id=87, 3014.26125pt x 1704.3675pt
+<./image/PESTA/kit/Kit_Desenvolvimento_2.jpg, id=90, 3014.26125pt x 1704.3675pt
 >
 File: ./image/PESTA/kit/Kit_Desenvolvimento_2.jpg Graphic file (type jpg)
 <use ./image/PESTA/kit/Kit_Desenvolvimento_2.jpg>
@@ -1251,7 +1269,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--14
 [6
 
  <./image/PESTA/kit/Kit_Desenvolvimento_2.jpg>]
-<./image/PESTA/material/Prato.jpg, id=91, 2836.5975pt x 903.375pt>
+<./image/PESTA/material/Prato.jpg, id=94, 2836.5975pt x 903.375pt>
 File: ./image/PESTA/material/Prato.jpg Graphic file (type jpg)
 <use ./image/PESTA/material/Prato.jpg>
 Package pdftex.def Info: ./image/PESTA/material/Prato.jpg  used on input line 2
@@ -1268,27 +1286,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--50
  []
 
 [7 <./image/PESTA/material/Prato.jpg>]
-<./image/PESTA/schematic/HX711_Schematic_1.jpg, id=96, 628.59843pt x 310.91156p
+<./image/PESTA/schematic/HX711_Schematic_1.jpg, id=99, 628.59843pt x 310.91156p
 t>
 File: ./image/PESTA/schematic/HX711_Schematic_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/schematic/HX711_Schematic_1.jpg>
 Package pdftex.def Info: ./image/PESTA/schematic/HX711_Schematic_1.jpg  used on
  input line 59.
 (pdftex.def)             Requested size: 220.01274pt x 108.82066pt.
-<./image/PESTA/material/HX711_board_1.jpg, id=97, 2004.48875pt x 1071.00125pt>
+<./image/PESTA/material/HX711_board_1.jpg, id=100, 2004.48875pt x 1071.00125pt>
+
 File: ./image/PESTA/material/HX711_board_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/material/HX711_board_1.jpg>
 Package pdftex.def Info: ./image/PESTA/material/HX711_board_1.jpg  used on inpu
 t line 60.
 (pdftex.def)             Requested size: 200.46062pt x 107.1064pt.
-<./image/PESTA/graph/80SPS64GAIN/SPS_80.JPG, id=98, 731.73375pt x 534.99875pt>
+<./image/PESTA/graph/80SPS64GAIN/SPS_80.JPG, id=101, 731.73375pt x 534.99875pt>
+
 File: ./image/PESTA/graph/80SPS64GAIN/SPS_80.JPG Graphic file (type jpg)
 <use ./image/PESTA/graph/80SPS64GAIN/SPS_80.JPG>
 Package pdftex.def Info: ./image/PESTA/graph/80SPS64GAIN/SPS_80.JPG  used on in
 put line 67.
 (pdftex.def)             Requested size: 402.4548pt x 294.25021pt.
-<./image/PESTA/graph/80SPS128GAIN/Gain_128_example.JPG, id=99, 731.73375pt x 53
-4.99875pt>
+<./image/PESTA/graph/80SPS128GAIN/Gain_128_example.JPG, id=102, 731.73375pt x 5
+34.99875pt>
 File: ./image/PESTA/graph/80SPS128GAIN/Gain_128_example.JPG Graphic file (type 
 jpg)
 <use ./image/PESTA/graph/80SPS128GAIN/Gain_128_example.JPG>
@@ -1317,7 +1337,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--105
 
 [8 <./image/PESTA/schematic/HX711_Schematic_1.jpg> <./image/PESTA/material/HX71
 1_board_1.jpg> <./image/PESTA/graph/80SPS64GAIN/SPS_80.JPG>]
-<./image/PESTA/graph/80SPS64GAIN/Gain_64_example.JPG, id=103, 731.73375pt x 534
+<./image/PESTA/graph/80SPS64GAIN/Gain_64_example.JPG, id=107, 731.73375pt x 534
 .99875pt>
 File: ./image/PESTA/graph/80SPS64GAIN/Gain_64_example.JPG Graphic file (type jp
 g)
@@ -1327,13 +1347,13 @@ sed on input line 109.
 (pdftex.def)             Requested size: 256.11064pt x 187.25237pt.
  [9 <./image/PESTA/graph/80SPS128GAIN/Gain_128_example.JPG> <./image/PESTA/grap
 h/80SPS64GAIN/Gain_64_example.JPG>]
-<./image/PESTA/Code/read_raw.jpg, id=108, 313.9228pt x 420.82219pt>
+<./image/PESTA/Code/read_raw.jpg, id=111, 313.9228pt x 420.82219pt>
 File: ./image/PESTA/Code/read_raw.jpg Graphic file (type jpg)
 <use ./image/PESTA/Code/read_raw.jpg>
 Package pdftex.def Info: ./image/PESTA/Code/read_raw.jpg  used on input line 12
 1.
 (pdftex.def)             Requested size: 188.35512pt x 252.49525pt.
-<./image/PESTA/Code/Main_While_Balanca.jpg, id=109, 429.10312pt x 481.04718pt>
+<./image/PESTA/Code/Main_While_Balanca.jpg, id=112, 429.10312pt x 481.04718pt>
 File: ./image/PESTA/Code/Main_While_Balanca.jpg Graphic file (type jpg)
 <use ./image/PESTA/Code/Main_While_Balanca.jpg>
 Package pdftex.def Info: ./image/PESTA/Code/Main_While_Balanca.jpg  used on inp
@@ -1361,7 +1381,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 143--151
 
 [10 <./image/PESTA/Code/read_raw.jpg> <./image/PESTA/Code/Main_While_Balanca.jp
 g>]
-<./image/PESTA/flowchart/Main_Program_1.jpg, id=114, 620.3175pt x 724.20563pt>
+<./image/PESTA/flowchart/Main_Program_1.jpg, id=117, 620.3175pt x 724.20563pt>
 File: ./image/PESTA/flowchart/Main_Program_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/flowchart/Main_Program_1.jpg>
 Package pdftex.def Info: ./image/PESTA/flowchart/Main_Program_1.jpg  used on in
@@ -1373,20 +1393,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 160--161
  []
 
 [11 <./image/PESTA/flowchart/Main_Program_1.jpg>]
-<./image/PESTA/flowchart/Generic_structure.jpg, id=119, 1095.3422pt x 442.65375
+<./image/PESTA/flowchart/Generic_structure.jpg, id=122, 1095.3422pt x 442.65375
 pt>
 File: ./image/PESTA/flowchart/Generic_structure.jpg Graphic file (type jpg)
 <use ./image/PESTA/flowchart/Generic_structure.jpg>
 Package pdftex.def Info: ./image/PESTA/flowchart/Generic_structure.jpg  used on
  input line 165.
 (pdftex.def)             Requested size: 438.12912pt x 177.05835pt.
-<./image/PESTA/flowchart/Interrupt_1.jpg, id=120, 73.77562pt x 120.45pt>
+<./image/PESTA/flowchart/Interrupt_1.jpg, id=123, 73.77562pt x 120.45pt>
 File: ./image/PESTA/flowchart/Interrupt_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/flowchart/Interrupt_1.jpg>
 Package pdftex.def Info: ./image/PESTA/flowchart/Interrupt_1.jpg  used on input
  line 174.
 (pdftex.def)             Requested size: 51.64256pt x 84.3144pt.
-<./image/PESTA/flowchart/Interrupt_2.jpg, id=121, 73.77562pt x 120.45pt>
+<./image/PESTA/flowchart/Interrupt_2.jpg, id=124, 73.77562pt x 120.45pt>
 File: ./image/PESTA/flowchart/Interrupt_2.jpg Graphic file (type jpg)
 <use ./image/PESTA/flowchart/Interrupt_2.jpg>
 Package pdftex.def Info: ./image/PESTA/flowchart/Interrupt_2.jpg  used on input
@@ -1402,7 +1422,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 171--191
 
  []
 
-<./image/PESTA/Code/Livrarias.jpg, id=122, 172.39406pt x 228.855pt>
+<./image/PESTA/Code/Livrarias.jpg, id=125, 172.39406pt x 228.855pt>
 File: ./image/PESTA/Code/Livrarias.jpg Graphic file (type jpg)
 <use ./image/PESTA/Code/Livrarias.jpg>
 Package pdftex.def Info: ./image/PESTA/Code/Livrarias.jpg  used on input line 1
@@ -1480,7 +1500,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--12
 
 [14
 
-] (input/page/Anexos.tex
+] (input/End.tex (Relatorio.bbl) (input/page/Anexos.tex [15
+
+]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
@@ -1515,24 +1537,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--12
 
 
 Ap\^endice A.
-(input/excerpt/Code/main_c.tex [15
+(input/excerpt/Code/main_c.tex [16
 
 
-] [16] [17]
+] [17] [18]
 Overfull \hbox (7.44208pt too wide) in paragraph at lines 199--199
 []        \T1/cmtt/m/n/12 //lcd0.string_size(function.ftoa(hx.get_cal(&hx)->div
 factor_128, result, ZERO), 13);[] 
  []
 
-[18] [19] [20]) [21] (input/excerpt/Code/explode_h.tex) [22]
-(input/excerpt/Code/explode_c.tex [23] [24]) [25]
+[19] [20] [21]) [22] (input/excerpt/Code/explode_h.tex) [23]
+(input/excerpt/Code/explode_c.tex [24] [25]) [26]
 (input/excerpt/Code/atmega128interrupt_h.tex
 Overfull \hbox (1.26859pt too wide) in paragraph at lines 16--16
 []    \T1/cmtt/m/n/12 #error "This library requires AVR-GCC 3.4 or later, updat
 e to newer AVR-GCC compiler !"[] 
  []
 
-) [26] (input/excerpt/Code/atmega128interrupt_c.tex [27] [28] [29]
+) [27] (input/excerpt/Code/atmega128interrupt_c.tex [28] [29] [30]
 Overfull \hbox (1.26859pt too wide) in paragraph at lines 183--183
 []            \T1/cmtt/m/n/12 // The falling edge between two samples of INTn g
 enerates an interrupt request.[] 
@@ -1544,7 +1566,7 @@ Overfull \hbox (1.26859pt too wide) in paragraph at lines 205--205
 enerates an interrupt request.[] 
  []
 
-[30]
+[31]
 Overfull \hbox (1.26859pt too wide) in paragraph at lines 227--227
 []            \T1/cmtt/m/n/12 // The falling edge between two samples of INTn g
 enerates an interrupt request.[] 
@@ -1556,54 +1578,54 @@ Overfull \hbox (1.26859pt too wide) in paragraph at lines 249--249
 enerates an interrupt request.[] 
  []
 
-[31] [32]) [33] (input/excerpt/Code/atmega128timer_h.tex
+[32] [33]) [34] (input/excerpt/Code/atmega128timer_h.tex
 Overfull \hbox (1.26859pt too wide) in paragraph at lines 17--17
 []    \T1/cmtt/m/n/12 #error "This library requires AVR-GCC 3.4 or later, updat
 e to newer AVR-GCC compiler !"[] 
  []
 
-[34]) [35] (input/excerpt/Code/atmega128timer_c.tex [36] [37] [38]
+[35]) [36] (input/excerpt/Code/atmega128timer_c.tex [37] [38] [39]
 Overfull \hbox (1.26859pt too wide) in paragraph at lines 173--173
 []\T1/cmtt/m/n/12 /************************************************************
 *****************************/[] 
  []
 
-[39] [40]
+[40] [41]
 Overfull \hbox (1.26859pt too wide) in paragraph at lines 311--311
 []\T1/cmtt/m/n/12 /************************************************************
 *****************************/[] 
  []
 
-[41] [42] [43]
+[42] [43] [44]
 Overfull \hbox (1.26859pt too wide) in paragraph at lines 454--454
 []\T1/cmtt/m/n/12 /************************************************************
 *****************************/[] 
  []
 
-[44] [45]
+[45] [46]
 Overfull \hbox (1.26859pt too wide) in paragraph at lines 603--603
 []\T1/cmtt/m/n/12 /************************************************************
 *****************************/[] 
  []
 
-[46] [47]
+[47] [48]
 Overfull \hbox (1.26859pt too wide) in paragraph at lines 699--699
 []\T1/cmtt/m/n/12 /************************************************************
 *****************************/[] 
  []
 
-[48] [49] [50] [51] [52] [53]) [54] (input/excerpt/Code/function_h.tex [55])
-[56] (input/excerpt/Code/function_c.tex [57] [58] [59] [60] [61] [62] [63]
-[64] [65] [66] [67] [68] [69]) [70] (input/excerpt/Code/lcd_h.tex) [71]
-(input/excerpt/Code/lcd_c.tex [72] [73] [74] [75] [76] [77] [78] [79] [80])
-[81] (input/excerpt/Code/hx711_h.tex [82]) [83] (input/excerpt/Code/hx711_c.tex
-[84] [85] [86] [87]) [88] (input/excerpt/Code/eeprom_h.tex
+[49] [50] [51] [52] [53] [54]) [55] (input/excerpt/Code/function_h.tex [56])
+[57] (input/excerpt/Code/function_c.tex [58] [59] [60] [61] [62] [63] [64]
+[65] [66] [67] [68] [69] [70]) [71] (input/excerpt/Code/lcd_h.tex) [72]
+(input/excerpt/Code/lcd_c.tex [73] [74] [75] [76] [77] [78] [79] [80] [81])
+[82] (input/excerpt/Code/hx711_h.tex [83]) [84] (input/excerpt/Code/hx711_c.tex
+[85] [86] [87] [88]) [89] (input/excerpt/Code/eeprom_h.tex
 Overfull \hbox (1.26859pt too wide) in paragraph at lines 16--16
 []    \T1/cmtt/m/n/12 #error "This library requires AVR-GCC 3.4 or later, updat
 e to newer AVR-GCC compiler !"[] 
  []
 
-) [89] (input/excerpt/Code/eeprom_c.tex) [90] (input/excerpt/Definition_1.tex
+) [90] (input/excerpt/Code/eeprom_c.tex) [91] (input/excerpt/Definition_1.tex
 Ap\^endice B.
 
 Overfull \hbox (46.71495pt too wide) in paragraph at lines 3--34
@@ -1620,7 +1642,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 35--53
 
  []
 
-[91
+[92
 
 
 ] (input/excerpt/Physic_1.tex
@@ -1665,82 +1687,77 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--48
 
  []
 
-<./image/General/Einstein.jpg, id=381, 255.95625pt x 179.16937pt>
+<./image/General/Einstein.jpg, id=388, 255.95625pt x 179.16937pt>
 File: ./image/General/Einstein.jpg Graphic file (type jpg)
 <use ./image/General/Einstein.jpg>
 Package pdftex.def Info: ./image/General/Einstein.jpg  used on input line 65.
 (pdftex.def)             Requested size: 153.57492pt x 107.50244pt.
 ))
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 3--14
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 3--5
 []$ $[]$ 
  []
 
 
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 3--14
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 3--5
 []$ $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--14
+Underfull \hbox (badness 10000) in paragraph at lines 3--5
 
  []
 
-[92
+[93
 
- <./image/General/Einstein.jpg>] [93] (input/End.tex (Relatorio.bbl)
-[94
-
-]) [95] (Relatorio.aux (include/SETUP/ConfigurePage.aux)
-(include/CAPA/CAPAREPORT_2.aux) (include/CONTRACAPA/CONTRACAPAREPORT_2.aux)
+ <./image/General/Einstein.jpg>] [94]) (Relatorio.aux
+(include/SETUP/ConfigurePage.aux) (include/CAPA/CAPAREPORT_2.aux)
+(include/CONTRACAPA/CONTRACAPAREPORT_2.aux) (include/SETUP/Acknowledgement.aux)
 (include/SETUP/Abstract.aux) (include/SETUP/ContentFigureTable.aux)
 (include/SETUP/Acronym.aux)) ) 
 Here is how much of TeX's memory you used:
- 36031 strings out of 480790
- 852831 string characters out of 2907055
- 1371674 words of memory out of 3000000
- 51308 multiletter control sequences out of 15000+200000
- 562275 words of font info for 97 fonts, out of 3000000 for 9000
+ 36035 strings out of 480790
+ 853283 string characters out of 2907055
+ 1372107 words of memory out of 3000000
+ 51309 multiletter control sequences out of 15000+200000
+ 560099 words of font info for 92 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  65i,22n,74p,1042b,485s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/lj
-four/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts
-/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\sergi\AppData\Local\MiKTeX
-\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\sergi\AppData\Local\
-MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti0800.pk> <C:\Users\sergi\AppData\
-Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi1728.pk> <C:\Users\sergi\Ap
-pData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcti1200.pk> <C:\Users\se
-rgi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcbi0800.pk> <C:\Us
-ers\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/eurosym/dpi720\feymr10.pk
-> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1
+four/jknappen/ec/dpi600\ecti0800.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts
+/pk/ljfour/jknappen/ec/dpi600\ecbi1728.pk> <C:\Users\sergi\AppData\Local\MiKTeX
+\fonts/pk/ljfour/jknappen/ec/dpi600\tcti1200.pk> <C:\Users\sergi\AppData\Local\
+MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcbi0800.pk> <C:\Users\sergi\AppData\
+Local\MiKTeX\fonts/pk/ljfour/public/eurosym/dpi720\feymr10.pk> <C:\Users\sergi\
+AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\
+sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\
+Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi1200.pk
+> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1
 095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600
-\ecbx1728.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/
-dpi600\ectt1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknapp
-en/ec/dpi600\ecbi1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/
-jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/l
-jfour/jknappen/ec/dpi600\tcrm0800.pk> <C:\Users\sergi\AppData\Local\MiKTeX\font
-s/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\sergi\AppData\Local\MiKTe
-X\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\sergi\AppData\Local
-\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\sergi\AppData
-\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\sergi\A
-ppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\s
-ergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\U
-sers\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk>
- <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm14
-40.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\
-ecti1440.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
-pi600\ecbx2074.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex1
-0.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Pr
-ogram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/c
-mr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/P
-rogram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files
-/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Relatorio.pdf (105 pages, 6697833 bytes).
+\tcrm0800.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/
+dpi600\ecbx2488.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknapp
+en/ec/dpi600\ecti1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/
+jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/l
+jfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\sergi\AppData\Local\MiKTeX\font
+s/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\sergi\AppData\Local\MiKTe
+X\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\sergi\AppData\Local
+\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\sergi\AppData
+\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\sergi\A
+ppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\s
+ergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1440.pk> <C:\U
+sers\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk>
+<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program 
+Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfo
+nts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.
+pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Progr
+am Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmsy8.pfb>
+Output written on Relatorio.pdf (105 pages, 6695018 bytes).
 PDF statistics:
- 1110 PDF objects out of 1200 (max. 8388607)
+ 1091 PDF objects out of 1200 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  138 words of extra memory for PDF output out of 10000 (max. 10000000)
 
