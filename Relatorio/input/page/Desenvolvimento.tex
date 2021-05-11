@@ -23,8 +23,9 @@ A montagem da mesa de medição,
 \end{figure}
 \subsection{Material}
 Abaixo esta indicado uma tabela dos materiais usados, assim como os preços. 
-\begin{table}[H]
-	{\rowcolors{3}{blue!80!yellow!50}{blue!70!yellow!40}
+\begin{table}[H]{
+		\caption{Lista de material}
+		\rowcolors{3}{blue!80!yellow!50}{blue!70!yellow!40}
 		\begin{tabular}{ |p{12cm}|c|p{2cm}|  }
 			\hline
 			\multicolumn{3}{|c|}{Lista de Material} \\
@@ -47,7 +48,6 @@ Abaixo esta indicado uma tabela dos materiais usados, assim como os preços.
 			\hline
 		\end{tabular}
 	}
-	\caption{Lista de material}
 	\label{material}
 \end{table}
 \newpage
@@ -74,6 +74,7 @@ A livraria (driver) criada recorre a interrupções periódicas quando o sinal d
 \begin{minipage}[!b]{.40\linewidth}
 	\begin{table}[H]
 		\captionsetup{justification=raggedright,singlelinecheck=false}
+		\caption{Configuração Ganho}
 		\begin{tabular}{ | c | c | c |  }
 			\hline
 			\makecell[c]{PD\_SCK \\ Impulsos} & Entrada  & Ganho \\
@@ -85,8 +86,7 @@ A livraria (driver) criada recorre a interrupções periódicas quando o sinal d
 			\hline
 			27 & \textbf{A} & 64 \\
 			\hline
-		\end{tabular}	
-		\caption{Configuração Ganho}
+		\end{tabular}
 		\label{Gain_Selection}
 	\end{table}
 	\vfill
@@ -137,8 +137,12 @@ O codigo que executa esta rotina é demonstrado. \\
 \newline
 \vspace{.2cm}
 \newline
-Após obter um numero determinado de valores discretos é calculado sua média \\
-$\left( \overline{x}  =  \frac{1}{n}\sum_{i=1}^n x_i \right)$ para ser tratado e deduzido o valor correspondente da massa.
+Após obter um numero determinado de valores discretos é calculado sua média
+\begin{equation}
+	\label{eq:Mean}
+	\overline{x}  =  \frac{1}{n}\sum_{i=1}^n x_i
+\end{equation}
+para ser tratado e deduzido o valor correspondente da massa.
 \subsection*{Testar}
 Quanto a funcionalidade no seu todo a balança tem \textcolor{blue}{quatro} botões e \textcolor{blue}{três} \textit{leds} ativados, um botão para fazer o \textit{offset} no \textcolor{green}{PORTF 0}, e dois botões com dupla função, fazer \textit{reset} para \textit{default} e incrementar, outro para entrar no menu de calibração e decrementar, o \textcolor{blue}{quarto} botão é reservado para \textit{enter} e assumir o valor introduzido na calibração.\\
 \\
@@ -150,7 +154,7 @@ O botão \textcolor{green}{PORTF 4} quando premido durante \textcolor{blue}{cinc
 Para assumir o valor e sair do menu de calibração basta premir o botão colocado no \textcolor{green}{PORTF 5}. Tanto no caso de calibração ou de \textit{offset} os valores são guardados na \textbf{EEPROM} do microcontrolador, sendo que, se retirar a alimentação do circuito este não perde os valores e o \textit{led} \textcolor{red}{PORTC 5} permanece ligado.
 \newpage
 \section{Software}
-O \textbf{IDE} utilizado neste trabalho foi o \textbf{\textit{{Microchip Studio for AVR\textsuperscript{\textregistered} and SAM Devices}}} (\textit{verson: 7.0.2542}). A programação foi feita em Linguagem \textbf{C}, sua estrutura sintática esta abaixo mencionado:
+O \textbf{IDE} utilizado neste trabalho foi o \textbf{\textit{{Microchip Studio for AVR\textsuperscript{\textregistered} and SAM Devices}}} (\textit{version: 7.0.2542}). A programação foi feita em Linguagem \textbf{C}, sua estrutura sintática esta abaixo mencionado:
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.6]{./image/PESTA/flowchart/Main_Program_1.jpg}
