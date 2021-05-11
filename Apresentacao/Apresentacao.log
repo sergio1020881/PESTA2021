@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  10 MAY 2021 16:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  11 MAY 2021 20:36
 entering extended mode
 **./Apresentacao.tex
 (Apresentacao.tex
@@ -1140,22 +1140,22 @@ babelbib extension \btxifchangecaseoff added to \extrasportuguese
 File: ./image/PESTA/kit/Kit_Desenvolvimento_2.jpg Graphic file (type jpg)
 <use ./image/PESTA/kit/Kit_Desenvolvimento_2.jpg>
 Package pdftex.def Info: ./image/PESTA/kit/Kit_Desenvolvimento_2.jpg  used on i
-nput line 13.
-(pdftex.def)             Requested size: 301.44379pt x 170.44673pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 13.
+nput line 14.
+(pdftex.def)             Requested size: 211.01984pt x 119.31792pt.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 14.
 
 
 ("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 13.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 14.
 
 
 ("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 13.
+ut line 14.
 
 ("C:\Program Files\MiKTeX\tex/latex/sansmathaccent\ot1mathkerncmss.fd"
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
@@ -1251,10 +1251,10 @@ Package rerunfilecheck Info: File `Apresentacao.out' has not changed.
 (rerunfilecheck)             Checksum: 0B3D8BB8FD3AC715C359053A6D89890F;142.
  ) 
 Here is how much of TeX's memory you used:
- 24318 strings out of 480790
- 471519 string characters out of 2907055
+ 24319 strings out of 480790
+ 471531 string characters out of 2907055
  747203 words of memory out of 3000000
- 39653 multiletter control sequences out of 15000+200000
+ 39654 multiletter control sequences out of 15000+200000
  544245 words of font info for 54 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,20n,70p,849b,921s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1262,13 +1262,13 @@ Here is how much of TeX's memory you used:
 1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
 0\ectt1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
 /dpi600\ecsi1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
-pen/ec/dpi600\ecss1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour
-/jknappen/ec/dpi600\ecss0800.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/
+pen/ec/dpi600\ecss0800.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour
+/jknappen/ec/dpi600\ecss1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/
 ljfour/jknappen/ec/dpi600\ecss1440.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fon
 ts/pk/ljfour/jknappen/ec/dpi600\ecss0600.pk>
-Output written on Apresentacao.pdf (8 pages, 3314754 bytes).
+Output written on Apresentacao.pdf (8 pages, 3313356 bytes).
 PDF statistics:
- 577 PDF objects out of 1000 (max. 8388607)
+ 572 PDF objects out of 1000 (max. 8388607)
  20 named destinations out of 1000 (max. 500000)
  138 words of extra memory for PDF output out of 10000 (max. 10000000)
 
