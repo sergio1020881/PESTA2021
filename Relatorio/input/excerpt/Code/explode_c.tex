@@ -15,8 +15,8 @@ Pin Analysis
 #include"explode.h"
 /***Constant & Macro***/
 #ifndef GLOBAL_INTERRUPT_ENABLE
-#define STATUS_REGISTER SREG
-#define GLOBAL_INTERRUPT_ENABLE 7
+	#define STATUS_REGISTER SREG
+	#define GLOBAL_INTERRUPT_ENABLE 7
 #endif
 #define ZERO 0
 #define ONE 1
@@ -121,7 +121,7 @@ uint8_t EXPLODEPwr(uint8_t bs, uint8_t n)
 	uint8_t i, p;
 	p = ONE;
 	for (i = ONE; i <= n; ++i)
-	p = p * bs;
+		p = p * bs;
 	return p;
 }
 /***Interrupt***/
