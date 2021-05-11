@@ -614,7 +614,8 @@ default - clk T 0 S /1024 (From prescaler).
 ***/
 {
 	if(timer2_state==0){ // oneshot
-		TIMER_COUNTER2_CONTROL_REGISTER&=~(7<<CS20); // No clock source. (Timer/Counter stopped)
+		TIMER_COUNTER2_CONTROL_REGISTER&=~(7<<CS20);
+		// No clock source. (Timer/Counter stopped)
 		switch(prescaler){
 			case 1: // clkI/O/(No prescaling)
 			TIMER_COUNTER2_CONTROL_REGISTER|=(1<<CS20);

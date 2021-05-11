@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  11 MAY 2021 16:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  11 MAY 2021 16:13
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
@@ -1586,14 +1586,8 @@ Overfull \hbox (1.26859pt too wide) in paragraph at lines 603--603
 *****************************/[] 
  []
 
-[46]
-Overfull \hbox (32.13605pt too wide) in paragraph at lines 617--617
-[]        \T1/cmtt/m/n/12 TIMER_COUNTER2_CONTROL_REGISTER&=~(7<<CS20); // No cl
-ock source. (Timer/Counter stopped)[] 
- []
-
-[47]
-Overfull \hbox (1.26859pt too wide) in paragraph at lines 698--698
+[46] [47]
+Overfull \hbox (1.26859pt too wide) in paragraph at lines 699--699
 []\T1/cmtt/m/n/12 /************************************************************
 *****************************/[] 
  []
@@ -1744,7 +1738,7 @@ mr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/P
 rogram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files
 /MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX/fonts
 /type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Relatorio.pdf (105 pages, 6697862 bytes).
+Output written on Relatorio.pdf (105 pages, 6697833 bytes).
 PDF statistics:
  1110 PDF objects out of 1200 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
