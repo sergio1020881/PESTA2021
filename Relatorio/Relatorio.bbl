@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{book-9}
 Stephen Beeby, Graham Ensell, Michael Kraft, and Neil White.
@@ -14,6 +14,11 @@ John Bird.
 Richard~C. Dorf and Robert~H. Bishop.
 \newblock {\em Modern Control Systems, Thirteenth Edition}.
 \newblock Pearson Education, Inc, 2017.
+
+\bibitem{book-11}
+Steven F and Barret.
+\newblock {\em Embedded Systems Design with the Atmel AVR Microcontroller}.
+\newblock Morgan Claypool Publishers, 2009.
 
 \bibitem{book-6}
 Stephen Hawking.

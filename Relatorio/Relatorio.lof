@@ -2,7 +2,6 @@
 \babel@toc {portuguese}{}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Peso e Massa\relax }}{1}%
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Calendarização das tarefas\relax }}{3}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Balança medieval\relax }}{5}%
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Balança\relax }}{5}%
@@ -10,20 +9,27 @@
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Balanças de Mola\relax }}{6}%
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Balança eletrónica\relax }}{7}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Célula de Peso 50Kg\relax }}{8}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Fita metálica \textit {strain gauge} \cite {book-9}\relax }}{9}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Kit de Desenvolvimento\relax }}{8}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagrama Blocos\relax }}{8}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagrama Blocos\relax }}{9}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Fichas \textbf {ISP}\relax }}{9}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Célula de Peso 50Kg\relax }}{9}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Fita metálica \textit {strain gauge} \cite {book-9}\relax }}{10}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Ponte \textit {Wheatstone}\relax }}{10}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces \textit {Wheatstone} por resistências\relax }}{10}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Prato\relax }}{10}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Amplificador de Sinal [HX711]\relax }}{11}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Amostras\relax }}{12}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Ganho de 128\relax }}{13}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Ganho de 64\relax }}{13}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces PROGRAM 1\relax }}{13}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Leitura ADC\relax }}{13}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Estrutura do Programa\relax }}{15}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Sintaxe Genérica dos programas\relax }}{16}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces \textbf {ADC} conversão\relax }}{16}%
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Saltar de \textit {Menu}\relax }}{16}%
+\contentsline {figure}{\numberline {3.20}{\ignorespaces Livrarias\relax }}{16}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Kit de Desenvolvimento\relax }}{10}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Prato\relax }}{11}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Amplificador de Sinal [HX711]\relax }}{12}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Amostras\relax }}{12}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Ganho de 128\relax }}{13}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Ganho de 64\relax }}{13}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Leitura ADC\relax }}{14}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces PROGRAM 1\relax }}{14}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Estrutura do Programa\relax }}{15}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Sintaxe Genérica dos programas\relax }}{16}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces \textbf {ADC} conversão\relax }}{16}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Saltar de \textit {Menu}\relax }}{16}%
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Livrarias\relax }}{16}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
 \addvspace {10\p@ }

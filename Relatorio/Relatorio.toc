@@ -13,14 +13,14 @@
 \contentsline {section}{\numberline {1.4}ORGANIZAÇÃO DO RELATÓRIO}{4}%
 \contentsline {chapter}{\numberline {2}História da Balança}{5}%
 \contentsline {chapter}{\numberline {3}Balança Digital}{8}%
-\contentsline {section}{\numberline {3.1}Sensor}{8}%
-\contentsline {section}{\numberline {3.2}Amplificador}{9}%
-\contentsline {section}{\numberline {3.3}Informação}{9}%
-\contentsline {chapter}{\numberline {4}PROJECTO}{10}%
-\contentsline {section}{\numberline {4.1}Hardware}{10}%
-\contentsline {subsection}{\numberline {4.1.1}Material}{11}%
-\contentsline {section}{\numberline {4.2}Funcionamento}{12}%
-\contentsline {section}{\numberline {4.3}Software}{15}%
-\contentsline {section}{\numberline {4.4}Validação}{17}%
-\contentsline {chapter}{\numberline {5}CONCLUSÕES}{18}%
-\contentsline {chapter}{REFERÊNCIAS DOCUMENTAIS}{19}%
+\contentsline {section}{\numberline {3.1}sensor}{9}%
+\contentsline {section}{\numberline {3.2}Amplificador de sinal}{11}%
+\contentsline {section}{\numberline {3.3}Display LCD}{14}%
+\contentsline {section}{\numberline {3.4}Software}{15}%
+\contentsline {section}{\numberline {3.5}Validação}{17}%
+\contentsline {subsection}{\numberline {3.5.1}Material}{17}%
+\contentsline {chapter}{\numberline {4}CONCLUSÕES}{19}%
+\contentsline {chapter}{REFERÊNCIAS DOCUMENTAIS}{20}%
+\contentsline {chapter}{ANEXO \numberline {A}Código}{22}%
+\contentsline {chapter}{ANEXO \numberline {B}Definições}{94}%
+\contentsline {chapter}{ANEXO \numberline {C}Física}{95}%
