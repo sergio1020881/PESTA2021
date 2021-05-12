@@ -1,16 +1,26 @@
 \babel@toc {portuguese}{}
 \babel@toc {portuguese}{}
-\contentsline {chapter}{\numberline {1}Introdução}{1}%
-\contentsline {section}{\numberline {1.1}Sensor}{3}%
-\contentsline {section}{\numberline {1.2}Amplificador}{4}%
-\contentsline {section}{\numberline {1.3}Informação}{5}%
-\contentsline {chapter}{\numberline {2}Projecto}{6}%
-\contentsline {section}{\numberline {2.1}Hardware}{6}%
-\contentsline {subsection}{\numberline {2.1.1}Material}{7}%
-\contentsline {section}{\numberline {2.2}Funcionamento}{8}%
-\contentsline {section}{\numberline {2.3}Software}{11}%
-\contentsline {section}{\numberline {2.4}Validação}{13}%
-\contentsline {chapter}{\numberline {3}Conclusão}{14}%
-\contentsline {chapter}{Anexo \numberline {A}Código}{17}%
-\contentsline {chapter}{Anexo \numberline {B}Definições}{89}%
-\contentsline {chapter}{Anexo \numberline {C}Física}{90}%
+\contentsline {chapter}{AGRADECIMENTOS}{i}%
+\contentsline {chapter}{RESUMO}{i}%
+\contentsline {chapter}{ÍNDICE}{ii}%
+\contentsline {chapter}{ÍNDICE DE FiGURAS}{iii}%
+\contentsline {chapter}{ÍNDICE DE TABELAS}{v}%
+\contentsline {chapter}{ACRÓNIMOS}{vi}%
+\contentsline {chapter}{\numberline {1}INTRODUÇÃO}{1}%
+\contentsline {section}{\numberline {1.1}CONTEXTUALIZÃO}{1}%
+\contentsline {section}{\numberline {1.2}OBJECTIVOS}{2}%
+\contentsline {section}{\numberline {1.3}CALENDERIZAÇÃO}{3}%
+\contentsline {section}{\numberline {1.4}ORGANIZAÇÃO DO RELATÓRIO}{4}%
+\contentsline {chapter}{\numberline {2}História da Balança}{5}%
+\contentsline {chapter}{\numberline {3}Balança Digital}{8}%
+\contentsline {section}{\numberline {3.1}Sensor}{8}%
+\contentsline {section}{\numberline {3.2}Amplificador}{9}%
+\contentsline {section}{\numberline {3.3}Informação}{9}%
+\contentsline {chapter}{\numberline {4}PROJECTO}{10}%
+\contentsline {section}{\numberline {4.1}Hardware}{10}%
+\contentsline {subsection}{\numberline {4.1.1}Material}{11}%
+\contentsline {section}{\numberline {4.2}Funcionamento}{12}%
+\contentsline {section}{\numberline {4.3}Software}{15}%
+\contentsline {section}{\numberline {4.4}Validação}{17}%
+\contentsline {chapter}{\numberline {5}CONCLUSÕES}{18}%
+\contentsline {chapter}{REFERÊNCIAS DOCUMENTAIS}{19}%

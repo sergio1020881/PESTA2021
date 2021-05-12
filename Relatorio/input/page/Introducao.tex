@@ -1,4 +1,129 @@
-\chapter{Introdução}
+\chapter{INTRODUÇÃO}
+\begin{comment}
+\begin{verbatim}
+•	Contextualizar a proposta de trabalho no âmbito da empresa, de um outro trabalho já realizado, do ponto de vista científico e/ou tecnológico, etc.;
+•	apresentar de forma clara os objetivos que se propõe atingir;
+•	descrever de forma sucinta, mas objetiva, a solução preconizada ou a hipótese colocada;
+•	apresentar de forma resumida, mas clara, os desenvolvimentos efetuados;
+•	identificar como foi validada e avaliada a solução encontrada;
+•	descrever a organização do relatório.
+\end{verbatim}
+\end{comment}
+\section{CONTEXTUALIZÃO}
+\begin{comment}
+\begin{verbatim}
+	Este projeto [7] surgiu do desejo de realizar um trabalho no âmbito da gestão de redes baseadas na infraestrutura Simple Network Management Protocol (SNMP) [4][5][8][9], mas que simultaneamente se integrasse na plataforma de alarmes do Sistema de Gestão de Alarmes (SGA) da Portugal Telecom (PT).
+	Por coincidência, a PT tinha acabado de adquirir (à Alcatel) a nova rede de banda larga Internet Protocol (IP)—Multi Protocol Label Switching (MPLS), e assim surgiu a necessidade de integrar os alarmes gerados por esta infraestrutura (Figura 1) no SGA.
+	
+	
+	Figura 1	Arquitetura do OSS 5620 SAM-O [1]
+	Dada a pouca experiência, e conhecimento, sobre a aquisição de alarmes para este tipo de tecnologias, foi natural a proposta de incluir a integração, e tratamento, dos alarmes desta rede no âmbito do projeto. Esta inclusão refletiu-se no desenvolvimento de um processo de aquisição dos alarmes gerados e de um programa que formate os relatórios de alarme para o formato (normalizado) da notificação de alarme utilizado no SGA.
+\end{verbatim}
+\end{comment}
+Num mundo altamente mecanizado, a força e o torque dentro de todas as grandezas são as quantidades mais medidas. Estas tem um papel significante nos produtos de medição de massa e células de peso usadas na industria e retalho, para os automóveis e aeronaves, no aperto de tampas de frascos de medicina e parafusos.\cite{book-9}\\
+\\
+A massa é uma das grandezas fundamentais, uma propriedade intrínseca de um objeto, na qual mede sua resistência a aceleração.
+\begin{figure}[H]
+	\centering
+	\includegraphics[height=7cm]{./image/PESTA/fisica/mass.jpg}
+	\caption{Peso e Massa}
+	\label{mass}
+\end{figure}
+Através da medição do peso, isto é, a força gravitacional exercida num dado objeto podemos calcular a massa. \cite{book-2}\\
+\\
+As balanças digitais estão presentes no nosso dia a dia, são uma ferramenta indispensável na industria, comercio e laboratórios. Determinar a massa dos objetos é uma moeda de troca no comercio, e um pilar fundamental da física e seu desenvolvimentos. Existe uma demanda tanto da área comercial como industrial que empurra o desenvolvimento dos sensores para obter melhores resultados quanto a precisão e imunidade de influencias exteriores na medição das grandezas mencionadas.\\
+\\
+Devido a importância desta grandeza a massa, foi a razão de querer fazer este projeto e desenvolver uma balança digital para uso domestico usando os meios que estão disponíveis no mercado.
+\newpage
+\section{OBJECTIVOS}
+\begin{comment}
+\begin{verbatim}
+	O objetivo principal deste projeto é a aquisição dos alarmes provenientes da rede IP/MPLS da Alcatel e a sua integração no sistema atualmente em uso na PT. Dada a complexidade inerente a este objetivo, sentiu-se a necessidade de o subdividir em múltiplas tarefas de realização mais simples, tais como:
+	•	A reavaliação dos procedimentos de aquisição de alarmes;
+	•	O estudo do protocolo SNMP, nomeadamente o conceito e implementação de traps;
+	•	O funcionamento e configuração dos programas que suportam o processo de leitura, destacando-se o snmptrapd e o syslog-ng;
+	•	O desenvolvimento do programa que formate os relatórios de alarme para o formato (normalizado) da notificação de alarme utilizado no SGA;
+	•	O aperfeiçoamento e simplificação de processo de desenvolvimento dos formatadores.
+\end{verbatim}
+\end{comment}
+O Objetivo principal deste projeto é fazer uma balança digital economicamente viável, usando os sensores e equipamentos disponíveis no mercado, para ter um produto útil fácil de se replicar.
+\\
+\\
+Escolher o sensor adequado e meios de tratamento da informação e comunicação vai ser o objeto de estudo. Tendo relevo ser um \textit{Embeded System} e utilizar as ferramentas necessárias para o executar.
+\\
+\\
+No fim tentar aperfeiçoar, fazer melhorias, alterações e adaptações que possam surgir.
+\newpage
+\section{CALENDERIZAÇÃO}
+O segundo semestre teve inicio em 8 de Março, num ambiente de pandemia COVID-19 onde fomos forçados ao ensinamento a distancia, todo o trabalho teve de ser acompanhado \textit{online} pelos docentes, no entanto tive de organizar as tarefas pretendidas no plano abaixo descrito.
+\begin{comment}
+\begin{verbatim}
+	Sendo a aquisição dos alarmes provenientes da rede Alcatel IP/MPLS a motivação deste trabalho, a sua prossecução conduziu à calendarização apresentada na Tabela 1. Esta inclui um conjunto de tarefas, como por exemplo: o estudo da documentação do fabricante (Alcatel) da rede IP/MPLS adquirida pela PT; a implementação do coletor de alarmes, inserindo-o no processo de Recolha e Tratamento de Alarmes (RETA) [6]; teste e validação da solução proposta.
+\end{verbatim}
+\end{comment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
+\begin{tikzpicture}
+	\GanttHeader{\textwidth}{2ex}{4cm}{15}
+	\Task{1}{Requirement analysis}{0}{3}
+	\Task{2}{Devise an abstract}{0.5}{1}
+	\Task{3}{Develop interfaces}{3}{3}
+	\Task{4}{Adapt existing}{4.5}{3}
+	\Task{5}{Implement and evaluate}{5}{4.5}
+	\Task{6}{Specify Phase II design}{8}{3}
+	\Task{7}{Prepare final report}{11}{1}
+\end{tikzpicture}
+\end{comment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+	\caption{Calendarização das tarefas}
+	%\begin{sidewaysfigure}
+	\begin{ganttchart}[vgrid, hgrid]{1}{20}
+		\gantttitle{Março}{5} 
+		\gantttitle{Abril}{5}
+		\gantttitle{Maio}{5}
+		\gantttitle{Juno}{5}\\
+		\gantttitlelist{1,...,20}{1}\\
+		%First Group
+		\ganttgroup{Requisitos}{2}{10} \\
+		\ganttbar{Material}{3}{5} \\
+		\ganttbar{\textit{Template} LaTeX}{5}{10} \\
+		\ganttbar{\textbf{IDE} \textit{Template}}{3}{10}\\
+		%\ganttlink{elem0}{elem1}
+		%\ganttlink{elem1}{elem2}
+		%\ganttlink{elem2}{elem3}
+		%\ganttmilestone{Milestone 1}{11}
+		%Second Group
+		\ganttgroup{Projecto}{3}{20} \\
+		\ganttbar{Kit Desenvolvimento}{3}{4} \\
+		\ganttbar{Montagen Mesa Sensor}{5}{7} \\%5 7
+		\ganttbar{HX711 comunicação}{4}{10} \\%4 8
+		\ganttbar{Programção e Ensaio}{4}{20}\\
+		%\ganttlink{elem4}{elem5}
+		%\ganttlink{elem5}{elem6}
+		%\ganttlink{elem6}{elem7}
+		%\ganttmilestone{Milestone 1}{11}
+		%Third Group
+		\ganttgroup{Relatório}{9}{20} \\
+		\ganttbar{Literartura}{8}{12} \\
+		\ganttbar{Analise Documentação}{9}{12} \\
+		\ganttbar{Validação}{10}{12} \\
+		\ganttbar{Execução}{10}{20}
+		%\ganttlink{elem8}{elem9}
+		%\ganttlink{elem9}{elem10}
+		%\ganttlink{elem10}{elem11}
+		%\ganttmilestone{Milestone 1}{11}
+	\end{ganttchart}
+	\label{gantt}
+%\end{sidewaysfigure}
+\end{figure}
+\newpage
+\section{ORGANIZAÇÃO DO RELATÓRIO}
+No capítulo 1 é feita uma contextualização do trabalho realizado e do seu propósito face às necessidades do mundo atual.\\
+\\
+No capítulo 2 vai ser descrito uma breve historia da evolução das balanças, e depois um estudo da balança digital.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{História da Balança}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 As balanças foram criadas por necessidade durante o desenvolvimento do comercio na antiguidade, os produtos que não recorriam a contagem por unidades, tais como objetos irregulares por exemplo o ouro tinha de se quantificar seu valor, e a forma de medir sua massa tornou-se numa variável de medição para a troca de bens.\\
 \\
@@ -75,6 +200,7 @@ As células de peso capacitivas são outro exemplo de como obter um sinal propor
 	C = \varepsilon_{0} \; \varepsilon_{r} \; \frac{A}{d}
 \end{equation}
 Pode-se dizer que em todos os casos determina-se a força resultante através do deslocamento no espaço.
+\chapter{Balança Digital}
 \section{Sensor}
 Para medir a massa recorreu-se a uma \textbf{célula de peso} que determina a pressão exercida por um dado objeto, neste caso é um bloco de alumínio como indicado na \textit{figura} \ref{Load_Cell_1}, para isso ser possível este utiliza sensores Piezoresistivos numa montagem em ponte \textit{wheatstone} sobre essa superfície em locais determinados.
 \begin{figure}[H]
@@ -101,3 +227,21 @@ O processamento digital pode consistir de rotinas para compensar os desvios por 
 \\
 A comunicação trata de cuidar das rotinas necessárias para transferir e receber a informação e sinais de controle para a linha de comunicação com o sensor, e o processador toma lugar como componente central tratando a informação, guardar os dados e fazer rotinas tais como de calibração, teste e controlo de ganho da amplificação. \cite{book-9}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
+
+Measurement devices need to be robust to withstand changing environmental influences such as temperature, vibration, and humidity, and they must also provide reliable measurement over long periods of time. Mechanical interfacing of the devices can be difficult and can influence final measurement. The forces and torques may change rapidly, and so the devices must have adequate frequency and transient responses.\\
+There are several methods to measure forces and torques. Often, the force to be measured is converted into a change in length of a spring element. The change in dimensions is subsequently measured by a sensor, for example, a piezoresistive, a capacitive or a resonant sensor.\\
+It is not so surprising, therefore, that most force and torque measurement devices utilize the long and well-established resistance strain gauge technology.\\
+Unfortunately, the metallic resistance strain gauge is relatively insensitive such that in use it is normal to obtain only several millivolts of analog voltage before amplifi-
+cation, and the gauges must not be significantly overstrained. The rangeability and overloading capabilities are seriously restricted. Also, the gauges consume relatively high electrical power (e.g., 250 mW).\\
+In general, measurement instrumentation now needs smaller sensing devices of lower power consumption and with greater rangeability and overload capabilities.\\
+Greater compatibility with digital microelectronics is highly desirable. Noncontact and wireless operation is sometimes needed, and in some cases batteryless devices
+are desirable. Production of measurement devices using metallic resistance strain gauges can be relatively labor intensive and skilled, and may require relatively ineffi-cient calibration procedures.\\
+In recent years some instrument manufacturers of force and torque measure-ment devices have moved away from using resistance strain gauges. Already, one leading manufacturer of weighing machines for retail and industrial applications
+now uses metallic and quartz resonant tuning fork technologies, and smaller compa-nies have established niche markets using surface acoustic wave (SAW) technology, optical technology, and magnetoelastic technology.\\
+Further commercial developments are taking place to enhance device manufacturability and improve device sensitivity and robustness in operation. Measurement on stiffer structures at much lower strain levels is now possible. The worldwide sen-
+sor research base is very active in exploring MEMS for sensing force and torque, and the rest of this chapter will review the current situation and future prospects.\\
+\\
+The market pull provided by the automotive industry—for example,
+for manifold air pressure sensors—has led to the development of successful devices and technologies that have benefited a wide range of other pressure sensing applica-tions.
+\end{comment}

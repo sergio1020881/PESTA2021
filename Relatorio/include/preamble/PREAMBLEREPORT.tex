@@ -29,6 +29,9 @@
 \usepackage{amsfonts}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{pgfgantt}
+\usepackage{rotating}
+\usepackage[graphicx]{realboxes}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{array}
 \usepackage[export]{adjustbox}
@@ -102,6 +105,34 @@
 \tikzstyle{CIRCLE_1}=[draw,shape=circle,inner sep=2pt,text centered, node distance=3.5cm]
 \tikzstyle{CIRCLE_2}=[draw,shape=circle,inner sep=4pt,text centered, node distance=3.cm]
 \end{comment}
+%%%%%%%GANTT 1%%%%%%%
+\newganttchartelement*{mymilestone}{
+	mymilestone/.style={
+		shape=isosceles triangle,
+		inner sep=0pt,
+		draw=cyan,
+		top color=white,
+		bottom color=cyan!50
+	},
+	mymilestone incomplete/.style={
+		/pgfgantt/mymilestone,
+		draw=yellow,
+		bottom color=yellow!50
+	},
+	mymilestone label font=\slshape,
+	mymilestone left shift=0pt,
+	mymilestone right shift=0pt
+}
+
+\newgantttimeslotformat{stardate}{%
+	\def\decomposestardate##1.##2\relax{%
+		\def\stardateyear{##1}\def\stardateday{##2}%
+	}%
+	\decomposestardate#1\relax%
+	\pgfcalendardatetojulian{\stardateyear-01-01}{#2}%
+	\advance#2 by-1\relax%
+	\advance#2 by\stardateday\relax%
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % alguns pacotes nao sao reconhecidos, ter atencao quais usar em differents computadores, tambem alguns pacotes entram em conflito.
 \newtheorem{theorem}{Theorem}
