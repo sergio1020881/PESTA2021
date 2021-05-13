@@ -1,3 +1,4 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Balança Digital}
 Para o desenvolvimento deste projeto, foi criado um kit de desenvolvimento para facilitar sua implementação, testar, efetuar alterações e melhoramentos.
 \\
@@ -18,7 +19,7 @@ a seguir a \textit{figura} \ref{Block_diagram_1} representado os elementos em di
 \end{figure}
 \newpage
 Para programar este microcontrolador (\textbf{Atmega 128}) foi utilizado o programador da marca da Atmel precisamente o \textbf{Atmel-ICE} \textit{figura} \ref{Programador_1}, que para este equipamento tem disponível programação via \textit{In-System Programming} (\textbf{ISP}) \textit{figura} \ref{ISP_6_8_10pin} e \textit{Joint Test Action Group} (\textbf{JTAG}).
-\\
+\minipagespace{.5}
 \begin{minipage}[!b]{.5\linewidth}
 \begin{figure}[H]
 	\captionsetup{justification=raggedright,singlelinecheck=false}
@@ -42,6 +43,7 @@ Para programar este microcontrolador (\textbf{Atmega 128}) foi utilizado o progr
 \end{minipage}
 \section{sensor}
 Para medir a massa recorreu-se a uma \textbf{célula de peso} que determina a pressão exercida por um dado objeto, neste caso é um bloco de alumínio como indicado na \textit{figura} \ref{Load_Cell_1}, para isso ser possível este utiliza sensores Piezoresistivos numa montagem em ponte \textit{wheatstone} sobre essa superfície em locais determinados.
+\\
 \begin{figure}[H]
 	\captionsetup{justification=raggedright,singlelinecheck=false}
 	\flushleft
@@ -49,7 +51,9 @@ Para medir a massa recorreu-se a uma \textbf{célula de peso} que determina a pr
 	\caption{Célula de Peso 50Kg}
 	\label{Load_Cell_1}
 \end{figure}
+\figurespace{.5}
 Piezoresistividade deriva seu nome da palavra grega \textit{piezin}, que significa "pressionar". É um efeito exibido por vários materiais que exibem uma mudança na resistividade devido a uma pressão aplicada. O efeito foi descoberto pela primeira vez por Lord Kelvin em \textcolor{blue}{1856}, que notou que a resistência dos fios de cobre e ferro aumentava quando em tensão. Ele também observou que os fios de ferro apresentavam uma alteração maior na resistência do que os de cobre. A primeira aplicação do efeito piezoresistivo não apareceu até a década de \textcolor{blue}{1930}, cerca de \textcolor{blue}{75} anos após a descoberta de Lord Kelvin. Em vez de usar fios de metal, esses assim chamados medidores de tensão são geralmente feitos de uma folha de metal fina montada em uma película de suporte, que pode ser colada em uma superfície. O sensor de fita de metal típico é representado na \textit{figura} \ref{strain_gauge_1} \cite{book-9}.
+\\
 \\
 \begin{minipage}[!b]{.5\linewidth}
 \begin{figure}[H]
@@ -69,6 +73,7 @@ Piezoresistividade deriva seu nome da palavra grega \textit{piezin}, que signifi
 	\label{wheatstone_2}
 \end{figure}
 \end{minipage}
+\minipagespace{.5}
 \begin{minipage}[!b]{.4\linewidth}
 	\begin{figure}[H]
 		\captionsetup{justification=raggedright,singlelinecheck=false}
@@ -86,10 +91,9 @@ Piezoresistividade deriva seu nome da palavra grega \textit{piezin}, que signifi
 		&V_{AB}= \left(\frac{R_2}{R_1 + R_2} - \frac{R_4}{R_3 + R_4}\right) \; Vref \\
 		&e = \frac{R_2 R_3 - R_4 R_1}{(R_1 + R_2)(R_3 + R_4)} \; Vref
 	\end{align}
+	\minipagespace{.1}
 \end{minipage}
-\newline
-\vspace{.3cm}
-\newline
+\minipagespace{.5}
 Normalmente nestas aplicações só é usados um sensor ou dois sensores em que estão nos extremos opostos  ou ligados ao mesmo ponto da alimentação, só em casos muito raros são utilizados quatro na qual a configuração mecânica o permite. E como é óbvio se o valor das quatro resistências são iguais o erro na saída é nula, e quando os sensores estão opostos um ao outro a sensibilidade do sistema é máximo.
 \\
 \\
@@ -97,7 +101,7 @@ A montagem da mesa de medição \textit{figura} \ref{Prato},
 \\
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.15]{./image/PESTA/material/Prato.jpg}
+	\includegraphics[scale=0.1]{./image/PESTA/material/Prato.jpg}
 	\caption{Prato}
 	\label{Prato}
 \end{figure}
@@ -109,6 +113,7 @@ com quaisquer efeitos adversos, como o ruído, também em termos de \textit{layo
 \\
 A ligação destes componentes é intuitivo e fácil de se perceber, o que é complexo neste trabalho é a interligação destes equipamentos com o micro-controlador por meio de \textit{software} e criar o \textit{driver} de comunicação para a placa do amplificador de sinal, já que o protocolo de comunicação é proprietário.
 \\
+\\
 \begin{figure}[H]
 	\captionsetup{justification=raggedright,singlelinecheck=false}
 	\centering
@@ -117,7 +122,9 @@ A ligação destes componentes é intuitivo e fácil de se perceber, o que é co
 	\caption{Amplificador de Sinal [HX711]}
 	\label{HX711_Schematic_1}
 \end{figure}
+\figurespace{.5}
 A placa \textit{Load Cell Amplifier }pode ser programada fisicamente para determinar o numero de amostras por segundo a ser transmitido, tem opção de \textcolor{blue}{10} amostras por segundo e \textcolor{blue}{80} amostras, neste projeto optei pela segunda opção que necessita alteração na placa de circuito de impresso, isto é, abrir o \textit{jumper} respetivo de configuração.
+\\
 \\
 \begin{table}[H]
 	\centering
@@ -135,20 +142,24 @@ A placa \textit{Load Cell Amplifier }pode ser programada fisicamente para determ
 	\end{tabular}	
 	\label{HX711_connection}
 \end{table}
+\tablespace{.5}
 A conversão de informação é a transição entre o sinal continuo da vida real para um sinal discreto associado ao mundo digital, tipicamente esta etapa consiste na conversão analógica para digital.
 \\
 O processamento digital pode consistir de rotinas para compensar os desvios por linearização, compensação da sensibilidade e \textit{offset}, ou podem ser técnicas mais sofisticadas como reconhecimento de padrões (tais como redes neuronais) para equipamentos de sensores vetoriais.\cite{book-9}
 \\
-A comunicação trata de cuidar das rotinas necessárias para transferir e receber a informação e sinais de controle para a linha de comunicação com o sensor, e o processador toma lugar como componente central tratando a informação, guardar os dados e fazer rotinas tais como de calibração, teste e controlo de ganho da amplificação. \cite{book-9}
+A comunicação trata de cuidar das rotinas necessárias para transferir e receber a informação e sinais de controle para a linha de comunicação com o sensor, e o processador que toma lugar como componente central tratando a informação, guardar os dados e fazer rotinas tais como de calibração, teste e controlo de ganho da amplificação. \cite{book-9}
+\\
+\\
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.55]{./image/PESTA/graph/80SPS64GAIN/SPS_80.JPG}
 	\caption{Amostras}
 	\label{SPS_64}
 \end{figure}
-A livraria (driver) criada recorre a interrupções periódicas quando o sinal de \textit{data} vai para a massa, indicando assim que tem um pacote de leitura pronto a ser transmitido.\\
+\figurespace{.5}
+A livraria (\textit{driver}) criada recorre a interrupções periódicas quando o sinal de \textit{data} vai para a massa, indicando assim que tem um pacote de leitura pronto a ser transmitido.
 \\
-%%\begin{minipage}{\linewidth}
+\\
 \begin{minipage}[!b]{.40\linewidth}
 	\begin{table}[H]
 		\captionsetup{justification=raggedright,singlelinecheck=false}
@@ -167,14 +178,14 @@ A livraria (driver) criada recorre a interrupções periódicas quando o sinal d
 		\end{tabular}
 		\label{Gain_Selection}
 	\end{table}
-	\vspace{2cm}
+	\tablespace{2}
 \end{minipage}
 \begin{minipage}[l]{.6\linewidth}
 \vspace{.3cm}
-Como indicado abaixo no gráfico em que a linha \textcolor{yellow}{amarela} é a informação e a linha \textcolor{BlueGreen}{azul} o respetivo \textit{clock} que é gerado pelas interrupções do micro-controlador fazendo \textit{shift} dos \textcolor{blue}{24} bits, que depois no fim transmite para o amplificador o ganho de amplificação a ser usado pelo numero excedente de \textit{clock cycles}, que nesta demonstração \textit{figura} \ref{Gain_128_example} é \textcolor{blue}{um}, e corresponde a ganho de \textcolor{blue}{128}, respeitando a \textit{tabela} \ref{Gain_Selection},  e a sequir o exemplo da \textit{figura} \ref{Gain_64_3xample} com o ganho de \textcolor{blue}{64}, pois tem \textcolor{blue}{três} impulsos excedentes.
+Como indicado abaixo no gráfico em que a linha \textcolor{yellow}{amarela} é a informação e a linha \textcolor{BlueGreen}{azul} o respetivo \textit{clock} que é gerado pelas interrupções do micro-controlador fazendo \textit{shift} dos \textcolor{blue}{24} bits, que depois no fim transmite para o amplificador o ganho de amplificação a ser usado pelo numero excedente de \textit{clock cycles}, em que nesta demonstração \textit{figura} \ref{Gain_128_example} é \textcolor{blue}{um}, e corresponde a ganho de \textcolor{blue}{128}, respeitando a \textit{tabela} \ref{Gain_Selection},  e a sequir o exemplo da \textit{figura} \ref{Gain_64_example} com o ganho de \textcolor{blue}{64}, pois tem \textcolor{blue}{três} impulsos excedentes.
 \\
 \end{minipage}
-%%\end{minipage}
+\minipagespace{.5}
 \begin{minipage}[!b]{.5\linewidth}
 \begin{figure}[H]
 	\captionsetup{justification=raggedright,singlelinecheck=false}
@@ -194,10 +205,13 @@ Como indicado abaixo no gráfico em que a linha \textcolor{yellow}{amarela} é a
 	\label{Gain_64_example}
 \end{figure}
 \end{minipage}
+\minipagespace{.5}
 Para obter este resultado a livraria driver para o \textit{Load Cell Amplifier} teve de ter em consideração que o microcontrolador é de \textcolor{blue}{8} bits, porque o pacote de informação consiste de \textcolor{blue}{24} \textit{bits} e em que é transmitido primeiro o \textit{bit} \textbf{MSB}.
 \\
 \\
-O código que executa esta rotina é demonstrado na \textit{figura} \ref{read_raw} que é chamada pelas interrupções periódicas e só é ativa quando a função na \textit{figura} \ref{Main_While_Balanca} \textbf{hx.query(\&hx)} é verdadeira. \\
+O código que executa esta rotina é demonstrado na \textit{figura} \ref{read_raw} que é chamada pelas interrupções periódicas e só é ativa quando a função na \textit{figura} \ref{Main_While_Balanca} \textbf{hx.query(\&hx)} é verdadeira.
+\\
+\\
 \begin{minipage}[l]{\linewidth}
 \begin{minipage}[l]{.60\linewidth}
 \begin{figure}[H]
@@ -219,9 +233,7 @@ O código que executa esta rotina é demonstrado na \textit{figura} \ref{read_ra
 	\end{figure}
 \end{minipage}
 \end{minipage}
-\newline
-\vspace{.2cm}
-\newline
+\minipagespace{.5}
 Após obter um numero determinado de valores discretos é calculado sua média
 \begin{equation}
 	\label{eq:Mean}
@@ -237,6 +249,7 @@ Uma livraria na qual já tinha feito para outros projetos serviu para aplicar ne
 \\
 \\
 Abaixo esta uma tabela \ref{LCD_connections} com as respetivas ligações.
+\\
 \\
 \begin{table}[H]
 	\centering
@@ -270,15 +283,18 @@ Abaixo esta uma tabela \ref{LCD_connections} com as respetivas ligações.
 \section{Software}
 O \textbf{IDE} utilizado neste trabalho foi o \textbf{\textit{{Microchip Studio for AVR\textsuperscript{\textregistered} and SAM Devices}}} (\textit{version: 7.0.2542}). A programação foi feita em Linguagem \textbf{C}, sua estrutura sintática esta abaixo mencionado:
 \\
+\\
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.6]{./image/PESTA/flowchart/Main_Program_1.jpg}
 	\caption{Estrutura do Programa}
 	\label{Main_Program_1}
 \end{figure}
+\figurespace{.5}
 O \textit{PROGRAM 1} é onde corre o programa da balança, e o \textit{PROGRAM 2} usado para calibração do \textit{Gain Factor}. \\
 \newpage
 Todos os programas sequem uma estrutura sintatica recursiva usando o seguinte modelo.
+\\
 \\
 \begin{figure}[H]
 	\centering
@@ -286,7 +302,9 @@ Todos os programas sequem uma estrutura sintatica recursiva usando o seguinte mo
 	\caption{Sintaxe Genérica dos programas}
 	\label{Geneic_structure}
 \end{figure}
+\figurespace{.5}
 Duas interrupções periódicas estão sempre a correr em \textit{background}, uma para fazer o \textit{shift} dos \textit{bit´s} da conversão \textbf{ADC} feita pelo amplificador de sinal HX711 e outra interrupção periódica de segundo em segundo usado para saltar de \textit{Menu} pelos botões.
+\\
 \\
 \begin{minipage}{\linewidth}
 \begin{minipage}{.5\linewidth}
@@ -305,12 +323,11 @@ Duas interrupções periódicas estão sempre a correr em \textit{background}, u
 	\label{Interrupt_2}
 \end{figure}
 \end{minipage}
-\newline
-\vspace{.1cm}
-\newline
+\end{minipage}
+\minipagespace{.5}
 Consultar código para leitura das rotinas de interrupção nas folhas \textit{anexas}.
 \\
-\end{minipage}
+\\
 \begin{minipage}{.40\linewidth}
 \begin{figure}[H]
 	\flushleft
@@ -340,7 +357,9 @@ O sensor usado é o mais comum nesta pratica, e escolha demonstrada, o circuito 
 \\
 \\
 \subsection{Material}
-Abaixo esta indicado uma tabela dos materiais usados, assim como os preços. 
+Abaixo esta indicado uma tabela dos materiais usados, assim como os preços.
+\\
+\\
 \begin{table}[H]{
 		\caption{Lista de material}
 		\rowcolors{3}{blue!80!yellow!50}{blue!70!yellow!40}
@@ -380,63 +399,7 @@ O botão \textcolor{green}{PORTF 4} quando premido durante \textcolor{blue}{cinc
 \\
 Para assumir o valor e sair do menu de calibração basta premir o botão colocado no \textcolor{green}{PORTF 5}. Tanto no caso de calibração ou de \textit{offset} os valores são guardados na \textbf{EEPROM} do microcontrolador, sendo que, se retirar a alimentação do circuito este não perde os valores e o \textit{led} \textcolor{red}{PORTC 5} permanece ligado.
 \\
-
-
-
-\begin{comment}
-\begin{figure}[tbp]
-	\begin{center}
-		
-		\begin{ganttchart}[y unit title=0.4cm,
-			y unit chart=0.5cm,
-			vgrid,hgrid, 
-			title label anchor/.style={below=-1.6ex},
-			title left shift=.05,
-			title right shift=-.05,
-			title height=1,
-			bar/.style={fill=gray!50},
-			incomplete/.style={fill=white},
-			progress label text={},
-			bar height=0.7,
-			group right shift=0,
-			group top shift=.6,
-			group height=.3,
-			%group peaks={}{}{.2}]{24}
-			%labels
-			\gantttitle{Week}{24} \\
-			\gantttitle{Monday}{4} 
-			\gantttitle{Tuesday}{4} 
-			\gantttitle{Wednesday}{4} 
-			\gantttitle{Thursday}{4} 
-			\gantttitle{Friday}{4} 
-			\gantttitle{Saturday}{4} \\
-			%tasks
-			\ganttbar{first task}{1}{2} \\
-			\ganttbar{task 2}{3}{8} \\
-			\ganttbar{task 3}{9}{10} \\
-			\ganttbar{task 4}{11}{15} \\
-			\ganttbar[progress=33]{task 5}{20}{22} \\
-			\ganttbar{task 6}{18}{19} \\
-			\ganttbar{task 7}{16}{18} \\
-			\ganttbar[progress=0]{task 8}{1}{24}
-			
-			%relations 
-			\ganttlink{elem0}{elem1} 
-			\ganttlink{elem0}{elem3} 
-			\ganttlink{elem1}{elem2} 
-			\ganttlink{elem3}{elem4} 
-			\ganttlink{elem1}{elem5} 
-			\ganttlink{elem3}{elem5} 
-			\ganttlink{elem2}{elem6} 
-			\ganttlink{elem3}{elem6} 
-			\ganttlink{elem5}{elem7} 
-		\end{ganttchart}
-	\end{center}
-	\caption{Gantt Chart}
-\end{figure}
-\end{comment}
-
-
+\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{comment}
 Sem contar com as despesas no equipamento para a programação do hardware que em principio só se gasta uma vez, isto é, se não se estragar. No caso do programador \textbf{Atmel-ICE} pode custar até \EUR{185.55}.\\
@@ -446,14 +409,8 @@ $\begin{array}{l l l}
 \text{Média} & & \\
 \overline{x} & = & \frac{1}{n}\sum_{i=1}^n x_i
 \end{array}$
-MEMS devices and structures are fabricated using conventional integrated circuit
-process techniques, such as lithography, deposition, and etching, together with a
-broad range of specially developed micromachining techniques. \cite{book-9}
-The three essential elements in conventional
-silicon processing are deposition, lithography, and etching. \cite{book-9}
+MEMS devices and structures are fabricated using conventional integrated circuit process techniques, such as lithography, deposition, and etching, together with a broad range of specially developed micromachining techniques. \cite{book-9}
+The three essential elements in conventional silicon processing are deposition, lithography, and etching. \cite{book-9}
 Sensitivity,Long-Term Drift e Temperature Effects (Span temperature hysteresis).
-%\newline
-%\vspace{.1cm}
-%\newline
 \end{comment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
