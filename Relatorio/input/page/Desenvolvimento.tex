@@ -243,7 +243,7 @@ Após obter um numero determinado de valores discretos é calculado sua média
 para ser tratado e deduzido o valor correspondente da massa.
 \newpage
 \section{Display LCD}
-O \textit{Liquid-Crystal Dispaly} (\textbf{LCD}) utilizado é de 4X20, isto é, quatro linhas de vinte caracteres cada, é o interface humano principal, e durante o projecto uma ferramenta extremamente útil também para fazer \textit{debug} e executar testes no código.
+O \textit{Liquid-Crystal Dispaly} (\textbf{LCD}) utilizado é de 4x20, isto é, quatro linhas de vinte caracteres cada, é o interface humano principal, e durante o projecto uma ferramenta extremamente útil também para fazer \textit{debug} e executar testes no código.
 \\
 \\
 Uma livraria na qual já tinha feito para outros projetos serviu para aplicar neste, poupando bastante tempo, revelando a importância de documentar os conhecimentos adquiridos. A livraria ou se preferem \textit{driver} esta \textit{anexado}.
@@ -275,13 +275,35 @@ Abaixo esta uma tabela \ref{LCD_connections} com as respetivas ligações.
 		14 & D7 & \textit{Data Pin 7} & Pin 7 \\
 		15 & LED+ & \textit{Led +5V} &  \\
 		16 & LED- & \textit{Led Ground} & \\
-		\multicolumn{3}{||c|}{Roboot LCD} & \multicolumn{1}{|l||}{Pin 3}\\ [1ex]
+		\multicolumn{3}{||c|}{\textit{Reboot} LCD} & \multicolumn{1}{|l||}{Pin 3}\\ [1ex]
 		\hline
 	\end{tabular}	
 	\label{LCD_connections}
 \end{table}
 \newpage
-\section{Software}
+\section{Micro-controlador}
+Os microcontroldores da \textbf{Atmel} de 8 e 32 bits são baseados na arquitetura avançada de \textbf{Harvard} na qual esta concebido para baixos consumos e performance.
+\\
+\\
+Este tipo de arquitetura tem dois  \textit{busses} (barramentos) um dedicado a leitura das instruções a executar e outra para escrita e leitura de \textit{data} (informação ou dados), isto assegura que uma nova instrução pode ser executada em cada ciclo de relógio, na qual elimina estados de espera quando não ha instruções prontas a executar.
+\\
+\\
+Nos microcontroladores da \textbf{AVR} os barramentos estão configurados de forma a dar prioridade ao barramento das instruções do \textbf{CPU} acesso a memoria flash enquanto o barramento da CPU de dados tem prioridade de acesso a \textbf{SRAM} (Static Random Access Memory).
+\\
+\\
+O espaço de memoria de dados é dividida em três, os \textbf{GPR} (General Purpose Registers) as \textbf{SFRs} (Special Function Registers) ou memoria de I/O e a \textit{data} \textbf{SRAM}.
+\\
+\\
+Os microcontroladores da \textbf{AVR} utiliza uma arquitetura de instruçõeses \textbf{RISC} (Reduced Instruction Set Computer ou Reduced COMPLEXITY Instruction Set Computer) na qual reduz a complexidade dos circuitos na codificação de cada instrução.
+\\
+\\
+Dai que os microcontroladores que se baseiam nestes tipos de arquitetura são sinonimo de código reduzido, alta performance e baixo consumo energético.
+\\
+\\
+
+
+
+\chapter{Software}
 O \textbf{IDE} utilizado neste trabalho foi o \textbf{\textit{{Microchip Studio for AVR\textsuperscript{\textregistered} and SAM Devices}}} (\textit{version: 7.0.2542}). A programação foi feita em Linguagem \textbf{C}, sua estrutura sintática esta abaixo mencionado:
 \\
 \\
@@ -292,8 +314,9 @@ O \textbf{IDE} utilizado neste trabalho foi o \textbf{\textit{{Microchip Studio 
 	\label{Main_Program_1}
 \end{figure}
 \figurespace{.5}
-O \textit{PROGRAM 1} é onde corre o programa da balança, e o \textit{PROGRAM 2} usado para calibração do \textit{Gain Factor}. \\
-\newpage
+O \textit{PROGRAM 1} é onde corre o programa da balança, e o \textit{PROGRAM 2} usado para calibração do \textit{Gain Factor}.
+\\
+\\
 Todos os programas sequem uma estrutura sintatica recursiva usando o seguinte modelo.
 \\
 \\
@@ -388,8 +411,6 @@ Abaixo esta indicado uma tabela dos materiais usados, assim como os preços.
 	}
 	\label{material}
 \end{table}
-
-
 \subsection*{Testar}
 Quanto a funcionalidade no seu todo a balança tem \textcolor{blue}{quatro} botões e \textcolor{blue}{três} \textit{leds} ativados, um botão para fazer o \textit{offset} no \textcolor{green}{PORTF 0}, e dois botões com dupla função, fazer \textit{reset} para \textit{default} e incrementar, outro para entrar no menu de calibração e decrementar, o \textcolor{blue}{quarto} botão é reservado para \textit{enter} e assumir o valor introduzido na calibração.\\
 \\

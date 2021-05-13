@@ -16,11 +16,12 @@
 \contentsline {section}{\numberline {3.1}sensor}{9}%
 \contentsline {section}{\numberline {3.2}Amplificador de sinal}{12}%
 \contentsline {section}{\numberline {3.3}Display LCD}{16}%
-\contentsline {section}{\numberline {3.4}Software}{17}%
-\contentsline {section}{\numberline {3.5}Validação}{20}%
-\contentsline {subsection}{\numberline {3.5.1}Material}{20}%
-\contentsline {chapter}{\numberline {4}CONCLUSÕES}{22}%
-\contentsline {chapter}{REFERÊNCIAS DOCUMENTAIS}{23}%
-\contentsline {chapter}{ANEXO \numberline {A}Código}{25}%
-\contentsline {chapter}{ANEXO \numberline {B}Definições}{97}%
-\contentsline {chapter}{ANEXO \numberline {C}Física}{98}%
+\contentsline {section}{\numberline {3.4}Micro-controlador}{17}%
+\contentsline {chapter}{\numberline {4}Software}{18}%
+\contentsline {section}{\numberline {4.1}Validação}{21}%
+\contentsline {subsection}{\numberline {4.1.1}Material}{21}%
+\contentsline {chapter}{\numberline {5}CONCLUSÕES}{23}%
+\contentsline {chapter}{REFERÊNCIAS DOCUMENTAIS}{24}%
+\contentsline {chapter}{ANEXO \numberline {A}Código}{26}%
+\contentsline {chapter}{ANEXO \numberline {B}Definições}{98}%
+\contentsline {chapter}{ANEXO \numberline {C}Física}{99}%
