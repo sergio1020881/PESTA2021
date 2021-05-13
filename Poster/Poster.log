@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  10 MAY 2021 22:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  14 MAY 2021 00:50
 entering extended mode
 **./Poster.tex
 (Poster.tex
@@ -943,12 +943,11 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<./image/Capa/ISEP_marca_cor_grande.png, id=28, 730.6497pt x 278.2395pt>
-File: ./image/Capa/ISEP_marca_cor_grande.png Graphic file (type png)
-<use ./image/Capa/ISEP_marca_cor_grande.png>
-Package pdftex.def Info: ./image/Capa/ISEP_marca_cor_grande.png  used on input 
-line 4.
-(pdftex.def)             Requested size: 284.52756pt x 108.35162pt.
+<./image/Capa/Header_1.png, id=28, 793.0428pt x 93.4692pt>
+File: ./image/Capa/Header_1.png Graphic file (type png)
+<use ./image/Capa/Header_1.png>
+Package pdftex.def Info: ./image/Capa/Header_1.png  used on input line 4.
+(pdftex.def)             Requested size: 1621.80708pt x 191.15811pt.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
 ("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -970,16 +969,14 @@ babelbib extension \btxifchangecaseoff added to \extrasportuguese
 Missing character: There is no 1 in font nullfont!
 Missing character: There is no = in font nullfont!
 Missing character: There is no 1 in font nullfont!
-File: ./image/Capa/ISEP_marca_cor_grande.png Graphic file (type png)
-<use ./image/Capa/ISEP_marca_cor_grande.png>
-Package pdftex.def Info: ./image/Capa/ISEP_marca_cor_grande.png  used on input 
-line 7.
-(pdftex.def)             Requested size: 284.52756pt x 108.35162pt.
-File: ./image/Capa/ISEP_marca_cor_grande.png Graphic file (type png)
-<use ./image/Capa/ISEP_marca_cor_grande.png>
-Package pdftex.def Info: ./image/Capa/ISEP_marca_cor_grande.png  used on input 
-line 7.
-(pdftex.def)             Requested size: 284.52756pt x 108.35162pt.
+File: ./image/Capa/Header_1.png Graphic file (type png)
+<use ./image/Capa/Header_1.png>
+Package pdftex.def Info: ./image/Capa/Header_1.png  used on input line 7.
+(pdftex.def)             Requested size: 1621.80708pt x 191.15811pt.
+File: ./image/Capa/Header_1.png Graphic file (type png)
+<use ./image/Capa/Header_1.png>
+Package pdftex.def Info: ./image/Capa/Header_1.png  used on input line 7.
+(pdftex.def)             Requested size: 1621.80708pt x 191.15811pt.
  (input/slide/Introducao.tex
 LaTeX Font Info:    Trying to load font information for TS1+aer on input line 6
 .
@@ -1028,17 +1025,16 @@ Excluding 'comment' comment.) [1
 
 
 
-{C:/Users/sergi/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./image/Capa/IS
-EP_marca_cor_grande.png> <./image/PESTA/kit/Kit_Desenvolvimento_2.jpg>] (Poster
-.aux)
+{C:/Users/sergi/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./image/Capa/He
+ader_1.png> <./image/PESTA/kit/Kit_Desenvolvimento_2.jpg>] (Poster.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
  20477 strings out of 480790
- 429069 string characters out of 2907055
- 864106 words of memory out of 3000000
+ 428991 string characters out of 2907055
+ 864105 words of memory out of 3000000
  35982 multiletter control sequences out of 15000+200000
  585954 words of font info for 129 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1051,7 +1047,7 @@ onts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/p
 ublic/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfont
 s/cm/cmti12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.
 pfb>
-Output written on Poster.pdf (1 page, 1672759 bytes).
+Output written on Poster.pdf (1 page, 2401158 bytes).
 PDF statistics:
  73 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
