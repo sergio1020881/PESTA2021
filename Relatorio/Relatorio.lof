@@ -11,25 +11,27 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Kit de Desenvolvimento\relax }}{8}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Diagrama Blocos\relax }}{8}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagrama Blocos\relax }}{9}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Fichas \textbf {ISP}\relax }}{9}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Célula de Peso 50Kg\relax }}{9}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Fita metálica \textit {strain gauge} \cite {book-9}\relax }}{10}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Ponte \textit {Wheatstone}\relax }}{10}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces \textit {Wheatstone} por resistências\relax }}{10}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Prato\relax }}{11}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Amplificador de Sinal [HX711]\relax }}{12}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Amostras\relax }}{13}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Ganho de 128\relax }}{14}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Ganho de 64\relax }}{14}%
-\contentsline {figure}{\numberline {3.14}{\ignorespaces PROGRAM 1\relax }}{15}%
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Leitura ADC\relax }}{15}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Célula de Peso 50Kg\relax }}{9}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Fita metálica \textit {strain gauge} \cite {book-9}\relax }}{9}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Ponte \textit {Wheatstone}\relax }}{9}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces \textit {Wheatstone} por resistências\relax }}{10}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Prato\relax }}{11}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Amplificador de Sinal [HX711]\relax }}{12}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Amostras\relax }}{13}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Ganho de 128\relax }}{14}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Ganho de 64\relax }}{14}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces PROGRAM 1\relax }}{15}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Leitura ADC\relax }}{15}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Harvard Architecture\relax }}{17}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Atmega 128\relax }}{18}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Diagrama Blocos\relax }}{19}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Fichas \textbf {ISP}\relax }}{19}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Estrutura do Programa\relax }}{18}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Sintaxe Genérica dos programas\relax }}{19}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces \textbf {ADC} conversão\relax }}{19}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Saltar de \textit {Menu}\relax }}{19}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Livrarias\relax }}{20}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Estrutura do Programa\relax }}{20}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Sintaxe Genérica dos programas\relax }}{21}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces \textbf {ADC} conversão\relax }}{21}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Saltar de \textit {Menu}\relax }}{21}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Livrarias\relax }}{22}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

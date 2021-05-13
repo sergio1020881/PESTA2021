@@ -3,8 +3,6 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Relatorio.aux
 Reallocating 'name_of_file' (item size: 1) to 6 items.
 The style file: plain.bst
-Reallocating 'name_of_file' (item size: 1) to 34 items.
-A level-1 auxiliary file: ./include/SETUP/ConfigurePage.aux
 Reallocating 'name_of_file' (item size: 1) to 32 items.
 A level-1 auxiliary file: ./include/CAPA/CAPAREPORT_2.aux
 Reallocating 'name_of_file' (item size: 1) to 44 items.
@@ -21,7 +19,7 @@ Reallocating 'name_of_file' (item size: 1) to 28 items.
 Database file #1: ./bibliography/Bibliography.bib
 You've used 10 entries,
             2118 wiz_defined-function locations,
-            552 strings with 5305 characters,
+            551 strings with 5272 characters,
 and the built_in function-call counts, 2450 in all, are:
 = -- 212
 > -- 116
