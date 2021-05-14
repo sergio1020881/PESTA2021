@@ -6,7 +6,7 @@ License: GNU General Public License
 Hardware: all
 Date: 16032021
 Comment:
-
+	Pin Analysis
 ************************************************************************/
 #ifndef _EXPLODE_H_
 	#define _EXPLODE_H_

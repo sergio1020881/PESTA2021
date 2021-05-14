@@ -2,6 +2,7 @@
 	ATMEGA128INTERRUPT
 Author: Sergio Santos 
 	<sergio.salazar.santos@gmail.com>
+License: GNU General Public License
 Hardware: ATmega128
 Date: 25102020
 Comment:

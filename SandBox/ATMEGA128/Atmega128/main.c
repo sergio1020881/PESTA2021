@@ -16,7 +16,7 @@ Hardware: Atmega128 by ETT ET-BASE
 	-PORTC status indicator leds
 		PIN 5 -> Indicate using stored values
 		PIN 6 -> Reset to default indicator (blinks four times)
-		PIN 7 -> In Calibratio Menu (blinking)
+		PIN 7 -> In Calibration Menu (on)
 Comment:
 	nice
 ************************************************************************/
