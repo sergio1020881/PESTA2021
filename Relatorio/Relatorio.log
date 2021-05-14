@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  14 MAY 2021 20:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  14 MAY 2021 21:33
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
@@ -1872,6 +1872,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 470--12
 
 [23] [24] (input/page/Conclusao.tex
 Cap\'{\i }tulo 5.
+
+LaTeX Warning: Reference `anexo-main' on page 25 undefined on input line 20.
+
 )
 Underfull \hbox (badness 10000) in paragraph at lines 2--14
 
@@ -1912,79 +1915,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--14
 
 ] (input/End.tex (Relatorio.bbl) [26
 
-] (input/page/Anexos.tex [27]
-*geometry* verbose mode - [ newgeometry ] result:
-* driver: pdftex
-* paper: a4paper
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
-* h-part:(L,W,R)=(28.45274pt, 560.51923pt, 8.5359pt)
-* v-part:(T,H,B)=(28.45274pt, 808.0582pt, 8.5359pt)
-* \paperwidth=597.50787pt
-* \paperheight=845.04684pt
-* \textwidth=560.51923pt
-* \textheight=808.0582pt
-* \oddsidemargin=-43.81725pt
-* \evensidemargin=-43.81725pt
-* \topmargin=-80.81725pt
-* \headheight=12.0pt
-* \headsep=25.0pt
-* \topskip=12.0pt
-* \footskip=30.0pt
-* \marginparwidth=35.0pt
-* \marginparsep=10.0pt
-* \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
-
+] (input/page/Anexos.tex
+(input/excerpt/Definition_1.tex [27]
 ANEXO A.
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 7.
-
-("C:\Program Files\MiKTeX\tex/latex/psnfss\t1pcr.fd"
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-(input/excerpt/Code/main_c.tex [28
-
-
-] [29] [30] [31] [32] [33]) [34]
-(input/excerpt/Code/explode_h.tex) [35] (input/excerpt/Code/explode_c.tex
-[36] [37]) [38] (input/excerpt/Code/atmega128interrupt_h.tex) [39]
-(input/excerpt/Code/atmega128interrupt_c.tex [40] [41] [42] [43] [44]) [45]
-(input/excerpt/Code/atmega128timer_h.tex [46]) [47]
-(input/excerpt/Code/atmega128timer_c.tex [48] [49] [50] [51] [52] [53] [54]
-[55] [56] [57] [58] [59] [60] [61] [62] [63] [64]) [65]
-(input/excerpt/Code/function_h.tex [66]) [67]
-(input/excerpt/Code/function_c.tex [68] [69] [70] [71] [72] [73] [74] [75]
-[76] [77] [78] [79]) [80] (input/excerpt/Code/lcd_h.tex) [81]
-(input/excerpt/Code/lcd_c.tex [82] [83] [84] [85] [86] [87] [88] [89]) [90]
-(input/excerpt/Code/hx711_h.tex [91]) [92] (input/excerpt/Code/hx711_c.tex
-[93] [94] [95] [96]) [97] (input/excerpt/Code/eeprom_h.tex) [98]
-(input/excerpt/Code/eeprom_c.tex) [99] (input/excerpt/Definition_1.tex
-ANEXO B.
 
 Overfull \hbox (46.71495pt too wide) in paragraph at lines 3--34
 [] []
  []
 
 )
-Overfull \hbox (46.71495pt too wide) in paragraph at lines 35--72
+Overfull \hbox (46.71495pt too wide) in paragraph at lines 35--7
 [][] []
  []
 
-[100
-
+[28
 
 ] (input/excerpt/Physic_1.tex
-ANEXO C.
+ANEXO B.
 
 Underfull \hbox (badness 10000) in paragraph at lines 6--23
 
@@ -2025,40 +1972,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--48
 
  []
 
-<./image/General/Einstein.jpg, id=429, 255.95625pt x 179.16937pt>
+<./image/General/Einstein.jpg, id=199, 255.95625pt x 179.16937pt>
 File: ./image/General/Einstein.jpg Graphic file (type jpg)
 <use ./image/General/Einstein.jpg>
 Package pdftex.def Info: ./image/General/Einstein.jpg  used on input line 65.
 (pdftex.def)             Requested size: 153.57492pt x 107.50244pt.
-)) (input/excerpt/PeriodicTable.tex
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 3--160
+)))
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 3--17
 []$ $[]$ 
  []
 
 
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 3--160
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 3--17
 []$ $[]$ 
  []
 
-[101
+[29
 
- <./image/General/Einstein.jpg>])) [102] (Relatorio.aux
+ <./image/General/Einstein.jpg>] [30] (Relatorio.aux
 (include/CAPA/CAPAREPORT_2.aux) (include/CONTRACAPA/CONTRACAPAREPORT_2.aux)
 (include/SETUP/Acknowledgement.aux) (include/SETUP/Abstract.aux)
-(include/SETUP/ContentFigureTable.aux) (include/SETUP/Acronym.aux)) ) 
+(include/SETUP/ContentFigureTable.aux) (include/SETUP/Acronym.aux))
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 37790 strings out of 480790
- 895205 string characters out of 2907055
- 1409115 words of memory out of 3000000
- 53001 multiletter control sequences out of 15000+200000
- 564018 words of font info for 101 fonts, out of 3000000 for 9000
+ 37674 strings out of 480790
+ 891771 string characters out of 2907055
+ 1408977 words of memory out of 3000000
+ 52942 multiletter control sequences out of 15000+200000
+ 562682 words of font info for 98 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  73i,22n,74p,1048b,890s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users
-\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti0800.pk> <C:
-\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi1728.p
-k> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt
-1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
+ <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti
+0800.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
 0\ecrm1000.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
 /dpi600\ecrm0700.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/publi
 c/eurosym/dpi720\feymr10.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfo
@@ -2094,9 +2042,9 @@ iles/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fo
 nts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/pu
 blic/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts
 /cm/cmsy8.pfb>
-Output written on Relatorio.pdf (113 pages, 6232619 bytes).
+Output written on Relatorio.pdf (41 pages, 6111071 bytes).
 PDF statistics:
- 1318 PDF objects out of 1440 (max. 8388607)
+ 976 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  183 words of extra memory for PDF output out of 10000 (max. 10000000)
 

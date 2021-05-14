@@ -22,6 +22,5 @@
 \contentsline {subsection}{\numberline {4.1.1}Material}{23}%
 \contentsline {chapter}{\numberline {5}CONCLUSÕES}{25}%
 \contentsline {chapter}{REFERÊNCIAS DOCUMENTAIS}{26}%
-\contentsline {chapter}{ANEXO \numberline {A}Código}{28}%
-\contentsline {chapter}{ANEXO \numberline {B}Definições}{100}%
-\contentsline {chapter}{ANEXO \numberline {C}Física}{101}%
+\contentsline {chapter}{ANEXO \numberline {A}Definições}{28}%
+\contentsline {chapter}{ANEXO \numberline {B}Física}{29}%
