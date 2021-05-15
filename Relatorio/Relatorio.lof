@@ -22,10 +22,11 @@
 \contentsline {figure}{\numberline {3.11}{\ignorespaces Ganho de 64\relax }}{14}%
 \contentsline {figure}{\numberline {3.12}{\ignorespaces PROGRAM 1\relax }}{15}%
 \contentsline {figure}{\numberline {3.13}{\ignorespaces Leitura ADC\relax }}{15}%
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Harvard Architecture\relax }}{17}%
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Atmega 128\relax }}{18}%
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Diagrama Blocos\relax }}{19}%
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Fichas \textbf {ISP}\relax }}{19}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces LCD\relax }}{16}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Harvard Architecture\relax }}{17}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Atmega 128\relax }}{18}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Diagrama Blocos\relax }}{19}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Fichas \textbf {ISP}\relax }}{19}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Estrutura do Programa\relax }}{20}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Sintaxe Genérica dos programas\relax }}{21}%
