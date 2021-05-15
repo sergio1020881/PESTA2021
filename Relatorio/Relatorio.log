@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  15 MAY 2021 01:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  15 MAY 2021 17:35
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
@@ -142,6 +142,11 @@ Package caption Info: Standard document class detected.
 \c@caption@flags=\count185
 \c@continuedfloat=\count186
 )
+("C:\Program Files\MiKTeX\tex/latex/caption\subcaption.sty"
+Package: subcaption 2020/08/23 v1.3g Sub-captions (AR)
+\c@subfigure=\count187
+\c@subtable=\count188
+)
 ("C:\Program Files\MiKTeX\tex/latex/graphics\color.sty"
 Package: color 2019/11/23 v1.2a Standard LaTeX Color (DPC)
 
@@ -175,7 +180,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package xcolor Info: Package option `usenames' ignored on input line 216.
 Package xcolor Info: Driver file: pdftex.def on input line 225.
 LaTeX Info: Redefining \color on input line 709.
-\rownum=\count187
+\rownum=\count189
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
@@ -202,7 +207,7 @@ Package: paralist 2017/01/22 v2.7 Extended list environments
 )
 ("C:\Program Files\MiKTeX\tex/latex/float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count188
+\c@float@type=\count190
 \float@exts=\toks22
 \float@box=\box47
 \@float@everytoks=\toks23
@@ -216,9 +221,9 @@ Package: verbatim 2019/11/10 v1.5r LaTeX2e package for verbatim enhancements
 )
 ("C:\Program Files\MiKTeX\tex/latex/moreverb\moreverb.sty"
 Package: moreverb 2008/06/03 v2.3a `more' verbatim facilities
-\tab@position=\count189
-\tab@size=\count190
-\listing@line=\count191
+\tab@position=\count191
+\tab@size=\count192
+\listing@line=\count193
 )
 ("C:\Program Files\MiKTeX\tex/latex/lipsum\lipsum.sty"
 ("C:\Program Files\MiKTeX\tex/latex/l3kernel\expl3.sty"
@@ -226,33 +231,36 @@ Package: expl3 2020-06-18 L3 programming layer (loader)
 
 ("C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdfmode.def"
 File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count192
+\l__kernel_color_stack_int=\count194
 \l__pdf_internal_box=\box49
 ))
 ("C:\Program Files\MiKTeX\tex/latex/l3packages/xparse\xparse.sty"
 Package: xparse 2020-05-15 L3 Experimental document command parser
 
 ("C:\Program Files\MiKTeX\tex/latex/l3packages/xparse\xparse-generic.tex"
-\l__xparse_current_arg_int=\count193
-\g__xparse_grabber_int=\count194
-\l__xparse_m_args_int=\count195
-\l__xparse_v_nesting_int=\count196
+\l__xparse_current_arg_int=\count195
+\g__xparse_grabber_int=\count196
+\l__xparse_m_args_int=\count197
+\l__xparse_v_nesting_int=\count198
 ))
 Package: lipsum 2019/01/02 v2.2 150 paragraphs of Lorem Ipsum dummy text
 
 ("C:\Program Files\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex"
 File: lipsum.ltd.tex 2019/01/02 v2.2 The Lorem ipsum dummy text
 ))
+("C:\Program Files\MiKTeX\tex/latex/graphics\lscape.sty"
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
 ("C:\Program Files\MiKTeX\tex/latex/tools\multicol.sty"
 Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
-\c@tracingmulticols=\count197
+\c@tracingmulticols=\count199
 \mult@box=\box50
 \multicol@leftmargin=\dimen155
-\c@unbalance=\count198
-\c@collectmore=\count199
-\doublecol@number=\count266
-\multicoltolerance=\count267
-\multicolpretolerance=\count268
+\c@unbalance=\count266
+\c@collectmore=\count267
+\doublecol@number=\count268
+\multicoltolerance=\count269
+\multicolpretolerance=\count270
 \full@width=\dimen156
 \page@free=\dimen157
 \premulticols=\dimen158
@@ -303,27 +311,27 @@ Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
 \@tempa=\box91
 \@tempa=\box92
 \@tempa=\box93
-\c@minrows=\count269
-\c@columnbadness=\count270
-\c@finalcolumnbadness=\count271
+\c@minrows=\count271
+\c@columnbadness=\count272
+\c@finalcolumnbadness=\count273
 \last@try=\dimen161
 \multicolovershoot=\dimen162
 \multicolundershoot=\dimen163
 \mult@nat@firstbox=\box94
 \colbreak@box=\box95
-\mc@col@check@num=\count272
+\mc@col@check@num=\count274
 )
 ("C:\Program Files\MiKTeX\tex/latex/multirow\multirow.sty"
 Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
 \multirow@colwidth=\skip58
-\multirow@cntb=\count273
+\multirow@cntb=\count275
 \multirow@dima=\skip59
 \bigstrutjot=\dimen164
 )
 ("C:\Program Files\MiKTeX\tex/latex/makecell\makecell.sty"
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 \rotheadsize=\dimen165
-\c@nlinenum=\count274
+\c@nlinenum=\count276
 \TeXr@lab=\toks26
 )
 ("C:\Program Files\MiKTeX\tex/latex/amsfonts\amsfonts.sty"
@@ -355,13 +363,13 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 ("C:\Program Files\MiKTeX\tex/latex/amsmath\amsopn.sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count275
+\inf@bad=\count277
 LaTeX Info: Redefining \frac on input line 227.
-\uproot@=\count276
-\leftroot@=\count277
+\uproot@=\count278
+\leftroot@=\count279
 LaTeX Info: Redefining \overline on input line 389.
-\classnum@=\count278
-\DOTSCASE@=\count279
+\classnum@=\count280
+\DOTSCASE@=\count281
 LaTeX Info: Redefining \ldots on input line 486.
 LaTeX Info: Redefining \dots on input line 489.
 LaTeX Info: Redefining \cdots on input line 610.
@@ -370,15 +378,15 @@ LaTeX Info: Redefining \cdots on input line 610.
 \big@size=\dimen168
 LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
-\macc@depth=\count280
-\c@MaxMatrixCols=\count281
+\macc@depth=\count282
+\c@MaxMatrixCols=\count283
 \dotsspace@=\muskip16
-\c@parentequation=\count282
-\dspbrk@lvl=\count283
+\c@parentequation=\count284
+\dspbrk@lvl=\count285
 \tag@help=\toks29
-\row@=\count284
-\column@=\count285
-\maxfields@=\count286
+\row@=\count286
+\column@=\count287
+\maxfields@=\count288
 \andhelp@=\toks30
 \eqnshift@=\dimen169
 \alignsep@=\dimen170
@@ -395,6 +403,10 @@ LaTeX Info: Redefining \] on input line 2860.
 )
 ("C:\Program Files\MiKTeX\tex/latex/amsfonts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+("C:\Program Files\MiKTeX\tex/latex/jknappen\mathrsfs.sty"
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup6
 )
 ("C:\Program Files\MiKTeX\tex/latex/pgfgantt\pgfgantt.sty"
 Package: pgfgantt 2018/01/10 v5.0 Draw Gantt diagrams with TikZ
@@ -444,14 +456,14 @@ Package: pgfsys 2020/01/08 v3.1.5b (3.1.5b)
 \pgf@yd=\dimen186
 \w@pgf@writea=\write3
 \r@pgf@reada=\read4
-\c@pgf@counta=\count287
-\c@pgf@countb=\count288
-\c@pgf@countc=\count289
-\c@pgf@countd=\count290
+\c@pgf@counta=\count289
+\c@pgf@countb=\count290
+\c@pgf@countc=\count291
+\c@pgf@countd=\count292
 \t@pgf@toka=\toks37
 \t@pgf@tokb=\toks38
 \t@pgf@tokc=\toks39
-\pgf@sys@id@count=\count291
+\pgf@sys@id@count=\count293
 ("C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg"
 File: pgf.cfg 2020/01/08 v3.1.5b (3.1.5b)
 )
@@ -465,8 +477,8 @@ File: pgfsys-common-pdf.def 2020/01/08 v3.1.5b (3.1.5b)
 ))) ("C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.t
 ex"
 File: pgfsyssoftpath.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfsyssoftpath@smallbuffer@items=\count292
-\pgfsyssoftpath@bigbuffer@items=\count293
+\pgfsyssoftpath@smallbuffer@items=\count294
+\pgfsyssoftpath@bigbuffer@items=\count295
 ) ("C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex
 "
 File: pgfsysprotocol.code.tex 2020/01/08 v3.1.5b (3.1.5b)
@@ -478,7 +490,7 @@ Package: pgfcore 2020/01/08 v3.1.5b (3.1.5b)
 ("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathutil.code.tex")
 ("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathparser.code.tex"
 \pgfmath@dimen=\dimen187
-\pgfmath@count=\count294
+\pgfmath@count=\count296
 \pgfmath@box=\box99
 \pgfmath@toks=\toks40
 \pgfmath@stack@operand=\toks41
@@ -500,7 +512,7 @@ ode.tex")
 ("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmet
 ics.code.tex")))
 ("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfloat.code.tex"
-\c@pgfmathroundto@lastzeros=\count295
+\c@pgfmathroundto@lastzeros=\count297
 ))
 ("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfint.code.tex")
 ("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex"
@@ -535,7 +547,7 @@ File: pgfcorescopes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgfpic=\box100
 \pgf@hbox=\box101
 \pgf@layerbox@main=\box102
-\pgf@picture@serial@count=\count296
+\pgf@picture@serial@count=\count298
 )
 ("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.t
 ex"
@@ -566,8 +578,8 @@ File: pgfcorearrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex"
 File: pgfcoreshade.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgf@max=\dimen267
-\pgf@sys@shading@range@num=\count297
-\pgf@shadingcount=\count298
+\pgf@sys@shading@range@num=\count299
+\pgf@shadingcount=\count300
 )
 ("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex"
 File: pgfcoreimage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
@@ -621,7 +633,7 @@ Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
 ("C:\Program Files\MiKTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code
 .tex"
 File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@plot@mark@count=\count299
+\pgf@plot@mark@count=\count301
 \pgfplotmarksize=\dimen272
 )
 \tikz@lastx=\dimen273
@@ -636,18 +648,18 @@ File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \tikz@figbox@bg=\box106
 \tikz@tempbox=\box107
 \tikz@tempbox@bg=\box108
-\tikztreelevel=\count300
-\tikznumberofchildren=\count301
-\tikznumberofcurrentchild=\count302
-\tikz@fig@count=\count303
+\tikztreelevel=\count302
+\tikznumberofchildren=\count303
+\tikznumberofcurrentchild=\count304
+\tikz@fig@count=\count305
 
 ("C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmodulematrix.code.tex"
 File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfmatrixcurrentrow=\count304
-\pgfmatrixcurrentcolumn=\count305
-\pgf@matrix@numberofcolumns=\count306
+\pgfmatrixcurrentrow=\count306
+\pgfmatrixcurrentcolumn=\count307
+\pgf@matrix@numberofcolumns=\count308
 )
-\tikz@expandcount=\count307
+\tikz@expandcount=\count309
 
 ("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
 arytopaths.code.tex"
@@ -696,34 +708,34 @@ File: pgflibraryshapes.geometric.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 File: pgfcalendar.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 
 ("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfint.code.tex")
-\pgfcalendarcurrentjulian=\count308
-\pgf@cal@easter@Y=\count309
-\pgf@cal@easter@G=\count310
-\pgf@cal@easter@C=\count311
-\pgf@cal@easter@X=\count312
-\pgf@cal@easter@Z=\count313
-\pgf@cal@easter@D=\count314
-\pgf@cal@easter@E=\count315
-\pgf@cal@easter@N=\count316
-\pgf@cal@easter@M=\count317
-\pgf@cal@easter@julianday=\count318
+\pgfcalendarcurrentjulian=\count310
+\pgf@cal@easter@Y=\count311
+\pgf@cal@easter@G=\count312
+\pgf@cal@easter@C=\count313
+\pgf@cal@easter@X=\count314
+\pgf@cal@easter@Z=\count315
+\pgf@cal@easter@D=\count316
+\pgf@cal@easter@E=\count317
+\pgf@cal@easter@N=\count318
+\pgf@cal@easter@M=\count319
+\pgf@cal@easter@julianday=\count320
 ))
-\gtt@currentline=\count319
-\gtt@lasttitleline=\count320
-\gtt@currgrid=\count321
-\gtt@chartwidth=\count322
-\gtt@lasttitleslot=\count323
-\gtt@elementid=\count324
-\gtt@today@slot=\count325
-\gtt@startjulian=\count326
-\gtt@endjulian=\count327
-\gtt@chartid=\count328
-\gtt@vrule@slot=\count329
-\gtt@calendar@slots=\count330
-\gtt@calendar@weeknumber=\count331
-\gtt@calendar@startofweek=\count332
-\gtt@left@slot=\count333
-\gtt@right@slot=\count334
+\gtt@currentline=\count321
+\gtt@lasttitleline=\count322
+\gtt@currgrid=\count323
+\gtt@chartwidth=\count324
+\gtt@lasttitleslot=\count325
+\gtt@elementid=\count326
+\gtt@today@slot=\count327
+\gtt@startjulian=\count328
+\gtt@endjulian=\count329
+\gtt@chartid=\count330
+\gtt@vrule@slot=\count331
+\gtt@calendar@slots=\count332
+\gtt@calendar@weeknumber=\count333
+\gtt@calendar@startofweek=\count334
+\gtt@left@slot=\count335
+\gtt@right@slot=\count336
 )
 ("C:\Program Files\MiKTeX\tex/latex/graphics\rotating.sty"
 Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
@@ -731,7 +743,7 @@ Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
 ("C:\Program Files\MiKTeX\tex/latex/base\ifthen.sty"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\c@r@tfl@t=\count335
+\c@r@tfl@t=\count337
 \rotFPtop=\skip63
 \rotFPbot=\skip64
 \rot@float@box=\box111
@@ -757,7 +769,7 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 \XKV@toks=\toks46
 \XKV@tempa@toks=\toks47
 )
-\XKV@depth=\count336
+\XKV@depth=\count338
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))))
 ("C:\Program Files\MiKTeX\tex/latex/tools\tabularx.sty"
@@ -767,7 +779,7 @@ Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 \TX@old@col=\dimen284
 \TX@target=\dimen285
 \TX@delta=\dimen286
-\TX@cols=\count337
+\TX@cols=\count339
 \TX@ftn=\toks48
 )
 ("C:\Program Files\MiKTeX\tex/latex/adjustbox\adjustbox.sty"
@@ -795,12 +807,12 @@ File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 
 ("C:\Program Files\MiKTeX\tex/latex/ifoddpage\ifoddpage.sty"
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count338
+\c@checkoddpage=\count340
 )
 ("C:\Program Files\MiKTeX\tex/latex/varwidth\varwidth.sty"
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box113
-\sift@deathcycles=\count339
+\sift@deathcycles=\count341
 \@vwid@loff=\dimen299
 \@vwid@roff=\dimen300
 ))
@@ -830,7 +842,7 @@ Package: tracklang 2020/06/30 v1.5 (NLCT) Track Languages
 ("C:\Program Files\MiKTeX\tex/generic/tracklang\tracklang.tex"))
 ("C:\Program Files\MiKTeX\tex/latex/etoolbox\etoolbox.sty"
 Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count340
+\etb@tempcnta=\count342
 )
 ("C:\Program Files\MiKTeX\tex/latex/datetime2-portuges\datetime2-portuges.ldf"
 File: datetime2-portuges.ldf 2018/08/21 v1.1
@@ -857,8 +869,8 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@outerparindent=\dimen301
 \enit@toks=\toks49
 \enit@inbox=\box115
-\enit@count@id=\count341
-\enitdp@description=\count342
+\enit@count@id=\count343
+\enitdp@description=\count344
 )
 ("C:\Program Files\MiKTeX\tex/latex/tools\enumerate.sty"
 Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
@@ -903,9 +915,9 @@ File: pgflibrarycurvilinear.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 aryfpu.code.tex"
 ("C:\Program Files\MiKTeX\tex/generic/pgf/libraries\pgflibraryfpu.code.tex"))
 ("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcirc.defines.tex"
-\pgf@circ@count@a=\count343
-\pgf@circ@count@b=\count344
-\pgf@circ@count@c=\count345
+\pgf@circ@count@a=\count345
+\pgf@circ@count@b=\count346
+\pgf@circ@count@c=\count347
 \pgf@circ@res@up=\dimen313
 \pgf@circ@res@down=\dimen314
 \pgf@circ@res@zero=\dimen315
@@ -923,7 +935,7 @@ aryfpu.code.tex"
 ("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircmonopoles.tex")
 ("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircbipoles.tex")
 ("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcirctripoles.tex"
-\pgf@circ@res@count=\count346
+\pgf@circ@res@count=\count348
 )
 ("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircquadpoles.tex")
 ("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircmultipoles.tex")
@@ -957,7 +969,7 @@ File: tikzlibrarytrees.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 Writing index file Relatorio.idx
 
 Package babelbib Warning: Command \selectbiblanguage used without package
-(babelbib)                option fixlanguage. Ignored on input line 53.
+(babelbib)                option fixlanguage. Ignored on input line 58.
 
 babelbib: Set bibliography fall-back language to english
 )
@@ -965,34 +977,30 @@ babelbib: Set bibliography fall-back language to english
 \openout2 = `./include/SETUP/NewCommands.aux'.
 
 (include/SETUP/NewCommands.tex
-\c@theorem=\count347
-\c@lemma=\count348
-\c@definition=\count349
-\c@notation=\count350
-)
-\@input{./include/SETUP/ConfigurePage.aux}
-\openout2 = `./include/SETUP/ConfigurePage.aux'.
-
-(include/SETUP/ConfigurePage.tex) (Relatorio.aux (include/CAPA/CAPAREPORT_2.aux
-) (include/CONTRACAPA/CONTRACAPAREPORT_2.aux)
+\c@theorem=\count349
+\c@lemma=\count350
+\c@definition=\count351
+\c@notation=\count352
+) (Relatorio.aux (include/SETUP/ConfigurePage.aux) (include/CAPA/CAPAREPORT_2.a
+ux) (include/CONTRACAPA/CONTRACAPAREPORT_2.aux)
 (include/SETUP/Acknowledgement.aux) (include/SETUP/Abstract.aux)
 (include/SETUP/ContentFigureTable.aux) (include/SETUP/Acronym.aux))
 \openout1 = `Relatorio.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
 
 babelbib: Use citation-dependent languages in bibliography
 babelbib: Bibliography fall-back language unchanged (english)
@@ -1039,16 +1047,16 @@ babelbib extension \btxifchangecaseoff added to \extrasportuguese
 
 ("C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count351
+\scratchcounter=\count353
 \scratchdimen=\dimen325
 \scratchbox=\box116
-\nofMPsegments=\count352
-\nofMParguments=\count353
+\nofMPsegments=\count354
+\nofMParguments=\count355
 \everyMPshowfont=\toks51
-\MPscratchCnt=\count354
+\MPscratchCnt=\count356
 \MPscratchDim=\dimen326
-\MPnumerator=\count355
-\makeMPintoPDFobject=\count356
+\MPnumerator=\count357
+\makeMPintoPDFobject=\count358
 \everyMPtoPDFconversion=\toks52
 ) ("C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1061,10 +1069,13 @@ Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 ABD: EveryShipout initializing macros (input/Inic.tex
+\openout2 = `./include/SETUP/ConfigurePage.aux'.
+
+
+(include/SETUP/ConfigurePage.tex)
 \openout2 = `./include/CAPA/CAPAREPORT_2.aux'.
 
-
-(include/CAPA/CAPAREPORT_2.tex
+ (include/CAPA/CAPAREPORT_2.tex
 LaTeX Font Info:    Trying to load font information for U+msa on input line 49.
 
 
@@ -1076,6 +1087,12 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 49.
 
 ("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 49
+.
+
+("C:\Program Files\MiKTeX\tex/latex/jknappen\ursfs.fd"
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 Overfull \hbox (6.36604pt too wide) in paragraph at lines 49--49
 []$[]$   [] 
@@ -1127,7 +1144,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--37
 
  []
 
-[1
+[0
 
 
 
@@ -1136,16 +1153,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--37
 
 
 (include/SETUP/Acknowledgement.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 6--10
+Underfull \hbox (badness 10000) in paragraph at lines 6--11
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6--10
+Underfull \hbox (badness 10000) in paragraph at lines 6--11
 
  []
 
-[1
+[0
 
 
 
@@ -1172,7 +1189,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--15
 [1
 
 
-]) [1
+]) [0
 
 ]
 \openout2 = `./include/SETUP/ContentFigureTable.aux'.
@@ -1181,7 +1198,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--15
 \tf@toc=\write5
 \openout5 = `Relatorio.toc'.
 
- [2
+ [1
 
 
 ]
@@ -1189,23 +1206,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--15
 \tf@lof=\write6
 \openout6 = `Relatorio.lof'.
 
- [3
+ [2
 
-] [4] (Relatorio.lot)
+] [3] (Relatorio.lot)
 \tf@lot=\write7
 \openout7 = `Relatorio.lot'.
 
- [5
+ [4
 
 ])
 \openout2 = `./include/SETUP/Acronym.aux'.
 
  (include/SETUP/Acronym.tex)
-[6
+[5
 
 
 
-] [7
+] [6
 
 ]) (input/page/Introducao.tex
 Cap\'{\i }tulo 1.
@@ -1350,7 +1367,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 185--192
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 207--10
+Underfull \hbox (badness 10000) in paragraph at lines 207--9
 
  []
 
@@ -1846,27 +1863,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 437--466
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 470--12
+Underfull \hbox (badness 10000) in paragraph at lines 470--11
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 470--12
+Underfull \hbox (badness 10000) in paragraph at lines 470--11
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 470--12
+Underfull \hbox (badness 10000) in paragraph at lines 470--11
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 470--12
+Underfull \hbox (badness 10000) in paragraph at lines 470--11
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 470--12
+Underfull \hbox (badness 10000) in paragraph at lines 470--11
 
  []
 
@@ -1876,38 +1893,38 @@ Cap\'{\i }tulo 5.
 LaTeX Warning: Reference `anexo-main' on page 25 undefined on input line 20.
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 2--14
+Underfull \hbox (badness 10000) in paragraph at lines 2--13
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2--14
+Underfull \hbox (badness 10000) in paragraph at lines 2--13
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2--14
+Underfull \hbox (badness 10000) in paragraph at lines 2--13
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2--14
+Underfull \hbox (badness 10000) in paragraph at lines 2--13
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2--14
+Underfull \hbox (badness 10000) in paragraph at lines 2--13
 
  []
 
 
-Overfull \hbox (5.89536pt too wide) in paragraph at lines 2--14
+Overfull \hbox (5.89536pt too wide) in paragraph at lines 2--13
 \T1/cmtt/m/n/12 PESTA2021 / tree / main / SandBox / ATMEGA128 / Atmega128$\T1/c
 mr/m/n/12 , e pos-sí-vel fa-zer \T1/cmr/m/it/12 down-load \T1/cmr/m/n/12 para
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2--14
+Underfull \hbox (badness 10000) in paragraph at lines 2--13
 
  []
 
@@ -1917,7 +1934,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--14
 
 ] (input/page/Anexos.tex
 (input/excerpt/Definition_1.tex [27]
-ANEXO A.
+Ap\^endice A.
 
 Overfull \hbox (46.71495pt too wide) in paragraph at lines 3--34
 [] []
@@ -1931,7 +1948,7 @@ Overfull \hbox (46.71495pt too wide) in paragraph at lines 35--7
 [28
 
 ] (input/excerpt/Physic_1.tex
-ANEXO B.
+Ap\^endice B.
 
 Underfull \hbox (badness 10000) in paragraph at lines 6--23
 
@@ -1978,31 +1995,32 @@ File: ./image/General/Einstein.jpg Graphic file (type jpg)
 Package pdftex.def Info: ./image/General/Einstein.jpg  used on input line 65.
 (pdftex.def)             Requested size: 153.57492pt x 107.50244pt.
 )))
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 3--17
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 3--16
 []$ $[]$ 
  []
 
 
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 3--17
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 3--16
 []$ $[]$ 
  []
 
 [29
 
  <./image/General/Einstein.jpg>] [30] (Relatorio.aux
-(include/CAPA/CAPAREPORT_2.aux) (include/CONTRACAPA/CONTRACAPAREPORT_2.aux)
-(include/SETUP/Acknowledgement.aux) (include/SETUP/Abstract.aux)
-(include/SETUP/ContentFigureTable.aux) (include/SETUP/Acronym.aux))
+(include/SETUP/ConfigurePage.aux) (include/CAPA/CAPAREPORT_2.aux)
+(include/CONTRACAPA/CONTRACAPAREPORT_2.aux) (include/SETUP/Acknowledgement.aux)
+(include/SETUP/Abstract.aux) (include/SETUP/ContentFigureTable.aux)
+(include/SETUP/Acronym.aux))
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 37674 strings out of 480790
- 891771 string characters out of 2907055
- 1408976 words of memory out of 3000000
- 52942 multiletter control sequences out of 15000+200000
- 562682 words of font info for 98 fonts, out of 3000000 for 9000
+ 37785 strings out of 480790
+ 893804 string characters out of 2907055
+ 1411460 words of memory out of 3000000
+ 53034 multiletter control sequences out of 15000+200000
+ 564166 words of font info for 107 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  73i,22n,74p,1048b,890s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti
@@ -2042,7 +2060,7 @@ iles/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fo
 nts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/pu
 blic/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts
 /cm/cmsy8.pfb>
-Output written on Relatorio.pdf (41 pages, 6111055 bytes).
+Output written on Relatorio.pdf (41 pages, 6110837 bytes).
 PDF statistics:
  976 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

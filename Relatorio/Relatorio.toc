@@ -1,11 +1,11 @@
 \babel@toc {portuguese}{}
 \babel@toc {portuguese}{}
-\contentsline {chapter}{AGRADECIMENTOS}{i}%
+\contentsline {chapter}{AGRADECIMENTOS}{}%
 \contentsline {chapter}{RESUMO}{i}%
-\contentsline {chapter}{ÍNDICE}{ii}%
-\contentsline {chapter}{ÍNDICE DE FiGURAS}{iii}%
-\contentsline {chapter}{ÍNDICE DE TABELAS}{v}%
-\contentsline {chapter}{ACRÓNIMOS}{vi}%
+\contentsline {chapter}{ÍNDICE}{i}%
+\contentsline {chapter}{ÍNDICE DE FiGURAS}{ii}%
+\contentsline {chapter}{ÍNDICE DE TABELAS}{iv}%
+\contentsline {chapter}{ACRÓNIMOS}{v}%
 \contentsline {chapter}{\numberline {1}INTRODUÇÃO}{1}%
 \contentsline {section}{\numberline {1.1}CONTEXTUALIZÃO}{1}%
 \contentsline {section}{\numberline {1.2}OBJECTIVOS}{2}%
@@ -22,5 +22,5 @@
 \contentsline {subsection}{\numberline {4.1.1}Material}{23}%
 \contentsline {chapter}{\numberline {5}CONCLUSÕES}{25}%
 \contentsline {chapter}{REFERÊNCIAS DOCUMENTAIS}{26}%
-\contentsline {chapter}{ANEXO \numberline {A}Definições}{28}%
-\contentsline {chapter}{ANEXO \numberline {B}Física}{29}%
+\contentsline {chapter}{Ap\^endice \numberline {A}Definições}{28}%
+\contentsline {chapter}{Ap\^endice \numberline {B}Física}{29}%
