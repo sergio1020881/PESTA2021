@@ -186,9 +186,18 @@ Como indicado abaixo no gráfico em que a linha \textcolor{yellow}{amarela} é a
 Para obter este resultado a livraria driver para o \textit{Load Cell Amplifier} teve de ter em consideração que o microcontrolador é de \textcolor{blue}{8} bits, porque o pacote de informação consiste de \textcolor{blue}{24} \textit{bits} e em que é transmitido primeiro o \textit{bit} \textbf{MSB}.
 \\
 \\
-O código que executa esta rotina é demonstrado na \textit{figura} \ref{read_raw} que é chamada pelas interrupções periódicas e só é ativa quando a função na \textit{figura} \ref{Main_While_Balanca} \textbf{hx.query(\&hx)} é verdadeira.
+\\
+O código que executa esta rotina é demonstrado na \textit{lista} \ref{HX711-read-raw} que é chamada pelas interrupções periódicas e só é ativa quando a função na \textit{lista} \ref{Main-While-case-1} \textbf{hx.query(\&hx)} é verdadeira.
 \\
 \\
+{ \tiny
+	\lstinputlisting[language=C, caption={função de chamada \textbf{hx.query(\&hx)}}, captionpos=b, label=Main-While-case-1]{./input/code/Main_While_case_1.c}
+}
+\newpage
+{ \tiny
+	\lstinputlisting[language=C, caption=HX711\_read\_raw, captionpos=b, label=HX711-read-raw]{./input/code/HX711_read_raw.c}
+}
+\begin{comment}
 \begin{minipage}[l]{\linewidth}
 \begin{minipage}[l]{.60\linewidth}
 \begin{figure}[H]
@@ -211,6 +220,8 @@ O código que executa esta rotina é demonstrado na \textit{figura} \ref{read_ra
 \end{minipage}
 \end{minipage}
 \minipagespace{.5}
+\end{comment}
+\listingspace{.5}
 Após obter um numero determinado de valores discretos é calculado sua média
 \begin{equation}
 	\label{eq:Mean}
@@ -313,10 +324,11 @@ Neste projeto apostei no Atmega 128 (\textit{figura} \ref{Atmega_128_pinagem}) p
 A características do micro-controlador ATmega 128 esta abaixo indicados na lista, os temporizadores considero o mais importante, o ADC nem vai ser usado neste projeto a alternativa é muito melhor, talvez os MCU nem deviam ter esta funcionalidade e realçar em meios de comunicação e memoria com as livrarias já disponíveis, este integrado é perfeito para esta aplicação em causa, sempre que fazemos projetos também temos de considerar os MCU de 32 \textit{bit} mas existe uma linha muito fina de apostar noutra alternativa e trabalhar com um sistema operativo devido a complexidade exigida, muito mais configurações e opções disponíveis do que um micro-controlador de 8 e 16 \textit{bit}.
 \\
 \\
+\\
 \begin{minipage}{\linewidth}
 {\Large Caracteristicas do Atmega 128 :}
 \begin{itemize}	
-	\setlength\itemsep{-0.7em}
+	\setlength\itemsep{-0.3em}
 	\item Arquitectura RISC
 	\item 33 instruções (a maior parte executada num único ciclo de execução)
 	\item 32 x 8 registos de trabalho (arquitectura de registos)
@@ -339,7 +351,8 @@ A características do micro-controlador ATmega 128 esta abaixo indicados na list
 	\item TWI (I2C)
 \end{itemize}
 \end{minipage}
-\minipagespace{0.2}
+\minipagespace{0.5}
+\newpage
 Para programar este microcontrolador (\textbf{Atmega 128}) foi utilizado o programador da marca da Atmel precisamente o \textbf{Atmel-ICE} \textit{figura} \ref{Programador_1}, que para este equipamento tem disponível programação via \textit{In-System Programming} (\textbf{ISP}) \textit{figura} \ref{ISP_6_8_10pin} e \textit{Joint Test Action Group} (\textbf{JTAG}).
 \minipagespace{.2}
 \begin{minipage}[!b]{.5\linewidth}

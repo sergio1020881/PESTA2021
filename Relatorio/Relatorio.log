@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  15 MAY 2021 20:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  16 MAY 2021 17:08
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
@@ -44,19 +44,245 @@ Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@prehook=\toks15
 \inpenc@posthook=\toks16
 )
+("C:\Program Files\MiKTeX\tex/latex/glossaries/base\glossaries.sty"
+Package: glossaries 2020/03/19 v4.46 (NLCT)
+
+("C:\Program Files\MiKTeX\tex/latex/base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+("C:\Program Files\MiKTeX\tex/latex/xkeyval\xkeyval.sty"
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+("C:\Program Files\MiKTeX\tex/generic/xkeyval\xkeyval.tex"
+("C:\Program Files\MiKTeX\tex/generic/xkeyval\xkvutils.tex"
+\XKV@toks=\toks17
+\XKV@tempa@toks=\toks18
+
+("C:\Program Files\MiKTeX\tex/generic/xkeyval\keyval.tex"))
+\XKV@depth=\count179
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+("C:\Program Files\MiKTeX\tex/latex/mfirstuc\mfirstuc.sty"
+Package: mfirstuc 2017/11/14 v2.06 (NLCT)
+
+("C:\Program Files\MiKTeX\tex/latex/etoolbox\etoolbox.sty"
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count180
+)
+\@glsmfirst=\toks19
+\@glsmrest=\toks20
+)
+("C:\Program Files\MiKTeX\tex/latex/textcase\textcase.sty"
+Package: textcase 2019/09/14 v1.00 Text only upper/lower case changing (DPC)
+)
+("C:\Program Files\MiKTeX\tex/latex/xfor\xfor.sty"
+Package: xfor 2009/02/05 v1.05 (NLCT)
+)
+("C:\Program Files\MiKTeX\tex/latex/datatool\datatool-base.sty"
+Package: datatool-base 2019/09/27 v2.32 (NLCT)
+
+("C:\Program Files\MiKTeX\tex/latex/amsmath\amsmath.sty"
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip49
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files\MiKTeX\tex/latex/amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01 AMS text
+
+("C:\Program Files\MiKTeX\tex/latex/amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks21
+\ex@=\dimen135
+))
+("C:\Program Files\MiKTeX\tex/latex/amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen136
+)
+("C:\Program Files\MiKTeX\tex/latex/amsmath\amsopn.sty"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count181
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count182
+\leftroot@=\count183
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count184
+\DOTSCASE@=\count185
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box45
+\strutbox@=\box46
+\big@size=\dimen137
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count186
+\c@MaxMatrixCols=\count187
+\dotsspace@=\muskip16
+\c@parentequation=\count188
+\dspbrk@lvl=\count189
+\tag@help=\toks22
+\row@=\count190
+\column@=\count191
+\maxfields@=\count192
+\andhelp@=\toks23
+\eqnshift@=\dimen138
+\alignsep@=\dimen139
+\tagshift@=\dimen140
+\tagwidth@=\dimen141
+\totwidth@=\dimen142
+\lineht@=\dimen143
+\@envbody=\toks24
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks25
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
+)
+("C:\Program Files\MiKTeX\tex/latex/substr\substr.sty"
+Package: substr 2009/10/20 v1.2 Handle substrings
+\c@su@anzahl=\count193
+)
+("C:\Program Files\MiKTeX\tex/latex/datatool\datatool-fp.sty"
+Package: datatool-fp 2019/09/27 v2.32 (NLCT)
+
+("C:\Program Files\MiKTeX\tex/latex/fp\fp.sty"
+Package: fp 1995/04/02
+
+`Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
+("C:\Program Files\MiKTeX\tex/latex/fp\defpattern.sty"
+Package: defpattern 1994/10/12
+\actioncount=\count194
+)
+("C:\Program Files\MiKTeX\tex/latex/fp\fp-basic.sty"
+Package: fp-basic 1996/05/13
+\FP@xs=\count195
+\FP@xia=\count196
+\FP@xib=\count197
+\FP@xfa=\count198
+\FP@xfb=\count199
+\FP@rega=\count266
+\FP@regb=\count267
+\FP@regs=\count268
+\FP@times=\count269
+)
+("C:\Program Files\MiKTeX\tex/latex/fp\fp-addons.sty"
+Package: fp-addons 1995/03/15
+)
+("C:\Program Files\MiKTeX\tex/latex/fp\fp-snap.sty"
+Package: fp-snap 1995/04/05
+)
+("C:\Program Files\MiKTeX\tex/latex/fp\fp-exp.sty"
+Package: fp-exp 1995/04/03
+)
+("C:\Program Files\MiKTeX\tex/latex/fp\fp-trigo.sty"
+Package: fp-trigo 1995/04/14
+)
+("C:\Program Files\MiKTeX\tex/latex/fp\fp-pas.sty"
+Package: fp-pas 1994/08/29
+)
+("C:\Program Files\MiKTeX\tex/latex/fp\fp-random.sty"
+Package: fp-random 1995/02/23
+\FPseed=\count270
+)
+("C:\Program Files\MiKTeX\tex/latex/fp\fp-eqn.sty"
+Package: fp-eqn 1995/04/03
+)
+("C:\Program Files\MiKTeX\tex/latex/fp\fp-upn.sty"
+Package: fp-upn 1996/10/21
+)
+("C:\Program Files\MiKTeX\tex/latex/fp\fp-eval.sty"
+Package: fp-eval 1995/04/03
+)))
+\@dtl@toks=\toks26
+\@dtl@tmpcount=\count271
+\dtl@tmplength=\skip52
+\dtl@sortresult=\count272
+\@dtl@numgrpsepcount=\count273
+\@dtl@datatype=\count274
+\dtl@codeA=\count275
+\dtl@codeB=\count276
+\@dtl@foreach@level=\count277
+)
+("C:\Program Files\MiKTeX\tex/latex/glossaries/base\glossaries-compatible-307.s
+ty"
+Package: glossaries-compatible-307 2020/03/19 v4.46 (NLCT)
+)
+\gls@level=\count278
+\@gls@tmpb=\toks27
+\gls@tmplen=\skip53
+\glskeylisttok=\toks28
+\glslabeltok=\toks29
+\glsshorttok=\toks30
+\glslongtok=\toks31
+ ("C:\Program Files\MiKTeX\tex/latex/glossaries/styles\glossary-hypernav.sty"
+Package: glossary-hypernav 2020/03/19 v4.46 (NLCT)
+) ("C:\Program Files\MiKTeX\tex/latex/glossaries/styles\glossary-list.sty"
+Package: glossary-list 2020/03/19 v4.46 (NLCT)
+\glslistdottedwidth=\skip54
+)
+("C:\Program Files\MiKTeX\tex/latex/glossaries/styles\glossary-long.sty"
+Package: glossary-long 2020/03/19 v4.46 (NLCT)
+
+("C:\Program Files\MiKTeX\tex/latex/tools\longtable.sty"
+Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
+\LTleft=\skip55
+\LTright=\skip56
+\LTpre=\skip57
+\LTpost=\skip58
+\LTchunksize=\count279
+\LTcapwidth=\dimen144
+\LT@head=\box47
+\LT@firsthead=\box48
+\LT@foot=\box49
+\LT@lastfoot=\box50
+\LT@cols=\count280
+\LT@rows=\count281
+\c@LT@tables=\count282
+\c@LT@chunks=\count283
+\LT@p@ftn=\toks32
+)
+\glsdescwidth=\skip59
+\glspagelistwidth=\skip60
+)
+("C:\Program Files\MiKTeX\tex/latex/glossaries/styles\glossary-super.sty"
+Package: glossary-super 2020/03/19 v4.46 (NLCT)
+
+("C:\Program Files\MiKTeX\tex/latex/supertabular\supertabular.sty"
+Package: supertabular 2020/02/02 v4.1g the supertabular environment
+\c@tracingst=\count284
+\ST@wd=\dimen145
+\ST@rightskip=\skip61
+\ST@leftskip=\skip62
+\ST@parfillskip=\skip63
+\ST@pageleft=\dimen146
+\ST@headht=\dimen147
+\ST@tailht=\dimen148
+\ST@pagesofar=\dimen149
+\ST@pboxht=\dimen150
+\ST@lineht=\dimen151
+\ST@prevht=\dimen152
+\ST@toadd=\dimen153
+\ST@dimen=\dimen154
+\ST@pbox=\box51
+))
+("C:\Program Files\MiKTeX\tex/latex/glossaries/styles\glossary-tree.sty"
+Package: glossary-tree 2020/03/19 v4.46 (NLCT)
+\glstreeindent=\skip64
+))
 ("C:\Program Files\MiKTeX\tex/generic/babel\babel.sty"
 Package: babel 2020/06/10 3.45 The Babel package
 
 ("C:\Program Files\MiKTeX\tex/generic/babel\babel.def"
 File: babel.def 2020/06/10 3.45 Babel common definitions
-\babel@savecnt=\count179
-\U@D=\dimen135
+\babel@savecnt=\count285
+\U@D=\dimen155
 \l@babelnohyphens=\language79
 
 ("C:\Program Files\MiKTeX\tex/generic/babel\txtbabel.def")
 \bbl@readstream=\read2
 )
-\bbl@dirlevel=\count180
+\bbl@dirlevel=\count286
 
 *************************************
 * Local config file bblopts.cfg used
@@ -71,7 +297,7 @@ Package babel Info: Making " an active character on input line 143.
 ))
 ("C:\Program Files\MiKTeX\tex/latex/babelbib\babelbib.sty"
 Package: babelbib 2019/03/11 v1.32 babelbib: multilingual bibliographies (HH)
-\c@btxromaniannumeral=\count181
+\c@btxromaniannumeral=\count287
 )
 ("C:\Program Files\MiKTeX\tex/latex/hyphenat\hyphenat.sty"
 Package: hyphenat 2009/09/02 v2.3c hyphenation utilities
@@ -81,28 +307,24 @@ LaTeX Info: Redefining \_ on input line 43.
 ("C:\Program Files\MiKTeX\tex/latex/geometry\geometry.sty"
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
-("C:\Program Files\MiKTeX\tex/latex/graphics\keyval.sty"
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks17
-)
 ("C:\Program Files\MiKTeX\tex/generic/iftex\ifvtex.sty"
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 
 ("C:\Program Files\MiKTeX\tex/generic/iftex\iftex.sty"
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 ))
-\Gm@cnth=\count182
-\Gm@cntv=\count183
-\c@Gm@tempcnt=\count184
-\Gm@bindingoffset=\dimen136
-\Gm@wd@mp=\dimen137
-\Gm@odd@mp=\dimen138
-\Gm@even@mp=\dimen139
-\Gm@layoutwidth=\dimen140
-\Gm@layoutheight=\dimen141
-\Gm@layouthoffset=\dimen142
-\Gm@layoutvoffset=\dimen143
-\Gm@dimlist=\toks18
+\Gm@cnth=\count288
+\Gm@cntv=\count289
+\c@Gm@tempcnt=\count290
+\Gm@bindingoffset=\dimen156
+\Gm@wd@mp=\dimen157
+\Gm@odd@mp=\dimen158
+\Gm@even@mp=\dimen159
+\Gm@layoutwidth=\dimen160
+\Gm@layoutheight=\dimen161
+\Gm@layouthoffset=\dimen162
+\Gm@layoutvoffset=\dimen163
+\Gm@dimlist=\toks33
 
 ("C:\Program Files\MiKTeX\tex/latex/geometry\geometry.cfg"))
 ("C:\Program Files\MiKTeX\tex/latex/graphics\graphicx.sty"
@@ -122,30 +344,36 @@ Package graphics Info: Driver file: pdftex.def on input line 105.
 ("C:\Program Files\MiKTeX\tex/latex/graphics-def\pdftex.def"
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen144
-\Gin@req@width=\dimen145
+\Gin@req@height=\dimen164
+\Gin@req@width=\dimen165
 )
 ("C:\Program Files\MiKTeX\tex/latex/caption\caption.sty"
 Package: caption 2020/09/02 v3.5a Customizing captions (AR)
 
 ("C:\Program Files\MiKTeX\tex/latex/caption\caption3.sty"
 Package: caption3 2020/08/30 v2.0 caption3 kernel (AR)
-\captionmargin=\dimen146
-\captionmargin@=\dimen147
-\captionwidth=\dimen148
-\caption@tempdima=\dimen149
-\caption@indent=\dimen150
-\caption@parindent=\dimen151
-\caption@hangindent=\dimen152
+\captionmargin=\dimen166
+\captionmargin@=\dimen167
+\captionwidth=\dimen168
+\caption@tempdima=\dimen169
+\caption@indent=\dimen170
+\caption@parindent=\dimen171
+\caption@hangindent=\dimen172
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count185
-\c@continuedfloat=\count186
+\c@caption@flags=\count291
+\c@continuedfloat=\count292
+Package caption Info: longtable package is loaded.
+
+("C:\Program Files\MiKTeX\tex/latex/caption\ltcaption.sty"
+Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
+)
+Package caption Info: supertabular package is loaded.
 )
 ("C:\Program Files\MiKTeX\tex/latex/caption\subcaption.sty"
 Package: subcaption 2020/08/23 v1.3g Sub-captions (AR)
-\c@subfigure=\count187
-\c@subtable=\count188
+\c@subfigure=\count293
+\c@subtable=\count294
 )
 ("C:\Program Files\MiKTeX\tex/latex/graphics\color.sty"
 Package: color 2019/11/23 v1.2a Standard LaTeX Color (DPC)
@@ -160,16 +388,16 @@ Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
 
 ("C:\Program Files\MiKTeX\tex/latex/tools\array.sty"
 Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
-\col@sep=\dimen153
-\ar@mcellbox=\box45
-\extrarowheight=\dimen154
-\NC@list=\toks19
-\extratabsurround=\skip49
-\backup@length=\skip50
-\ar@cellbox=\box46
+\col@sep=\dimen173
+\ar@mcellbox=\box52
+\extrarowheight=\dimen174
+\NC@list=\toks34
+\extratabsurround=\skip65
+\backup@length=\skip66
+\ar@cellbox=\box53
 )
-\everycr=\toks20
-\minrowclearance=\skip51
+\everycr=\toks35
+\minrowclearance=\skip67
 )
 ("C:\Program Files\MiKTeX\tex/latex/xcolor\xcolor.sty"
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
@@ -180,7 +408,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package xcolor Info: Package option `usenames' ignored on input line 216.
 Package xcolor Info: Driver file: pdftex.def on input line 225.
 LaTeX Info: Redefining \color on input line 709.
-\rownum=\count189
+\rownum=\count295
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
@@ -199,31 +427,31 @@ File: svgnam.def 2016/05/11 v2.12 Predefined colors according to SVG 1.1 (UK)
 ))
 ("C:\Program Files\MiKTeX\tex/latex/paralist\paralist.sty"
 Package: paralist 2017/01/22 v2.7 Extended list environments
-\pltopsep=\skip52
-\plpartopsep=\skip53
-\plitemsep=\skip54
-\plparsep=\skip55
-\pl@lab=\toks21
+\pltopsep=\skip68
+\plpartopsep=\skip69
+\plitemsep=\skip70
+\plparsep=\skip71
+\pl@lab=\toks36
 )
 ("C:\Program Files\MiKTeX\tex/latex/float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count190
-\float@exts=\toks22
-\float@box=\box47
-\@float@everytoks=\toks23
-\@floatcapt=\box48
+\c@float@type=\count296
+\float@exts=\toks37
+\float@box=\box54
+\@float@everytoks=\toks38
+\@floatcapt=\box55
 )
 ("C:\Program Files\MiKTeX\tex/latex/tools\verbatim.sty"
 Package: verbatim 2019/11/10 v1.5r LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks24
-\verbatim@line=\toks25
+\every@verbatim=\toks39
+\verbatim@line=\toks40
 \verbatim@in@stream=\read3
 )
 ("C:\Program Files\MiKTeX\tex/latex/moreverb\moreverb.sty"
 Package: moreverb 2008/06/03 v2.3a `more' verbatim facilities
-\tab@position=\count191
-\tab@size=\count192
-\listing@line=\count193
+\tab@position=\count297
+\tab@size=\count298
+\listing@line=\count299
 )
 ("C:\Program Files\MiKTeX\tex/latex/lipsum\lipsum.sty"
 ("C:\Program Files\MiKTeX\tex/latex/l3kernel\expl3.sty"
@@ -231,17 +459,17 @@ Package: expl3 2020-06-18 L3 programming layer (loader)
 
 ("C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdfmode.def"
 File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count194
-\l__pdf_internal_box=\box49
+\l__kernel_color_stack_int=\count300
+\l__pdf_internal_box=\box56
 ))
 ("C:\Program Files\MiKTeX\tex/latex/l3packages/xparse\xparse.sty"
 Package: xparse 2020-05-15 L3 Experimental document command parser
 
 ("C:\Program Files\MiKTeX\tex/latex/l3packages/xparse\xparse-generic.tex"
-\l__xparse_current_arg_int=\count195
-\g__xparse_grabber_int=\count196
-\l__xparse_m_args_int=\count197
-\l__xparse_v_nesting_int=\count198
+\l__xparse_current_arg_int=\count301
+\g__xparse_grabber_int=\count302
+\l__xparse_m_args_int=\count303
+\l__xparse_v_nesting_int=\count304
 ))
 Package: lipsum 2019/01/02 v2.2 150 paragraphs of Lorem Ipsum dummy text
 
@@ -253,34 +481,27 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 ("C:\Program Files\MiKTeX\tex/latex/tools\multicol.sty"
 Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
-\c@tracingmulticols=\count199
-\mult@box=\box50
-\multicol@leftmargin=\dimen155
-\c@unbalance=\count266
-\c@collectmore=\count267
-\doublecol@number=\count268
-\multicoltolerance=\count269
-\multicolpretolerance=\count270
-\full@width=\dimen156
-\page@free=\dimen157
-\premulticols=\dimen158
-\postmulticols=\dimen159
-\multicolsep=\skip56
-\multicolbaselineskip=\skip57
-\partial@page=\box51
-\last@line=\box52
-\maxbalancingoverflow=\dimen160
-\mult@rightbox=\box53
-\mult@grightbox=\box54
-\mult@gfirstbox=\box55
-\mult@firstbox=\box56
-\@tempa=\box57
-\@tempa=\box58
-\@tempa=\box59
-\@tempa=\box60
-\@tempa=\box61
-\@tempa=\box62
-\@tempa=\box63
+\c@tracingmulticols=\count305
+\mult@box=\box57
+\multicol@leftmargin=\dimen175
+\c@unbalance=\count306
+\c@collectmore=\count307
+\doublecol@number=\count308
+\multicoltolerance=\count309
+\multicolpretolerance=\count310
+\full@width=\dimen176
+\page@free=\dimen177
+\premulticols=\dimen178
+\postmulticols=\dimen179
+\multicolsep=\skip72
+\multicolbaselineskip=\skip73
+\partial@page=\box58
+\last@line=\box59
+\maxbalancingoverflow=\dimen180
+\mult@rightbox=\box60
+\mult@grightbox=\box61
+\mult@gfirstbox=\box62
+\mult@firstbox=\box63
 \@tempa=\box64
 \@tempa=\box65
 \@tempa=\box66
@@ -311,95 +532,43 @@ Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
 \@tempa=\box91
 \@tempa=\box92
 \@tempa=\box93
-\c@minrows=\count271
-\c@columnbadness=\count272
-\c@finalcolumnbadness=\count273
-\last@try=\dimen161
-\multicolovershoot=\dimen162
-\multicolundershoot=\dimen163
-\mult@nat@firstbox=\box94
-\colbreak@box=\box95
-\mc@col@check@num=\count274
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\c@minrows=\count311
+\c@columnbadness=\count312
+\c@finalcolumnbadness=\count313
+\last@try=\dimen181
+\multicolovershoot=\dimen182
+\multicolundershoot=\dimen183
+\mult@nat@firstbox=\box101
+\colbreak@box=\box102
+\mc@col@check@num=\count314
 )
 ("C:\Program Files\MiKTeX\tex/latex/multirow\multirow.sty"
 Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
-\multirow@colwidth=\skip58
-\multirow@cntb=\count275
-\multirow@dima=\skip59
-\bigstrutjot=\dimen164
+\multirow@colwidth=\skip74
+\multirow@cntb=\count315
+\multirow@dima=\skip75
+\bigstrutjot=\dimen184
 )
 ("C:\Program Files\MiKTeX\tex/latex/makecell\makecell.sty"
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
-\rotheadsize=\dimen165
-\c@nlinenum=\count276
-\TeXr@lab=\toks26
+\rotheadsize=\dimen185
+\c@nlinenum=\count316
+\TeXr@lab=\toks41
 )
 ("C:\Program Files\MiKTeX\tex/latex/amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\@emptytoks=\toks27
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)
-("C:\Program Files\MiKTeX\tex/latex/amsmath\amsmath.sty"
-Package: amsmath 2020/01/20 v2.17e AMS math features
-\@mathmargin=\skip60
-
-For additional information on amsmath, use the `?' option.
-("C:\Program Files\MiKTeX\tex/latex/amsmath\amstext.sty"
-Package: amstext 2000/06/29 v2.01 AMS text
-
-("C:\Program Files\MiKTeX\tex/latex/amsmath\amsgen.sty"
-File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks28
-\ex@=\dimen166
-))
-("C:\Program Files\MiKTeX\tex/latex/amsmath\amsbsy.sty"
-Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen167
-)
-("C:\Program Files\MiKTeX\tex/latex/amsmath\amsopn.sty"
-Package: amsopn 2016/03/08 v2.02 operator names
-)
-\inf@bad=\count277
-LaTeX Info: Redefining \frac on input line 227.
-\uproot@=\count278
-\leftroot@=\count279
-LaTeX Info: Redefining \overline on input line 389.
-\classnum@=\count280
-\DOTSCASE@=\count281
-LaTeX Info: Redefining \ldots on input line 486.
-LaTeX Info: Redefining \dots on input line 489.
-LaTeX Info: Redefining \cdots on input line 610.
-\Mathstrutbox@=\box96
-\strutbox@=\box97
-\big@size=\dimen168
-LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
-\macc@depth=\count282
-\c@MaxMatrixCols=\count283
-\dotsspace@=\muskip16
-\c@parentequation=\count284
-\dspbrk@lvl=\count285
-\tag@help=\toks29
-\row@=\count286
-\column@=\count287
-\maxfields@=\count288
-\andhelp@=\toks30
-\eqnshift@=\dimen169
-\alignsep@=\dimen170
-\tagshift@=\dimen171
-\tagwidth@=\dimen172
-\totwidth@=\dimen173
-\lineht@=\dimen174
-\@envbody=\toks31
-\multlinegap=\skip61
-\multlinetaggap=\skip62
-\mathdisplay@stack=\toks32
-LaTeX Info: Redefining \[ on input line 2859.
-LaTeX Info: Redefining \] on input line 2860.
 )
 ("C:\Program Files\MiKTeX\tex/latex/amsfonts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
@@ -415,13 +584,13 @@ Package: pgfgantt 2018/01/10 v5.0 Draw Gantt diagrams with TikZ
 ("C:\Program Files\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty"
 ("C:\Program Files\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty"
 ("C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex"
-\pgfutil@everybye=\toks33
-\pgfutil@tempdima=\dimen175
-\pgfutil@tempdimb=\dimen176
+\pgfutil@everybye=\toks42
+\pgfutil@tempdima=\dimen186
+\pgfutil@tempdimb=\dimen187
 
 ("C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfutil-common-lists.tex"))
 ("C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfutil-latex.def"
-\pgfutil@abb=\box98
+\pgfutil@abb=\box103
 
 ("C:\Program Files\MiKTeX\tex/latex/ms\everyshi.sty"
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
@@ -438,32 +607,32 @@ Package: pgf 2020/01/08 v3.1.5b (3.1.5b)
 Package: pgfsys 2020/01/08 v3.1.5b (3.1.5b)
 
 ("C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex"
-\pgfkeys@pathtoks=\toks34
-\pgfkeys@temptoks=\toks35
+\pgfkeys@pathtoks=\toks43
+\pgfkeys@temptoks=\toks44
 
 ("C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfkeysfiltered.code.tex"
-\pgfkeys@tmptoks=\toks36
+\pgfkeys@tmptoks=\toks45
 ))
-\pgf@x=\dimen177
-\pgf@y=\dimen178
-\pgf@xa=\dimen179
-\pgf@ya=\dimen180
-\pgf@xb=\dimen181
-\pgf@yb=\dimen182
-\pgf@xc=\dimen183
-\pgf@yc=\dimen184
-\pgf@xd=\dimen185
-\pgf@yd=\dimen186
+\pgf@x=\dimen188
+\pgf@y=\dimen189
+\pgf@xa=\dimen190
+\pgf@ya=\dimen191
+\pgf@xb=\dimen192
+\pgf@yb=\dimen193
+\pgf@xc=\dimen194
+\pgf@yc=\dimen195
+\pgf@xd=\dimen196
+\pgf@yd=\dimen197
 \w@pgf@writea=\write3
 \r@pgf@reada=\read4
-\c@pgf@counta=\count289
-\c@pgf@countb=\count290
-\c@pgf@countc=\count291
-\c@pgf@countd=\count292
-\t@pgf@toka=\toks37
-\t@pgf@tokb=\toks38
-\t@pgf@tokc=\toks39
-\pgf@sys@id@count=\count293
+\c@pgf@counta=\count317
+\c@pgf@countb=\count318
+\c@pgf@countc=\count319
+\c@pgf@countd=\count320
+\t@pgf@toka=\toks46
+\t@pgf@tokb=\toks47
+\t@pgf@tokc=\toks48
+\pgf@sys@id@count=\count321
 ("C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg"
 File: pgf.cfg 2020/01/08 v3.1.5b (3.1.5b)
 )
@@ -477,8 +646,8 @@ File: pgfsys-common-pdf.def 2020/01/08 v3.1.5b (3.1.5b)
 ))) ("C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.t
 ex"
 File: pgfsyssoftpath.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfsyssoftpath@smallbuffer@items=\count294
-\pgfsyssoftpath@bigbuffer@items=\count295
+\pgfsyssoftpath@smallbuffer@items=\count322
+\pgfsyssoftpath@bigbuffer@items=\count323
 ) ("C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex
 "
 File: pgfsysprotocol.code.tex 2020/01/08 v3.1.5b (3.1.5b)
@@ -489,12 +658,12 @@ Package: pgfcore 2020/01/08 v3.1.5b (3.1.5b)
 ("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathcalc.code.tex"
 ("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathutil.code.tex")
 ("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathparser.code.tex"
-\pgfmath@dimen=\dimen187
-\pgfmath@count=\count296
-\pgfmath@box=\box99
-\pgfmath@toks=\toks40
-\pgfmath@stack@operand=\toks41
-\pgfmath@stack@operation=\toks42
+\pgfmath@dimen=\dimen198
+\pgfmath@count=\count324
+\pgfmath@box=\box104
+\pgfmath@toks=\toks49
+\pgfmath@stack@operand=\toks50
+\pgfmath@stack@operation=\toks51
 )
 ("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex"
 ("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex"
@@ -512,54 +681,54 @@ ode.tex")
 ("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmet
 ics.code.tex")))
 ("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfloat.code.tex"
-\c@pgfmathroundto@lastzeros=\count297
+\c@pgfmathroundto@lastzeros=\count325
 ))
 ("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfint.code.tex")
 ("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex"
 File: pgfcorepoints.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@picminx=\dimen188
-\pgf@picmaxx=\dimen189
-\pgf@picminy=\dimen190
-\pgf@picmaxy=\dimen191
-\pgf@pathminx=\dimen192
-\pgf@pathmaxx=\dimen193
-\pgf@pathminy=\dimen194
-\pgf@pathmaxy=\dimen195
-\pgf@xx=\dimen196
-\pgf@xy=\dimen197
-\pgf@yx=\dimen198
-\pgf@yy=\dimen199
-\pgf@zx=\dimen256
-\pgf@zy=\dimen257
+\pgf@picminx=\dimen199
+\pgf@picmaxx=\dimen256
+\pgf@picminy=\dimen257
+\pgf@picmaxy=\dimen258
+\pgf@pathminx=\dimen259
+\pgf@pathmaxx=\dimen260
+\pgf@pathminy=\dimen261
+\pgf@pathmaxy=\dimen262
+\pgf@xx=\dimen263
+\pgf@xy=\dimen264
+\pgf@yx=\dimen265
+\pgf@yy=\dimen266
+\pgf@zx=\dimen267
+\pgf@zy=\dimen268
 )
 ("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.
 tex"
 File: pgfcorepathconstruct.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@path@lastx=\dimen258
-\pgf@path@lasty=\dimen259
+\pgf@path@lastx=\dimen269
+\pgf@path@lasty=\dimen270
 )
 ("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex"
 File: pgfcorepathusage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@shorten@end@additional=\dimen260
-\pgf@shorten@start@additional=\dimen261
+\pgf@shorten@end@additional=\dimen271
+\pgf@shorten@start@additional=\dimen272
 ) ("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex"
 File: pgfcorescopes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfpic=\box100
-\pgf@hbox=\box101
-\pgf@layerbox@main=\box102
-\pgf@picture@serial@count=\count298
+\pgfpic=\box105
+\pgf@hbox=\box106
+\pgf@layerbox@main=\box107
+\pgf@picture@serial@count=\count326
 )
 ("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.t
 ex"
 File: pgfcoregraphicstate.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgflinewidth=\dimen262
+\pgflinewidth=\dimen273
 )
 ("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransformations.cod
 e.tex"
 File: pgfcoretransformations.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@pt@x=\dimen263
-\pgf@pt@y=\dimen264
-\pgf@pt@temp=\dimen265
+\pgf@pt@x=\dimen274
+\pgf@pt@y=\dimen275
+\pgf@pt@temp=\dimen276
 )
 ("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorequick.code.tex"
 File: pgfcorequick.code.tex 2020/01/08 v3.1.5b (3.1.5b)
@@ -573,20 +742,20 @@ File: pgfcorepathprocessing.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )
 ("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex"
 File: pgfcorearrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfarrowsep=\dimen266
+\pgfarrowsep=\dimen277
 )
 ("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex"
 File: pgfcoreshade.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@max=\dimen267
-\pgf@sys@shading@range@num=\count299
-\pgf@shadingcount=\count300
+\pgf@max=\dimen278
+\pgf@sys@shading@range@num=\count327
+\pgf@shadingcount=\count328
 )
 ("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex"
 File: pgfcoreimage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 
 ("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex"
 File: pgfcoreexternal.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfexternal@startupbox=\box103
+\pgfexternal@startupbox=\box108
 )) ("C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex"
 File: pgfcorelayers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )
@@ -601,15 +770,15 @@ File: pgfcorerdf.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )))
 ("C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmoduleshapes.code.tex"
 File: pgfmoduleshapes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfnodeparttextbox=\box104
+\pgfnodeparttextbox=\box109
 )
 ("C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmoduleplot.code.tex"
 File: pgfmoduleplot.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )
 ("C:\Program Files\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty"
 Package: pgfcomp-version-0-65 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@nodesepstart=\dimen268
-\pgf@nodesepend=\dimen269
+\pgf@nodesepstart=\dimen279
+\pgf@nodesepend=\dimen280
 ) ("C:\Program Files\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-1-18.st
 y"
 Package: pgfcomp-version-1-18 2020/01/08 v3.1.5b (3.1.5b)
@@ -622,10 +791,10 @@ Package: pgfcomp-version-1-18 2020/01/08 v3.1.5b (3.1.5b)
 Package: pgffor 2020/01/08 v3.1.5b (3.1.5b)
 
 ("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex")
-\pgffor@iter=\dimen270
-\pgffor@skip=\dimen271
-\pgffor@stack=\toks43
-\pgffor@toks=\toks44
+\pgffor@iter=\dimen281
+\pgffor@skip=\dimen282
+\pgffor@stack=\toks52
+\pgffor@toks=\toks53
 ))
 ("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex"
 Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
@@ -633,33 +802,33 @@ Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
 ("C:\Program Files\MiKTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code
 .tex"
 File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@plot@mark@count=\count301
-\pgfplotmarksize=\dimen272
+\pgf@plot@mark@count=\count329
+\pgfplotmarksize=\dimen283
 )
-\tikz@lastx=\dimen273
-\tikz@lasty=\dimen274
-\tikz@lastxsaved=\dimen275
-\tikz@lastysaved=\dimen276
-\tikz@lastmovetox=\dimen277
-\tikz@lastmovetoy=\dimen278
-\tikzleveldistance=\dimen279
-\tikzsiblingdistance=\dimen280
-\tikz@figbox=\box105
-\tikz@figbox@bg=\box106
-\tikz@tempbox=\box107
-\tikz@tempbox@bg=\box108
-\tikztreelevel=\count302
-\tikznumberofchildren=\count303
-\tikznumberofcurrentchild=\count304
-\tikz@fig@count=\count305
+\tikz@lastx=\dimen284
+\tikz@lasty=\dimen285
+\tikz@lastxsaved=\dimen286
+\tikz@lastysaved=\dimen287
+\tikz@lastmovetox=\dimen288
+\tikz@lastmovetoy=\dimen289
+\tikzleveldistance=\dimen290
+\tikzsiblingdistance=\dimen291
+\tikz@figbox=\box110
+\tikz@figbox@bg=\box111
+\tikz@tempbox=\box112
+\tikz@tempbox@bg=\box113
+\tikztreelevel=\count330
+\tikznumberofchildren=\count331
+\tikznumberofcurrentchild=\count332
+\tikz@fig@count=\count333
 
 ("C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmodulematrix.code.tex"
 File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfmatrixcurrentrow=\count306
-\pgfmatrixcurrentcolumn=\count307
-\pgf@matrix@numberofcolumns=\count308
+\pgfmatrixcurrentrow=\count334
+\pgfmatrixcurrentcolumn=\count335
+\pgf@matrix@numberofcolumns=\count336
 )
-\tikz@expandcount=\count309
+\tikz@expandcount=\count337
 
 ("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
 arytopaths.code.tex"
@@ -671,13 +840,13 @@ File: tikzlibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 
 ("C:\Program Files\MiKTeX\tex/generic/pgf/libraries\pgflibraryarrows.code.tex"
 File: pgflibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\arrowsize=\dimen281
+\arrowsize=\dimen292
 ))
 ("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
 arybackgrounds.code.tex"
 File: tikzlibrarybackgrounds.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@layerbox@background=\box109
-\pgf@layerboxsaved@background=\box110
+\pgf@layerbox@background=\box114
+\pgf@layerboxsaved@background=\box115
 )
 ("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
 arycalc.code.tex"
@@ -708,46 +877,42 @@ File: pgflibraryshapes.geometric.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 File: pgfcalendar.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 
 ("C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfint.code.tex")
-\pgfcalendarcurrentjulian=\count310
-\pgf@cal@easter@Y=\count311
-\pgf@cal@easter@G=\count312
-\pgf@cal@easter@C=\count313
-\pgf@cal@easter@X=\count314
-\pgf@cal@easter@Z=\count315
-\pgf@cal@easter@D=\count316
-\pgf@cal@easter@E=\count317
-\pgf@cal@easter@N=\count318
-\pgf@cal@easter@M=\count319
-\pgf@cal@easter@julianday=\count320
+\pgfcalendarcurrentjulian=\count338
+\pgf@cal@easter@Y=\count339
+\pgf@cal@easter@G=\count340
+\pgf@cal@easter@C=\count341
+\pgf@cal@easter@X=\count342
+\pgf@cal@easter@Z=\count343
+\pgf@cal@easter@D=\count344
+\pgf@cal@easter@E=\count345
+\pgf@cal@easter@N=\count346
+\pgf@cal@easter@M=\count347
+\pgf@cal@easter@julianday=\count348
 ))
-\gtt@currentline=\count321
-\gtt@lasttitleline=\count322
-\gtt@currgrid=\count323
-\gtt@chartwidth=\count324
-\gtt@lasttitleslot=\count325
-\gtt@elementid=\count326
-\gtt@today@slot=\count327
-\gtt@startjulian=\count328
-\gtt@endjulian=\count329
-\gtt@chartid=\count330
-\gtt@vrule@slot=\count331
-\gtt@calendar@slots=\count332
-\gtt@calendar@weeknumber=\count333
-\gtt@calendar@startofweek=\count334
-\gtt@left@slot=\count335
-\gtt@right@slot=\count336
+\gtt@currentline=\count349
+\gtt@lasttitleline=\count350
+\gtt@currgrid=\count351
+\gtt@chartwidth=\count352
+\gtt@lasttitleslot=\count353
+\gtt@elementid=\count354
+\gtt@today@slot=\count355
+\gtt@startjulian=\count356
+\gtt@endjulian=\count357
+\gtt@chartid=\count358
+\gtt@vrule@slot=\count359
+\gtt@calendar@slots=\count360
+\gtt@calendar@weeknumber=\count361
+\gtt@calendar@startofweek=\count362
+\gtt@left@slot=\count363
+\gtt@right@slot=\count364
 )
 ("C:\Program Files\MiKTeX\tex/latex/graphics\rotating.sty"
 Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
-
-("C:\Program Files\MiKTeX\tex/latex/base\ifthen.sty"
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-)
-\c@r@tfl@t=\count337
-\rotFPtop=\skip63
-\rotFPbot=\skip64
-\rot@float@box=\box111
-\rot@mess@toks=\toks45
+\c@r@tfl@t=\count365
+\rotFPtop=\skip76
+\rotFPbot=\skip77
+\rot@float@box=\box116
+\rot@mess@toks=\toks54
 )
 ("C:\Program Files\MiKTeX\tex/latex/realboxes\realboxes.sty"
 Package: realboxes 2011/08/08 v0.2 Change box commands to read there content as
@@ -755,66 +920,80 @@ Package: realboxes 2011/08/08 v0.2 Change box commands to read there content as
 
 ("C:\Program Files\MiKTeX\tex/latex/collectbox\collectbox.sty"
 Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
-\collectedbox=\box112
+\collectedbox=\box117
 )
 ("C:\Program Files\MiKTeX\tex/latex/adjustbox\adjcalc.sty"
 Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
 -ends (calc, etex, pgfmath)
-
-("C:\Program Files\MiKTeX\tex/latex/xkeyval\xkeyval.sty"
-Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
-
-("C:\Program Files\MiKTeX\tex/generic/xkeyval\xkeyval.tex"
-("C:\Program Files\MiKTeX\tex/generic/xkeyval\xkvutils.tex"
-\XKV@toks=\toks46
-\XKV@tempa@toks=\toks47
-)
-\XKV@depth=\count338
-File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-))))
+))
 ("C:\Program Files\MiKTeX\tex/latex/tools\tabularx.sty"
 Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
-\TX@col@width=\dimen282
-\TX@old@table=\dimen283
-\TX@old@col=\dimen284
-\TX@target=\dimen285
-\TX@delta=\dimen286
-\TX@cols=\count339
-\TX@ftn=\toks48
+\TX@col@width=\dimen293
+\TX@old@table=\dimen294
+\TX@old@col=\dimen295
+\TX@target=\dimen296
+\TX@delta=\dimen297
+\TX@cols=\count366
+\TX@ftn=\toks55
 )
+("C:\Program Files\MiKTeX\tex/latex/listings\listings.sty"
+\lst@mode=\count367
+\lst@gtempboxa=\box118
+\lst@token=\toks56
+\lst@length=\count368
+\lst@currlwidth=\dimen298
+\lst@column=\count369
+\lst@pos=\count370
+\lst@lostspace=\dimen299
+\lst@width=\dimen300
+\lst@newlines=\count371
+\lst@lineno=\count372
+\lst@maxwidth=\dimen301
+
+("C:\Program Files\MiKTeX\tex/latex/listings\lstmisc.sty"
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count373
+\lst@skipnumbers=\count374
+\lst@framebox=\box119
+)
+("C:\Program Files\MiKTeX\tex/latex/listings\listings.cfg"
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+
 ("C:\Program Files\MiKTeX\tex/latex/adjustbox\adjustbox.sty"
 Package: adjustbox 2020/08/19 v1.3 Adjusting TeX boxes (trim, clip, ...)
 
 ("C:\Program Files\MiKTeX\tex/latex/adjustbox\trimclip.sty"
 Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
-\tc@llx=\dimen287
-\tc@lly=\dimen288
-\tc@urx=\dimen289
-\tc@ury=\dimen290
+\tc@llx=\dimen302
+\tc@lly=\dimen303
+\tc@urx=\dimen304
+\tc@ury=\dimen305
 Package trimclip Info: Using driver 'tc-pdftex.def'.
 
 ("C:\Program Files\MiKTeX\tex/latex/adjustbox\tc-pdftex.def"
 File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 ))
-\adjbox@Width=\dimen291
-\adjbox@Height=\dimen292
-\adjbox@Depth=\dimen293
-\adjbox@Totalheight=\dimen294
-\adjbox@pwidth=\dimen295
-\adjbox@pheight=\dimen296
-\adjbox@pdepth=\dimen297
-\adjbox@ptotalheight=\dimen298
+\adjbox@Width=\dimen306
+\adjbox@Height=\dimen307
+\adjbox@Depth=\dimen308
+\adjbox@Totalheight=\dimen309
+\adjbox@pwidth=\dimen310
+\adjbox@pheight=\dimen311
+\adjbox@pdepth=\dimen312
+\adjbox@ptotalheight=\dimen313
 
 ("C:\Program Files\MiKTeX\tex/latex/ifoddpage\ifoddpage.sty"
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count340
+\c@checkoddpage=\count375
 )
 ("C:\Program Files\MiKTeX\tex/latex/varwidth\varwidth.sty"
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box113
-\sift@deathcycles=\count341
-\@vwid@loff=\dimen299
-\@vwid@roff=\dimen300
+\@vwid@box=\box120
+\sift@deathcycles=\count376
+\@vwid@loff=\dimen314
+\@vwid@roff=\dimen315
 ))
 ("C:\Program Files\MiKTeX\tex/latex/url\url.sty"
 \Urlmuskip=\muskip17
@@ -825,7 +1004,7 @@ Package: setspace 2011/12/19 v6.7a set line spacing
 )
 ("C:\Program Files\MiKTeX\tex/latex/eurosym\eurosym.sty"
 Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
-\@eurobox=\box114
+\@eurobox=\box121
 )
 ("C:\Program Files\MiKTeX\tex/latex/romannum\romannum.sty"
 Package: romannum 2009/09/03 v1.0b roman numerals
@@ -840,10 +1019,6 @@ Package: datetime2 2021/03/21 v1.5.7 (NLCT) date and time formats
 Package: tracklang 2020/06/30 v1.5 (NLCT) Track Languages
 
 ("C:\Program Files\MiKTeX\tex/generic/tracklang\tracklang.tex"))
-("C:\Program Files\MiKTeX\tex/latex/etoolbox\etoolbox.sty"
-Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count342
-)
 ("C:\Program Files\MiKTeX\tex/latex/datetime2-portuges\datetime2-portuges.ldf"
 File: datetime2-portuges.ldf 2018/08/21 v1.1
 
@@ -865,16 +1040,17 @@ f"
 File: datetime2-english-base.ldf 2019/10/21 v1.05 (NLCT)
 ))) ("C:\Program Files\MiKTeX\tex/latex/enumitem\enumitem.sty"
 Package: enumitem 2019/06/20 v3.9 Customized lists
-\labelindent=\skip65
-\enit@outerparindent=\dimen301
-\enit@toks=\toks49
-\enit@inbox=\box115
-\enit@count@id=\count343
-\enitdp@description=\count344
+\enitkv@toks@=\toks57
+\labelindent=\skip78
+\enit@outerparindent=\dimen316
+\enit@toks=\toks58
+\enit@inbox=\box122
+\enit@count@id=\count377
+\enitdp@description=\count378
 )
 ("C:\Program Files\MiKTeX\tex/latex/tools\enumerate.sty"
 Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
-\@enLab=\toks50
+\@enLab=\toks59
 )
 ("C:\Program Files\MiKTeX\tex/latex/circuitikz\circuitikz.sty"
 Package: circuitikz 2020/10/04{} The CircuiTikz circuit drawing package version
@@ -883,10 +1059,10 @@ Package: circuitikz 2020/10/04{} The CircuiTikz circuit drawing package version
 ("C:\Program Files\MiKTeX\tex/generic/pgf/libraries\pgflibraryarrows.meta.code.
 tex"
 File: pgflibraryarrows.meta.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfarrowinset=\dimen302
-\pgfarrowlength=\dimen303
-\pgfarrowwidth=\dimen304
-\pgfarrowlinewidth=\dimen305
+\pgfarrowinset=\dimen317
+\pgfarrowlength=\dimen318
+\pgfarrowwidth=\dimen319
+\pgfarrowlinewidth=\dimen320
 )
 ("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
 arybending.code.tex"
@@ -898,50 +1074,50 @@ File: pgfmodulebending.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ("C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmodulenonlineartransformat
 ions.code.tex"
 File: pgfmodulenonlineartransformations.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgftransformnonlinearflatness=\dimen306
+\pgftransformnonlinearflatness=\dimen321
 )
 ("C:\Program Files\MiKTeX\tex/generic/pgf/libraries\pgflibrarycurvilinear.code.
 tex"
 File: pgflibrarycurvilinear.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@curvilinear@time@a=\dimen307
-\pgf@curvilinear@length@a=\dimen308
-\pgf@curvilinear@length@b=\dimen309
-\pgf@curvilinear@length@c=\dimen310
-\pgf@curvilinear@length@d=\dimen311
+\pgf@curvilinear@time@a=\dimen322
+\pgf@curvilinear@length@a=\dimen323
+\pgf@curvilinear@length@b=\dimen324
+\pgf@curvilinear@length@c=\dimen325
+\pgf@curvilinear@length@d=\dimen326
 )
-\pgf@arrows@the@rigidity=\dimen312
+\pgf@arrows@the@rigidity=\dimen327
 ))
 ("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
 aryfpu.code.tex"
 ("C:\Program Files\MiKTeX\tex/generic/pgf/libraries\pgflibraryfpu.code.tex"))
 ("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcirc.defines.tex"
-\pgf@circ@count@a=\count345
-\pgf@circ@count@b=\count346
-\pgf@circ@count@c=\count347
-\pgf@circ@res@up=\dimen313
-\pgf@circ@res@down=\dimen314
-\pgf@circ@res@zero=\dimen315
-\pgf@circ@res@left=\dimen316
-\pgf@circ@res@right=\dimen317
-\pgf@circ@res@other=\dimen318
-\pgf@circ@res@step=\dimen319
-\pgf@circ@res@temp=\dimen320
-\pgf@circ@Rlen=\dimen321
-\pgf@circ@scaled@Rlen=\dimen322
-\pgfstartlinewidth=\dimen323
+\pgf@circ@count@a=\count379
+\pgf@circ@count@b=\count380
+\pgf@circ@count@c=\count381
+\pgf@circ@res@up=\dimen328
+\pgf@circ@res@down=\dimen329
+\pgf@circ@res@zero=\dimen330
+\pgf@circ@res@left=\dimen331
+\pgf@circ@res@right=\dimen332
+\pgf@circ@res@other=\dimen333
+\pgf@circ@res@step=\dimen334
+\pgf@circ@res@temp=\dimen335
+\pgf@circ@Rlen=\dimen336
+\pgf@circ@scaled@Rlen=\dimen337
+\pgfstartlinewidth=\dimen338
 )
 ("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircutils.tex")
 ("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircshapes.tex")
 ("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircmonopoles.tex")
 ("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircbipoles.tex")
 ("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcirctripoles.tex"
-\pgf@circ@res@count=\count348
+\pgf@circ@res@count=\count382
 )
 ("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircquadpoles.tex")
 ("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircmultipoles.tex")
 ("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcirclabel.tex")
 ("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircvoltage.tex"
-\pgfcirc@labelshift=\dimen324
+\pgfcirc@labelshift=\dimen339
 )
 ("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcirccurrent.tex")
 ("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircflow.tex")
@@ -969,7 +1145,7 @@ File: tikzlibrarytrees.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 Writing index file Relatorio.idx
 
 Package babelbib Warning: Command \selectbiblanguage used without package
-(babelbib)                option fixlanguage. Ignored on input line 58.
+(babelbib)                option fixlanguage. Ignored on input line 60.
 
 babelbib: Set bibliography fall-back language to english
 )
@@ -977,30 +1153,46 @@ babelbib: Set bibliography fall-back language to english
 \openout2 = `./include/SETUP/NewCommands.aux'.
 
 (include/SETUP/NewCommands.tex
-\c@theorem=\count349
-\c@lemma=\count350
-\c@definition=\count351
-\c@notation=\count352
-) (Relatorio.aux (include/SETUP/ConfigurePage.aux) (include/CAPA/CAPAREPORT_2.a
-ux) (include/CONTRACAPA/CONTRACAPAREPORT_2.aux)
+\c@theorem=\count383
+\c@lemma=\count384
+\c@definition=\count385
+\c@notation=\count386
+
+("C:\Program Files\MiKTeX\tex/latex/listings\lstlang1.sty"
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+("C:\Program Files\MiKTeX\tex/latex/listings\lstmisc.sty"
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+))
+\@input{./include/SETUP/Glossary.aux}
+\openout2 = `./include/SETUP/Glossary.aux'.
+
+(include/SETUP/Glossary.tex
+\glswrite=\write5
+\glo@main@file=\write6
+\openout6 = `Relatorio.glo'.
+
+Package glossaries Info: Writing glossary file Relatorio.glo on input line 2.
+) (Relatorio.aux (include/SETUP/ConfigurePage.aux)
+(include/CAPA/CAPAREPORT_2.aux) (include/CONTRACAPA/CONTRACAPAREPORT_2.aux)
 (include/SETUP/Acknowledgement.aux) (include/SETUP/Abstract.aux)
-(include/SETUP/ContentFigureTable.aux) (include/SETUP/Acronym.aux))
+(include/SETUP/ContentFigureTableListing.aux) (include/SETUP/Acronym.aux))
 \openout1 = `Relatorio.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
-LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
 
 babelbib: Use citation-dependent languages in bibliography
 babelbib: Bibliography fall-back language unchanged (english)
@@ -1047,17 +1239,17 @@ babelbib extension \btxifchangecaseoff added to \extrasportuguese
 
 ("C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count353
-\scratchdimen=\dimen325
-\scratchbox=\box116
-\nofMPsegments=\count354
-\nofMParguments=\count355
-\everyMPshowfont=\toks51
-\MPscratchCnt=\count356
-\MPscratchDim=\dimen326
-\MPnumerator=\count357
-\makeMPintoPDFobject=\count358
-\everyMPtoPDFconversion=\toks52
+\scratchcounter=\count387
+\scratchdimen=\dimen340
+\scratchbox=\box123
+\nofMPsegments=\count388
+\nofMParguments=\count389
+\everyMPshowfont=\toks60
+\MPscratchCnt=\count390
+\MPscratchDim=\dimen341
+\MPnumerator=\count391
+\makeMPintoPDFobject=\count392
+\everyMPtoPDFconversion=\toks61
 ) ("C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1065,10 +1257,13 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
+Package caption Info: listings package is loaded.
 Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
-ABD: EveryShipout initializing macros (input/Inic.tex
+ABD: EveryShipout initializing macros
+\c@lstlisting=\count393
+ (input/Inic.tex
 \openout2 = `./include/SETUP/ConfigurePage.aux'.
 
 
@@ -1118,6 +1313,10 @@ Overfull \hbox (71.74583pt too wide) in paragraph at lines 49--49
 
 
 
+
+
+
+\openout5 = `Relatorio.ist'.
 
 
 
@@ -1192,189 +1391,202 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--15
 ]) [0
 
 ]
-\openout2 = `./include/SETUP/ContentFigureTable.aux'.
+\openout2 = `./include/SETUP/ContentFigureTableListing.aux'.
 
- (include/SETUP/ContentFigureTable.tex (Relatorio.toc)
-\tf@toc=\write5
-\openout5 = `Relatorio.toc'.
+ (include/SETUP/ContentFigureTableListing.tex (Relatorio.toc)
+\tf@toc=\write7
+\openout7 = `Relatorio.toc'.
 
  [1
 
 
 ]
 (Relatorio.lof)
-\tf@lof=\write6
-\openout6 = `Relatorio.lof'.
+\tf@lof=\write8
+\openout8 = `Relatorio.lof'.
 
  [2
 
-] [3] (Relatorio.lot)
-\tf@lot=\write7
-\openout7 = `Relatorio.lot'.
+
+] [3
+
+] (Relatorio.lot)
+\tf@lot=\write9
+\openout9 = `Relatorio.lot'.
 
  [4
 
-])
+] [5
+
+] (Relatorio.lol)
+\tf@lol=\write10
+\openout10 = `Relatorio.lol'.
+
+ [6
+
+]) [7
+
+]
 \openout2 = `./include/SETUP/Acronym.aux'.
 
- (include/SETUP/Acronym.tex)
-[5
+
+(include/SETUP/Acronym.tex) [8
 
 
 
-] [6
+] [9
 
 ]) (input/page/Introducao.tex
 Cap\'{\i }tulo 1.
-<./image/PESTA/fisica/mass.jpg, id=58, 282.05376pt x 179.67125pt>
+<./image/PESTA/fisica/mass.jpg, id=68, 282.05376pt x 179.67125pt>
 File: ./image/PESTA/fisica/mass.jpg Graphic file (type jpg)
 <use ./image/PESTA/fisica/mass.jpg>
-Package pdftex.def Info: ./image/PESTA/fisica/mass.jpg  used on input line 28.
+Package pdftex.def Info: ./image/PESTA/fisica/mass.jpg  used on input line 8.
 (pdftex.def)             Requested size: 312.68741pt x 199.16928pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--31
+Underfull \hbox (badness 10000) in paragraph at lines 2--11
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--37
+Underfull \hbox (badness 10000) in paragraph at lines 12--17
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--37
+Underfull \hbox (badness 10000) in paragraph at lines 12--17
 
  []
 
 [1
 
  <./image/PESTA/fisica/mass.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 49--56
+Underfull \hbox (badness 10000) in paragraph at lines 19--26
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--56
+Underfull \hbox (badness 10000) in paragraph at lines 19--26
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 58--121
+Underfull \hbox (badness 10000) in paragraph at lines 28--73
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--121
+Underfull \hbox (badness 10000) in paragraph at lines 28--73
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 124--128
+Underfull \hbox (badness 10000) in paragraph at lines 76--80
 
  []
 
 [4]
 Cap\'{\i }tulo 2.
-<./image/PESTA/general/balanca_1.jpg, id=74, 642.4pt x 481.8pt>
+<./image/PESTA/general/balanca_1.jpg, id=83, 642.4pt x 481.8pt>
 File: ./image/PESTA/general/balanca_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/general/balanca_1.jpg>
 Package pdftex.def Info: ./image/PESTA/general/balanca_1.jpg  used on input lin
-e 140.
+e 92.
 (pdftex.def)             Requested size: 265.552pt x 199.16928pt.
 
-Overfull \hbox (67.09538pt too wide) in paragraph at lines 140--141
+Overfull \hbox (67.09538pt too wide) in paragraph at lines 92--93
  [][] 
  []
 
-<./image/PESTA/general/balanca_4.jpg, id=75, 160.4394pt x 192.9609pt>
+<./image/PESTA/general/balanca_4.jpg, id=84, 160.4394pt x 192.9609pt>
 File: ./image/PESTA/general/balanca_4.jpg Graphic file (type jpg)
 <use ./image/PESTA/general/balanca_4.jpg>
 Package pdftex.def Info: ./image/PESTA/general/balanca_4.jpg  used on input lin
-e 149.
+e 101.
 (pdftex.def)             Requested size: 165.60695pt x 199.16928pt.
-<./image/PESTA/general/Weigh_Scale_Salter_1.jpg, id=76, 803.0pt x 982.67125pt>
+<./image/PESTA/general/Weigh_Scale_Salter_1.jpg, id=85, 803.0pt x 982.67125pt>
 File: ./image/PESTA/general/Weigh_Scale_Salter_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/general/Weigh_Scale_Salter_1.jpg>
 Package pdftex.def Info: ./image/PESTA/general/Weigh_Scale_Salter_1.jpg  used o
-n input line 165.
+n input line 117.
 (pdftex.def)             Requested size: 162.75365pt x 199.16928pt.
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-67.
+19.
 ("C:\Program Files\MiKTeX\tex/latex/base\t1cmtt.fd"
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-Underfull \hbox (badness 10000) in paragraph at lines 130--169
+Underfull \hbox (badness 10000) in paragraph at lines 82--121
 
  []
 
 
-Overfull \hbox (23.71245pt too wide) in paragraph at lines 130--169
+Overfull \hbox (23.71245pt too wide) in paragraph at lines 82--121
 []$   $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--169
+Underfull \hbox (badness 10000) in paragraph at lines 82--121
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--169
+Underfull \hbox (badness 10000) in paragraph at lines 82--121
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--169
+Underfull \hbox (badness 10000) in paragraph at lines 82--121
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--169
+Underfull \hbox (badness 10000) in paragraph at lines 82--121
 
  []
 
 [5
 
  <./image/PESTA/general/balanca_1.jpg> <./image/PESTA/general/balanca_4.jpg>]
-<./image/PESTA/general/Public_Body_Scales_1.jpg, id=85, 383.18156pt x 248.42813
+<./image/PESTA/general/Public_Body_Scales_1.jpg, id=95, 383.18156pt x 248.42813
 pt>
 File: ./image/PESTA/general/Public_Body_Scales_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/general/Public_Body_Scales_1.jpg>
 Package pdftex.def Info: ./image/PESTA/general/Public_Body_Scales_1.jpg  used o
-n input line 177.
+n input line 129.
 (pdftex.def)             Requested size: 307.20636pt x 199.16928pt.
-<./image/PESTA/general/Balanca_Mola_1.jpg, id=86, 97.8054pt x 204.5241pt>
+<./image/PESTA/general/Balanca_Mola_1.jpg, id=96, 97.8054pt x 204.5241pt>
 File: ./image/PESTA/general/Balanca_Mola_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/general/Balanca_Mola_1.jpg>
 Package pdftex.def Info: ./image/PESTA/general/Balanca_Mola_1.jpg  used on inpu
-t line 179.
+t line 131.
 (pdftex.def)             Requested size: 95.24718pt x 199.16928pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 170--184
+Underfull \hbox (badness 10000) in paragraph at lines 122--136
 
  []
 
 [6 <./image/PESTA/general/Weigh_Scale_Salter_1.jpg> <./image/PESTA/general/Publ
 ic_Body_Scales_1.jpg> <./image/PESTA/general/Balanca_Mola_1.jpg>]
-<./image/PESTA/general/Scale_1.jpg, id=91, 1330.9725pt x 1039.63406pt>
+<./image/PESTA/general/Scale_1.jpg, id=101, 1330.9725pt x 1039.63406pt>
 File: ./image/PESTA/general/Scale_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/general/Scale_1.jpg>
 Package pdftex.def Info: ./image/PESTA/general/Scale_1.jpg  used on input line 
-189.
+141.
 (pdftex.def)             Requested size: 254.97922pt x 199.16928pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--192
+Underfull \hbox (badness 10000) in paragraph at lines 137--144
 
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 207--9
+Underfull \hbox (badness 10000) in paragraph at lines 159--10
 
  []
 
 [7 <./image/PESTA/general/Scale_1.jpg>] (input/page/Desenvolvimento.tex
 Cap\'{\i }tulo 3.
-<./image/PESTA/kit/Kit_Desenvolvimento_2.jpg, id=95, 3014.26125pt x 1704.3675pt
->
+<./image/PESTA/kit/Kit_Desenvolvimento_2.jpg, id=105, 3014.26125pt x 1704.3675p
+t>
 File: ./image/PESTA/kit/Kit_Desenvolvimento_2.jpg Graphic file (type jpg)
 <use ./image/PESTA/kit/Kit_Desenvolvimento_2.jpg>
 Package pdftex.def Info: ./image/PESTA/kit/Kit_Desenvolvimento_2.jpg  used on i
@@ -1385,14 +1597,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--12
 
  []
 
-<./image/PESTA/Diagrama/Diagrama_bloco_3.jpg, id=96, 1063.72406pt x 708.39656pt
->
+<./image/PESTA/Diagrama/Diagrama_bloco_3.jpg, id=106, 1063.72406pt x 708.39656p
+t>
 File: ./image/PESTA/Diagrama/Diagrama_bloco_3.jpg Graphic file (type jpg)
 <use ./image/PESTA/Diagrama/Diagrama_bloco_3.jpg>
 Package pdftex.def Info: ./image/PESTA/Diagrama/Diagrama_bloco_3.jpg  used on i
 nput line 16.
 (pdftex.def)             Requested size: 287.20934pt x 191.26962pt.
-<./image/PESTA/material/Load_Cell_1.jpg, id=97, 2337.73375pt x 1152.305pt>
+<./image/PESTA/material/Load_Cell_1.jpg, id=107, 2337.73375pt x 1152.305pt>
 File: ./image/PESTA/material/Load_Cell_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/material/Load_Cell_1.jpg>
 Package pdftex.def Info: ./image/PESTA/material/Load_Cell_1.jpg  used on input 
@@ -1407,7 +1619,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--29
 
  <./image/PESTA/kit/Kit_Desenvolvimento_2.jpg> <./image/PESTA/Diagrama/Diagrama
 _bloco_3.jpg>]
-<./image/PESTA/general/strain_gauge_1.jpg, id=102, 630.10406pt x 381.67593pt>
+<./image/PESTA/general/strain_gauge_1.jpg, id=111, 630.10406pt x 381.67593pt>
 File: ./image/PESTA/general/strain_gauge_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/general/strain_gauge_1.jpg>
 Package pdftex.def Info: ./image/PESTA/general/strain_gauge_1.jpg  used on inpu
@@ -1418,13 +1630,13 @@ Overfull \hbox (14.347pt too wide) in paragraph at lines 38--39
 []  
  []
 
-<./image/PESTA/schematic/Wheatstone_2.jpg, id=103, 313.17pt x 210.03468pt>
+<./image/PESTA/schematic/Wheatstone_2.jpg, id=112, 313.17pt x 210.03468pt>
 File: ./image/PESTA/schematic/Wheatstone_2.jpg Graphic file (type jpg)
 <use ./image/PESTA/schematic/Wheatstone_2.jpg>
 Package pdftex.def Info: ./image/PESTA/schematic/Wheatstone_2.jpg  used on inpu
 t line 47.
 (pdftex.def)             Requested size: 212.12129pt x 142.26378pt.
-<./image/PESTA/schematic/Wheatstone_1.jpg, id=104, 315.42844pt x 262.73157pt>
+<./image/PESTA/schematic/Wheatstone_1.jpg, id=113, 315.42844pt x 262.73157pt>
 File: ./image/PESTA/schematic/Wheatstone_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/schematic/Wheatstone_1.jpg>
 Package pdftex.def Info: ./image/PESTA/schematic/Wheatstone_1.jpg  used on inpu
@@ -1453,7 +1665,7 @@ Overfull \hbox (2.61047pt too wide) in paragraph at lines 31--74
 [9 <./image/PESTA/material/Load_Cell_1.jpg> <./image/PESTA/general/strain_gauge
 _1.jpg> <./image/PESTA/schematic/Wheatstone_2.jpg>] [10 <./image/PESTA/schemati
 c/Wheatstone_1.jpg>]
-<./image/PESTA/material/Prato.jpg, id=113, 2836.5975pt x 903.375pt>
+<./image/PESTA/material/Prato.jpg, id=122, 2836.5975pt x 903.375pt>
 File: ./image/PESTA/material/Prato.jpg Graphic file (type jpg)
 <use ./image/PESTA/material/Prato.jpg>
 Package pdftex.def Info: ./image/PESTA/material/Prato.jpg  used on input line 8
@@ -1465,14 +1677,14 @@ Overfull \hbox (12.84715pt too wide) in paragraph at lines 80--81
  []
 
 [11 <./image/PESTA/material/Prato.jpg>]
-<./image/PESTA/schematic/HX711_Schematic_1.jpg, id=117, 628.59843pt x 310.91156
+<./image/PESTA/schematic/HX711_Schematic_1.jpg, id=127, 628.59843pt x 310.91156
 pt>
 File: ./image/PESTA/schematic/HX711_Schematic_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/schematic/HX711_Schematic_1.jpg>
 Package pdftex.def Info: ./image/PESTA/schematic/HX711_Schematic_1.jpg  used on
  input line 97.
 (pdftex.def)             Requested size: 220.01274pt x 108.82066pt.
-<./image/PESTA/material/HX711_board_1.jpg, id=118, 2004.48875pt x 1071.00125pt>
+<./image/PESTA/material/HX711_board_1.jpg, id=128, 2004.48875pt x 1071.00125pt>
 
 File: ./image/PESTA/material/HX711_board_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/material/HX711_board_1.jpg>
@@ -1504,7 +1716,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 103--121
 
  []
 
-<./image/PESTA/graph/80SPS64GAIN/SPS_80.JPG, id=119, 731.73375pt x 534.99875pt>
+<./image/PESTA/graph/80SPS64GAIN/SPS_80.JPG, id=129, 731.73375pt x 534.99875pt>
 
 File: ./image/PESTA/graph/80SPS64GAIN/SPS_80.JPG Graphic file (type jpg)
 <use ./image/PESTA/graph/80SPS64GAIN/SPS_80.JPG>
@@ -1527,7 +1739,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 162--164
 
  []
 
-<./image/PESTA/graph/80SPS128GAIN/Gain_128_example.JPG, id=123, 731.73375pt x 5
+<./image/PESTA/graph/80SPS128GAIN/Gain_128_example.JPG, id=133, 731.73375pt x 5
 34.99875pt>
 File: ./image/PESTA/graph/80SPS128GAIN/Gain_128_example.JPG Graphic file (type 
 jpg)
@@ -1535,7 +1747,7 @@ jpg)
 Package pdftex.def Info: ./image/PESTA/graph/80SPS128GAIN/Gain_128_example.JPG 
  used on input line 170.
 (pdftex.def)             Requested size: 182.93298pt x 133.74936pt.
-<./image/PESTA/graph/80SPS64GAIN/Gain_64_example.JPG, id=124, 731.73375pt x 534
+<./image/PESTA/graph/80SPS64GAIN/Gain_64_example.JPG, id=134, 731.73375pt x 534
 .99875pt>
 File: ./image/PESTA/graph/80SPS64GAIN/Gain_64_example.JPG Graphic file (type jp
 g)
@@ -1543,393 +1755,401 @@ g)
 Package pdftex.def Info: ./image/PESTA/graph/80SPS64GAIN/Gain_64_example.JPG  u
 sed on input line 180.
 (pdftex.def)             Requested size: 182.93298pt x 133.74936pt.
-<./image/PESTA/Code/Main_While_Balanca.jpg, id=125, 429.10312pt x 481.04718pt>
-File: ./image/PESTA/Code/Main_While_Balanca.jpg Graphic file (type jpg)
-<use ./image/PESTA/Code/Main_While_Balanca.jpg>
-Package pdftex.def Info: ./image/PESTA/Code/Main_While_Balanca.jpg  used on inp
-ut line 197.
-(pdftex.def)             Requested size: 236.00743pt x 264.57677pt.
-<./image/PESTA/Code/read_raw.jpg, id=126, 313.9228pt x 420.82219pt>
-File: ./image/PESTA/Code/read_raw.jpg Graphic file (type jpg)
-<use ./image/PESTA/Code/read_raw.jpg>
-Package pdftex.def Info: ./image/PESTA/Code/read_raw.jpg  used on input line 20
-7.
-(pdftex.def)             Requested size: 172.65807pt x 231.45291pt.
 
-Overfull \hbox (27.12141pt too wide) in paragraph at lines 207--208
-[]  
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 137--215
+Underfull \hbox (badness 10000) in paragraph at lines 137--194
 
  []
 
 
-Overfull \hbox (2.61047pt too wide) in paragraph at lines 137--215
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 137--194
 []$ $[]$ 
  []
 
 
-Overfull \hbox (33.67372pt too wide) in paragraph at lines 137--215
+Overfull \hbox (33.67372pt too wide) in paragraph at lines 137--194
 []$   $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--215
+Underfull \hbox (badness 10000) in paragraph at lines 137--194
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--215
-
- []
-
-[13 <./image/PESTA/graph/80SPS64GAIN/SPS_80.JPG>] [14 <./image/PESTA/graph/80SP
-S128GAIN/Gain_128_example.JPG> <./image/PESTA/graph/80SPS64GAIN/Gain_64_example
-.JPG>] [15 <./image/PESTA/Code/Main_While_Balanca.jpg> <./image/PESTA/Code/read
-_raw.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 222--258
+Underfull \hbox (badness 10000) in paragraph at lines 137--194
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 222--258
+Underfull \hbox (badness 10000) in paragraph at lines 137--194
 
  []
 
-<./image/PESTA/material/4x20_LCD.jpg, id=137, 575.90157pt x 345.54094pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 137--194
+
+ []
+
+[13 <./image/PESTA/graph/80SPS64GAIN/SPS_80.JPG>]
+(input/code/Main_While_case_1.c) [14 <./image/PESTA/graph/80SPS128GAIN/Gain_128
+_example.JPG> <./image/PESTA/graph/80SPS64GAIN/Gain_64_example.JPG>]
+(input/code/HX711_read_raw.c) [15]
+Underfull \hbox (badness 10000) in paragraph at lines 233--269
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 233--269
+
+ []
+
+<./image/PESTA/material/4x20_LCD.jpg, id=145, 575.90157pt x 345.54094pt>
 File: ./image/PESTA/material/4x20_LCD.jpg Graphic file (type jpg)
 <use ./image/PESTA/material/4x20_LCD.jpg>
 Package pdftex.def Info: ./image/PESTA/material/4x20_LCD.jpg  used on input lin
-e 262.
+e 273.
 (pdftex.def)             Requested size: 287.95007pt x 172.77003pt.
 [16 <./image/PESTA/material/4x20_LCD.jpg>]
-<./image/PESTA/Diagrama/Harvard_architecture.jpg, id=141, 322.95656pt x 205.517
+<./image/PESTA/Diagrama/Harvard_architecture.jpg, id=149, 322.95656pt x 205.517
 8pt>
 File: ./image/PESTA/Diagrama/Harvard_architecture.jpg Graphic file (type jpg)
 <use ./image/PESTA/Diagrama/Harvard_architecture.jpg>
 Package pdftex.def Info: ./image/PESTA/Diagrama/Harvard_architecture.jpg  used 
-on input line 289.
+on input line 300.
 (pdftex.def)             Requested size: 322.95576pt x 205.5173pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--292
+Underfull \hbox (badness 10000) in paragraph at lines 279--303
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--292
+Underfull \hbox (badness 10000) in paragraph at lines 279--303
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--292
+Underfull \hbox (badness 10000) in paragraph at lines 279--303
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--292
+Underfull \hbox (badness 10000) in paragraph at lines 279--303
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--292
+Underfull \hbox (badness 10000) in paragraph at lines 279--303
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--292
+Underfull \hbox (badness 10000) in paragraph at lines 279--303
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--292
+Underfull \hbox (badness 10000) in paragraph at lines 279--303
 
  []
 
 [17 <./image/PESTA/Diagrama/Harvard_architecture.jpg>]
-<./image/PESTA/material/Atmega128_1.jpg, id=145, 450.18187pt x 477.28313pt>
+<./image/PESTA/material/Atmega128_1.jpg, id=154, 450.18187pt x 477.28313pt>
 File: ./image/PESTA/material/Atmega128_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/material/Atmega128_1.jpg>
 Package pdftex.def Info: ./image/PESTA/material/Atmega128_1.jpg  used on input 
-line 304.
+line 315.
 (pdftex.def)             Requested size: 315.12515pt x 334.0959pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 295--307
+Underfull \hbox (badness 10000) in paragraph at lines 306--318
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 295--307
+Underfull \hbox (badness 10000) in paragraph at lines 306--318
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 295--307
+Underfull \hbox (badness 10000) in paragraph at lines 306--318
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 295--307
+Underfull \hbox (badness 10000) in paragraph at lines 306--318
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 295--307
+Underfull \hbox (badness 10000) in paragraph at lines 306--318
 
  []
 
 
-Overfull \hbox (22.4942pt too wide) in paragraph at lines 309--312
+Overfull \hbox (22.4942pt too wide) in paragraph at lines 320--323
 \T1/cmtt/m/n/12 https : / / drive . google . com / file / d / 1wgOGf8WwYY0OzDhR
 ca9ypXz-[]iBO55YOF / view ? usp =
  []
 
 [18 <./image/PESTA/material/Atmega128_1.jpg>]
-<./image/PESTA/programador/Atmel_ice.png, id=150, 271.76532pt x 219.82124pt>
+Underfull \hbox (badness 10000) in paragraph at lines 324--355
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 324--355
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 324--355
+
+ []
+
+[19]
+<./image/PESTA/programador/Atmel_ice.png, id=163, 271.76532pt x 219.82124pt>
 File: ./image/PESTA/programador/Atmel_ice.png Graphic file (type png)
 <use ./image/PESTA/programador/Atmel_ice.png>
 Package pdftex.def Info: ./image/PESTA/programador/Atmel_ice.png  used on input
- line 349.
+ line 362.
 (pdftex.def)             Requested size: 203.82349pt x 164.86551pt.
-<./image/PESTA/programador/isp_6pin.png, id=151, 371.13657pt x 146.04562pt>
+<./image/PESTA/programador/isp_6pin.png, id=164, 371.13657pt x 146.04562pt>
 File: ./image/PESTA/programador/isp_6pin.png Graphic file (type png)
 <use ./image/PESTA/programador/isp_6pin.png>
 Package pdftex.def Info: ./image/PESTA/programador/isp_6pin.png  used on input 
-line 359.
+line 372.
 (pdftex.def)             Requested size: 167.0099pt x 65.71991pt.
-<./image/PESTA/programador/isp_8e10pin.png, id=152, 347.04657pt x 197.98969pt>
+<./image/PESTA/programador/isp_8e10pin.png, id=165, 347.04657pt x 197.98969pt>
 File: ./image/PESTA/programador/isp_8e10pin.png Graphic file (type png)
 <use ./image/PESTA/programador/isp_8e10pin.png>
 Package pdftex.def Info: ./image/PESTA/programador/isp_8e10pin.png  used on inp
-ut line 361.
+ut line 374.
 (pdftex.def)             Requested size: 173.52286pt x 98.9946pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 313--366
-
- []
-
-
-Overfull \hbox (19.44734pt too wide) in paragraph at lines 313--366
+Overfull \hbox (19.44734pt too wide) in paragraph at lines 356--379
 []$   $[]$ 
  []
 
-[19 <./image/PESTA/programador/Atmel_ice.png> <./image/PESTA/programador/isp_6p
+[20 <./image/PESTA/programador/Atmel_ice.png> <./image/PESTA/programador/isp_6p
 in.png> <./image/PESTA/programador/isp_8e10pin.png>]
 Cap\'{\i }tulo 4.
-<./image/PESTA/flowchart/Main_Program_1.jpg, id=158, 620.3175pt x 724.20563pt>
+<./image/PESTA/flowchart/Main_Program_1.jpg, id=170, 620.3175pt x 724.20563pt>
 File: ./image/PESTA/flowchart/Main_Program_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/flowchart/Main_Program_1.jpg>
 Package pdftex.def Info: ./image/PESTA/flowchart/Main_Program_1.jpg  used on in
-put line 372.
+put line 385.
 (pdftex.def)             Requested size: 372.19337pt x 434.52673pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 367--375
+Underfull \hbox (badness 10000) in paragraph at lines 380--388
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 367--375
+Underfull \hbox (badness 10000) in paragraph at lines 380--388
 
  []
 
-<./image/PESTA/flowchart/Generic_structure.jpg, id=159, 1095.3422pt x 442.65375
+<./image/PESTA/flowchart/Generic_structure.jpg, id=171, 1095.3422pt x 442.65375
 pt>
 File: ./image/PESTA/flowchart/Generic_structure.jpg Graphic file (type jpg)
 <use ./image/PESTA/flowchart/Generic_structure.jpg>
 Package pdftex.def Info: ./image/PESTA/flowchart/Generic_structure.jpg  used on
- input line 385.
+ input line 398.
 (pdftex.def)             Requested size: 438.12912pt x 177.05835pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 377--388
+Underfull \hbox (badness 10000) in paragraph at lines 390--401
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 377--388
+Underfull \hbox (badness 10000) in paragraph at lines 390--401
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 377--388
+Underfull \hbox (badness 10000) in paragraph at lines 390--401
 
  []
 
-[20
+[21
 
  <./image/PESTA/flowchart/Main_Program_1.jpg>]
-<./image/PESTA/flowchart/Interrupt_1.jpg, id=165, 73.77562pt x 120.45pt>
+<./image/PESTA/flowchart/Interrupt_1.jpg, id=176, 73.77562pt x 120.45pt>
 File: ./image/PESTA/flowchart/Interrupt_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/flowchart/Interrupt_1.jpg>
 Package pdftex.def Info: ./image/PESTA/flowchart/Interrupt_1.jpg  used on input
- line 397.
+ line 410.
 (pdftex.def)             Requested size: 51.64256pt x 84.3144pt.
-<./image/PESTA/flowchart/Interrupt_2.jpg, id=166, 73.77562pt x 120.45pt>
+<./image/PESTA/flowchart/Interrupt_2.jpg, id=177, 73.77562pt x 120.45pt>
 File: ./image/PESTA/flowchart/Interrupt_2.jpg Graphic file (type jpg)
 <use ./image/PESTA/flowchart/Interrupt_2.jpg>
 Package pdftex.def Info: ./image/PESTA/flowchart/Interrupt_2.jpg  used on input
- line 405.
+ line 418.
 (pdftex.def)             Requested size: 51.64256pt x 84.3144pt.
 
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 394--410
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 407--423
 []$[]$ $[]$ 
  []
 
-<./image/PESTA/Code/Livrarias.jpg, id=167, 172.39406pt x 228.855pt>
+<./image/PESTA/Code/Livrarias.jpg, id=178, 172.39406pt x 228.855pt>
 File: ./image/PESTA/Code/Livrarias.jpg Graphic file (type jpg)
 <use ./image/PESTA/Code/Livrarias.jpg>
 Package pdftex.def Info: ./image/PESTA/Code/Livrarias.jpg  used on input line 4
-19.
+32.
 (pdftex.def)             Requested size: 155.15321pt x 205.96759pt.
 
-Underfull \hbox (badness 1442) in paragraph at lines 425--431
+Underfull \hbox (badness 1442) in paragraph at lines 438--444
 \T1/cmr/m/n/12 de ul-tra-pas-sar a bar-reira ár-dua e do-lo-rosa de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 425--431
+Underfull \hbox (badness 10000) in paragraph at lines 438--444
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 425--431
+Underfull \hbox (badness 10000) in paragraph at lines 438--444
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 425--431
+Underfull \hbox (badness 10000) in paragraph at lines 438--444
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 390--432
+Underfull \hbox (badness 10000) in paragraph at lines 403--445
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 390--432
+Underfull \hbox (badness 10000) in paragraph at lines 403--445
 
  []
 
 
-Overfull \hbox (2.61047pt too wide) in paragraph at lines 390--432
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 403--445
 []$ $[]$ 
  []
 
-[21 <./image/PESTA/flowchart/Generic_structure.jpg> <./image/PESTA/flowchart/In
-terrupt_1.jpg> <./image/PESTA/flowchart/Interrupt_2.jpg>] [22 <./image/PESTA/Co
+[22 <./image/PESTA/flowchart/Generic_structure.jpg> <./image/PESTA/flowchart/In
+terrupt_1.jpg> <./image/PESTA/flowchart/Interrupt_2.jpg>] [23 <./image/PESTA/Co
 de/Livrarias.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 435--443
+Underfull \hbox (badness 10000) in paragraph at lines 448--456
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 435--443
+Underfull \hbox (badness 10000) in paragraph at lines 448--456
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 435--443
+Underfull \hbox (badness 10000) in paragraph at lines 448--456
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 435--443
+Underfull \hbox (badness 10000) in paragraph at lines 448--456
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 435--443
+Underfull \hbox (badness 10000) in paragraph at lines 448--456
 
  []
 
 
-Overfull \hbox (27.2254pt too wide) in paragraph at lines 450--473
+Overfull \hbox (27.2254pt too wide) in paragraph at lines 463--486
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 444--473
+Underfull \hbox (badness 10000) in paragraph at lines 457--486
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 444--473
+Underfull \hbox (badness 10000) in paragraph at lines 457--486
 
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 477--11
+Underfull \hbox (badness 10000) in paragraph at lines 490--12
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 477--11
+Underfull \hbox (badness 10000) in paragraph at lines 490--12
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 477--11
+Underfull \hbox (badness 10000) in paragraph at lines 490--12
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 477--11
+Underfull \hbox (badness 10000) in paragraph at lines 490--12
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 477--11
+Underfull \hbox (badness 10000) in paragraph at lines 490--12
 
  []
 
-[23] [24] (input/page/Conclusao.tex
+[24] [25] (input/page/Conclusao.tex
 Cap\'{\i }tulo 5.
 
-LaTeX Warning: Reference `anexo-main' on page 25 undefined on input line 20.
+Underfull \hbox (badness 10000) in paragraph at lines 2--17
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--17
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--17
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--17
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--17
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--17
+
+ []
+
+
+LaTeX Warning: Reference `anexo-main' on page 26 undefined on input line 25.
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 2--13
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2--13
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2--13
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2--13
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2--13
-
- []
-
-
-Overfull \hbox (5.89536pt too wide) in paragraph at lines 2--13
+Overfull \hbox (5.89536pt too wide) in paragraph at lines 22--14
 \T1/cmtt/m/n/12 PESTA2021 / tree / main / SandBox / ATMEGA128 / Atmega128$\T1/c
 mr/m/n/12 , e pos-sí-vel fa-zer \T1/cmr/m/it/12 down-load \T1/cmr/m/n/12 para
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2--13
+Underfull \hbox (badness 10000) in paragraph at lines 22--14
 
  []
 
-[25
+[26
 
-] (input/End.tex (Relatorio.bbl) [26
+] (input/End.tex (Relatorio.bbl) [27
 
 ] (input/page/Anexos.tex
-(input/excerpt/Definition_1.tex [27]
+(input/excerpt/Definition_1.tex [28]
 Ap\^endice A.
 
 Overfull \hbox (46.71495pt too wide) in paragraph at lines 3--34
@@ -1941,7 +2161,7 @@ Overfull \hbox (46.71495pt too wide) in paragraph at lines 35--7
 [][] []
  []
 
-[28
+[29
 
 ] (input/excerpt/Physic_1.tex
 Ap\^endice B.
@@ -1985,40 +2205,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--48
 
  []
 
-<./image/General/Einstein.jpg, id=200, 255.95625pt x 179.16937pt>
+<./image/General/Einstein.jpg, id=212, 255.95625pt x 179.16937pt>
 File: ./image/General/Einstein.jpg Graphic file (type jpg)
 <use ./image/General/Einstein.jpg>
 Package pdftex.def Info: ./image/General/Einstein.jpg  used on input line 65.
 (pdftex.def)             Requested size: 153.57492pt x 107.50244pt.
 )))
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 3--16
+
+Package glossaries Warning: No \printglossary or \printglossaries found. 
+(Remove \makeglossaries if you don't want any glossaries.) 
+This document will not have a glossary.
+
+
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 3--17
 []$ $[]$ 
  []
 
 
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 3--16
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 3--17
 []$ $[]$ 
  []
 
-[29
+[30
 
- <./image/General/Einstein.jpg>] [30] (Relatorio.aux
+ <./image/General/Einstein.jpg>] [31] (Relatorio.aux
 (include/SETUP/ConfigurePage.aux) (include/CAPA/CAPAREPORT_2.aux)
 (include/CONTRACAPA/CONTRACAPAREPORT_2.aux) (include/SETUP/Acknowledgement.aux)
-(include/SETUP/Abstract.aux) (include/SETUP/ContentFigureTable.aux)
+(include/SETUP/Abstract.aux) (include/SETUP/ContentFigureTableListing.aux)
 (include/SETUP/Acronym.aux))
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 37792 strings out of 480790
- 894020 string characters out of 2907055
- 1411472 words of memory out of 3000000
- 53040 multiletter control sequences out of 15000+200000
- 564166 words of font info for 107 fonts, out of 3000000 for 9000
+ 43049 strings out of 480790
+ 972521 string characters out of 2907055
+ 1719451 words of memory out of 3000000
+ 58169 multiletter control sequences out of 15000+200000
+ 564480 words of font info for 108 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 73i,22n,74p,1048b,890s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 73i,22n,101p,1066b,1407s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti
 0800.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
 0\ecrm1000.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
@@ -2028,37 +2254,38 @@ ur/jknappen/ec/dpi600\tcti1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/p
 k/ljfour/jknappen/ec/dpi600\tcbi0800.pk> <C:\Users\sergi\AppData\Local\MiKTeX\f
 onts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\sergi\AppData\Local\Mi
 KTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcbx1200.pk> <C:\Users\sergi\AppData\Lo
-cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\sergi\AppD
-ata\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\serg
-i\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi1200.pk> <C:\User
-s\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C
+cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\sergi\AppD
+ata\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\serg
+i\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\User
+s\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbi1200.pk> <C
 :\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.
-pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcr
-m0800.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi6
-00\ecrm0800.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/e
-c/dpi600\ecti1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jkna
-ppen/ec/dpi600\ecbx1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfou
-r/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk
-/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fo
-nts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\sergi\AppData\Local\MiK
-TeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\sergi\AppData\Loc
-al\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\sergi\AppDa
-ta\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\sergi
-\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1440.pk> <C:\Users
-\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk><C:/
-Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program File
-s/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/pub
-lic/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/
-cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program F
-iles/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmsy8.pfb>
-Output written on Relatorio.pdf (41 pages, 6194565 bytes).
+pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecb
+x1095.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi6
+00\tcrm0800.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/e
+c/dpi600\ecrm0800.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jkna
+ppen/ec/dpi600\ecti1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfou
+r/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk
+/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\sergi\AppData\Local\MiKTeX\fo
+nts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\sergi\AppData\Local\MiK
+TeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\sergi\AppData\Loc
+al\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\sergi\AppDa
+ta\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\sergi
+\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users
+\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1440.pk> <C:
+\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.p
+k><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Progra
+m Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr1
+2.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Pro
+gram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmsy8.pfb>
+Output written on Relatorio.pdf (45 pages, 6013406 bytes).
 PDF statistics:
- 977 PDF objects out of 1000 (max. 8388607)
+ 1053 PDF objects out of 1200 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 188 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 178 words of extra memory for PDF output out of 10000 (max. 10000000)
 

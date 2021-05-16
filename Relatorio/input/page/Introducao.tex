@@ -1,25 +1,4 @@
-\chapter{INTRODUÇÃO}
-\begin{comment}
-\begin{verbatim}
-•	Contextualizar a proposta de trabalho no âmbito da empresa, de um outro trabalho já realizado, do ponto de vista científico e/ou tecnológico, etc.;
-•	apresentar de forma clara os objetivos que se propõe atingir;
-•	descrever de forma sucinta, mas objetiva, a solução preconizada ou a hipótese colocada;
-•	apresentar de forma resumida, mas clara, os desenvolvimentos efetuados;
-•	identificar como foi validada e avaliada a solução encontrada;
-•	descrever a organização do relatório.
-\end{verbatim}
-\end{comment}
-\section{CONTEXTUALIZÃO}
-\begin{comment}
-\begin{verbatim}
-	Este projeto [7] surgiu do desejo de realizar um trabalho no âmbito da gestão de redes baseadas na infraestrutura Simple Network Management Protocol (SNMP) [4][5][8][9], mas que simultaneamente se integrasse na plataforma de alarmes do Sistema de Gestão de Alarmes (SGA) da Portugal Telecom (PT).
-	Por coincidência, a PT tinha acabado de adquirir (à Alcatel) a nova rede de banda larga Internet Protocol (IP)—Multi Protocol Label Switching (MPLS), e assim surgiu a necessidade de integrar os alarmes gerados por esta infraestrutura (Figura 1) no SGA.
-	
-	
-	Figura 1	Arquitetura do OSS 5620 SAM-O [1]
-	Dada a pouca experiência, e conhecimento, sobre a aquisição de alarmes para este tipo de tecnologias, foi natural a proposta de incluir a integração, e tratamento, dos alarmes desta rede no âmbito do projeto. Esta inclusão refletiu-se no desenvolvimento de um processo de aquisição dos alarmes gerados e de um programa que formate os relatórios de alarme para o formato (normalizado) da notificação de alarme utilizado no SGA.
-\end{verbatim}
-\end{comment}
+\chapter{Introdução}
 Num mundo altamente mecanizado, a força e o torque dentro de todas as grandezas são as quantidades mais medidas. Estas tem um papel significante nos produtos de medição de massa e células de peso usadas na industria e retalho, para os automóveis e aeronaves, no aperto de tampas de frascos de medicina e parafusos.\cite{book-9}\\
 \\
 A massa é uma das grandezas fundamentais, uma propriedade intrínseca de um objeto, na qual mede sua resistência a aceleração.
@@ -35,17 +14,7 @@ As balanças digitais estão presentes no nosso dia a dia, são uma ferramenta i
 \\
 Devido a importância desta grandeza a massa, foi a razão de querer fazer este projeto e desenvolver uma balança digital para uso domestico usando os meios que estão disponíveis no mercado.
 \newpage
-\section{OBJECTIVOS}
-\begin{comment}
-\begin{verbatim}
-	O objetivo principal deste projeto é a aquisição dos alarmes provenientes da rede IP/MPLS da Alcatel e a sua integração no sistema atualmente em uso na PT. Dada a complexidade inerente a este objetivo, sentiu-se a necessidade de o subdividir em múltiplas tarefas de realização mais simples, tais como:
-	•	A reavaliação dos procedimentos de aquisição de alarmes;
-	•	O estudo do protocolo SNMP, nomeadamente o conceito e implementação de traps;
-	•	O funcionamento e configuração dos programas que suportam o processo de leitura, destacando-se o snmptrapd e o syslog-ng;
-	•	O desenvolvimento do programa que formate os relatórios de alarme para o formato (normalizado) da notificação de alarme utilizado no SGA;
-	•	O aperfeiçoamento e simplificação de processo de desenvolvimento dos formatadores.
-\end{verbatim}
-\end{comment}
+\section{Objetivos}
 O Objetivo principal deste projeto é fazer uma balança digital economicamente viável, usando os sensores e equipamentos disponíveis no mercado, para ter um produto útil fácil de se replicar.
 \\
 \\
@@ -54,28 +23,10 @@ Escolher o sensor adequado e meios de tratamento da informação e comunicação
 \\
 No fim tentar aperfeiçoar, fazer melhorias, alterações e adaptações que possam surgir.
 \newpage
-\section{CALENDERIZAÇÃO}
-O segundo semestre teve inicio em 8 de Março, num ambiente de pandemia COVID-19 onde fomos forçados ao ensinamento a distancia, todo o trabalho teve de ser acompanhado \textit{online} pelos docentes, no entanto tive de organizar as tarefas pretendidas no plano abaixo descrito.
+\section{Calendarização}
+O segundo semestre teve inicio em 8 de Março, num ambiente de pandemia COVID-19 onde fomos forçados ao ensinamento a distancia, todo o trabalho teve de ser acompanhado \textit{online} pelos docentes, no entanto tive de organizar as tarefas pretendidas no plano abaixo descrito para poder fazer a entrega deste trabalho antes da data limite da época normal de 28 de Junho.
 \\
 \\
-\begin{comment}
-\begin{verbatim}
-	Sendo a aquisição dos alarmes provenientes da rede Alcatel IP/MPLS a motivação deste trabalho, a sua prossecução conduziu à calendarização apresentada na Tabela 1. Esta inclui um conjunto de tarefas, como por exemplo: o estudo da documentação do fabricante (Alcatel) da rede IP/MPLS adquirida pela PT; a implementação do coletor de alarmes, inserindo-o no processo de Recolha e Tratamento de Alarmes (RETA) [6]; teste e validação da solução proposta.
-\end{verbatim}
-\end{comment}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{comment}
-\begin{tikzpicture}
-	\GanttHeader{\textwidth}{2ex}{4cm}{15}
-	\Task{1}{Requirement analysis}{0}{3}
-	\Task{2}{Devise an abstract}{0.5}{1}
-	\Task{3}{Develop interfaces}{3}{3}
-	\Task{4}{Adapt existing}{4.5}{3}
-	\Task{5}{Implement and evaluate}{5}{4.5}
-	\Task{6}{Specify Phase II design}{8}{3}
-	\Task{7}{Prepare final report}{11}{1}
-\end{tikzpicture}
-\end{comment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[H]
 	\caption{Calendarização das tarefas}
@@ -120,7 +71,7 @@ O segundo semestre teve inicio em 8 de Março, num ambiente de pandemia COVID-19
 %\end{sidewaysfigure}
 \end{table}
 \newpage
-\section{ORGANIZAÇÃO DO RELATÓRIO}
+\section{Organização do Relatório}
 No capítulo 1 é feita uma contextualização do trabalho realizado e do seu propósito face às necessidades do mundo atual.\\
 \\
 No capítulo 2 vai ser descrito uma breve historia da evolução das balanças, e depois um estudo da balança digital.

@@ -1,4 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{light-gray}{gray}{0.95}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{comment}
 \setlistdepth{12}
 \newlist{enumitem}{enumerate}{12}
@@ -87,8 +90,9 @@
 \renewcommand*\contentsname{Índice}
 \renewcommand*\listfigurename{Índice de Figuras}
 \renewcommand*\listtablename{Índice de Tabelas}
+\renewcommand*\lstlistingname{Listagen}
 \renewcommand*\bibname{Referências Documentais}
-\renewcommand*\appendixname{ANEXO}
+\renewcommand*\appendixname{Anexo}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}{Lemma}
@@ -109,6 +113,7 @@
 \newcommand{\minipagespace}[1]{{\newline \vspace{#1cm} \newline}}
 \newcommand{\tablespace}[1]{{\vspace{#1cm}}}
 \newcommand{\figurespace}[1]{{\vspace{#1cm}}}
+\newcommand{\listingspace}[1]{{\vspace{#1cm}}}
 %%%%%%%%%%%%%FIX SECTION NUMBERING IN CASE REPORT%%%%%%%%%%%%%%%
 %\renewcommand\thesection{\arabic{section}}
 %\renewcommand\thesubsection{\thesection.\arabic{subsection}}
@@ -118,3 +123,25 @@
 \newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lstnewenvironment{java}[1][]{%
+	\lstset{language=Java,#1}%
+}{}
+\newcommand*{\incjava}[1][]{%
+	\lstinputlisting[{language=Java,#1}]%
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lstloadlanguages{C}
+\lstset{
+	basicstyle=\small\ttfamily\color{black},
+	commentstyle = \ttfamily\color{red},
+	keywordstyle=\ttfamily\color{blue},
+	stringstyle=\color{orange},
+	backgroundcolor=\color{light-gray},
+	columns=fullflexible
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
