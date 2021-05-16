@@ -183,12 +183,11 @@ Como indicado abaixo no gráfico em que a linha \textcolor{yellow}{amarela} é a
 \end{figure}
 \end{minipage}
 \minipagespace{.5}
-Para obter este resultado a livraria driver para o \textit{Load Cell Amplifier} teve de ter em consideração que o microcontrolador é de \textcolor{blue}{8} bits, porque o pacote de informação consiste de \textcolor{blue}{24} \textit{bits} e em que é transmitido primeiro o \textit{bit} \textbf{MSB}.
+Para obter este resultado a livraria driver para o \textit{Load Cell Amplifier} teve de ter em consideração que o micro-controlador é de \textcolor{blue}{8} bits, porque o pacote de informação consiste de \textcolor{blue}{24} \textit{bits} e em que é transmitido primeiro o \ac{msb}.
 \\
 \\
 \\
 O código que executa esta rotina é demonstrado na \textit{lista} \ref{HX711-read-raw} que é chamada pelas interrupções periódicas e só é ativa quando a função na \textit{lista} \ref{Main-While-case-1} \textbf{hx.query(\&hx)} é verdadeira.
-\\
 \\
 { \tiny
 	\lstinputlisting[language=C, caption={função de chamada \textbf{hx.query(\&hx)}}, captionpos=b, label=Main-While-case-1]{./input/code/Main_While_case_1.c}
@@ -197,31 +196,7 @@ O código que executa esta rotina é demonstrado na \textit{lista} \ref{HX711-re
 { \tiny
 	\lstinputlisting[language=C, caption=HX711\_read\_raw, captionpos=b, label=HX711-read-raw]{./input/code/HX711_read_raw.c}
 }
-\begin{comment}
-\begin{minipage}[l]{\linewidth}
-\begin{minipage}[l]{.60\linewidth}
-\begin{figure}[H]
-	\flushleft
-	\captionsetup{justification=raggedright,singlelinecheck=false}
-	\includegraphics[scale=0.55]{./image/PESTA/Code/Main_While_Balanca.jpg}
-	\caption{PROGRAM 1}
-	\label{Main_While_Balanca}
-\end{figure}
-\end{minipage}
-\begin{minipage}[l]{.33\linewidth}
-	\vspace{1.1cm}
-	\begin{figure}[H]
-		\flushleft
-		\captionsetup{justification=raggedright,singlelinecheck=false}
-		\includegraphics[scale=0.55]{./image/PESTA/Code/read_raw.jpg}
-		\caption{Leitura ADC}
-		\label{read_raw}
-	\end{figure}
-\end{minipage}
-\end{minipage}
-\minipagespace{.5}
-\end{comment}
-\listingspace{.5}
+\listingspace{.1}
 Após obter um numero determinado de valores discretos é calculado sua média
 \begin{equation}
 	\label{eq:Mean}
@@ -230,7 +205,7 @@ Após obter um numero determinado de valores discretos é calculado sua média
 para ser tratado e deduzido o valor correspondente da massa.
 \newpage
 \section{Display LCD}
-O \textit{Liquid-Crystal Dispaly} (\textbf{LCD}) utilizado é de 4x20, isto é, quatro linhas de vinte caracteres cada, é o interface humano principal, e durante o projecto uma ferramenta extremamente útil também para fazer \textit{debug} e executar testes no código.
+O \ac{lcd} utilizado é de 4x20, isto é, quatro linhas de vinte caracteres cada, é o interface humano principal, e durante o projecto uma ferramenta extremamente útil também para fazer \textit{debug} e executar testes no código.
 \\
 \\
 Uma livraria na qual já tinha feito para outros projetos serviu para aplicar neste, poupando bastante tempo, revelando a importância de documentar os conhecimentos adquiridos. A livraria ou se preferem \textit{driver} esta \textit{anexado}.
@@ -282,16 +257,16 @@ Os microcontroldores da \textbf{Atmel} de 8 e 32 bits são baseados na arquitetu
 Este tipo de arquitetura tem dois  \textit{busses} (barramentos) um dedicado a leitura das instruções a executar e outra para escrita e leitura de \textit{data} (informação ou dados), isto assegura que uma nova instrução pode ser executada em cada ciclo de relógio, na qual elimina estados de espera quando não ha instruções prontas a executar.
 \\
 \\
-Nos microcontroladores da \textbf{AVR} os barramentos estão configurados de forma a dar prioridade ao barramento das instruções do \textbf{CPU} acesso a memoria flash enquanto o barramento da CPU de dados tem prioridade de acesso a \textbf{SRAM} (Static Random Access Memory).
+Nos microcontroladores da \textbf{AVR} os barramentos estão configurados de forma a dar prioridade ao barramento das instruções do \ac{cpu} acesso a memoria flash enquanto o barramento da CPU de dados tem prioridade de acesso a \ac{sram}.
 \\
 \\
-O espaço de memoria de dados é dividida em três, os \textbf{GPR} (General Purpose Registers) as \textbf{SFRs} (Special Function Registers) ou memoria de I/O e a \textit{data} \textbf{SRAM}.
+O espaço de memoria de dados é dividida em três, os \ac{gpr} as \ac{sfr} ou memoria de I/O e a \textit{data} \textbf{SRAM}.
 \\
 \\
-Os microcontroladores da \textbf{AVR} utiliza uma arquitetura de instruçõeses \textbf{RISC} (Reduced Instruction Set Computer ou Reduced COMPLEXITY Instruction Set Computer) na qual reduz a complexidade dos circuitos na codificação de cada instrução.
+Os microcontroladores da \textbf{AVR} utiliza uma arquitetura de instruçõeses \ac{risc} na qual reduz a complexidade dos circuitos na codificação de cada instrução.
 \\
 \\
-Dai que os microcontroladores que se baseiam nestes tipos de arquitetura são sinonimo de código reduzido, alta performance e baixo consumo energético.
+Dai que os micro-controladores que se baseiam nestes tipos de arquitetura são sinonimo de código reduzido, alta performance e baixo consumo energético.
 \\
 \\
 \begin{figure}[H]
@@ -303,7 +278,7 @@ Dai que os microcontroladores que se baseiam nestes tipos de arquitetura são si
 \end{figure}
 \qquad link: \url{https://en.wikipedia.org/wiki/Harvard_architecture}
 \newpage
-Neste projeto apostei no Atmega 128 (\textit{figura} \ref{Atmega_128_pinagem}) por ser um dos mais poderosos \textbf{MCU´s} da linha de 8 b\textit{bit} da Atmel, também por estar integrado já numa placa de desenvolvimento usando o sistema por fichas \textit{insulation-displacement contact} (\textbf{IDC}) que prefiro, ou seja, usando \textit{flatcables} para ligar os periféricos, e considero muito mais pratico do que sistema que esta na moda, tais como a linha Arduino e da STM por ter um interface por pinos.
+Neste projeto apostei no Atmega 128 (\textit{figura} \ref{Atmega_128_pinagem}) por ser um dos mais poderosos \ac{mcu} da linha de 8 b\textit{bit} da Atmel, também por estar integrado já numa placa de desenvolvimento usando o sistema por fichas \ac{idc} que prefiro, ou seja, usando \textit{flatcables} para ligar os periféricos, e considero muito mais pratico do que sistema que esta na moda, tais como a linha Arduino, STMicroelectronics e a \ac{pic} por ter um interface por pinos.
 \\
 \\
 \\
@@ -321,7 +296,7 @@ Neste projeto apostei no Atmega 128 (\textit{figura} \ref{Atmega_128_pinagem}) p
 \\
 \url{https://drive.google.com/file/d/1wgOGf8WwYY0OzDhRca9ypXz-iBO55YOF/view?usp=sharing}
 \newpage
-A características do micro-controlador ATmega 128 esta abaixo indicados na lista, os temporizadores considero o mais importante, o ADC nem vai ser usado neste projeto a alternativa é muito melhor, talvez os MCU nem deviam ter esta funcionalidade e realçar em meios de comunicação e memoria com as livrarias já disponíveis, este integrado é perfeito para esta aplicação em causa, sempre que fazemos projetos também temos de considerar os MCU de 32 \textit{bit} mas existe uma linha muito fina de apostar noutra alternativa e trabalhar com um sistema operativo devido a complexidade exigida, muito mais configurações e opções disponíveis do que um micro-controlador de 8 e 16 \textit{bit}.
+A características do micro-controlador ATmega 128 esta abaixo indicados na lista, os temporizadores considero o mais importante, o \ac{adc} nem vai ser usado neste projeto a alternativa é muito melhor, talvez os MCU nem deviam ter esta funcionalidade e realçar em meios de comunicação e memoria com as livrarias já disponíveis, este integrado é perfeito para esta aplicação em causa, sempre que fazemos projetos também temos de considerar os MCU de 32 \textit{bit} mas existe uma linha muito fina de apostar noutra alternativa e trabalhar com um sistema operativo devido a complexidade exigida, muito mais configurações e opções disponíveis do que um micro-controlador de 8 e 16 \textit{bit}.
 \\
 \\
 \\
@@ -353,7 +328,7 @@ A características do micro-controlador ATmega 128 esta abaixo indicados na list
 \end{minipage}
 \minipagespace{0.5}
 \newpage
-Para programar este microcontrolador (\textbf{Atmega 128}) foi utilizado o programador da marca da Atmel precisamente o \textbf{Atmel-ICE} \textit{figura} \ref{Programador_1}, que para este equipamento tem disponível programação via \textit{In-System Programming} (\textbf{ISP}) \textit{figura} \ref{ISP_6_8_10pin} e \textit{Joint Test Action Group} (\textbf{JTAG}).
+Para programar este microcontrolador (\textbf{Atmega 128}) foi utilizado o programador da marca da Atmel precisamente o \ac{atmel-ice} \textit{figura} \ref{Programador_1}, que para este equipamento tem disponível programação via \ac{isp} \textit{figura} \ref{ISP_6_8_10pin} e \ac{jtag}.
 \minipagespace{.2}
 \begin{minipage}[!b]{.5\linewidth}
 	\begin{figure}[H]
@@ -377,7 +352,7 @@ Para programar este microcontrolador (\textbf{Atmega 128}) foi utilizado o progr
 	\end{figure}
 \end{minipage}
 \chapter{Software}
-O \textbf{IDE} utilizado neste trabalho foi o \textbf{\textit{{Microchip Studio for AVR\textsuperscript{\textregistered} and SAM Devices}}} (\textit{version: 7.0.2542}). A programação foi feita em Linguagem \textbf{C}, sua estrutura sintática esta abaixo mencionado:
+O \ac{ide} utilizado neste trabalho foi o \textbf{\textit{{Microchip Studio for AVR\textsuperscript{\textregistered} and SAM Devices}}} (\textit{version: 7.0.2542}). A programação foi feita em Linguagem \textbf{C}, sua estrutura sintática esta abaixo mencionado:
 \\
 \\
 \begin{figure}[H]
@@ -436,7 +411,7 @@ Consultar código para leitura das rotinas de interrupção nas folhas \textit{a
 \end{minipage}
 \begin{minipage}{.6\linewidth}
 Ao lado esta as livrarias usadas neste projeto, as que estão dentro da caixa amarela são as que foram criadas.
-A filosofia usada é de criar objetos que representam o hardware para o poder manipular via código. Como se pode observar foi criado uma livraria para os temporizadores, outra paras as interrupções e \textbf{EEPROM} depois criado livrarias para os componentes externos, isto é, o \textbf{LCD} e o integrado \textbf{HX711}. \\
+A filosofia usada é de criar objetos que representam o hardware para o poder manipular via código. Como se pode observar foi criado uma livraria para os temporizadores, outra para as interrupções e \ac{eeprom}, depois criado livrarias para os componentes externos, isto é, o \textbf{LCD} e o integrado \textbf{HX711}. \\
 Uma abstração que torna simples executar qualquer algoritmo ou projeto, e isto só é possível depois de ultrapassar a barreira árdua e dolorosa de desenvolver as livrarias.
 \\
 \\

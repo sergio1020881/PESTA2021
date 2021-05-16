@@ -1,12 +1,9 @@
 \babel@toc {portuguese}{}
 \babel@toc {portuguese}{}
-\contentsline {chapter}{Agradecimentos}{}%
-\contentsline {chapter}{Resumo}{i}%
-\contentsline {chapter}{Índices}{i}%
-\contentsline {chapter}{Índice de Figuras}{ii}%
-\contentsline {chapter}{Índice de Tabelas}{iv}%
+\contentsline {chapter}{Lista de Figuras}{ii}%
+\contentsline {chapter}{Lista de Tabelas}{iv}%
 \contentsline {chapter}{Listagens}{vi}%
-\contentsline {chapter}{Acrónimos}{viii}%
+\contentsline {chapter}{Acrónimos}{vii}%
 \contentsline {chapter}{\numberline {1}Introdução}{1}%
 \contentsline {section}{\numberline {1.1}Objetivos}{2}%
 \contentsline {section}{\numberline {1.2}Calendarização}{3}%
@@ -22,6 +19,6 @@
 \contentsline {subsection}{\numberline {4.1.1}Material}{24}%
 \contentsline {chapter}{\numberline {5}Conclusões}{26}%
 \contentsline {section}{\numberline {5.1}Trabalho Futuro}{26}%
-\contentsline {chapter}{Referências documentais}{27}%
-\contentsline {chapter}{Ap\^endice \numberline {A}Definições}{29}%
-\contentsline {chapter}{Ap\^endice \numberline {B}Física}{30}%
+\contentsline {chapter}{Refer\^{e}ncias}{27}%
+\contentsline {chapter}{Anexo \numberline {A}Definições}{29}%
+\contentsline {chapter}{Anexo \numberline {B}Física}{30}%
