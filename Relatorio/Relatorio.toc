@@ -14,6 +14,7 @@
 \contentsline {section}{\numberline {3.2}Amplificador de sinal}{12}%
 \contentsline {section}{\numberline {3.3}Display LCD}{16}%
 \contentsline {section}{\numberline {3.4}Micro-controlador}{17}%
+\contentsline {section}{\numberline {3.5}Fonte de Alimentação}{20}%
 \contentsline {chapter}{\numberline {4}Software}{21}%
 \contentsline {section}{\numberline {4.1}Validação}{24}%
 \contentsline {subsection}{\numberline {4.1.1}Material}{24}%
@@ -23,4 +24,3 @@
 \contentsline {chapter}{Refer\^{e}ncias}{27}%
 \contentsline {chapter}{Anexo \numberline {A}Definições}{29}%
 \contentsline {chapter}{Anexo \numberline {B}Física}{30}%
-\contentsline {chapter}{Anexo \numberline {C}Código}{32}%

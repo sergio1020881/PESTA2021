@@ -1,16 +1,16 @@
-\ifglsentryexists{}{}%
+\ifglsentryexists{mems}{}%
 {%
-\gls@defglossaryentry{}%
+\gls@defglossaryentry{mems}%
 {%
-name={\space },%
-sort={\space },%
+name={MEMS},%
+sort={MEMS},%
 type={acronym},%
-first={\glsspace ( )},%
-firstplural={s\glsspace ( s)},%
-text={},%
-plural={s},%
-description={\glossaryentrynumbers },%
-descriptionplural={\glossaryentrynumbers \acrpluralsuffix },%
+first={\protect \textit  {Microelectromechanical Systems}\glsspace (MEMS)},%
+firstplural={\textit {Microelectromechanical Systems}\acrpluralsuffix \glsspace (MEMS\acrpluralsuffix )},%
+text={MEMS},%
+plural={MEMS\acrpluralsuffix },%
+description={\textit {Microelectromechanical Systems}},%
+descriptionplural={\textit {Microelectromechanical Systems}\acrpluralsuffix },%
 symbol={\relax },%
 symbolplural={\relax },%
 user1={},%
@@ -19,10 +19,670 @@ user3={},%
 user4={},%
 user5={},%
 user6={},%
-long={\@@par },%
-longplural={s},%
-short={},%
-shortplural={s},%
+long={\protect \textit  {Microelectromechanical Systems}},%
+longplural={\protect \textit  {Microelectromechanical Systems}s},%
+short={MEMS},%
+shortplural={MEMSs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{rom}{}%
+{%
+\gls@defglossaryentry{rom}%
+{%
+name={ROM},%
+sort={ROM},%
+type={acronym},%
+first={\protect \textit  {Read-only Memory}\glsspace (ROM)},%
+firstplural={\textit {Read-only Memory}\acrpluralsuffix \glsspace (ROM\acrpluralsuffix )},%
+text={ROM},%
+plural={ROM\acrpluralsuffix },%
+description={\textit {Read-only Memory}},%
+descriptionplural={\textit {Read-only Memory}\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={\protect \textit  {Read-only Memory}},%
+longplural={\protect \textit  {Read-only Memory}s},%
+short={ROM},%
+shortplural={ROMs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{ram}{}%
+{%
+\gls@defglossaryentry{ram}%
+{%
+name={RAM},%
+sort={RAM},%
+type={acronym},%
+first={\protect \textit  {Random-access Memory}\glsspace (RAM)},%
+firstplural={\textit {Random-access Memory}\acrpluralsuffix \glsspace (RAM\acrpluralsuffix )},%
+text={RAM},%
+plural={RAM\acrpluralsuffix },%
+description={\textit {Random-access Memory}},%
+descriptionplural={\textit {Random-access Memory}\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={\protect \textit  {Random-access Memory}},%
+longplural={\protect \textit  {Random-access Memory}s},%
+short={RAM},%
+shortplural={RAMs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{isp}{}%
+{%
+\gls@defglossaryentry{isp}%
+{%
+name={ISP},%
+sort={ISP},%
+type={acronym},%
+first={\protect \textit  {In-System Programming}\glsspace (ISP)},%
+firstplural={\textit {In-System Programming}\acrpluralsuffix \glsspace (ISP\acrpluralsuffix )},%
+text={ISP},%
+plural={ISP\acrpluralsuffix },%
+description={\textit {In-System Programming}},%
+descriptionplural={\textit {In-System Programming}\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={\protect \textit  {In-System Programming}},%
+longplural={\protect \textit  {In-System Programming}s},%
+short={ISP},%
+shortplural={ISPs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{jtag-dp}{}%
+{%
+\gls@defglossaryentry{jtag-dp}%
+{%
+name={JTAG-DP},%
+sort={JTAG-DP},%
+type={acronym},%
+first={\protect \textit  {Joint Test Action Group}\glsspace (JTAG-DP)},%
+firstplural={\textit {Joint Test Action Group}\acrpluralsuffix \glsspace (JTAG-DP\acrpluralsuffix )},%
+text={JTAG-DP},%
+plural={JTAG-DP\acrpluralsuffix },%
+description={\textit {Joint Test Action Group}},%
+descriptionplural={\textit {Joint Test Action Group}\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={\protect \textit  {Joint Test Action Group}},%
+longplural={\protect \textit  {Joint Test Action Group}s},%
+short={JTAG-DP},%
+shortplural={JTAG-DPs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{jtag}{}%
+{%
+\gls@defglossaryentry{jtag}%
+{%
+name={JTAG},%
+sort={JTAG},%
+type={acronym},%
+first={\protect \textit  {Joint Test Action Group}\glsspace (JTAG)},%
+firstplural={\textit {Joint Test Action Group}\acrpluralsuffix \glsspace (JTAG\acrpluralsuffix )},%
+text={JTAG},%
+plural={JTAG\acrpluralsuffix },%
+description={\textit {Joint Test Action Group}},%
+descriptionplural={\textit {Joint Test Action Group}\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={\protect \textit  {Joint Test Action Group}},%
+longplural={\protect \textit  {Joint Test Action Group}s},%
+short={JTAG},%
+shortplural={JTAGs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{swd-dp}{}%
+{%
+\gls@defglossaryentry{swd-dp}%
+{%
+name={SWD-DP},%
+sort={SWD-DP},%
+type={acronym},%
+first={\protect \textit  {Serial Wire Debug}\glsspace (SWD-DP)},%
+firstplural={\textit {Serial Wire Debug}\acrpluralsuffix \glsspace (SWD-DP\acrpluralsuffix )},%
+text={SWD-DP},%
+plural={SWD-DP\acrpluralsuffix },%
+description={\textit {Serial Wire Debug}},%
+descriptionplural={\textit {Serial Wire Debug}\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={\protect \textit  {Serial Wire Debug}},%
+longplural={\protect \textit  {Serial Wire Debug}s},%
+short={SWD-DP},%
+shortplural={SWD-DPs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{iap}{}%
+{%
+\gls@defglossaryentry{iap}%
+{%
+name={IAP},%
+sort={IAP},%
+type={acronym},%
+first={\protect \textit  {in-application programming}\glsspace (IAP)},%
+firstplural={\textit {in-application programming}\acrpluralsuffix \glsspace (IAP\acrpluralsuffix )},%
+text={IAP},%
+plural={IAP\acrpluralsuffix },%
+description={\textit {in-application programming}},%
+descriptionplural={\textit {in-application programming}\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={\protect \textit  {in-application programming}},%
+longplural={\protect \textit  {in-application programming}s},%
+short={IAP},%
+shortplural={IAPs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{icp}{}%
+{%
+\gls@defglossaryentry{icp}%
+{%
+name={ICP},%
+sort={ICP},%
+type={acronym},%
+first={\protect \textit  {in-circuit programming}\glsspace (ICP)},%
+firstplural={\textit {in-circuit programming}\acrpluralsuffix \glsspace (ICP\acrpluralsuffix )},%
+text={ICP},%
+plural={ICP\acrpluralsuffix },%
+description={\textit {in-circuit programming}},%
+descriptionplural={\textit {in-circuit programming}\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={\protect \textit  {in-circuit programming}},%
+longplural={\protect \textit  {in-circuit programming}s},%
+short={ICP},%
+shortplural={ICPs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{pvp}{}%
+{%
+\gls@defglossaryentry{pvp}%
+{%
+name={PVP},%
+sort={PVP},%
+type={acronym},%
+first={\protect \textit  {Preço de Venda ao Público}\glsspace (PVP)},%
+firstplural={\textit {Preço de Venda ao Público}\acrpluralsuffix \glsspace (PVP\acrpluralsuffix )},%
+text={PVP},%
+plural={PVP\acrpluralsuffix },%
+description={\textit {Preço de Venda ao Público}},%
+descriptionplural={\textit {Preço de Venda ao Público}\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={\protect \textit  {Preço de Venda ao Público}},%
+longplural={\protect \textit  {Preço de Venda ao Público}s},%
+short={PVP},%
+shortplural={PVPs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{atmel-ice}{}%
+{%
+\gls@defglossaryentry{atmel-ice}%
+{%
+name={ATMEL-ICE},%
+sort={ATMEL-ICE},%
+type={acronym},%
+first={\protect \textit  {Development tool for debugging and programming ARM \protect \textsuperscript  {\textregistered } Cortex \protect \textsuperscript  {\textregistered } -M based Atmel \protect \textsuperscript  {\textregistered } SAM and Atmel AVR \protect \textsuperscript  {\textregistered } microcontrollers with On-Chip Debug capability}\glsspace (ATMEL-ICE)},%
+firstplural={\textit {Development tool for debugging and programming ARM \textsuperscript {\textregistered } Cortex \textsuperscript {\textregistered } -M based Atmel \textsuperscript {\textregistered } SAM and Atmel AVR \textsuperscript {\textregistered } microcontrollers with On-Chip Debug capability}\acrpluralsuffix \glsspace (ATMEL-ICE\acrpluralsuffix )},%
+text={ATMEL-ICE},%
+plural={ATMEL-ICE\acrpluralsuffix },%
+description={\textit {Development tool for debugging and programming ARM \textsuperscript {\textregistered } Cortex \textsuperscript {\textregistered } -M based Atmel \textsuperscript {\textregistered } SAM and Atmel AVR \textsuperscript {\textregistered } microcontrollers with On-Chip Debug capability}},%
+descriptionplural={\textit {Development tool for debugging and programming ARM \textsuperscript {\textregistered } Cortex \textsuperscript {\textregistered } -M based Atmel \textsuperscript {\textregistered } SAM and Atmel AVR \textsuperscript {\textregistered } microcontrollers with On-Chip Debug capability}\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={\protect \textit  {Development tool for debugging and programming ARM \protect \textsuperscript  {\textregistered } Cortex \protect \textsuperscript  {\textregistered } -M based Atmel \protect \textsuperscript  {\textregistered } SAM and Atmel AVR \protect \textsuperscript  {\textregistered } microcontrollers with On-Chip Debug capability}},%
+longplural={\protect \textit  {Development tool for debugging and programming ARM \protect \textsuperscript  {\textregistered } Cortex \protect \textsuperscript  {\textregistered } -M based Atmel \protect \textsuperscript  {\textregistered } SAM and Atmel AVR \protect \textsuperscript  {\textregistered } microcontrollers with On-Chip Debug capability}s},%
+short={ATMEL-ICE},%
+shortplural={ATMEL-ICEs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{msb}{}%
+{%
+\gls@defglossaryentry{msb}%
+{%
+name={MSB},%
+sort={MSB},%
+type={acronym},%
+first={\protect \textit  {Most Significant Bit}\glsspace (MSB)},%
+firstplural={\textit {Most Significant Bit}\acrpluralsuffix \glsspace (MSB\acrpluralsuffix )},%
+text={MSB},%
+plural={MSB\acrpluralsuffix },%
+description={\textit {Most Significant Bit}},%
+descriptionplural={\textit {Most Significant Bit}\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={\protect \textit  {Most Significant Bit}},%
+longplural={\protect \textit  {Most Significant Bit}s},%
+short={MSB},%
+shortplural={MSBs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{mcu}{}%
+{%
+\gls@defglossaryentry{mcu}%
+{%
+name={MCU},%
+sort={MCU},%
+type={acronym},%
+first={\protect \textit  {Microcontroller Unit}\glsspace (MCU)},%
+firstplural={\textit {Microcontroller Unit}\acrpluralsuffix \glsspace (MCU\acrpluralsuffix )},%
+text={MCU},%
+plural={MCU\acrpluralsuffix },%
+description={\textit {Microcontroller Unit}},%
+descriptionplural={\textit {Microcontroller Unit}\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={\protect \textit  {Microcontroller Unit}},%
+longplural={\protect \textit  {Microcontroller Unit}s},%
+short={MCU},%
+shortplural={MCUs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{adc}{}%
+{%
+\gls@defglossaryentry{adc}%
+{%
+name={ADC},%
+sort={ADC},%
+type={acronym},%
+first={\protect \textit  {Analog to Digital Converter}\glsspace (ADC)},%
+firstplural={\textit {Analog to Digital Converter}\acrpluralsuffix \glsspace (ADC\acrpluralsuffix )},%
+text={ADC},%
+plural={ADC\acrpluralsuffix },%
+description={\textit {Analog to Digital Converter}},%
+descriptionplural={\textit {Analog to Digital Converter}\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={\protect \textit  {Analog to Digital Converter}},%
+longplural={\protect \textit  {Analog to Digital Converter}s},%
+short={ADC},%
+shortplural={ADCs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{lcd}{}%
+{%
+\gls@defglossaryentry{lcd}%
+{%
+name={LCD},%
+sort={LCD},%
+type={acronym},%
+first={\protect \textit  {Liquid Crystal Display}\glsspace (LCD)},%
+firstplural={\textit {Liquid Crystal Display}\acrpluralsuffix \glsspace (LCD\acrpluralsuffix )},%
+text={LCD},%
+plural={LCD\acrpluralsuffix },%
+description={\textit {Liquid Crystal Display}},%
+descriptionplural={\textit {Liquid Crystal Display}\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={\protect \textit  {Liquid Crystal Display}},%
+longplural={\protect \textit  {Liquid Crystal Display}s},%
+short={LCD},%
+shortplural={LCDs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{rtos}{}%
+{%
+\gls@defglossaryentry{rtos}%
+{%
+name={RTOS},%
+sort={RTOS},%
+type={acronym},%
+first={\protect \textit  {Real Time Operating System}\glsspace (RTOS)},%
+firstplural={\textit {Real Time Operating System}\acrpluralsuffix \glsspace (RTOS\acrpluralsuffix )},%
+text={RTOS},%
+plural={RTOS\acrpluralsuffix },%
+description={\textit {Real Time Operating System}},%
+descriptionplural={\textit {Real Time Operating System}\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={\protect \textit  {Real Time Operating System}},%
+longplural={\protect \textit  {Real Time Operating System}s},%
+short={RTOS},%
+shortplural={RTOSs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{idc}{}%
+{%
+\gls@defglossaryentry{idc}%
+{%
+name={IDC},%
+sort={IDC},%
+type={acronym},%
+first={\protect \textit  {insulation-displacement contact}\glsspace (IDC)},%
+firstplural={\textit {insulation-displacement contact}\acrpluralsuffix \glsspace (IDC\acrpluralsuffix )},%
+text={IDC},%
+plural={IDC\acrpluralsuffix },%
+description={\textit {insulation-displacement contact}},%
+descriptionplural={\textit {insulation-displacement contact}\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={\protect \textit  {insulation-displacement contact}},%
+longplural={\protect \textit  {insulation-displacement contact}s},%
+short={IDC},%
+shortplural={IDCs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{sram}{}%
+{%
+\gls@defglossaryentry{sram}%
+{%
+name={SRAM},%
+sort={SRAM},%
+type={acronym},%
+first={\protect \textit  {Static Random-Access Memory}\glsspace (SRAM)},%
+firstplural={\textit {Static Random-Access Memory}\acrpluralsuffix \glsspace (SRAM\acrpluralsuffix )},%
+text={SRAM},%
+plural={SRAM\acrpluralsuffix },%
+description={\textit {Static Random-Access Memory}},%
+descriptionplural={\textit {Static Random-Access Memory}\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={\protect \textit  {Static Random-Access Memory}},%
+longplural={\protect \textit  {Static Random-Access Memory}s},%
+short={SRAM},%
+shortplural={SRAMs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{gpr}{}%
+{%
+\gls@defglossaryentry{gpr}%
+{%
+name={GPR},%
+sort={GPR},%
+type={acronym},%
+first={\protect \textit  {General Purpose Registers}\glsspace (GPR)},%
+firstplural={\textit {General Purpose Registers}\acrpluralsuffix \glsspace (GPR\acrpluralsuffix )},%
+text={GPR},%
+plural={GPR\acrpluralsuffix },%
+description={\textit {General Purpose Registers}},%
+descriptionplural={\textit {General Purpose Registers}\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={\protect \textit  {General Purpose Registers}},%
+longplural={\protect \textit  {General Purpose Registers}s},%
+short={GPR},%
+shortplural={GPRs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{sfr}{}%
+{%
+\gls@defglossaryentry{sfr}%
+{%
+name={SFR},%
+sort={SFR},%
+type={acronym},%
+first={\protect \textit  {Special Function Registers}\glsspace (SFR)},%
+firstplural={\textit {Special Function Registers}\acrpluralsuffix \glsspace (SFR\acrpluralsuffix )},%
+text={SFR},%
+plural={SFR\acrpluralsuffix },%
+description={\textit {Special Function Registers}},%
+descriptionplural={\textit {Special Function Registers}\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={\protect \textit  {Special Function Registers}},%
+longplural={\protect \textit  {Special Function Registers}s},%
+short={SFR},%
+shortplural={SFRs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{risc}{}%
+{%
+\gls@defglossaryentry{risc}%
+{%
+name={RISC},%
+sort={RISC},%
+type={acronym},%
+first={\protect \textit  {Reduced Instruction Set Computer ou Reduced COMPLEXITY Instruction Set Computer}\glsspace (RISC)},%
+firstplural={\textit {Reduced Instruction Set Computer ou Reduced COMPLEXITY Instruction Set Computer}\acrpluralsuffix \glsspace (RISC\acrpluralsuffix )},%
+text={RISC},%
+plural={RISC\acrpluralsuffix },%
+description={\textit {Reduced Instruction Set Computer ou Reduced COMPLEXITY Instruction Set Computer}},%
+descriptionplural={\textit {Reduced Instruction Set Computer ou Reduced COMPLEXITY Instruction Set Computer}\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={\protect \textit  {Reduced Instruction Set Computer ou Reduced COMPLEXITY Instruction Set Computer}},%
+longplural={\protect \textit  {Reduced Instruction Set Computer ou Reduced COMPLEXITY Instruction Set Computer}s},%
+short={RISC},%
+shortplural={RISCs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{pic}{}%
+{%
+\gls@defglossaryentry{pic}%
+{%
+name={PIC},%
+sort={PIC},%
+type={acronym},%
+first={\protect \textit  {Peripheral Interface Controller}\glsspace (PIC)},%
+firstplural={\textit {Peripheral Interface Controller}\acrpluralsuffix \glsspace (PIC\acrpluralsuffix )},%
+text={PIC},%
+plural={PIC\acrpluralsuffix },%
+description={\textit {Peripheral Interface Controller}},%
+descriptionplural={\textit {Peripheral Interface Controller}\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={\protect \textit  {Peripheral Interface Controller}},%
+longplural={\protect \textit  {Peripheral Interface Controller}s},%
+short={PIC},%
+shortplural={PICs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{flash}{}%
+{%
+\gls@defglossaryentry{flash}%
+{%
+name={FLASH},%
+sort={FLASH},%
+type={acronym},%
+first={\protect \textit  electronic non-volatile computer memory storage medium\glsspace (FLASH)},%
+firstplural={\textit electronic non-volatile computer memory storage medium\acrpluralsuffix \glsspace (FLASH\acrpluralsuffix )},%
+text={FLASH},%
+plural={FLASH\acrpluralsuffix },%
+description={\textit electronic non-volatile computer memory storage medium},%
+descriptionplural={\textit electronic non-volatile computer memory storage medium\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={\protect \textit  electronic non-volatile computer memory storage medium},%
+longplural={\protect \textit  electronic non-volatile computer memory storage mediums},%
+short={FLASH},%
+shortplural={FLASHs},%
 counter={page},%
 parent={},%
 %

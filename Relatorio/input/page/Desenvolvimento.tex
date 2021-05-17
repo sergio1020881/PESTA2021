@@ -351,6 +351,41 @@ Para programar este microcontrolador (\textbf{Atmega 128}) foi utilizado o progr
 		\label{ISP_6_8_10pin}
 	\end{figure}
 \end{minipage}
+\section{Fonte de Alimentação}
+\begin{minipage}[!b]{.5\linewidth}
+	\begin{figure}[H]
+		\captionsetup{justification=raggedright,singlelinecheck=false}
+		\flushleft
+		\includegraphics[scale=0.5]{./image/PESTA/material/DCDC_converter.jpg}
+		\caption{\textit{Buck Converter}}
+		\label{buck-converter}
+	\end{figure}
+	\figurespace{.1}
+\end{minipage}
+\begin{minipage}[!b]{.5\linewidth}
+\small
+Caracteristicas:
+	\begin{itemize}
+		\setlength\itemsep{-0.5em}
+		\footnotesize
+		\item \textit{Led} indicadores
+		\item 5A 75W DC-DC Ajustável \textit{Step-down}
+		\item Alimentação Entrada: 4 - 38VDC
+		\item Tensão de saída: 1.25 - 36VDC
+		\item Corrente saída: 0 - 5A
+		\item Potência saída: 75W
+		\item Voltímetro: 4 até 40V, erro ±0.1V
+		\item Frequência de operação: 180KHz
+		\item Eficiência até 96 \%
+		\item Proteção Térmica
+		\item Limitador de Corrente
+		\item Proteção contra curto circuito
+		\item NOTA: Não tem proteção de inversão de polaridade
+		\item L x W x H = 6.6 x 3.9 x 1.8 CM
+		\item Massa: 28g
+	\end{itemize}
+\end{minipage}
+Como a \textit{motherboard} tem um regulador de tensão de 5 Volt para aumentar a eficiência  e ter uma alimentação variável de entrada utilizo o \textit{Buck Converter} da \textit{figura} \ref{buck-converter}.
 \chapter{Software}
 O \ac{ide} utilizado neste trabalho foi o \textbf{\textit{{Microchip Studio for AVR\textsuperscript{\textregistered} and SAM Devices}}} (\textit{version: 7.0.2542}). A programação foi feita em Linguagem \textbf{C}, sua estrutura sintática esta abaixo mencionado:
 \\
