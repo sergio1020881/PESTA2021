@@ -1,33 +1,40 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \definecolor{light-gray}{gray}{0.95}
-%%%%%%%%%%%%%%%%%%%%%%%%%%ISEP%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%ISEP SETTINGS START%%%%%%%%%%%%%%%%%%%%%%
 \captionsetup{justification=centerlast,font=small,margin=50pt}
-\lstset{ %
-	%language=C,                        % choose the language of the code
-	basicstyle=\footnotesize\ttfamily,
-	keywordstyle=\bfseries,
-	numbers=left,                      % where to put the line-numbers   
+\lstset{
+	language=C,							% choose the language of the code
+	%basicstyle=\small\ttfamily\color{black},
+	basicstyle=\footnotesize\ttfamily\color{black},
+	keywordstyle=\bfseries\color{blue},
+	numbers=left,						% where to put the line-numbers   
 	numberstyle=\tiny\color{gray},		% the size of the fonts that are used for the line-numbers
-	stepnumber=1,                      % the step between two line-numbers. If it's 1 each line will be numbered
-	numbersep=8pt,                     % how far the line-numbers are from the code
+	stepnumber=1,						% the step between two line-numbers. If it's 1 each line will be numbered
+	numbersep=8pt,						% how far the line-numbers are from the code
 	xleftmargin=2em,					% keep line numbers inside the margins		
 	frame=tb,							% frame: top and bottom lines
-	framexleftmargin=1.5em,			% frame: adjusts left margin because the xleftmargin numbers setting
-	float=!htb,						% if float defined, let Latex manage it
+	framexleftmargin=1.5em,				% frame: adjusts left margin because the xleftmargin numbers setting
+	float=!htb,							% if float defined, let Latex manage it
 	aboveskip=8mm,
 	belowskip=4mm,
-	backgroundcolor=\color{white},
-	commentstyle=\color{darkgray},    	% comment style
-	%keywordstyle=\color{blue},       	% keyword style
-	showspaces=false,                  % show spaces adding particular underscores
-	showstringspaces=false,            % underline spaces within strings
-	showtabs=false,                    % show tabs within strings adding particular underscores
-	tabsize=2,	                    	% sets default tabsize to 2 spaces
-	captionpos=b,                      % sets the caption-position to bottom
-	breaklines=true,                   % sets automatic line breaking
-	breakatwhitespace=false,           % sets if automatic breaks should only happen at whitespace
-	escapeinside={\%*}{*)},            % if you want to add a comment within your code
-	morekeywords={*,var,template,new}  % if you want to add more keywords to the set
+	backgroundcolor=\color{light-gray},
+	commentstyle=\color{red},			% comment style
+	keywordstyle=\color{blue},			% keyword style
+	showspaces=false,					% show spaces adding particular underscores
+	showstringspaces=false,				% underline spaces within strings
+	showtabs=false,						% show tabs within strings adding particular underscores
+	tabsize=2,							% sets default tabsize to 2 spaces
+	captionpos=b,						% sets the caption-position to bottom
+	breaklines=true,					% sets automatic line breaking
+	breakatwhitespace=false,			% sets if automatic breaks should only happen at whitespace
+	escapeinside={\%*}{*)},				% if you want to add a comment within your code
+	morekeywords={*,var,template,new},	% if you want to add more keywords to the set
+	stringstyle=\color{orange},
+	columns=fullflexible
+	%basicstyle=\small\ttfamily\color{black},
+	%commentstyle = \ttfamily\color{red},
+	%keywordstyle=\ttfamily\color{blue},
+	%backgroundcolor=\color{light-gray},
 }
 \DTMnewdatestyle{mydateformat}{%
 	\renewcommand{\DTMdisplaydate}[4]{%
@@ -38,7 +45,7 @@
 	}%
 	\renewcommand{\DTMDisplaydate}{\DTMdisplaydate}%
 }
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%ISEP SETTINGS END%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{comment}
 \setlistdepth{12}
 \newlist{enumitem}{enumerate}{12}
@@ -127,8 +134,8 @@
 \addto{\captionsportuguese}{\renewcommand*\contentsname{\'{I}ndice}}
 \addto{\captionsportuguese}{\renewcommand{\appendixname}{Anexo}}
 \addto{\captionsportuguese}{\renewcommand{\bibname}{Refer\^{e}ncias}}
-\addto{\captionsportuguese}{\renewcommand\lstlistingname{Listagen}}
-\addto{\captionsportuguese}{\renewcommand\lstlistlistingname{Listagens}}
+\addto{\captionsportuguese}{\renewcommand*\lstlistingname{Listagen}}
+\addto{\captionsportuguese}{\renewcommand*\lstlistlistingname{Listagens}}
 \addto{\captionsportuguese}{\renewcommand*\acronymname{Acrónimos}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newtheorem{theorem}{Theorem}
@@ -167,6 +174,7 @@
 	\lstinputlisting[{language=Java,#1}]%
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
 \lstloadlanguages{C}
 \lstset{
 	basicstyle=\small\ttfamily\color{black},
@@ -176,6 +184,7 @@
 	backgroundcolor=\color{light-gray},
 	columns=fullflexible
 }
+\end{comment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 

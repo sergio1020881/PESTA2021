@@ -1,3 +1,8 @@
+\glossaryentry{ADC?\glossentry{adc}|setentrycounter[]{page}\glsnumberformat}{i}
+\glossaryentry{MCU?\glossentry{mcu}|setentrycounter[]{page}\glsnumberformat}{i}
+\glossaryentry{MCU?\glossentry{mcu}|setentrycounter[]{page}\glsnumberformat}{i}
+\glossaryentry{ADC?\glossentry{adc}|setentrycounter[]{page}\glsnumberformat}{i}
+\glossaryentry{MCU?\glossentry{mcu}|setentrycounter[]{page}\glsnumberformat}{i}
 \glossaryentry{GCD?\glossentry{gcd}|setentrycounter[]{page}\glsnumberformat}{viii}
 \glossaryentry{LCM?\glossentry{lcm}|setentrycounter[]{page}\glsnumberformat}{viii}
 \glossaryentry{WYSIWYG?\glossentry{wys}|setentrycounter[]{page}\glsnumberformat}{viii}
@@ -40,6 +45,7 @@
 \glossaryentry{RTC?\glossentry{rtc}|setentrycounter[]{page}\glsnumberformat}{viii}
 \glossaryentry{MIPS?\glossentry{mips}|setentrycounter[]{page}\glsnumberformat}{viii}
 \glossaryentry{E2PROM?\glossentry{e2prom}|setentrycounter[]{page}\glsnumberformat}{viii}
+\glossaryentry{PCB?\glossentry{pcb}|setentrycounter[]{page}\glsnumberformat}{viii}
 \glossaryentry{MSB?\glossentry{msb}|setentrycounter[]{page}\glsnumberformat}{14}
 \glossaryentry{LCD?\glossentry{lcd}|setentrycounter[]{page}\glsnumberformat}{16}
 \glossaryentry{CPU?\glossentry{cpu}|setentrycounter[]{page}\glsnumberformat}{17}
@@ -56,3 +62,5 @@
 \glossaryentry{JTAG?\glossentry{jtag}|setentrycounter[]{page}\glsnumberformat}{20}
 \glossaryentry{IDE?\glossentry{ide}|setentrycounter[]{page}\glsnumberformat}{21}
 \glossaryentry{EEPROM?\glossentry{eeprom}|setentrycounter[]{page}\glsnumberformat}{23}
+\glossaryentry{PVP?\glossentry{pvp}|setentrycounter[]{page}\glsnumberformat}{26}
+\glossaryentry{PCB?\glossentry{pcb}|setentrycounter[]{page}\glsnumberformat}{26}

@@ -1,4 +1,5 @@
-\begin{verbatimtab}
+%\begin{verbatimtab}
+\begin{lstlisting}[language=C]
 /*************************************************************************
 HX711
 Author: Sergio Santos
@@ -65,7 +66,7 @@ uint8_t datapin, uint8_t clkpin)
 	uint8_t tSREG;
 	tSREG = STATUS_REGISTER;
 	STATUS_REGISTER &= ~(1<<GLOBAL_INTERRUPT_ENABLE);
-	//ALLOCAÇÂO MEMORIA PARA Estrutura
+	//ALLOCACAO MEMORIA PARA Estrutura
 	HX711 hx711;
 	//import parametros
 	hx711_DDR = ddr;
@@ -238,4 +239,6 @@ Have to use vector to store 32 bit size word, then do a cast (int32_t*)
 to retrieve the value.
 *************/
 /***EOF***/
-\end{verbatimtab}
+\end{lstlisting}
+%\end{verbatimtab}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

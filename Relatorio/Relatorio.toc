@@ -17,8 +17,10 @@
 \contentsline {chapter}{\numberline {4}Software}{21}%
 \contentsline {section}{\numberline {4.1}Validação}{24}%
 \contentsline {subsection}{\numberline {4.1.1}Material}{24}%
+\contentsline {subsection}{\numberline {4.1.2}Testar}{25}%
 \contentsline {chapter}{\numberline {5}Conclusões}{26}%
 \contentsline {section}{\numberline {5.1}Trabalho Futuro}{26}%
 \contentsline {chapter}{Refer\^{e}ncias}{27}%
 \contentsline {chapter}{Anexo \numberline {A}Definições}{29}%
 \contentsline {chapter}{Anexo \numberline {B}Física}{30}%
+\contentsline {chapter}{Anexo \numberline {C}Código}{32}%

@@ -190,7 +190,7 @@ Para obter este resultado a livraria driver para o \textit{Load Cell Amplifier} 
 O código que executa esta rotina é demonstrado na \textit{lista} \ref{HX711-read-raw} que é chamada pelas interrupções periódicas e só é ativa quando a função na \textit{lista} \ref{Main-While-case-1} \textbf{hx.query(\&hx)} é verdadeira.
 \\
 { \tiny
-	\lstinputlisting[language=C, caption={função de chamada \textbf{hx.query(\&hx)}}, captionpos=b, label=Main-While-case-1]{./input/code/Main_While_case_1.c}
+	\lstinputlisting[language=C, caption={função de chamada \textbf{hx.query(\&hx)}}, captionpos=b, label=Main-While-case-1]{./input/code/hx_query.c}
 }
 \newpage
 { \tiny
@@ -251,7 +251,7 @@ Abaixo esta uma tabela \ref{LCD_connections} com as respetivas ligações.
 \end{figure}
 \newpage
 \section{Micro-controlador}
-Os microcontroldores da \textbf{Atmel} de 8 e 32 bits são baseados na arquitetura avançada de \textbf{Harvard} na qual esta concebido para baixos consumos e performance.
+Os micro-controladores da \textbf{Atmel} de 8 e 32 bits são baseados na arquitetura avançada de \textbf{Harvard} na qual esta concebido para baixos consumos e performance.
 \\
 \\
 Este tipo de arquitetura tem dois  \textit{busses} (barramentos) um dedicado a leitura das instruções a executar e outra para escrita e leitura de \textit{data} (informação ou dados), isto assegura que uma nova instrução pode ser executada em cada ciclo de relógio, na qual elimina estados de espera quando não ha instruções prontas a executar.
@@ -417,6 +417,11 @@ Uma abstração que torna simples executar qualquer algoritmo ou projeto, e isto
 \\
 \\
 \end{minipage}
+\minipagespace{.5}
+Durante este projeto tentou-se dentro do possível sempre seguir as boas praticas de programação, como a \texttt{indentação} especifica para cada situação, e manter a estrutura de norma. Deve-se manter uma metodologia de trabalho que segue as normas assim é percetível para todos e facilita detetar \textit{bugs}, e é uma pratica que abrange todas as linguagens, por exemplo o \textbf{Python} é fundado nesse principio.
+\\
+\\
+Quanto as interrupções é sempre um desafio, porque as tarefas tem que ser bem organizadas temporalmente para não entrar em conflitos, pretende-se assim sempre que o código corra na função \textit{main} e as interrupções algo esporádico e muito rápido, estas devem servir de \textit{flags} para executar rotinas na função \textit{main}, ou seja, servirem de \textbf{\textcolor{green}{INPUTS}}.
 \newpage
 \section{Validação}
 %%%To validate is to justify why the choices made and alternatives that could be chosen.
@@ -461,7 +466,10 @@ Abaixo esta indicado uma tabela dos materiais usados, assim como os preços.
 \end{table}
 
 
-\subsection*{Testar}
+
+
+\newpage
+\subsection{Testar}
 Quanto a funcionalidade no seu todo a balança tem \textcolor{blue}{quatro} botões e \textcolor{blue}{três} \textit{leds} ativados, um botão para fazer o \textit{offset} no \textcolor{green}{PORTF 0}, e dois botões com dupla função, fazer \textit{reset} para \textit{default} e incrementar, outro para entrar no menu de calibração e decrementar, o \textcolor{blue}{quarto} botão é reservado para \textit{enter} e assumir o valor introduzido na calibração.\\
 \\
 O botão \textcolor{green}{PORTF 3} quando premido durante \textcolor{blue}{cinco} segundos faz um \textit{reset} para configuração \textit{default} depois de o \textit{led} no \textcolor{red}{PORTC 6} piscar \textcolor{blue}{quatro} vezes.\\

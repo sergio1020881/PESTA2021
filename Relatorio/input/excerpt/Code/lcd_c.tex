@@ -1,4 +1,5 @@
-\begin{verbatimtab}
+%\begin{verbatimtab}
+\begin{lstlisting}[language=C]
 /*************************************************************************
 LCD
 Author: Sergio Santos 
@@ -72,7 +73,7 @@ LCD0 LCD0enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t *
 	uint8_t tSREG;
 	tSREG=SREG;
 	SREG&=~(1<<GLOBAL_INTERRUPT_ENABLE);
-	//ALLOCAÇÂO MEMORIA PARA Estrutura
+	//ALLOCACAO MEMORIA PARA Estrutura
 	LCD0 lcd0;
 	//import parametros
 	lcd0_DDR=ddr;
@@ -282,7 +283,7 @@ LCD1 LCD1enable(volatile uint8_t *ddr, volatile uint8_t *pin, volatile uint8_t *
 	uint8_t tSREG;
 	tSREG=SREG;
 	SREG&=~(1<<GLOBAL_INTERRUPT_ENABLE);
-	//ALLOCAÇÂO MEMORIA PARA Estrutura
+	//ALLOCACAO MEMORIA PARA Estrutura
 	LCD1 lcd1;
 	//import parametros
 	lcd1_DDR=ddr;
@@ -497,4 +498,6 @@ unsigned int LCD_ticks(unsigned int num)
 /***Comment***
 *************/
 /***EOF***/
-\end{verbatimtab}
+\end{lstlisting}
+%\end{verbatimtab}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
