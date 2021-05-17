@@ -11,7 +11,7 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Kit de Desenvolvimento\relax }}{8}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Diagrama Blocos\relax }}{8}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Célula de Peso 50Kg\relax }}{9}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Célula de Carga 50Kg\relax }}{9}%
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Fita metálica \textit {strain gauge} \cite {book-9}\relax }}{9}%
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Ponte \textit {Wheatstone}\relax }}{9}%
 \contentsline {figure}{\numberline {3.6}{\ignorespaces \textit {Wheatstone} por resistências\relax }}{10}%
@@ -23,11 +23,11 @@
 \contentsline {figure}{\numberline {3.12}{\ignorespaces LCD\relax }}{16}%
 \contentsline {figure}{\numberline {3.13}{\ignorespaces Harvard Architecture\relax }}{17}%
 \contentsline {figure}{\numberline {3.14}{\ignorespaces Atmega 128\relax }}{18}%
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Diagrama Blocos\relax }}{20}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces KIT ATMEL-ICE\relax }}{20}%
 \contentsline {figure}{\numberline {3.16}{\ignorespaces Fichas \textbf {ISP}\relax }}{20}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Estrutura do Programa\relax }}{21}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Sintaxe Genérica dos programas\relax }}{22}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Estrutura do Programa (fluxograma)\relax }}{21}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Sintaxe Genérica dos programas (fluxograma)\relax }}{22}%
 \contentsline {figure}{\numberline {4.3}{\ignorespaces \textbf {ADC} conversão\relax }}{22}%
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Saltar de \textit {Menu}\relax }}{22}%
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Livrarias\relax }}{23}%
