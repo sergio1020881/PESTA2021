@@ -10,7 +10,7 @@
 	numbers=left,						% where to put the line-numbers   
 	numberstyle=\tiny\color{gray},		% the size of the fonts that are used for the line-numbers
 	stepnumber=1,						% the step between two line-numbers. If it's 1 each line will be numbered
-	numbersep=8pt,						% how far the line-numbers are from the code
+	numbersep=2pt,						% how far the line-numbers are from the code
 	xleftmargin=2em,					% keep line numbers inside the margins		
 	frame=tb,							% frame: top and bottom lines
 	framexleftmargin=1.5em,				% frame: adjusts left margin because the xleftmargin numbers setting
@@ -31,10 +31,6 @@
 	morekeywords={*,var,template,new},	% if you want to add more keywords to the set
 	stringstyle=\color{orange},
 	columns=fullflexible
-	%basicstyle=\small\ttfamily\color{black},
-	%commentstyle = \ttfamily\color{red},
-	%keywordstyle=\ttfamily\color{blue},
-	%backgroundcolor=\color{light-gray},
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \DTMnewdatestyle{mydateformat}{%
@@ -177,17 +173,6 @@
 	\lstinputlisting[{language=Java,#1}]%
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{comment}
-\lstloadlanguages{C}
-\lstset{
-	basicstyle=\small\ttfamily\color{black},
-	commentstyle = \ttfamily\color{red},
-	keywordstyle=\ttfamily\color{blue},
-	stringstyle=\color{orange},
-	backgroundcolor=\color{light-gray},
-	columns=fullflexible
-}
-\end{comment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
