@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  15 MAY 2021 17:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  18 MAY 2021 06:00
 entering extended mode
 **./main.tex
 (main.tex
@@ -1384,10 +1384,10 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 149.
 [10]
 Package epstopdf Info: Source file: <figures/cap2_fig1.eps>
-(epstopdf)                    date: 2021-05-15 16:13:46
+(epstopdf)                    date: 2021-05-18 04:53:29
 (epstopdf)                    size: 61805 bytes
 (epstopdf)             Output file: <figures/cap2_fig1-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-05-15 16:13:46
+(epstopdf)                    date: 2021-05-18 04:53:29
 (epstopdf)                    size: 19827 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/cap2_fig1-eps-conve
 rted-to.pdf figures/cap2_fig1.eps>
@@ -1404,10 +1404,10 @@ Package pdftex.def Info: figures/cap2_fig1-eps-converted-to.pdf  used on input
 line 194.
 (pdftex.def)             Requested size: 247.32433pt x 145.34319pt.
 Package epstopdf Info: Source file: <figures/cap2_fig1.eps>
-(epstopdf)                    date: 2021-05-15 16:13:46
+(epstopdf)                    date: 2021-05-18 04:53:29
 (epstopdf)                    size: 61805 bytes
 (epstopdf)             Output file: <figures/cap2_fig1-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-05-15 16:13:46
+(epstopdf)                    date: 2021-05-18 04:53:29
 (epstopdf)                    size: 19827 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/cap2_fig1-eps-conve
 rted-to.pdf figures/cap2_fig1.eps>
@@ -1419,10 +1419,10 @@ Package pdftex.def Info: figures/cap2_fig1-eps-converted-to.pdf  used on input
 line 201.
 (pdftex.def)             Requested size: 179.25114pt x 105.34325pt.
 Package epstopdf Info: Source file: <figures/cap2_fig1.eps>
-(epstopdf)                    date: 2021-05-15 16:13:46
+(epstopdf)                    date: 2021-05-18 04:53:29
 (epstopdf)                    size: 61805 bytes
 (epstopdf)             Output file: <figures/cap2_fig1-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-05-15 16:13:46
+(epstopdf)                    date: 2021-05-18 04:53:29
 (epstopdf)                    size: 19827 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/cap2_fig1-eps-conve
 rted-to.pdf figures/cap2_fig1.eps>
@@ -1450,10 +1450,10 @@ Package pdftex.def Info: figures/Inlinefigureexample.png  used on input line 21
 (pdftex.def)             Requested size: 9.67236pt x 9.6723pt.
  [12 <./figures/Inlinefigureexample.png>]
 Package epstopdf Info: Source file: <figures/cap2_fig1.eps>
-(epstopdf)                    date: 2021-05-15 16:13:46
+(epstopdf)                    date: 2021-05-18 04:53:29
 (epstopdf)                    size: 61805 bytes
 (epstopdf)             Output file: <figures/cap2_fig1-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-05-15 16:13:46
+(epstopdf)                    date: 2021-05-18 04:53:29
 (epstopdf)                    size: 19827 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/cap2_fig1-eps-conve
 rted-to.pdf figures/cap2_fig1.eps>
@@ -1521,7 +1521,7 @@ LaTeX Warning: There were undefined references.
  ) 
 Here is how much of TeX's memory you used:
  29361 strings out of 480790
- 600968 string characters out of 2907055
+ 600974 string characters out of 2907055
  1281772 words of memory out of 3000000
  44544 multiletter control sequences out of 15000+200000
  713363 words of font info for 161 fonts, out of 3000000 for 9000
