@@ -173,6 +173,10 @@
 
 \RequirePackage{scrbase} % Required for handling language-dependent names of sections/document elements
 
+\RequirePackage{babelbib}
+
+\RequirePackage[toc, page]{appendix}
+
 \RequirePackage{scrhack} % Loads fixes for various packages
 
 \RequirePackage{longtable} % Required for tables that span multiple pages 

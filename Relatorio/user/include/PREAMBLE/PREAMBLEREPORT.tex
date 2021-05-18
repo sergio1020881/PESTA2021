@@ -16,11 +16,18 @@
 \usepackage[usenames, dvipsnames, svgnames, table]{xcolor}
 \usepackage[hidelinks]{hyperref}
 %%%%%%%%%%%%%FIXED ORDER%%%%%%%%%FIXED ORDER%%%%%%%%%%%%%%
-\usepackage[shortcuts, acronym, toc, nogroupskip, nonumberlist]{glossaries}
+\usepackage[shortcuts, nopostdot, acronym, toc, nogroupskip, nonumberlist, automake]{glossaries}
 \usepackage[portuguese]{babel}
 \usepackage{scrbase}
 \usepackage{babelbib}
-\usepackage[title, toc, titletoc, page]{appendix}
+%%APPENDIX SETTINGS%%
+%\usepackage[title, toc, titletoc, page]{appendix}
+\usepackage[toc, page]{appendix}
+\renewcommand{\appendixname}{Anexo}
+\renewcommand{\appendixpagename}{Anexos}
+\renewcommand{\appendixtocname}{Anexos}
+%\noappendicestocpagenum
+%%%%%%%%%%%%%%%%%%%%%
 \usepackage{subcaption}
 \usepackage[usenames, dvipsnames, svgnames, table]{xcolor}
 \usepackage{verbatim}
@@ -66,6 +73,7 @@
 \usetikzlibrary{matrix, shapes.geometric, arrows, trees, positioning,calc}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \makeindex
+\makeglossaries
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \bibliographystyle{plain}
 \selectbiblanguage{portuguese}

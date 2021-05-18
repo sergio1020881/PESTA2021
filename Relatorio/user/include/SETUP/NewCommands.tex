@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \definecolor{light-gray}{gray}{0.95}
+\definecolor{lightgray}{rgb}{.9,.9,.9}
 %%%%%%%%%%%%%%%%%%%%%%%ISEP SETTINGS START%%%%%%%%%%%%%%%%%%%%%%
-\captionsetup{justification=centerlast,font=small,margin=50pt}
 \lstset{
 	language=C,							% choose the language of the code
 	%basicstyle=\small\ttfamily\color{black},
@@ -36,6 +36,7 @@
 	%keywordstyle=\ttfamily\color{blue},
 	%backgroundcolor=\color{light-gray},
 }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \DTMnewdatestyle{mydateformat}{%
 	\renewcommand{\DTMdisplaydate}[4]{%
 		%    \DTMshortweekdayname{##4},\space% 
@@ -45,7 +46,7 @@
 	}%
 	\renewcommand{\DTMDisplaydate}{\DTMdisplaydate}%
 }
-%%%%%%%%%%%%%%%%%%%%%%%ISEP SETTINGS END%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%ISEP SETTINGS END%%%%%%%%%%%%%%%%%%
 \begin{comment}
 \setlistdepth{12}
 \newlist{enumitem}{enumerate}{12}
@@ -62,14 +63,14 @@
 \setlist[enumitem,11]{label=(\alph*)}
 \setlist[enumitem,12]{label=(\arabic*)}
 \end{comment}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{comment}
 \renewcommand{\labelitemi}{$\bullet$}
 \renewcommand{\labelitemii}{$\cdot$}
 \renewcommand{\labelitemiii}{$\diamond$}
 \renewcommand{\labelitemiv}{$\ast$}
 \end{comment}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{comment}
 \tikzstyle{RECTANGLE_2} = [rectangle, draw, text width=5em, text centered, rounded corners, minimum height=4em]
 \tikzstyle{RECTANGLE_3} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!80]
@@ -102,6 +103,7 @@
 \tikzstyle{CIRCLE_1}=[draw,shape=circle,inner sep=2pt,text centered, node distance=3.5cm]
 \tikzstyle{CIRCLE_2}=[draw,shape=circle,inner sep=4pt,text centered, node distance=3.cm]
 \end{comment}
+\begin{comment}
 %%%%%%%GANTT 1%%%%%%%
 \newganttchartelement*{mymilestone}{
 	mymilestone/.style={
@@ -130,6 +132,7 @@
 	\advance#2 by\stardateday\relax%
 }
 %%%%%%%GANTT 2%%%%%%%
+\end{comment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \addto{\captionsportuguese}{\renewcommand*\contentsname{\'{I}ndice}}
 \addto{\captionsportuguese}{\renewcommand{\appendixname}{Anexo}}
@@ -173,7 +176,7 @@
 \newcommand*{\incjava}[1][]{%
 	\lstinputlisting[{language=Java,#1}]%
 }
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{comment}
 \lstloadlanguages{C}
 \lstset{
@@ -185,6 +188,6 @@
 	columns=fullflexible
 }
 \end{comment}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\definecolor{lightgray}{rgb}{.9,.9,.9}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

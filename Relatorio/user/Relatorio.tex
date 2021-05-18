@@ -4,11 +4,10 @@
 \include{./include/SETUP/Glossary}
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\frontmatter
 \input{./input/Inic}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\mainmatter 
 \pagestyle{plain}
+\pagenumbering{arabic}
 \setlength{\parindent}{0in}
 \input{./input/page/Introducao}
 \newpage
@@ -18,5 +17,12 @@
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{./input/End}
+%\clearpage
+%\printglossary[type=\acronymtype]
+%\printglossary[type=\acronymtype, style=long]
+%\printglossaries
+%\printglossary[type=\acronymtype, title={Acrónimos}]
+%\printglossary[type=\acronymtype, style=tree]
+
 \end{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
