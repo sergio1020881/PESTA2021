@@ -24,5 +24,3 @@
 \contentsline {chapter}{Refer\^{e}ncias}{27}{chapter*.41}%
 \contentsline {chapter}{Anexos}{28}{section*.42}%
 \contentsline {chapter}{\numberline {A}Definições}{29}{appendix.1.A}%
-\contentsline {chapter}{\numberline {B}Física}{30}{appendix.1.B}%
-\contentsline {chapter}{\numberline {C}Código}{32}{appendix.1.C}%
