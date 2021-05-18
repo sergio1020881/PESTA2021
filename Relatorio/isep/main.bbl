@@ -1,47 +1,55 @@
 \begin{thebibliography}{10}
 
 \bibitem{book-9}
-S.~Beeby, G.~Ensell, M.~Kraft, and N.~White, {\em MEMS Mechanical Sensors}.
+Stephen Beeby, Graham Ensell, Michael Kraft, and Neil White.
+\newblock {\em MEMS Mechanical Sensors}.
 \newblock ARTECH HOUSE, INC, 2004.
 
-\bibitem{book-10}
-A.~D. Marcellis and G.~Ferri, {\em Analog Circuits and Systems for Voltage-Mode
-  and Current-Mode Sensor Interfacing Applications}.
-\newblock Springer, 2011.
-
 \bibitem{book-1}
-J.~Bird, {\em HIGHER ENGINEERING MATHEMATICS, Sixth Edition}.
+John Bird.
+\newblock {\em HIGHER ENGINEERING MATHEMATICS, Sixth Edition}.
 \newblock Elsevier Ltd, 2010.
 
+\bibitem{book-4}
+Richard~C. Dorf and Robert~H. Bishop.
+\newblock {\em Modern Control Systems, Thirteenth Edition}.
+\newblock Pearson Education, Inc, 2017.
+
+\bibitem{book-11}
+Steven F and Barret.
+\newblock {\em Embedded Systems Design with the Atmel AVR Microcontroller}.
+\newblock Morgan Claypool Publishers, 2009.
+
+\bibitem{book-6}
+Stephen Hawking.
+\newblock {\em AOS OMBROS de GIGANTES}.
+\newblock Texto Editores, Lda, 2017.
+
+\bibitem{book-5}
+Glyn James.
+\newblock {\em MODERN ENGINEERING MATHEMATICS, Fifth Edition}.
+\newblock PEARSON EDUCATION LIMITED, 2015.
+
+\bibitem{book-10}
+Andrea~De Marcellis and Giuseppe Ferri.
+\newblock {\em Analog Circuits and Systems for Voltage-Mode and Current-Mode
+  Sensor Interfacing Applications}.
+\newblock Springer, 2011.
+
+\bibitem{book-8}
+Katsuhiko Ogata.
+\newblock {\em Modern Control Engineering Fifth Edition}.
+\newblock Prentice Hall, 2010.
+
 \bibitem{book-2}
-P.~A. TIPLER and G.~MOSCA, {\em PHYSICS FOR SCIENTISTS AND ENGINEERS, Extended
-  Version fifth edition}.
+PAUL~A. TIPLER and GENE MOSCA.
+\newblock {\em PHYSICS FOR SCIENTISTS AND ENGINEERS, Extended Version fifth
+  edition}.
 \newblock W. H. Freeman and Company, 1999.
 
 \bibitem{book-3}
-J.~WALKER and D.~H. Resnick, {\em FUNDAMENTALS OF PHYSICS, Halliday and Resnick
-  10th edition}.
+JEARL WALKER and David~Halliday Resnick.
+\newblock {\em FUNDAMENTALS OF PHYSICS, Halliday and Resnick 10th edition}.
 \newblock John Wiley \& Sons, Inc, 2014.
-
-\bibitem{book-4}
-R.~C. Dorf and R.~H. Bishop, {\em Modern Control Systems, Thirteenth Edition}.
-\newblock Pearson Education, Inc, 2017.
-
-\bibitem{book-5}
-G.~James, {\em MODERN ENGINEERING MATHEMATICS, Fifth Edition}.
-\newblock PEARSON EDUCATION LIMITED, 2015.
-
-\bibitem{book-6}
-S.~Hawking, {\em AOS OMBROS de GIGANTES}.
-\newblock Texto Editores, Lda, 2017.
-
-\bibitem{book-8}
-K.~Ogata, {\em Modern Control Engineering Fifth Edition}.
-\newblock Prentice Hall, 2010.
-
-\bibitem{book-11}
-S.~F and Barret, {\em Embedded Systems Design with the Atmel AVR
-  Microcontroller}.
-\newblock Morgan Claypool Publishers, 2009.
 
 \end{thebibliography}
