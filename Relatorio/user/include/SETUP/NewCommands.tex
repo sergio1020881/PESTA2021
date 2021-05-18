@@ -129,19 +129,19 @@
 }
 %%%%%%%GANTT 2%%%%%%%
 \end{comment}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \addto{\captionsportuguese}{\renewcommand*\contentsname{\'{I}ndice}}
 \addto{\captionsportuguese}{\renewcommand{\appendixname}{Anexo}}
 \addto{\captionsportuguese}{\renewcommand{\bibname}{Refer\^{e}ncias}}
 \addto{\captionsportuguese}{\renewcommand*\lstlistingname{Listagen}}
 \addto{\captionsportuguese}{\renewcommand*\lstlistlistingname{Listagens}}
 \addto{\captionsportuguese}{\renewcommand*\acronymname{Acrónimos}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}{Lemma}
 \newtheorem{definition}{Defini\c{c}\~{a}o}
 \newtheorem{notation}{Notation}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \makeatletter
 \renewcommand{\@makechapterhead}[1]{%
 	\vspace*{50 pt}%
@@ -149,30 +149,34 @@
 		\bfseries\Huge\thechapter.\ #1
 		\par\nobreak\vspace{40 pt}}}
 \makeatother
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\renewcommand\thesection{\arabic{section}}
 %\renewcommand\thesubsection{\thesection.\arabic{subsection}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\minipagespace}[1]{{\newline \vspace{#1cm} \newline}}
 \newcommand{\tablespace}[1]{{\vspace{#1cm}}}
 \newcommand{\figurespace}[1]{{\vspace{#1cm}}}
 \newcommand{\listingspace}[1]{{\vspace{#1cm}}}
-%%%%%%%%%%%%%FIX SECTION NUMBERING IN CASE REPORT%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%FIX SECTION NUMBERING IN CASE REPORT%%%%%%%%%
 %\renewcommand\thesection{\arabic{section}}
 %\renewcommand\thesubsection{\thesection.\arabic{subsection}}
 %\renewcommand\thesubsubsection{\thesection.\thesubsection.\arabic{subsubsection}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 \newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \lstnewenvironment{java}[1][]{%
 	\lstset{language=Java,#1}%
 }{}
 \newcommand*{\incjava}[1][]{%
 	\lstinputlisting[{language=Java,#1}]%
 }
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%APPENDIX%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\appendixname}{Anexo}
+\renewcommand{\appendixpagename}{Anexos}
+\renewcommand{\appendixtocname}{Anexos}
+%\noappendicestocpagenum
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

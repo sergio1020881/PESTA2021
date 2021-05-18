@@ -1,62 +1,76 @@
 \documentclass[titlepage, a4paper, 12pt, reqno, openany]{report}
-%\documentclass[LEEC, portuguese,]{DEEclass}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{titlepic}
-\usepackage[title,titletoc]{appendix}
-%\usepackage[title,toc,titletoc,page]{appendix}
-%%%%%%encoding%%%%%%
-\usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-%\usepackage[acronym,toc,shortcuts,nopostdot,nogroupskip,automake,nonumberlist]{glossaries}
-\usepackage[shortcuts, acronym, toc, nogroupskip, nonumberlist]{glossaries}
-\usepackage[portuguese]{babel}
-\usepackage{babelbib}
-\usepackage{hyphenat}
-%%%%%%%%%%%%%%%%%%%%%%Hyphenation rules%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[T1]{fontenc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[top=2.5cm,left=3cm,right=2.5cm,bottom=2.5cm]{geometry}
-%\usepackage[left=2cm,top=1cm,bottom=2cm,right=3cm,nohead,nofoot]{geometry}
-\usepackage{graphicx} %permite inserir figuras
-\usepackage{subcaption}
-\usepackage[font=small,labelfont=bf]{caption} %reference figures table
+\usepackage[nottoc]{tocbibind}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage[graphicx]{realboxes}
+\usepackage[font=small, labelfont=bf]{caption}
+\usepackage{lmodern}
+\usepackage{hyphenat}
 \usepackage{color,colortbl}
-\usepackage[usenames,dvipsnames,svgnames,table]{xcolor} %permite letras coloridas
-\usepackage{paralist}
-\usepackage{float}
-%\usepackage{fancyvrb}
+\usepackage[usenames, dvipsnames, svgnames, table]{xcolor}
+\usepackage[hidelinks]{hyperref}
+%%%%%%%%%%%%%FIXED ORDER%%%%%%%%%FIXED ORDER%%%%%%%%%%%%%%
+\usepackage[shortcuts, nopostdot, acronym, toc, nogroupskip, nonumberlist, automake]{glossaries}
+\usepackage[portuguese]{babel}
+\usepackage{scrbase}
+\usepackage{babelbib}
+%%APPENDIX SETTINGS%%
+%\usepackage[title, toc, titletoc, page]{appendix}
+\usepackage[toc, page]{appendix}
+%\renewcommand{\appendixname}{Anexo}
+%\renewcommand{\appendixpagename}{Anexos}
+%\renewcommand{\appendixtocname}{Anexos}
+%\noappendicestocpagenum
+%%%%%%%%%%%%%%%%%%%%%
+\usepackage{subcaption}
+\usepackage[usenames, dvipsnames, svgnames, table]{xcolor}
 \usepackage{verbatim}
-\usepackage{moreverb}
-\usepackage{lipsum}
-\usepackage{lscape}
+\usepackage{pgfgantt}
+\usepackage{url}
+\usepackage{listings}
+\usepackage[calc, en-US]{datetime2}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{multicol}
-\usepackage{multirow}
 \usepackage{makecell}
-\usepackage{amsfonts}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage[export]{adjustbox}
+\usepackage{eurosym}
+\usepackage{float}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{amsmath}
+\usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{mathrsfs}
-\usepackage{float}
-\usepackage{pgfgantt}
-\usepackage{rotating}
-\usepackage[graphicx]{realboxes}
-\usepackage{tabularx}
-\usepackage{listings}
-\usepackage[nottoc]{tocbibind} %% addiciona lista figuras e tabelas a toc
-%%%ISEP%%%
-\usepackage{lmodern}
-\usepackage{calc}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{array}
-\usepackage[export]{adjustbox}
-\usepackage{url}
-\usepackage{setspace} %distancia entree linhas
-\usepackage{eurosym}
-\usepackage{romannum}
-\usepackage[en-US]{datetime2}
+\usepackage{paralist}
 \usepackage{enumitem}
 \usepackage{enumerate}
+\usepackage{multirow}
+\usepackage{lscape}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{scrhack}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage[autostyle=true]{csquotes}
+\usepackage{calc}
+\usepackage{siunitx}
+\usepackage{setspace}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{lipsum}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{moreverb}
+\usepackage{rotating}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{romannum}
 \usepackage{tikz}
 \usepackage{circuitikz}
-\usetikzlibrary{matrix,shapes.geometric,arrows,trees,positioning,calc}
+\usetikzlibrary{matrix, shapes.geometric, arrows, trees, positioning,calc}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \makeindex
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

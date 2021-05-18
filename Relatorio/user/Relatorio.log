@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  18 MAY 2021 20:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  18 MAY 2021 20:26
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
@@ -2818,7 +2818,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 27.
 Here is how much of TeX's memory you used:
  58433 strings out of 480790
  1262945 string characters out of 2907055
- 2115470 words of memory out of 3000000
+ 2115481 words of memory out of 3000000
  69250 multiletter control sequences out of 15000+200000
  688045 words of font info for 133 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
