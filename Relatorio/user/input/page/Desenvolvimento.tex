@@ -1,9 +1,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Balança Digital}
-Para o desenvolvimento deste projeto, foi criado um kit de desenvolvimento para facilitar sua implementação, testar, efetuar alterações e melhoramentos.
+Para o desenvolvimento deste projeto, foi criado um kit de desenvolvimento para facilitar sua implementação, testes, assim como a execução de alterações e melhoramentos.
 \\
 \\
-Abaixo pode-se ver a montagem em esqueleto do equipamento utilizado na \textit{figura} \ref{Kit_Desenvolvimento_2},
+Por analise à \textit{figura} \ref{Kit_Desenvolvimento_2}, pode-se verificar a montagem em esqueleto do equipamento, e pela \textit{figura} \ref{Block_diagram_1} os elementos em diagrama de blocos.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.12]{./image/PESTA/kit/Kit_Desenvolvimento_2.jpg}
@@ -18,7 +18,7 @@ a seguir a \textit{figura} \ref{Block_diagram_1} representado os elementos em di
 	\label{Block_diagram_1}
 \end{figure}
 \section{sensor}
-Para medir a massa recorreu-se a uma \textbf{célula de carga} que determina a pressão exercida por um dado objeto, neste caso é um bloco de alumínio como indicado na \textit{figura} \ref{Load_Cell_1}, para isso ser possível este utiliza sensores Piezoresistivos numa montagem em ponte \textit{wheatstone} sobre essa superfície em locais determinados.
+Para medir a massa, recorreu-se a uma \textbf{célula de carga}, que determina a pressão exercida por um dado objeto, neste caso, os sensores (\textit{strain gauges}) são instalados sobre um bloco de alumínio como indicado na \textit{figura} \ref{Load_Cell_1}. A célula de carga utiliza sensores Piezoresistivos numa montagem em ponte \textit{wheatstone}, sobre essa superfície em locais específicos.
 \\
 \begin{figure}[H]
 	\captionsetup{justification=raggedright,singlelinecheck=false}
@@ -28,7 +28,7 @@ Para medir a massa recorreu-se a uma \textbf{célula de carga} que determina a p
 	\label{Load_Cell_1}
 \end{figure}
 \figurespace{.5}
-Piezoresistividade deriva seu nome da palavra grega \textit{piezin}, que significa "pressionar". É um efeito exibido por vários materiais que exibem uma mudança na resistividade devido a uma pressão aplicada. O efeito foi descoberto pela primeira vez por Lord Kelvin em \textcolor{blue}{1856}, que notou que a resistência dos fios de cobre e ferro aumentava quando em tensão. Ele também observou que os fios de ferro apresentavam uma alteração maior na resistência do que os de cobre. A primeira aplicação do efeito piezoresistivo não apareceu até a década de \textcolor{blue}{1930}, cerca de \textcolor{blue}{75} anos após a descoberta de Lord Kelvin. Em vez de usar fios de metal, esses assim chamados medidores de tensão são geralmente feitos de uma folha de metal fina montada em uma película de suporte, que pode ser colada em uma superfície. O sensor de fita de metal típico é representado na \textit{figura} \ref{strain_gauge_1} \cite{book-9}.
+O termo Piezoresistividade deriva do seu nome da palavra grega \textit{piezin}, que significa "pressionar". É um efeito exibido por vários materiais que sofrem uma mudança na resistividade devido a uma pressão aplicada. O efeito foi descoberto pela primeira vez por Lord Kelvin em \textcolor{blue}{1856}, que notou que a resistência dos fios de cobre e ferro aumentava quando em tensão mecânica. Ele também observou que os fios de ferro apresentavam uma alteração maior na resistência do que os de cobre. A primeira aplicação do efeito piezoresistivo não apareceu até a década de \textcolor{blue}{1930}, cerca de \textcolor{blue}{75} anos após a descoberta de Lord Kelvin. Em vez de usar fios de metal, esses assim chamados medidores de tensão mecânica, são geralmente feitos de uma folha de metal fina, montada em uma película de suporte, que pode ser colada em uma superfície. O sensor de fita de metal típico é representado na \textit{figura} \ref{strain_gauge_1} \cite{book-9}.
 \\
 \\
 \begin{minipage}[!b]{.5\linewidth}
@@ -70,7 +70,7 @@ Piezoresistividade deriva seu nome da palavra grega \textit{piezin}, que signifi
 	\minipagespace{.1}
 \end{minipage}
 \minipagespace{.5}
-Normalmente nestas aplicações só é usado um sensor ou dois sensores em que estão nos extremos opostos  ou ligados ao mesmo ponto da alimentação, só em casos muito raros são utilizados os quatro sensores na qual a sensibilidade é máxima. E como é óbvio se o valor das quatro resistências são iguais $V_{AB}$ na saída é nula, e quando se utiliza apenas dois sensores a sensibilidade do sistema é intermédia.
+Normalmente nestas aplicações só são usado um ou dois sensores, e estes podem estar ligados nos extremos opostos, ou ligados ao mesmo ponto da alimentação, só em casos muito raros são utilizados os quatro sensores na qual a sensibilidade é máxima. Se o valor das quatro resistências são iguais ou nos casos em [$R_2 R_3 = R_4 R_1$], então a tensão $V_{AB}$ na saída é nula.
 \newpage
 A montagem da mesa de medição \textit{figura} \ref{Prato},
 \minipagespace{5}
@@ -84,8 +84,8 @@ A montagem da mesa de medição \textit{figura} \ref{Prato},
 \end{minipage}
 \newpage
 \section{Amplificador de sinal}
-A amplificação é geralmente um requisito fundamental, pois a maioria dos sensores tende a produzir níveis de sinal significativamente mais baixos do que aqueles usados no processador digital. Sensores resistivos podem precisar de um amplificador de carga. Se possível, é vantajoso ter o ganho o mais próximo possível do elemento sensor. Em situações onde um alto ganho é necessário, muitas vezes pode haver implicações para lidar 
-com quaisquer efeitos adversos, como o ruído, também em termos de \textit{layout} do \textit{chip}, os transitórios agudos associados aos sinais digitais precisam ser mantidos bem longe dos circuitos analógicos \textit{front-end}. \cite{book-9}
+A amplificação é geralmente um requisito fundamental, pois a maioria dos sensores, tendem a produzir níveis de sinal significativamente mais baixos, do que aqueles usados no processador digital. Sensores resistivos podem precisar de um amplificador para a célula de carga. Se possível, é vantajoso ter o ganho o mais próximo possível do elemento sensor. Em situações onde um maior ganho é necessário, muitas vezes pode haver implicações para lidar 
+com quaisquer efeitos adversos, como o ruído, problemas de \textit{layout} do \textit{chip}, os transitórios agudos associados aos sinais digitais que precisam de ser mantidos bem longe dos circuitos analógicos \textit{front-end}. \cite{book-9}
 \\
 \\
 A ligação destes componentes é intuitivo e fácil de se perceber, o que é complexo neste trabalho é a interligação destes equipamentos com o micro-controlador por meio de \textit{software} e criar o \textit{driver} de comunicação para a placa do amplificador de sinal, já que o protocolo de comunicação é proprietário.
@@ -208,11 +208,11 @@ para ser tratado e deduzido o valor correspondente da massa.
 O \ac{lcd} utilizado é de 4x20, isto é, quatro linhas de vinte caracteres cada, é o interface humano principal, e durante o projeto uma ferramenta extremamente útil também para fazer \textit{debug} e executar testes no código.
 \\
 \\
-Uma livraria na qual já tinha feito para outros projetos serviu para aplicar neste, poupando bastante tempo, revelando a importância de documentar os conhecimentos adquiridos. A livraria ou se preferem \textit{driver} esta \textit{anexado}.
+Uma livraria que já tinha feito para outros projetos serviu para aplicar neste, poupando bastante tempo, revelando a importância de documentar os conhecimentos adquiridos. A livraria ou se preferem \textit{driver} esta \textit{anexado}.
 %[\ref{codigo}]
 \\
 \\
-Abaixo esta uma tabela \ref{LCD_connections} com as respetivas ligações.
+Abaixo esta a tabela \ref{LCD_connections} com as respetivas ligações e uma imagem de um LCD 4x20 azul na \textit{figura} \ref{4x20_LCD}.
 \tablespace{.2}
 \begin{table}[H]
 	\centering
@@ -443,6 +443,7 @@ Consultar código para leitura das rotinas de interrupção nas folhas \textit{a
 	\caption{Livrarias}
 	\label{Livrarias}
 \end{figure}
+\figurespace{.5}
 \end{minipage}
 \begin{minipage}{.6\linewidth}
 Ao lado esta as livrarias usadas neste projeto, as que estão dentro da caixa amarela são as que foram criadas.
@@ -498,10 +499,7 @@ Abaixo esta indicado uma tabela dos materiais usados, assim como os preços.
 	}
 	\label{material}
 \end{table}
-
-
-
-
+Os preços são o que estão disponíveis no mercado, quanto a \textit{motherboard} foi o que arranjei com o preço mais competitivo com este MCU Atmega 128, outras alternativas atingiam o mesmo preço ou mais mas com MCU com menor capacidades.
 \newpage
 \subsection{Testar}
 Quanto a funcionalidade no seu todo a balança tem \textcolor{blue}{quatro} botões e \textcolor{blue}{três} \textit{leds} ativados, um botão para fazer o \textit{offset} no \textcolor{green}{PORTF 0}, e dois botões com dupla função, fazer \textit{reset} para \textit{default} e incrementar, outro para entrar no menu de calibração e decrementar, o \textcolor{blue}{quarto} botão é reservado para \textit{enter} e assumir o valor introduzido na calibração.\\
