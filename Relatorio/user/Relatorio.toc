@@ -1,9 +1,9 @@
 \babel@toc {portuguese}{}
 \babel@toc {portuguese}{}
-\contentsline {chapter}{Lista de Figuras}{ii}{chapter*.3}%
-\contentsline {chapter}{Lista de Tabelas}{iii}{chapter*.4}%
-\contentsline {chapter}{Listagens}{iv}{chapter*.5}%
-\contentsline {chapter}{Acrónimos}{v}{section*.6}%
+\contentsline {chapter}{Lista de Figuras}{ii}{chapter*.4}%
+\contentsline {chapter}{Lista de Tabelas}{iii}{chapter*.5}%
+\contentsline {chapter}{Listagens}{v}{chapter*.6}%
+\contentsline {chapter}{Acrónimos}{v}{section*.7}%
 \contentsline {chapter}{\numberline {1}Introdução}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Objetivos}{2}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Calendarização}{3}{section.1.2}%
@@ -21,7 +21,7 @@
 \contentsline {subsection}{\numberline {4.1.2}Testar}{25}{subsection.4.1.2}%
 \contentsline {chapter}{\numberline {5}Conclusões}{26}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Trabalho Futuro}{26}{section.5.1}%
-\contentsline {chapter}{Refer\^{e}ncias}{27}{chapter*.41}%
-\contentsline {chapter}{Anexos}{28}{section*.42}%
+\contentsline {chapter}{Refer\^{e}ncias}{27}{chapter*.42}%
+\contentsline {chapter}{Anexos}{28}{section*.43}%
 \contentsline {chapter}{\numberline {A}Definições}{29}{appendix.1.A}%
 \contentsline {chapter}{\numberline {B}Física}{30}{appendix.1.B}%

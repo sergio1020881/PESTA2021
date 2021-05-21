@@ -236,7 +236,7 @@ breaklinks=true,
  columns=fullflexible
 }
 
-\RequirePackage[calc , pt-PT]{datetime2}	% For date format
+\RequirePackage[calc , portuguese]{datetime2}	% For date format
 \DTMnewdatestyle{mydateformat}{%
   \renewcommand{\DTMdisplaydate}[4]{%
 %    \DTMshortweekdayname{##4},\space% 

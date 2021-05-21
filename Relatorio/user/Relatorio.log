@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  21 MAY 2021 15:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  21 MAY 2021 18:44
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
@@ -1347,7 +1347,7 @@ LaTeX Info: Redefining \translate on input line 184.
 ("C:\Program Files\MiKTeX\tex/latex/setspace\setspace.sty"
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-Package scrhack Info: loading setspace hack on input line 61.
+Package scrhack Info: loading setspace hack on input line 71.
 
 ("C:\Program Files\MiKTeX\tex/latex/koma-script\setspace.hak"
 File: setspace.hak 2020/09/21 v3.32 KOMA-Script scrhack part (hacking package s
@@ -1379,92 +1379,6 @@ Package: romannum 2009/09/03 v1.0b roman numerals
 ("C:\Program Files\MiKTeX\tex/latex/stdclsdv\stdclsdv.sty"
 Package: stdclsdv 2009/09/04 v1.1a Sectional divisions
 ))
-("C:\Program Files\MiKTeX\tex/latex/circuitikz\circuitikz.sty"
-Package: circuitikz 2020/10/04{} The CircuiTikz circuit drawing package version
- 1.2.4
-
-("C:\Program Files\MiKTeX\tex/generic/pgf/libraries\pgflibraryarrows.meta.code.
-tex"
-File: pgflibraryarrows.meta.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfarrowinset=\dimen348
-\pgfarrowlength=\dimen349
-\pgfarrowwidth=\dimen350
-\pgfarrowlinewidth=\dimen351
-)
-("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
-arybending.code.tex"
-File: tikzlibrarybending.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-
-("C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmodulebending.code.tex"
-File: pgfmodulebending.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-
-("C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmodulenonlineartransformat
-ions.code.tex"
-File: pgfmodulenonlineartransformations.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgftransformnonlinearflatness=\dimen352
-)
-("C:\Program Files\MiKTeX\tex/generic/pgf/libraries\pgflibrarycurvilinear.code.
-tex"
-File: pgflibrarycurvilinear.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@curvilinear@time@a=\dimen353
-\pgf@curvilinear@length@a=\dimen354
-\pgf@curvilinear@length@b=\dimen355
-\pgf@curvilinear@length@c=\dimen356
-\pgf@curvilinear@length@d=\dimen357
-)
-\pgf@arrows@the@rigidity=\dimen358
-))
-("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
-aryfpu.code.tex"
-("C:\Program Files\MiKTeX\tex/generic/pgf/libraries\pgflibraryfpu.code.tex"))
-("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcirc.defines.tex"
-\pgf@circ@count@a=\count420
-\pgf@circ@count@b=\count421
-\pgf@circ@count@c=\count422
-\pgf@circ@res@up=\dimen359
-\pgf@circ@res@down=\dimen360
-\pgf@circ@res@zero=\dimen361
-\pgf@circ@res@left=\dimen362
-\pgf@circ@res@right=\dimen363
-\pgf@circ@res@other=\dimen364
-\pgf@circ@res@step=\dimen365
-\pgf@circ@res@temp=\dimen366
-\pgf@circ@Rlen=\dimen367
-\pgf@circ@scaled@Rlen=\dimen368
-\pgfstartlinewidth=\dimen369
-)
-("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircutils.tex")
-("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircshapes.tex")
-("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircmonopoles.tex")
-("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircbipoles.tex")
-("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcirctripoles.tex"
-\pgf@circ@res@count=\count423
-)
-("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircquadpoles.tex")
-("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircmultipoles.tex")
-("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcirclabel.tex")
-("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircvoltage.tex"
-\pgfcirc@labelshift=\dimen370
-)
-("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcirccurrent.tex")
-("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircflow.tex")
-("C:\Program Files\MiKTeX\tex/generic/circuitikz\pgfcircpath.tex")
-
-Package circuitikz Warning: You did not specify one of the voltage directions:
-(circuitikz)                  oldvoltagedirection, nooldvoltagedirection, 
-(circuitikz)                  RPvoltages or EFvoltages 
-(circuitikz)                Default directions may have changed, 
-(circuitikz)                please check the manual.
-
-)
-("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
-arymatrix.code.tex"
-File: tikzlibrarymatrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-)
-("C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibr
-arytrees.code.tex"
-File: tikzlibrarytrees.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-)
 \@indexfile=\write4
 \openout4 = `Relatorio.idx'.
 
@@ -1472,9 +1386,16 @@ File: tikzlibrarytrees.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 Writing index file Relatorio.idx
 
 Package babelbib Warning: Command \selectbiblanguage used without package
-(babelbib)                option fixlanguage. Ignored on input line 74.
+(babelbib)                option fixlanguage. Ignored on input line 84.
 
 babelbib: Set bibliography fall-back language to english
+)
+\@input{./include/SETUP/ISEPTitleSettings.aux}
+\openout2 = `./include/SETUP/ISEPTitleSettings.aux'.
+
+(include/SETUP/ISEPTitleSettings.tex
+\myheight=\skip89
+\mydepth=\skip90
 )
 \@input{./include/SETUP/NewCommands.aux}
 \openout2 = `./include/SETUP/NewCommands.aux'.
@@ -1486,10 +1407,10 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 ("C:\Program Files\MiKTeX\tex/latex/listings\lstmisc.sty"
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 )
-\c@theorem=\count424
-\c@lemma=\count425
-\c@definition=\count426
-\c@notation=\count427
+\c@theorem=\count420
+\c@lemma=\count421
+\c@definition=\count422
+\c@notation=\count423
 )
 \@input{./include/SETUP/Glossary.aux}
 \openout2 = `./include/SETUP/Glossary.aux'.
@@ -1507,30 +1428,29 @@ Package glossaries Info: Writing glossary file Relatorio.acn on input line 2.
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
- (Relatorio.aux (include/CAPA/CAPAREPORT_2.aux)
-(include/CONTRACAPA/CONTRACAPAREPORT_2.aux) (include/SETUP/Acknowledgement.aux)
-(include/SETUP/Abstract_1.aux) (include/SETUP/Abstract_2.aux)
+ (Relatorio.aux (include/SETUP/Acknowledgement.aux) (include/SETUP/Abstract_1.a
+ux) (include/SETUP/Abstract_2.aux)
 (include/SETUP/ContentFigureTableListingGlossary.aux))
 \openout1 = `Relatorio.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 5.
-
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 15
+.
 
 ("C:\Program Files\MiKTeX\tex/latex/lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1571,16 +1491,16 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 
 ("C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count428
-\scratchdimen=\dimen371
+\scratchcounter=\count424
+\scratchdimen=\dimen348
 \scratchbox=\box131
-\nofMPsegments=\count429
-\nofMParguments=\count430
+\nofMPsegments=\count425
+\nofMParguments=\count426
 \everyMPshowfont=\toks61
-\MPscratchCnt=\count431
-\MPscratchDim=\dimen372
-\MPnumerator=\count432
-\makeMPintoPDFobject=\count433
+\MPscratchCnt=\count427
+\MPscratchDim=\dimen349
+\MPnumerator=\count428
+\makeMPintoPDFobject=\count429
 \everyMPtoPDFconversion=\toks62
 ) ("C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1600,7 +1520,7 @@ Package caption Info: rotating package is loaded.
 Package caption Info: supertabular package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box132
-Package hyperref Info: Link coloring OFF on input line 5.
+Package hyperref Info: Link coloring OFF on input line 15.
 
 ("C:\Program Files\MiKTeX\tex/latex/hyperref\nameref.sty"
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -1611,11 +1531,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ("C:\Program Files\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty"
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count434
+\c@section@level=\count430
 )
-LaTeX Info: Redefining \ref on input line 5.
-LaTeX Info: Redefining \pageref on input line 5.
-LaTeX Info: Redefining \nameref on input line 5.
+LaTeX Info: Redefining \ref on input line 15.
+LaTeX Info: Redefining \pageref on input line 15.
+LaTeX Info: Redefining \nameref on input line 15.
 
 (Relatorio.out) (Relatorio.out)
 \@outlinefile=\write8
@@ -1631,8 +1551,8 @@ File: portuguese.bdf 2019/03/11 v1.32 babelbib: multilingual bibliographies (HH
 babelbib extension \bibsportuguese added to \extrasportuguese
 babelbib extension \btxifchangecaseoff added to \extrasportuguese
 ) ABD: EveryShipout initializing macros
-\c@lstlisting=\count435
-Package scrhack Info: undefining \float@addtolists on input line 5.
+\c@lstlisting=\count431
+Package scrhack Info: undefining \float@addtolists on input line 15.
 
 ("C:\Program Files\MiKTeX\tex/latex/translator\translator-basic-dictionary-Engl
 ish.dict"
@@ -1640,136 +1560,134 @@ Dictionary: translator-basic-dictionary, Language: English
 ) ("C:\Program Files\MiKTeX\tex/latex/siunitx\siunitx-abbreviations.cfg"
 File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 )
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 5
-.
+Package scrbase Info: activating portuguese \degreetemp on input line 15.
+Package scrbase Info: activating portuguese \disclamertemp on input line 15.
+Package scrbase Info: activating portuguese \studentlabel on input line 15.
+Package scrbase Info: activating portuguese \nblabel on input line 15.
+Package scrbase Info: activating portuguese \advisorlabel on input line 15.
+Package scrbase Info: activating portuguese \coadvisorlabel on input line 15.
+Package scrbase Info: activating portuguese \supervisorlabel on input line 15.
+Package scrbase Info: activating portuguese \companylabel on input line 15.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
+5.
  ("C:\Program Files\MiKTeX\tex/latex/lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 5
-.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
+5.
 
 ("C:\Program Files\MiKTeX\tex/latex/lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-5.
+15.
 
 ("C:\Program Files\MiKTeX\tex/latex/lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-5.
+15.
 
 ("C:\Program Files\MiKTeX\tex/latex/lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 5.
+(Font)              <12> on input line 15.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 5.
+(Font)              <8> on input line 15.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 5.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 5.
+(Font)              <6> on input line 15.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 15.
+
 
 ("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 15.
+
 
 ("C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 5.
-
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 15
+.
 
 ("C:\Program Files\MiKTeX\tex/latex/jknappen\ursfs.fd"
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
-5.
+15.
 
 ("C:\Program Files\MiKTeX\tex/latex/lm\ot1lmss.fd"
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
-5.
+15.
 
 ("C:\Program Files\MiKTeX\tex/latex/lm\ot1lmtt.fd"
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) (input/Inic.tex
-\openout2 = `./include/CAPA/CAPAREPORT_2.aux'.
+)
+<./image/Logo/ISEP_logo.jpg, id=114, 730.6497pt x 278.2395pt>
+File: ./image/Logo/ISEP_logo.jpg Graphic file (type jpg)
+<use ./image/Logo/ISEP_logo.jpg>
+Package pdftex.def Info: ./image/Logo/ISEP_logo.jpg  used on input line 16.
+(pdftex.def)             Requested size: 184.9429pt x 70.4258pt.
+ [1
 
 
-(include/CAPA/CAPAREPORT_2.tex
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.74> on input line 50.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 50.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 50.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 50.
 
-Overfull \hbox (6.81465pt too wide) in paragraph at lines 50--50
-[]$[]$   [] 
- []
-
-
-Overfull \hbox (12.0pt too wide) in paragraph at lines 50--50
- [][] 
- []
-
-<./image/Capa/ISEP_marca_cor_grande.png, id=110, 730.6497pt x 278.2395pt>
-File: ./image/Capa/ISEP_marca_cor_grande.png Graphic file (type png)
-<use ./image/Capa/ISEP_marca_cor_grande.png>
-Package pdftex.def Info: ./image/Capa/ISEP_marca_cor_grande.png  used on input 
-line 50.
-(pdftex.def)             Requested size: 292.2547pt x 111.29382pt.
-
-Overfull \hbox (71.74583pt too wide) in paragraph at lines 50--50
-[][] 
- []
-
-[1
+\providecommand\@newglossary[4]{}
+\@newglossary{main}{glg}{gls}{glo}
+\@newglossary{acronym}{alg}{acr}{acn}
+\providecommand \oddpage@label [2]{}
 
 
 
 
 
 
+\providecommand\@glsorder[1]{}
+\providecommand\@istfilename[1]{}
+\@istfilename{Relatorio.ist}
+\@glsorder{word}
 \openout5 = `Relatorio.ist'.
 
 
-
-{C:/Users/sergi/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./image/Capa/IS
-EP_marca_cor_grande.png>])
-\openout2 = `./include/CONTRACAPA/CONTRACAPAREPORT_2.aux'.
-
- (include/CONTRACAPA/CONTRACAPAREPORT_2.tex
+{C:/Users/sergi/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./image/Logo/IS
+EP_logo.jpg>]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-0.
-
-("C:\Program Files\MiKTeX\tex/latex/lm\ts1lmr.fd"
+7.
+ ("C:\Program Files\MiKTeX\tex/latex/lm\ts1lmr.fd"
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<./image/capa/ISEP_marca_cor_grande.png, id=124, 730.6497pt x 278.2395pt>
-File: ./image/capa/ISEP_marca_cor_grande.png Graphic file (type png)
-<use ./image/capa/ISEP_marca_cor_grande.png>
-Package pdftex.def Info: ./image/capa/ISEP_marca_cor_grande.png  used on input 
-line 25.
-(pdftex.def)             Requested size: 292.2547pt x 111.29382pt.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
+7.
 
-Overfull \hbox (17.62482pt too wide) in paragraph at lines 8--37
-[]$[]$
- []
+("C:\Program Files\MiKTeX\tex/latex/lm\t1lmtt.fd"
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 17.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 17.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 17.
+File: ./image/Logo/ISEP_logo.jpg Graphic file (type jpg)
+<use ./image/Logo/ISEP_logo.jpg>
+Package pdftex.def Info: ./image/Logo/ISEP_logo.jpg  used on input line 17.
+(pdftex.def)             Requested size: 184.9429pt x 70.4258pt.
+pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.18 	\cleardoublepage
+                       [1
 
+] (input/Inic.tex
+\openout2 = `./include/SETUP/Acknowledgement.aux'.
 
-Underfull \hbox (badness 10000) in paragraph at lines 8--37
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 8--37
+ (include/SETUP/Acknowledgement.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 3--10
 
  []
 
@@ -1777,30 +1695,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--37
 
 
 
- <./image/capa/ISEP_marca_cor_grande.png>])
-\openout2 = `./include/SETUP/Acknowledgement.aux'.
-
-
-(include/SETUP/Acknowledgement.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 3--10
-
- []
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
-een already used, duplicate ignored
+]pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.10 \include{./include/SETUP/Acknowledgement}
-                                               [0
-
-
-
+l.14 \include{./include/SETUP/Abstract_1}
+                                          [0
 
 ]
 \openout2 = `./include/SETUP/Abstract_1.aux'.
 
-
-(include/SETUP/Abstract_1.tex
+ (include/SETUP/Abstract_1.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--16
 
  []
@@ -1822,8 +1727,14 @@ been already used, duplicate ignored
 l.18 \end{abstract}
                     [1
 
+])pdfTeX warning (ext4): destination with the same identifier (name{page.}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.17 \include{./include/SETUP/Abstract_2}
+                                          [0
 
-])
+]
 \openout2 = `./include/SETUP/Abstract_2.aux'.
 
  (include/SETUP/Abstract_2.tex
@@ -1853,12 +1764,18 @@ been already used, duplicate ignored
 l.21 \end{abstract}
                     [1
 
+])pdfTeX warning (ext4): destination with the same identifier (name{page.}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.20 ...e/SETUP/ContentFigureTableListingGlossary}
+                                                   [0
 
-])
+]
 \openout2 = `./include/SETUP/ContentFigureTableListingGlossary.aux'.
 
- (include/SETUP/ContentFigureTableListingGlossary.tex
-(Relatorio.toc)
+
+(include/SETUP/ContentFigureTableListingGlossary.tex (Relatorio.toc)
 \tf@toc=\write9
 \openout9 = `Relatorio.toc'.
 
@@ -1868,7 +1785,6 @@ been already used, duplicate ignored
                    \relax 
 l.4 \cleardoublepage
                     	 [1
-
 
 
 ] (Relatorio.lof)
@@ -1898,13 +1814,16 @@ Underfull \hbox (badness 5119) in paragraph at lines 14--14
 []|\T1/lmr/m/it/12 Electrically Era-sa-ble Pro-gram-ma-ble Read-
  []
 
-)) [5
+) [5
 
 
+
+
+]) [6
 
 ]) (input/page/Introducao.tex
 Cap\'{\i }tulo 1.
-<./image/PESTA/fisica/mass.jpg, id=293, 282.05376pt x 179.67125pt>
+<./image/PESTA/fisica/mass.jpg, id=311, 282.05376pt x 179.67125pt>
 File: ./image/PESTA/fisica/mass.jpg Graphic file (type jpg)
 <use ./image/PESTA/fisica/mass.jpg>
 Package pdftex.def Info: ./image/PESTA/fisica/mass.jpg  used on input line 7.
@@ -1954,7 +1873,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 75--79
 
 [4]
 Cap\'{\i }tulo 2.
-<./image/PESTA/general/balanca_1.jpg, id=314, 642.4pt x 481.8pt>
+<./image/PESTA/general/balanca_1.jpg, id=331, 642.4pt x 481.8pt>
 File: ./image/PESTA/general/balanca_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/general/balanca_1.jpg>
 Package pdftex.def Info: ./image/PESTA/general/balanca_1.jpg  used on input lin
@@ -1965,24 +1884,20 @@ Overfull \hbox (67.09538pt too wide) in paragraph at lines 91--92
  [][] 
  []
 
-<./image/PESTA/general/balanca_4.jpg, id=315, 160.4394pt x 192.9609pt>
+<./image/PESTA/general/balanca_4.jpg, id=332, 160.4394pt x 192.9609pt>
 File: ./image/PESTA/general/balanca_4.jpg Graphic file (type jpg)
 <use ./image/PESTA/general/balanca_4.jpg>
 Package pdftex.def Info: ./image/PESTA/general/balanca_4.jpg  used on input lin
 e 100.
 (pdftex.def)             Requested size: 165.60695pt x 199.16928pt.
-<./image/PESTA/general/Weigh_Scale_Salter_1.jpg, id=316, 803.0pt x 982.67125pt>
+<./image/PESTA/general/Weigh_Scale_Salter_1.jpg, id=333, 803.0pt x 982.67125pt>
 
 File: ./image/PESTA/general/Weigh_Scale_Salter_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/general/Weigh_Scale_Salter_1.jpg>
 Package pdftex.def Info: ./image/PESTA/general/Weigh_Scale_Salter_1.jpg  used o
 n input line 116.
 (pdftex.def)             Requested size: 162.75365pt x 199.16928pt.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-18.
-("C:\Program Files\MiKTeX\tex/latex/lm\t1lmtt.fd"
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
+
 Underfull \hbox (badness 10000) in paragraph at lines 81--120
 
  []
@@ -2015,14 +1930,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 81--120
 [5
 
  <./image/PESTA/general/balanca_1.jpg> <./image/PESTA/general/balanca_4.jpg>]
-<./image/PESTA/general/Public_Body_Scales_1.jpg, id=327, 383.18156pt x 248.4281
+<./image/PESTA/general/Public_Body_Scales_1.jpg, id=346, 383.18156pt x 248.4281
 3pt>
 File: ./image/PESTA/general/Public_Body_Scales_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/general/Public_Body_Scales_1.jpg>
 Package pdftex.def Info: ./image/PESTA/general/Public_Body_Scales_1.jpg  used o
 n input line 128.
 (pdftex.def)             Requested size: 307.20636pt x 199.16928pt.
-<./image/PESTA/general/Balanca_Mola_1.jpg, id=328, 97.8054pt x 204.5241pt>
+<./image/PESTA/general/Balanca_Mola_1.jpg, id=347, 97.8054pt x 204.5241pt>
 File: ./image/PESTA/general/Balanca_Mola_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/general/Balanca_Mola_1.jpg>
 Package pdftex.def Info: ./image/PESTA/general/Balanca_Mola_1.jpg  used on inpu
@@ -2035,7 +1950,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 121--135
 
 [6 <./image/PESTA/general/Weigh_Scale_Salter_1.jpg> <./image/PESTA/general/Publ
 ic_Body_Scales_1.jpg> <./image/PESTA/general/Balanca_Mola_1.jpg>]
-<./image/PESTA/general/Scale_1.jpg, id=334, 1330.9725pt x 1039.63406pt>
+<./image/PESTA/general/Scale_1.jpg, id=352, 1330.9725pt x 1039.63406pt>
 File: ./image/PESTA/general/Scale_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/general/Scale_1.jpg>
 Package pdftex.def Info: ./image/PESTA/general/Scale_1.jpg  used on input line 
@@ -2047,13 +1962,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 136--143
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 158--13
+Underfull \hbox (badness 10000) in paragraph at lines 158--27
 
  []
 
 [7 <./image/PESTA/general/Scale_1.jpg>] (input/page/Desenvolvimento.tex
 Cap\'{\i }tulo 3.
-<./image/PESTA/kit/Kit_Desenvolvimento_2.jpg, id=344, 3014.26125pt x 1704.3675p
+<./image/PESTA/kit/Kit_Desenvolvimento_2.jpg, id=362, 3014.26125pt x 1704.3675p
 t>
 File: ./image/PESTA/kit/Kit_Desenvolvimento_2.jpg Graphic file (type jpg)
 <use ./image/PESTA/kit/Kit_Desenvolvimento_2.jpg>
@@ -2065,14 +1980,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--12
 
  []
 
-<./image/PESTA/Diagrama/Diagrama_bloco_3.jpg, id=346, 1063.72406pt x 708.39656p
+<./image/PESTA/Diagrama/Diagrama_bloco_3.jpg, id=364, 1063.72406pt x 708.39656p
 t>
 File: ./image/PESTA/Diagrama/Diagrama_bloco_3.jpg Graphic file (type jpg)
 <use ./image/PESTA/Diagrama/Diagrama_bloco_3.jpg>
 Package pdftex.def Info: ./image/PESTA/Diagrama/Diagrama_bloco_3.jpg  used on i
 nput line 16.
 (pdftex.def)             Requested size: 287.20934pt x 191.26962pt.
-<./image/PESTA/material/Load_Cell_1.jpg, id=348, 2337.73375pt x 1152.305pt>
+<./image/PESTA/material/Load_Cell_1.jpg, id=366, 2337.73375pt x 1152.305pt>
 File: ./image/PESTA/material/Load_Cell_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/material/Load_Cell_1.jpg>
 Package pdftex.def Info: ./image/PESTA/material/Load_Cell_1.jpg  used on input 
@@ -2087,7 +2002,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--29
 
  <./image/PESTA/kit/Kit_Desenvolvimento_2.jpg> <./image/PESTA/Diagrama/Diagrama
 _bloco_3.jpg>]
-<./image/PESTA/general/strain_gauge_1.jpg, id=355, 630.10406pt x 381.67593pt>
+<./image/PESTA/general/strain_gauge_1.jpg, id=373, 630.10406pt x 381.67593pt>
 File: ./image/PESTA/general/strain_gauge_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/general/strain_gauge_1.jpg>
 Package pdftex.def Info: ./image/PESTA/general/strain_gauge_1.jpg  used on inpu
@@ -2098,13 +2013,13 @@ Overfull \hbox (14.347pt too wide) in paragraph at lines 38--39
 []  
  []
 
-<./image/PESTA/schematic/Wheatstone_2.jpg, id=357, 313.17pt x 210.03468pt>
+<./image/PESTA/schematic/Wheatstone_2.jpg, id=375, 313.17pt x 210.03468pt>
 File: ./image/PESTA/schematic/Wheatstone_2.jpg Graphic file (type jpg)
 <use ./image/PESTA/schematic/Wheatstone_2.jpg>
 Package pdftex.def Info: ./image/PESTA/schematic/Wheatstone_2.jpg  used on inpu
 t line 47.
 (pdftex.def)             Requested size: 212.12129pt x 142.26378pt.
-<./image/PESTA/schematic/Wheatstone_1.jpg, id=358, 315.42844pt x 262.73157pt>
+<./image/PESTA/schematic/Wheatstone_1.jpg, id=376, 315.42844pt x 262.73157pt>
 File: ./image/PESTA/schematic/Wheatstone_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/schematic/Wheatstone_1.jpg>
 Package pdftex.def Info: ./image/PESTA/schematic/Wheatstone_1.jpg  used on inpu
@@ -2133,7 +2048,7 @@ Overfull \hbox (2.61105pt too wide) in paragraph at lines 31--74
 [9 <./image/PESTA/material/Load_Cell_1.jpg> <./image/PESTA/general/strain_gauge
 _1.jpg> <./image/PESTA/schematic/Wheatstone_2.jpg>] [10 <./image/PESTA/schemati
 c/Wheatstone_1.jpg>]
-<./image/PESTA/material/Prato.jpg, id=376, 2836.5975pt x 903.375pt>
+<./image/PESTA/material/Prato.jpg, id=393, 2836.5975pt x 903.375pt>
 File: ./image/PESTA/material/Prato.jpg Graphic file (type jpg)
 <use ./image/PESTA/material/Prato.jpg>
 Package pdftex.def Info: ./image/PESTA/material/Prato.jpg  used on input line 8
@@ -2145,14 +2060,14 @@ Overfull \hbox (12.84715pt too wide) in paragraph at lines 80--81
  []
 
 [11 <./image/PESTA/material/Prato.jpg>]
-<./image/PESTA/schematic/HX711_Schematic_1.jpg, id=382, 628.59843pt x 310.91156
+<./image/PESTA/schematic/HX711_Schematic_1.jpg, id=400, 628.59843pt x 310.91156
 pt>
 File: ./image/PESTA/schematic/HX711_Schematic_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/schematic/HX711_Schematic_1.jpg>
 Package pdftex.def Info: ./image/PESTA/schematic/HX711_Schematic_1.jpg  used on
  input line 96.
 (pdftex.def)             Requested size: 220.01274pt x 108.82066pt.
-<./image/PESTA/material/HX711_board_1.jpg, id=383, 2004.48875pt x 1071.00125pt>
+<./image/PESTA/material/HX711_board_1.jpg, id=401, 2004.48875pt x 1071.00125pt>
 
 File: ./image/PESTA/material/HX711_board_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/material/HX711_board_1.jpg>
@@ -2184,7 +2099,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--120
 
  []
 
-<./image/PESTA/graph/80SPS64GAIN/SPS_80.JPG, id=386, 731.73375pt x 534.99875pt>
+<./image/PESTA/graph/80SPS64GAIN/SPS_80.JPG, id=404, 731.73375pt x 534.99875pt>
 
 File: ./image/PESTA/graph/80SPS64GAIN/SPS_80.JPG Graphic file (type jpg)
 <use ./image/PESTA/graph/80SPS64GAIN/SPS_80.JPG>
@@ -2207,7 +2122,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 161--163
 
  []
 
-<./image/PESTA/graph/80SPS128GAIN/Gain_128_example.JPG, id=394, 731.73375pt x 5
+<./image/PESTA/graph/80SPS128GAIN/Gain_128_example.JPG, id=412, 731.73375pt x 5
 34.99875pt>
 File: ./image/PESTA/graph/80SPS128GAIN/Gain_128_example.JPG Graphic file (type 
 jpg)
@@ -2215,7 +2130,7 @@ jpg)
 Package pdftex.def Info: ./image/PESTA/graph/80SPS128GAIN/Gain_128_example.JPG 
  used on input line 169.
 (pdftex.def)             Requested size: 182.93298pt x 133.74936pt.
-<./image/PESTA/graph/80SPS64GAIN/Gain_64_example.JPG, id=395, 731.73375pt x 534
+<./image/PESTA/graph/80SPS64GAIN/Gain_64_example.JPG, id=413, 731.73375pt x 534
 .99875pt>
 File: ./image/PESTA/graph/80SPS64GAIN/Gain_64_example.JPG Graphic file (type jp
 g)
@@ -2268,14 +2183,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 207--243
 
  []
 
-<./image/PESTA/material/4x20_LCD.jpg, id=468, 575.90157pt x 345.54094pt>
+<./image/PESTA/material/4x20_LCD.jpg, id=485, 575.90157pt x 345.54094pt>
 File: ./image/PESTA/material/4x20_LCD.jpg Graphic file (type jpg)
 <use ./image/PESTA/material/4x20_LCD.jpg>
 Package pdftex.def Info: ./image/PESTA/material/4x20_LCD.jpg  used on input lin
 e 247.
 (pdftex.def)             Requested size: 287.95007pt x 172.77003pt.
 [16 <./image/PESTA/material/4x20_LCD.jpg>]
-<./image/PESTA/Diagrama/Harvard_architecture.jpg, id=478, 322.95656pt x 205.517
+<./image/PESTA/Diagrama/Harvard_architecture.jpg, id=495, 322.95656pt x 205.517
 8pt>
 File: ./image/PESTA/Diagrama/Harvard_architecture.jpg Graphic file (type jpg)
 <use ./image/PESTA/Diagrama/Harvard_architecture.jpg>
@@ -2318,7 +2233,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 253--277
  []
 
 [17 <./image/PESTA/Diagrama/Harvard_architecture.jpg>]
-<./image/PESTA/material/Atmega128_1.jpg, id=489, 450.18187pt x 477.28313pt>
+<./image/PESTA/material/Atmega128_1.jpg, id=507, 450.18187pt x 477.28313pt>
 File: ./image/PESTA/material/Atmega128_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/material/Atmega128_1.jpg>
 Package pdftex.def Info: ./image/PESTA/material/Atmega128_1.jpg  used on input 
@@ -2371,19 +2286,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 298--329
  []
 
 [19]
-<./image/PESTA/programador/Atmel_ice.png, id=509, 271.76532pt x 219.82124pt>
+<./image/PESTA/programador/Atmel_ice.png, id=527, 271.76532pt x 219.82124pt>
 File: ./image/PESTA/programador/Atmel_ice.png Graphic file (type png)
 <use ./image/PESTA/programador/Atmel_ice.png>
 Package pdftex.def Info: ./image/PESTA/programador/Atmel_ice.png  used on input
  line 336.
 (pdftex.def)             Requested size: 203.82349pt x 164.86551pt.
-<./image/PESTA/programador/isp_6pin.png, id=510, 371.13657pt x 146.04562pt>
+<./image/PESTA/programador/isp_6pin.png, id=529, 371.13657pt x 146.04562pt>
 File: ./image/PESTA/programador/isp_6pin.png Graphic file (type png)
 <use ./image/PESTA/programador/isp_6pin.png>
 Package pdftex.def Info: ./image/PESTA/programador/isp_6pin.png  used on input 
 line 346.
 (pdftex.def)             Requested size: 167.0099pt x 65.71991pt.
-<./image/PESTA/programador/isp_8e10pin.png, id=511, 347.04657pt x 197.98969pt>
+<./image/PESTA/programador/isp_8e10pin.png, id=530, 347.04657pt x 197.98969pt>
 File: ./image/PESTA/programador/isp_8e10pin.png Graphic file (type png)
 <use ./image/PESTA/programador/isp_8e10pin.png>
 Package pdftex.def Info: ./image/PESTA/programador/isp_8e10pin.png  used on inp
@@ -2394,7 +2309,7 @@ Overfull \hbox (19.4485pt too wide) in paragraph at lines 330--353
 []$   $[]$ 
  []
 
-<./image/PESTA/material/DCDC_converter.jpg, id=512, 357.58594pt x 380.92313pt>
+<./image/PESTA/material/DCDC_converter.jpg, id=531, 357.58594pt x 380.92313pt>
 File: ./image/PESTA/material/DCDC_converter.jpg Graphic file (type jpg)
 <use ./image/PESTA/material/DCDC_converter.jpg>
 Package pdftex.def Info: ./image/PESTA/material/DCDC_converter.jpg  used on inp
@@ -2409,7 +2324,7 @@ $[]$ $[]$
 in.png> <./image/PESTA/programador/isp_8e10pin.png> <./image/PESTA/material/DCD
 C_converter.jpg>]
 Cap\'{\i }tulo 4.
-<./image/PESTA/flowchart/Main_Program_1.jpg, id=524, 620.3175pt x 724.20563pt>
+<./image/PESTA/flowchart/Main_Program_1.jpg, id=543, 620.3175pt x 724.20563pt>
 File: ./image/PESTA/flowchart/Main_Program_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/flowchart/Main_Program_1.jpg>
 Package pdftex.def Info: ./image/PESTA/flowchart/Main_Program_1.jpg  used on in
@@ -2425,7 +2340,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 389--397
 
  []
 
-<./image/PESTA/flowchart/Generic_structure.jpg, id=525, 1095.3422pt x 442.65375
+<./image/PESTA/flowchart/Generic_structure.jpg, id=544, 1095.3422pt x 442.65375
 pt>
 File: ./image/PESTA/flowchart/Generic_structure.jpg Graphic file (type jpg)
 <use ./image/PESTA/flowchart/Generic_structure.jpg>
@@ -2450,13 +2365,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 399--410
 [21
 
  <./image/PESTA/flowchart/Main_Program_1.jpg>]
-<./image/PESTA/flowchart/Interrupt_1.jpg, id=532, 73.77562pt x 120.45pt>
+<./image/PESTA/flowchart/Interrupt_1.jpg, id=550, 73.77562pt x 120.45pt>
 File: ./image/PESTA/flowchart/Interrupt_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/flowchart/Interrupt_1.jpg>
 Package pdftex.def Info: ./image/PESTA/flowchart/Interrupt_1.jpg  used on input
  line 419.
 (pdftex.def)             Requested size: 51.64256pt x 84.3144pt.
-<./image/PESTA/flowchart/Interrupt_2.jpg, id=533, 73.77562pt x 120.45pt>
+<./image/PESTA/flowchart/Interrupt_2.jpg, id=551, 73.77562pt x 120.45pt>
 File: ./image/PESTA/flowchart/Interrupt_2.jpg Graphic file (type jpg)
 <use ./image/PESTA/flowchart/Interrupt_2.jpg>
 Package pdftex.def Info: ./image/PESTA/flowchart/Interrupt_2.jpg  used on input
@@ -2467,7 +2382,7 @@ Overfull \hbox (2.61107pt too wide) in paragraph at lines 416--432
 []$[]$ $[]$ 
  []
 
-<./image/PESTA/Code/Livrarias.jpg, id=534, 172.39406pt x 228.855pt>
+<./image/PESTA/Code/Livrarias.jpg, id=552, 172.39406pt x 228.855pt>
 File: ./image/PESTA/Code/Livrarias.jpg Graphic file (type jpg)
 <use ./image/PESTA/Code/Livrarias.jpg>
 Package pdftex.def Info: ./image/PESTA/Code/Livrarias.jpg  used on input line 4
@@ -2561,27 +2476,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 474--503
  []
 
 [24])
-Underfull \hbox (badness 10000) in paragraph at lines 507--15
+Underfull \hbox (badness 10000) in paragraph at lines 507--29
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 507--15
+Underfull \hbox (badness 10000) in paragraph at lines 507--29
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 507--15
+Underfull \hbox (badness 10000) in paragraph at lines 507--29
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 507--15
+Underfull \hbox (badness 10000) in paragraph at lines 507--29
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 507--15
+Underfull \hbox (badness 10000) in paragraph at lines 507--29
 
  []
 
@@ -2608,19 +2523,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--15
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 16--17
+Underfull \hbox (badness 10000) in paragraph at lines 16--31
 
  []
 
 
-Overfull \hbox (5.69876pt too wide) in paragraph at lines 16--17
+Overfull \hbox (5.69876pt too wide) in paragraph at lines 16--31
 \T1/lmtt/m/n/12 PESTA2021 / tree / main / SandBox / ATMEGA128 / Atmega128$[]\T1
 /lmr/m/n/12 , e pos-sí-vel fa-zer \T1/lmr/m/it/12 down-load \T1/lmr/m/n/12 para
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--17
+Underfull \hbox (badness 10000) in paragraph at lines 16--31
 
  []
 
@@ -2694,13 +2609,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 53--53
 
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <17.28> on input line 61.
-<./image/General/Einstein.jpg, id=591, 255.95625pt x 179.16937pt>
+<./image/General/Einstein.jpg, id=609, 255.95625pt x 179.16937pt>
 File: ./image/General/Einstein.jpg Graphic file (type jpg)
 <use ./image/General/Einstein.jpg>
 Package pdftex.def Info: ./image/General/Einstein.jpg  used on input line 70.
 (pdftex.def)             Requested size: 153.57492pt x 107.50244pt.
 )
-Overfull \hbox (37.334pt too wide) in paragraph at lines 26--16
+Overfull \hbox (25.334pt too wide) in paragraph at lines 26--16
 []   [] 
  []
 
@@ -2732,27 +2647,26 @@ runsystem(makeindex -s Relatorio.ist -t Relatorio.alg -o Relatorio.acr Relatori
 o.acn)...executed (allowed).
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 27.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 27.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 34.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 34.
  (Relatorio.aux
-(include/CAPA/CAPAREPORT_2.aux) (include/CONTRACAPA/CONTRACAPAREPORT_2.aux)
 (include/SETUP/Acknowledgement.aux) (include/SETUP/Abstract_1.aux)
 (include/SETUP/Abstract_2.aux)
 (include/SETUP/ContentFigureTableListingGlossary.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 27.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 27.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 34.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 34.
 Package rerunfilecheck Info: File `Relatorio.out' has not changed.
-(rerunfilecheck)             Checksum: DC9CEC7D1A81AC4855C6EE848645C655;1457.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 27.
+(rerunfilecheck)             Checksum: 0A7070F9D3638529BFEBB4A37AC457F7;1496.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 34.
  ) 
 Here is how much of TeX's memory you used:
- 53376 strings out of 480790
- 1170999 string characters out of 2907055
- 1998483 words of memory out of 3000000
- 68091 multiletter control sequences out of 15000+200000
- 683452 words of font info for 131 fonts, out of 3000000 for 9000
+ 40621 strings out of 480790
+ 779547 string characters out of 2907055
+ 1443271 words of memory out of 3000000
+ 55420 multiletter control sequences out of 15000+200000
+ 679689 words of font info for 127 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 78i,20n,101p,1081b,1433s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 78i,20n,101p,1082b,1433s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -2761,28 +2675,29 @@ eplaced by a fixed one
 
 {C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiKTeX/
 fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mat
-hsy.enc} <C:\Users\sergi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/eurosym/dp
-i720\feymr10.pk>{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Prog
-ram Files/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Program Files/MiKTeX/font
-s/enc/dvips/lm/lm-mathit.enc}<C:/Program Files/MiKTeX/fonts/type1/public/lm/lmb
+hit.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc} <C:\Users\se
+rgi\AppData\Local\MiKTeX\fonts/pk/ljfour/public/eurosym/dpi720\feymr10.pk>{C:/P
+rogram Files/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Program Files/MiKTeX/font
+s/enc/dvips/lm/lm-mathex.enc}<C:/Program Files/MiKTeX/fonts/type1/public/lm/lmb
 x10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Program F
 iles/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb><C:/Program Files/MiKTeX/fonts/ty
-pe1/public/lm/lmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi10.
-pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Program Files
-/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/pu
-blic/lm/lmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/
-Program Files/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Program Files/MiKTeX/f
-onts/type1/public/lm/lmr6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lm
-r7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Program File
-s/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX/fonts/type1/
-public/lm/lmri12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmri8.pfb><
-C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKT
-eX/fonts/type1/public/lm/lmsy6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/
-lm/lmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Prog
-ram Files/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on Relatorio.pdf (41 pages, 6184765 bytes).
+pe1/public/lm/lmcsc10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmex10
+.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Program File
+s/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Program Files/MiKTeX/fonts/type1/
+public/lm/lmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C
+:/Program Files/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX
+/fonts/type1/public/lm/lmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm
+/lmr6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Program F
+iles/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX/fonts/type1
+/public/lm/lmri10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmri12.pfb
+><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmri8.pfb><C:/Program Files/MiK
+TeX/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/publi
+c/lm/lmsy6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Pro
+gram Files/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX/fon
+ts/type1/public/lm/lmtt12.pfb>
+Output written on Relatorio.pdf (45 pages, 6215673 bytes).
 PDF statistics:
- 743 PDF objects out of 1000 (max. 8388607)
- 203 named destinations out of 1000 (max. 500000)
- 391 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 766 PDF objects out of 1000 (max. 8388607)
+ 206 named destinations out of 1000 (max. 500000)
+ 394 words of extra memory for PDF output out of 10000 (max. 10000000)
 
