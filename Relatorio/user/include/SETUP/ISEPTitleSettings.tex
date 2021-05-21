@@ -36,19 +36,9 @@
 %	CLASS DEFINITION AND PARAMETERS
 %----------------------------------------------------------------------------------------
 
-\newbool{nolistspace}
-\booltrue{nolistspace}	%keeps tables single spaced
-\newbool{listtoc}
-\booltrue{listtoc}		%add lists to the toc
-\newbool{headsepline}
-\booltrue{headsepline}	%add header underline
 \newbool{portuguese}	%to set the babel language 
-\newbool{LEEC}			%to set the DEE course for front pages
-\newbool{LETI}
 
 \DeclareOption{portuguese}{\booltrue{portuguese}}
-\DeclareOption{LEEC}{\booltrue{LEEC}}
-\DeclareOption{LETI}{\booltrue{LETI}}
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{\baseclass}}
 \ProcessOptions\relax
@@ -111,7 +101,7 @@
 \newcommand{\university}{Polit\'{e}cnico do Porto}
 \newcommand{\school}{Instituto Superior de Engenharia do Porto}
 \newcommand{\department}{Departamento de Engenharia Eletrot\'{e}cnica}
-\newcommand{\degree}{}
+\newcommand{\degree}{Engenheiro Electrot\'{e}cnico}
 \newcommand{\frontcourselabel}{}
 \newcommand{\aftercourselabel}{}
 \newcommand{\degreeacrn}{}
@@ -204,34 +194,4 @@
 		\ifdefined\datename {\normalsize \datename}\\[5mm] \else {\normalsize \today}\\[5mm] \fi
 	\end{center}
 }
-
-%----------------------------------------------------------------------------------------
-%	CUSTOM DISSERTATION COMMANDS
-%----------------------------------------------------------------------------------------
-% new command for inline graphics (set to line height)
-\newlength\myheight				
-\newlength\mydepth
-\settototalheight\myheight{Xygp}
-\settodepth\mydepth{Xygp}
-\setlength\fboxsep{0pt}
-\newcommand*\inlinegraphics[1]{%
-	\settototalheight\myheight{Xygp}%
-	\settodepth\mydepth{Xygp}%
-	\raisebox{-\mydepth}{\includegraphics[height=\myheight]{#1}}%
-}
-% Print the bibliographic references using the IEEEtrans format
-\newcommand{\printrefereces}[1]{
-	\phantomsection
-	\addcontentsline{toc}{chapter}{\reftocname}
-	%\nocite{*}
-	\bibliographystyle{ieeetr}
-	\bibliography{#1}
-}
-
-% Define some commands to keep the formatting separated from the content 
-\newcommand{\tabhead}[1]{\textbf{#1}}
-\newcommand{\code}[1]{\texttt{#1}}
-%\newcommand{\file}[1]{\texttt{\bfseries#1}}
-\newcommand{\file}[1]{\texttt{#1}}
-\newcommand{\option}[1]{\texttt{\itshape#1}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

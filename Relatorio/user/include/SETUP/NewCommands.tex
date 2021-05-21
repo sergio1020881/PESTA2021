@@ -33,15 +33,17 @@
 	columns=fullflexible
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\DTMnewdatestyle{mydateformat}{%
-	\renewcommand{\DTMdisplaydate}[4]{%
-		%    \DTMshortweekdayname{##4},\space% 
-		\DTMmonthname{##2},\nobreakspace%  
-		%    \number##3,\space%                
-		\number##1%                       
-	}%
+%\begin{comment}
+\DTMnewdatestyle{mydateformat}{
+	\renewcommand{\DTMdisplaydate}[4]{
+		    %\DTMshortweekdayname{##4},\space
+		\DTMmonthname{##2} \nobreakspace de \nobreakspace
+		    %\number##3,\space        
+		\number##1                  
+	}
 	\renewcommand{\DTMDisplaydate}{\DTMdisplaydate}%
 }
+%\end{comment}
 %%%%%%%%%%%%%%%%%%%%%%%ISEP SETTINGS END%%%%%%%%%%%%%%%%%%
 \begin{comment}
 \setlistdepth{12}
@@ -130,12 +132,16 @@
 %%%%%%%GANTT 2%%%%%%%
 \end{comment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \addto{\captionsportuguese}{\renewcommand*\contentsname{\'{I}ndice}}
-\addto{\captionsportuguese}{\renewcommand{\appendixname}{Anexo}}
-\addto{\captionsportuguese}{\renewcommand{\bibname}{Refer\^{e}ncias}}
 \addto{\captionsportuguese}{\renewcommand*\lstlistingname{Listagen}}
 \addto{\captionsportuguese}{\renewcommand*\lstlistlistingname{Listagens}}
 \addto{\captionsportuguese}{\renewcommand*\acronymname{Acrónimos}}
+\addto{\captionsportuguese}{\renewcommand{\bibname}{Refer\^{e}ncias}}
+\addto{\captionsportuguese}{\renewcommand{\appendixname}{Anexo}}
+\addto{\captionsportuguese}{\renewcommand{\appendixpagename}{Anexos}}
+\addto{\captionsportuguese}{\renewcommand{\appendixtocname}{Anexos}}
+%\noappendicestocpagenum
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}{Lemma}
@@ -172,11 +178,6 @@
 \newcommand*{\incjava}[1][]{%
 	\lstinputlisting[{language=Java,#1}]%
 }
-%%%%%%%%%%%%%%%%%%%%%%APPENDIX%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\renewcommand{\appendixname}{Anexo}
-\renewcommand{\appendixpagename}{Anexos}
-\renewcommand{\appendixtocname}{Anexos}
-%\noappendicestocpagenum
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
