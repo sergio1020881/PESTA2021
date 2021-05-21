@@ -72,7 +72,7 @@ O termo Piezoresistividade deriva do seu nome da palavra grega \textit{piezin}, 
 \minipagespace{.5}
 Normalmente nestas aplicações só são usado um ou dois sensores, e estes podem estar ligados nos extremos opostos, ou ligados ao mesmo ponto da alimentação, só em casos muito raros são utilizados os quatro sensores na qual a sensibilidade é máxima. Se o valor das quatro resistências são iguais ou nos casos em [$R_2 R_3 = R_4 R_1$], então a tensão $V_{AB}$ na saída é nula.
 \newpage
-A montagem da mesa de medição \textit{figura} \ref{Prato},
+A montagem da mesa (prato) de medição  \textit{figura} \ref{Prato},
 \minipagespace{5}
 \begin{minipage}[!b]{\linewidth}
 \begin{figure}[H]
@@ -84,8 +84,7 @@ A montagem da mesa de medição \textit{figura} \ref{Prato},
 \end{minipage}
 \newpage
 \section{Amplificador de sinal}
-A amplificação é geralmente um requisito fundamental, pois a maioria dos sensores, tendem a produzir níveis de sinal significativamente mais baixos, do que aqueles usados no processador digital. Sensores resistivos podem precisar de um amplificador para a célula de carga. Se possível, é vantajoso ter o ganho o mais próximo possível do elemento sensor. Em situações onde um maior ganho é necessário, muitas vezes pode haver implicações para lidar 
-com quaisquer efeitos adversos, como o ruído, problemas de \textit{layout} do \textit{chip}, os transitórios agudos associados aos sinais digitais que precisam de ser mantidos bem longe dos circuitos analógicos \textit{front-end}. \cite{book-9}
+A amplificação é geralmente um requisito fundamental, pois a maioria dos sensores, tendem a produzir níveis de sinal significativamente mais baixos, do que aqueles usados no processador digital. Sensores resistivos podem precisar de um amplificador para a célula de carga. Se possível, é vantajoso ter o ganho o mais próximo possível do elemento sensor. Em situações onde um maior ganho é necessário, muitas vezes pode haver implicações para lidar com quaisquer efeitos adversos, como o ruído, problemas de \textit{layout} do \textit{chip}, os transitórios agudos associados aos sinais digitais que precisam de ser mantidos bem longe dos circuitos analógicos \textit{front-end}. \cite{book-9}
 \\
 \\
 A ligação destes componentes é intuitivo e fácil de se perceber, o que é complexo neste trabalho é a interligação destes equipamentos com o micro-controlador por meio de \textit{software} e criar o \textit{driver} de comunicação para a placa do amplificador de sinal, já que o protocolo de comunicação é proprietário.
@@ -100,7 +99,7 @@ A ligação destes componentes é intuitivo e fácil de se perceber, o que é co
 	\label{HX711_Schematic_1}
 \end{figure}
 \figurespace{.5}
-A placa \textit{Load Cell Amplifier }pode ser programada fisicamente para determinar o numero de amostras por segundo a ser transmitido, tem opção de \textcolor{blue}{10} amostras por segundo e \textcolor{blue}{80} amostras, neste projeto optei pela segunda opção que necessita alteração na placa de circuito de impresso, isto é, abrir o \textit{jumper} respetivo de configuração.
+A placa \textit{Load Cell Amplifier } pode ser programada fisicamente para determinar o numero de amostras por segundo a ser transmitido, tem opção de \textcolor{blue}{10} amostras por segundo e \textcolor{blue}{80} amostras, neste projeto optei pela segunda opção que necessita alteração na placa de circuito de impresso, isto é, abrir o \textit{jumper} respetivo de configuração.
 \\
 \\
 \begin{table}[H]
@@ -187,7 +186,7 @@ Para obter este resultado a livraria driver para o \textit{Load Cell Amplifier} 
 \\
 \\
 \\
-O código que executa esta rotina é demonstrado na \textit{lista} \ref{HX711-read-raw} que é chamada pelas interrupções periódicas e só é ativa quando a função na \textit{lista} \ref{Main-While-case-1} \textbf{hx.query(\&hx)} é verdadeira.
+O código que executa esta rotina é demonstrado na \textit{lista} \ref{HX711-read-raw}, que é chamada pelas interrupções periódicas e só é ativa quando a função na \textit{lista} \ref{Main-While-case-1} \textbf{hx.query(\&hx)} é verdadeira.
 \\
 { \tiny
 	\lstinputlisting[language=C, caption={função de chamada \textbf{hx.query(\&hx)}}, captionpos=b, label=Main-While-case-1]{./input/code/hx_query.c}
@@ -197,7 +196,7 @@ O código que executa esta rotina é demonstrado na \textit{lista} \ref{HX711-re
 	\lstinputlisting[language=C, caption=HX711\_read\_raw, captionpos=b, label=HX711-read-raw]{./input/code/HX711_read_raw.c}
 }
 \listingspace{.1}
-Após obter um numero determinado de valores discretos é calculado sua média
+Após obter um numero determinado de valores discretos é calculado uma média
 \begin{equation}
 	\label{eq:Mean}
 	\overline{x}  =  \frac{1}{n}\sum_{i=1}^n x_i
@@ -212,7 +211,7 @@ Uma livraria que já tinha feito para outros projetos serviu para aplicar neste,
 %[\ref{codigo}]
 \\
 \\
-Abaixo esta a tabela \ref{LCD_connections} com as respetivas ligações e uma imagem de um LCD 4x20 azul na \textit{figura} \ref{4x20_LCD}.
+Abaixo esta a tabela \ref{LCD_connections} com as respetivas ligações, e uma imagem de um LCD 4x20 azul na \textit{figura} \ref{4x20_LCD}.
 \tablespace{.2}
 \begin{table}[H]
 	\centering
@@ -251,13 +250,13 @@ Abaixo esta a tabela \ref{LCD_connections} com as respetivas ligações e uma im
 \end{figure}
 \newpage
 \section{Micro-controlador}
-Os micro-controladores da \textbf{Atmel} de 8 e 32 \textit{bit} são baseados na arquitetura avançada de \textbf{Harvard} na qual esta concebido para baixos consumos e performance.
+Os micro-controladores da \textbf{Atmel} de 8 a 32 \textit{bit} são baseados na arquitetura avançada de \textbf{Harvard} na qual esta concebido para baixos consumos e performance.
 \\
 \\
 Este tipo de arquitetura tem dois  \textit{busses} (barramentos) um dedicado a leitura das instruções a executar e outra para escrita e leitura de \textit{data} (informação ou dados), isto assegura que uma nova instrução pode ser executada em cada ciclo de relógio, em que elimina estados de espera quando não ha instruções prontas a executar.
 \\
 \\
-Nos micro-controladores da \textbf{AVR} os barramentos estão configurados de forma a dar prioridade ao barramento das instruções do \ac{cpu} acesso a memoria flash enquanto o barramento da CPU de dados tem prioridade de acesso a \ac{sram}.
+Nos micro-controladores da \textbf{AVR} os barramentos estão configurados de forma a dar prioridade ao barramento das instruções do \ac{cpu} acesso a memoria flash, enquanto o barramento da CPU de dados tem prioridade de acesso a \ac{sram}.
 \\
 \\
 O espaço de memoria de dados é dividida em três, os \ac{gpr} as \ac{sfr} ou memoria de I/O e a \textit{data} \textbf{SRAM}.
@@ -328,7 +327,7 @@ A características do micro-controlador Atmega 128 esta abaixo indicados na list
 \end{minipage}
 \minipagespace{0.5}
 \newpage
-Para programar este microcontrolador (\textbf{Atmega 128}) foi utilizado o programador da marca da Atmel precisamente o \ac{atmel-ice} \textit{figura} \ref{Programador_1}, que para este equipamento tem disponível programação via \ac{isp} \textit{figura} \ref{ISP_6_8_10pin} e \ac{jtag}.
+Para programar este microcontrolador (\textbf{Atmega 128}), foi utilizado o programador da marca da Atmel precisamente o \ac{atmel-ice} \textit{figura} \ref{Programador_1}, que para este equipamento tem disponível programação via \ac{isp} \textit{figura} \ref{ISP_6_8_10pin} e \ac{jtag}.
 \minipagespace{.2}
 \begin{minipage}[!b]{.5\linewidth}
 	\begin{figure}[H]
@@ -385,7 +384,7 @@ Caracteristicas DC/DC:
 		\item Massa: 28g
 	\end{itemize}
 \end{minipage}
-Como a \textit{motherboard} tem um regulador de tensão de 5 Volt para aumentar a eficiência  e ter uma alimentação variável de entrada utilizo o \textit{Buck Converter} da \textit{figura} \ref{buck-converter}.
+Como a \textit{motherboard} tem um regulador de tensão de 5 Volt, para aumentar a eficiência  e ter uma alimentação variável de entrada utilizo o \textit{Buck Converter} da \textit{figura} \ref{buck-converter}.
 \chapter{Software}
 O \ac{ide} utilizado neste trabalho foi o \textbf{\textit{{Microchip Studio for AVR\textsuperscript{\textregistered} and SAM Devices}}} (\textit{version: 7.0.2542}). A programação foi feita em Linguagem \textbf{C}, sua estrutura sintática esta abaixo mencionado:
 \\
@@ -447,7 +446,8 @@ Consultar código para leitura das rotinas de interrupção nas folhas \textit{a
 \end{minipage}
 \begin{minipage}{.6\linewidth}
 Ao lado esta as livrarias usadas neste projeto, as que estão dentro da caixa amarela são as que foram criadas.
-A filosofia usada é de criar objetos que representam o hardware para o poder manipular via código. Como se pode observar foi criado uma livraria para os temporizadores, outra para as interrupções e \ac{eeprom}, depois criado livrarias para os componentes externos, isto é, o \textbf{LCD} e o integrado \textbf{HX711}. \\
+A filosofia usada é de criar objetos que representam o hardware para o poder manipular via código. Como se pode observar foi criado uma livraria para os temporizadores, outra para as interrupções e \ac{eeprom}, depois criado livrarias para os componentes externos, isto é, o \textbf{LCD} e o integrado \textbf{HX711}.
+\\
 Uma abstração que torna simples executar qualquer algoritmo ou projeto, e isto só é possível depois de ultrapassar a barreira árdua e dolorosa de desenvolver as livrarias.
 \\
 \\
@@ -457,13 +457,15 @@ Uma abstração que torna simples executar qualquer algoritmo ou projeto, e isto
 Durante este projeto tentou-se dentro do possível sempre seguir as boas praticas de programação, como a \texttt{indentação} especifica para cada situação, e manter a estrutura de norma. Deve-se manter uma metodologia de trabalho que segue as normas assim é percetível para todos e facilita detetar \textit{bugs}, e é uma pratica que abrange todas as linguagens, por exemplo o \textbf{Python} é fundado nesse principio.
 \\
 \\
-Quanto as interrupções é sempre um desafio, porque as tarefas tem que ser bem organizadas temporalmente para não entrar em conflitos, pretende-se assim sempre que o código corra na função \textit{main} e as interrupções algo esporádico e muito rápido, estas devem servir de \textit{flags} para executar rotinas na função \textit{main}, ou seja, servirem de \textbf{\textcolor{green}{INPUTS}}.
+Quanto as interrupções é sempre um desafio, porque as tarefas tem que ser bem organizadas temporalmente para não entrar em conflitos, pretende-se assim sempre que o código corra na função \textit{main} e as interrupções algo esporádico e muito rápido, estas devem servir de \textit{flags} para executar rotinas na função \textit{main}, ou seja, servirem de inputs. %%\textbf{\textcolor{green}{INPUTS}}.
 \newpage
 \section{Validação}
 %%%To validate is to justify why the choices made and alternatives that could be chosen.
-As escolhas feitas estão dentro dos parâmetros da oferta disponibilizada. Apenas o conhecimento adquirido ao aprofundar o funcionamento dos componentes é o ganho mais evidente, facilitando a interpretação de situações e deteção de anomalias (\textit{troubleshooting}), derivado aos custos dos materiais serem caros.\\
+As escolhas feitas estão dentro dos parâmetros da oferta disponibilizada. Apenas o conhecimento adquirido ao aprofundar o funcionamento dos componentes é o ganho mais evidente, facilitando a interpretação de situações e deteção de anomalias (\textit{troubleshooting}), derivado aos custos dos materiais serem caros.
 \\
-Apostei na marca \textbf{Atmel} devido a experiência e conhecimentos já adquiridos, se aposta-se noutra marca teria de enfrentar uma curva de aprendizagem e adaptação que no final a nível de custos beneficio seria desfavorável, pelo tempo a dispensar e de ser muito trabalhoso a refazer tudo novamente noutra arquitetura.\\
+\\
+Apostei na marca \textbf{Atmel} devido a experiência e conhecimentos já adquiridos, se aposta-se noutra marca teria de enfrentar uma curva de aprendizagem e adaptação que no final a nível de custos beneficio seria desfavorável, pelo tempo a dispensar e de ser muito trabalhoso a refazer tudo novamente noutra arquitetura.
+\\
 \\
 O sensor usado é o mais comum nesta pratica, e escolha demonstrada, o circuito de interface é indiferente a escolha apenas é baseada na sua precisão, ou seja, é de \textcolor{blue}{24} \textit{bit} enquanto o \textbf{ADC} do \textbf{MCU} de \textcolor{blue}{10} \textit{bit} de resolução.
 \\
@@ -499,17 +501,17 @@ Abaixo esta indicado uma tabela dos materiais usados, assim como os preços.
 	}
 	\label{material}
 \end{table}
-Os preços são o que estão disponíveis no mercado, quanto a \textit{motherboard} foi o que arranjei com o preço mais competitivo com este MCU Atmega 128, outras alternativas atingiam o mesmo preço ou mais mas com MCU com menor capacidades.
+Os preços são o que estão disponíveis no mercado, quanto a \textit{motherboard} foi o que arranjei com o preço mais competitivo com este MCU Atmega 128, outras alternativas atingiam o mesmo preço ou mais mas com MCU com menor capacidade.
 \newpage
 \subsection{Testar}
-Quanto a funcionalidade no seu todo a balança tem \textcolor{blue}{quatro} botões e \textcolor{blue}{três} \textit{leds} ativados, um botão para fazer o \textit{offset} no \textcolor{green}{PORTF 0}, e dois botões com dupla função, fazer \textit{reset} para \textit{default} e incrementar, outro para entrar no menu de calibração e decrementar, o \textcolor{blue}{quarto} botão é reservado para \textit{enter} e assumir o valor introduzido na calibração.\\
+Quanto a funcionalidade no seu todo, a balança tem \textcolor{blue}{quatro} botões e \textcolor{blue}{três} \textit{leds} ativados, um botão para fazer o \textit{offset} no \textcolor{green}{PORTF 0}, e dois botões com dupla função, fazer \textit{reset} para \textit{default} e incrementar, outro para entrar no menu de calibração e decrementar, o \textcolor{blue}{quarto} botão é reservado para \textit{enter} e assumir o valor introduzido na calibração.\\
 \\
 O botão \textcolor{green}{PORTF 3} quando premido durante \textcolor{blue}{cinco} segundos faz um \textit{reset} para configuração \textit{default} depois de o \textit{led} no \textcolor{red}{PORTC 6} piscar \textcolor{blue}{quatro} vezes.\\
 \\
 O botão \textcolor{green}{PORTF 4} quando premido durante \textcolor{blue}{cinco} segundos entra no menu de calibração do valor do \textit{gain factor} e o \textit{led} no \textcolor{red}{PORTC 7} liga, usando os botões de incrementa e decrementar, isto é, o
 \textcolor{green}{PORTF 3} e \textcolor{green}{PORTF 4} pode-se alterar esse valor.\\
 \\
-Para assumir o valor e sair do menu de calibração basta premir o botão colocado no \textcolor{green}{PORTF 5}. Tanto no caso de calibração ou de \textit{offset} os valores são guardados na \textbf{EEPROM} do microcontrolador, sendo que, se retirar a alimentação do circuito este não perde os valores e o \textit{led} \textcolor{red}{PORTC 5} permanece ligado.
+Para assumir o valor e sair do menu de calibração basta premir o botão colocado no \textcolor{green}{PORTF 5}. Tanto no caso de calibração ou de \textit{offset} os valores são guardados na \textbf{EEPROM} do micro-controlador, sendo que, se retirar a alimentação do circuito este não perde os valores e o \textit{led} \textcolor{red}{PORTC 5} permanece ligado.
 \\
 \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -521,8 +523,8 @@ $\begin{array}{l l l}
 \text{Média} & & \\
 \overline{x} & = & \frac{1}{n}\sum_{i=1}^n x_i
 \end{array}$
-MEMS devices and structures are fabricated using conventional integrated circuit process techniques, such as lithography, deposition, and etching, together with a broad range of specially developed micromachining techniques. \cite{book-9}
-The three essential elements in conventional silicon processing are deposition, lithography, and etching. \cite{book-9}
-Sensitivity,Long-Term Drift e Temperature Effects (Span temperature hysteresis).
+MEMS devices and structures are fabricated using conventional integrated circuit process techniques, such as lithography, deposition, and etching, together with a broad range of specially developed micromachining techniques. \cite{book-9}\\
+The three essential elements in conventional silicon processing are deposition, lithography, and etching. \cite{book-9}\\
+Sensitivity, Long-Term Drift and Temperature Effects (Span temperature hysteresis).
 \end{comment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
