@@ -1,0 +1,197 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% DEE@ISEP class for DEE BSc reports
+% original file adapted and further developed by Vitor M. R. Cunha
+% % v1.3, Apr 2021
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% original file:
+% Masters/Doctoral Thesis 
+% Class File
+% Version 1.6 (27/8/17)
+%
+% This class was downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Authors:
+% Vel (vel@latextemplates.com)
+% Johannes Böttcher
+%
+% Notes:
+% 1) This class file defines the structure and layout of the template file (main.tex).
+% 2) It has been written in such a way that under most circumstances you should not need
+% to edit it; updating it to a newer version will be harder. If you do make changes, please change the name of
+% the file and add comments to make your changes more visible.
+%
+% Class license:
+% LPPL v1.3c (http://www.latex-project.org/lppl)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% sergio santos
+% 21-05-2021
+% made some changes to fit report style
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	CLASS DEFINITION AND PARAMETERS
+%----------------------------------------------------------------------------------------
+
+\newbool{portuguese}	%to set the babel language 
+
+\DeclareOption{portuguese}{\booltrue{portuguese}}
+
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{\baseclass}}
+\ProcessOptions\relax
+
+%----------------------------------------------------------------------------------------
+%	DEFINE CUSTOM THESIS INFORMATION COMMANDS
+%----------------------------------------------------------------------------------------
+
+\NewDocumentCommand{\reporttitle} { o m }{%
+	\IfValueTF{#1}{\def\shorttitle{#1}}{\def\shorttitle{#2}}%
+	\def\@title{#2}%
+	\def\ttitle{#2}%
+}
+\NewDocumentCommand{\reportsubtitle}{m}{\newcommand{\rsubtitle}{#1}}
+\DeclareDocumentCommand{\author}{m}{\newcommand{\authorname}{#1}}
+\NewDocumentCommand{\studentnumber}{m}{\newcommand{\stdnumber}{#1}}
+\NewDocumentCommand{\studentemail}{m}{\newcommand{\stdemail}{#1}}
+\NewDocumentCommand{\advisor}{m m}{\newcommand{\advname}{#1, \url{#2}}}
+\NewDocumentCommand{\coadvisor}{m m}{\newcommand{\coadvname}{#1, \url{#2}}}
+\NewDocumentCommand{\company}{m}{\newcommand{\companyname}{#1}}
+\NewDocumentCommand{\supervisor}{m m}{\newcommand{\supname}{#1, \url{#2}}}
+\NewDocumentCommand{\subdate}{m}{\newcommand{\datename}{#1}}
+\NewDocumentCommand{\researchgroup}{m}{\newcommand{\groupname}{#1}}
+
+% New command to move content to the next page which prints to the next odd page if twosided mode is active
+\newcommand{\checktoopen}{  
+	\if@openright\cleardoublepage\else\clearpage\fi
+	\ifdef{\phantomsection}{\phantomsection}{}% The \phantomsection command is necessary for hyperref to jump to the correct page
+}
+
+\NewDocumentCommand{\bhrule}{}{\typeout{--------------------}}
+\NewDocumentCommand{\tttypeout}{m}{\bhrule\typeout{\space #1}\bhrule}
+
+\newcommand{\HRule}{\rule{.9\linewidth}{.6pt}} % New command to make the lines in the title page
+\newcommand{\decoRule}{\rule{.8\textwidth}{.4pt}} % New command for a rule to be used under figures
+\newcommand{\HRuleFront}{\rule{.98\textwidth}{.3pt}} % New command to make the lines in the title page
+
+\setcounter{tocdepth}{3} % The depth to which the document sections are printed to the table of contents
+
+\ProvideDocumentCommand{\addchaptertocentry}{ m }{%
+	\addcontentsline{toc}{chapter}{#1}%
+}
+
+\newcommand{\textbetweenrules}[2][.3pt]{%
+	\par\vspace{\topsep}
+	\noindent\makebox[0.98\textwidth]{%
+		\sbox0{#2}%
+		\dimen0=.5\dimexpr\ht0+#1\relax
+		\dimen2=-.5\dimexpr\ht0-#1\relax
+		\leaders\hrule height \dimen0 depth \dimen2\hfill
+		\quad #2\quad
+		\leaders\hrule height \dimen0 depth \dimen2\hfill
+	}\par\nopagebreak\vspace{\topsep}
+}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGES DESIGN
+%----------------------------------------------------------------------------------------
+
+\newcommand{\university}{Polit\'{e}cnico do Porto}
+\newcommand{\school}{Instituto Superior de Engenharia do Porto}
+\newcommand{\department}{Departamento de Engenharia Eletrot\'{e}cnica}
+\newcommand{\degree}{Engenheiro Electrot\'{e}cnico}
+\newcommand{\frontcourselabel}{}
+\newcommand{\aftercourselabel}{}
+\newcommand{\degreeacrn}{}
+
+%BSc
+\newcommand{\degreetemp}{}
+\newcommand{\disclamertemp}{}
+
+\renewcommand{\degreeacrn}{LEEC}
+\renewcommand{\degreetemp}{Licenciatura em Engenharia Eletrot\'{e}cnica e de Computadores}
+\providecaptionname{english}{\degreetemp}{Degree in Electrical and Computer Engineering}
+\providecaptionname{portuguese}{\degreetemp}{Licenciatura em Engenharia Eletrot\'{e}cnica e de Computadores}
+\renewcommand{\frontcourselabel}{{\large \degreetemp}\\}
+\renewcommand{\disclamertemp}{This report partially satisfies the requirements defined for the Project/Internship course, in the 3\textsuperscript{rd} year, of the }
+\providecaptionname{english}{\disclamertemp}{This report partially satisfies the requirements defined for the Project/Internship course, in the 3\textsuperscript{rd} year, of the }
+\providecaptionname{portuguese}{\disclamertemp}{Este relat\'{o}rio satisfaz, parcialmente, os requisitos que constam da Ficha de Unidade Curricular de Projeto/Est\'{a}gio, do 3º ano, da }
+\renewcommand{\aftercourselabel}{\large \textit{\disclamertemp \degreetemp.}\\}		
+
+%%common
+\newcommand{\studentlabel}{Candidate}
+\providecaptionname{english}{\studentlabel}{Candidate}
+\providecaptionname{portuguese}{\studentlabel}{Candidato}
+
+\newcommand{\nblabel}{nb.}
+\providecaptionname{english}{\nblabel}{{No. }}
+\providecaptionname{portuguese}{\nblabel}{{Nº }}
+
+\newcommand{\advisorlabel}{Scientific Guidance}
+\providecaptionname{english}{\advisorlabel}{Scientific Guidance}
+\providecaptionname{portuguese}{\advisorlabel}{Orienta\c{c}\~{a}o Cient\'{i}fica}
+
+\newcommand{\coadvisorlabel}{Scientific Co-Guidance}
+\providecaptionname{english}{\coadvisorlabel}{Scientific Co-Guidance}
+\providecaptionname{portuguese}{\coadvisorlabel}{Coorienta\c{c}\~{a}o Cient\'{i}fica}
+
+\newcommand{\supervisorlabel}{Advisor}
+\providecaptionname{english}{\supervisorlabel}{Advisor}
+\providecaptionname{portuguese}{\supervisorlabel}{Orientador}
+
+\newcommand{\companylabel}{Company}
+\providecaptionname{english}{\companylabel}{Company}
+\providecaptionname{portuguese}{\companylabel}{Empresa}
+
+%%1st page
+\newcommand{\printcoverpage}{
+	\begin{titlepage}
+		\pdfbookmark[0]{Front}{cover}
+		\begin{center}
+			{\scshape\normalsize \university}\\[3mm]
+			{\scshape\Large \school}
+			\HRuleFront
+			\vfill		
+			{\huge \bfseries \ttitle\par}\vspace{0.4cm} % Thesis title
+			\ifdefined\rsubtitle {\large \bfseries \rsubtitle} \\ \fi 
+			% Report sub title, if exists
+			\vfill
+			{\Large\bf \authorname}\par	
+			\vfill
+			\textbetweenrules[.3pt]{\degreeacrn}
+			\vspace{-8pt}
+			\frontcourselabel
+			\vfill	
+			\includegraphics[width=6.5cm]{./image/Logo/ISEP_logo.jpg} \\		
+			{\scshape\large \department}\\
+			{\large \school}\\[1cm]
+			\DTMsetdatestyle{mydateformat}
+			\ifdefined\datename {\normalsize \datename}\\[5mm] \else {\normalsize \today}\\[5mm] \fi
+		\end{center}
+	\end{titlepage}
+}
+
+%%2nd page
+\newcommand{\printaftercoverpage}{
+	\checktoopen
+	\thispagestyle{empty}
+	\begin{center}
+		\vspace*{.2\textheight}	
+		\aftercourselabel	
+		\vfill
+		{{\small\bf\studentlabel:} \large \authorname, \nblabel \stdnumber, \url{\stdemail}}\\[4pt]
+		{{\small\bf\advisorlabel:} \large \advname }\\[4pt]
+		\ifdefined\coadvname {{\small\bf\coadvisorlabel:} \coadvname}\\[4pt] \fi
+		\ifdefined\companyname {{\small\bf\companylabel:} \companyname\\{\small\bf\supervisorlabel:} \supname}\\ \fi
+		\vfill
+		\includegraphics[width=6.5cm]{./image/Logo/ISEP_logo.jpg} \\		
+		{\scshape\large \department}\\
+		{\large \school}\\
+		{\normalsize Rua Dr. Ant\'{o}nio Bernardino de Almeida, 431, 4200--072 Porto}\\[1cm]
+		\DTMsetdatestyle{mydateformat}	
+		\ifdefined\datename {\normalsize \datename}\\[5mm] \else {\normalsize \today}\\[5mm] \fi
+	\end{center}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
