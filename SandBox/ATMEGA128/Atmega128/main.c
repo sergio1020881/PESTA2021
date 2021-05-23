@@ -69,7 +69,6 @@ const uint8_t sizeblock = sizeof(HX711_calibration);
 HX711 hx;
 float tmp;
 EEPROM eprom;
-
 char result[32];
 char Menu = '1'; // Main menu selector
 uint8_t counter_1 = ZERO;
@@ -148,9 +147,10 @@ int main(void)
 		/******PREAMBLE******/
 		lcd0.reboot(); //Reboot LCD
 		F.boot(&F,PINF); //PORTF INPUT READING
-		while(hx.query(&hx)); //Catches falling Edge instance, begins bit shifting.
-		/***geting data interval***/
 		/************INPUT***********/
+		if(hx.query(&hx)) //Catches falling Edge instance, begins bit shifting.
+			continue;
+		/***geting data interval***/
 		// Jump Menu signal
 		if(signal == ONE){ //INPUT FROM INTERRUPT SINALS
 			Menu = '2';
@@ -312,7 +312,6 @@ ISR(TIMER0_COMP_vect) // 15.4 us intervals
 	uint8_t Sreg;
 	Sreg = STATUS_REGISTER;
 	STATUS_REGISTER &= ~(ONE << GLOBAL_INTERRUPT_ENABLE);
-	//hx.query(&hx);	
 	hx.read_raw(&hx);
 	/***enable interrupts again***/
 	STATUS_REGISTER = Sreg;
@@ -370,6 +369,6 @@ FINISHED LEAVING HAS IS. LATER MAYBE PLAY AROUND AND CLEANUP FOR BEAUTIES SAKE.
 
 MEMCP is not appreciated by this MCU, sometimes crashes.
 
-Endurance test over 2 months, noticed drift during days, but never getting over 10 grams. For a scale using a 50Kg cell is Excellent.
+Endurance test over 2 months, noticed drift during days, but never getting over 20 grams. For a scale using a 50Kg cell is Excellent.
 Using offset corrects the drift and precision is concise to the gram.
 ****/
