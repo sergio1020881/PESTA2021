@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  23 MAY 2021 03:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  23 MAY 2021 03:21
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
@@ -591,6 +591,51 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip65
 )
+("C:\Program Files\MiKTeX\tex/latex/xcolor\xcolor.sty"
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+("C:\Program Files\MiKTeX\tex/latex/graphics-cfg\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Package option `usenames' ignored on input line 216.
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+("C:\Program Files\MiKTeX\tex/latex/graphics-def\pdftex.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+)
+("C:\Program Files\MiKTeX\tex/latex/colortbl\colortbl.sty"
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+
+("C:\Program Files\MiKTeX\tex/latex/tools\array.sty"
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen174
+\ar@mcellbox=\box56
+\extrarowheight=\dimen175
+\NC@list=\toks41
+\extratabsurround=\skip66
+\backup@length=\skip67
+\ar@cellbox=\box57
+)
+\everycr=\toks42
+\minrowclearance=\skip68
+)
+\rownum=\count326
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+
+("C:\Program Files\MiKTeX\tex/latex/graphics\dvipsnam.def"
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+)
+("C:\Program Files\MiKTeX\tex/latex/xcolor\svgnam.def"
+File: svgnam.def 2016/05/11 v2.12 Predefined colors according to SVG 1.1 (UK)
+))
 ("C:\Program Files\MiKTeX\tex/latex/graphics\graphics.sty"
 Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
 
@@ -601,14 +646,11 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
-
-("C:\Program Files\MiKTeX\tex/latex/graphics-def\pdftex.def"
-File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
-))
+)
 ("C:\Program Files\MiKTeX\tex/latex/graphics\graphicx.sty"
 Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
-\Gin@req@height=\dimen174
-\Gin@req@width=\dimen175
+\Gin@req@height=\dimen176
+\Gin@req@width=\dimen177
 )
 ("C:\Program Files\MiKTeX\tex/latex/realboxes\realboxes.sty"
 Package: realboxes 2011/08/08 v0.2 Change box commands to read there content as
@@ -616,7 +658,7 @@ Package: realboxes 2011/08/08 v0.2 Change box commands to read there content as
 
 ("C:\Program Files\MiKTeX\tex/latex/collectbox\collectbox.sty"
 Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
-\collectedbox=\box56
+\collectedbox=\box58
 )
 ("C:\Program Files\MiKTeX\tex/latex/adjustbox\adjcalc.sty"
 Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
@@ -627,17 +669,17 @@ Package: caption 2020/09/02 v3.5a Customizing captions (AR)
 
 ("C:\Program Files\MiKTeX\tex/latex/caption\caption3.sty"
 Package: caption3 2020/08/30 v2.0 caption3 kernel (AR)
-\captionmargin=\dimen176
-\captionmargin@=\dimen177
-\captionwidth=\dimen178
-\caption@tempdima=\dimen179
-\caption@indent=\dimen180
-\caption@parindent=\dimen181
-\caption@hangindent=\dimen182
+\captionmargin=\dimen178
+\captionmargin@=\dimen179
+\captionwidth=\dimen180
+\caption@tempdima=\dimen181
+\caption@indent=\dimen182
+\caption@parindent=\dimen183
+\caption@hangindent=\dimen184
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count326
-\c@continuedfloat=\count327
+\c@caption@flags=\count327
+\c@continuedfloat=\count328
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
@@ -649,8 +691,8 @@ Package caption Info: supertabular package is loaded.
 )
 ("C:\Program Files\MiKTeX\tex/latex/caption\subcaption.sty"
 Package: subcaption 2020/08/23 v1.3g Sub-captions (AR)
-\c@subfigure=\count328
-\c@subtable=\count329
+\c@subfigure=\count329
+\c@subtable=\count330
 )
 ("C:\Program Files\MiKTeX\tex/latex/lm\lmodern.sty"
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
@@ -692,56 +734,6 @@ Package: hyphenat 2009/09/02 v2.3c hyphenation utilities
 \langwohyphens=\language80
 LaTeX Info: Redefining \_ on input line 43.
 )
-("C:\Program Files\MiKTeX\tex/latex/graphics\color.sty"
-Package: color 2019/11/23 v1.2a Standard LaTeX Color (DPC)
-
-("C:\Program Files\MiKTeX\tex/latex/graphics-cfg\color.cfg"
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package color Info: Driver file: pdftex.def on input line 147.
-)
-("C:\Program Files\MiKTeX\tex/latex/colortbl\colortbl.sty"
-Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
-
-("C:\Program Files\MiKTeX\tex/latex/tools\array.sty"
-Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
-\col@sep=\dimen183
-\ar@mcellbox=\box57
-\extrarowheight=\dimen184
-\NC@list=\toks41
-\extratabsurround=\skip66
-\backup@length=\skip67
-\ar@cellbox=\box58
-)
-\everycr=\toks42
-\minrowclearance=\skip68
-)
-("C:\Program Files\MiKTeX\tex/latex/xcolor\xcolor.sty"
-Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
-
-("C:\Program Files\MiKTeX\tex/latex/graphics-cfg\color.cfg"
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package xcolor Info: Package option `usenames' ignored on input line 216.
-Package xcolor Info: Driver file: pdftex.def on input line 225.
-LaTeX Info: Redefining \color on input line 709.
-\rownum=\count330
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
-Package xcolor Info: Model `RGB' extended on input line 1364.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
-
-("C:\Program Files\MiKTeX\tex/latex/graphics\dvipsnam.def"
-File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
-)
-("C:\Program Files\MiKTeX\tex/latex/xcolor\svgnam.def"
-File: svgnam.def 2016/05/11 v2.12 Predefined colors according to SVG 1.1 (UK)
-))
 ("C:\Program Files\MiKTeX\tex/latex/tools\multicol.sty"
 Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
 \c@tracingmulticols=\count331
@@ -1473,7 +1465,7 @@ File: tikzlibrarytrees.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 Writing index file Relatorio.idx
 
 Package babelbib Warning: Command \selectbiblanguage used without package
-(babelbib)                option fixlanguage. Ignored on input line 80.
+(babelbib)                option fixlanguage. Ignored on input line 83.
 
 babelbib: Set bibliography fall-back language to english
 )
@@ -2738,10 +2730,10 @@ Package rerunfilecheck Info: File `Relatorio.out' has not changed.
 (rerunfilecheck)             Checksum: 289DE7ED7605D33FDA3CF5BD2DC2739E;1496.
  ) 
 Here is how much of TeX's memory you used:
- 53269 strings out of 480790
- 1169142 string characters out of 2907055
- 1994203 words of memory out of 3000000
- 68004 multiletter control sequences out of 15000+200000
+ 53256 strings out of 480790
+ 1168803 string characters out of 2907055
+ 1993162 words of memory out of 3000000
+ 67995 multiletter control sequences out of 15000+200000
  679689 words of font info for 127 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,20n,111p,1082b,1430s stack positions out of 5000i,500n,10000p,200000b,50000s
