@@ -5923,7 +5923,6 @@ ISR(TIMER0_COMP_vect) // 15.4 us intervals
     284c:	8f b7       	in	r24, 0x3f	; 63
     284e:	8f 77       	andi	r24, 0x7F	; 127
     2850:	8f bf       	out	0x3f, r24	; 63
-	//hx.query(&hx);	
 	hx.read_raw(&hx);
     2852:	e0 91 25 02 	lds	r30, 0x0225	; 0x800225 <hx+0x2f>
     2856:	f0 91 26 02 	lds	r31, 0x0226	; 0x800226 <hx+0x30>
