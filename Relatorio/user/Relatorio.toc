@@ -23,5 +23,5 @@
 \contentsline {section}{\numberline {5.1}Trabalho Futuro}{26}{section.5.1}%
 \contentsline {chapter}{Refer\^{e}ncias}{27}{chapter*.42}%
 \contentsline {chapter}{Anexos}{28}{section*.43}%
-\contentsline {chapter}{\numberline {A}Definições}{29}{appendix.1.A}%
-\contentsline {chapter}{\numberline {B}Física}{30}{appendix.1.B}%
+\contentsline {chapter}{\numberline {A}Definições}{29}{appendix.a.A}%
+\contentsline {chapter}{\numberline {B}Física}{30}{appendix.a.B}%
