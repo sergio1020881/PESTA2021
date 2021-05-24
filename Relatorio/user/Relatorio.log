@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  23 MAY 2021 20:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.25)  24 MAY 2021 15:56
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
@@ -2805,9 +2805,9 @@ Package rerunfilecheck Info: File `Relatorio.out' has not changed.
 (rerunfilecheck)             Checksum: 723521CDC6A6BEADAE352C0BF4492F8B;1544.
  ) 
 Here is how much of TeX's memory you used:
- 58607 strings out of 480790
- 1265186 string characters out of 2907055
- 2106163 words of memory out of 3000000
+ 58615 strings out of 480790
+ 1265338 string characters out of 2907055
+ 2103163 words of memory out of 3000000
  69456 multiletter control sequences out of 15000+200000
  684282 words of font info for 129 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2837,9 +2837,9 @@ TeX/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/publi
 c/lm/lmsy6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Pro
 gram Files/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX/fon
 ts/type1/public/lm/lmtt12.pfb>
-Output written on Relatorio.pdf (116 pages, 6895569 bytes).
+Output written on Relatorio.pdf (116 pages, 6896599 bytes).
 PDF statistics:
- 5563 PDF objects out of 6186 (max. 8388607)
- 4022 named destinations out of 4296 (max. 500000)
+ 5572 PDF objects out of 6186 (max. 8388607)
+ 4030 named destinations out of 4296 (max. 500000)
  402 words of extra memory for PDF output out of 10000 (max. 10000000)
 
