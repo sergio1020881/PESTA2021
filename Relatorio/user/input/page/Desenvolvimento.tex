@@ -3,7 +3,7 @@
 Para o desenvolvimento deste projeto, foi criado um kit de desenvolvimento para facilitar sua implementação, testes, assim como a execução de alterações e melhoramentos.
 \\
 \\
-Por analise à \textit{figura} \ref{Kit_Desenvolvimento_2}, pode-se verificar a montagem em esqueleto do equipamento, e pela \textit{figura} \ref{Block_diagram_1} os elementos em diagrama de blocos.
+Por analise à \textit{figura} \ref{Kit_Desenvolvimento_2}, pode-se verificar a montagem em esqueleto do equipamento,
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.12]{./image/PESTA/kit/Kit_Desenvolvimento_2.jpg}
@@ -461,7 +461,7 @@ Uma abstração que torna simples executar qualquer algoritmo ou projeto, e isto
 Durante este projeto tentou-se dentro do possível sempre seguir as boas praticas de programação, como a \texttt{indentação} especifica para cada situação, e manter a estrutura de norma. Deve-se manter uma metodologia de trabalho que segue as normas assim é percetível para todos e facilita detetar \textit{bugs}, e é uma pratica que abrange todas as linguagens, por exemplo o \textbf{Python} é fundado nesse principio.
 \\
 \\
-Quanto as interrupções é sempre um desafio, porque as tarefas tem que ser bem organizadas temporalmente para não entrar em conflitos, pretende-se assim sempre que o código corra na função \textit{main} e as interrupções algo esporádico e muito rápido, estas devem servir de \textit{flags} para executar rotinas na função \textit{main}, ou seja, servirem de inputs. %%\textbf{\textcolor{green}{INPUTS}}.
+Quanto as interrupções é sempre um desafio, porque as tarefas tem que ser bem organizadas temporalmente para não entrar em conflitos, pretende-se assim sempre que o código corra na função \textit{main} e as interrupções algo esporádico e muito rápido, estas devem servir de \textit{flags} para executar rotinas na função \textit{main}, ou seja, servirem de \textit{inputs}. %%\textbf{\textcolor{green}{INPUTS}}.
 \newpage
 \section{Validação}
 %%%To validate is to justify why the choices made and alternatives that could be chosen.
@@ -471,7 +471,7 @@ As escolhas feitas estão dentro dos parâmetros da oferta disponibilizada. Apen
 Apostei na marca \textbf{Atmel} devido a experiência e conhecimentos já adquiridos, se aposta-se noutra marca teria de enfrentar uma curva de aprendizagem e adaptação que no final a nível de custos beneficio seria desfavorável, pelo tempo a dispensar e de ser muito trabalhoso a refazer tudo novamente noutra arquitetura.
 \\
 \\
-O sensor usado é o mais comum nesta pratica, e escolha demonstrada, o circuito de interface é indiferente a escolha apenas é baseada na sua precisão, ou seja, é de \textcolor{blue}{24} \textit{bit} enquanto o \textbf{ADC} do \textbf{MCU} de \textcolor{blue}{10} \textit{bit} de resolução.
+O sensor usado é o mais comum nesta pratica, e escolha demonstrada, o circuito de interface é indiferente, a escolha apenas é baseada na sua precisão, ou seja, é de \textcolor{blue}{24} \textit{bit} enquanto o \textbf{ADC} do \textbf{MCU} de \textcolor{blue}{10} \textit{bit} de resolução.
 \\
 \\
 \subsection{Material}
@@ -505,7 +505,7 @@ Abaixo esta indicado uma tabela dos materiais usados, assim como os preços.
 	}
 	\label{material}
 \end{table}
-Os preços são o que estão disponíveis no mercado, quanto a \textit{motherboard} foi o que arranjei com o preço mais competitivo com este MCU Atmega 128, outras alternativas atingiam o mesmo preço ou mais mas com MCU com menor capacidade.
+Os preços são o que estão disponíveis no mercado, quanto a \textit{mainboard} foi o que arranjei com o preço mais competitivo com este MCU Atmega 128, outras alternativas atingiam o mesmo preço ou mais caros mas com um MCU com menor capacidade.
 \newpage
 \subsection{Testar}
 Quanto a funcionalidade no seu todo, a balança tem \textcolor{blue}{quatro} botões e \textcolor{blue}{três} \textit{leds} ativados, um botão para fazer o \textit{offset} no \textcolor{green}{PORTF 0}, e dois botões com dupla função, fazer \textit{reset} para \textit{default} e incrementar, outro para entrar no menu de calibração e decrementar, o \textcolor{blue}{quarto} botão é reservado para \textit{enter} e assumir o valor introduzido na calibração.\\
