@@ -103,7 +103,7 @@ A ligação destes componentes é intuitivo e fácil de se perceber, o que é co
 	\label{HX711_Schematic_1}
 \end{figure}
 \figurespace{.5}
-A placa \textit{Load Cell Amplifier } pode ser programada fisicamente para determinar o numero de amostras por segundo a ser transmitido, tem opção de \textcolor{blue}{10} amostras por segundo e \textcolor{blue}{80} amostras, neste projeto optei pela segunda opção que necessita alteração na placa de circuito de impresso, isto é, abrir o \textit{jumper} respetivo de configuração.
+A placa \textit{Load Cell Amplifier } pode ser programada fisicamente, para determinar o numero de amostras por segundo a ser transmitido. Este programa tem duas opções; a opção de \textcolor{blue}{10} amostras por segundo, e de \textcolor{blue}{80} amostras. Neste projeto optei pela segunda opção que necessita de uma pequena configuração na placa de circuito de impresso, isto é, é necessário abrir o \textit{jumper} respetivo de configuração.
 \\
 \\
 \begin{table}[H]
@@ -123,11 +123,11 @@ A placa \textit{Load Cell Amplifier } pode ser programada fisicamente para deter
 	\label{HX711_connection}
 \end{table}
 \tablespace{.3}
-A conversão de informação é a transição entre o sinal continuo da vida real para um sinal discreto associado ao mundo digital, tipicamente esta etapa consiste na conversão analógica para digital.
+A conversão de informação acontece na transição entre o sinal continuo da vida real, para um sinal discreto associado ao mundo digital. Tipicamente esta etapa consiste na conversão de um sinal analógica para digital.
 \\
-O processamento digital pode consistir de rotinas para compensar os desvios por linearização, compensação da sensibilidade e \textit{offset}, ou podem ser técnicas mais sofisticadas como reconhecimento de padrões (tais como redes neuronais) para equipamentos de sensores vetoriais.\cite{book-9}
+O processamento digital pode consistir no processamento de rotinas para compensar os desvios por linearização, a sensibilidade e o \textit{offset}, ou o processamento de técnicas mais sofisticadas como reconhecimento de padrões, (tais como, redes neuronais) para equipamentos de sensores vetoriais.\cite{book-9}
 \\
-A comunicação trata de cuidar das rotinas necessárias para transferir e receber a informação e sinais de controle para a linha de comunicação com o sensor, e o processador que toma lugar como componente central tratando a informação, guardar os dados e fazer rotinas tais como de calibração, teste e controlo de ganho da amplificação. \cite{book-9}
+A comunicação é responsável por criar rotinas necessárias para transferir e receber a informação e sinais de controle, para a linha de comunicação entre o sensor e o processador, que toma lugar como componente central, tratando a informação, guardando os dados e fazendo rotinas, tais como, rotinas de calibração, rotinas de teste e controlo de ganho da amplificação. \cite{book-9}
 \\
 \\
 \begin{figure}[H]
