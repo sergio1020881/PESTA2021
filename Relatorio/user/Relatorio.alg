@@ -1,4 +1,4 @@
-This is makeindex, version 2.15 [MiKTeX 20.6.29].
+This is makeindex, version 2.15 [MiKTeX 21.3].
 Scanning style file ./Relatorio.ist.............................done (29 attributes redefined, 0 ignored).
 Scanning input file Relatorio.acn...
 !! Input index error (file = Relatorio.acn, line = 1):
