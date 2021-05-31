@@ -208,7 +208,7 @@ Após obter um numero determinado de valores discretos é calculado uma média
 \end{equation}
 para ser tratado e deduzido o valor correspondente da massa.
 \newpage
-\section{Display LCD}
+\section{Display \acs{lcd}}
 O \ac{lcd} utilizado é de 4x20, isto é, quatro linhas de vinte caracteres cada, é o interface humano principal, e durante o projeto uma ferramenta extremamente útil também para fazer \textit{debug} e executar testes no código.
 \\
 \\
@@ -216,11 +216,11 @@ Uma livraria que já tinha feito para outros projetos serviu para aplicar neste,
 %[\ref{codigo}]
 \\
 \\
-Abaixo esta a tabela \ref{LCD_connections} com as respetivas ligações, e uma imagem de um LCD 4x20 azul na \textit{figura} \ref{4x20_LCD}.
+Abaixo esta a tabela \ref{LCD_connections} com as respetivas ligações, e uma imagem de um \acs{lcd} 4x20 azul na \textit{figura} \ref{4x20_LCD}.
 \tablespace{.2}
 \begin{table}[H]
 	\centering
-	\caption{Conexões \textbf{LCD}}
+	\caption{Conexões \textbf{\acs{lcd}}}
 	\begin{tabular}{||p{1cm} p{2cm} p{4cm} | p{1cm}||} 
 		\hline
 		\multicolumn{3}{||c|}{\textbf{LCD Pin}} & \multicolumn{1}{|c||}{\textbf{MCU Pin}}\\ [1ex]
@@ -241,7 +241,7 @@ Abaixo esta a tabela \ref{LCD_connections} com as respetivas ligações, e uma i
 		14 & D7 & \textit{Data Pin 7} & Pin 7 \\
 		15 & LED+ & \textit{Led +5V} &  \\
 		16 & LED- & \textit{Led Ground} & \\
-		\multicolumn{3}{||c|}{\textit{Reboot} LCD} & \multicolumn{1}{|l||}{Pin 3}\\ [1ex]
+		\multicolumn{3}{||c|}{\textit{Reboot} \acs{lcd}} & \multicolumn{1}{|l||}{Pin 3}\\ [1ex]
 		\hline
 	\end{tabular}	
 	\label{LCD_connections}
@@ -250,7 +250,7 @@ Abaixo esta a tabela \ref{LCD_connections} com as respetivas ligações, e uma i
 	\centering
 	%%\captionsetup{justification=raggedright,singlelinecheck=false}
 	\includegraphics[scale=.5]{./image/PESTA/material/4x20_LCD.jpg}
-	\caption{LCD}
+	\caption{\acs{lcd}}
 	\label{4x20_LCD}
 \end{figure}
 \newpage
@@ -261,10 +261,10 @@ Os micro-controladores da \textbf{Atmel} de 8 a 32 \textit{bit} são baseados na
 Este tipo de arquitetura tem dois  \textit{busses} (barramentos) um dedicado a leitura das instruções a executar e outra para escrita e leitura de \textit{data} (informação ou dados), isto assegura que uma nova instrução pode ser executada em cada ciclo de relógio, em que elimina estados de espera quando não ha instruções prontas a executar.
 \\
 \\
-Nos micro-controladores da \textbf{AVR} os barramentos estão configurados de forma a dar prioridade ao barramento das instruções do \ac{cpu} acesso a memoria flash, enquanto o barramento da CPU de dados tem prioridade de acesso a \ac{sram}.
+Nos micro-controladores da \textbf{AVR} os barramentos estão configurados de forma a dar prioridade ao barramento das instruções do \ac{cpu} acesso a memoria flash, enquanto o barramento da \acs{cpu} de dados tem prioridade de acesso a \ac{sram}.
 \\
 \\
-O espaço de memoria de dados é dividida em três, os \ac{gpr} as \ac{sfr} ou memoria de I/O e a \textit{data} \textbf{SRAM}.
+O espaço de memoria de dados é dividida em três partes, os \ac{gpr} as \ac{sfr} ou memoria de I/O e a \textit{data} \textbf{\acs{sram}}.
 \\
 \\
 Os micro-controladores da \textbf{AVR} utiliza uma arquitetura de instruções \ac{risc} que reduz a complexidade dos circuitos na codificação de cada instrução.
@@ -300,7 +300,7 @@ Neste projeto apostei no Atmega 128 (\textit{figura} \ref{Atmega_128_pinagem}) p
 \\
 \url{https://drive.google.com/file/d/1wgOGf8WwYY0OzDhRca9ypXz-iBO55YOF/view?usp=sharing}
 \newpage
-A características do micro-controlador Atmega 128 esta abaixo indicados na lista, os temporizadores considero o mais importante, o \ac{adc} nem vai ser usado neste projeto, a alternativa é muito melhor, talvez os MCU nem deviam ter esta funcionalidade e realçar em meios de comunicação e memoria com as livrarias já disponíveis, este integrado é perfeito para esta aplicação em causa, sempre que fazemos projetos também temos de considerar os MCU de 32 \textit{bit} mas existe uma linha muito fina de apostar noutra alternativa e trabalhar com um sistema operativo devido a complexidade exigida, muito mais configurações e opções disponíveis do que um micro-controlador de 8 e 16 \textit{bit}.
+A características do micro-controlador Atmega 128 esta abaixo indicados na lista, os temporizadores considero o mais importante, o \ac{adc} nem vai ser usado neste projeto, a alternativa é muito melhor, talvez os \acs{mcu} nem deviam ter esta funcionalidade e realçar em meios de comunicação e memoria com as livrarias já disponíveis, este integrado é perfeito para esta aplicação em causa, sempre que fazemos projetos também temos de considerar os \acs{mcu} de 32 \textit{bit} mas existe uma linha muito fina de apostar noutra alternativa e trabalhar com um sistema operativo devido a complexidade exigida, muito mais configurações e opções disponíveis do que um micro-controlador de 8 e 16 \textit{bit}.
 \\
 \\
 \\
@@ -308,12 +308,12 @@ A características do micro-controlador Atmega 128 esta abaixo indicados na list
 {\Large Caracteristicas do Atmega 128 :}
 \begin{itemize}	
 	\setlength\itemsep{-0.3em}
-	\item Arquitectura RISC
+	\item Arquitectura \acs{risc}
 	\item 33 instruções (a maior parte executada num único ciclo de execução)
 	\item 32 x 8 registos de trabalho (arquitectura de registos)
-	\item Até 16 MIPS (@16MHz) – 62.5ns / instrução
+	\item Até 16 \acs{mips} (@16MHz) – 62.5ns / instrução
 	\item 64K x 16 palavras de programa – 128K bytes FLASH
-	\item 4K bytes de RAM interna
+	\item 4K bytes de \acs{ram} interna
 	\item 4K bytes de E2PROM de dados
 	\item Ciclos de escrita / leitura – FLASH=10000, E2PROM=100000
 	\item 7 Portos de IO \\
@@ -322,12 +322,12 @@ A características do micro-controlador Atmega 128 esta abaixo indicados na list
 	\item 2 x Timer / Counter de 8 bits
 	\item 2 x Timer / Counter de 16 bits
 	\item 1 x Real Time Counter ( com oscilador independente)
-	\item 2 x PWM de 8 bits
-	\item 6 x PWM de 16 bits
-	\item ADC de 10 bits (8 canais)
-	\item 2 x USART
-	\item SPI
-	\item TWI (I2C)
+	\item 2 x \acs{pwm} de 8 bits
+	\item 6 x \acs{pwm} de 16 bits
+	\item \acs{adc} de 10 bits (8 canais)
+	\item 2 x \acs{usart}
+	\item \acs{spi}
+	\item \acs{twi} (I2C)
 \end{itemize}
 \end{minipage}
 \minipagespace{0.5}
@@ -339,7 +339,7 @@ Para programar este micro-controlador (\textbf{Atmega 128}), foi utilizado o pro
 		\captionsetup{justification=raggedright,singlelinecheck=false}
 		\flushleft
 		\includegraphics[scale=0.75]{./image/PESTA/programador/Atmel_ice.png}
-		\caption{KIT ATMEL-ICE}
+		\caption{KIT \acs{atmel-ice}}
 		\label{Programador_1}
 	\end{figure}
 \end{minipage}
@@ -351,7 +351,7 @@ Para programar este micro-controlador (\textbf{Atmega 128}), foi utilizado o pro
 		\includegraphics[scale=0.45]{./image/PESTA/programador/isp_6pin.png}
 		\hspace{.3cm}
 		\includegraphics[scale=0.5]{./image/PESTA/programador/isp_8e10pin.png}
-		\caption{Fichas \textbf{ISP}}
+		\caption{Fichas \textbf{\acs{isp}}}
 		\label{ISP_6_8_10pin}
 	\end{figure}
 \end{minipage}
@@ -414,7 +414,7 @@ Todos os programas sequem uma estrutura sintática recursiva usando o seguinte m
 	\label{Geneic_structure}
 \end{figure}
 \figurespace{.5}
-Duas interrupções periódicas estão sempre a correr em \textit{background}, uma para fazer o \textit{shift} dos \textit{bit´s} da conversão \textbf{ADC} feita pelo amplificador de sinal HX711 e outra interrupção periódica de segundo em segundo usado para saltar de \textit{Menu} pelos botões.
+Duas interrupções periódicas estão sempre a correr em \textit{background}, uma para fazer o \textit{shift} dos \textit{bit´s} da conversão \textbf{\acs{adc}} feita pelo amplificador de sinal HX711 e outra interrupção periódica de segundo em segundo usado para saltar de \textit{Menu} pelos botões.
 \\
 \\
 \begin{minipage}{\linewidth}
@@ -422,7 +422,7 @@ Duas interrupções periódicas estão sempre a correr em \textit{background}, u
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.7]{./image/PESTA/flowchart/Interrupt_1.jpg}
-	\caption{\textbf{ADC} conversão}
+	\caption{\textbf{\acs{adc}} conversão}
 	\label{Interrupt_1}
 \end{figure}
 \end{minipage}
@@ -451,7 +451,7 @@ Consultar código para leitura das rotinas de interrupção nas folhas \textit{a
 \end{minipage}
 \begin{minipage}{.6\linewidth}
 Ao lado esta as livrarias usadas neste projeto, as que estão dentro da caixa amarela são as que foram criadas.
-A filosofia usada é de criar objetos que representam o hardware para o poder manipular via código. Como se pode observar foi criado uma livraria para os temporizadores, outra para as interrupções e \ac{eeprom}, depois criado livrarias para os componentes externos, isto é, o \textbf{LCD} e o integrado \textbf{HX711}.
+A filosofia usada é de criar objetos que representam o hardware para o poder manipular via código. Como se pode observar foi criado uma livraria para os temporizadores, outra para as interrupções e \ac{eeprom}, depois criado livrarias para os componentes externos, isto é, o \textbf{\acs{lcd}} e o integrado \textbf{HX711}.
 \\
 Uma abstração que torna simples executar qualquer algoritmo ou projeto, e isto só é possível depois de ultrapassar a barreira árdua e dolorosa de desenvolver as livrarias.
 \\
@@ -472,7 +472,7 @@ As escolhas feitas estão dentro dos parâmetros da oferta disponibilizada. Apen
 Apostei na marca \textbf{Atmel} devido a experiência e conhecimentos já adquiridos, se aposta-se noutra marca teria de enfrentar uma curva de aprendizagem e adaptação que no final a nível de custos beneficio seria desfavorável, pelo tempo a dispensar e de ser muito trabalhoso a refazer tudo novamente noutra arquitetura.
 \\
 \\
-O sensor usado é o mais comum nesta pratica, e escolha demonstrada, o circuito de interface é indiferente, a escolha apenas é baseada na sua precisão, ou seja, é de \textcolor{blue}{24} \textit{bit} enquanto o \textbf{ADC} do \textbf{MCU} de \textcolor{blue}{10} \textit{bit} de resolução.
+O sensor usado é o mais comum nesta pratica, e escolha demonstrada, o circuito de interface é indiferente, a escolha apenas é baseada na sua precisão, ou seja, é de \textcolor{blue}{24} \textit{bit} enquanto o \textbf{\acs{adc}} do \textbf{\acs{mcu}} de \textcolor{blue}{10} \textit{bit} de resolução.
 \\
 \\
 \subsection{Material}
@@ -493,10 +493,10 @@ Abaixo esta indicado uma tabela dos materiais usados, assim como os preços.
 			ET BASE AVR Atmega128 Board & 1 & \EUR{23.92} \\
 			Test Input Board  & 1 & \EUR{3.71} \\
 			Test Output Board & 1 & \EUR{3.71} \\
-			IDC Socket 10 way    & 12 & \EUR{0.31} \\
-			IDC Header Straight 10 way    & 12 & \EUR{0.25} \\
+			\acs{idc} Socket 10 way    & 12 & \EUR{0.31} \\
+			\acs{idc} Header Straight 10 way    & 12 & \EUR{0.25} \\
 			Flatcable    & ? & \EUR{?} \\
-			20x4 LCD Module Blue & 1 & \EUR{12.24} \\
+			20x4 \acs{lcd} Module Blue & 1 & \EUR{12.24} \\
 			SparkFun Load Cell Amplifier HX711 & 1 & \EUR{13.04}   \\
 			50Kg Load Cell & 1 & \EUR{12} \\
 			\hline
@@ -506,7 +506,7 @@ Abaixo esta indicado uma tabela dos materiais usados, assim como os preços.
 	}
 	\label{material}
 \end{table}
-Os preços são o que estão disponíveis no mercado, quanto a \textit{mainboard} foi o que arranjei com o preço mais competitivo com este MCU Atmega 128, outras alternativas atingiam o mesmo preço ou mais caros mas com um MCU com menor capacidade.
+Os preços são o que estão disponíveis no mercado, quanto a \textit{mainboard} foi o que arranjei com o preço mais competitivo com este \acs{mcu} Atmega 128, outras alternativas atingiam o mesmo preço ou mais caros mas com um \acs{mcu} com menor capacidade.
 \newpage
 \subsection{Testar}
 Quanto a funcionalidade no seu todo, a balança tem \textcolor{blue}{quatro} botões e \textcolor{blue}{três} \textit{leds} ativados, um botão para fazer o \textit{offset} no \textcolor{green}{PORTF 0}, e dois botões com dupla função, fazer \textit{reset} para \textit{default} e incrementar, outro para entrar no menu de calibração e decrementar, o \textcolor{blue}{quarto} botão é reservado para \textit{enter} e assumir o valor introduzido na calibração.\\
@@ -516,7 +516,7 @@ O botão \textcolor{green}{PORTF 3} quando premido durante \textcolor{blue}{cinc
 O botão \textcolor{green}{PORTF 4} quando premido durante \textcolor{blue}{cinco} segundos entra no menu de calibração do valor do \textit{gain factor} e o \textit{led} no \textcolor{red}{PORTC 7} liga, usando os botões de incrementa e decrementar, isto é, o
 \textcolor{green}{PORTF 3} e \textcolor{green}{PORTF 4} pode-se alterar esse valor.\\
 \\
-Para assumir o valor e sair do menu de calibração basta premir o botão colocado no \textcolor{green}{PORTF 5}. Tanto no caso de calibração ou de \textit{offset} os valores são guardados na \textbf{EEPROM} do micro-controlador, sendo que, se retirar a alimentação do circuito este não perde os valores e o \textit{led} \textcolor{red}{PORTC 5} permanece ligado.
+Para assumir o valor e sair do menu de calibração basta premir o botão colocado no \textcolor{green}{PORTF 5}. Tanto no caso de calibração ou de \textit{offset} os valores são guardados na \textbf{\acs{eeprom}} do micro-controlador, sendo que, se retirar a alimentação do circuito este não perde os valores e o \textit{led} \textcolor{red}{PORTC 5} permanece ligado.
 \\
 \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

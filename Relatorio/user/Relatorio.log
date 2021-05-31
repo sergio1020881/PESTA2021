@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.30)  31 MAY 2021 00:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.30)  1 JUN 2021 00:40
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
@@ -1930,7 +1930,7 @@ l.28 ...{\numberline {C}Código}{32}{appendix.a.C}
 
 
 ] (Relatorio.acr
-Underfull \hbox (badness 3460) in paragraph at lines 14--14
+Underfull \hbox (badness 3460) in paragraph at lines 19--19
 []|\T1/lmr/m/it/10.95 Electrically Era-sa-ble Pro-gram-ma-ble Read-
  []
 
@@ -2297,6 +2297,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 141--197
 [13 <./image/PESTA/graph/80SPS64GAIN/SPS_80.JPG>] (input/code/hx_query.c)
 [14 <./image/PESTA/graph/80SPS128GAIN/Gain_128_example.JPG> <./image/PESTA/grap
 h/80SPS64GAIN/Gain_64_example.JPG>] (input/code/HX711_read_raw.c) [15]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\acs' on input line 211.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 212--248
 
  []
@@ -2815,13 +2820,13 @@ o.acn)...executed (allowed).
 (include/SETUP/Abstract_2.aux)
 (include/SETUP/ContentFigureTableListingGlossary.aux))
 Package rerunfilecheck Info: File `Relatorio.out' has not changed.
-(rerunfilecheck)             Checksum: AA332428DD87F071A0C2FE5C5960597C;3101.
+(rerunfilecheck)             Checksum: CC35A4E7E88FEB3E470C294374DDA787;3101.
  ) 
 Here is how much of TeX's memory you used:
- 63110 strings out of 479081
- 1358542 string characters out of 2862515
- 2557850 words of memory out of 3000000
- 75661 multiletter control sequences out of 15000+600000
+ 63170 strings out of 479081
+ 1359338 string characters out of 2862515
+ 2556850 words of memory out of 3000000
+ 75721 multiletter control sequences out of 15000+600000
  538247 words of font info for 123 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  107i,20n,122p,1082b,2818s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2852,7 +2857,7 @@ type1/public/lm/lmsy6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy8.
 pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Program Files
 /MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Program Files/MiKTeX/fonts/type1/p
 ublic/lm/lmtt9.pfb>
-Output written on Relatorio.pdf (98 pages, 6879836 bytes).
+Output written on Relatorio.pdf (98 pages, 6879990 bytes).
 PDF statistics:
  5504 PDF objects out of 6186 (max. 8388607)
  4012 named destinations out of 4296 (max. 500000)
