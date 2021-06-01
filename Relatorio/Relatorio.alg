@@ -3,8 +3,8 @@ Scanning style file ./Relatorio.ist.............................done (29 attribu
 Scanning input file Relatorio.acn...
 !! Input index error (file = Relatorio.acn, line = 1):
    -- Illegal page number .
-.done (61 entries accepted, 1 rejected).
-Sorting entries....done (372 comparisons).
-Generating output file Relatorio.acr....done (79 lines written, 0 warnings).
+.done (63 entries accepted, 1 rejected).
+Sorting entries....done (397 comparisons).
+Generating output file Relatorio.acr....done (83 lines written, 0 warnings).
 Output written in Relatorio.acr.
 Transcript written in Relatorio.alg.
