@@ -1,0 +1,20 @@
+Módulo Ajustável DC-DC Step-Down com Led e Voltímetro
+
+Informação do fabricante:
+
+5A 75W DC-DC Adjustable Step-down Module Step Down Modules with Voltmeter
+    
+
+Input voltage range:4-38VDC(Note:input voltage not exceeding 38V)
+Output voltage range:1.25-36VDC adjustable
+Output current:  0-5A
+Output power: 75W
+voltmeter range: 4 to 40V, error ±0.1V
+Operating frequency: 180KHz
+High efficiency up to 96 pecent
+Built in thermal shutdown function
+Built in current limit function
+Built in output short protection function
+Input reverse polarity protection: None (if required, high current diode in series with the input).
+L x W x H =6.6x3.9x1.8CM  
+Weight: 28g

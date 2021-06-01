@@ -1,0 +1,42 @@
+%\begin{verbatimtab}
+\begin{lstlisting}[language=C, caption={explode.h}, label=explode-h, captionpos=b]
+/************************************************************************
+EXPLODE
+Author: Sergio Santos
+<sergio.salazar.santos@gmail.com>
+License: GNU General Public License
+Hardware: all
+Date: 16032021
+Comment:
+Pin Analysis
+************************************************************************/
+#ifndef _EXPLODE_H_
+	#define _EXPLODE_H_
+	/***Library***/
+	#include <inttypes.h>
+	/***Constant & Macro***/
+	/***Global Variable***/
+	struct expld{
+		/***Variable***/
+		unsigned int XI;
+		unsigned int XF;
+		/***PROTOTYPES VTABLE***/
+		void (*boot)(struct expld* self, uint8_t x);
+		uint8_t (*mayia)(struct expld* self, uint8_t nbits);
+		uint8_t (*hh)(struct expld* self);
+		uint8_t (*ll)(struct expld* self);
+		uint8_t (*lh)(struct expld* self);
+		uint8_t (*hl)(struct expld* self);
+		uint8_t (*diff)(struct expld* self);
+		uint8_t (*data)(struct expld* self);
+	};
+	typedef struct expld EXPLODE;
+	/***Header***/
+	EXPLODE EXPLODEenable(void);
+#endif
+/***Comment***
+*************/
+/***EOF***/
+\end{lstlisting}
+%\end{verbatimtab}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
