@@ -163,7 +163,7 @@ A livraria (\textit{driver}) do integrado HX771, recorre a interrupções perió
 \end{minipage}
 \begin{minipage}[l]{.6\linewidth}
 \vspace{.3cm}
-Como indicado abaixo no gráfico, em que a linha \textcolor{yellow}{amarela} é a informação, e a linha \textcolor{BlueGreen}{azul} o respetivo \textit{clock} que é gerado pelas interrupções do micro-controlador, fazendo um deslocamento dos \textcolor{blue}{24} \textit{bit´s}, que por fim transmite para o amplificador, o ganho de amplificação a ser usado pelo numero excedente de \textit{clock cycles}, em que nesta demonstração da \textit{figura} \ref{Gain_128_example} é \textcolor{blue}{um}, e corresponde a um ganho de \textcolor{blue}{128}, respeitando a informação apresentada na \textit{tabela} \ref{Gain_Selection},  e de sequida o exemplo da \textit{figura} \ref{Gain_64_example}, com um ganho de \textcolor{blue}{64}, pois tem \textcolor{blue}{três} impulsos excedentes.
+Como indicado abaixo no gráfico, em que a linha \textcolor{yellow}{amarela} é a informação, e a linha \textcolor{BlueGreen}{azul} o respetivo \textit{clock} que é gerado pelas interrupções do micro-controlador, fazendo um deslocamento dos \textcolor{blue}{24} \textit{bits}, que por fim transmite para o amplificador, o ganho de amplificação a ser usado pelo numero excedente de \textit{clock cycles}, em que nesta demonstração da \textit{figura} \ref{Gain_128_example} é \textcolor{blue}{um}, e corresponde a um ganho de \textcolor{blue}{128}, respeitando a informação apresentada na \textit{tabela} \ref{Gain_Selection},  e de sequida o exemplo da \textit{figura} \ref{Gain_64_example}, com um ganho de \textcolor{blue}{64}, pois tem \textcolor{blue}{três} impulsos excedentes.
 \\
 \end{minipage}
 \minipagespace{.5}
@@ -187,7 +187,7 @@ Como indicado abaixo no gráfico, em que a linha \textcolor{yellow}{amarela} é 
 \end{figure}
 \end{minipage}
 \minipagespace{.5}
-Para obter este resultado, a livraria driver para o \textit{"Load Cell Amplifier"} teve de ter em consideração que a estrutura do micro-controlador é de \textcolor{blue}{8} \textit{bit´s}, uma vez que a estrutura do pacote de informação é de \textcolor{blue}{24} \textit{bit´s} e em que é transmitido primeiro o \ac{msb}.
+Para obter este resultado, a livraria driver para o \textit{"Load Cell Amplifier"} teve de ter em consideração que a estrutura do micro-controlador é de \textcolor{blue}{8} \textit{bits}, uma vez que a estrutura do pacote de informação é de \textcolor{blue}{24} \textit{bits} e em que é transmitido primeiro o \ac{msb}.
 \\
 \\
 \\
@@ -220,7 +220,7 @@ Abaixo está a tabela \ref{LCD_connections}, com as respetivas ligações, e uma
 \tablespace{.2}
 \begin{table}[H]
 	\centering
-	\caption{Conexões \textbf{\acs{lcd}}}
+	\caption{Conexões \acs{lcd}}
 	\begin{tabular}{||p{1cm} p{2cm} p{4cm} | p{1cm}||} 
 		\hline
 		\multicolumn{3}{||c|}{\textbf{LCD Pin}} & \multicolumn{1}{|c||}{\textbf{MCU Pin}}\\ [1ex]
@@ -283,7 +283,7 @@ Dai que os micro-controladores que se baseiam nestes tipos de arquitetura são s
 \end{figure}
 \qquad link: \url{https://en.wikipedia.org/wiki/Harvard_architecture}
 \newpage
-Neste projeto apostei no Atmega 128 (\textit{figura} \ref{Atmega_128_pinagem}) por ser um dos mais poderosos \ac{mcu} da linha de 8 \textit{bit} da Atmel, também por estar integrado já numa placa de desenvolvimento usando o sistema por fichas \ac{idc} que prefiro, ou seja, usando \textit{flatcables} para ligar os periféricos, e considero muito mais pratico do que sistema que esta na moda, tais como a linha Arduino, STMicroelectronics e a \ac{pic} por ter um interface por pinos.
+Neste projeto apostei no Atmega 128 (\textit{figura} \ref{Atmega_128_pinagem}) por ser um dos mais poderosos \ac{mcu} da linha de 8 \textit{bits} da Atmel, também por estar integrado já numa placa de desenvolvimento usando o sistema por fichas \ac{idc} que prefiro, ou seja, usando \textit{flatcables} para ligar os periféricos, e considero muito mais pratico do que sistema que esta na moda, tais como a linha Arduino, STMicroelectronics e a \ac{pic} por ter um interface por pinos.
 \\
 \\
 \\
@@ -301,7 +301,7 @@ Neste projeto apostei no Atmega 128 (\textit{figura} \ref{Atmega_128_pinagem}) p
 \\
 \url{https://drive.google.com/file/d/1wgOGf8WwYY0OzDhRca9ypXz-iBO55YOF/view?usp=sharing}
 \newpage
-A características do micro-controlador Atmega 128 esta abaixo indicados na lista, os temporizadores considero o mais importante, o \ac{adc} nem vai ser usado neste projeto, a alternativa é muito melhor, talvez os \acs{mcu} nem deviam ter esta funcionalidade e realçar em meios de comunicação e memoria com as livrarias já disponíveis, este integrado é perfeito para esta aplicação em causa, sempre que fazemos projetos também temos de considerar os \acs{mcu} de 32 \textit{bit} mas existe uma linha muito fina de apostar noutra alternativa e trabalhar com um sistema operativo devido a complexidade exigida, muito mais configurações e opções disponíveis do que um micro-controlador de 8 e 16 \textit{bit}.
+A características do micro-controlador Atmega 128 esta abaixo indicados na lista, os temporizadores considero o mais importante, o \ac{adc} nem vai ser usado neste projeto, a alternativa é muito melhor, talvez os \acs{mcu} nem deviam ter esta funcionalidade e realçar em meios de comunicação e memoria com as livrarias já disponíveis, este integrado é perfeito para esta aplicação em causa, sempre que fazemos projetos também temos de considerar os \acs{mcu} de 32 \textit{bits} mas existe uma linha muito fina de apostar noutra alternativa e trabalhar com um sistema operativo devido a complexidade exigida, muito mais configurações e opções disponíveis do que um micro-controlador de 8 e 16 \textit{bits}.
 \\
 \\
 \\
@@ -415,7 +415,7 @@ Todos os programas sequem uma estrutura sintática recursiva usando o seguinte m
 	\label{Geneic_structure}
 \end{figure}
 \figurespace{.5}
-Duas interrupções periódicas estão sempre a correr em \textit{background}, uma para fazer o \textit{shift} dos \textit{bit´s} da conversão \acs{adc} feita pelo amplificador de sinal HX711 e outra interrupção periódica de segundo em segundo usado para saltar de \textit{Menu} pelos botões.
+Duas interrupções periódicas estão sempre a correr em \textit{background}, uma para fazer o \textit{shift} dos \textit{bits} da conversão \acs{adc} feita pelo amplificador de sinal HX711 e outra interrupção periódica de segundo em segundo usado para saltar de \textit{Menu} pelos botões.
 \\
 \\
 \begin{minipage}{\linewidth}

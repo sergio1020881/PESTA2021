@@ -5,6 +5,6 @@ Scanning input file Relatorio.acn...
    -- Illegal page number .
 .done (63 entries accepted, 1 rejected).
 Sorting entries....done (397 comparisons).
-Generating output file Relatorio.acr....done (83 lines written, 0 warnings).
+Generating output file Relatorio.acr....done (81 lines written, 0 warnings).
 Output written in Relatorio.acr.
 Transcript written in Relatorio.alg.

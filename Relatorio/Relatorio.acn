@@ -5,11 +5,11 @@
 \glossaryentry{ADC?\glossentry{adc}|setentrycounter[]{page}\glsnumberformat}{i}
 \glossaryentry{MCU?\glossentry{mcu}|setentrycounter[]{page}\glsnumberformat}{i}
 \glossaryentry{LCD?\glossentry{lcd}|setentrycounter[]{page}\glsnumberformat}{i}
+\glossaryentry{LCD?\glossentry{lcd}|setentrycounter[]{page}\glsnumberformat}{ii}
+\glossaryentry{ATMEL-ICE?\glossentry{atmel-ice}|setentrycounter[]{page}\glsnumberformat}{ii}
+\glossaryentry{ISP?\glossentry{isp}|setentrycounter[]{page}\glsnumberformat}{ii}
+\glossaryentry{ADC?\glossentry{adc}|setentrycounter[]{page}\glsnumberformat}{ii}
 \glossaryentry{LCD?\glossentry{lcd}|setentrycounter[]{page}\glsnumberformat}{iii}
-\glossaryentry{ATMEL-ICE?\glossentry{atmel-ice}|setentrycounter[]{page}\glsnumberformat}{iii}
-\glossaryentry{ISP?\glossentry{isp}|setentrycounter[]{page}\glsnumberformat}{iii}
-\glossaryentry{ADC?\glossentry{adc}|setentrycounter[]{page}\glsnumberformat}{iii}
-\glossaryentry{LCD?\glossentry{lcd}|setentrycounter[]{page}\glsnumberformat}{iv}
 \glossaryentry{MSB?\glossentry{msb}|setentrycounter[]{page}\glsnumberformat}{14}
 \glossaryentry{LCD?\glossentry{lcd}|setentrycounter[]{page}\glsnumberformat}{16}
 \glossaryentry{LCD?\glossentry{lcd}|setentrycounter[]{page}\glsnumberformat}{16}
