@@ -17,6 +17,7 @@ a seguir a \textit{figura} \ref{Block_diagram_1} representado os elementos em di
 	\caption{Diagrama Blocos}
 	\label{Block_diagram_1}
 \end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{sensor}
 Para medir a massa, recorreu-se a uma \textbf{célula de carga}, que determina a pressão exercida por um dado objeto, neste caso, os sensores (\textit{strain gauges}) são instalados sobre um bloco de alumínio como indicado na \textit{figura} \ref{Load_Cell_1}. A célula de carga utiliza sensores Piezoresistivos numa montagem em ponte \textit{wheatstone}, sobre essa superfície em locais específicos.
 \\
@@ -72,7 +73,7 @@ O termo Piezoresistividade deriva do seu nome da palavra grega \textit{piezin}, 
 	\minipagespace{.01}
 \end{minipage}
 \minipagespace{.5}
-Normalmente nestas aplicações só são usado um ou dois sensores, e estes podem estar ligados nos extremos opostos, ou ligados ao mesmo ponto da alimentação, só em casos muito raros são utilizados os quatro sensores na qual a sensibilidade é máxima. Se o valor das quatro resistências são iguais ou nos casos em [$R_2 R_3 = R_4 R_1$], então a tensão $V_{AB}$ na saída é nula.
+Normalmente nestas aplicações só são usado um ou dois sensores, e estes podem estar ligados nos extremos opostos, ou ligados ao mesmo ponto da alimentação, só em casos muito raros são utilizados os quatro sensores na qual a sensibilidade é máxima. Se o valor das quatro resistências são iguais ou nos casos em que [$R_2 R_3 = R_4 R_1$], então a tensão $V_{AB}$ na saída é nula.
 \\
 \\
 Para perceber melhor o funcionamento do sensor \textit{\textbf{strain gauge}} é aconselhável recorrer a literatura \cite{book-9} e \cite{book-10}, que explica como são feitas, seus dimensionamentos e processos de fabrico.
@@ -88,6 +89,7 @@ A montagem da mesa (prato) de medição  \textit{figura} \ref{Prato},
 \end{figure}
 \end{minipage}
 \newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Amplificador de sinal}
 A amplificação é geralmente um requisito fundamental, pois a maioria dos sensores, tendem a produzir níveis de sinal significativamente mais baixos, do que aqueles usados no processador digital. Sensores resistivos podem precisar de um amplificador para a célula de carga. Se possível, é vantajoso ter o ganho o mais próximo possível do elemento sensor. Em situações onde um maior ganho é necessário, muitas vezes pode haver implicações para lidar com quaisquer efeitos adversos, como o ruído, problemas de \textit{layout} do \textit{chip}, os transitórios agudos associados aos sinais digitais que precisam de ser mantidos bem longe dos circuitos analógicos \textit{front-end}. \cite{book-9}
 \\
@@ -104,7 +106,7 @@ A ligação destes componentes é intuitivo e fácil de se perceber, o que é co
 	\label{HX711_Schematic_1}
 \end{figure}
 \figurespace{.5}
-A placa \textit{Load Cell Amplifier } pode ser programada fisicamente, para determinar o numero de amostras por segundo a ser transmitido. Este programa tem duas opções; a opção de \textcolor{blue}{10} amostras por segundo, e de \textcolor{blue}{80} amostras. Neste projeto optei pela segunda opção que necessita de uma pequena configuração na placa de circuito de impresso, isto é, é necessário abrir o \textit{jumper} respetivo de configuração.
+A placa \textit{Load Cell Amplifier } pode ser programada fisicamente, para determinar o numero de amostras por segundo a ser transmitido. Este circuito tem duas opções; a opção de \textcolor{blue}{10} amostras por segundo, e de \textcolor{blue}{80} amostras. Neste projeto optei pela segunda opção que necessita de uma pequena configuração na placa de circuito de impresso, isto é, é necessário abrir o \textit{jumper} respetivo de configuração.
 \\
 \\
 \begin{table}[H]
@@ -187,7 +189,7 @@ Como indicado abaixo no gráfico, em que a linha \textcolor{yellow}{amarela} é 
 \end{figure}
 \end{minipage}
 \minipagespace{.5}
-Para obter este resultado, a livraria driver para o \textit{"Load Cell Amplifier"} teve de ter em consideração que a estrutura do micro-controlador é de \textcolor{blue}{8} \textit{bits}, uma vez que a estrutura do pacote de informação é de \textcolor{blue}{24} \textit{bits} e em que é transmitido primeiro o \ac{msb}.
+Para obter este resultado, a livraria \textit{driver} para o \textit{Load Cell Amplifier} teve de ter em consideração que a arquitetura do micro-controlador é de \textcolor{blue}{8} \textit{bits}, uma vez que a estrutura do pacote de informação é entre \textcolor{blue}{25} a \textcolor{blue}{27} \textit{bits} em que é transmitido primeiro o \ac{msb}.
 \\
 \\
 \\
@@ -208,6 +210,7 @@ Após obter um numero determinado de valores discretos lidos pelo amplificador d
 \end{equation}
 para ser tratado e deduzido o valor correspondente da massa.
 \newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Display \acs{lcd}}
 O \ac{lcd} utilizado é de 4x20, isto é, quatro linhas de vinte caracteres cada, tornando-se no interface humano principal, e também durante o projeto numa ferramenta extremamente útil para fazer \textit{debug} e executar testes ao código.
 \\
@@ -256,7 +259,7 @@ Abaixo está a tabela \ref{LCD_connections}, com as respetivas ligações, e uma
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Micro-controlador}
-Os micro-controladores da \textbf{Atmel} de 8 a 32 \textit{bit´s} são baseados na arquitetura avançada de \textbf{Harvard} na qual está concebido para baixos consumos e performance.
+Os micro-controladores da \textbf{Atmel} de 8 a 32 \textit{bits} são baseados na arquitetura avançada de \textbf{Harvard} na qual está concebido para baixos consumos e performance.
 \\
 \\
 Este tipo de arquitetura tem dois  \textit{buses} (barramentos), um dedicado à leitura das instruções a executar e outra para a escrita e leitura de dados (informação ou dados), isto assegura que uma nova instrução pode ser executada em cada ciclo de relógio, em que elimina todos os estados de espera, quando não ha instruções prontas a executar.
@@ -283,7 +286,7 @@ Dai que os micro-controladores que se baseiam nestes tipos de arquitetura são s
 \end{figure}
 \qquad link: \url{https://en.wikipedia.org/wiki/Harvard_architecture}
 \newpage
-Neste projeto apostei no Atmega 128 (\textit{figura} \ref{Atmega_128_pinagem}) por ser um dos mais poderosos \ac{mcu} da linha de 8 \textit{bits} da Atmel, também por estar integrado já numa placa de desenvolvimento usando o sistema por fichas \ac{idc} que prefiro, ou seja, usando \textit{flatcables} para ligar os periféricos, e considero muito mais pratico do que sistema que esta na moda, tais como a linha Arduino, STMicroelectronics e a \ac{pic} por ter um interface por pinos.
+Neste projeto optei pelo Atmega 128 (\textit{figura} \ref{Atmega_128_pinagem}), por ser um dos mais poderosos \ac{mcu} da linha de 8 \textit{bits} da Atmel, também por estar integrado já numa placa de desenvolvimento dotado de ligações por fichas \ac{idc}, ou seja, utiliza \textit{flat ribbon cables} para ligar os periféricos, o que torna muito mais prático do que sistemas mais atuais, como por exemplo a placa de desenvolvimento Arduino, STMicroelectronics e a \ac{pic} que recorrem a um interface com recurso a pinos (\textit{pin headers}).
 \\
 \\
 \\
@@ -301,8 +304,10 @@ Neste projeto apostei no Atmega 128 (\textit{figura} \ref{Atmega_128_pinagem}) p
 \\
 \url{https://drive.google.com/file/d/1wgOGf8WwYY0OzDhRca9ypXz-iBO55YOF/view?usp=sharing}
 \newpage
-A características do micro-controlador Atmega 128 esta abaixo indicados na lista, os temporizadores considero o mais importante, o \ac{adc} nem vai ser usado neste projeto, a alternativa é muito melhor, talvez os \acs{mcu} nem deviam ter esta funcionalidade e realçar em meios de comunicação e memoria com as livrarias já disponíveis, este integrado é perfeito para esta aplicação em causa, sempre que fazemos projetos também temos de considerar os \acs{mcu} de 32 \textit{bits} mas existe uma linha muito fina de apostar noutra alternativa e trabalhar com um sistema operativo devido a complexidade exigida, muito mais configurações e opções disponíveis do que um micro-controlador de 8 e 16 \textit{bits}.
-\\
+As características do micro-controlador Atmega 128 estão abaixo indicados na lista. Dos componentes que constituem o atmega 128, os temporizadores são os que considero os mais importantes, o \ac{adc} do \acs{mcu} nem vai ser usado neste projeto, vai ser utilizado um \textit{load cell amplifier} externo, uma alternativa que é muito melhor porque tem maior resolução e especifico para a aplicação.
+\\ 
+Talvez os \acs{mcu} nem deviam ter a componente \acs{adc} e realçar em meios de comunicação e memoria, tornava-se assim num sistema totalmente digital.
+O atmega 128 é uma escolha acertada para esta aplicação, considerando as alternativas de optar por um \ac{mcu} 32 \textit{bits} ou um \textit{embeded system} com sistema operativo integrado, em que no primeiro caso o grau de dificuldade é acrescida devido a ter muito mais configurações e funcionalidades, e a segunda opção de ser exagerada, devido a só utilizar uma muito pequena parte das suas possibilidades, como se diz em inglês um \textit{overkill}, desperdiçando recursos desnecessariamente, e também se iria refletir a nível de custos monetários, no entanto facilita bastante no desenvolvimento de qualquer projeto, pois esta-se a trabalhar sobre uma camada de nível superior.
 \\
 \\
 \begin{minipage}{\linewidth}
@@ -333,7 +338,7 @@ A características do micro-controlador Atmega 128 esta abaixo indicados na list
 \end{minipage}
 \minipagespace{0.5}
 \newpage
-Para programar este micro-controlador (\textbf{Atmega 128}), foi utilizado o programador da marca da Atmel precisamente o \ac{atmel-ice} \textit{figura} \ref{Programador_1}, que para este equipamento tem disponível programação via \ac{isp} \textit{figura} \ref{ISP_6_8_10pin} e \ac{jtag}.
+Para programar este micro-controlador (\textbf{Atmega 128}), foi utilizado o programador da marca da Atmel, precisamente o \ac{atmel-ice} \textit{figura} \ref{Programador_1}, que para este equipamento tem disponível programação via \ac{isp} \textit{figura} \ref{ISP_6_8_10pin} e \ac{jtag}.
 \minipagespace{.2}
 \begin{minipage}[!b]{.5\linewidth}
 	\begin{figure}[H]
@@ -356,6 +361,7 @@ Para programar este micro-controlador (\textbf{Atmega 128}), foi utilizado o pro
 		\label{ISP_6_8_10pin}
 	\end{figure}
 \end{minipage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Fonte de Alimentação}
 \begin{minipage}[!b]{.5\linewidth}
 	\begin{figure}[H]
@@ -390,7 +396,8 @@ Caracteristicas DC/DC:
 		\item Massa: 28g
 	\end{itemize}
 \end{minipage}
-Como a \textit{mainboard} tem um regulador de tensão de 5 Volt, para aumentar a eficiência  e ter uma alimentação variável de entrada utilizo o \textit{Buck Converter} da \textit{figura} \ref{buck-converter}.
+Como a \textit{mainboard} tem um regulador de tensão de 5 Volt, para aumentar a eficiência  e ter uma alimentação variável de entrada utilizo o \textit{Buck Converter} da \textit{figura} \ref{buck-converter}. Como podemos ver nas características.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Software}
 O \ac{ide} utilizado neste trabalho foi o \textbf{\textit{{Microchip Studio for AVR\textsuperscript{\textregistered} and SAM Devices}}} (\textit{version: 7.0.2542}). A programação foi feita em Linguagem \textbf{C}, sua estrutura sintática esta abaixo mencionado:
 \\
@@ -437,7 +444,7 @@ Duas interrupções periódicas estão sempre a correr em \textit{background}, u
 \end{minipage}
 \end{minipage}
 \minipagespace{.5}
-Consultar código para leitura das rotinas de interrupção nas folhas \textit{anexas}.
+Consultar código para leitura das rotinas de interrupção nas folhas \textit{anexas} \ref{main-c}.
 \\
 \\
 \begin{minipage}{.40\linewidth}
@@ -465,6 +472,7 @@ Durante este projeto tentou-se dentro do possível sempre seguir as boas pratica
 \\
 Quanto as interrupções é sempre um desafio, porque as tarefas tem que ser bem organizadas temporalmente para não entrar em conflitos, pretende-se assim sempre que o código corra na função \textit{main} e as interrupções algo esporádico e muito rápido, estas devem servir de \textit{flags} para executar rotinas na função \textit{main}, ou seja, servirem de \textit{inputs}. %%\textbf{\textcolor{green}{INPUTS}}.
 \newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Validação}
 %%%To validate is to justify why the choices made and alternatives that could be chosen.
 As escolhas feitas estão dentro dos parâmetros da oferta disponibilizada. Apenas o conhecimento adquirido ao aprofundar o funcionamento dos componentes é o ganho mais evidente, facilitando a interpretação de situações e deteção de anomalias (\textit{troubleshooting}), derivado aos custos dos materiais serem caros.
