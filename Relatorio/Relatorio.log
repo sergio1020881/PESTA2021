@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.30)  3 JUN 2021 00:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.30)  3 JUN 2021 02:46
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
@@ -1892,14 +1892,12 @@ l.19 ...e/SETUP/ContentFigureTableListingGlossary}
 \openout2 = `./include/SETUP/ContentFigureTableListingGlossary.aux'.
 
 
-(include/SETUP/ContentFigureTableListingGlossary.tex (Relatorio.toc
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 8.
-pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has 
-been already used, duplicate ignored
+(include/SETUP/ContentFigureTableListingGlossary.tex (Relatorio.tocpdfTeX warni
+ng (ext4): destination with the same identifier (name{page.i}) has been already
+ used, duplicate ignored
 <to be read again> 
                    \relax 
-l.28 ...{\numberline {C}CÃ³digo}{32}{appendix.a.C}
+l.27 ...{\numberline {B}FÃ­sica}{34}{appendix.a.B}
                                                   % [1
 
 
@@ -1930,8 +1928,8 @@ l.28 ...{\numberline {C}CÃ³digo}{32}{appendix.a.C}
 
 
 ] (Relatorio.acr
-Underfull \hbox (badness 3460) in paragraph at lines 21--21
-[]|\T1/lmr/m/it/10.95 Electrically Era-sa-ble Pro-gram-ma-ble Read-
+Underfull \hbox (badness 3343) in paragraph at lines 69--69
+[]|\T1/lmr/m/it/12 Reduced Ins-truc-tion Set Com-pu-ter ou
  []
 
 ) [6
@@ -1943,11 +1941,11 @@ Underfull \hbox (badness 3460) in paragraph at lines 21--21
 
 ]) (input/page/Introducao.tex
 Cap\'{\i }tulo 1.
-<./image/PESTA/fisica/mass.jpg, id=327, 282.05376pt x 179.67125pt>
+<./image/PESTA/fisica/mass.jpg, id=329, 282.05376pt x 179.67125pt>
 File: ./image/PESTA/fisica/mass.jpg Graphic file (type jpg)
 <use ./image/PESTA/fisica/mass.jpg>
 Package pdftex.def Info: ./image/PESTA/fisica/mass.jpg  used on input line 7.
-(pdftex.def)             Requested size: 312.68741pt x 199.16928pt.
+(pdftex.def)             Requested size: 441.01773pt x 280.9522pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 2--10
 
@@ -1967,34 +1965,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--16
 
 
 
- <./image/PESTA/fisica/mass.jpg>]
+ <./image/PESTA/fisica/mass.jpg>] [2]
 Underfull \hbox (badness 10000) in paragraph at lines 18--25
 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 18--25
-
- []
-
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 27--72
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--72
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 75--79
+Underfull \hbox (badness 10000) in paragraph at lines 27--72
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--72
 
  []
 
 [4]
+Underfull \hbox (badness 10000) in paragraph at lines 75--79
+
+ []
+
+[5]
 Cap\'{\i }tulo 2.
-<./image/PESTA/general/balanca_1.jpg, id=347, 642.4pt x 481.8pt>
+<./image/PESTA/general/balanca_1.jpg, id=354, 642.4pt x 481.8pt>
 File: ./image/PESTA/general/balanca_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/general/balanca_1.jpg>
 Package pdftex.def Info: ./image/PESTA/general/balanca_1.jpg  used on input lin
@@ -2005,91 +2003,83 @@ Overfull \hbox (67.09538pt too wide) in paragraph at lines 91--92
  [][] 
  []
 
-<./image/PESTA/general/balanca_4.jpg, id=348, 160.4394pt x 192.9609pt>
+<./image/PESTA/general/balanca_4.jpg, id=355, 160.4394pt x 192.9609pt>
 File: ./image/PESTA/general/balanca_4.jpg Graphic file (type jpg)
 <use ./image/PESTA/general/balanca_4.jpg>
 Package pdftex.def Info: ./image/PESTA/general/balanca_4.jpg  used on input lin
 e 100.
 (pdftex.def)             Requested size: 165.60695pt x 199.16928pt.
-<./image/PESTA/general/Weigh_Scale_Salter_1.jpg, id=349, 803.0pt x 982.67125pt>
 
-File: ./image/PESTA/general/Weigh_Scale_Salter_1.jpg Graphic file (type jpg)
-<use ./image/PESTA/general/Weigh_Scale_Salter_1.jpg>
-Package pdftex.def Info: ./image/PESTA/general/Weigh_Scale_Salter_1.jpg  used o
-n input line 116.
-(pdftex.def)             Requested size: 162.75365pt x 199.16928pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 81--120
+Underfull \hbox (badness 10000) in paragraph at lines 81--110
 
  []
 
 
-Overfull \hbox (23.35814pt too wide) in paragraph at lines 81--120
+Overfull \hbox (23.71361pt too wide) in paragraph at lines 81--110
 []$   $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--120
+Underfull \hbox (badness 10000) in paragraph at lines 81--110
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--120
+Underfull \hbox (badness 10000) in paragraph at lines 81--110
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 81--120
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 81--120
-
- []
-
-[5
+[6
 
  <./image/PESTA/general/balanca_1.jpg> <./image/PESTA/general/balanca_4.jpg>]
-<./image/PESTA/general/Public_Body_Scales_1.jpg, id=361, 383.18156pt x 248.4281
+<./image/PESTA/general/Weigh_Scale_Salter_1.jpg, id=365, 803.0pt x 982.67125pt>
+
+File: ./image/PESTA/general/Weigh_Scale_Salter_1.jpg Graphic file (type jpg)
+<use ./image/PESTA/general/Weigh_Scale_Salter_1.jpg>
+Package pdftex.def Info: ./image/PESTA/general/Weigh_Scale_Salter_1.jpg  used o
+n input line 115.
+(pdftex.def)             Requested size: 240.90186pt x 294.80365pt.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 117.
+
+Underfull \hbox (badness 10000) in paragraph at lines 111--119
+
+ []
+
+<./image/PESTA/general/Public_Body_Scales_1.jpg, id=367, 383.18156pt x 248.4281
 3pt>
 File: ./image/PESTA/general/Public_Body_Scales_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/general/Public_Body_Scales_1.jpg>
 Package pdftex.def Info: ./image/PESTA/general/Public_Body_Scales_1.jpg  used o
-n input line 128.
+n input line 126.
 (pdftex.def)             Requested size: 307.20636pt x 199.16928pt.
-<./image/PESTA/general/Balanca_Mola_1.jpg, id=362, 97.8054pt x 204.5241pt>
+<./image/PESTA/general/Balanca_Mola_1.jpg, id=368, 97.8054pt x 204.5241pt>
 File: ./image/PESTA/general/Balanca_Mola_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/general/Balanca_Mola_1.jpg>
 Package pdftex.def Info: ./image/PESTA/general/Balanca_Mola_1.jpg  used on inpu
-t line 130.
+t line 128.
 (pdftex.def)             Requested size: 95.24718pt x 199.16928pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 121--135
-
- []
-
-[6 <./image/PESTA/general/Weigh_Scale_Salter_1.jpg> <./image/PESTA/general/Publ
-ic_Body_Scales_1.jpg> <./image/PESTA/general/Balanca_Mola_1.jpg>]
-<./image/PESTA/general/Scale_1.jpg, id=368, 1330.9725pt x 1039.63406pt>
+<./image/PESTA/general/Scale_1.jpg, id=369, 1330.9725pt x 1039.63406pt>
 File: ./image/PESTA/general/Scale_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/general/Scale_1.jpg>
 Package pdftex.def Info: ./image/PESTA/general/Scale_1.jpg  used on input line 
-140.
+138.
 (pdftex.def)             Requested size: 254.97922pt x 199.16928pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--143
+Underfull \hbox (badness 10000) in paragraph at lines 120--141
 
  []
 
-)
-Underfull \hbox (badness 10000) in paragraph at lines 158--31
+[7 <./image/PESTA/general/Weigh_Scale_Salter_1.jpg>] [8 <./image/PESTA/general/
+Public_Body_Scales_1.jpg> <./image/PESTA/general/Balanca_Mola_1.jpg> <./image/P
+ESTA/general/Scale_1.jpg>])
+Underfull \hbox (badness 10000) in paragraph at lines 156--32
 
  []
 
-[7 <./image/PESTA/general/Scale_1.jpg>] (input/page/Desenvolvimento.tex
+[9] (input/page/Desenvolvimento.tex
 Cap\'{\i }tulo 3.
-<./image/PESTA/kit/Kit_Desenvolvimento_2.jpg, id=377, 3014.26125pt x 1704.3675p
+<./image/PESTA/kit/Kit_Desenvolvimento_2.jpg, id=388, 3014.26125pt x 1704.3675p
 t>
 File: ./image/PESTA/kit/Kit_Desenvolvimento_2.jpg Graphic file (type jpg)
 <use ./image/PESTA/kit/Kit_Desenvolvimento_2.jpg>
@@ -2101,14 +2091,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--12
 
  []
 
-<./image/PESTA/Diagrama/Diagrama_bloco_3.jpg, id=379, 1063.72406pt x 708.39656p
+<./image/PESTA/Diagrama/Diagrama_bloco_3.jpg, id=390, 1063.72406pt x 708.39656p
 t>
 File: ./image/PESTA/Diagrama/Diagrama_bloco_3.jpg Graphic file (type jpg)
 <use ./image/PESTA/Diagrama/Diagrama_bloco_3.jpg>
 Package pdftex.def Info: ./image/PESTA/Diagrama/Diagrama_bloco_3.jpg  used on i
 nput line 16.
 (pdftex.def)             Requested size: 287.20934pt x 191.26962pt.
-<./image/PESTA/material/Load_Cell_1.jpg, id=381, 2337.73375pt x 1152.305pt>
+<./image/PESTA/material/Load_Cell_1.jpg, id=392, 2337.73375pt x 1152.305pt>
 File: ./image/PESTA/material/Load_Cell_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/material/Load_Cell_1.jpg>
 Package pdftex.def Info: ./image/PESTA/material/Load_Cell_1.jpg  used on input 
@@ -2119,23 +2109,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--30
 
  []
 
-[8
+[10
 
  <./image/PESTA/kit/Kit_Desenvolvimento_2.jpg> <./image/PESTA/Diagrama/Diagrama
 _bloco_3.jpg>]
-<./image/PESTA/general/strain_gauge_1.jpg, id=388, 630.10406pt x 381.67593pt>
+<./image/PESTA/general/strain_gauge_1.jpg, id=400, 630.10406pt x 381.67593pt>
 File: ./image/PESTA/general/strain_gauge_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/general/strain_gauge_1.jpg>
 Package pdftex.def Info: ./image/PESTA/general/strain_gauge_1.jpg  used on inpu
 t line 40.
 (pdftex.def)             Requested size: 187.88853pt x 113.81102pt.
-<./image/PESTA/schematic/Wheatstone_2.jpg, id=390, 313.17pt x 210.03468pt>
+<./image/PESTA/schematic/Wheatstone_2.jpg, id=402, 313.17pt x 210.03468pt>
 File: ./image/PESTA/schematic/Wheatstone_2.jpg Graphic file (type jpg)
 <use ./image/PESTA/schematic/Wheatstone_2.jpg>
 Package pdftex.def Info: ./image/PESTA/schematic/Wheatstone_2.jpg  used on inpu
 t line 49.
 (pdftex.def)             Requested size: 212.12129pt x 142.26378pt.
-<./image/PESTA/schematic/Wheatstone_1.jpg, id=391, 315.42844pt x 262.73157pt>
+<./image/PESTA/schematic/Wheatstone_1.jpg, id=403, 315.42844pt x 262.73157pt>
 File: ./image/PESTA/schematic/Wheatstone_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/schematic/Wheatstone_1.jpg>
 Package pdftex.def Info: ./image/PESTA/schematic/Wheatstone_1.jpg  used on inpu
@@ -2152,12 +2142,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--80
  []
 
 
-Overfull \hbox (2.43333pt too wide) in paragraph at lines 32--80
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 32--80
 []$ $[]$ 
  []
 
 
-Overfull \hbox (2.43332pt too wide) in paragraph at lines 32--80
+Overfull \hbox (2.61105pt too wide) in paragraph at lines 32--80
 []$ $[]$ 
  []
 
@@ -2166,10 +2156,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--80
 
  []
 
-[9 <./image/PESTA/material/Load_Cell_1.jpg> <./image/PESTA/general/strain_gauge
-_1.jpg> <./image/PESTA/schematic/Wheatstone_2.jpg>] [10 <./image/PESTA/schemati
-c/Wheatstone_1.jpg>]
-<./image/PESTA/material/Prato.jpg, id=410, 2836.5975pt x 903.375pt>
+[11 <./image/PESTA/material/Load_Cell_1.jpg>] [12 <./image/PESTA/general/strain
+_gauge_1.jpg> <./image/PESTA/schematic/Wheatstone_2.jpg> <./image/PESTA/schemat
+ic/Wheatstone_1.jpg>]
+<./image/PESTA/material/Prato.jpg, id=421, 2836.5975pt x 903.375pt>
 File: ./image/PESTA/material/Prato.jpg Graphic file (type jpg)
 <use ./image/PESTA/material/Prato.jpg>
 Package pdftex.def Info: ./image/PESTA/material/Prato.jpg  used on input line 8
@@ -2180,15 +2170,15 @@ Overfull \hbox (12.84715pt too wide) in paragraph at lines 86--87
  [][] 
  []
 
-[11 <./image/PESTA/material/Prato.jpg>]
-<./image/PESTA/schematic/HX711_Schematic_1.jpg, id=416, 628.59843pt x 310.91156
+[13 <./image/PESTA/material/Prato.jpg>]
+<./image/PESTA/schematic/HX711_Schematic_1.jpg, id=427, 628.59843pt x 310.91156
 pt>
 File: ./image/PESTA/schematic/HX711_Schematic_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/schematic/HX711_Schematic_1.jpg>
 Package pdftex.def Info: ./image/PESTA/schematic/HX711_Schematic_1.jpg  used on
  input line 103.
 (pdftex.def)             Requested size: 220.01274pt x 108.82066pt.
-<./image/PESTA/material/HX711_board_1.jpg, id=417, 2004.48875pt x 1071.00125pt>
+<./image/PESTA/material/HX711_board_1.jpg, id=428, 2004.48875pt x 1071.00125pt>
 
 File: ./image/PESTA/material/HX711_board_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/material/HX711_board_1.jpg>
@@ -2220,7 +2210,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 109--127
 
  []
 
-<./image/PESTA/graph/80SPS64GAIN/SPS_80.JPG, id=420, 731.73375pt x 534.99875pt>
+<./image/PESTA/graph/80SPS64GAIN/SPS_80.JPG, id=431, 731.73375pt x 534.99875pt>
 
 File: ./image/PESTA/graph/80SPS64GAIN/SPS_80.JPG Graphic file (type jpg)
 <use ./image/PESTA/graph/80SPS64GAIN/SPS_80.JPG>
@@ -2237,44 +2227,49 @@ Underfull \hbox (badness 10000) in paragraph at lines 129--141
 
  []
 
-[12 <./image/PESTA/schematic/HX711_Schematic_1.jpg> <./image/PESTA/material/HX7
+[14 <./image/PESTA/schematic/HX711_Schematic_1.jpg> <./image/PESTA/material/HX7
 11_board_1.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 168--170
 
  []
 
-<./image/PESTA/graph/80SPS128GAIN/Gain_128_example.JPG, id=428, 731.73375pt x 5
+<./image/PESTA/graph/80SPS128GAIN/Gain_128_example.JPG, id=440, 731.73375pt x 5
 34.99875pt>
 File: ./image/PESTA/graph/80SPS128GAIN/Gain_128_example.JPG Graphic file (type 
 jpg)
 <use ./image/PESTA/graph/80SPS128GAIN/Gain_128_example.JPG>
 Package pdftex.def Info: ./image/PESTA/graph/80SPS128GAIN/Gain_128_example.JPG 
  used on input line 176.
-(pdftex.def)             Requested size: 182.93298pt x 133.74936pt.
-<./image/PESTA/graph/80SPS64GAIN/Gain_64_example.JPG, id=429, 731.73375pt x 534
+(pdftex.def)             Requested size: 219.52182pt x 160.50085pt.
+
+Overfull \hbox (29.88744pt too wide) in paragraph at lines 176--177
+[]  
+ []
+
+<./image/PESTA/graph/80SPS64GAIN/Gain_64_example.JPG, id=441, 731.73375pt x 534
 .99875pt>
 File: ./image/PESTA/graph/80SPS64GAIN/Gain_64_example.JPG Graphic file (type jp
 g)
 <use ./image/PESTA/graph/80SPS64GAIN/Gain_64_example.JPG>
 Package pdftex.def Info: ./image/PESTA/graph/80SPS64GAIN/Gain_64_example.JPG  u
 sed on input line 186.
-(pdftex.def)             Requested size: 182.93298pt x 133.74936pt.
+(pdftex.def)             Requested size: 219.52182pt x 160.50085pt.
+
+Overfull \hbox (29.88744pt too wide) in paragraph at lines 186--187
+[]  
+ []
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 143--199
 
  []
 
 
-Overfull \hbox (2.43332pt too wide) in paragraph at lines 143--199
+Overfull \hbox (2.61105pt too wide) in paragraph at lines 143--199
 []$ $[]$ 
  []
 
 
-Overfull \hbox (33.31941pt too wide) in paragraph at lines 143--199
-[]$   $[]$ 
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 143--199
 
  []
@@ -2289,9 +2284,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 143--199
 
  []
 
-[13 <./image/PESTA/graph/80SPS64GAIN/SPS_80.JPG>] (input/code/hx_query.c)
-[14 <./image/PESTA/graph/80SPS128GAIN/Gain_128_example.JPG> <./image/PESTA/grap
-h/80SPS64GAIN/Gain_64_example.JPG>] (input/code/HX711_read_raw.c) [15]
+[15 <./image/PESTA/graph/80SPS64GAIN/SPS_80.JPG>] (input/code/hx_query.c)
+[16 <./image/PESTA/graph/80SPS128GAIN/Gain_128_example.JPG> <./image/PESTA/grap
+h/80SPS64GAIN/Gain_64_example.JPG>] (input/code/HX711_read_raw.c) [17]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\acs' on input line 214.
@@ -2306,14 +2301,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 215--251
 
  []
 
-<./image/PESTA/material/4x20_LCD.jpg, id=501, 575.90157pt x 345.54094pt>
+<./image/PESTA/material/4x20_LCD.jpg, id=514, 575.90157pt x 345.54094pt>
 File: ./image/PESTA/material/4x20_LCD.jpg Graphic file (type jpg)
 <use ./image/PESTA/material/4x20_LCD.jpg>
 Package pdftex.def Info: ./image/PESTA/material/4x20_LCD.jpg  used on input lin
 e 255.
-(pdftex.def)             Requested size: 287.95007pt x 172.77003pt.
-[16 <./image/PESTA/material/4x20_LCD.jpg>]
-<./image/PESTA/Diagrama/Harvard_architecture.jpg, id=507, 322.95656pt x 205.517
+(pdftex.def)             Requested size: 284.53172pt x 170.71652pt.
+[18 <./image/PESTA/material/4x20_LCD.jpg>]
+<./image/PESTA/Diagrama/Harvard_architecture.jpg, id=519, 322.95656pt x 205.517
 8pt>
 File: ./image/PESTA/Diagrama/Harvard_architecture.jpg Graphic file (type jpg)
 <use ./image/PESTA/Diagrama/Harvard_architecture.jpg>
@@ -2355,8 +2350,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 262--286
 
  []
 
-[17 <./image/PESTA/Diagrama/Harvard_architecture.jpg>]
-<./image/PESTA/material/Atmega128_1.jpg, id=514, 450.18187pt x 477.28313pt>
+[19 <./image/PESTA/Diagrama/Harvard_architecture.jpg>]
+<./image/PESTA/material/Atmega128_1.jpg, id=526, 450.18187pt x 477.28313pt>
 File: ./image/PESTA/material/Atmega128_1.jpg Graphic file (type jpg)
 <use ./image/PESTA/material/Atmega128_1.jpg>
 Package pdftex.def Info: ./image/PESTA/material/Atmega128_1.jpg  used on input 
@@ -2388,222 +2383,250 @@ Underfull \hbox (badness 10000) in paragraph at lines 289--301
  []
 
 
-Overfull \hbox (30.87842pt too wide) in paragraph at lines 303--306
-[]$\T1/lmtt/m/n/10.95 https : / / drive . google . com / file / d / 1wgOGf8WwYY
-0OzDhRca9ypXz-[]iBO55YOF / view ? usp = sharing$[] 
+Overfull \hbox (22.6005pt too wide) in paragraph at lines 303--306
+[]$\T1/lmtt/m/n/12 https : / / drive . google . com / file / d / 1wgOGf8WwYY0Oz
+DhRca9ypXz-[]iBO55YOF / view ? usp =
  []
 
-[18 <./image/PESTA/material/Atmega128_1.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 307--340
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 307--340
+[20 <./image/PESTA/material/Atmega128_1.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 307--341
 
  []
 
-[19]
-<./image/PESTA/programador/Atmel_ice.png, id=526, 271.76532pt x 219.82124pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 307--341
+
+ []
+
+[21]
+<./image/PESTA/programador/Atmel_ice.png, id=540, 271.76532pt x 219.82124pt>
 File: ./image/PESTA/programador/Atmel_ice.png Graphic file (type png)
 <use ./image/PESTA/programador/Atmel_ice.png>
 Package pdftex.def Info: ./image/PESTA/programador/Atmel_ice.png  used on input
- line 347.
+ line 348.
 (pdftex.def)             Requested size: 203.82349pt x 164.86551pt.
-<./image/PESTA/programador/isp_6pin.png, id=528, 371.13657pt x 146.04562pt>
+<./image/PESTA/programador/isp_6pin.png, id=542, 371.13657pt x 146.04562pt>
 File: ./image/PESTA/programador/isp_6pin.png Graphic file (type png)
 <use ./image/PESTA/programador/isp_6pin.png>
 Package pdftex.def Info: ./image/PESTA/programador/isp_6pin.png  used on input 
-line 357.
+line 358.
 (pdftex.def)             Requested size: 167.0099pt x 65.71991pt.
-<./image/PESTA/programador/isp_8e10pin.png, id=529, 347.04657pt x 197.98969pt>
+<./image/PESTA/programador/isp_8e10pin.png, id=543, 347.04657pt x 197.98969pt>
 File: ./image/PESTA/programador/isp_8e10pin.png Graphic file (type png)
 <use ./image/PESTA/programador/isp_8e10pin.png>
 Package pdftex.def Info: ./image/PESTA/programador/isp_8e10pin.png  used on inp
-ut line 359.
+ut line 360.
 (pdftex.def)             Requested size: 173.52286pt x 98.9946pt.
 
-Overfull \hbox (19.09303pt too wide) in paragraph at lines 341--365
+Overfull \hbox (19.4485pt too wide) in paragraph at lines 342--366
 []$   $[]$ 
  []
 
-<./image/PESTA/material/DCDC_converter.jpg, id=530, 357.58594pt x 380.92313pt>
+<./image/PESTA/material/DCDC_converter.jpg, id=544, 357.58594pt x 380.92313pt>
 File: ./image/PESTA/material/DCDC_converter.jpg Graphic file (type jpg)
 <use ./image/PESTA/material/DCDC_converter.jpg>
 Package pdftex.def Info: ./image/PESTA/material/DCDC_converter.jpg  used on inp
-ut line 370.
+ut line 371.
 (pdftex.def)             Requested size: 178.79253pt x 190.46109pt.
 
-Overfull \hbox (2.43333pt too wide) in paragraph at lines 366--401
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 367--402
 $[]$ $[]$
  []
 
-[20 <./image/PESTA/programador/Atmel_ice.png> <./image/PESTA/programador/isp_6p
+[22 <./image/PESTA/programador/Atmel_ice.png> <./image/PESTA/programador/isp_6p
 in.png> <./image/PESTA/programador/isp_8e10pin.png> <./image/PESTA/material/DCD
 C_converter.jpg>]
 Cap\'{\i }tulo 4.
-<./image/PESTA/flowchart/Main_Program_1.jpg, id=540, 620.3175pt x 724.20563pt>
-File: ./image/PESTA/flowchart/Main_Program_1.jpg Graphic file (type jpg)
-<use ./image/PESTA/flowchart/Main_Program_1.jpg>
-Package pdftex.def Info: ./image/PESTA/flowchart/Main_Program_1.jpg  used on in
-put line 407.
-(pdftex.def)             Requested size: 372.19337pt x 434.52673pt.
+<./image/PESTA/IDE/Microchip-Studio.png, id=555, 376.40625pt x 254.45062pt>
+File: ./image/PESTA/IDE/Microchip-Studio.png Graphic file (type png)
+<use ./image/PESTA/IDE/Microchip-Studio.png>
+Package pdftex.def Info: ./image/PESTA/IDE/Microchip-Studio.png  used on input 
+line 408.
+(pdftex.def)             Requested size: 225.84547pt x 152.67154pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 402--410
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 402--410
-
- []
-
-<./image/PESTA/flowchart/Generic_structure.jpg, id=541, 1095.3422pt x 442.65375
-pt>
-File: ./image/PESTA/flowchart/Generic_structure.jpg Graphic file (type jpg)
-<use ./image/PESTA/flowchart/Generic_structure.jpg>
-Package pdftex.def Info: ./image/PESTA/flowchart/Generic_structure.jpg  used on
- input line 420.
-(pdftex.def)             Requested size: 438.12912pt x 177.05835pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 412--423
+Underfull \hbox (badness 10000) in paragraph at lines 414--420
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 412--423
+Underfull \hbox (badness 10000) in paragraph at lines 414--420
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 412--423
-
- []
-
-[21
-
- <./image/PESTA/flowchart/Main_Program_1.jpg>]
-<./image/PESTA/flowchart/Interrupt_1.jpg, id=547, 73.77562pt x 120.45pt>
-File: ./image/PESTA/flowchart/Interrupt_1.jpg Graphic file (type jpg)
-<use ./image/PESTA/flowchart/Interrupt_1.jpg>
-Package pdftex.def Info: ./image/PESTA/flowchart/Interrupt_1.jpg  used on input
- line 432.
-(pdftex.def)             Requested size: 51.64256pt x 84.3144pt.
-<./image/PESTA/flowchart/Interrupt_2.jpg, id=548, 73.77562pt x 120.45pt>
-File: ./image/PESTA/flowchart/Interrupt_2.jpg Graphic file (type jpg)
-<use ./image/PESTA/flowchart/Interrupt_2.jpg>
-Package pdftex.def Info: ./image/PESTA/flowchart/Interrupt_2.jpg  used on input
- line 440.
-(pdftex.def)             Requested size: 51.64256pt x 84.3144pt.
-
-Overfull \hbox (2.43333pt too wide) in paragraph at lines 429--445
-[]$[]$ $[]$ 
- []
-
-<./image/PESTA/Code/Livrarias.jpg, id=550, 172.39406pt x 228.855pt>
-File: ./image/PESTA/Code/Livrarias.jpg Graphic file (type jpg)
-<use ./image/PESTA/Code/Livrarias.jpg>
-Package pdftex.def Info: ./image/PESTA/Code/Livrarias.jpg  used on input line 4
-54.
-(pdftex.def)             Requested size: 155.15321pt x 205.96759pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 461--468
+Underfull \hbox (badness 10000) in paragraph at lines 414--420
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 461--468
+Underfull \hbox (badness 10000) in paragraph at lines 414--420
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 461--468
+Underfull \hbox (badness 10000) in paragraph at lines 414--420
 
  []
 
+<./image/PESTA/IDE/Work-Space.png, id=558, 1028.34187pt x 547.2947pt>
+File: ./image/PESTA/IDE/Work-Space.png Graphic file (type png)
+<use ./image/PESTA/IDE/Work-Space.png>
+Package pdftex.def Info: ./image/PESTA/IDE/Work-Space.png  used on input line 4
+24.
+(pdftex.def)             Requested size: 441.01773pt x 234.71414pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 425--474
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 425--474
-
- []
-
-
-Overfull \hbox (2.43332pt too wide) in paragraph at lines 425--474
+Overfull \hbox (2.61105pt too wide) in paragraph at lines 403--427
 []$ $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 425--474
+Underfull \hbox (badness 10000) in paragraph at lines 403--427
 
  []
 
-[22 <./image/PESTA/flowchart/Generic_structure.jpg> <./image/PESTA/flowchart/In
-terrupt_1.jpg> <./image/PESTA/flowchart/Interrupt_2.jpg>] [23 <./image/PESTA/Co
+[23
+
+ <./image/PESTA/IDE/Microchip-Studio.png> <./image/PESTA/IDE/Work-Space.png>]
+<./image/PESTA/flowchart/Main_Program_1.jpg, id=564, 620.3175pt x 724.20563pt>
+File: ./image/PESTA/flowchart/Main_Program_1.jpg Graphic file (type jpg)
+<use ./image/PESTA/flowchart/Main_Program_1.jpg>
+Package pdftex.def Info: ./image/PESTA/flowchart/Main_Program_1.jpg  used on in
+put line 434.
+(pdftex.def)             Requested size: 372.19337pt x 434.52673pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 429--437
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 429--437
+
+ []
+
+[24 <./image/PESTA/flowchart/Main_Program_1.jpg>]
+<./image/PESTA/flowchart/Generic_structure.jpg, id=569, 1095.3422pt x 442.65375
+pt>
+File: ./image/PESTA/flowchart/Generic_structure.jpg Graphic file (type jpg)
+<use ./image/PESTA/flowchart/Generic_structure.jpg>
+Package pdftex.def Info: ./image/PESTA/flowchart/Generic_structure.jpg  used on
+ input line 446.
+(pdftex.def)             Requested size: 441.01773pt x 178.22685pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 441--449
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 441--449
+
+ []
+
+<./image/PESTA/flowchart/Interrupt_1.jpg, id=570, 73.77562pt x 120.45pt>
+File: ./image/PESTA/flowchart/Interrupt_1.jpg Graphic file (type jpg)
+<use ./image/PESTA/flowchart/Interrupt_1.jpg>
+Package pdftex.def Info: ./image/PESTA/flowchart/Interrupt_1.jpg  used on input
+ line 458.
+(pdftex.def)             Requested size: 62.70955pt x 102.38297pt.
+<./image/PESTA/flowchart/Interrupt_2.jpg, id=571, 73.77562pt x 120.45pt>
+File: ./image/PESTA/flowchart/Interrupt_2.jpg Graphic file (type jpg)
+<use ./image/PESTA/flowchart/Interrupt_2.jpg>
+Package pdftex.def Info: ./image/PESTA/flowchart/Interrupt_2.jpg  used on input
+ line 466.
+(pdftex.def)             Requested size: 62.70955pt x 102.38297pt.
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 455--471
+[]$[]$ $[]$ 
+ []
+
+<./image/PESTA/Code/Livrarias.jpg, id=573, 172.39406pt x 228.855pt>
+File: ./image/PESTA/Code/Livrarias.jpg Graphic file (type jpg)
+<use ./image/PESTA/Code/Livrarias.jpg>
+Package pdftex.def Info: ./image/PESTA/Code/Livrarias.jpg  used on input line 4
+80.
+(pdftex.def)             Requested size: 155.15321pt x 205.96759pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 451--496
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 451--496
+
+ []
+
+
+Overfull \hbox (2.61105pt too wide) in paragraph at lines 451--496
+[]$ $[]$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 451--496
+
+ []
+
+[25 <./image/PESTA/flowchart/Generic_structure.jpg> <./image/PESTA/flowchart/In
+terrupt_1.jpg> <./image/PESTA/flowchart/Interrupt_2.jpg>] [26 <./image/PESTA/Co
 de/Livrarias.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 478--487
+Underfull \hbox (badness 10000) in paragraph at lines 500--510
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 478--487
+Underfull \hbox (badness 10000) in paragraph at lines 500--510
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 478--487
+Underfull \hbox (badness 10000) in paragraph at lines 500--510
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 478--487
+Underfull \hbox (badness 10000) in paragraph at lines 500--510
 
  []
 
 
-Overfull \hbox (25.03346pt too wide) in paragraph at lines 494--517
+Overfull \hbox (25.03346pt too wide) in paragraph at lines 517--540
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 488--517
+Underfull \hbox (badness 10000) in paragraph at lines 511--540
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 488--517
+Underfull \hbox (badness 10000) in paragraph at lines 511--540
 
  []
 
-[24])
-Underfull \hbox (badness 10000) in paragraph at lines 521--33
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 521--33
+[27])
+Underfull \hbox (badness 10000) in paragraph at lines 545--34
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 521--33
+Underfull \hbox (badness 10000) in paragraph at lines 545--34
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 521--33
+Underfull \hbox (badness 10000) in paragraph at lines 545--34
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 521--33
+Underfull \hbox (badness 10000) in paragraph at lines 545--34
 
  []
 
-[25] (input/page/Conclusao.tex
+
+Underfull \hbox (badness 10000) in paragraph at lines 545--34
+
+ []
+
+[28] (input/page/Conclusao.tex
 Cap\'{\i }tulo 5.
 
 Underfull \hbox (badness 10000) in paragraph at lines 2--15
@@ -2625,43 +2648,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--15
 
  []
 
-[26
+[29
 
 ])
-Underfull \hbox (badness 10000) in paragraph at lines 17--35
+Underfull \hbox (badness 10000) in paragraph at lines 17--36
 
  []
 
 
-Overfull \hbox (19.64552pt too wide) in paragraph at lines 17--35
-\T1/lmr/m/n/10.95 O pro-jeto esta dis-po-ní-vel no \T1/lmr/bx/it/10.95 GITHUB \
-T1/lmr/m/it/10.95 link\T1/lmr/m/n/10.95 : []$\T1/lmtt/m/n/10.95 https : / / git
-hub . com / sergio1020881 / PESTA2021 /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 17--35
+Overfull \hbox (5.69876pt too wide) in paragraph at lines 17--36
+\T1/lmtt/m/n/12 PESTA2021 / tree / main / SandBox / ATMEGA128 / Atmega128$[]\T1
+/lmr/m/n/12 , e pos-sí-vel fa-zer \T1/lmr/m/it/12 down-load \T1/lmr/m/n/12 para
 
  []
 
-[27] (input/End.tex (Relatorio.bbl) [28
 
-] [29
+Underfull \hbox (badness 10000) in paragraph at lines 17--36
+
+ []
+
+[30] (input/End.tex (Relatorio.bbl) [31
+
+] [32
 
 
 ] (input/anexo/Definition_1.tex
 Anexo A.
 
-Overfull \hbox (46.5378pt too wide) in paragraph at lines 3--34
+Overfull \hbox (46.71553pt too wide) in paragraph at lines 3--34
 [] []
  []
 
 )
-Overfull \hbox (46.5378pt too wide) in paragraph at lines 35--9
+Overfull \hbox (46.71553pt too wide) in paragraph at lines 35--9
 [][] []
  []
 
-[30
+[33
 
 ] (input/anexo/Physic_1.tex
 Anexo B.
@@ -2716,27 +2739,27 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 61.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 61.
-<./image/General/Einstein.jpg, id=609, 255.95625pt x 179.16937pt>
+<./image/General/Einstein.jpg, id=631, 255.95625pt x 179.16937pt>
 File: ./image/General/Einstein.jpg Graphic file (type jpg)
 <use ./image/General/Einstein.jpg>
 Package pdftex.def Info: ./image/General/Einstein.jpg  used on input line 70.
 (pdftex.def)             Requested size: 153.57492pt x 107.50244pt.
 ) (input/anexo/Code.tex
-Overfull \hbox (35.91206pt too wide) in paragraph at lines 26--2
+Overfull \hbox (37.334pt too wide) in paragraph at lines 26--2
 []   [] 
  []
 
 
-Overfull \hbox (2.43333pt too wide) in paragraph at lines 26--2
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 26--2
 []$ $[]$ 
  []
 
 
-Overfull \hbox (2.43333pt too wide) in paragraph at lines 26--2
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 26--2
 []$ $[]$ 
  []
 
-[31
+[34
 
  <./image/General/Einstein.jpg>]
 *geometry* verbose mode - [ newgeometry ] result:
@@ -2778,26 +2801,26 @@ LaTeX Font Info:    Trying to load font information for T1+pcr on input line 8.
 (C:\Program Files\MiKTeX\tex/latex/psnfss\t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-(input/anexo/Code/main_c.tex [32
+(input/anexo/Code/main_c.tex [35
 
 
-] [33] [34] [35]) [36]
-(input/anexo/Code/explode_h.tex) [37] (input/anexo/Code/explode_c.tex [38])
-[39] (input/anexo/Code/atmega128interrupt_h.tex) [40]
-(input/anexo/Code/atmega128interrupt_c.tex [41] [42] [43] [44]) [45]
-(input/anexo/Code/atmega128timer_h.tex [46]) [47]
-(input/anexo/Code/atmega128timer_c.tex [48] [49] [50] [51] [52] [53] [54]
-[55] [56] [57] [58]) [59] (input/anexo/Code/function_h.tex) [60]
-(input/anexo/Code/function_c.tex [61] [62] [63] [64] [65] [66] [67] [68])
-[69] (input/anexo/Code/lcd_h.tex) [70] (input/anexo/Code/lcd_c.tex [71]
-[72] [73] [74] [75]) [76] (input/anexo/Code/hx711_h.tex) [77]
-(input/anexo/Code/hx711_c.tex [78] [79]) [80] (input/anexo/Code/eeprom_h.tex)
-[81] (input/anexo/Code/eeprom_c.tex) [82])
+] [36] [37] [38]) [39]
+(input/anexo/Code/explode_h.tex) [40] (input/anexo/Code/explode_c.tex [41])
+[42] (input/anexo/Code/atmega128interrupt_h.tex) [43]
+(input/anexo/Code/atmega128interrupt_c.tex [44] [45] [46] [47]) [48]
+(input/anexo/Code/atmega128timer_h.tex [49]) [50]
+(input/anexo/Code/atmega128timer_c.tex [51] [52] [53] [54] [55] [56] [57]
+[58] [59] [60] [61] [62]) [63] (input/anexo/Code/function_h.tex) [64]
+(input/anexo/Code/function_c.tex [65] [66] [67] [68] [69] [70] [71] [72]
+[73]) [74] (input/anexo/Code/lcd_h.tex) [75] (input/anexo/Code/lcd_c.tex
+[76] [77] [78] [79] [80] [81]) [82] (input/anexo/Code/hx711_h.tex) [83]
+(input/anexo/Code/hx711_c.tex [84] [85]) [86] (input/anexo/Code/eeprom_h.tex)
+[87] (input/anexo/Code/eeprom_c.tex) [88])
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 17.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 17.
-) [83
+) [89
 
 runsystem(makeindex -s Relatorio.ist -t Relatorio.glg -o Relatorio.gls Relatori
 o.glo)...executed (allowed).
@@ -2810,13 +2833,13 @@ o.acn)...executed (allowed).
 (include/SETUP/Abstract_2.aux)
 (include/SETUP/ContentFigureTableListingGlossary.aux))
 Package rerunfilecheck Info: File `Relatorio.out' has not changed.
-(rerunfilecheck)             Checksum: CC35A4E7E88FEB3E470C294374DDA787;3101.
+(rerunfilecheck)             Checksum: 631DAC2547FC5C10B9EA081D0A52DB96;3101.
  ) 
 Here is how much of TeX's memory you used:
- 63199 strings out of 479081
- 1359438 string characters out of 2862515
- 2557850 words of memory out of 3000000
- 75751 multiletter control sequences out of 15000+600000
+ 63224 strings out of 479081
+ 1360075 string characters out of 2862515
+ 2548851 words of memory out of 3000000
+ 75765 multiletter control sequences out of 15000+600000
  537830 words of font info for 122 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  107i,20n,122p,1082b,2818s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2847,9 +2870,9 @@ type1/public/lm/lmsy6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy8.
 pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Program Files
 /MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Program Files/MiKTeX/fonts/type1/p
 ublic/lm/lmtt9.pfb>
-Output written on Relatorio.pdf (98 pages, 6881131 bytes).
+Output written on Relatorio.pdf (104 pages, 7185348 bytes).
 PDF statistics:
- 5506 PDF objects out of 6186 (max. 8388607)
- 4012 named destinations out of 4296 (max. 500000)
- 402 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 5541 PDF objects out of 6186 (max. 8388607)
+ 4020 named destinations out of 4296 (max. 500000)
+ 412 words of extra memory for PDF output out of 10000 (max. 10000000)
 
