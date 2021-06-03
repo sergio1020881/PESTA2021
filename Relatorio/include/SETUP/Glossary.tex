@@ -1,4 +1,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newglossarystyle{mylong}{%
+	\setglossarystyle{long}%
+	\renewenvironment{theglossary}%
+	{\begin{longtable}[l]{@{}p{\dimexpr 3cm-\tabcolsep}p{.7\hsize}}}% <-- change the value here
+		{\end{longtable}}%
+}
 \makeglossaries
 %%%GLOSSARY%%%
 \newglossaryentry{gloss}{

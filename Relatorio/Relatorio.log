@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.30)  3 JUN 2021 23:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.30)  3 JUN 2021 23:59
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
@@ -1552,11 +1552,11 @@ File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 \glo@main@file=\write6
 \openout6 = `Relatorio.glo'.
 
-Package glossaries Info: Writing glossary file Relatorio.glo on input line 2.
+Package glossaries Info: Writing glossary file Relatorio.glo on input line 8.
 \glo@acronym@file=\write7
 \openout7 = `Relatorio.acn'.
 
-Package glossaries Info: Writing glossary file Relatorio.acn on input line 2.
+Package glossaries Info: Writing glossary file Relatorio.acn on input line 8.
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
@@ -1927,19 +1927,15 @@ l.27 ...berline {B}Definições}{87}{appendix.a.B}
  [5
 
 
-] (Relatorio.acr
-Underfull \hbox (badness 3343) in paragraph at lines 69--69
-[]|\T1/lmr/m/it/12 Reduced Ins-truc-tion Set Com-pu-ter ou
- []
-
-) [6
+] (Relatorio.acr) [6
 
 
 
 
 ]) [7
 
-]) (input/page/Introducao.tex
+])
+(input/page/Introducao.tex
 Cap\'{\i }tulo 1.
 <./image/PESTA/fisica/mass.jpg, id=329, 282.05376pt x 179.67125pt>
 File: ./image/PESTA/fisica/mass.jpg Graphic file (type jpg)
@@ -2821,10 +2817,10 @@ Package rerunfilecheck Info: File `Relatorio.out' has not changed.
 (rerunfilecheck)             Checksum: 23F4032F3429F16AA4A0D80DA2F7C107;3101.
  ) 
 Here is how much of TeX's memory you used:
- 63408 strings out of 479081
- 1363475 string characters out of 2862515
+ 63409 strings out of 479081
+ 1363491 string characters out of 2862515
  2548885 words of memory out of 3000000
- 75949 multiletter control sequences out of 15000+600000
+ 75950 multiletter control sequences out of 15000+600000
  537830 words of font info for 122 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  107i,22n,122p,1082b,2804s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2855,7 +2851,7 @@ type1/public/lm/lmsy6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy8.
 pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Program Files
 /MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Program Files/MiKTeX/fonts/type1/p
 ublic/lm/lmtt9.pfb>
-Output written on Relatorio.pdf (104 pages, 7185354 bytes).
+Output written on Relatorio.pdf (104 pages, 7185312 bytes).
 PDF statistics:
  5541 PDF objects out of 6186 (max. 8388607)
  4020 named destinations out of 4296 (max. 500000)
