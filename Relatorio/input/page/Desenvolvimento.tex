@@ -143,6 +143,7 @@ A comunicação é responsável por criar rotinas necessárias para transferir e
 A livraria (\textit{driver}) do integrado HX771, recorre a interrupções periódicas, e quando a linha de sinal da informação vai para a massa esta  indica que tem um pacote de leitura pronto a ser transmitido.
 \\
 \\
+\begin{minipage}[!b]{\linewidth}
 \begin{minipage}[!b]{.40\linewidth}
 	\begin{table}[H]
 		\captionsetup{justification=raggedright,singlelinecheck=false}
@@ -161,14 +162,15 @@ A livraria (\textit{driver}) do integrado HX771, recorre a interrupções perió
 		\end{tabular}
 		\label{Gain_Selection}
 	\end{table}
-	\tablespace{3}
+	\tablespace{2.5}
 \end{minipage}
 \begin{minipage}[l]{.6\linewidth}
 \vspace{.3cm}
 Como indicado abaixo no gráfico, em que a linha \textcolor{yellow}{amarela} é a informação, e a linha \textcolor{BlueGreen}{azul} o respetivo \textit{clock} que é gerado pelas interrupções do micro-controlador, fazendo um deslocamento dos \textcolor{blue}{24} \textit{bits}, que por fim transmite para o amplificador, o ganho de amplificação a ser usado pelo numero excedente de \textit{clock cycles}, em que nesta demonstração da \textit{figura} \ref{Gain_128_example} é \textcolor{blue}{um}, e corresponde a um ganho de \textcolor{blue}{128}, respeitando a informação apresentada na \textit{tabela} \ref{Gain_Selection},  e de sequida o exemplo da \textit{figura} \ref{Gain_64_example}, com um ganho de \textcolor{blue}{64}, pois tem \textcolor{blue}{três} impulsos excedentes.
-\\
 \end{minipage}
-\minipagespace{.5}
+\end{minipage}
+\\
+\begin{minipage}[!b]{\linewidth}
 \begin{minipage}[!b]{.43\linewidth}
 \begin{figure}[H]
 	\captionsetup{justification=raggedright,singlelinecheck=false}
@@ -188,18 +190,17 @@ Como indicado abaixo no gráfico, em que a linha \textcolor{yellow}{amarela} é 
 	\label{Gain_64_example}
 \end{figure}
 \end{minipage}
-\minipagespace{.5}
+\end{minipage}
+\minipagespace{.3}
 Para obter este resultado, a livraria \textit{driver} para o \textit{Load Cell Amplifier} teve de ter em consideração que a arquitetura do micro-controlador é de \textcolor{blue}{8} \textit{bits}, uma vez que a estrutura do pacote de informação é entre \textcolor{blue}{25} a \textcolor{blue}{27} \textit{bits} em que é transmitido primeiro o \ac{msb}.
 \\
 \\
-\\
 O código que executa esta rotina é demonstrado na \textit{lista} \ref{HX711-read-raw}, sendo esta chamada pelas interrupções periódicas, e só é ativa quando o resultado da função na \textit{lista} \ref{Main-While-case-1} \textbf{hx.query(\&hx)} é verdadeira.
-\\
-{ \tiny
+{
 	\lstinputlisting[language=C, caption={função de chamada \textbf{hx.query(\&hx)}}, captionpos=b, label=Main-While-case-1]{./input/code/hx_query.c}
 }
 \newpage
-{ \tiny
+{
 	\lstinputlisting[language=C, caption=HX711\_read\_raw, captionpos=b, label=HX711-read-raw]{./input/code/HX711_read_raw.c}
 }
 %\listingspace{.1}
