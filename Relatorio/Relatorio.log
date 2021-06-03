@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.30)  3 JUN 2021 14:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.30)  3 JUN 2021 17:44
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
@@ -1121,7 +1121,7 @@ Package: l3keys2e 2021-05-27 LaTeX2e option processing using LaTeX3 keys
 (C:\Program Files\MiKTeX\tex/latex/setspace\setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-Package scrhack Info: loading setspace hack on input line 66.
+Package scrhack Info: loading setspace hack on input line 67.
 
 (C:\Program Files\MiKTeX\tex/latex/koma-script\setspace.hak
 File: setspace.hak 2021/03/17 v3.33 KOMA-Script scrhack part (hacking package s
@@ -1521,7 +1521,7 @@ File: tikzlibrarytrees.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 Writing index file Relatorio.idx
 
 Package babelbib Warning: Command \selectbiblanguage used without package
-(babelbib)                option fixlanguage. Ignored on input line 83.
+(babelbib)                option fixlanguage. Ignored on input line 88.
 
 babelbib: Set bibliography fall-back language to english
 )
@@ -2821,10 +2821,10 @@ Package rerunfilecheck Info: File `Relatorio.out' has not changed.
 (rerunfilecheck)             Checksum: 23F4032F3429F16AA4A0D80DA2F7C107;3101.
  ) 
 Here is how much of TeX's memory you used:
- 63224 strings out of 479081
- 1360075 string characters out of 2862515
- 2548852 words of memory out of 3000000
- 75765 multiletter control sequences out of 15000+600000
+ 63228 strings out of 479081
+ 1360097 string characters out of 2862515
+ 2548885 words of memory out of 3000000
+ 75769 multiletter control sequences out of 15000+600000
  537830 words of font info for 122 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  107i,22n,122p,1082b,2804s stack positions out of 5000i,500n,10000p,200000b,80000s

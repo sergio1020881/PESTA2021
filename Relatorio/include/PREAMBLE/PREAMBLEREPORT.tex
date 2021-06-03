@@ -6,6 +6,7 @@
 %%		Stable, no issues found yet.
 %%		Note sequence is importante, and beware of clashing packages.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\documentclass[titlepage, a4paper, 11pt, fleqn, reqno, openany]{report}
 \documentclass[titlepage, a4paper, 11pt, reqno, openany]{report}
 \usepackage{titlepic}
 \usepackage[utf8]{inputenc}
@@ -71,6 +72,10 @@
 \usepackage{tikz}
 \usepackage{circuitikz}
 \usetikzlibrary{matrix, shapes.geometric, arrows, trees, positioning, calc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\mcirc{\mathbin{\scalerel*{\bigcirc}{t}}}
+\def\msquare{\mathord{\scalerel*{\Box}{gX}}}
+\def\ce{\mathrm{e}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%BEAMER%%%
 %\usetheme{Frankfurt} 
