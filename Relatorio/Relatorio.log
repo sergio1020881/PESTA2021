@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.30)  3 JUN 2021 03:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.30)  3 JUN 2021 14:05
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
@@ -1897,7 +1897,7 @@ ng (ext4): destination with the same identifier (name{page.i}) has been already
  used, duplicate ignored
 <to be read again> 
                    \relax 
-l.27 ...{\numberline {B}Física}{34}{appendix.a.B}
+l.27 ...berline {B}Definições}{87}{appendix.a.B}
                                                   % [1
 
 
@@ -2657,22 +2657,77 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--36
 ] [32
 
 
-] (input/anexo/Definition_1.tex
+] (input/anexo/Code.tex
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(56.9055pt, 483.69687pt, 56.9055pt)
+* v-part:(T,H,B)=(42.67912pt, 731.23584pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=483.69687pt
+* \textheight=731.23584pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-66.59087pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=50.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
 Anexo A.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 8.
+
+(C:\Program Files\MiKTeX\tex/latex/psnfss\t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+(input/anexo/Code/main_c.tex [33
+
+
+] [34] [35] [36]) [37]
+(input/anexo/Code/explode_h.tex) [38] (input/anexo/Code/explode_c.tex [39])
+[40] (input/anexo/Code/atmega128interrupt_h.tex) [41]
+(input/anexo/Code/atmega128interrupt_c.tex [42] [43] [44] [45]) [46]
+(input/anexo/Code/atmega128timer_h.tex [47]) [48]
+(input/anexo/Code/atmega128timer_c.tex [49] [50] [51] [52] [53] [54] [55]
+[56] [57] [58] [59] [60]) [61] (input/anexo/Code/function_h.tex) [62]
+(input/anexo/Code/function_c.tex [63] [64] [65] [66] [67] [68] [69] [70]
+[71]) [72] (input/anexo/Code/lcd_h.tex) [73] (input/anexo/Code/lcd_c.tex
+[74] [75] [76] [77] [78] [79]) [80] (input/anexo/Code/hx711_h.tex) [81]
+(input/anexo/Code/hx711_c.tex [82] [83]) [84] (input/anexo/Code/eeprom_h.tex)
+[85] (input/anexo/Code/eeprom_c.tex) [86]) (input/anexo/Definition_1.tex
+Anexo B.
 
 Overfull \hbox (46.71553pt too wide) in paragraph at lines 3--34
 [] []
  []
 
 )
-Overfull \hbox (46.71553pt too wide) in paragraph at lines 35--9
+Overfull \hbox (46.71553pt too wide) in paragraph at lines 35--12
 [][] []
  []
 
-[33
+[87
+
 
 ] (input/anexo/Physic_1.tex
-Anexo B.
+Anexo C.
 
 Underfull \hbox (badness 10000) in paragraph at lines 26--26
 
@@ -2724,89 +2779,34 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 61.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 61.
-<./image/General/Einstein.jpg, id=631, 255.95625pt x 179.16937pt>
+<./image/General/Einstein.jpg, id=4611, 255.95625pt x 179.16937pt>
 File: ./image/General/Einstein.jpg Graphic file (type jpg)
 <use ./image/General/Einstein.jpg>
 Package pdftex.def Info: ./image/General/Einstein.jpg  used on input line 70.
 (pdftex.def)             Requested size: 153.57492pt x 107.50244pt.
-) (input/anexo/Code.tex
-Overfull \hbox (37.334pt too wide) in paragraph at lines 26--2
+)
+Overfull \hbox (37.334pt too wide) in paragraph at lines 26--17
 []   [] 
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 26--2
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 26--17
 []$ $[]$ 
  []
 
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 26--2
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 26--17
 []$ $[]$ 
  []
 
-[34
+[88
 
  <./image/General/Einstein.jpg>]
-*geometry* verbose mode - [ newgeometry ] result:
-* driver: pdftex
-* paper: a4paper
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
-* h-part:(L,W,R)=(56.9055pt, 483.69687pt, 56.9055pt)
-* v-part:(T,H,B)=(42.67912pt, 731.23584pt, 71.13188pt)
-* \paperwidth=597.50787pt
-* \paperheight=845.04684pt
-* \textwidth=483.69687pt
-* \textheight=731.23584pt
-* \oddsidemargin=-15.36449pt
-* \evensidemargin=-15.36449pt
-* \topmargin=-66.59087pt
-* \headheight=12.0pt
-* \headsep=25.0pt
-* \topskip=11.0pt
-* \footskip=30.0pt
-* \marginparwidth=50.0pt
-* \marginparsep=10.0pt
-* \columnsep=10.0pt
-* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
-
-Anexo C.
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 8.
-
-(C:\Program Files\MiKTeX\tex/latex/psnfss\t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-(input/anexo/Code/main_c.tex [35
-
-
-] [36] [37] [38]) [39]
-(input/anexo/Code/explode_h.tex) [40] (input/anexo/Code/explode_c.tex [41])
-[42] (input/anexo/Code/atmega128interrupt_h.tex) [43]
-(input/anexo/Code/atmega128interrupt_c.tex [44] [45] [46] [47]) [48]
-(input/anexo/Code/atmega128timer_h.tex [49]) [50]
-(input/anexo/Code/atmega128timer_c.tex [51] [52] [53] [54] [55] [56] [57]
-[58] [59] [60] [61] [62]) [63] (input/anexo/Code/function_h.tex) [64]
-(input/anexo/Code/function_c.tex [65] [66] [67] [68] [69] [70] [71] [72]
-[73]) [74] (input/anexo/Code/lcd_h.tex) [75] (input/anexo/Code/lcd_c.tex
-[76] [77] [78] [79] [80] [81]) [82] (input/anexo/Code/hx711_h.tex) [83]
-(input/anexo/Code/hx711_c.tex [84] [85]) [86] (input/anexo/Code/eeprom_h.tex)
-[87] (input/anexo/Code/eeprom_c.tex) [88])
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 17.
+(Font)              <9> on input line 18.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 17.
+(Font)              <5> on input line 18.
 ) [89
-
 runsystem(makeindex -s Relatorio.ist -t Relatorio.glg -o Relatorio.gls Relatori
 o.glo)...executed (allowed).
 
@@ -2818,16 +2818,16 @@ o.acn)...executed (allowed).
 (include/SETUP/Abstract_2.aux)
 (include/SETUP/ContentFigureTableListingGlossary.aux))
 Package rerunfilecheck Info: File `Relatorio.out' has not changed.
-(rerunfilecheck)             Checksum: 631DAC2547FC5C10B9EA081D0A52DB96;3101.
+(rerunfilecheck)             Checksum: 23F4032F3429F16AA4A0D80DA2F7C107;3101.
  ) 
 Here is how much of TeX's memory you used:
  63224 strings out of 479081
  1360075 string characters out of 2862515
- 2548851 words of memory out of 3000000
+ 2548852 words of memory out of 3000000
  75765 multiletter control sequences out of 15000+600000
  537830 words of font info for 122 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 107i,22n,122p,1082b,2818s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 107i,22n,122p,1082b,2804s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -2855,7 +2855,7 @@ type1/public/lm/lmsy6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy8.
 pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Program Files
 /MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Program Files/MiKTeX/fonts/type1/p
 ublic/lm/lmtt9.pfb>
-Output written on Relatorio.pdf (104 pages, 7185324 bytes).
+Output written on Relatorio.pdf (104 pages, 7185357 bytes).
 PDF statistics:
  5541 PDF objects out of 6186 (max. 8388607)
  4020 named destinations out of 4296 (max. 500000)

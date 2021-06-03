@@ -23,6 +23,6 @@
 \contentsline {section}{\numberline {5.1}Trabalho Futuro}{30}{section.5.1}%
 \contentsline {chapter}{Refer\^{e}ncias}{31}{chapter*.44}%
 \contentsline {chapter}{Anexos}{32}{section*.45}%
-\contentsline {chapter}{\numberline {A}Definições}{33}{appendix.a.A}%
-\contentsline {chapter}{\numberline {B}Física}{34}{appendix.a.B}%
-\contentsline {chapter}{\numberline {C}Código}{35}{appendix.a.C}%
+\contentsline {chapter}{\numberline {A}Código}{33}{appendix.a.A}%
+\contentsline {chapter}{\numberline {B}Definições}{87}{appendix.a.B}%
+\contentsline {chapter}{\numberline {C}Física}{88}{appendix.a.C}%
