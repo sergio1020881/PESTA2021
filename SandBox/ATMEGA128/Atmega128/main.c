@@ -148,15 +148,15 @@ int main(void)
 		lcd0.reboot(); //Reboot LCD
 		F.boot(&F,PINF); //PORTF INPUT READING
 		/************INPUT***********/
-		if(hx.query(&hx)) //Catches falling Edge instance, begins bit shifting.
-			continue;
-		/***geting data interval***/
 		// Jump Menu signal
 		if(signal == ONE){ //INPUT FROM INTERRUPT SINALS
 			Menu = '2';
 			signal = ZERO; // ONE SHOT
 			lcd0.clear();
 		}
+		/***geting data interval***/
+		while(hx.query(&hx))
+		//Catches falling Edge instance, begins bit shifting.
 		tmp = hx.raw_average(&hx, average_n); // average_n  25 or 50, smaller means faster or more readings
 		/****************************/
 		switch(Menu){
