@@ -312,7 +312,7 @@ void PORTINIT(void)
 	PORTC = 0xFF;
 }
 /*
-** interrupt
+** interrupt 1
 */
 ISR(TIMER0_COMP_vect) // 15.4 us intervals
 {
@@ -323,9 +323,12 @@ ISR(TIMER0_COMP_vect) // 15.4 us intervals
 	hx.read_raw(&hx);
 	/***enable interrupts again***/
 	STATUS_REGISTER = Sreg;
-	}
-	ISR(TIMER1_COMPA_vect) // 1 second intervals
-	{
+}
+/*
+** interrupt 2
+*/
+ISR(TIMER1_COMPA_vect) // 1 second intervals
+{
 	/***CLEAR EEPROM OFFSET SEQUENCE START***/
 	if((F.ll(&F) & IMASK) == (ONE << 3)) //button 4
 	counter_1++;

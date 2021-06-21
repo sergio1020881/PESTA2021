@@ -446,6 +446,42 @@ Características DC/DC:
 \minipagespace{.5}
 Como a \textit{mainboard} tem um regulador de tensão linear de 5 Volt, para aumentar a eficiência e ter uma alimentação variável de entrada até 38VDC foi utilizado o \textit{buck converter} para alimentar o regulador de tensão linear para um valor próximo dos 5 Volt, por exemplo 9 Volt, porque se sabe que as perdas de um regulador de tensão linear é proporcional a queda de tensão entre a sua entrada e a sua saída. Podia-se remover o regulador de tensão linear e apenas utilizar o \textit{buck converter} regulado para o valor de 5 Volt mas pretendo não alterar o \acs{pcb} da \textit{mainboard}.
 %Explicar melhor
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Orçamento do material}
+Abaixo esta indicado uma tabela dos materiais usados, assim como os preços.
+\\
+\\
+%O orçamento deve estar num anexo, ou no capítulo da apresentação dos componentes, não na validação
+\begin{table}[H]{
+		\caption{Lista de material}
+		\rowcolors{3}{blue!80!yellow!50}{blue!70!yellow!40}
+		\begin{tabular}{ |p{12cm}|c|p{2cm}|  }
+			\hline
+			\multicolumn{3}{|c|}{Lista de Material} \\
+			\hline
+			Peça & Quant & Preço [uni] \\
+			\hline
+			Fonte de alimetação 12V 1A & 1 & \EUR{3.87} \\
+			Conversor DC-DC com voltímetro & 1 & \EUR{7.75} \\
+			ET BASE AVR Atmega128 Board & 1 & \EUR{23.92} \\
+			Test Input Board  & 1 & \EUR{3.71} \\
+			Test Output Board & 1 & \EUR{3.71} \\
+			\acs{idc} Socket 10 way    & 12 & \EUR{0.31} \\
+			\acs{idc} Header Straight 10 way    & 12 & \EUR{0.25} \\
+			Flatcable    & ? & \EUR{?} \\
+			20x4 \acs{lcd} Module Blue & 1 & \EUR{12.24} \\
+			SparkFun Load Cell Amplifier HX711 & 1 & \EUR{13.04}   \\
+			50Kg Load Cell & 1 & \EUR{12} \\
+			\hline
+			& \textit{total} & \EUR{86.96} \\
+			\hline
+		\end{tabular}
+	}
+	\label{material}
+\end{table}
+Os preços são o que estão disponíveis no mercado, quanto a \textit{mainboard} foi o que arranjei com o preço mais competitivo com este \acs{mcu} Atmega 128, outras alternativas atingiam o mesmo preço ou mais caros mas com um \acs{mcu} com menor capacidade.
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Software}
 \section{Software}
@@ -481,20 +517,20 @@ O \ac{ide} utilizado neste trabalho foi o \textbf{\textit{{Microchip Studio for 
 %Mudar para Português
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.6]{./image/PESTA/flowchart/Main_Program_1.jpg}
+	\includegraphics[scale=1]{./image/PESTA/flowchart/Main-Program-1.jpg}
 	\caption{Estrutura do Programa}
 	\label{Main_Program_1}
 \end{figure}
 \figurespace{.5}
-O \textit{PROGRAM 1} é onde corre o programa da balança, e o \textit{PROGRAM 2} usado para calibração do \textit{gain factor}.
+O \textit{PROGRAMA 1} é onde corre o programa da balança, e o \textit{PROGRAMA 2} usado para calibração do \textit{gain factor}.
 \newpage
 Todos os programas seguem uma estrutura sintática usando o seguinte modelo.
 \\
 \\
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\linewidth]{./image/PESTA/flowchart/Generic_structure.jpg}
-	\caption{Sintaxe Genérica dos programas}
+	\includegraphics[height=8cm, width=\linewidth]{./image/PESTA/flowchart/Generic-structure-1.jpg}
+	\caption{Sintaxe genérica dos programas}
 	\label{Geneic_structure}
 \end{figure}
 \figurespace{.5}
@@ -505,7 +541,7 @@ Duas interrupções periódicas estão sempre a correr em \textit{background}, u
 \begin{minipage}{.5\linewidth}
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=.85]{./image/PESTA/flowchart/Interrupt_1.jpg}
+	\includegraphics[scale=.85]{./image/PESTA/flowchart/Interrupt-1.jpg}
 	\caption{\acs{adc} conversão}
 	\label{Interrupt_1}
 \end{figure}
@@ -513,25 +549,46 @@ Duas interrupções periódicas estão sempre a correr em \textit{background}, u
 \begin{minipage}{.5\linewidth}
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=.85]{./image/PESTA/flowchart/Interrupt_2.jpg}
+	\includegraphics[scale=.85]{./image/PESTA/flowchart/Interrupt-2.jpg}
 	\caption{Saltar de \textit{Menu}}
 	\label{Interrupt_2}
 \end{figure}
 \end{minipage}
 \end{minipage}
 \minipagespace{.5}
-O código para leitura das rotinas de interrupção esta disponível nas folhas \textit{anexas} \ref{main-c}.
+%O código para leitura das rotinas de interrupção esta disponível nas folhas \textit{anexas} \ref{main-c}.
 %É preferivel inseriri o excerto de código e descrever o funcionamento das interrupções
+\begin{minipage}{.40\linewidth}
+	\begin{figure}[H]
+		\flushleft
+		\captionsetup{justification=raggedright,singlelinecheck=false}
+		\includegraphics[scale=0.9]{./image/PESTA/Code/Livrarias.jpg}
+		\caption{Livrarias}
+		\label{Bibliotecas}
+	\end{figure}
+\end{minipage}
+\begin{minipage}{.6\linewidth}
+	Ao lado estão as bibliotecas usadas neste projeto, as que estão dentro da caixa amarela são as que foram criadas por mim.
+	A filosofia usada é de criar objetos que representam o \textit{hardware} para o poder manipular via código. Como se pode observar, foi criada uma biblioteca para os temporizadores, outra para as interrupções e \ac{eeprom}, depois foram criadas bibliotecas para os componentes externos, isto é, o \acs{lcd} e o integrado \textbf{HX711}.
+	\\
+	Uma abstração que torna simples executar qualquer algoritmo ou projeto, e isto só é possível depois de ultrapassar a barreira de desenvolver as bibliotecas.
+\end{minipage}
+\minipagespace{.5}
+Durante este projeto tentou-se dentro do possível sempre seguir as boas práticas de programação, como a \texttt{indentação} específica para cada situação, e manter a estrutura de norma. Deve-se manter uma metodologia de trabalho que segue as normas assim é percetível para todos e facilita detetar \textit{bugs}, e é uma pratica que abrange todas as linguagens, por exemplo o \textbf{Python} é fundado nesse princípio.
 \\
 \\
+Quanto às interrupções é sempre um desafio, porque as tarefas têm que ser bem organizadas temporalmente para não entrar em conflitos, pretende-se assim sempre que o código corra na função \textit{main} e as interrupções são algo esporádico e muito rápido, estas devem servir de \textit{flags} para executar rotinas na função \textit{main}, ou seja, servirem de \textit{inputs}. %%\textbf{\textcolor{green}{INPUTS}}.
+%\newpage
 %Passar isso para a parte de software
-O código que executa esta rotina é demonstrado na \textit{lista} \ref{HX711-read-raw}, sendo esta chamada pelas interrupções periódicas, e só é ativa quando o resultado da função na \textit{lista} \ref{Main-While-case-1} \textbf{hx.query(\&hx)} é verdadeira.
+\\
+\\
+O código que executa a rotina de leitura \acs{adc} é demonstrado na \textit{lista} \ref{HX711-read-raw}, sendo que esta é chamada pela interrupção periódica da \textit{figura} \ref{Interrupt_1}, em que  só é ativa quando o resultado da função na \textit{lista} \ref{Main-While-case-1} \textbf{hx.query(\&hx)} é verdadeira.
 {
 	\lstinputlisting[language=C, caption={função de chamada \textbf{hx.query(\&hx)}}, captionpos=b, label=Main-While-case-1]{./input/code/hx_query.c}
 }
 \newpage
 {
-	\lstinputlisting[language=C, caption=HX711\_read\_raw, captionpos=b, label=HX711-read-raw]{./input/code/HX711_read_raw.c}
+	\lstinputlisting[language=C, caption=HX711 read raw, captionpos=b, label=HX711-read-raw]{./input/code/HX711_read_raw.c}
 }
 %\listingspace{.1}
 Após obter um número determinado de valores discretos lidos pelo amplificador de sinal (HX711) é calculada uma média,
@@ -542,26 +599,11 @@ Após obter um número determinado de valores discretos lidos pelo amplificador 
 para ser tratado e deduzido o valor correspondente da massa.
 \\
 \\
-\begin{minipage}{.40\linewidth}
-\begin{figure}[H]
-	\flushleft
-	\captionsetup{justification=raggedright,singlelinecheck=false}
-	\includegraphics[scale=0.9]{./image/PESTA/Code/Livrarias.jpg}
-	\caption{Livrarias}
-	\label{Bibliotecas}
-\end{figure}
-\end{minipage}
-\begin{minipage}{.6\linewidth}
-Ao lado estão as bibliotecas usadas neste projeto, as que estão dentro da caixa amarela são as que foram criadas por mim.
-A filosofia usada é de criar objetos que representam o \textit{hardware} para o poder manipular via código. Como se pode observar, foi criada uma biblioteca para os temporizadores, outra para as interrupções e \ac{eeprom}, depois foram criadas bibliotecas para os componentes externos, isto é, o \acs{lcd} e o integrado \textbf{HX711}.
+Enquanto a interrupção periódica para saltar entre \textit{menu} esta abaixo indicado na \textit{lista} \ref{Jump-menu}.
 \\
-Uma abstração que torna simples executar qualquer algoritmo ou projeto, e isto só é possível depois de ultrapassar a barreira de desenvolver as bibliotecas.
-\end{minipage}
-\minipagespace{.5}
-Durante este projeto tentou-se dentro do possível sempre seguir as boas práticas de programação, como a \texttt{indentação} específica para cada situação, e manter a estrutura de norma. Deve-se manter uma metodologia de trabalho que segue as normas assim é percetível para todos e facilita detetar \textit{bugs}, e é uma pratica que abrange todas as linguagens, por exemplo o \textbf{Python} é fundado nesse princípio.
-\\
-\\
-Quanto às interrupções é sempre um desafio, porque as tarefas têm que ser bem organizadas temporalmente para não entrar em conflitos, pretende-se assim sempre que o código corra na função \textit{main} e as interrupções são algo esporádico e muito rápido, estas devem servir de \textit{flags} para executar rotinas na função \textit{main}, ou seja, servirem de \textit{inputs}. %%\textbf{\textcolor{green}{INPUTS}}.
+{
+	\lstinputlisting[language=C, caption=Saltar de menu, captionpos=b, label=Jump-menu]{./input/code/Jump_menu.c}
+}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Validação do projeto implementado}
@@ -576,43 +618,7 @@ As escolhas feitas estão dentro dos parâmetros da oferta disponibilizada. Apen
 \\
 \\
 O sensor usado é o mais comum nesta pratica, e escolha demonstrada, o circuito de interface é indiferente, a escolha apenas é baseada na sua precisão, ou seja, é de \textcolor{blue}{24} \textit{bits} enquanto o \acs{adc} do \acs{mcu} de apenas \textcolor{blue}{10} \textit{bits} de resolução.
-%os 24 bits são necessarios? Os 10 não satifazem os objectivos ? Chega-se a este capítulo e isto não foi apresentado até agora
-\\
-\\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Material}
-Abaixo esta indicado uma tabela dos materiais usados, assim como os preços.
-\\
-\\
-%O orçamento deve estar num anexo, ou no capítulo da apresentação dos componentes, não na validação
-\begin{table}[H]{
-		\caption{Lista de material}
-		\rowcolors{3}{blue!80!yellow!50}{blue!70!yellow!40}
-		\begin{tabular}{ |p{12cm}|c|p{2cm}|  }
-			\hline
-			\multicolumn{3}{|c|}{Lista de Material} \\
-			\hline
-			Peça & Quant & Preço [uni] \\
-			\hline
-			Fonte de alimetação 12V 1A & 1 & \EUR{3.87} \\
-			Conversor DC-DC com voltímetro & 1 & \EUR{7.75} \\
-			ET BASE AVR Atmega128 Board & 1 & \EUR{23.92} \\
-			Test Input Board  & 1 & \EUR{3.71} \\
-			Test Output Board & 1 & \EUR{3.71} \\
-			\acs{idc} Socket 10 way    & 12 & \EUR{0.31} \\
-			\acs{idc} Header Straight 10 way    & 12 & \EUR{0.25} \\
-			Flatcable    & ? & \EUR{?} \\
-			20x4 \acs{lcd} Module Blue & 1 & \EUR{12.24} \\
-			SparkFun Load Cell Amplifier HX711 & 1 & \EUR{13.04}   \\
-			50Kg Load Cell & 1 & \EUR{12} \\
-			\hline
-			& \textit{total} & \EUR{86.96} \\
-			\hline
-		\end{tabular}
-	}
-	\label{material}
-\end{table}
-Os preços são o que estão disponíveis no mercado, quanto a \textit{mainboard} foi o que arranjei com o preço mais competitivo com este \acs{mcu} Atmega 128, outras alternativas atingiam o mesmo preço ou mais caros mas com um \acs{mcu} com menor capacidade.
+%Os 24 bits são necessarios? Os 10 não satifazem os objectivos ? Chega-se a este capítulo e isto não foi apresentado até agora
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Testar}
@@ -623,7 +629,7 @@ O botão \textcolor{green}{PORTF 3} quando premido durante \textcolor{blue}{cinc
 O botão \textcolor{green}{PORTF 4} quando premido durante \textcolor{blue}{cinco} segundos entra no menu de calibração do valor do \textit{gain factor} e o \textit{led} no \textcolor{red}{PORTC 7} liga, usando os botões de incrementa e decrementar, isto é, o
 \textcolor{green}{PORTF 3} e \textcolor{green}{PORTF 4} pode-se alterar esse valor.\\
 \\
-Para assumir o valor e sair do menu de calibração basta premir o botão colocado no \textcolor{green}{PORTF 5}. Tanto no caso de calibração ou de \textit{offset} os valores são guardados na \acs{eeprom} do micro-controlador, sendo que, se retirar a alimentação do circuito este não perde os valores e o \textit{LED} \textcolor{red}{PORTC 5} permanece ligado.
+Para assumir o valor e sair do menu de calibração basta premir o botão colocado no \textcolor{green}{PORTF 5}. Tanto no caso de calibração ou de \textit{offset} os valores são guardados na \acs{eeprom} do micro-controlador, sendo que, se retirar a alimentação do circuito este não perde os valores e o \textit{led} no \textcolor{red}{PORTC 5} permanece ligado.
 \\
 \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

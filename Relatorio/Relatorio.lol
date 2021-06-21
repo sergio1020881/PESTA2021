@@ -1,7 +1,8 @@
 \babel@toc {portuguese}{}
 \babel@toc {portuguese}{}
-\contentsline {lstlisting}{\numberline {4.1}função de chamada \textbf {hx.query(\&hx)}}{28}{lstlisting.4.1}%
-\contentsline {lstlisting}{\numberline {4.2}HX711\_read\_raw}{30}{lstlisting.4.2}%
+\contentsline {lstlisting}{\numberline {4.1}função de chamada \textbf {hx.query(\&hx)}}{30}{lstlisting.4.1}%
+\contentsline {lstlisting}{\numberline {4.2}HX711 read raw}{31}{lstlisting.4.2}%
+\contentsline {lstlisting}{\numberline {4.3}Saltar de menu}{32}{lstlisting.4.3}%
 \contentsline {lstlisting}{\numberline {A.1}main.c}{39}{lstlisting.a.A.1}%
 \contentsline {lstlisting}{\numberline {A.2}explode.h}{44}{lstlisting.a.A.2}%
 \contentsline {lstlisting}{\numberline {A.3}explode.c}{45}{lstlisting.a.A.3}%

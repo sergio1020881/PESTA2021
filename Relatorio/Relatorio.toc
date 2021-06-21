@@ -17,12 +17,12 @@
 \contentsline {section}{\numberline {3.3}Display \acs {lcd}}{18}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Micro-controlador}{20}{section.3.4}%
 \contentsline {section}{\numberline {3.5}Fonte de Alimentação}{25}{section.3.5}%
-\contentsline {chapter}{\numberline {4}Software}{26}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Software}{26}{section.4.1}%
-\contentsline {chapter}{\numberline {5}Validação do projeto implementado}{32}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Validação}{32}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Material}{32}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Testar}{34}{subsection.5.1.2}%
+\contentsline {section}{\numberline {3.6}Orçamento do material}{26}{section.3.6}%
+\contentsline {chapter}{\numberline {4}Software}{27}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Software}{27}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Validação do projeto implementado}{33}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Validação}{33}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Testar}{34}{subsection.5.1.1}%
 \contentsline {chapter}{\numberline {6}Conclusões}{35}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Trabalho Futuro}{36}{section.6.1}%
 \contentsline {chapter}{Refer\^{e}ncias}{37}{chapter*.47}%
