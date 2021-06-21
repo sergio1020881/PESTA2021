@@ -1,30 +1,35 @@
 \chapter{Introdução}
-Num mundo altamente mecanizado, a força e o torque dentro de todas as grandezas, são as mais comuns. Estas tem um papel significante nos produtos de medição de massa e células de carga usadas na industria e retalho, nos automóveis e nas aeronaves, no aperto de tampas de frascos de medicina e parafusos.\cite{book-9}\\
+Num mundo altamente mecanizado, a força e o torque dentro de todas as grandezas, são as mais comuns. Estas têm um papel significativo nos aparelhos de medição de massa e células de carga usadas na indústria e retalho, nos automóveis e nas aeronaves, no aperto de tampas de frascos de medicina e parafusos.\cite{book-9}\\
 \\
-A massa é uma das grandezas fundamentais, uma propriedade intrínseca de um objeto, em que se mede pela sua resistência a aceleração.\cite{book-2}
+A massa é uma das grandezas fundamentais, uma propriedade intrínseca de um objeto, que se mede pela sua resistência à aceleração.\cite{book-2}
+%melhorar imagen
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\linewidth]{./image/PESTA/fisica/mass.jpg}
 	\caption{Peso e Massa}
 	\label{mass}
 \end{figure}
-Através da medição do peso, isto é, da força gravitacional exercida num dado objeto, podemos calcular a massa. \cite{book-2}\\
+Através da medição do peso, isto é, da força gravitacional exercida num dado objeto, podemos calcular a massa. \cite{book-2}
 \\
-As balanças digitais estão presentes no nosso dia a dia, e tornaram-se numa ferramenta indispensável na industria, comercio e laboratórios. Determinar a massa dos objetos facilitou a moeda de troca no comercio, e tornou-se num pilar fundamental da física e seu desenvolvimentos. Existe uma demanda tanto da área comercial como industrial que empurra o desenvolvimento dos sensores para obter melhores resultados quanto a precisão e imunidade de influencias exteriores na medição das grandezas mencionadas.\\
 \\
-Devido à importância desta grandeza (massa), foi a razão de querer desenvolver uma balança digital para uso domestico usando os meios que estão disponíveis no mercado.
+A massa dos objetos pode ser medida por balanças utilizando vários métodos, tais como as alavancas convencionais, por  molas e sistemas mais modernos, isto é, balanças digitais.
+\\
+\\
+As balanças digitais estão presentes no nosso dia a dia, e tornaram-se numa ferramenta indispensável na indústria, comércio e laboratórios. Determinar a massa dos objetos facilitou a moeda de troca no comércio, e tornou-se num pilar fundamental da física e seu desenvolvimentos. Existe uma demanda, tanto na área comercial como na industrial, que empurra o desenvolvimento dos sensores para obter melhores resultados quanto a precisão e imunidade de influências exteriores na medição das grandezas mencionadas.\\
+\\
+A importância desta grandeza (massa), foi o mote para o projeto proposto: a implementação de uma balança digital para uso doméstico, usando os meios que estão disponíveis no mercado.
 \newpage
 \section{Objetivos}
-O Objetivo principal deste projeto será fazer uma balança digital economicamente viável, usando os sensores e equipamentos disponíveis no mercado, para ter um produto útil fácil de se replicar.
+O objetivo principal deste projeto será a implementação de uma balança digital economicamente viável, usando os sensores e equipamentos disponíveis no mercado, para ter um produto útil e fácil de ser replicado.
 \\
 \\
 Escolher o sensor adequado e meios de tratamento da informação e comunicação, será o objeto de estudo. Tendo como foco a utilização de um \textit{Embeded System} utilizando as ferramentas necessárias para o executar.
 \\
 \\
-No final tentar aperfeiçoar, fazer melhorias, alterações e adaptações que possam surgir, de forma a simplificar o projeto e torna-lo mais atraente ao consumidor final.
+No final o produto obtido será testado, de forma a tentar aperfeiçoar, fazer melhorias, alterações e adaptações que possam surgir, de forma a simplificar o projeto e torná-lo mais atraente ao consumidor final.
 \newpage
 \section{Calendarização}
-O segundo semestre teve inicio em 8 de Março, num ambiente de pandemia COVID-19 onde fomos forçados ao ensinamento à distancia, e todo o trabalho teve de ser acompanhado \textit{online} pelos docentes. No entanto tive de organizar as tarefas pretendidas no plano abaixo descrito, para poder fazer a entrega deste trabalho, antes da data limite da época normal (28 de Junho de 2021).
+O segundo semestre teve inicio em 8 de Março, num ambiente de pandemia COVID-19 período durante o qual fomos forçados ao ensino à distancia, e todo o trabalho teve de ser acompanhado \textit{online} pelos docentes. No entanto foi necessário organizar as tarefas pretendidas de acordo com o plano abaixo descrito, para poder fazer a entrega deste trabalho antes da data limite da época normal (28 de Junho de 2021).
 \\
 \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -51,7 +56,7 @@ O segundo semestre teve inicio em 8 de Março, num ambiente de pandemia COVID-19
 		\ganttbar{Kit Desenvolvimento}{3}{4} \\
 		\ganttbar{Montagen Mesa Sensor}{5}{7} \\%5 7
 		\ganttbar{HX711 comunicação}{4}{10} \\%4 8
-		\ganttbar{Programção e Ensaio}{4}{20}\\
+		\ganttbar{Programação e Ensaio}{4}{20}\\
 		%\ganttlink{elem4}{elem5}
 		%\ganttlink{elem5}{elem6}
 		%\ganttlink{elem6}{elem7}
@@ -59,8 +64,8 @@ O segundo semestre teve inicio em 8 de Março, num ambiente de pandemia COVID-19
 		%Third Group
 		\ganttgroup{Relatório}{9}{20} \\
 		\ganttbar{Literartura}{8}{12} \\
-		\ganttbar{Analise Documentação}{9}{12} \\
-		\ganttbar{Validação}{10}{12} \\
+		\ganttbar{Análise documentação}{9}{12} \\
+		%\ganttbar{Validação}{10}{12} \\
 		\ganttbar{Execução}{10}{20}
 		%\ganttlink{elem8}{elem9}
 		%\ganttlink{elem9}{elem10}
@@ -72,18 +77,30 @@ O segundo semestre teve inicio em 8 de Março, num ambiente de pandemia COVID-19
 \end{table}
 \newpage
 \section{Organização do Relatório}
-No capítulo 1 é feita uma contextualização do trabalho realizado e do seu propósito face às necessidades do mundo atual.\\
+No capítulo 1 é feita uma contextualização do trabalho realizado e do seu propósito face às necessidades do mundo atual.
 \\
-No capítulo 2 vai ser descrito uma breve historia da evolução das balanças, e depois um estudo da balança digital.
+\\
+No capítulo 2 é apresentada uma breve história da evolução das balanças, e depois um estudo da balança digital.
+\\
+\\
+No capitulo 3 é apresentado a balança digital, seus componentes e características descrevendo seus funcionamentos.
+\\
+\\
+No capitulo 4 é descrito o software utilizado, estrutura do programa, e a implementação do código.
+\\
+\\
+O capitulo 5 são exposto as conclusões e futuras possíveis alterações de melhoramento do produto.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{História da Balança}
+\chapter{Evolução da balança}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-As balanças foram criadas por necessidade durante o desenvolvimento do comercio na antiguidade. Os produtos que não recorriam a contagem por unidades, tais como objetos irregulares (por exemplo o ouro) tinha de se quantificar o seu valor, e a forma de medir a sua massa tornou-se numa variável de medição para a troca de bens.
+\section{O aparecimento e a evolução da balança}
+As balanças foram criadas por necessidade durante o desenvolvimento do comércio na antiguidade. Os produtos que não recorriam a contagem por unidades, tais como objetos irregulares (por exemplo o ouro) tinha de se quantificar o seu valor, e a forma de medir a sua massa tornou-se numa variável de medição para a troca de bens.
 \\
 \\
-A relíquia mais antiga de uma balança de medir massa, foi descoberto na vila de \textit{Indus River}, perto do conhecido por hoje de Pakistão, e estima-se ser por volta de \textcolor{blue}{2000} A.C.
+A relíquia mais antiga de uma balança de medir massa foi descoberta na vila de \textit{Indus River}, perto da região hoje conhecida como Paquistão, e estima-se ser por volta de \textcolor{blue}{2000} A.C.
 \\
-Estas primeiras balanças eram alavancas em equilíbrio $[ \; F_{1} \times b_{1c} = F_{2} \times b_{2c} \; ]$, onde nos extremos eram colocados cestos e se colocava os pesos, este estava centrado no seu centro de massa, assim se os pesos nos dois cestos fossem iguais, a alavanca ficava em equilíbrio (na horizontal), tornando-se nessa altura num sistema de comparação, com recursos a pesos fixos estabelecidos como norma e designados de (\textbf{contra-pesos}).
+Estas primeiras balanças eram alavancas em equilíbrio. $[ \; F_{1} \times b_{1c} = F_{2} \times b_{2c} \; ]$. Nos extremos eram colocados cestos estando este conjunto centrado no seu centro de massa. Assim, se os pesos colocados nos dois cestos fossem iguais, a alavanca ficava em equilíbrio (na horizontal). Esse tipo de balança era um sistema de comparação, com recurso a pesos fixos estabelecidos como norma e designados de \textbf{contra-pesos}.
 \\
 \begin{minipage}[!b]{0.45\linewidth}
 	\begin{figure}[H]
@@ -98,7 +115,7 @@ Estas primeiras balanças eram alavancas em equilíbrio $[ \; F_{1} \times b_{1c
 	\begin{figure}[H]
 		\centering
 		\includegraphics[height=7cm]{./image/PESTA/general/balanca_4.jpg}
-		\caption{Balança}
+		\caption{Balança de laboratório}
 		%\caption{Balança moderna \cite{book-7}}
 		\label{balanca_4}
 	\end{figure}
@@ -106,9 +123,9 @@ Estas primeiras balanças eram alavancas em equilíbrio $[ \; F_{1} \times b_{1c
 \newline
 \newline
 \newline
-Este sistema pode ter uma boa precisão, mas também pode se facilmente ser adulterado.
+Este sistema tem grande precisão, mas também pode se facilmente ser adulterado.
 \newpage
-Os métodos de medir a massa de objetos não conheceu nenhumas melhorias tecnológicas relevantes até a era industrial. Só nos fins do século \textcolor{blue}{\textit{XVIII}} é que o meio de medir a massa de objetos não dependia de \textbf{contra-pesos}. As balanças por molas foram inventado por volta de \textcolor{blue}{1770} em Inglaterra por \textbf{\textit{Richard Salter}}, um fabricante de balanças.
+Os métodos de medir a massa de objetos não conheceram nenhumas melhorias tecnológicas relevantes até à era industrial. Só nos fins do século \textcolor{blue}{\textit{XVIII}} é que o meio de medir a massa de objetos não dependia de \textbf{contra-pesos}. As balanças por molas foram inventados por volta de \textcolor{blue}{1770} em Inglaterra por \textit{Richard Salter}, um fabricante de balanças.
 \\
 \begin{figure}[H]
 	\centering
@@ -117,7 +134,7 @@ Os métodos de medir a massa de objetos não conheceu nenhumas melhorias tecnol�
 	\url{https://en.wikipedia.org/wiki/Salter_Housewares}
 	\label{Weigh_Scale_Salter_1}
 \end{figure}
-A balança por mola, como o nome implica, mede a pressão (ou sua tensão) exercido sobre a mola para determinar a massa do objeto. Este tipo de balanças ainda são muito comum nos dias de hoje, por serem bastante económicas de fabricar, mas não tem tanta precisão como as eletrónicas desenvolvidas e aperfeiçoadas durante o século \textcolor{blue}{\textit{XX}}.
+A balança por mola, como o nome implica, mede a pressão (ou sua tensão) exercida sobre a mola para determinar a massa do objeto. Este tipo de balanças ainda é muito comum nos dias de hoje, por serem bastante económicas de fabricar, mas não têm tanta precisão como as eletrónicas desenvolvidas e aperfeiçoadas durante o século \textcolor{blue}{\textit{XX}}.
 \\
 \begin{minipage}[!b]{\linewidth}
 	\begin{figure}[H]
@@ -131,6 +148,8 @@ A balança por mola, como o nome implica, mede a pressão (ou sua tensão) exerc
 	\end{figure}
 \end{minipage}
 \minipagespace{.5}
+\section{A balança eletrónica}
+%Desenvolver mais
 As balanças eletrónicas mais modernas, utilizam resistências elétricas instaladas sobre materiais flexíveis por onde passa uma corrente elétrica, na qual é possível detetar a variação de condutividade das resistências. Esta variação é proporcional à pressão exercida sobre esse material, podendo dai obter-se o peso dos objetos.
 \\
 \begin{figure}[H]
@@ -139,25 +158,27 @@ As balanças eletrónicas mais modernas, utilizam resistências elétricas insta
 	\caption{Balança eletrónica}
 	\label{Scale_1}
 \end{figure}
-O que vai ser utilizado no projeto, vai ser um \textbf{célula de carga}, que segue o principio acima mencionado. Estas células tem sensores \textit{\textbf{strain gauges}} ligadas numa configuração de \textit{wheatstone}, que vão detetar a distorção (pressão) do material, ou seja, da célula de carga e gerar um sinal de diferença de potencial proporcional a força exercida quando alimentada. Seque o mesmo principio de uma mola.
+No projeto proposto será utilizada uma \textbf{célula de carga}, que segue o princípio acima mencionado. Estas células têm sensores \textit{\textbf{strain gauges}} ligadas em ponte de \textit{Wheatstone}, que vão detetar a distorção (pressão) do material, ou seja, da célula de carga e gerar um sinal de diferença de potencial proporcional à força exercida. Seque o mesmo princípio de uma mola.
+%As expressões aparecem sem ligação ao texto
+%Deve desenvolver mais esta parte, resultando numa mais elaborada fundamentação teórica
 \begin{equation}
 	\label{eq:Hooke}
 	K = \frac{\Delta l}{F}
 \end{equation}
-Existe outros tipos de células de carga, tais como, as pneumáticas e hidráulicas, que convertem a pressão num sinal elétrico, que é proporcional a força nela exercida.
+Outros tipos de células de carga, tais como as pneumáticas e hidráulicas, convertem a pressão num sinal elétrico, que é proporcional à força nela exercida, de acordo com a expressão \ref{eq:Preasure}.
 \begin{equation}
 	\label{eq:Preasure}
 	P = \frac{F}{A}
 \end{equation}
-As células de carga capacitivas, são outro exemplo, de como obter um sinal proporcional da força imposta como carga, neste caso, é medido a sua capacidade de acordo com o afastamento ou aproximação das placas dos elétrodos.
+As células de carga capacitivas são outro exemplo de como obter um sinal proporcional da força imposta como carga. Neste caso, é medida a sua capacidade de acordo com o afastamento ou aproximação das placas dos elétrodos.
 \begin{equation}
 	\label{eq:Capacity}
 	C = \varepsilon_{0} \; \varepsilon_{r} \; \frac{A}{d}
 \end{equation}
-Também existe células, que utilizam o principio de ressonância, desfasamento de fase, e pelo efeito \textit{doppler}, para determinar a pressão ou distorção das células de carga e consequente uma medição.
+Também existem células, que utilizam o princípio de ressonância, desfasamento de fase, e pelo efeito \textit{Doppler} para determinar a pressão ou distorção das células de carga e o que resulta numa medição.
 \\
 \\
-Pode-se dizer que, em todos os casos determina-se a força resultante através do deslocamento no espaço.
+Pode-se dizer que, em todos os casos se determina a força resultante através do deslocamento no espaço.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{comment}
 Measurement devices need to be robust to withstand changing environmental influences such as temperature, vibration, and humidity, and they must also provide reliable measurement over long periods of time. Mechanical interfacing of the devices can be difficult and can influence final measurement. The forces and torques may change rapidly, and so the devices must have adequate frequency and transient responses.\\
