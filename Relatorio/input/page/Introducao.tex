@@ -5,14 +5,14 @@ A massa é uma das grandezas fundamentais, uma propriedade intrínseca de um obj
 %melhorar imagen
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\linewidth]{./image/PESTA/fisica/mass.jpg}
+	\includegraphics[width=\linewidth]{./image/PESTA/fisica/mass-1.png}
 	\caption{Peso e Massa}
 	\label{mass}
 \end{figure}
 Através da medição do peso, isto é, da força gravitacional exercida num dado objeto, podemos calcular a massa. \cite{book-2}
 \\
 \\
-A massa dos objetos pode ser medida por balanças utilizando vários métodos, tais como as alavancas convencionais, por  molas e sistemas mais modernos, isto é, balanças digitais.
+A massa dos objetos pode ser medida por balanças utilizando vários métodos, tais como as alavancas convencionais, por  molas e sistemas mais modernos, tais como, balanças digitais.
 \\
 \\
 As balanças digitais estão presentes no nosso dia a dia, e tornaram-se numa ferramenta indispensável na indústria, comércio e laboratórios. Determinar a massa dos objetos facilitou a moeda de troca no comércio, e tornou-se num pilar fundamental da física e seu desenvolvimentos. Existe uma demanda, tanto na área comercial como na industrial, que empurra o desenvolvimento dos sensores para obter melhores resultados quanto a precisão e imunidade de influências exteriores na medição das grandezas mencionadas.\\
@@ -56,14 +56,14 @@ O segundo semestre teve inicio em 8 de Março, num ambiente de pandemia COVID-19
 		\ganttbar{Kit Desenvolvimento}{3}{4} \\
 		\ganttbar{Montagen Mesa Sensor}{5}{7} \\%5 7
 		\ganttbar{HX711 comunicação}{4}{10} \\%4 8
-		\ganttbar{Programação e Ensaio}{4}{20}\\
+		\ganttbar{Programação e ensaio}{4}{20}\\
 		%\ganttlink{elem4}{elem5}
 		%\ganttlink{elem5}{elem6}
 		%\ganttlink{elem6}{elem7}
 		%\ganttmilestone{Milestone 1}{11}
 		%Third Group
 		\ganttgroup{Relatório}{9}{20} \\
-		\ganttbar{Literartura}{8}{12} \\
+		\ganttbar{Literatura}{8}{12} \\
 		\ganttbar{Análise documentação}{9}{12} \\
 		%\ganttbar{Validação}{10}{12} \\
 		\ganttbar{Execução}{10}{20}
@@ -89,7 +89,10 @@ No capitulo 3 é apresentado a balança digital, seus componentes e característ
 No capitulo 4 é descrito o software utilizado, estrutura do programa, e a implementação do código.
 \\
 \\
-O capitulo 5 são exposto as conclusões e futuras possíveis alterações de melhoramento do produto.
+O capitulo 5 é a validação do projeto  e seu funcionamento.
+\\
+\\
+O capitulo 6 são exposto as conclusões e futuras possíveis alterações de melhoramento do produto.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Evolução da balança}
@@ -158,13 +161,32 @@ As balanças eletrónicas mais modernas, utilizam resistências elétricas insta
 	\caption{Balança eletrónica}
 	\label{Scale_1}
 \end{figure}
-No projeto proposto será utilizada uma \textbf{célula de carga}, que segue o princípio acima mencionado. Estas células têm sensores \textit{\textbf{strain gauges}} ligadas em ponte de \textit{Wheatstone}, que vão detetar a distorção (pressão) do material, ou seja, da célula de carga e gerar um sinal de diferença de potencial proporcional à força exercida. Seque o mesmo princípio de uma mola.
+No projeto proposto será utilizada uma \textbf{célula de carga}, que segue o princípio acima mencionado. Estas células têm sensores \textit{\textbf{strain gauges}} ligadas em ponte de \textit{Wheatstone}, que vão detetar a distorção (pressão) do material, ou seja, da célula de carga e gerar um sinal de diferença de potencial proporcional à força exercida. Seque o mesmo princípio de uma mola. Todas as molas tem uma constante de elasticidade conhecida pela lei de Hooke \cite{book-3} \textit{equação} \ref{eq:Hooke}.
+%\\
 %As expressões aparecem sem ligação ao texto
 %Deve desenvolver mais esta parte, resultando numa mais elaborada fundamentação teórica
 \begin{equation}
 	\label{eq:Hooke}
-	K = \frac{\Delta l}{F}
+	K = \frac{\Delta x}{F}
 \end{equation}
+\equationspace{.5}
+\begin{figure}[H]
+	\centering
+	\includegraphics[height=5cm]{./image/PESTA/fisica/Hooke-1.jpg}
+	\caption{Exemplo lei de Hooke \cite{book-3}}
+	\label{Hooke-1}
+\end{figure}
+Pela \textit{figura} \ref{Hooke-1} resulta a equação do sistema.
+\begin{equation}
+	\label{eq:Lei-de-Hooke}
+	F_x = -K \; x
+\end{equation}
+A equação da energia dissipada pela mola é dada pela  \textit{equação}. \ref{eq:Hooke-Energia}
+\begin{equation}
+	\label{eq:Hooke-Energia}
+	W_s = - \; \frac{1}{2} \; K x^2
+\end{equation}
+
 Outros tipos de células de carga, tais como as pneumáticas e hidráulicas, convertem a pressão num sinal elétrico, que é proporcional à força nela exercida, de acordo com a expressão \ref{eq:Preasure}.
 \begin{equation}
 	\label{eq:Preasure}
@@ -175,7 +197,7 @@ As células de carga capacitivas são outro exemplo de como obter um sinal propo
 	\label{eq:Capacity}
 	C = \varepsilon_{0} \; \varepsilon_{r} \; \frac{A}{d}
 \end{equation}
-Também existem células, que utilizam o princípio de ressonância, desfasamento de fase, e pelo efeito \textit{Doppler} para determinar a pressão ou distorção das células de carga e o que resulta numa medição.
+Também existem células, que utilizam o princípio de ressonância, desfasamento de fase, e pelo efeito \textit{Doppler} para determinar a pressão ou distorção das células de carga em que resulta numa medição.
 \\
 \\
 Pode-se dizer que, em todos os casos se determina a força resultante através do deslocamento no espaço.

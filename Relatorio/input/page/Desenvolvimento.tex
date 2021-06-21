@@ -1,10 +1,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Desenvolvimento do projeto}
 %Neste capitulo deve fazer uma introdução na qual são indicados os requisitos do sistema a implementar. Será uma balança, mas quais as caracteristicas da mesma ? Disso depende os componentes selecionados.
-Para o desenvolvimento deste projeto, foi criado um kit de desenvolvimento o que permitiu a realização de testes, com vista à validação do projeto, bem como à execução de alterações e melhoramentos.
+Pretende-se neste projeto então recorrendo aos componentes disponíveis no mercado elaborar uma balança digital, os componentes necessários vai ser um micro controlador como cérebro do sistema, ter meios de interface humana especificamente botões, \textit{leds} indicadores e um \textit{display} para visualização das leituras e valore de calibração, também uma fonte de alimentação para suportar as cargas.
+Para a medição da grandeza em estudo vai ter que se usar um sensor na qual mede o peso dos objetos e um amplificador de sinal com resolução suficiente para adquirir umas leituras com maior precisão.
 \\
 \\
-Por analise à \textit{figura} \ref{Kit_Desenvolvimento_2}, pode-se verificar a montagem em esqueleto do equipamento.
+O kit de desenvolvimento da \textit{figura} \ref{Kit_Desenvolvimento_2} permitiu a realização de testes, com vista à validação do projeto, bem como à execução de alterações e melhoramentos.
+\\
+\\
 %Qual a resolução do dispaly LCD e a Gama da celula de peso.
 \begin{figure}[H]
 	\centering
@@ -12,7 +15,7 @@ Por analise à \textit{figura} \ref{Kit_Desenvolvimento_2}, pode-se verificar a 
 	\caption{Kit de Desenvolvimento}
 	\label{Kit_Desenvolvimento_2}
 \end{figure}
-A seguir na \textit{figura} \ref{Block_diagram_1} representados os elementos em diagrama de blocos.
+A seguir na \textit{figura} \ref{Diagrama-bloco-1} representados os elementos em diagrama de blocos.
 %Pôr a celula de caraga representada por um bloco
 %comunicação série
 %que tipo de comunicações ?
@@ -20,14 +23,14 @@ A seguir na \textit{figura} \ref{Block_diagram_1} representados os elementos em 
 %O objectivo do botões e leds indicadores?
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.27]{./image/PESTA/Diagrama/Diagrama_bloco_3.jpg}
+	\includegraphics[scale=0.5]{./image/PESTA/Diagrama/Diagrama-bloco-1.jpg}
 	\caption{Diagrama blocos do sistema implementado}
-	\label{Block_diagram_1}
+	\label{Diagrama-bloco-1}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Nas seguintes secções serão apresentados os componentes utilizados no projeto, assim como os aspetos relacionados com a implementação dos mesmos.
 \section{Célula de carga}
-Para medir a massa, recorreu-se a uma \textbf{célula de carga}, apresentada na \textit{figura} \ref{Block_diagram_1}, que determina a pressão exercida por um dado objeto. Os sensores (\textit{strain gauges}) são instalados sobre um bloco de alumínio como indicado na \textit{figura} \ref{Load_Cell_1}. A célula de carga utiliza sensores piezoresistivos numa montagem em ponte \textit{Wheatstone}, sobre essa superfície em locais específicos. %explicar melhor esta parte da montagem
+Para medir a massa, recorreu-se a uma \textbf{célula de carga} de 50 Kg, apresentada na \textit{figura} \ref{Diagrama-bloco-1}, que determina a pressão exercida por um dado objeto. Os sensores (\textit{strain gauges}) são instalados sobre um bloco de alumínio como indicado na \textit{figura} \ref{Load_Cell_1}. A célula de carga utiliza sensores piezoresistivos numa montagem em ponte \textit{Wheatstone}, sobre essa superfície em locais específicos. %explicar melhor esta parte da montagem
 \\
 \begin{figure}[H]
 	%\captionsetup{justification=raggedright,singlelinecheck=false}
@@ -37,7 +40,7 @@ Para medir a massa, recorreu-se a uma \textbf{célula de carga}, apresentada na 
 	\label{Load_Cell_1}
 \end{figure}
 \figurespace{.5}
-O termo piezoresistividade deriva da palavra grega \textit{piezin}, que significa "pressionar". É um efeito exibido por vários materiais que sofrem uma mudança na resistividade devido a uma pressão aplicada. O efeito foi descoberto pela primeira vez por Lord Kelvin em \textcolor{blue}{1856}, que notou que a resistência dos fios de cobre e ferro aumentava quando em tensão mecânica. Ele também observou que os fios de ferro apresentavam uma alteração maior na resistência do que os de cobre. A primeira aplicação do efeito piezoresistivo não apareceu até à década de \textcolor{blue}{1930}, cerca de \textcolor{blue}{75} anos após a descoberta de Lord Kelvin. Em vez de usar fios de metal, esses assim chamados medidores de tensão mecânica, são geralmente feitos de uma folha de metal fina, montada em uma película de suporte, que pode ser colada numa superfície. O sensor de fita de metal típico é representado na \textit{figura} \ref{strain_gauge_1} e \ref{wheatstone_2} \cite{book-9}.
+O termo piezoresistividade deriva da palavra grega \textit{piezin}, que significa "pressionar". É um efeito exibido por vários materiais que sofrem uma mudança na resistividade devido a uma pressão aplicada. O efeito foi descoberto pela primeira vez por Lord Kelvin em 1856, que notou que a resistência dos fios de cobre e ferro aumentava quando em tensão mecânica. Ele também observou que os fios de ferro apresentavam uma alteração maior na resistência do que os de cobre. A primeira aplicação do efeito piezoresistivo não apareceu até à década de 1930, cerca de 75 anos após a descoberta de Lord Kelvin. Em vez de usar fios de metal, esses assim chamados medidores de tensão mecânica, são geralmente feitos de uma folha de metal fina, montada em uma película de suporte, que pode ser colada numa superfície. O sensor de fita de metal típico é representado na \textit{figura} \ref{strain_gauge_1} e \ref{wheatstone_2} \cite{book-9}.
 \\
 \\
 \begin{minipage}[!b]{.5\linewidth}
@@ -54,22 +57,23 @@ O termo piezoresistividade deriva da palavra grega \textit{piezin}, que signific
 \begin{figure}[H]
 	\captionsetup{justification=raggedright,singlelinecheck=false}
 	\flushleft
-	\includegraphics[height=5cm]{./image/PESTA/schematic/Wheatstone_2.jpg}
+	\vspace{1cm}
+	\includegraphics[height=4cm]{./image/PESTA/schematic/Wheatstone-1.png}
 	\qquad \caption{Ponte \textit{Wheatstone}}
-	\label{wheatstone_2}
+	\label{wheatstone-1}
 \end{figure}
 \end{minipage}
 %É esta a implementação utilizada no trabalho ?
 \minipagespace{.5}
 %Fazer uma introdução à figura 3.6.
 %Pôr sinal de massa na figura.
-\begin{minipage}[!b]{.4\linewidth}
+\begin{minipage}[!b]{.35\linewidth}
 	\begin{figure}[H]
 		\captionsetup{justification=raggedright,singlelinecheck=false}
 		\flushleft
-		\includegraphics[height=5cm]{./image/PESTA/schematic/Wheatstone_1.jpg}
+		\includegraphics[height=5cm]{./image/PESTA/schematic/Wheatstone-1.jpg}
 		\caption{\textit{Wheatstone} por resistências \cite{book-10}}
-		\label{wheatstone_1}
+		\label{wheatstone-1}
 	\end{figure}
 \end{minipage}
 \begin{minipage}[!b]{.6\linewidth}
@@ -81,12 +85,13 @@ O termo piezoresistividade deriva da palavra grega \textit{piezin}, que signific
 		&V_{AB}= \left(\frac{R_2}{R_1 + R_2} - \frac{R_4}{R_3 + R_4}\right) \; Vref \\
 		&V_{AB} = \frac{R_2 R_3 - R_4 R_1}{(R_1 + R_2)(R_3 + R_4)} \; Vref
 	\end{align}
-	\minipagespace{.01}
+\vspace{1pt}
 \end{minipage}
 \minipagespace{.5}
-Normalmente nestas aplicações só são usados um ou dois sensores, e estes podem estar ligados nos extremos opostos, ou ligados ao mesmo ponto da alimentação, só em casos muito raros são utilizados quatro sensores na qual sua sensibilidade é máxima. Se os valores das quatro resistências são iguais ou nos casos em que $R_2 R_3 = R_4 R_1$, então a tensão $V_{AB}$ na saída é nula.
+Normalmente nesta configuração só são usados um ou dois sensores, e estes podem estar ligados nos extremos opostos, ou ligados ao mesmo ponto da alimentação, só em casos muito raros são utilizados quatro sensores na qual sua sensibilidade é máxima. Se os valores das quatro resistências são iguais ou nos casos em que $R_2 R_3 = R_4 R_1$, então a tensão $V_{AB}$ na saída é nula.
 \\
 \\
+%https://www.800loadcel.com/load-cell-and-strain-gauge-basics.html
 %Para perceber melhor o funcionamento do sensor \textit{\textbf{strain gauge}} é aconselhável recorrer a literatura \cite{book-9} e \cite{book-10}, que explica como são feitas, seus dimensionamentos e processos de fabrico.
 \newpage
 A montagem da mesa (prato) de medição é apresentada na \textit{figura} \ref{Prato}.

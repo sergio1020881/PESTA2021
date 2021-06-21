@@ -1,14 +1,16 @@
 \begin{abstract}
 	\label{Resumo}
-	\par O projeto proposto prevê a implementação de uma balança digital, utilizando um micro controlador. Uma célula de carga será o sensor de conversão da diferença de potencial obtida por uma ponte \textit{Wheatstone} pela existência de uma massa a pesar, gerando um sinal proporcional ao seu peso.
+	%É a apresentação do trabalho, onde se pretende que seja feito um resumo do mesmo
+	\par O projeto proposto prevê a implementação de uma balança digital, utilizando um micro controlador. Vai ser utilizado uma célula de carga como sensor de conversão do peso a medir para uma diferença de potencial em tensão (\textit{Volt}), gerando um sinal em tensão proporcional a sua massa.
 	\\
 	\\
-	Após obter este sinal em tensão gerado pela ponte \textit{wheatstone}, será ligado a um amplificador \ac{adc} dedicado para este tipo de aplicação, com 24 bits de resolução, com amplificação programável e com uma taxa de transferência fisicamente (\textit{hardware}) programada. Este amplificador é designado por \textbf{HX711}, e possui um protocolo de comunicação dedicado. Depois esta comunicação série vai ser entregue ao \ac{mcu}.
+	Após a aquisição deste sinal em tensão gerado pela ponte \textit{wheatstone}, o mesmo será ligado a um amplificador \ac{adc} dedicado para este tipo de aplicação, com 24 bits de resolução, com amplificação programável e com uma taxa de transferência fisicamente configurável. Este amplificador é designado por \textbf{HX711}, e possui um protocolo de comunicação dedicado. A comunicação série será realizada através de um \ac{mcu}.
 	\\
 	\\
-	A programação do \acrshort{mcu}, o código das bibliotecas e ou drivers será implementada em linguagem \textbf{C}. O objetivo é obter uma balança funcional de fácil utilização e calibração, economicamente viável, desta forma a implementar uma balança acessível e prática.
+	A programação do \acrshort{mcu}, o código das bibliotecas e ou drivers será implementada em linguagem \textbf{C}. O objetivo é implementar uma balança funcional de fácil utilização e calibração, economicamente viável, tornado-a desta forma numa balança acessível e prática.
 	\\
 	\\
+	Um \textit{display} \acs{lcd} vai visualizar o valor medido com acesso a um \textit{manu} para calibração da célula de carga a ser utilizada, um botão de \textit{offset}, carregar parâmetros \textit{default} e de mudar de programa como meios de utilização, e vai ter \textit{leds} de indicação para mostrar em que estado a balança esta a funcionar.
 	%Este trabalho é orientado para quem tem alguns conhecimentos básicos de eletrotecnia, com orientação para a eletrónica e programação.
 	%\vfill
 	\vspace{5cm}
