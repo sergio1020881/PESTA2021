@@ -16,24 +16,29 @@
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Fita metálica \textit {strain gauge} \cite {book-9}\relax }}{12}{figure.caption.20}%
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Ponte \textit {Wheatstone}\relax }}{12}{figure.caption.21}%
 \contentsline {figure}{\numberline {3.6}{\ignorespaces \textit {Wheatstone} por resistências \cite {book-10}\relax }}{12}{figure.caption.22}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Prato\relax }}{14}{figure.caption.23}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Diagrama de blocos e a placa do HX711\relax }}{15}{figure.caption.24}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Amostras\relax }}{16}{figure.caption.26}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Ganho de 128\relax }}{17}{figure.caption.28}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Ganho de 64\relax }}{17}{figure.caption.29}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces \acs {lcd}\relax }}{20}{figure.caption.31}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Harvard Architecture\relax }}{21}{figure.caption.32}%
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Atmega 128\relax }}{22}{figure.caption.33}%
-\contentsline {figure}{\numberline {3.15}{\ignorespaces KIT \acs {atmel-ice}\relax }}{24}{figure.caption.34}%
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Fichas \acs {isp}\relax }}{24}{figure.caption.35}%
-\contentsline {figure}{\numberline {3.17}{\ignorespaces \textit {Buck Converter}\relax }}{24}{figure.caption.36}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Prato\relax }}{13}{figure.caption.23}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Diagrama de blocos e a placa do HX711\relax }}{14}{figure.caption.25}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Protocolo de comunicação\relax }}{15}{figure.caption.26}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Amostras\relax }}{16}{figure.caption.27}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Ganho de 128\relax }}{17}{figure.caption.29}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Ganho de 64\relax }}{17}{figure.caption.30}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces \acs {lcd}\relax }}{19}{figure.caption.32}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Harvard Architecture\relax }}{20}{figure.caption.33}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Atmega 128\relax }}{21}{figure.caption.34}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Alternativas ao Atmega 128\relax }}{22}{figure.caption.35}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces KIT \acs {atmel-ice}\relax }}{24}{figure.caption.36}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Fichas \acs {isp}\relax }}{24}{figure.caption.37}%
+\contentsline {figure}{\numberline {3.19}{\ignorespaces \textit {Buck Converter}\relax }}{25}{figure.caption.38}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Microchip Studio\relax }}{25}{figure.caption.37}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Ambiente de trabalho\relax }}{25}{figure.caption.38}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Estrutura do Programa\relax }}{26}{figure.caption.39}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Sintaxe Genérica dos programas\relax }}{27}{figure.caption.40}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces \acs {adc} conversão\relax }}{27}{figure.caption.41}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Saltar de \textit {Menu}\relax }}{27}{figure.caption.42}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Livrarias\relax }}{28}{figure.caption.43}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Microchip Studio\relax }}{26}{figure.caption.39}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Ambiente de trabalho\relax }}{26}{figure.caption.40}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Estrutura do Programa\relax }}{27}{figure.caption.41}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Sintaxe Genérica dos programas\relax }}{28}{figure.caption.42}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces \acs {adc} conversão\relax }}{28}{figure.caption.43}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Saltar de \textit {Menu}\relax }}{28}{figure.caption.44}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Livrarias\relax }}{31}{figure.caption.45}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -1,5 +1,10 @@
 \begin{thebibliography}{10}
 
+\bibitem{book-3}
+J.~WALKER and D.~H. Resnick, {\em FUNDAMENTALS OF PHYSICS, Halliday and Resnick
+  10th edition}.
+\newblock John Wiley \& Sons, Inc, 2014.
+
 \bibitem{book-9}
 S.~Beeby, G.~Ensell, M.~Kraft, and N.~White, {\em MEMS Mechanical Sensors}.
 \newblock ARTECH HOUSE, INC, 2004.
@@ -17,11 +22,6 @@ J.~Bird, {\em HIGHER ENGINEERING MATHEMATICS, Sixth Edition}.
 P.~A. TIPLER and G.~MOSCA, {\em PHYSICS FOR SCIENTISTS AND ENGINEERS, Extended
   Version fifth edition}.
 \newblock W. H. Freeman and Company, 1999.
-
-\bibitem{book-3}
-J.~WALKER and D.~H. Resnick, {\em FUNDAMENTALS OF PHYSICS, Halliday and Resnick
-  10th edition}.
-\newblock John Wiley \& Sons, Inc, 2014.
 
 \bibitem{book-4}
 R.~C. Dorf and R.~H. Bishop, {\em Modern Control Systems, Thirteenth Edition}.
@@ -43,5 +43,9 @@ K.~Ogata, {\em Modern Control Engineering Fifth Edition}.
 S.~F and Barret, {\em Embedded Systems Design with the Atmel AVR
   Microcontroller}.
 \newblock Morgan Claypool Publishers, 2009.
+
+\bibitem{article-1}
+S.~Santos, ``Posicionamento painel fotovoltaico,'' {\em
+  https://github.com/sergio1020881/LABSIS20202021}, 2020.
 
 \end{thebibliography}
