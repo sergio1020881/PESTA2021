@@ -1,0 +1,91 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%			PREAMBLE LATEX GENERAL USE
+%%	author: sergio manuel salazar dos santos
+%%	email: sergio.salazar.santos@gmail.com
+%%	Comment:
+%%		Stable, no issues found yet.
+%%		Note sequence is importante, and beware of clashing packages.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\documentclass[titlepage, a4paper, 11pt, fleqn, reqno, openany]{report}
+\documentclass[titlepage, a4paper, 11pt, reqno, openany]{report}
+\usepackage{titlepic}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel}
+%%%%%%%%%%%%%FIXED ORDER%%%%%%%%%FIXED ORDER%%%%%%%%%%%%%%
+\usepackage[shortcuts, nopostdot, acronym, acronymlists={hidden}, toc, nogroupskip, nonumberlist, automake]{glossaries}
+\newglossary[algh]{hidden}{acrh}{acnh}{Hidden Acronyms}
+\usepackage{scrbase}
+\usepackage{babelbib}
+%%APPENDIX SETTINGS%%
+%\usepackage[title, toc, titletoc, page]{appendix}
+\usepackage[toc, page]{appendix}
+%%%%%%%%%%%%%%%%%%%%%
+\usepackage{verbatim}
+\usepackage{url}
+\usepackage{listings}
+\usepackage[calc, en-US]{datetime2}
+\usepackage{etoolbox}
+\usepackage{xparse}
+%%%%%%%%%%%%%%%%%%%%%%FIXED ORDER END%%%%%%%%%%%%%%%%%%%%%
+\usepackage[top=2.5cm,left=3cm,right=2.5cm,bottom=2.5cm]{geometry}
+\usepackage[nottoc]{tocbibind}
+\usepackage[hidelinks]{hyperref}
+\usepackage[usenames, dvipsnames, svgnames, table]{xcolor}
+\usepackage{color,colortbl}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage[graphicx]{realboxes}
+\usepackage[font=small, labelfont=bf]{caption}
+\usepackage{subcaption}
+\usepackage{lmodern}
+\usepackage{hyphenat}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{multicol}
+\usepackage{makecell}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage[export]{adjustbox}
+\usepackage{eurosym}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{paralist}
+\usepackage{enumerate} %%conflict never put enumitem with enumerate
+%\usepackage{enumitem} %%conflict never put enumerate with enumitem
+\usepackage{multirow}
+\usepackage{lscape}
+\usepackage{scrhack}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage[autostyle=true]{csquotes}
+\usepackage{calc}
+\usepackage{siunitx}
+\usepackage{setspace}
+\usepackage{lipsum}
+\usepackage{moreverb}
+\usepackage{rotating}
+\usepackage{romannum}
+\usepackage{pgfgantt}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usetikzlibrary{matrix, shapes.geometric, arrows, trees, positioning, calc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\mcirc{\mathbin{\scalerel*{\bigcirc}{t}}}
+\def\msquare{\mathord{\scalerel*{\Box}{gX}}}
+\def\ce{\mathrm{e}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%BEAMER%%%
+%\usetheme{Frankfurt} 
+%\usetheme{Boadilla}
+%\usetheme{Warsaw}
+\makeindex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\bibliographystyle{plain}
+\bibliographystyle{ieeetr}
+\selectbiblanguage{portuguese}
+\setbtxfallbacklanguage{english}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

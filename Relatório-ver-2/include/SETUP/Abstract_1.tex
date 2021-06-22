@@ -1,0 +1,19 @@
+\begin{abstract}
+	\label{Resumo}
+	%É a apresentação do trabalho, onde se pretende que seja feito um resumo do mesmo
+	\par O projeto proposto prevê a implementação de uma balança digital, utilizando um micro controlador. Vai ser utilizado uma célula de carga como sensor de conversão do peso a medir para uma diferença de potencial proporcional em tensão (\textit{Volt}).
+	\\
+	\\
+	Após a aquisição deste sinal em tensão gerado pela ponte \textit{Wheatstone}, o mesmo será ligado a um amplificador \ac{adc} dedicado para este tipo de aplicação, com 24 \textit{bits} de resolução, com amplificação programável e com uma taxa de transferência fisicamente configurável. Este amplificador é designado por \textbf{HX711}, e possui um protocolo de comunicação dedicado. A comunicação série será realizada através de um \ac{mcu}.
+	\\
+	\\
+	A programação do \acrshort{mcu}, o código das bibliotecas e ou drivers será implementada em linguagem \textbf{C}. O objetivo é implementar uma balança funcional de fácil utilização e calibração, economicamente viável, tornado-a desta forma numa balança acessível e prática.
+	\\
+	\\
+	A balança digital vai ter um \textit{display} \acs{lcd} para visualizar o valor da massa medida e o parâmetro de calibração da célula de carga. Vai ter um botão de \textit{offset}, e botões para carregar os parâmetros de \textit{default} e para alterar o valor de calibração, também vai utilizar \textit{leds} de indicação para mostrar em que estado a balança se encontra.
+	%Este trabalho é orientado para quem tem alguns conhecimentos básicos de eletrotecnia, com orientação para a eletrónica e programação.
+	%\vfill
+	\vspace{5cm}
+	\par 
+	\textbf{Palavras Chave:} \textit{Strain Gauge}, \textit{Load Cell}, Amplificador, Código, Programação, \textit{Embedded System} .
+\end{abstract}

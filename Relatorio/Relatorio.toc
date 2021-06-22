@@ -28,5 +28,5 @@
 \contentsline {chapter}{Refer\^{e}ncias}{35}{chapter*.47}%
 \contentsline {chapter}{Anexos}{36}{section*.48}%
 \contentsline {chapter}{\numberline {A}Código}{37}{appendix.a.A}%
-\contentsline {chapter}{\numberline {B}Definições}{91}{appendix.a.B}%
-\contentsline {chapter}{\numberline {C}Física}{92}{appendix.a.C}%
+\contentsline {chapter}{\numberline {B}Definições}{96}{appendix.a.B}%
+\contentsline {chapter}{\numberline {C}Física}{97}{appendix.a.C}%

@@ -1,0 +1,58 @@
+%----------------------------------------------------------------------------------------
+%	ABSTRACT PAGES
+%----------------------------------------------------------------------------------------
+% IMPORTANT NOTE: the abstract must always be written in two languages. If the report
+% is written in Portuguese you have selected 'portuguese' as the language in the document class.
+% Therefore, the portuguese version of the abstract must come first, so write it in the
+% below area denoted by 'MAIN LANGUAGE ABSTRACT'. The english version follows in the
+% 'SECOND LANGUAGE ABSTRACT' section.
+% If the report is written in English, first will come the abstract in English
+% ('MAIN LANGUAGE ABSTRACT') and then in Portuguese ('SECOND LANGUAGE ABSTRACT').
+\begin{abstract}
+%%%%%%%%%%%%%%%% MAIN LANGUAGE ABSTRACT %%%%%%%%%%%%%%%%%%
+%É a apresentação do trabalho, onde se pretende que seja feito um resumo do mesmo
+\par O projeto proposto prevê a implementação de uma balança digital, utilizando um micro controlador. Vai ser utilizado uma célula de carga como sensor de conversão do peso a medir para uma diferença de potencial proporcional em tensão (\textit{Volt}).
+\\
+\\
+Após a aquisição deste sinal em tensão gerado pela ponte \textit{Wheatstone}, o mesmo será ligado a um amplificador \ac{adc} dedicado para este tipo de aplicação, com 24 \textit{bits} de resolução, com amplificação programável e com uma taxa de transferência fisicamente configurável. Este amplificador é designado por \textbf{HX711}, e possui um protocolo de comunicação dedicado. A comunicação série será realizada através de um \ac{mcu}.
+\\
+\\
+A programação do \acrshort{mcu}, o código das bibliotecas e ou drivers será implementada em linguagem \textbf{C}. O objetivo é implementar uma balança funcional de fácil utilização e calibração, economicamente viável, tornado-a desta forma numa balança acessível e prática.
+\\
+\\
+A balança digital vai ter um \textit{display} \acs{lcd} para visualizar o valor da massa medida e o parâmetro de calibração da célula de carga. Vai ter um botão de \textit{offset}, e botões para carregar os parâmetros de \textit{default} e para alterar o valor de calibração, também vai utilizar \textit{leds} de indicação para mostrar em que estado a balança se encontra.
+%Este trabalho é orientado para quem tem alguns conhecimentos básicos de eletrotecnia, com orientação para a eletrónica e programação.
+\\
+\\
+%----------------------------------------------------------------------------------------
+\vfill
+%\vspace*{10mm} 
+\noindent
+\textbf{\keywordslabel}: \textit{Strain Gauge}, \textit{Load Cell}, Amplificador, Código, Programação, \textit{Embedded System}.
+%%%%%%%%%%% END OF THE MAIN LANGUAGE ABSTRACT %%%%%%%%%%%%
+\end{abstract}
+\begin{secondlangabstract}
+%%%%%%%%%%%%%%%% SECOND LANGUAGE ABSTRACT %%%%%%%%%%%%%%%%
+\par The proposed project is to build a weighing scale using a microcontroller, an embedded system.
+\\
+\\
+A load cell is what is going to be used to convert the measured weight into a potential difference with a Wheatstone configuration, generating a proportional signal.
+\\
+\\
+After obtaining this signal it is going to be connected to a load cell amplifier with a \ac{adc} dedicated for this type of application, it has a 24 bit resolution, programable amplification and sampling rate physically programmable, this is the \textbf{HX711} chip, having a proprietary communication protocol.
+This information then will be passed to the microcontroller.
+\\
+\\
+The \ac{mcu} programming code, libraries and or drivers are to be implemented using the \textbf{C} language. The objective of this project is to get a functional weighing scale easy to use and to calibrate economically viable, in order to have a practical weight scale.
+\\
+\\
+This weight scale will have integrated an \acs{lcd} display with buttons and led indicators, making it easy for the user to work with.
+%This work is targeted to a public with some basic electrical knowledge with electronic and programming background.
+%----------------------------------------------------------------------------------------
+\vfill
+%\vspace*{10mm} 
+\noindent
+\textbf{\keywordslabel}: Strain Gauge, Load Cell, Amplifier, Code, Programming, Embedded System.
+%%%%%%%%%% END OF THE SECOND LANGUAGE ABSTRACT %%%%%%%%%%%
+\end{secondlangabstract}
+

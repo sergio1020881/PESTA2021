@@ -1,0 +1,6 @@
+24 bit resolution
+
+(2^24)-1 -> each bit is equal to (4.2Volt/2^24-1) therefore +/- 0.25uV ,
+
+but this is simple logic and should already be known to the destined public.
+

@@ -1,0 +1,45 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Conclusões}
+%Este parágrafo não se enquadra nas conclusões pretendidas, que se pretende que sejam relativas aos objetivos inicialmente traçados
+%Uma conclusão óbvia é que a humanidade não tem esperança, demorou desde 2000 A.C até 1770 A.D, 3770 anos a descobrir de que se podia deduzir a massa dos objetos através da Lei de \textbf{Hooke}.
+%Deve-se iniciar as conclusões indicando se os objetivos inicialmente propostos foram atingidos. De seguida é que devem ser apresentadas outras ideias/conclusões pertinentes, retiradas ao longo do desenvolvimento do trabalho.
+O objetivo era implementar uma balança digital recorrendo aos equipamentos e componentes disponíveis no mercado comum, hoje em dia com o desenvolvimento e a mudança para um mundo cada vez mais digital felizmente existe muitas lojas com estes tipos de materiais em que se pode comprar via online (ex: PTROBOTICS, Futurlec, botnroll, ALFAELEKTOR, Aquário Electrónica, ELECTROFUN, Castro Electrónica, etc ).
+\\
+\\
+Tratando-se de uma balança já se sabe a priori que vai ter que se recorrer a um a célula de carga, vai ser preciso um \acs{mcu} e amplificador de sinal, também um \textit{display}, indicadores e botões de controlo, as escolhas que foram feitas tiveram sempre em consideração o preço e o grau de complexidade do projeto, a decisão tem fundamento em escolher um micro controlador de 8 \textit{bits} por se tratar de um \textit{embeded system} que trabalha diretamente com o hardware, e necessário uma programação numa camada de baixo nível.
+\\
+\\
+Após obter os componentes e criar o \textit{kit} de desenvolvimento, teve de se utilizar um ambiente de trabalho e ferramentas, que são compatíveis com as escolhas feitas, neste caso o Microchip Studio, o representante da marca da Atmel e PIC.
+\\
+\\
+Durante o relatório estão esclarecimentos e conclusões que determinaram as escolhas feitas e procedimentos escolhidos. Além do que já foi mencionado também se pode concluir as seguintes deduções:
+\\
+\\
+Não compensa desenvolver projetos que se basearam no preço de materiais \ac{pvp}, todo o lucro vai para a área comercial, se consideramos o trabalho necessário da montagem, programação, ensaios e testes para obter um produto funcional com fiabilidade e preciso respeitando as normas e diretivas, talvez se for com finalidade de produção em grande escala para entrar no mercado auferindo das regalias que ela oferece, tais como o preço da matéria prima, e mesmo assim devido a concorrência é claramente um risco se o projeto em causa é banal.
+%reescrever este parágrafo, desenvolvendo melhor a ideia que pretende transmitir
+\\
+\\
+É de salientar a importância dos equipamentos e das ferramentas utilizadas no desenvolvimento do projeto, que facilita a realização de afinações e ajustes necessários. A fiabilidade destes equipamento é fundamental para os resultados obtidos.
+Outro aspeto de referir é a capacidade do aluno na consulta de \textit{datasheets} e manuais, o que é de facto um pré-requisito para o desenvolvimento do trabalho.
+\\
+\\
+%De notar a importância dos equipamentos ou ferramentas usadas no projeto, tais como o multímetro, osciloscópio e \acsp{ide}, que nos facilita em afinações e ajustes saltando por cima de muita \textit{red tape}, dai necessário serem de confiança e fiáveis. Além do já mencionado constantemente a necessidade da habilidade de interpretar \textit{datasheets} e manuais, sendo um pré-requisito obrigatório que talvez nem é preciso o mencionar.
+Deu para notar o efeito \textit{Long-term drift}, como o equipamento esteve ligados quase dois meses reparou-se que existe uma oscilação do \textit{offset}. Tal deve ser devido ao efeito de ruídos e/ou temperatura e/ou humidades. O erro é corrigido ao premir o botão de \textit{offset}.
+\\
+\\
+Atualmente, na implementação de um projeto deste tipo, não compensa desenvolver os próprios \acs{pcb}, devido ao seu valor elevado, em comparação com o valor praticado por uma empresa dedicada a tais serviços. Outro motivo é a disponibilidade  de um vasto leque de circuitos de desenvolvimento disponíveis ao consumidor comum, prontos a ser utilizados.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Trabalho Futuro}
+Considero que foi atingido os objetivos, com possibilidade de no futuro melhorar o projeto, tais como funcionar por bateria e integrar um \textit{sleep mode} de forma a desligar o \textit{display} \acs{lcd} e ficar em \textit{standby} até receber um sinal de \textit{wake up}. Ao todo foi uma boa experiência.
+\\
+\\
+O projeto esta disponível no \textit{\textbf{GITHUB}} \textit{link}: \url{https://github.com/sergio1020881/PESTA2021/tree/main/SandBox/ATMEGA128/Atmega128}, e possível fazer \textit{download} para quem quiser emular a experiência.
+\\
+\\
+Anexado ( \ref{anexo-code} ) vai todo o código utilizado neste projeto.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%\section{aspectos}
+\begin{comment}
+Sensitivity,Long-Term Drift e Temperature Effects (Span temperature hysteresis).
+\end{comment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
