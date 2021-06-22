@@ -1,8 +1,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Desenvolvimento do projeto}
 %Neste capitulo deve fazer uma introdução na qual são indicados os requisitos do sistema a implementar. Será uma balança, mas quais as caracteristicas da mesma ? Disso depende os componentes selecionados.
-Pretende-se neste projeto então recorrendo aos componentes disponíveis no mercado elaborar uma balança digital, os componentes necessários vai ser um micro controlador como cérebro do sistema, ter meios de interface humana especificamente botões, \textit{leds} indicadores e um \textit{display} para visualização das leituras e valore de calibração, também uma fonte de alimentação para suportar as cargas.
-Para a medição da grandeza em estudo vai ter que se usar um sensor que mede o peso dos objetos e um amplificador de sinal com resolução suficiente para adquirir umas leituras com maior precisão.
+Pretende-se neste projeto então recorrer aos componentes disponíveis no mercado, e elaborar uma balança digital, os componentes necessários vai ser um micro controlador como cérebro do sistema, ter meios de interface humana especificamente botões, \textit{leds} indicadores e um \textit{display} para visualização das leituras \acs{adc} e o valore de calibração, também uma fonte de alimentação para suportar a carga.
+Para a medição da grandeza em estudo vai ter que se usar um sensor que mede o peso dos objetos e um amplificador de sinal com resolução suficiente para adquirir umas leituras com precisão relevante.
 \\
 \\
 O kit de desenvolvimento da \textit{figura} \ref{Kit_Desenvolvimento_2} permite a realização de testes, com vista à validação do projeto, bem como à execução de alterações e melhoramentos.
@@ -30,7 +30,8 @@ A seguir na \textit{figura} \ref{Diagrama-bloco-1} representados os elementos em
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Nas seguintes secções serão apresentados os componentes utilizados no projeto, assim como os aspetos relacionados com a implementação dos mesmos.
 \section{Célula de carga}
-Para medir a massa, recorreu-se a uma \textbf{célula de carga} de 50 Kg, apresentada na \textit{figura} \ref{Diagrama-bloco-1}, que determina a pressão exercida por um dado objeto. Os sensores (\textit{strain gauges}) são instalados sobre um bloco de alumínio como indicado na \textit{figura} \ref{Load_Cell_1}. A célula de carga utiliza sensores piezoresistivos numa montagem em ponte \textit{Wheatstone}, sobre essa superfície em locais específicos. %explicar melhor esta parte da montagem
+Para medir a massa, recorreu-se a uma \textbf{célula de carga} de 50 Kg, apresentada na \textit{figura} \ref{Diagrama-bloco-1}, que determina a pressão exercida por um dado objeto. Os sensores (\textit{strain gauges}) são instalados sobre um bloco de alumínio como indicado na \textit{figura} \ref{Load_Cell_1}. A célula de carga utiliza sensores piezoresistivos numa montagem em ponte \textit{Wheatstone}, sobre sua superfície em locais específicos. Esses locais são determinados pela configuração mecânica da célula de carga de forma a obter a leitura linear e proporcional ao peso exercido, isto é, ter um comportamento similar de uma mola.
+%explicar melhor esta parte da montagem
 \\
 \begin{figure}[H]
 	%\captionsetup{justification=raggedright,singlelinecheck=false}
@@ -159,16 +160,16 @@ A ligação destes componentes é intuitiva e fácil de se perceber \textit{tabe
 	\label{Protocolo}
 \end{figure}
 \figurespace{.5}
-A placa \textit{Load Cell Amplifier } pode ser fisicamente configurada para determinar o número de amostras por segundo a ser transmitido. Este circuito tem duas opções: a opção de \textcolor{blue}{10} amostras por segundo, e de \textcolor{blue}{80} amostras por segundo. Neste projeto foi utilizada a segunda opção, que necessita de uma pequena configuração na placa de circuito de impresso, isto é, é necessário abrir o respetivo \textit{jumper} de configuração.
+A placa \textit{Load Cell Amplifier } pode ser fisicamente configurada para determinar o número de amostras por segundo a ser transmitido. Este circuito tem duas opções: a opção de 10 amostras por segundo, e de 80 amostras por segundo. Neste projeto foi utilizada a segunda opção, que necessita de uma pequena alteração na placa de circuito de impresso, isto é, é necessário abrir o respetivo \textit{jumper} de configuração.
 \\
 \\
 A conversão de informação acontece na transição entre o sinal contínuo da vida real, para um sinal discreto associado ao mundo digital. Tipicamente esta etapa consiste na conversão de um sinal analógico para digital.
 \\
-O processamento digital pode consistir no processamento de rotinas para compensar os desvios por linearização, a sensibilidade e o \textit{offset}, ou o processamento de técnicas mais sofisticadas como reconhecimento de padrões, (tais como, redes neuronais) para equipamentos de sensores vetoriais.\cite{book-9}
+O processamento digital pode consistir de rotinas para compensar os desvios por linearização, a sensibilidade e o \textit{offset}, ou o processamento de técnicas mais sofisticadas como reconhecimento de padrões, (tais como, redes neuronais) para equipamentos de sensores vetoriais.\cite{book-9}
 \\
-A comunicação é responsável por criar rotinas necessárias para transferir e receber a informação e sinais de controle, entre o sensor e o processador, que toma lugar como componente central, tratando a informação, guardando os dados e fazendo rotinas, tais como, rotinas de calibração, rotinas de teste e controlo de ganho da amplificação. \cite{book-9}
+A comunicação é responsável por criar rotinas necessárias para transferir e receber a informação e sinais de controle, entre o sensor e o processador, que toma lugar como componente central, tratando a informação, guardando os dados e fazendo rotinas, tais como, de calibração, e de teste e controlo de ganho da amplificação. \cite{book-9}
 \newpage
-Abaixo a \textit{figura} \ref{SPS_64} que foi adquirida do trabalho realizado recorrendo ao osciloscópio da RIGOL DS1102E e seu software \textit{Rigol Waveform Viewer}, demonstrando a comunicação entre o amplificador de sinal e o micro controlador do valor \acs{adc}, a linha amarela é a informação (\acs{adc}) e a azul os impulsos do \textit{clock} PD\_SCK. Neste exemplo é visível cinco conversões executadas.
+Abaixo a \textit{figura} \ref{SPS_64} que foi adquirida do trabalho realizado recorrendo ao osciloscópio da RIGOL DS1102E e seu software \textit{Rigol Waveform Viewer}, demonstrando a comunicação entre o amplificador de sinal e o micro controlador da informação do \acs{adc}, a linha amarela é a informação (\acs{adc}) e a azul os impulsos do \textit{clock} PD\_SCK. Neste exemplo é visível cinco conversões executadas.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.55]{./image/PESTA/graph/80SPS64GAIN/SPS_80.JPG}
@@ -202,7 +203,7 @@ A biblioteca (\textit{driver}) do integrado HX771 recorre a interrupções peri�
 \end{minipage}
 \begin{minipage}[l]{.6\linewidth}
 \vspace{.3cm}
-Como indicado abaixo no gráfico, em que a linha \textcolor{yellow}{amarela} é a informação, e a linha \textcolor{BlueGreen}{azul} o respetivo \textit{clock} que é gerado pelas interrupções do micro-controlador, fazendo um deslocamento dos \textcolor{blue}{24} \textit{bits}, que por fim transmite para o amplificador, o ganho de amplificação a ser usado pelo numero excedente de \textit{clock cycles}, em que nesta demonstração da \textit{figura} \ref{Gain_128_example} é \textcolor{blue}{um}, e corresponde a um ganho de \textcolor{blue}{128}, respeitando a informação apresentada na \textit{tabela} \ref{Gain_Selection},  e de seguida o exemplo da \textit{figura} \ref{Gain_64_example}, com um ganho de \textcolor{blue}{64}, pois tem \textcolor{blue}{três} impulsos excedentes.
+Como indicado abaixo nos gráficos, em que a linha \textcolor{yellow}{amarela} é a informação, e a linha \textcolor{BlueGreen}{azul} o respetivo \textit{clock} que é gerado pelas interrupções do micro-controlador, fazendo um deslocamento dos \textcolor{blue}{24} \textit{bits}, que por fim transmite para o amplificador, o ganho de amplificação a ser usado pelo numero excedente de \textit{clock cycles}, em que nesta demonstração da \textit{figura} \ref{Gain_128_example} é \textcolor{blue}{um}, e corresponde a um ganho de \textcolor{blue}{128}, respeitando a informação apresentada na \textit{tabela} \ref{Gain_Selection},  e de seguida o exemplo da \textit{figura} \ref{Gain_64_example}, com um ganho de \textcolor{blue}{64}, pois tem \textcolor{blue}{três} impulsos excedentes.
 \end{minipage}
 \end{minipage}
 \\
@@ -228,26 +229,26 @@ Como indicado abaixo no gráfico, em que a linha \textcolor{yellow}{amarela} é 
 \end{minipage}
 \end{minipage}
 \minipagespace{.3}
-Para obter este resultado, a livraria \textit{driver} para o \textit{Load Cell Amplifier} teve de ter em consideração que a arquitetura do micro-controlador é de \textcolor{blue}{8} \textit{bits}, uma vez que a estrutura do pacote de informação é entre \textcolor{blue}{25} a \textcolor{blue}{27} impulsos do \textit{clock cycle} em que é transmitido primeiro o \ac{msb}.
+Para obter este resultado, a livraria \textit{driver} para o \textit{Load Cell Amplifier} teve de ter em consideração que a arquitetura do micro-controlador é de 8 \textit{bits}, uma vez que a estrutura do pacote de informação é entre 25 a 27 impulsos do \textit{clock cycle} em que é transmitido primeiro o \ac{msb}.
 \\
 \\
-Este Amplificador de sinal tem uma amplificação do sinal de entrada como demonstrado na \textit{tabela} \ref{Gain_Selection}, e uma resolução de 24 \textit{bits}, como se sabe os números podem representar quantidades ou intervalos, os 24 \textit{bits} representa um intervalo de 0 até $2^{24}-1$, que nos dá 16777215, ou seja, o sinal de entrada amplificado pode ser dividido por este numero, isto é, pode-se obter este número de leituras possíveis, em que se se tratar por exemplo de 5 Volt pode-se obter 16777215 leituras de intervalos de aproximadamente $2.98 x 10^{-7}$ Volt cada, uma precisão muito boa.
+Este Amplificador de sinal tem uma amplificação do sinal de entrada como demonstrado na \textit{tabela} \ref{Gain_Selection}, e uma resolução de 24 \textit{bits}, como se sabe os números podem representar quantidades ou intervalos, os 24 \textit{bits} representa um intervalo de 0 até $2^{24}-1$, que nos dá 16777215, ou seja, o sinal de entrada amplificado pode ser dividido por este numero, isto é, pode-se obter este número de leituras possíveis, em que, se se tratar por exemplo de 5 Volt pode-se obter 16777215 leituras de intervalos de aproximadamente $2.98 x 10^{-7}$ Volt cada, uma precisão muito boa.
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Display \acs{lcd}}
 %Porque este ?
 %O que pretende que seja visualizado ?
-O \ac{lcd} utilizado é de 4x20, isto é, quatro linhas de vinte caracteres cada, tornando-se no interface humano principal, e também durante o este projeto numa ferramenta extremamente útil para fazer o \textit{debug} e executar testes ao código.\\
-Este \acs{lcd} é usado para visualizar as leituras e o valor de calibração da célula de carga, a escolha é unicamente por ter este componente no meu stock de material com uma biblioteca que o suporta, uso de quatro linhas apenas para facilitar na deteção de anomalias e testar o código, podendo visualizar vários parâmetros ao mesmo tempo.
+O \ac{lcd} utilizado é de 4x20, isto é, quatro linhas de vinte caracteres cada, tornando-se no interface humano principal, e também durante este projeto numa ferramenta extremamente útil para fazer o \textit{debug} e executar testes ao código.\\
+Este \acs{lcd} é usado para visualizar as leituras e o valor de calibração da célula de carga, a escolha é unicamente por ter este componente no meu stock de material com uma biblioteca que o suporta, uso este de quatro linhas apenas para facilitar na deteção de anomalias ao testar o código visualizando vários parâmetros ao mesmo tempo.
 \\
 \\
 %que projectos ?
 %mencionar relatórios e mencionar relatorio LABSIS.
-Uma biblioteca já feita para outros projetos pessoais que serviu para aplicar na disciplina de laboratório de sistemas e neste, poupando bastante tempo, revelando a importância de documentar os conhecimentos adquiridos. A biblioteca está presente no \textit{anexado} \ref{lcd-h} e \ref{lcd-c}.
+A biblioteca ou driver do \acs{lcd} que já tinha feito para outros projetos pessoais serviu para utilizar na disciplina de laboratório de sistemas e neste projeto, poupando bastante tempo, revelando a importância de documentar os conhecimentos adquiridos. A biblioteca está presente no \textit{anexado} \ref{lcd-h} e \ref{lcd-c}.
 %[\ref{codigo}]
 \\
 \\
-Abaixo está a tabela \ref{LCD_connections}, disponível com as respetivas ligações, e uma imagem de um \acs{lcd} 4x20 azul na \textit{figura} \ref{4x20_LCD}.
+Abaixo está a tabela \ref{LCD_connections}, com as respetivas ligações, e uma imagem de um \acs{lcd} de 4x20 azul na \textit{figura} \ref{4x20_LCD}.
 \tablespace{.2}
 \begin{table}[H]
 	\centering
@@ -280,26 +281,26 @@ Abaixo está a tabela \ref{LCD_connections}, disponível com as respetivas liga�
 \begin{figure}[H]
 	\centering
 	%%\captionsetup{justification=raggedright,singlelinecheck=false}
-	\includegraphics[height=6cm]{./image/PESTA/material/4x20_LCD.jpg}
+	\includegraphics[height=8cm]{./image/PESTA/material/4x20_LCD.jpg}
 	\caption{\acs{lcd}}
 	\label{4x20_LCD}
 \end{figure}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Micro-controlador}
-Os micro-controladores da Atmel de 8 a 32 \textit{bits} são baseados na arquitetura avançada de Harvard, na qual está concebido para baixo consumo e alta performance.
+Os micro controladores da Atmel de 8 a 32 \textit{bits} são baseados na arquitetura avançada de Harvard, na qual está concebido para baixo consumo e alta performance.
 \\
 \\
-Este tipo de arquitetura tem dois  \textit{buses} (barramentos), um dedicado à leitura das instruções a executar e outro para a escrita e leitura de dados (informação ou dados), isto assegura que uma nova instrução pode ser executada em cada ciclo de relógio, em que elimina todos os estados de espera, quando não há instruções prontas a executar.
+Este tipo de arquitetura tem dois \textit{buses} (barramentos), um dedicado à leitura das instruções a executar e outro para a escrita e leitura de dados (informação ou dados), isto assegura que uma nova instrução pode ser executada em cada ciclo de relógio, em que elimina todos os estados de espera, quando não há instruções prontas a executar.
 \\
 \\
-Nos micro-controladores do \ac{avr}, os barramentos estão configurados de forma a dar prioridade ao barramento das instruções do \ac{cpu} acesso à memória flash, enquanto o barramento da \acs{cpu} de dados tem prioridade de acesso à \ac{sram}.
+Nos micro controladores do \ac{avr}, os barramentos estão configurados de forma a dar prioridade ao barramento das instruções do \ac{cpu} acesso à memória flash, enquanto o barramento da \acs{cpu} de dados tem prioridade de acesso à \ac{sram}.
 \\
 \\
 O espaço de memória de dados é dividido em três partes, os \ac{gpr} as \ac{sfr} ou memória de I/O e a \textit{data} \acs{sram}.
 \\
 \\
-Os micro-controladores da AVR utilizam uma arquitetura de instruções \ac{risc} que reduz a complexidade dos circuitos na codificação de cada instrução. Daí que os micro-controladores que se baseiam nestes tipos de arquitetura são sinónimo de código reduzido, alta performance e baixo consumo energético.
+Os micro controladores da \acs{avr} utilizam uma arquitetura de instruções \ac{risc} que reduz a complexidade dos circuitos na codificação de cada instrução. Daí que os micro-controladores que se baseiam nestes tipos de arquitetura são sinónimo de código reduzido, alta performance e baixo consumo energético.
 \\
 \\
 \begin{figure}[H]
@@ -350,7 +351,7 @@ As características do micro controlador Atmega 128 estão abaixo indicadas na l
 , o \ac{adc} do \acs{mcu} nem vai ser usado neste projeto, vai ser utilizado um \textit{load cell amplifier} externo, uma alternativa que é muito melhor porque tem maior resolução e especifico para a aplicação em causa.
 \\ 
 Talvez os \acs{mcu} nem deviam ter a componente \acs{adc} e realçar em meios de comunicação e memoria, tornava-se assim num sistema totalmente digital.
-O Atmega 128 é uma escolha acertada para este projeto, considerando as alternativas de optar por um \ac{mcu} de 32 \textit{bits} ou um \textit{embeded system} com sistema operativo integrado, em que no primeiro caso o grau de dificuldade é acrescida devido a ter muito mais configurações e funcionalidades, e a segunda opção de ser exagerada, devido a só utilizar uma muito pequena parte das suas possibilidades, como se diz em inglês um \textit{overkill}, desperdiçando recursos desnecessariamente, e também se iria refletir a nível de custos monetários, no entanto facilita bastante no desenvolvimento de qualquer projeto, pois esta-se a trabalhar sobre uma camada de nível superior.
+O Atmega 128 é uma escolha acertada para este projeto, considerando as alternativas de optar por um \ac{mcu} de 32 \textit{bits} ou um \textit{embeded system} com sistema operativo integrado, em que no primeiro caso o grau de dificuldade é acrescida devido a ter muito mais configurações e funcionalidades, e a segunda opção de ser exagerada, devido a só utilizar uma muito pequena parte das suas possibilidades, como se diz em inglês um \textit{overkill}, desperdiçando recursos desnecessariamente, e também se iria refletir a nível de custos monetários, no entanto facilita bastante no desenvolvimento de qualquer projeto, pois esta-se a trabalhar sobre uma camada de nível superior (\textit{Kernel}).
 \\
 \\
 \begin{minipage}{\linewidth}
@@ -480,7 +481,7 @@ Abaixo esta indicado uma tabela dos materiais usados, assim como os preços.
 	}
 	\label{material}
 \end{table}
-Os preços são o que estão disponíveis no mercado, quanto a \textit{mainboard} foi o que arranjei com o preço mais competitivo com este \acs{mcu} Atmega 128, outras alternativas atingiam o mesmo preço ou mais caros mas com um \acs{mcu} com menor capacidade.
+Os preços são o que estão disponíveis no mercado, quanto a \textit{mainboard} foi o que arranjei com o preço mais competitivo com este \acs{mcu} Atmega 128, outras alternativas atingiam o mesmo preço ou mais caros mas com um \acs{mcu} com menor capacidade ou igual.
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Software}
@@ -496,7 +497,7 @@ O \ac{ide} utilizado neste trabalho foi o \textbf{\textit{{Microchip Studio for 
 \end{figure}
 \end{minipage}
 \begin{minipage}[!b]{.45\linewidth}
-	Ao lado a figura \ref{Microchip-Studio} nos mostra o logo da empresa, e abaixo a figura \ref{Work-Space} demonstra o ambiente de trabalho onde se executa todo o código que vai correr no micro-controlador.
+	Ao lado a figura \ref{Microchip-Studio} nos mostra o logo da empresa, e abaixo a figura \ref{Work-Space} demonstra o ambiente de trabalho onde se executa todo o código que vai correr no micro controlador.
 	\\
 	\\
 	\\
@@ -582,7 +583,7 @@ Quanto às interrupções é sempre um desafio, porque as tarefas têm que ser b
 %Passar isso para a parte de software
 \\
 \\
-O código que executa a rotina de leitura \acs{adc} é demonstrado na \textit{lista} \ref{HX711-read-raw}, sendo que esta é chamada pela interrupção periódica da \textit{figura} \ref{Interrupt_1}, em que  só é ativa quando o resultado da função na \textit{lista} \ref{Main-While-case-1} \textbf{hx.query(\&hx)} é verdadeira.
+O código que executa a rotina de leitura \acs{adc} é demonstrado na \textit{lista} \ref{HX711-read-raw}, sendo que esta é chamada pela interrupção periódica da \textit{figura} \ref{Interrupt_1}, em que só é ativa quando o resultado da função na \textit{lista} \ref{Main-While-case-1} \textbf{hx.query(\&hx)} é verdadeira.
 {
 	\lstinputlisting[language=C, caption={função de chamada \textbf{hx.query(\&hx)}}, captionpos=b, label=Main-While-case-1]{./input/code/hx_query.c}
 }
@@ -599,7 +600,7 @@ Após obter um número determinado de valores discretos lidos pelo amplificador 
 para ser tratado e deduzido o valor correspondente da massa.
 \\
 \\
-Enquanto a interrupção periódica para saltar entre \textit{menu} esta abaixo indicado na \textit{lista} \ref{Jump-menu}.
+Enquanto a interrupção periódica para saltar entre \textit{Menu} esta abaixo indicado na \textit{lista} \ref{Jump-menu}.
 \\
 {
 	\lstinputlisting[language=C, caption=Saltar de menu, captionpos=b, label=Jump-menu]{./input/code/Jump_menu.c}
@@ -610,14 +611,15 @@ Enquanto a interrupção periódica para saltar entre \textit{menu} esta abaixo 
 %Neste capítulo deve apresentar os testes realizados ao sistema implementado, e que devem garantir os objectivos iniciais.
 \section{Validação}
 %%%To validate is to justify why the choices made and alternatives that could be chosen.
-As escolhas feitas estão dentro dos parâmetros da oferta disponibilizada. Apenas o conhecimento adquirido ao aprofundar o funcionamento dos componentes é o ganho mais evidente, facilitando a interpretação de situações reais e deteção de anomalias (\textit{troubleshooting}), derivado aos custos dos materiais serem caros.
+As escolhas feitas estão conforme o necessário para implementar o projeto e considerando os custos serem o mais competitivo. Apenas o conhecimento adquirido ao aprofundar o funcionamento dos componentes é o ganho mais evidente na sua execução, facilitando a interpretação de situações reais e deteção de anomalias (\textit{troubleshooting}), derivado aos custos dos materiais serem caros.
 \\
 \\
+Foram feitos muitos testes, e usado um osciloscópio para afinações e resolução de anomalias, o que deu mais trabalho foi a biblioteca do amplificador de sinal HX711, foi testado com os parâmetros permitidos e com diferentes frequências de transmissão. No código foi feito várias experiências para determinar o comportamento mais favorável.
 %Esta justificação não é válida, tendo em conta o objetivo do trabalho !
 %Apostei na marca \textbf{Atmel} devido a experiência e conhecimentos já adquiridos, se aposta-se noutra marca teria de enfrentar uma curva de aprendizagem e adaptação que no final a nível de custos beneficio seria desfavorável, pelo tempo a dispensar e de ser muito trabalhoso ao refazer tudo novamente noutra arquitetura.
 \\
 \\
-O sensor usado é o mais comum nesta pratica, e escolha demonstrada, o circuito de interface é indiferente, a escolha apenas é baseada na sua precisão, ou seja, é de \textcolor{blue}{24} \textit{bits} enquanto o \acs{adc} do \acs{mcu} de apenas \textcolor{blue}{10} \textit{bits} de resolução.
+O sensor usado é o mais comum nesta pratica, e escolha demonstrada, o circuito de interface é indiferente, a escolha apenas é baseada na sua precisão, ou seja, é de 24 \textit{bits} enquanto o \acs{adc} do \acs{mcu} de apenas 10 \textit{bits} de resolução.
 %Os 24 bits são necessarios? Os 10 não satifazem os objectivos ? Chega-se a este capítulo e isto não foi apresentado até agora
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

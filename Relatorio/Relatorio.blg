@@ -13,44 +13,44 @@ Reallocating 'name_of_file' (item size: 1) to 54 items.
 A level-1 auxiliary file: ./include/SETUP/ContentFigureTableListingGlossary.aux
 Reallocating 'name_of_file' (item size: 1) to 28 items.
 Database file #1: ./bibliography/Bibliography.bib
-You've used 11 entries,
+You've used 10 entries,
             1876 wiz_defined-function locations,
-            535 strings with 4806 characters,
-and the built_in function-call counts, 1749 in all, are:
-= -- 157
-> -- 74
+            531 strings with 4744 characters,
+and the built_in function-call counts, 1603 in all, are:
+= -- 143
+> -- 70
 < -- 0
-+ -- 30
-- -- 19
-* -- 76
-:= -- 269
-add.period$ -- 21
-call.type$ -- 11
++ -- 28
+- -- 18
+* -- 71
+:= -- 248
+add.period$ -- 19
+call.type$ -- 10
 change.case$ -- 1
 chr.to.int$ -- 0
-cite$ -- 11
-duplicate$ -- 99
-empty$ -- 218
-format.name$ -- 19
-if$ -- 440
+cite$ -- 10
+duplicate$ -- 90
+empty$ -- 198
+format.name$ -- 18
+if$ -- 402
 int.to.chr$ -- 0
-int.to.str$ -- 11
-missing$ -- 21
-newline$ -- 46
-num.names$ -- 11
-pop$ -- 64
+int.to.str$ -- 10
+missing$ -- 19
+newline$ -- 42
+num.names$ -- 10
+pop$ -- 58
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 15
+skip$ -- 14
 stack$ -- 0
 substring$ -- 0
-swap$ -- 11
+swap$ -- 10
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 11
-width$ -- 13
-write$ -- 100
+while$ -- 10
+width$ -- 12
+write$ -- 91
