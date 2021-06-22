@@ -4,7 +4,7 @@ Scanning input file Relatorio.acn...
 !! Input index error (file = Relatorio.acn, line = 1):
    -- Illegal page number .
 .done (80 entries accepted, 1 rejected).
-Sorting entries....done (541 comparisons).
-Generating output file Relatorio.acr....done (89 lines written, 0 warnings).
+Sorting entries....done (521 comparisons).
+Generating output file Relatorio.acr....done (88 lines written, 0 warnings).
 Output written in Relatorio.acr.
 Transcript written in Relatorio.alg.

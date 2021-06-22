@@ -1,21 +1,21 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Desenvolvimento do projeto}
 %Neste capitulo deve fazer uma introdução na qual são indicados os requisitos do sistema a implementar. Será uma balança, mas quais as caracteristicas da mesma ? Disso depende os componentes selecionados.
-Pretende-se neste projeto então recorrer aos componentes disponíveis no mercado, e elaborar uma balança digital, os componentes necessários vai ser um micro controlador como cérebro do sistema, ter meios de interface humana especificamente botões, \textit{leds} indicadores e um \textit{display} para visualização das leituras \acs{adc} e o valore de calibração, também uma fonte de alimentação para suportar a carga.
-Para a medição da grandeza em estudo vai ter que se usar um sensor que mede o peso dos objetos e um amplificador de sinal com resolução suficiente para adquirir umas leituras com precisão relevante.
-\\
-\\
-O kit de desenvolvimento da \textit{figura} \ref{Kit_Desenvolvimento_2} permite a realização de testes, com vista à validação do projeto, bem como à execução de alterações e melhoramentos.
+Para desenvolvimento deste projeto, foi criado um \textit{kit} de desenvolvimento o que permitiu a realização de testes, com vista a validação do projeto, bem como a execução de alterações e melhoramentos.
 \\
 \\
 %Qual a resolução do dispaly LCD e a Gama da celula de peso.
+Por análise à \textit{figura} \ref{Kit_Desenvolvimento_2}, pode-se verificar a montagem em esqueleto do equipamento.
+\\
+\\
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.12]{./image/PESTA/kit/Kit_Desenvolvimento_2.jpg}
 	\caption{Kit de Desenvolvimento}
 	\label{Kit_Desenvolvimento_2}
 \end{figure}
-A seguir na \textit{figura} \ref{Diagrama-bloco-1} representados os elementos em diagrama de blocos.
+\figurespace{.5}
+A seguir na \textit{figura} \ref{Diagrama-bloco-1} estão representados os elementos em diagrama de blocos.
 %Pôr a celula de caraga representada por um bloco
 %comunicação série
 %que tipo de comunicações ?
@@ -27,10 +27,15 @@ A seguir na \textit{figura} \ref{Diagrama-bloco-1} representados os elementos em
 	\caption{Diagrama blocos do sistema implementado}
 	\label{Diagrama-bloco-1}
 \end{figure}
+O micro controlador usado neste projeto é um Atmega 128, a célula de peso é de 50Kg com uma saída de proporção de $\; 2mV/V \;$, é usado um amplificador de sinal para à célula de peso com referência HX711, em que tem um protocolo de comunicação proprietário.
+Utilizo um \textit{display} \acs{lcd} para visualizar os valores medidos com a sua grandeza, também para visualizar o fator de divisão que converte o valor lido da célula de peso no seu respetiva correspondente valor de massa.
+Botões são usados para saltar entre \textit{Menus} e calibração. Os \textit{leds} servem de indicadores em que estado se encontra, isto é, se esta usar os parâmetros \textit{default} ou do \textit{offset}.
+\\
+\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Nas seguintes secções serão apresentados os componentes utilizados no projeto, assim como os aspetos relacionados com a implementação dos mesmos.
 \section{Célula de carga}
-Para medir a massa, recorreu-se a uma \textbf{célula de carga} de 50 Kg, apresentada na \textit{figura} \ref{Diagrama-bloco-1}, que determina a pressão exercida por um dado objeto. Os sensores (\textit{strain gauges}) são instalados sobre um bloco de alumínio como indicado na \textit{figura} \ref{Load_Cell_1}. A célula de carga utiliza sensores piezoresistivos numa montagem em ponte \textit{Wheatstone}, sobre sua superfície em locais específicos. Esses locais são determinados pela configuração mecânica da célula de carga de forma a obter a leitura linear e proporcional ao peso exercido, isto é, ter um comportamento similar de uma mola.
+Para medir a massa, recorreu-se a uma célula de carga de 50Kg (\textit{figura} \ref{Load_Cell_1}). Esta célula de carga utiliza sensores piezoresistivos numa montagem em ponte \textit{Wheatstone} sobre sua superfície em locais específicos. Esses locais são determinados pela configuração mecânica da célula de carga de forma a obter a leitura linear e proporcional ao peso exercido, isto é, ter um comportamento similar de uma mola.
 %explicar melhor esta parte da montagem
 \\
 \begin{figure}[H]
@@ -92,11 +97,12 @@ O termo piezoresistividade deriva da palavra grega \textit{piezin}, que signific
 Normalmente nesta configuração só são usados um ou dois sensores, e estes podem estar ligados nos extremos opostos, ou ligados ao mesmo ponto da alimentação, só em casos muito raros são utilizados quatro sensores na qual sua sensibilidade é máxima. Na \textit{figura} \ref{wheatstone-2} se os valores das quatro resistências são iguais ou nos casos em que $R_2 R_3 = R_4 R_1$, então a tensão $V_{AB}$ na saída é nula, e para haver variação $V_A$ terá que ser diferente de $V_B$.
 \\
 \\
-Esta célula de carga de 50Kg tem uma resolução na saída de 2 mV por cada Volt de alimentação com mais ou menos 0.15 mV de erro. Isto quer dizer que se for alimentada por 5 Volt está vai ter na saída uma tensão máxima de 10 mV e a margem de erro total de leitura esta na ordem de mais ou menos 0.03\%.
-Esta célula de carga tem interferências se usado durante longos contínuos períodos de tempo, da temperatura e ruídos elétricos.
+Esta célula de carga de 50Kg tem uma resolução na saída de 2 mV por cada Volt da sua alimentação com mais ou menos 0.15 mV de erro. Isto quer dizer que se for alimentada por 5 Volt está vai ter na saída uma tensão máxima de 10 mV e a margem de erro total de leitura esta na ordem de mais ou menos 0.03\%.
+Esta célula de carga tem interferências se usado durante longos contínuos períodos de tempo, da temperatura e ruídos.
 \\
 \\
-Como indicado no \textit{datasheet} o valor pode ter interferência de 0.03\% por cada meia hora de utilização, e 0.0016\% por cada grau de temperatura em excesso. Convém neste caso permanecer o equipamento desligado e apenas ser usado quando necessário, ou fazer \textit{offset} tendo em consideração a margem de erro.
+Como indicado no \textit{datasheet} o valor obtido pode ter interferência de 0.03\% por cada meia hora de utilização, e 0.0016\% por cada grau de temperatura em excesso. Convém neste caso permanecer o equipamento desligado e apenas ser usado quando necessário, ou fazer \textit{offset} tendo em consideração a margem de erro.
+\\
 \\
 \\
 %https://www.800loadcel.com/load-cell-and-strain-gauge-basics.html
@@ -113,14 +119,13 @@ A montagem da mesa (prato) de medição é apresentada na \textit{figura} \ref{P
 \end{figure}
 \end{minipage}
 \minipagespace{.5}
-Ao colocar uma massa sobre a mesa, esta vai exercer pressão na célula de carga, que vai resultar na tensão e compressão nos sensores \textit{strain gauge} que estão assentes na superfície do corpo da célula de carga e provocar uma diferença de potencial correspondente. Estes sensores não estão visível na célula de carga porque esta têm uma camada protetora de silicone branco sobre elas.
-\newpage
+Ao colocar uma massa sobre a mesa, esta vai exercer pressão na célula de carga, que vai resultar numa tensão mecânica e compressão nos sensores \textit{strain gauge} que estão assentes na superfície do corpo da célula de carga, provocando uma diferença de potencial correspondente. Estes sensores não estão visível na célula de carga porque esta têm uma camada protetora de silicone branco sobre elas.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Amplificador de sinal e \acs{adc}}
 A amplificação é geralmente um requisito fundamental, pois a maioria dos sensores tendem a produzir níveis de sinal significativamente mais baixos do que aqueles usados no processador digital. Os sensores resistivos podem precisar de um amplificador para a célula de carga. Se possível, é vantajoso ter o ganho o mais próximo possível do elemento sensor. Em situações onde um maior ganho é necessário, muitas vezes pode haver implicações para lidar com quaisquer efeitos adversos, como o ruído, problemas de \textit{layout} do \textit{chip}, os transitórios agudos associados aos sinais digitais que precisam de ser mantidos bem longe dos circuitos analógicos \textit{front-end}. \cite{book-9}
 \\
 \\
-A ligação destes componentes é intuitiva e fácil de se perceber \textit{tabela} \ref{HX711_connection}, o que é complexo neste trabalho é a interligação destes equipamentos com o micro controlador por meio de \textit{software} e a criação do \textit{driver} de comunicação para a placa do amplificador de sinal (\textit{chip} HX711 figura \ref{HX711_Schematic_1}), já que o protocolo de comunicação é proprietário e esta demonstrado na \textit{figure} \ref{Protocolo}.
+A ligação deste componente é intuitiva e fácil de se perceber \textit{tabela} \ref{HX711_connection}, o que é complexo neste trabalho é a interligação dos equipamentos com o micro controlador por meio de \textit{software} e a criação das bibliotecas e os \textit{drivers} de comunicação, como neste caso da placa do amplificador de sinal (\textit{chip} HX711 figura \ref{HX711_Schematic_1}), já que o protocolo de comunicação é proprietário como demonstrado na \textit{figure} \ref{Protocolo}.
 \\
 %Então deve ser apresentada
 %Apresenatação das figuras e da tabela....
@@ -155,20 +160,21 @@ A ligação destes componentes é intuitiva e fácil de se perceber \textit{tabe
 \begin{figure}[H]
 	%\captionsetup{justification=raggedright,singlelinecheck=false}
 	\centering
-	\includegraphics[scale=0.5]{./image/PESTA/comunicacao/Protocolo.png}
+	\includegraphics[scale=0.6]{./image/PESTA/comunicacao/Protocolo.png}
 	\caption{Protocolo de comunicação}
 	\label{Protocolo}
 \end{figure}
 \figurespace{.5}
-A placa \textit{Load Cell Amplifier } pode ser fisicamente configurada para determinar o número de amostras por segundo a ser transmitido. Este circuito tem duas opções: a opção de 10 amostras por segundo, e de 80 amostras por segundo. Neste projeto foi utilizada a segunda opção, que necessita de uma pequena alteração na placa de circuito de impresso, isto é, é necessário abrir o respetivo \textit{jumper} de configuração.
+A placa \textit{Load Cell Amplifier} pode ser fisicamente configurada para determinar o número de amostras por segundo a ser transmitido. Este circuito tem duas opções: a opção de 10 amostras por segundo, e de 80 amostras por segundo. Neste projeto foi utilizada a segunda opção, que necessita de uma pequena alteração na placa de circuito de impresso, isto é, é necessário abrir o respetivo \textit{jumper} de configuração.
 \\
 \\
-A conversão de informação acontece na transição entre o sinal contínuo da vida real, para um sinal discreto associado ao mundo digital. Tipicamente esta etapa consiste na conversão de um sinal analógico para digital.
+A conversão de informação acontece na transição entre o sinal contínuo da vida real, para um sinal discreto associado ao mundo digital. Tipicamente esta etapa consiste na conversão de um sinal analógico para digital.\cite{book-9}
 \\
 O processamento digital pode consistir de rotinas para compensar os desvios por linearização, a sensibilidade e o \textit{offset}, ou o processamento de técnicas mais sofisticadas como reconhecimento de padrões, (tais como, redes neuronais) para equipamentos de sensores vetoriais.\cite{book-9}
 \\
 A comunicação é responsável por criar rotinas necessárias para transferir e receber a informação e sinais de controle, entre o sensor e o processador, que toma lugar como componente central, tratando a informação, guardando os dados e fazendo rotinas, tais como, de calibração, e de teste e controlo de ganho da amplificação. \cite{book-9}
-\newpage
+\\
+\\
 Abaixo a \textit{figura} \ref{SPS_64} que foi adquirida do trabalho realizado recorrendo ao osciloscópio da RIGOL DS1102E e seu software \textit{Rigol Waveform Viewer}, demonstrando a comunicação entre o amplificador de sinal e o micro controlador da informação do \acs{adc}, a linha amarela é a informação (\acs{adc}) e a azul os impulsos do \textit{clock} PD\_SCK. Neste exemplo é visível cinco conversões executadas.
 \begin{figure}[H]
 	\centering
@@ -176,7 +182,7 @@ Abaixo a \textit{figura} \ref{SPS_64} que foi adquirida do trabalho realizado re
 	\caption{Amostras}
 	\label{SPS_64}
 \end{figure}
-\figurespace{.5}
+\figurespace{.6}
 A biblioteca (\textit{driver}) do integrado HX771 recorre a interrupções periódicas. Quando a linha de sinal da informação (amarela) vai para a massa esta indica que tem um pacote de leitura pronto a ser transmitido.
 \\
 \\
@@ -232,8 +238,7 @@ Como indicado abaixo nos gráficos, em que a linha \textcolor{yellow}{amarela} �
 Para obter este resultado, a livraria \textit{driver} para o \textit{Load Cell Amplifier} teve de ter em consideração que a arquitetura do micro-controlador é de 8 \textit{bits}, uma vez que a estrutura do pacote de informação é entre 25 a 27 impulsos do \textit{clock cycle} em que é transmitido primeiro o \ac{msb}.
 \\
 \\
-Este Amplificador de sinal tem uma amplificação do sinal de entrada como demonstrado na \textit{tabela} \ref{Gain_Selection}, e uma resolução de 24 \textit{bits}, como se sabe os números podem representar quantidades ou intervalos, os 24 \textit{bits} representa um intervalo de 0 até $2^{24}-1$, que nos dá 16777215, ou seja, o sinal de entrada amplificado pode ser dividido por este numero, isto é, pode-se obter este número de leituras possíveis, em que, se se tratar por exemplo de 5 Volt pode-se obter 16777215 leituras de intervalos de aproximadamente $2.98 x 10^{-7}$ Volt cada, uma precisão muito boa.
-\newpage
+Este amplificador de sinal tem uma amplificação do sinal de entrada como indicado na \textit{tabela} \ref{Gain_Selection}, e tem uma resolução de 24 \textit{bits}, como se sabe os números podem representar quantidades ou intervalos, os 24 \textit{bits} representa um intervalo de 0 até \, $2^{24}-1$, que nos dá 16777215 unidades, ou seja, o sinal de entrada amplificado pode ser dividido por este numero, isto é, pode-se obter este número de leituras possíveis, em que, se se tratar por exemplo de 5 Volt pode-se obter 16777215 leituras de intervalos de aproximadamente $2.98 \times 10^{-7}$ Volt cada, uma precisão muito boa.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Display \acs{lcd}}
 %Porque este ?
@@ -285,7 +290,7 @@ Abaixo está a tabela \ref{LCD_connections}, com as respetivas ligações, e uma
 	\caption{\acs{lcd}}
 	\label{4x20_LCD}
 \end{figure}
-\newpage
+\figurespace{.3}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Micro-controlador}
 Os micro controladores da Atmel de 8 a 32 \textit{bits} são baseados na arquitetura avançada de Harvard, na qual está concebido para baixo consumo e alta performance.
@@ -311,51 +316,49 @@ Os micro controladores da \acs{avr} utilizam uma arquitetura de instruções \ac
 	\label{Harvard_architecture}
 \end{figure}
 \qquad link: \url{https://en.wikipedia.org/wiki/Harvard_architecture}
-\newpage
+\\
+\\
 %Porque esta opção?
 %O facto de ser um dos masi poderosos.. não é justificação
 %A seleção do material deve ser justificada de forma mais citeriosa
 %Devia ser feita uma pesquisa de produtos e seleção baseada nos requisitos prédefinidos.
-Neste projeto optou-se pelo Atmega 128 (\textit{figura} \ref{Atmega_128_pinagem}), por ser um dos mais poderosos \ac{mcu} da linha de 8 \textit{bits} da Atmel, e também por estar integrado numa placa de desenvolvimento dotado de ligações por fichas \ac{idc}, ou seja, utiliza \textit{flat ribbon cables} para ligar os periféricos, o que é mais prático do que sistemas que atualmente são mais populares, como por exemplo a placa de desenvolvimento Arduino, STMicroelectronics e a \ac{pic} que recorrem a um interface por pinos (\textit{pin headers}).
-\\
-\\
+O Atmega 128 (\textit{figura} \ref{Atmega_128_pinagem}) é um dos mais poderosos \ac{mcu} da linha de 8 \textit{bits} da Atmel, e neste projeto esta integrado numa placa de desenvolvimento dotado de ligações por fichas \ac{idc}, ou seja, utiliza \textit{flat ribbon cables} para ligar os periféricos, o que é mais prático do que sistemas que atualmente são mais populares, como por exemplo a placa de desenvolvimento Arduino, STMicroelectronics e a \ac{pic} que recorrem a um interface por pinos (\textit{pin headers}).
 \begin{figure}[H]
 	\centering
 	%%\captionsetup{justification=raggedright,singlelinecheck=false}
-	\includegraphics[scale=0.7]{./image/PESTA/material/Atmega128_1.jpg}
+	\includegraphics[scale=0.5]{./image/PESTA/material/Atmega128_1.jpg}
 	\caption{Atmega 128}
 	\label{Atmega_128_pinagem}
 \end{figure}
 \figurespace{1}
-{Transparências Sistemas Digitais 2 \quad \acs{isep} \quad 2008/2009 \quad \textit{link}}:
-\\
-\url{https://drive.google.com/file/d/1wgOGf8WwYY0OzDhRca9ypXz-iBO55YOF/view?usp=sharing}
-\\
-\\
+%{Transparências Sistemas Digitais 2 \quad \acs{isep} \quad 2008/2009 \quad \textit{link}}: \\
+%\url{https://drive.google.com/file/d/1wgOGf8WwYY0OzDhRca9ypXz-iBO55YOF/view?usp=sharing} \\ \\
 Esta opção preenche os requisitos requeridos, por ter portas de entrada e saída suficientes, porque o \acs{lcd} requer a utilização de oito pinos para funcionar, o amplificador de sinal dois pinos, temos quatro botões que requer quatro pinos de entrada e três \textit{leds} indicadores, ou seja, três pinos de saída. Por aqui deduzimos que o \acs{mcu} a escolher tem que ter mais do que dezassete pinos só para os periféricos.
 \\
-O \acs{mcu} tem que ter dois temporizadores capazes de gerar os tempos desejados por interrupções, talvez seria possível fazer isto com um micro controlador com menos capacidades, porque este projeto não utiliza a funcionalidade do \acs{adc} nem comunicações série integradas, no entanto comparando a nível de preço com as alternativas destaca-se esta opção.
+O \acs{mcu} também tem que ter dois temporizadores capazes de gerar os tempos desejados por interrupções, talvez seria possível fazer isto com um micro controlador com menos capacidades, porque este projeto não utiliza a funcionalidade do \acs{adc} nem comunicações série integradas, no entanto comparando a nível de preço com as alternativas destaca-se esta opção.
 \\
-Ao escolher outra alternativa que está no seu limiar de recursos também tira a possibilidade de melhorar o projeto e acrescentar funcionalidades como as \textit{boards} da \textit{figura} \ref{Boards-1} que me pertencem.
+Alternativas que foram postas em consideração, não satisfazendo o que é pretendido, \textit{boards} da \textit{figura} \ref{Boards-1}.
 \\
 \begin{figure}[H]
 	\centering
 	%%\captionsetup{justification=raggedright,singlelinecheck=false}
-	\includegraphics[scale=0.22]{./image/PESTA/boards/Boards-1.jpg}
+	\includegraphics[scale=0.18]{./image/PESTA/boards/Boards-2.jpg}
 	\caption{Alternativas ao Atmega 128}
 	\label{Boards-1}
 \end{figure}
-\newpage
-As características do micro controlador Atmega 128 estão abaixo indicadas na lista. Dos componentes que constituem o Atmega 128, os temporizadores são os que considero os mais importantes devido a ser uma das grandezas fundamentais, o tempo, podendo neste gerar intervalos de tempo e \acp{pwm}
+\figurespace{.3}
+Dos componentes que constituem o Atmega 128, os temporizadores são os que considero os mais importantes devido a ser uma das grandezas fundamentais, o tempo, podendo neste gerar intervalos de tempo e \acp{pwm}
 %porque
 , o \ac{adc} do \acs{mcu} nem vai ser usado neste projeto, vai ser utilizado um \textit{load cell amplifier} externo, uma alternativa que é muito melhor porque tem maior resolução e especifico para a aplicação em causa.
-\\ 
+\\
+\\
 Talvez os \acs{mcu} nem deviam ter a componente \acs{adc} e realçar em meios de comunicação e memoria, tornava-se assim num sistema totalmente digital.
-O Atmega 128 é uma escolha acertada para este projeto, considerando as alternativas de optar por um \ac{mcu} de 32 \textit{bits} ou um \textit{embeded system} com sistema operativo integrado, em que no primeiro caso o grau de dificuldade é acrescida devido a ter muito mais configurações e funcionalidades, e a segunda opção de ser exagerada, devido a só utilizar uma muito pequena parte das suas possibilidades, como se diz em inglês um \textit{overkill}, desperdiçando recursos desnecessariamente, e também se iria refletir a nível de custos monetários, no entanto facilita bastante no desenvolvimento de qualquer projeto, pois esta-se a trabalhar sobre uma camada de nível superior (\textit{Kernel}).
+O Atmega 128 é uma escolha acertada para este projeto, considerando as alternativas de optar por um \ac{mcu} de 32 \textit{bits} ou um \textit{embeded system} com sistema operativo integrado, em que no primeiro caso o grau de dificuldade é acrescida devido a ter muito mais configurações e funcionalidades, e a segunda opção de ser exagerada, devido a só utilizar uma muito pequena parte das suas possibilidades, como se diz em inglês um \textit{overkill}, desperdiçando recursos desnecessariamente, e também se iria refletir a nível de custos monetários, no entanto facilita bastante no desenvolvimento de qualquer projeto, pois estaria-se a trabalhar sobre uma camada de nível superior (\textit{Kernel}).
 \\
 \\
 \begin{minipage}{\linewidth}
-{\Large Características do Atmega 128 :}
+%{\Large Características do Atmega 128 :}
+As características do micro controlador Atmega 128 :
 \normalsize
 \begin{itemize}	
 	\setlength\itemsep{-0.3em}
@@ -381,8 +384,7 @@ O Atmega 128 é uma escolha acertada para este projeto, considerando as alternat
 	\item \acs{twi} (I2C)
 \end{itemize}
 \end{minipage}
-\minipagespace{0.5}
-\newpage
+\minipagespace{1}
 Para programar este micro-controlador (\textbf{Atmega 128}), foi utilizado o programador da marca da Atmel, o \ac{atmel-ice} \textit{figura} \ref{Programador_1}. Para este equipamento tem disponível programação via \ac{isp} \textit{figura} \ref{ISP_6_8_10pin} e \ac{jtag}.
 \minipagespace{.2}
 \begin{minipage}[!b]{.5\linewidth}
@@ -405,7 +407,7 @@ Para programar este micro-controlador (\textbf{Atmega 128}), foi utilizado o pro
 		\label{ISP_6_8_10pin}
 	\end{figure}
 \end{minipage}
-\newpage
+\minipagespace{.5}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Fonte de Alimentação}
 %Introdução a fonte de alimentação...
@@ -447,7 +449,6 @@ Características DC/DC:
 \minipagespace{.5}
 Como a \textit{mainboard} tem um regulador de tensão linear de 5 Volt, para aumentar a eficiência e ter uma alimentação variável de entrada até 38VDC foi utilizado o \textit{buck converter} para alimentar o regulador de tensão linear para um valor próximo dos 5 Volt, por exemplo 9 Volt, porque se sabe que as perdas de um regulador de tensão linear é proporcional a queda de tensão entre a sua entrada e a sua saída. Podia-se remover o regulador de tensão linear e apenas utilizar o \textit{buck converter} regulado para o valor de 5 Volt mas pretendo não alterar o \acs{pcb} da \textit{mainboard}.
 %Explicar melhor
-\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Orçamento do material}
 Abaixo esta indicado uma tabela dos materiais usados, assim como os preços.
@@ -482,7 +483,6 @@ Abaixo esta indicado uma tabela dos materiais usados, assim como os preços.
 	\label{material}
 \end{table}
 Os preços são o que estão disponíveis no mercado, quanto a \textit{mainboard} foi o que arranjei com o preço mais competitivo com este \acs{mcu} Atmega 128, outras alternativas atingiam o mesmo preço ou mais caros mas com um \acs{mcu} com menor capacidade ou igual.
-\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Software}
 \section{Software}
@@ -511,7 +511,7 @@ O \ac{ide} utilizado neste trabalho foi o \textbf{\textit{{Microchip Studio for 
 	\caption{Ambiente de trabalho}
 	\label{Work-Space}
 \end{figure}
-\newpage
+\figurespace{.5}
  A programação foi feita em Linguagem \textbf{C}, e a sua estrutura sintática está abaixo apresentada:
 \\
 \\
@@ -524,9 +524,13 @@ O \ac{ide} utilizado neste trabalho foi o \textbf{\textit{{Microchip Studio for 
 \end{figure}
 \figurespace{.5}
 O \textit{PROGRAMA 1} é onde corre o programa da balança, e o \textit{PROGRAMA 2} usado para calibração do \textit{gain factor}.
-\newpage
-Todos os programas seguem uma estrutura sintática usando o seguinte modelo.
 \\
+\\
+\\
+\\
+\\
+\\
+Todos os programas seguem uma estrutura sintática usando o seguinte modelo.
 \\
 \begin{figure}[H]
 	\centering
@@ -536,7 +540,6 @@ Todos os programas seguem uma estrutura sintática usando o seguinte modelo.
 \end{figure}
 \figurespace{.5}
 Duas interrupções periódicas estão sempre a correr em \textit{background}, uma para fazer o \textit{shift} dos \textit{bits} da conversão \acs{adc} feita pelo amplificador de sinal HX711 e outra interrupção periódica de segundo em segundo, usada para saltar de \textit{Menu} pelos botões.
-\\
 \\
 \begin{minipage}{\linewidth}
 \begin{minipage}{.5\linewidth}
@@ -587,11 +590,11 @@ O código que executa a rotina de leitura \acs{adc} é demonstrado na \textit{li
 {
 	\lstinputlisting[language=C, caption={função de chamada \textbf{hx.query(\&hx)}}, captionpos=b, label=Main-While-case-1]{./input/code/hx_query.c}
 }
-\newpage
+\listingspace{1}
+%Se apresenta código deve descreve-lo sucintamente
 {
 	\lstinputlisting[language=C, caption=HX711 read raw, captionpos=b, label=HX711-read-raw]{./input/code/HX711_read_raw.c}
 }
-%\listingspace{.1}
 Após obter um número determinado de valores discretos lidos pelo amplificador de sinal (HX711) é calculada uma média,
 \begin{equation}
 	\label{eq:Mean}
@@ -601,11 +604,9 @@ para ser tratado e deduzido o valor correspondente da massa.
 \\
 \\
 Enquanto a interrupção periódica para saltar entre \textit{Menu} esta abaixo indicado na \textit{lista} \ref{Jump-menu}.
-\\
 {
 	\lstinputlisting[language=C, caption=Saltar de menu, captionpos=b, label=Jump-menu]{./input/code/Jump_menu.c}
 }
-\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Validação do projeto implementado}
 %Neste capítulo deve apresentar os testes realizados ao sistema implementado, e que devem garantir os objectivos iniciais.
@@ -621,7 +622,6 @@ Foram feitos muitos testes, e usado um osciloscópio para afinações e resoluç
 \\
 O sensor usado é o mais comum nesta pratica, e escolha demonstrada, o circuito de interface é indiferente, a escolha apenas é baseada na sua precisão, ou seja, é de 24 \textit{bits} enquanto o \acs{adc} do \acs{mcu} de apenas 10 \textit{bits} de resolução.
 %Os 24 bits são necessarios? Os 10 não satifazem os objectivos ? Chega-se a este capítulo e isto não foi apresentado até agora
-\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Testar}
 Quanto a funcionalidade no seu todo, a balança tem \textcolor{blue}{quatro} botões e \textcolor{blue}{três} \textit{leds} ativados, um botão para fazer o \textit{offset} no \textcolor{green}{PORTF 0}, e dois botões com dupla função, fazer \textit{reset} para \textit{default} e incrementar, outro para entrar no menu de calibração e decrementar, o \textcolor{blue}{quarto} botão é reservado para \textit{enter} e assumir o valor introduzido na calibração.\\
