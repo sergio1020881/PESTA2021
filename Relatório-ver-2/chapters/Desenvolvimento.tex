@@ -7,7 +7,6 @@ Para desenvolvimento deste projeto, foi criado um \textit{kit} de desenvolviment
 %Qual a resolução do dispaly LCD e a Gama da celula de peso.
 Por análise à \textit{figura} \ref{Kit_Desenvolvimento_2}, pode-se verificar a montagem em esqueleto do equipamento.
 \\
-\\
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.12]{./image/PESTA/kit/Kit_Desenvolvimento_2.jpg}
@@ -32,8 +31,8 @@ Utilizo um \textit{display} \acs{lcd} para visualizar os valores medidos com a s
 Botões são usados para saltar entre \textit{Menus} e calibração. Os \textit{leds} servem de indicadores em que estado se encontra, isto é, se esta usar os parâmetros \textit{default} ou do \textit{offset}.
 \\
 \\
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Nas seguintes secções serão apresentados os componentes utilizados no projeto, assim como os aspetos relacionados com a implementação dos mesmos.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Célula de carga}
 Para medir a massa, recorreu-se a uma célula de carga de 50Kg (\textit{figura} \ref{Load_Cell_1}). Esta célula de carga utiliza sensores piezoresistivos numa montagem em ponte \textit{Wheatstone} sobre sua superfície em locais específicos. Esses locais são determinados pela configuração mecânica da célula de carga de forma a obter a leitura linear e proporcional ao peso exercido, isto é, ter um comportamento similar de uma mola.
 %explicar melhor esta parte da montagem
@@ -73,7 +72,7 @@ O termo piezoresistividade deriva da palavra grega \textit{piezin}, que signific
 \minipagespace{.5}
 %Fazer uma introdução à figura 3.6.
 %Pôr sinal de massa na figura.
-\begin{minipage}[!b]{.35\linewidth}
+\begin{minipage}[!b]{.45\linewidth}
 	\begin{figure}[H]
 		\captionsetup{justification=raggedright,singlelinecheck=false}
 		\flushleft
@@ -82,12 +81,12 @@ O termo piezoresistividade deriva da palavra grega \textit{piezin}, que signific
 		\label{wheatstone-2}
 	\end{figure}
 \end{minipage}
-\begin{minipage}[!b]{.6\linewidth}
+\begin{minipage}[!b]{.5\linewidth}
 	\setlength{\jot}{10pt}% tweak
+	\small
 	\begin{align}
 		\label{eq:wheatstone}
-		&V_A =  \frac{R_2}{R_1 + R_2} \; V_{ref} \; , \; V_B=\frac{R_4}{R_3 + R_4} \; V_{ref} \\
-		&V_{AB} =  V_A - V_B = e \\
+		&V_A =  \frac{R_2}{R_1 + R_2} \; V_{ref} \\ &V_B=\frac{R_4}{R_3 + R_4} \; V_{ref} \\
 		&V_{AB}= \left(\frac{R_2}{R_1 + R_2} - \frac{R_4}{R_3 + R_4}\right) \; Vref \\
 		&V_{AB} = \frac{R_2 R_3 - R_4 R_1}{(R_1 + R_2)(R_3 + R_4)} \; Vref
 	\end{align}
@@ -104,7 +103,6 @@ Esta célula de carga tem interferências se usado durante longos contínuos per
 Como indicado no \textit{datasheet} o valor obtido pode ter interferência de 0.03\% por cada meia hora de utilização, e 0.0016\% por cada grau de temperatura em excesso. Convém neste caso permanecer o equipamento desligado e apenas ser usado quando necessário, ou fazer \textit{offset} tendo em consideração a margem de erro.
 \\
 \\
-\\
 %https://www.800loadcel.com/load-cell-and-strain-gauge-basics.html
 %Para perceber melhor o funcionamento do sensor \textit{\textbf{strain gauge}} é aconselhável recorrer a literatura \cite{book-9} e \cite{book-10}, que explica como são feitas, seus dimensionamentos e processos de fabrico.
 A montagem da mesa (prato) de medição é apresentada na \textit{figura} \ref{Prato}.
@@ -113,7 +111,7 @@ A montagem da mesa (prato) de medição é apresentada na \textit{figura} \ref{P
 \begin{minipage}[!b]{\linewidth}
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.16]{./image/PESTA/material/Prato-1.jpg}
+	\includegraphics[scale=0.14]{./image/PESTA/material/Prato-1.jpg}
 	\caption{Prato}
 	\label{Prato}
 \end{figure}
@@ -145,12 +143,12 @@ A ligação deste componente é intuitiva e fácil de se perceber \textit{tabela
 	\end{tabular}	
 	\label{HX711_connection}
 \end{table}
-\tablespace{1}
+\tablespace{.5}
 \begin{figure}[H]
 	%\captionsetup{justification=raggedright,singlelinecheck=false}
 	\centering
-	\includegraphics[scale=0.35]{./image/PESTA/schematic/HX711_Schematic_1.jpg}
-	\includegraphics[scale=0.1]{./image/PESTA/material/HX711_board_1.jpg}
+	\includegraphics[scale=0.3]{./image/PESTA/schematic/HX711_Schematic_1.jpg}
+	\includegraphics[scale=0.09]{./image/PESTA/material/HX711_board_1.jpg}
 	\caption{Diagrama de blocos e a placa do HX711}
 	\label{HX711_Schematic_1}
 \end{figure}
@@ -164,7 +162,7 @@ A ligação deste componente é intuitiva e fácil de se perceber \textit{tabela
 	\caption{Protocolo de comunicação}
 	\label{Protocolo}
 \end{figure}
-\figurespace{.5}
+\figurespace{2}
 A placa \textit{Load Cell Amplifier} pode ser fisicamente configurada para determinar o número de amostras por segundo a ser transmitido. Este circuito tem duas opções: a opção de 10 amostras por segundo, e de 80 amostras por segundo. Neste projeto foi utilizada a segunda opção, que necessita de uma pequena alteração na placa de circuito de impresso, isto é, é necessário abrir o respetivo \textit{jumper} de configuração.
 \\
 \\
@@ -176,18 +174,19 @@ A comunicação é responsável por criar rotinas necessárias para transferir e
 \\
 \\
 Abaixo a \textit{figura} \ref{SPS_64} que foi adquirida do trabalho realizado recorrendo ao osciloscópio da RIGOL DS1102E e seu software \textit{Rigol Waveform Viewer}, demonstrando a comunicação entre o amplificador de sinal e o micro controlador da informação do \acs{adc}, a linha amarela é a informação (\acs{adc}) e a azul os impulsos do \textit{clock} PD\_SCK. Neste exemplo é visível cinco conversões executadas.
+\\
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.55]{./image/PESTA/graph/80SPS64GAIN/SPS_80.JPG}
+	\includegraphics[scale=0.42]{./image/PESTA/graph/80SPS64GAIN/SPS_80.JPG}
 	\caption{Amostras}
 	\label{SPS_64}
 \end{figure}
-\figurespace{.6}
+\figurespace{.5}
 A biblioteca (\textit{driver}) do integrado HX771 recorre a interrupções periódicas. Quando a linha de sinal da informação (amarela) vai para a massa esta indica que tem um pacote de leitura pronto a ser transmitido.
 \\
 \\
 \begin{minipage}[!b]{\linewidth}
-\begin{minipage}[!b]{.40\linewidth}
+\begin{minipage}[!b]{.45\linewidth}
 	\begin{table}[H]
 		\captionsetup{justification=raggedright,singlelinecheck=false}
 		\caption{Configuração Ganho}
@@ -207,8 +206,8 @@ A biblioteca (\textit{driver}) do integrado HX771 recorre a interrupções peri�
 	\end{table}
 	\tablespace{2.5}
 \end{minipage}
-\begin{minipage}[l]{.6\linewidth}
-\vspace{.3cm}
+\begin{minipage}[l]{.53\linewidth}
+\vspace{.1cm}
 Como indicado abaixo nos gráficos, em que a linha \textcolor{yellow}{amarela} é a informação, e a linha \textcolor{BlueGreen}{azul} o respetivo \textit{clock} que é gerado pelas interrupções do micro-controlador, fazendo um deslocamento dos \textcolor{blue}{24} \textit{bits}, que por fim transmite para o amplificador, o ganho de amplificação a ser usado pelo numero excedente de \textit{clock cycles}, em que nesta demonstração da \textit{figura} \ref{Gain_128_example} é \textcolor{blue}{um}, e corresponde a um ganho de \textcolor{blue}{128}, respeitando a informação apresentada na \textit{tabela} \ref{Gain_Selection},  e de seguida o exemplo da \textit{figura} \ref{Gain_64_example}, com um ganho de \textcolor{blue}{64}, pois tem \textcolor{blue}{três} impulsos excedentes.
 \end{minipage}
 \end{minipage}
@@ -218,17 +217,17 @@ Como indicado abaixo nos gráficos, em que a linha \textcolor{yellow}{amarela} �
 \begin{figure}[H]
 	\captionsetup{justification=raggedright,singlelinecheck=false}
 	\flushleft
-	\includegraphics[scale=0.3]{./image/PESTA/graph/80SPS128GAIN/Gain_128_example.JPG}
+	\includegraphics[scale=0.26]{./image/PESTA/graph/80SPS128GAIN/Gain_128_example.JPG}
 	\caption{Ganho de 128}
 	\label{Gain_128_example}
 \end{figure}
 \end{minipage}
-\hspace{1cm}
+\hspace{.8cm}
 \begin{minipage}[!b]{.43\linewidth}
 \begin{figure}[H]
 	\captionsetup{justification=raggedright,singlelinecheck=false}
 	\flushleft
-	\includegraphics[scale=0.3]{./image/PESTA/graph/80SPS64GAIN/Gain_64_example.JPG}
+	\includegraphics[scale=0.26]{./image/PESTA/graph/80SPS64GAIN/Gain_64_example.JPG}
 	\caption{Ganho de 64}
 	\label{Gain_64_example}
 \end{figure}
@@ -253,8 +252,16 @@ A biblioteca ou driver do \acs{lcd} que já tinha feito para outros projetos pes
 %[\ref{codigo}]
 \\
 \\
-Abaixo está a tabela \ref{LCD_connections}, com as respetivas ligações, e uma imagem de um \acs{lcd} de 4x20 azul na \textit{figura} \ref{4x20_LCD}.
-\tablespace{.2}
+Abaixo está uma imagem de um \acs{lcd} de 4x20 azul na \textit{figura} \ref{4x20_LCD} e na tabela \ref{LCD_connections}, com as respetivas ligações.
+\\
+\begin{figure}[H]
+	\centering
+	%%\captionsetup{justification=raggedright,singlelinecheck=false}
+	\includegraphics[height=7cm]{./image/PESTA/material/4x20_LCD.jpg}
+	\caption{\acs{lcd}}
+	\label{4x20_LCD}
+\end{figure}
+\figurespace{1}
 \begin{table}[H]
 	\centering
 	\caption{Ligações \acs{lcd}}
@@ -283,14 +290,6 @@ Abaixo está a tabela \ref{LCD_connections}, com as respetivas ligações, e uma
 	\end{tabular}	
 	\label{LCD_connections}
 \end{table}
-\begin{figure}[H]
-	\centering
-	%%\captionsetup{justification=raggedright,singlelinecheck=false}
-	\includegraphics[height=8cm]{./image/PESTA/material/4x20_LCD.jpg}
-	\caption{\acs{lcd}}
-	\label{4x20_LCD}
-\end{figure}
-\figurespace{.3}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Micro-controlador}
 Os micro controladores da Atmel de 8 a 32 \textit{bits} são baseados na arquitetura avançada de Harvard, na qual está concebido para baixo consumo e alta performance.
@@ -306,18 +305,16 @@ O espaço de memória de dados é dividido em três partes, os \ac{gpr} as \ac{s
 \\
 \\
 Os micro controladores da \acs{avr} utilizam uma arquitetura de instruções \ac{risc} que reduz a complexidade dos circuitos na codificação de cada instrução. Daí que os micro-controladores que se baseiam nestes tipos de arquitetura são sinónimo de código reduzido, alta performance e baixo consumo energético.
-\\
-\\
 \begin{figure}[H]
 	\centering
 	%%\captionsetup{justification=raggedright,singlelinecheck=false}
 	\includegraphics[scale=1]{./image/PESTA/Diagrama/Harvard_architecture.jpg}
 	\caption{Harvard Architecture}
 	\label{Harvard_architecture}
+	\vspace{.1cm}
+	\qquad link: \url{https://en.wikipedia.org/wiki/Harvard_architecture}
 \end{figure}
-\qquad link: \url{https://en.wikipedia.org/wiki/Harvard_architecture}
-\\
-\\
+%\qquad link: \url{https://en.wikipedia.org/wiki/Harvard_architecture}
 %Porque esta opção?
 %O facto de ser um dos masi poderosos.. não é justificação
 %A seleção do material deve ser justificada de forma mais citeriosa
@@ -326,7 +323,7 @@ O Atmega 128 (\textit{figura} \ref{Atmega_128_pinagem}) é um dos mais poderosos
 \begin{figure}[H]
 	\centering
 	%%\captionsetup{justification=raggedright,singlelinecheck=false}
-	\includegraphics[scale=0.5]{./image/PESTA/material/Atmega128_1.jpg}
+	\includegraphics[scale=0.32]{./image/PESTA/material/Atmega128_1.jpg}
 	\caption{Atmega 128}
 	\label{Atmega_128_pinagem}
 \end{figure}
@@ -337,16 +334,16 @@ Esta opção preenche os requisitos requeridos, por ter portas de entrada e saí
 \\
 O \acs{mcu} também tem que ter dois temporizadores capazes de gerar os tempos desejados por interrupções, talvez seria possível fazer isto com um micro controlador com menos capacidades, porque este projeto não utiliza a funcionalidade do \acs{adc} nem comunicações série integradas, no entanto comparando a nível de preço com as alternativas destaca-se esta opção.
 \\
-Alternativas que foram postas em consideração, não satisfazendo o que é pretendido, \textit{boards} da \textit{figura} \ref{Boards-1}.
+\\
+Alternativas que foram postas em consideração estão na \textit{figura} \ref{Boards-1}, e foram excluídas pelos motivos mencionados.
 \\
 \begin{figure}[H]
 	\centering
 	%%\captionsetup{justification=raggedright,singlelinecheck=false}
-	\includegraphics[scale=0.18]{./image/PESTA/boards/Boards-2.jpg}
+	\includegraphics[scale=0.17]{./image/PESTA/boards/Boards-2.jpg}
 	\caption{Alternativas ao Atmega 128}
 	\label{Boards-1}
 \end{figure}
-\figurespace{.3}
 Dos componentes que constituem o Atmega 128, os temporizadores são os que considero os mais importantes devido a ser uma das grandezas fundamentais, o tempo, podendo neste gerar intervalos de tempo e \acp{pwm}
 %porque
 , o \ac{adc} do \acs{mcu} nem vai ser usado neste projeto, vai ser utilizado um \textit{load cell amplifier} externo, uma alternativa que é muito melhor porque tem maior resolução e especifico para a aplicação em causa.
@@ -384,7 +381,7 @@ As características do micro controlador Atmega 128 :
 	\item \acs{twi} (I2C)
 \end{itemize}
 \end{minipage}
-\minipagespace{1}
+\minipagespace{.5}
 Para programar este micro-controlador (\textbf{Atmega 128}), foi utilizado o programador da marca da Atmel, o \ac{atmel-ice} \textit{figura} \ref{Programador_1}. Para este equipamento tem disponível programação via \ac{isp} \textit{figura} \ref{ISP_6_8_10pin} e \ac{jtag}.
 \minipagespace{.2}
 \begin{minipage}[!b]{.5\linewidth}
@@ -449,16 +446,15 @@ Características DC/DC:
 \minipagespace{.5}
 Como a \textit{mainboard} tem um regulador de tensão linear de 5 Volt, para aumentar a eficiência e ter uma alimentação variável de entrada até 38VDC foi utilizado o \textit{buck converter} para alimentar o regulador de tensão linear para um valor próximo dos 5 Volt, por exemplo 9 Volt, porque se sabe que as perdas de um regulador de tensão linear é proporcional a queda de tensão entre a sua entrada e a sua saída. Podia-se remover o regulador de tensão linear e apenas utilizar o \textit{buck converter} regulado para o valor de 5 Volt mas pretendo não alterar o \acs{pcb} da \textit{mainboard}.
 %Explicar melhor
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Orçamento do material}
 Abaixo esta indicado uma tabela dos materiais usados, assim como os preços.
-\\
 \\
 %O orçamento deve estar num anexo, ou no capítulo da apresentação dos componentes, não na validação
 \begin{table}[H]{
 		\caption{Lista de material}
 		\rowcolors{3}{blue!80!yellow!50}{blue!70!yellow!40}
-		\begin{tabular}{ |p{12cm}|c|p{2cm}|  }
+		\begin{tabular}{ |p{9cm}|c|p{2cm}|  }
 			\hline
 			\multicolumn{3}{|c|}{Lista de Material} \\
 			\hline
@@ -491,7 +487,7 @@ O \ac{ide} utilizado neste trabalho foi o \textbf{\textit{{Microchip Studio for 
 \begin{minipage}[!b]{.55\linewidth}
 \begin{figure}[H]
 	\captionsetup{justification=raggedright,singlelinecheck=false}
-	\includegraphics[scale=0.6]{./image/PESTA/IDE/Microchip-Studio.png}
+	\includegraphics[scale=0.55]{./image/PESTA/IDE/Microchip-Studio.png}
 	\caption{Microchip Studio}
 	\label{Microchip-Studio}
 \end{figure}
@@ -512,7 +508,7 @@ O \ac{ide} utilizado neste trabalho foi o \textbf{\textit{{Microchip Studio for 
 	\label{Work-Space}
 \end{figure}
 \figurespace{.5}
- A programação foi feita em Linguagem \textbf{C}, e a sua estrutura sintática está abaixo apresentada:
+ A programação foi feita em Linguagem \textbf{C} \cite{book-11}, e a sua estrutura sintática está abaixo apresentada:
 \\
 \\
 %Mudar para Português
@@ -524,6 +520,7 @@ O \ac{ide} utilizado neste trabalho foi o \textbf{\textit{{Microchip Studio for 
 \end{figure}
 \figurespace{.5}
 O \textit{PROGRAMA 1} é onde corre o programa da balança, e o \textit{PROGRAMA 2} usado para calibração do \textit{gain factor}.
+\\
 \\
 \\
 \\
@@ -567,17 +564,18 @@ Duas interrupções periódicas estão sempre a correr em \textit{background}, u
 		\flushleft
 		\captionsetup{justification=raggedright,singlelinecheck=false}
 		\includegraphics[scale=0.9]{./image/PESTA/Code/Livrarias.jpg}
-		\caption{Livrarias}
+		\caption{Bibliotecas}
 		\label{Bibliotecas}
 	\end{figure}
 \end{minipage}
+\hspace{2pt}
 \begin{minipage}{.6\linewidth}
 	Ao lado estão as bibliotecas usadas neste projeto, as que estão dentro da caixa amarela são as que foram criadas por mim.
 	A filosofia usada é de criar objetos que representam o \textit{hardware} para o poder manipular via código. Como se pode observar, foi criada uma biblioteca para os temporizadores, outra para as interrupções e \ac{eeprom}, depois foram criadas bibliotecas para os componentes externos, isto é, o \acs{lcd} e o integrado \textbf{HX711}.
 	\\
 	Uma abstração que torna simples executar qualquer algoritmo ou projeto, e isto só é possível depois de ultrapassar a barreira de desenvolver as bibliotecas.
 \end{minipage}
-\minipagespace{.5}
+\minipagespace{.3}
 Durante este projeto tentou-se dentro do possível sempre seguir as boas práticas de programação, como a \texttt{indentação} específica para cada situação, e manter a estrutura de norma. Deve-se manter uma metodologia de trabalho que segue as normas assim é percetível para todos e facilita detetar \textit{bugs}, e é uma pratica que abrange todas as linguagens, por exemplo o \textbf{Python} é fundado nesse princípio.
 \\
 \\
@@ -603,7 +601,7 @@ Após obter um número determinado de valores discretos lidos pelo amplificador 
 para ser tratado e deduzido o valor correspondente da massa.
 \\
 \\
-Enquanto a interrupção periódica para saltar entre \textit{Menu} esta abaixo indicado na \textit{lista} \ref{Jump-menu}.
+O código da interrupção 2 esta abaixo descrita na \textit{lista} \ref{Jump-menu} e serve para mudar de \textit{Menu} e limpar a \acs{eeprom}.
 {
 	\lstinputlisting[language=C, caption=Saltar de menu, captionpos=b, label=Jump-menu]{./input/code/Jump_menu.c}
 }

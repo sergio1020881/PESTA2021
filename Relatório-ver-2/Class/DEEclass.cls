@@ -244,7 +244,7 @@ columns=fullflexible
 }
 
 \RequirePackage{siunitx} 		% required for \SI commands
-\RequirePackage[acronym,toc,shortcuts,acronymlists={hidden},nopostdot,nogroupskip,automake]{glossaries} %for lists of terms, acronyms and symbols
+\RequirePackage[acronym,toc,shortcuts,acronymlists={hidden},nopostdot,nogroupskip,nonumberlist,automake]{glossaries} %for lists of terms, acronyms and symbols
 %\RequirePackage{enumitem} 		% for acronyms list spacing
 
 %----------------------------------------------------------------------------------------
