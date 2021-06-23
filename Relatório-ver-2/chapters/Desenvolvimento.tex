@@ -1,4 +1,3 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Desenvolvimento do projeto}
 %Neste capitulo deve fazer uma introdução na qual são indicados os requisitos do sistema a implementar. Será uma balança, mas quais as caracteristicas da mesma ? Disso depende os componentes selecionados.
 Para desenvolvimento deste projeto, foi criado um \textit{kit} de desenvolvimento o que permitiu a realização de testes, com vista a validação do projeto, bem como a execução de alterações e melhoramentos.
@@ -26,9 +25,9 @@ A seguir na \textit{figura} \ref{Diagrama-bloco-1} estão representados os eleme
 	\caption{Diagrama blocos do sistema implementado}
 	\label{Diagrama-bloco-1}
 \end{figure}
-O micro controlador usado neste projeto é um Atmega 128, a célula de peso é de 50Kg com uma saída de proporção de $\; 2mV/V \;$, é usado um amplificador de sinal para à célula de peso com referência HX711, em que tem um protocolo de comunicação proprietário.
-Utilizo um \textit{display} \acs{lcd} para visualizar os valores medidos com a sua grandeza, também para visualizar o fator de divisão que converte o valor lido da célula de peso no seu respetiva correspondente valor de massa.
-Botões são usados para saltar entre \textit{Menus} e calibração. Os \textit{leds} servem de indicadores em que estado se encontra, isto é, se esta usar os parâmetros \textit{default} ou do \textit{offset}.
+O micro controlador usado neste projeto é um Atmega 128, a célula de peso é de 50Kg com uma saída de proporção de $\; 2mV/V \;$, é usado um amplificador de célula de carga com referência HX711, em que tem um protocolo de comunicação proprietário.
+Utilizo um \textit{display} \acs{lcd} para visualizar os valores medidos com a sua grandeza, também para visualizar o fator de divisão que converte o valor lido da célula de carga no seu respetiva correspondente valor de massa.
+Botões são usados para saltar entre \textit{Menus} e os \textit{leds} servem como indicadores de estado, isto é, se esta a usar os parâmetros \textit{default} ou do \textit{offset}.
 \\
 \\
 Nas seguintes secções serão apresentados os componentes utilizados no projeto, assim como os aspetos relacionados com a implementação dos mesmos.
@@ -93,7 +92,7 @@ O termo piezoresistividade deriva da palavra grega \textit{piezin}, que signific
 \vspace{1pt}
 \end{minipage}
 \minipagespace{.5}
-Normalmente nesta configuração só são usados um ou dois sensores, e estes podem estar ligados nos extremos opostos, ou ligados ao mesmo ponto da alimentação, só em casos muito raros são utilizados quatro sensores na qual sua sensibilidade é máxima. Na \textit{figura} \ref{wheatstone-2} se os valores das quatro resistências são iguais ou nos casos em que $R_2 R_3 = R_4 R_1$, então a tensão $V_{AB}$ na saída é nula, e para haver variação $V_A$ terá que ser diferente de $V_B$.
+Normalmente nesta configuração (\textit{Wheatstone}) só são usados um ou dois sensores, e estes podem estar ligados nos extremos opostos, ou ligados ao mesmo ponto da alimentação, só em casos muito raros são utilizados quatro sensores na qual sua sensibilidade é máxima. Na \textit{figura} \ref{wheatstone-2} se os valores das quatro resistências são iguais ou nos casos em que $R_2 R_3 = R_4 R_1$, então a tensão $V_{AB}$ na saída é nula, e para haver variação $V_A$ terá que ser diferente de $V_B$.
 \\
 \\
 Esta célula de carga de 50Kg tem uma resolução na saída de 2 mV por cada Volt da sua alimentação com mais ou menos 0.15 mV de erro. Isto quer dizer que se for alimentada por 5 Volt está vai ter na saída uma tensão máxima de 10 mV e a margem de erro total de leitura esta na ordem de mais ou menos 0.03\%.
@@ -125,6 +124,8 @@ A amplificação é geralmente um requisito fundamental, pois a maioria dos sens
 \\
 A ligação deste componente é intuitiva e fácil de se perceber \textit{tabela} \ref{HX711_connection}, o que é complexo neste trabalho é a interligação dos equipamentos com o micro controlador por meio de \textit{software} e a criação das bibliotecas e os \textit{drivers} de comunicação, como neste caso da placa do amplificador de sinal (\textit{chip} HX711 figura \ref{HX711_Schematic_1}), já que o protocolo de comunicação é proprietário como demonstrado na \textit{figure} \ref{Protocolo}.
 \\
+\\
+Pode se consultar a biblioteca \textit{driver} do amplificador de célula de carga HX711 nos anexos \ref{hx711-h} e \ref{hx711-c}.
 %Então deve ser apresentada
 %Apresenatação das figuras e da tabela....
 \begin{table}[H]
@@ -237,13 +238,13 @@ Como indicado abaixo nos gráficos, em que a linha \textcolor{yellow}{amarela} �
 Para obter este resultado, a livraria \textit{driver} para o \textit{Load Cell Amplifier} teve de ter em consideração que a arquitetura do micro-controlador é de 8 \textit{bits}, uma vez que a estrutura do pacote de informação é entre 25 a 27 impulsos do \textit{clock cycle} em que é transmitido primeiro o \ac{msb}.
 \\
 \\
-Este amplificador de sinal tem uma amplificação do sinal de entrada como indicado na \textit{tabela} \ref{Gain_Selection}, e tem uma resolução de 24 \textit{bits}, como se sabe os números podem representar quantidades ou intervalos, os 24 \textit{bits} representa um intervalo de 0 até \, $2^{24}-1$, que nos dá 16777215 unidades, ou seja, o sinal de entrada amplificado pode ser dividido por este numero, isto é, pode-se obter este número de leituras possíveis, em que, se se tratar por exemplo de 5 Volt pode-se obter 16777215 leituras de intervalos de aproximadamente $2.98 \times 10^{-7}$ Volt cada, uma precisão muito boa.
+Este amplificador de célula de carga tem uma amplificação no sinal de entrada com valores indicados na \textit{tabela} \ref{Gain_Selection}, e tem uma resolução de 24 \textit{bits}, como se sabe os números podem representar quantidades ou intervalos, os 24 \textit{bits} representa um intervalo de 0 até \, $2^{24}-1$, que nos dá 16777215 unidades, ou seja, o sinal de entrada amplificado pode ser dividido por este numero, isto é, pode-se obter este número de leituras possíveis, em que, se se tratar por exemplo de 5 Volt pode-se obter 16777215 leituras de intervalos de aproximadamente $2.98 \times 10^{-7}$ Volt cada, uma precisão muito boa.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Display \acs{lcd}}
 %Porque este ?
 %O que pretende que seja visualizado ?
-O \ac{lcd} utilizado é de 4x20, isto é, quatro linhas de vinte caracteres cada, tornando-se no interface humano principal, e também durante este projeto numa ferramenta extremamente útil para fazer o \textit{debug} e executar testes ao código.\\
-Este \acs{lcd} é usado para visualizar as leituras e o valor de calibração da célula de carga, a escolha é unicamente por ter este componente no meu stock de material com uma biblioteca que o suporta, uso este de quatro linhas apenas para facilitar na deteção de anomalias ao testar o código visualizando vários parâmetros ao mesmo tempo.
+O \ac{lcd} utilizado é de 4x20, isto é, quatro linhas de vinte caracteres cada, tornando-se no interface humano principal, e também durante este projeto numa ferramenta extremamente útil para fazer o \textit{debug} e executar testes ao código pela visualização das informações adversas.\\
+Este \acs{lcd} é usado para visualizar as leituras e o valor de calibração da célula de carga, a escolha deste \textit{display} é unicamente por ter este componente no stock existente de material com uma biblioteca que o suporta, uso este de quatro linhas apenas para facilitar a deteção de anomalias ao testar o código visualizando vários parâmetros ao mesmo tempo.
 \\
 \\
 %que projectos ?
@@ -252,7 +253,7 @@ A biblioteca ou driver do \acs{lcd} que já tinha feito para outros projetos pes
 %[\ref{codigo}]
 \\
 \\
-Abaixo está uma imagem de um \acs{lcd} de 4x20 azul na \textit{figura} \ref{4x20_LCD} e na tabela \ref{LCD_connections}, com as respetivas ligações.
+Abaixo está uma imagem do \acs{lcd} de 4x20 azul na \textit{figura} \ref{4x20_LCD} e na tabela \ref{LCD_connections}, suas respetivas ligações.
 \\
 \begin{figure}[H]
 	\centering
@@ -319,7 +320,7 @@ Os micro controladores da \acs{avr} utilizam uma arquitetura de instruções \ac
 %O facto de ser um dos masi poderosos.. não é justificação
 %A seleção do material deve ser justificada de forma mais citeriosa
 %Devia ser feita uma pesquisa de produtos e seleção baseada nos requisitos prédefinidos.
-O Atmega 128 (\textit{figura} \ref{Atmega_128_pinagem}) é um dos mais poderosos \ac{mcu} da linha de 8 \textit{bits} da Atmel, e neste projeto esta integrado numa placa de desenvolvimento dotado de ligações por fichas \ac{idc}, ou seja, utiliza \textit{flat ribbon cables} para ligar os periféricos, o que é mais prático do que sistemas que atualmente são mais populares, como por exemplo a placa de desenvolvimento Arduino, STMicroelectronics e a \ac{pic} que recorrem a um interface por pinos (\textit{pin headers}).
+O Atmega 128 (\textit{figura} \ref{Atmega_128_pinagem}) é um dos mais poderosos \ac{mcu} da linha de 8 \textit{bits} da Atmel, e neste projeto esta integrado numa placa de desenvolvimento dotado de ligações por fichas \ac{idc}, ou seja, utiliza \textit{flat ribbon cables} para ligar os periféricos, o que é muito mais prático do que sistemas que atualmente são mais populares, como por exemplo a placa de desenvolvimento Arduino, STMicroelectronics e a \ac{pic} que recorrem a um interface por pinos (\textit{pin headers}).
 \begin{figure}[H]
 	\centering
 	%%\captionsetup{justification=raggedright,singlelinecheck=false}
@@ -330,7 +331,7 @@ O Atmega 128 (\textit{figura} \ref{Atmega_128_pinagem}) é um dos mais poderosos
 \figurespace{1}
 %{Transparências Sistemas Digitais 2 \quad \acs{isep} \quad 2008/2009 \quad \textit{link}}: \\
 %\url{https://drive.google.com/file/d/1wgOGf8WwYY0OzDhRca9ypXz-iBO55YOF/view?usp=sharing} \\ \\
-Esta opção preenche os requisitos requeridos, por ter portas de entrada e saída suficientes, porque o \acs{lcd} requer a utilização de oito pinos para funcionar, o amplificador de sinal dois pinos, temos quatro botões que requer quatro pinos de entrada e três \textit{leds} indicadores, ou seja, três pinos de saída. Por aqui deduzimos que o \acs{mcu} a escolher tem que ter mais do que dezassete pinos só para os periféricos.
+Esta opção preenche os requisitos requeridos, por ter portas de entrada e saída suficientes, porque o \acs{lcd} requer a utilização de oito pinos para funcionar, o amplificador de sinal dois pinos, temos quatro botões que requer quatro pinos de entrada e três \textit{leds} indicadores, ou seja, três pinos de saída. Por aqui deduzimos que o \acs{mcu} a escolher tem que ter mais do que dezasseis pinos só para os periféricos.
 \\
 O \acs{mcu} também tem que ter dois temporizadores capazes de gerar os tempos desejados por interrupções, talvez seria possível fazer isto com um micro controlador com menos capacidades, porque este projeto não utiliza a funcionalidade do \acs{adc} nem comunicações série integradas, no entanto comparando a nível de preço com as alternativas destaca-se esta opção.
 \\
@@ -344,12 +345,12 @@ Alternativas que foram postas em consideração estão na \textit{figura} \ref{B
 	\caption{Alternativas ao Atmega 128}
 	\label{Boards-1}
 \end{figure}
-Dos componentes que constituem o Atmega 128, os temporizadores são os que considero os mais importantes devido a ser uma das grandezas fundamentais, o tempo, podendo neste gerar intervalos de tempo e \acp{pwm}
+Dos componentes que constituem o Atmega 128, os temporizadores são os que considero os mais importantes devido a ser uma das grandezas fundamentais, o tempo, podendo este gerar intervalos de tempo e \acp{pwm}
 %porque
-, o \ac{adc} do \acs{mcu} nem vai ser usado neste projeto, vai ser utilizado um \textit{load cell amplifier} externo, uma alternativa que é muito melhor porque tem maior resolução e especifico para a aplicação em causa.
+, o \ac{adc} do \acs{mcu} nem vai ser usado neste projeto, vai ser utilizado um \textit{load cell amplifier} externo, uma alternativa que é muito melhor porque tem maior resolução e específico para a aplicação em causa.
 \\
 \\
-Talvez os \acs{mcu} nem deviam ter a componente \acs{adc} e realçar em meios de comunicação e memoria, tornava-se assim num sistema totalmente digital.
+Talvez os \acs{mcu} nem deviam ter a componente \acs{adc} e realçar em meios de comunicação e memoria, tornava-se assim num sistema unicamente digital.
 O Atmega 128 é uma escolha acertada para este projeto, considerando as alternativas de optar por um \ac{mcu} de 32 \textit{bits} ou um \textit{embeded system} com sistema operativo integrado, em que no primeiro caso o grau de dificuldade é acrescida devido a ter muito mais configurações e funcionalidades, e a segunda opção de ser exagerada, devido a só utilizar uma muito pequena parte das suas possibilidades, como se diz em inglês um \textit{overkill}, desperdiçando recursos desnecessariamente, e também se iria refletir a nível de custos monetários, no entanto facilita bastante no desenvolvimento de qualquer projeto, pois estaria-se a trabalhar sobre uma camada de nível superior (\textit{Kernel}).
 \\
 \\
@@ -408,7 +409,7 @@ Para programar este micro-controlador (\textbf{Atmega 128}), foi utilizado o pro
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Fonte de Alimentação}
 %Introdução a fonte de alimentação...
-Esta é uma fonte de alimentação comutada abaixadora \textit{figura} \ref{buck-converter}, ou seja, a tensão na sua saída é sempre inferior a da sua entrada e tem uma eficiência até 96\%.
+Está se a usar uma fonte de alimentação comutada abaixadora \textit{figura} \ref{buck-converter}, ou seja, a tensão na sua saída é sempre inferior a da sua entrada e tem uma eficiência até 96\%.
 \\
 \begin{minipage}[!b]{.5\linewidth}
 	\begin{figure}[H]
@@ -444,7 +445,7 @@ Características DC/DC:
 	\end{itemize}
 \end{minipage}
 \minipagespace{.5}
-Como a \textit{mainboard} tem um regulador de tensão linear de 5 Volt, para aumentar a eficiência e ter uma alimentação variável de entrada até 38VDC foi utilizado o \textit{buck converter} para alimentar o regulador de tensão linear para um valor próximo dos 5 Volt, por exemplo 9 Volt, porque se sabe que as perdas de um regulador de tensão linear é proporcional a queda de tensão entre a sua entrada e a sua saída. Podia-se remover o regulador de tensão linear e apenas utilizar o \textit{buck converter} regulado para o valor de 5 Volt mas pretendo não alterar o \acs{pcb} da \textit{mainboard}.
+Como a \textit{mainboard} tem um regulador de tensão linear de 5 Volt, para aumentar a eficiência e ter uma alimentação variável de entrada até 38VDC foi utilizado o \textit{buck converter} para alimentar o regulador de tensão linear para um valor próximo dos 5 Volt, por exemplo 9 Volt, porque se sabe que as perdas de um regulador de tensão linear é proporcional a queda de tensão entre a sua entrada e a sua saída. Podia-se remover o regulador de tensão linear e apenas utilizar o \textit{buck converter} regulado para o valor de 5 Volt mas pretende-se não alterar o \acs{pcb} da \textit{mainboard}.
 %Explicar melhor
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Orçamento do material}
@@ -479,8 +480,8 @@ Abaixo esta indicado uma tabela dos materiais usados, assim como os preços.
 	\label{material}
 \end{table}
 Os preços são o que estão disponíveis no mercado, quanto a \textit{mainboard} foi o que arranjei com o preço mais competitivo com este \acs{mcu} Atmega 128, outras alternativas atingiam o mesmo preço ou mais caros mas com um \acs{mcu} com menor capacidade ou igual.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Software}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Software}
 O \ac{ide} utilizado neste trabalho foi o \textbf{\textit{{Microchip Studio for AVR\textsuperscript{\textregistered} and SAM Devices}}} (\textit{version: 7.0.2542}).
 \\
@@ -570,13 +571,13 @@ Duas interrupções periódicas estão sempre a correr em \textit{background}, u
 \end{minipage}
 \hspace{2pt}
 \begin{minipage}{.6\linewidth}
-	Ao lado estão as bibliotecas usadas neste projeto, as que estão dentro da caixa amarela são as que foram criadas por mim.
+	Ao lado estão as bibliotecas usadas neste projeto, as que estão dentro da caixa amarela são as que foram criadas pessoalmente.
 	A filosofia usada é de criar objetos que representam o \textit{hardware} para o poder manipular via código. Como se pode observar, foi criada uma biblioteca para os temporizadores, outra para as interrupções e \ac{eeprom}, depois foram criadas bibliotecas para os componentes externos, isto é, o \acs{lcd} e o integrado \textbf{HX711}.
 	\\
 	Uma abstração que torna simples executar qualquer algoritmo ou projeto, e isto só é possível depois de ultrapassar a barreira de desenvolver as bibliotecas.
 \end{minipage}
 \minipagespace{.3}
-Durante este projeto tentou-se dentro do possível sempre seguir as boas práticas de programação, como a \texttt{indentação} específica para cada situação, e manter a estrutura de norma. Deve-se manter uma metodologia de trabalho que segue as normas assim é percetível para todos e facilita detetar \textit{bugs}, e é uma pratica que abrange todas as linguagens, por exemplo o \textbf{Python} é fundado nesse princípio.
+Durante este projeto tentou-se dentro do possível sempre seguir as boas práticas de programação, como a da \texttt{indentação} específica para cada situação, e manter a estrutura de norma. Deve-se manter uma metodologia de trabalho que segue as normas assim é percetível para todos e facilita detetar \textit{bugs}, e é uma pratica que abrange todas as linguagens, por exemplo o \textbf{Python} é fundado nesse princípio.
 \\
 \\
 Quanto às interrupções é sempre um desafio, porque as tarefas têm que ser bem organizadas temporalmente para não entrar em conflitos, pretende-se assim sempre que o código corra na função \textit{main} e as interrupções são algo esporádico e muito rápido, estas devem servir de \textit{flags} para executar rotinas na função \textit{main}, ou seja, servirem de \textit{inputs}. %%\textbf{\textcolor{green}{INPUTS}}.
@@ -593,7 +594,7 @@ O código que executa a rotina de leitura \acs{adc} é demonstrado na \textit{li
 {
 	\lstinputlisting[language=C, caption=HX711 read raw, captionpos=b, label=HX711-read-raw]{./input/code/HX711_read_raw.c}
 }
-Após obter um número determinado de valores discretos lidos pelo amplificador de sinal (HX711) é calculada uma média,
+Após obter um número determinado de valores discretos lidos pelo amplificador de célula de carga (HX711) é calculada uma média,
 \begin{equation}
 	\label{eq:Mean}
 	\overline{x}  =  \frac{1}{n}\sum_{i=1}^n x_i
@@ -605,12 +606,12 @@ O código da interrupção 2 esta abaixo descrita na \textit{lista} \ref{Jump-me
 {
 	\lstinputlisting[language=C, caption=Saltar de menu, captionpos=b, label=Jump-menu]{./input/code/Jump_menu.c}
 }
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Validação do projeto implementado}
 %Neste capítulo deve apresentar os testes realizados ao sistema implementado, e que devem garantir os objectivos iniciais.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Validação}
 %%%To validate is to justify why the choices made and alternatives that could be chosen.
-As escolhas feitas estão conforme o necessário para implementar o projeto e considerando os custos serem o mais competitivo. Apenas o conhecimento adquirido ao aprofundar o funcionamento dos componentes é o ganho mais evidente na sua execução, facilitando a interpretação de situações reais e deteção de anomalias (\textit{troubleshooting}), derivado aos custos dos materiais serem caros.
+As escolhas feitas estão conforme o necessário para implementar o projeto considerando os custos serem o mais competitivo. Apenas o conhecimento adquirido ao aprofundar o funcionamento dos componentes é o ganho mais evidente na sua execução, facilitando a interpretação de situações reais e deteção de anomalias (\textit{troubleshooting}), derivado aos custos dos materiais serem caros.
 \\
 \\
 Foram feitos muitos testes, e usado um osciloscópio para afinações e resolução de anomalias, o que deu mais trabalho foi a biblioteca do amplificador de sinal HX711, foi testado com os parâmetros permitidos e com diferentes frequências de transmissão. No código foi feito várias experiências para determinar o comportamento mais favorável.
@@ -620,7 +621,7 @@ Foram feitos muitos testes, e usado um osciloscópio para afinações e resoluç
 \\
 O sensor usado é o mais comum nesta pratica, e escolha demonstrada, o circuito de interface é indiferente, a escolha apenas é baseada na sua precisão, ou seja, é de 24 \textit{bits} enquanto o \acs{adc} do \acs{mcu} de apenas 10 \textit{bits} de resolução.
 %Os 24 bits são necessarios? Os 10 não satifazem os objectivos ? Chega-se a este capítulo e isto não foi apresentado até agora
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Testar}
 Quanto a funcionalidade no seu todo, a balança tem \textcolor{blue}{quatro} botões e \textcolor{blue}{três} \textit{leds} ativados, um botão para fazer o \textit{offset} no \textcolor{green}{PORTF 0}, e dois botões com dupla função, fazer \textit{reset} para \textit{default} e incrementar, outro para entrar no menu de calibração e decrementar, o \textcolor{blue}{quarto} botão é reservado para \textit{enter} e assumir o valor introduzido na calibração.\\
 \\

@@ -16,9 +16,11 @@ Através da medição do peso, isto é, da força gravitacional exercida num dad
 A massa dos objetos pode ser medida por balanças utilizando vários métodos, tais como as alavancas convencionais, por  molas e sistemas mais modernos, tais como, balanças digitais.
 \\
 \\
-As balanças digitais estão presentes no nosso dia a dia, e tornaram-se numa ferramenta indispensável na indústria, comércio e laboratórios. Determinar a massa dos objetos facilitou a moeda de troca no comércio, e tornou-se num pilar fundamental da física e seu desenvolvimentos. Existe uma demanda, tanto na área comercial como na industrial, que empurra o desenvolvimento dos sensores para obter melhores resultados quanto a precisão e imunidade de influências exteriores na medição das grandezas mencionadas.\\
+As balanças digitais estão presentes no nosso dia a dia, e tornaram-se numa ferramenta indispensável na indústria, comércio e laboratórios. Determinar a massa dos objetos facilitou a moeda de troca no comércio, e tornou-se num pilar fundamental da física e seu desenvolvimentos. Existe uma demanda, tanto na área comercial como na industrial, que empurra o desenvolvimento dos sensores para obter melhores resultados quanto a precisão e imunidade de influências exteriores na medição das grandezas mencionadas.
+\\
 \\
 A importância desta grandeza (massa), foi o mote para o projeto proposto: a implementação de uma balança digital para uso doméstico, usando os meios que estão disponíveis no mercado.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Objetivos}
 O objetivo principal deste projeto será a implementação de uma balança digital economicamente viável, usando os sensores e equipamentos disponíveis no mercado, para ter um produto útil e fácil de ser replicado.
 \\
@@ -26,10 +28,10 @@ O objetivo principal deste projeto será a implementação de uma balança digit
 Escolher o sensor adequado e meios de tratamento da informação e comunicação, será o objeto de estudo. Tendo como foco a utilização de um \textit{Embeded System} utilizando as ferramentas necessárias para o executar.
 \\
 \\
-No final o produto obtido será testado, de forma a tentar aperfeiçoar, fazer melhorias, alterações e adaptações que possam surgir, de forma a simplificar o projeto e torná-lo mais atraente ao consumidor final.
+No final do produto obtido será testado, de forma a tentar aperfeiçoar, fazer melhorias, alterações e adaptações que possam surgir, de forma a simplificar o projeto e torná-lo mais atraente ao consumidor.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Calendarização}
 O segundo semestre teve inicio em 8 de Março, num ambiente de pandemia COVID-19 período durante o qual fomos forçados ao ensino à distancia, e todo o trabalho teve de ser acompanhado \textit{online} pelos docentes. No entanto foi necessário organizar as tarefas pretendidas de acordo com o plano abaixo descrito, para poder fazer a entrega deste trabalho antes da data limite da época normal (28 de Junho de 2021).
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[H]
 	\caption{Calendarização das tarefas}
 	%\begin{sidewaysfigure}
@@ -72,6 +74,7 @@ O segundo semestre teve inicio em 8 de Março, num ambiente de pandemia COVID-19
 	\label{gantt}
 %\end{sidewaysfigure}
 \end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Organização do Relatório}
 No capítulo 1 é feita uma contextualização do trabalho realizado e do seu propósito face às necessidades do mundo atual.
 \\
@@ -79,17 +82,16 @@ No capítulo 1 é feita uma contextualização do trabalho realizado e do seu pr
 No capítulo 2 é apresentada uma breve história da evolução das balanças, e depois um estudo da balança digital.
 \\
 \\
-No capitulo 3 é apresentado a balança digital, seus componentes e características descrevendo seus funcionamentos.
+No capitulo 3 é apresentado a balança digital, seus componentes e características e uma descrição.
 \\
 \\
 No capitulo 4 é descrito o software utilizado, estrutura do programa, e a implementação do código.
 \\
 \\
-O capitulo 5 é a validação do projeto  e seu funcionamento.
+O capitulo 5 é a validação da implementação do projeto e seu funcionamento.
 \\
 \\
 O capitulo 6 são exposto as conclusões e futuras possíveis alterações de melhoramento do produto.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Evolução da balança}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{O aparecimento e a evolução da balança}
@@ -125,7 +127,7 @@ Este sistema tem grande precisão, mas também pode se facilmente adulterar.
 \\
 \\
 \\
-Os métodos de medir a massa de objetos não conheceram nenhumas melhorias tecnológicas relevantes até à era industrial. Só nos fins do século \textit{XVIII} é que o meio de medir a massa de objetos não dependia de \textbf{contra-pesos}. As balanças por molas foram inventados por volta de 1770 em Inglaterra por \textit{Richard Salter}, um fabricante de balanças.
+Os métodos de medir a massa de objetos não conheceram nenhumas melhorias tecnológicas relevantes até à era industrial. Só nos fins do século \textit{XVIII} é que o meio de medir a massa de objetos não dependia de contra-pesos. As balanças por molas foram inventados por volta de 1770 em Inglaterra por \textit{Richard Salter}, um fabricante de balanças.
 \\
 \begin{figure}[H]
 	\centering
@@ -148,10 +150,10 @@ A balança por mola, como o nome implica, mede a pressão (ou sua tensão) exerc
 		\label{Balanca_Mola_1}
 	\end{figure}
 \end{minipage}
-\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{A balança eletrónica}
 %Desenvolver mais
-As balanças eletrónicas mais modernas, utilizam resistências elétricas instaladas sobre materiais flexíveis por onde passa uma corrente elétrica, onde é possível detetar a variação de condutividade das resistências. Esta variação é proporcional à pressão exercida sobre esse material, trata-se dos sensores \textit{strain gauge}. As células de carga são materiais desenhados com uma estrutura para ter o mesmo comportamento de uma mola, dando-lhe uma caraterística de proporcionalidade entre a pressão exercida e o deslocamento provocado no material onde estão colocados os sensores (\textit{strain gauge}) que detetam essa tensão mecânica e compressão. As células de carga são os sensores mais comuns usadas nas balanças digitais, porque geram um sinal proporcional a força ou pressão. De notar que existe muitos tipos de células de carga para diferentes gamas de massas, porque todas as molas tem um ponto de rotura da sua elasticidade onde perde sua caracteristica de ser uma mola.
+As balanças eletrónicas mais modernas, utilizam resistências elétricas instaladas sobre materiais flexíveis por onde passa uma corrente elétrica, onde é possível detetar a variação de condutividade das resistências. Esta variação é proporcional à pressão exercida sobre esse material, trata-se dos sensores \textit{strain gauge}. As células de carga são materiais desenhados com uma estrutura para ter o mesmo comportamento de uma mola, dando-lhe uma caraterística de proporcionalidade entre a pressão exercida e o deslocamento provocado no material onde estão colocados os sensores (\textit{strain gauge}) em que detetam essa tensão mecânica e compressão. As células de carga são os sensores mais comuns usadas nas balanças digitais, porque geram um sinal proporcional a força ou pressão. De notar que existe muitos tipos de células de carga para diferentes gamas de massas, porque todas as molas tem um ponto de rotura da sua elasticidade onde perde sua caracteristica de ser uma mola.
 \\
 \begin{figure}[H]
 	\centering
@@ -159,7 +161,7 @@ As balanças eletrónicas mais modernas, utilizam resistências elétricas insta
 	\caption{Balança eletrónica}
 	\label{Scale_1}
 \end{figure}
-No projeto proposto será utilizada uma \textbf{célula de carga}, que segue o princípio acima mencionado. Estas células têm sensores \textit{\textbf{strain gauges}} ligadas em ponte de \textit{Wheatstone}, que vão detetar a distorção (pressão) do material, ou seja, da célula de carga e gerar um sinal de diferença de potencial proporcional à força exercida. Seque o mesmo princípio de uma mola. Todas as molas tem uma constante de elasticidade conhecida pela lei de Hooke \cite{book-3} \textit{equação} \ref{eq:Hooke}.\\
+No projeto proposto vai ser utilizado uma \textbf{célula de carga}, que segue o princípio acima mencionado. Estas células têm sensores \textit{\textbf{strain gauges}} ligadas em ponte de \textit{Wheatstone}, que vão detetar a distorção (pressão) no material, ou seja, a célula de carga e gerar um sinal de diferença de potencial proporcional. Seque o mesmo princípio de uma mola. Todas as molas tem uma constante de elasticidade conhecida pela lei de Hooke \cite{book-3} \textit{equação} \ref{eq:Hooke}.\\
 %\\
 %As expressões aparecem sem ligação ao texto
 %Deve desenvolver mais esta parte, resultando numa mais elaborada fundamentação teórica
@@ -185,7 +187,7 @@ E a energia dissipada pela mola é determinada pela expressão \ref{eq:Hooke-Ene
 	\label{eq:Hooke-Energia}
 	W_s = - \; \frac{1}{2} \; K x^2
 \end{equation}
-Outros tipos de células de carga, tais como as pneumáticas e hidráulicas, convertem a pressão num sinal elétrico, que é proporcional à força nela exercida, de acordo com a expressão \ref{eq:Preasure}.
+Outros tipos de células de carga, tais como as pneumáticas e hidráulicas, convertem a pressão num sinal elétrico, que também é proporcional à força exercida, de acordo com a expressão \ref{eq:Preasure}.
 \begin{equation}
 	\label{eq:Preasure}
 	P = \frac{F}{A}
@@ -195,7 +197,7 @@ As células de carga capacitivas são outro exemplo de como obter um sinal propo
 	\label{eq:Capacity}
 	C = \varepsilon_{0} \; \varepsilon_{r} \; \frac{A}{d}
 \end{equation}
-Também existem células, que utilizam o princípio de ressonância, desfasamento de fase, e pelo efeito \textit{Doppler} para determinar a pressão ou distorção das células de carga em que resulta numa medição.
+Também existem células, que utilizam os princípios de ressonância, desfasamento de fase, e pelo efeito \textit{Doppler} para determinar a pressão ou distorção, em que resulta consequentemente numa medição.
 \\
 \\
 Pode-se dizer que, em todos os casos se determina a força resultante através do deslocamento no espaço.
@@ -203,9 +205,9 @@ Pode-se dizer que, em todos os casos se determina a força resultante através d
 \\
 Como se pode observar existe diversos tipos de células de carga, é a peça principal que mede informação analógica da vida real para outra analógica de sinal elétrico, uma etapa de conversão onde podemos utilizar nos nossos sistemas eletrónicos para determinar seu valor.
 \\
-É nesta etapa em que precisamos de outra conversão, de um sinal analógico elétrico para outro que seja do tipo discreto para poder ser tratado digitalmente, estou a falar dos \ac{adc}, e como a maioria dos sensores geram sinais com magnitude muito pequenas é frequente necessitar também de uma pré amplificação com uma filtragem de ruídos.
+É nesta etapa que a seguir precisamos de outra conversão, de um sinal analógico elétrico para outro que seja do tipo discreto para poder ser tratado digitalmente, estou a falar dos \acs{adc}, e como a maioria dos sensores geram sinais com magnitude muito pequenas é frequente necessitar também de uma pré amplificação e uma filtragem de ruídos.
 \\
-Depois de chegar ao mundo digital, já trabalhamos com \textit{bit}, \textit{nibble} e \textit{bytes}. A partir daqui entramos no mundo da programação, onde a informação pode ser manipulada de forma a cumprir os objetivos que se pretende, e que neste caso também vai ser objeto de estudo.
+Depois de chegar ao mundo digital, já trabalhamos com \textit{bit}, \textit{nibble} e \textit{bytes}. A partir daqui entramos num ambiente de programação, onde a informação pode ser manipulada de forma a cumprir os objetivos que se pretende, e que neste caso também vai ser objeto de estudo.
 É nesta etapa que se tem de determinar que tipo de balança digital pretendemos e suas caraterísticas, pois pode-se implementar das mais simples até as mais complexas.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{comment}
@@ -215,7 +217,7 @@ It is not so surprising, therefore, that most force and torque measurement devic
 Unfortunately, the metallic resistance strain gauge is relatively insensitive such that in use it is normal to obtain only several millivolts of analog voltage before amplification, and the gauges must not be significantly overstrained. The rangeability and overloading capabilities are seriously restricted. Also, the gauges consume relatively high electrical power (e.g., 250 mW).\\
 In general, measurement instrumentation now needs smaller sensing devices of lower power consumption and with greater rangeability and overload capabilities.\\
 Greater compatibility with digital microelectronics is highly desirable. Noncontact and wireless operation is sometimes needed, and in some cases batteryless devices are desirable. Production of measurement devices using metallic resistance strain gauges can be relatively labor intensive and skilled, and may require relatively ineffi-cient calibration procedures.\\
-In recent years some instrument manufacturers of force and torque measure-ment devices have moved away from using resistance strain gauges. Already, one leading manufacturer of weighing machines for retail and industrial applications now uses metallic and quartz resonant tuning fork technologies, and smaller compa-nies have established niche markets using surface acoustic wave (SAW) technology, optical technology, and magnetoelastic technology.\\
+In recent years some instrument manufacturers of force and torque measure-ment devices have moved away from using resistance strain gauges. Already, one leading manufacturer of weighing machines for retail and industrial applications now uses metallic and quartz resonant tuning fork technologies, and smaller companies have established niche markets using surface acoustic wave (SAW) technology, optical technology, and magnetoelastic technology.\\
 Further commercial developments are taking place to enhance device manufacturability and improve device sensitivity and robustness in operation. Measurement on stiffer structures at much lower strain levels is now possible. The worldwide sensor research base is very active in exploring MEMS for sensing force and torque, and the rest of this chapter will review the current situation and future prospects.\\
 \\
 The market pull provided by the automotive industry—for example, for manifold air pressure sensors has led to the development of successful devices and technologies that have benefited a wide range of other pressure sensing applications.

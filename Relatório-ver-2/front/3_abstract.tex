@@ -1,6 +1,6 @@
-%----------------------------------------------------------------------------------------
+%---------------------------------------------------------
 %	ABSTRACT PAGES
-%----------------------------------------------------------------------------------------
+%---------------------------------------------------------
 % IMPORTANT NOTE: the abstract must always be written in two languages. If the report
 % is written in Portuguese you have selected 'portuguese' as the language in the document class.
 % Therefore, the portuguese version of the abstract must come first, so write it in the
@@ -14,13 +14,13 @@
 \par O projeto proposto prevê a implementação de uma balança digital, utilizando um micro controlador. Vai ser utilizado uma célula de carga como sensor de conversão do peso a medir para uma diferença de potencial proporcional em tensão (\textit{Volt}).
 \\
 \\
-Após a aquisição deste sinal em tensão gerado pela ponte \textit{Wheatstone}, o mesmo será ligado a um amplificador \ac{adc} dedicado para este tipo de aplicação, com 24 \textit{bits} de resolução, com amplificação programável e com uma taxa de transferência fisicamente configurável. Este amplificador é designado por \textbf{HX711}, e possui um protocolo de comunicação dedicado. A comunicação série será realizada através de um \ac{mcu}.
+Após a aquisição deste sinal em tensão gerado pela ponte \textit{Wheatstone} da célula de carga, será depois ligado a um amplificador de sinal com \ac{adc} dedicado para este tipo de aplicação, este tem 24 \textit{bits} de resolução, amplificação programável e uma taxa de transferência fisicamente configurável. O dito amplificador de célula de carga é designado por \textbf{HX711}, e possui um protocolo de comunicação dedicado. A comunicação série será realizada através do uso de um \ac{mcu}.
 \\
 \\
-A programação do \acrshort{mcu}, o código das bibliotecas e ou drivers será implementada em linguagem \textbf{C}. O objetivo é implementar uma balança funcional de fácil utilização e calibração, economicamente viável, tornado-a desta forma numa balança acessível e prática.
+A programação do \acrshort{mcu}, o código das bibliotecas e ou drivers vai ser implementada em linguagem \textbf{C}. O objetivo é implementar uma balança funcional de fácil utilização e calibração, economicamente viável, tornado-a desta forma numa balança acessível e prática.
 \\
 \\
-A balança digital vai ter um \textit{display} \acs{lcd} para visualizar o valor da massa medida e o parâmetro de calibração da célula de carga. Vai ter um botão de \textit{offset}, e botões para carregar os parâmetros de \textit{default} e para alterar o valor de calibração, também vai utilizar \textit{leds} de indicação para mostrar em que estado a balança se encontra.
+A balança digital vai ter um \textit{display} \acs{lcd} para visualizar o valor do massa medida e o parâmetro de calibração da célula de carga. Vai ter um botão de \textit{offset}, e botões para carregar os parâmetros de \textit{default} e para alterar o valor de calibração, também vai utilizar \textit{leds} de indicação para mostrar em que estado a balança se encontra.
 %Este trabalho é orientado para quem tem alguns conhecimentos básicos de eletrotecnia, com orientação para a eletrónica e programação.
 \\
 \\
@@ -36,7 +36,7 @@ A balança digital vai ter um \textit{display} \acs{lcd} para visualizar o valor
 \par The proposed project is to build a weighing scale using a microcontroller, an embedded system.
 \\
 \\
-A load cell is what is going to be used to convert the measured weight into a potential difference with a Wheatstone configuration, generating a proportional signal.
+A load cell is what is going to be used to convert the measured weight into a potential difference by its Wheatstone configuration, generating a proportional signal.
 \\
 \\
 After obtaining this signal it is going to be connected to a load cell amplifier with a \ac{adc} dedicated for this type of application, it has a 24 bit resolution, programable amplification and sampling rate physically programmable, this is the \textbf{HX711} chip, having a proprietary communication protocol.
@@ -55,4 +55,5 @@ This weight scale will have integrated an \acs{lcd} display with buttons and led
 \textbf{\keywordslabel}: Strain Gauge, Load Cell, Amplifier, Code, Programming, Embedded System.
 %%%%%%%%%% END OF THE SECOND LANGUAGE ABSTRACT %%%%%%%%%%%
 \end{secondlangabstract}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

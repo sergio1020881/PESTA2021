@@ -80,6 +80,8 @@
 \glossaryentry{MCU?\glossentry{mcu}|setentrycounter[]{page}\glsnumberformat}{35}
 \glossaryentry{EEPROM?\glossentry{eeprom}|setentrycounter[]{page}\glsnumberformat}{36}
 \glossaryentry{MCU?\glossentry{mcu}|setentrycounter[]{page}\glsnumberformat}{37}
+\glossaryentry{ADC?\glossentry{adc}|setentrycounter[]{page}\glsnumberformat}{37}
+\glossaryentry{PIC?\glossentry{pic}|setentrycounter[]{page}\glsnumberformat}{37}
 \glossaryentry{PVP?\glossentry{pvp}|setentrycounter[]{page}\glsnumberformat}{38}
 \glossaryentry{PCB?\glossentry{pcb}|setentrycounter[]{page}\glsnumberformat}{38}
 \glossaryentry{LCD?\glossentry{lcd}|setentrycounter[]{page}\glsnumberformat}{38}
