@@ -30,9 +30,9 @@
 \contentsline {chapter}{Refer\^{e}ncias}{39}{section*.52}%
 \contentsline {chapter}{Refer\^{e}ncias}{39}{chapter*.53}%
 \contentsline {chapter}{\numberline {A}main}{41}{appendix.A}%
-\contentsline {chapter}{\numberline {B}lcd.h}{47}{appendix.B}%
-\contentsline {chapter}{\numberline {C}lcd.c}{49}{appendix.C}%
-\contentsline {chapter}{\numberline {D}hx711.h}{57}{appendix.D}%
-\contentsline {chapter}{\numberline {E}hx711.c}{59}{appendix.E}%
-\contentsline {chapter}{\numberline {F}Definições}{63}{appendix.F}%
-\contentsline {chapter}{\numberline {G}Física}{65}{appendix.G}%
+\contentsline {chapter}{\numberline {B}lcd.h}{49}{appendix.B}%
+\contentsline {chapter}{\numberline {C}lcd.c}{51}{appendix.C}%
+\contentsline {chapter}{\numberline {D}hx711.h}{61}{appendix.D}%
+\contentsline {chapter}{\numberline {E}hx711.c}{63}{appendix.E}%
+\contentsline {chapter}{\numberline {F}Definições}{69}{appendix.F}%
+\contentsline {chapter}{\numberline {G}Física}{71}{appendix.G}%

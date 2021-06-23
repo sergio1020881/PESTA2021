@@ -2,40 +2,6 @@
 \newglossary[algh]{hidden}{acrh}{acnh}{Hidden Acronyms}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \definecolor{light-gray}{gray}{0.95}
-%\definecolor{lightgray}{rgb}{.9,.9,.9}
-%%%%%%%%%%%%%%%%%%%%ISEP SETTINGS START%%%%%%%%%%%%%%%%%%%
-\begin{comment}
-\lstset{
-	language=C,							% choose the language of the code
-	%basicstyle=\small\ttfamily\color{black},
-	basicstyle=\footnotesize\ttfamily\color{black},
-	keywordstyle=\bfseries\color{blue},
-	numbers=left,						% where to put the line-numbers   
-	numberstyle=\tiny\color{gray},		% the size of the fonts that are used for the line-numbers
-	stepnumber=1,						% the step between two line-numbers. If it's 1 each line will be numbered
-	numbersep=2pt,						% how far the line-numbers are from the code
-	xleftmargin=2em,					% keep line numbers inside the margins		
-	frame=tb,							% frame: top and bottom lines
-	framexleftmargin=1.5em,				% frame: adjusts left margin because the xleftmargin numbers setting
-	float=!htb,							% if float defined, let Latex manage it
-	aboveskip=8mm,
-	belowskip=4mm,
-	backgroundcolor=\color{light-gray},
-	commentstyle=\color{red},			% comment style
-	keywordstyle=\color{blue},			% keyword style
-	showspaces=false,					% show spaces adding particular underscores
-	showstringspaces=false,				% underline spaces within strings
-	showtabs=false,						% show tabs within strings adding particular underscores
-	tabsize=2,							% sets default tabsize to 2 spaces
-	captionpos=b,						% sets the caption-position to bottom
-	breaklines=true,					% sets automatic line breaking
-	breakatwhitespace=false,			% sets if automatic breaks should only happen at whitespace
-	escapeinside={\%*}{*)},				% if you want to add a comment within your code
-	morekeywords={*,var,template,new},	% if you want to add more keywords to the set
-	stringstyle=\color{orange},
-	columns=fullflexible
-}
-\end{comment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{comment}
 \DTMnewdatestyle{mydateformat}{
@@ -105,70 +71,8 @@
 \tikzstyle{CIRCLE_1}=[draw,shape=circle,inner sep=2pt,text centered, node distance=3.5cm]
 \tikzstyle{CIRCLE_2}=[draw,shape=circle,inner sep=4pt,text centered, node distance=3.cm]
 \end{comment}
-\begin{comment}
-%%%%%%%GANTT 1%%%%%%%
-\newganttchartelement*{mymilestone}{
-	mymilestone/.style={
-		shape=isosceles triangle,
-		inner sep=0pt,
-		draw=cyan,
-		top color=white,
-		bottom color=cyan!50
-	},
-	mymilestone incomplete/.style={
-		/pgfgantt/mymilestone,
-		draw=yellow,
-		bottom color=yellow!50
-	},
-	mymilestone label font=\slshape,
-	mymilestone left shift=0pt,
-	mymilestone right shift=0pt
-}
-\newgantttimeslotformat{stardate}{%
-	\def\decomposestardate##1.##2\relax{%
-		\def\stardateyear{##1}\def\stardateday{##2}%
-	}%
-	\decomposestardate#1\relax%
-	\pgfcalendardatetojulian{\stardateyear-01-01}{#2}%
-	\advance#2 by-1\relax%
-	\advance#2 by\stardateday\relax%
-}
-%%%%%%%GANTT 2%%%%%%%
-\end{comment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{comment}
-\addto{\captionsportuguese}{\renewcommand*\contentsname{\'{I}ndice}}
-\addto{\captionsportuguese}{\renewcommand*\lstlistingname{Listagen}}
-\addto{\captionsportuguese}{\renewcommand*\lstlistlistingname{Listagens}}
-%\addto{\captionsportuguese}{\renewcommand*\acronymname{Acrónimos}}
-\addto{\captionsportuguese}{\renewcommand{\bibname}{Refer\^{e}ncias}}
-\addto{\captionsportuguese}{\renewcommand{\appendixname}{Anexo}}
-\addto{\captionsportuguese}{\renewcommand{\appendixpagename}{Anexos}}
-\addto{\captionsportuguese}{\renewcommand{\appendixtocname}{Anexos}}
-\end{comment}
-%\noappendicestocpagenum
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{comment}
-\newtheorem{theorem}{Theorem}
-\newtheorem{lemma}{Lemma}
 \newtheorem{definition}{Defini\c{c}\~{a}o}
-\newtheorem{notation}{Notation}
-\end{comment}
-\newtheorem{definition}{Defini\c{c}\~{a}o}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{comment}
-\makeatletter
-\renewcommand{\@makechapterhead}[1]{%
-	\vspace*{50 pt}%
-	{\setlength{\parindent}{0pt} \raggedright \normalfont
-		\bfseries\Huge\thechapter.\ #1
-		\par\nobreak\vspace{40 pt}}}
-\makeatother
-\end{comment}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\renewcommand\thesection{\arabic{section}}
-%\renewcommand\thesubsection{\thesection.\arabic{subsection}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\minipagespace}[1]{{\newline  \vspace{#1cm} \newline}}
 \newcommand{\tablespace}[1]{{\vspace{#1cm}}}
@@ -192,11 +96,6 @@
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand\acrfullr[2][]{\acrshort[#1]{#2} (\acrlong[#1]{#2})}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% to use only sections starting at ONE in BOOK mode
-%\renewcommand\thesection{\arabic{section}}
-%\renewcommand\thesubsection{\thesection.\arabic{subsection}}
-%\renewcommand\thesubsubsection{\thesection.\thesubsection.\arabic{subsubsection}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \def\mcirc{\mathbin{\scalerel*{\bigcirc}{t}}}
 \def\msquare{\mathord{\scalerel*{\Box}{gX}}}

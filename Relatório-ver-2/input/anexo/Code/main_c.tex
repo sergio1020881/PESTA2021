@@ -1,7 +1,7 @@
 \chapter{main}
 %\begin{verbatimtab}
 \begin{lstlisting}[language=C, caption={main.c}, label=main-c, captionpos=b]
-/************************************************************************
+/*************************************************
 Title: BALANCA COMERCIAL
 Author: Sergio Manuel Santos
 <sergio.salazar.santos@gmail.com>
@@ -22,7 +22,7 @@ Hardware: Atmega128 by ETT ET-BASE
 	PIN 7 -> In Calibration Menu (on)
 Comment:
 nice
-************************************************************************/
+*************************************************/
 #define F_CPU 16000000UL
 /*
 ** library
@@ -142,11 +142,11 @@ if(HX711_ptr->status == 1){
 	hx.get_cal(&hx)->status=ZERO;
 	PORTC &= ~(ONE << 5); // troubleshooting
 }
-/*********************************************************/
+/************************************************/
 //lcd0.gotoxy(1,0); // for troubleshooting
 //lcd0.string_size(function.ftoa(HX711_data.status, result, ZERO), 13);
 //lcd0.string_size(function.ftoa(hx.get_cal(&hx)->offset_64, result, ZERO), 13);
-/*********************************************************/
+/************************************************/
 while(TRUE){
 	/******PREAMBLE******/
 	lcd0.reboot(); //Reboot LCD
@@ -170,10 +170,10 @@ while(TRUE){
 		case '1': // Main Program Menu
 			lcd0.gotoxy(0,4); //TITLE
 			lcd0.string_size("Weight Scale", 12); //TITLE
-			/*********************************************/
+			/************************************/
 			//lcd0.gotoxy(1,0); // for troubleshooting
 			//lcd0.string_size(function.ftoa(hx.read_raw(&hx), result, ZERO), 13);
-			/*********************************************/
+			/************************************/
 			if((F.hl(&F) & IMASK) & ONE){ // calibrate offset by pressing button 1
 			HX711_data.offset_32 = tmp;
 			HX711_data.offset_64 = tmp;
@@ -195,12 +195,12 @@ while(TRUE){
 			if(choice == 3 || choice == 31)
 				value = (tmp - hx.get_cal(&hx)->offset_64) / hx.get_cal(&hx)->divfactor_64; 
 				//value to be published to LCD
-			/*********************************************/
+			/************************************/
 			//lcd0.gotoxy(3,0); // for troubleshooting
 			//lcd0.string_size(function.ftoa(tmp, result, ZERO), 13);
 			//lcd0.string_size(function.ftoa(hx.get_cal(&hx)->divfactor_128, result, ZERO), 13);
 			//lcd0.string_size(function.ftoa(hx.get_cal(&hx)->offset_128, result, ZERO), 13);
-			/*********************************************/
+			/************************************/
 			if (value > 1000 || value < -1000){
 				publish = value / 1000;
 				lcd0.gotoxy(2,1);
@@ -294,7 +294,7 @@ while(TRUE){
 			}
 			/**/
 			break;
-		/********************************************************************/
+		/****************************************/
 		default:
 			Menu = '1';
 			break;
@@ -379,5 +379,5 @@ Using offset corrects the drift and precision is concise to the gram.
 ****/
 \end{lstlisting}
 %\end{verbatimtab}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
