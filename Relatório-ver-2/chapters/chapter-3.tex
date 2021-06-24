@@ -27,7 +27,7 @@ A seguir na \textit{figura} \ref{Diagrama-bloco-1} estão representados os eleme
 \end{figure}
 O micro controlador usado neste projeto é um Atmega 128, a célula de peso é de 50Kg com uma saída de proporção de $\; 2mV/V \;$, é usado um amplificador de célula de carga com referência HX711, em que tem um protocolo de comunicação proprietário.
 Utilizo um \textit{display} \acs{lcd} para visualizar os valores medidos com a sua grandeza, também para visualizar o fator de divisão que converte o valor lido da célula de carga no seu respetiva correspondente valor de massa.
-Botões são usados para saltar entre \textit{Menus} e os \textit{leds} servem como indicadores de estado, isto é, se esta a usar os parâmetros \textit{default} ou do \textit{offset}.
+Botões são usados para saltar entre \textit{Menus} e os \textit{leds} servem como indicadores de estado, isto é, se esta a usar os parâmetros \textit{default} ou de \textit{offset}.
 \\
 \\
 Nas seguintes secções serão apresentados os componentes utilizados no projeto, assim como os aspetos relacionados com a implementação dos mesmos.
@@ -40,7 +40,7 @@ Para medir a massa, recorreu-se a uma célula de carga de 50Kg (\textit{figura} 
 	%\captionsetup{justification=raggedright,singlelinecheck=false}
 	\centering
 	\includegraphics[scale=0.15]{./image/PESTA/material/Load_Cell_1.jpg}
-	\caption{Célula de Carga 50Kg}
+	\caption{Célula de carga de 50Kg}
 	\label{Load_Cell_1}
 \end{figure}
 \figurespace{.5}
@@ -116,13 +116,13 @@ A montagem da mesa (prato) de medição é apresentada na \textit{figura} \ref{P
 \end{figure}
 \end{minipage}
 \minipagespace{.5}
-Ao colocar uma massa sobre a mesa, esta vai exercer pressão na célula de carga, que vai resultar numa tensão mecânica e compressão nos sensores \textit{strain gauge} que estão assentes na superfície do corpo da célula de carga, provocando uma diferença de potencial correspondente. Estes sensores não estão visível na célula de carga porque esta têm uma camada protetora de silicone branco sobre elas.
+Ao colocar uma massa sobre a mesa, esta vai exercer pressão na célula de carga, que vai resultar numa tensão mecânica e compressão nos sensores \textit{strain gauge} que estão assentes na superfície do corpo da célula de carga, provocando uma diferença de potencial correspondente. Estes sensores não estão visível nesta célula de carga porque esta têm uma camada protetora de silicone branco sobre elas.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Amplificador de sinal e \acs{adc}}
-A amplificação é geralmente um requisito fundamental, pois a maioria dos sensores tendem a produzir níveis de sinal significativamente mais baixos do que aqueles usados no processador digital. Os sensores resistivos podem precisar de um amplificador para a célula de carga. Se possível, é vantajoso ter o ganho o mais próximo possível do elemento sensor. Em situações onde um maior ganho é necessário, muitas vezes pode haver implicações para lidar com quaisquer efeitos adversos, como o ruído, problemas de \textit{layout} do \textit{chip}, os transitórios agudos associados aos sinais digitais que precisam de ser mantidos bem longe dos circuitos analógicos \textit{front-end}. \cite{book-9}
+A amplificação é geralmente um requisito fundamental, pois a maioria dos sensores tendem a produzir níveis de sinal significativamente mais baixos do que aqueles usados no processador digital. Os sensores resistivos podem precisar de um amplificador para a célula de carga. Se possível, é vantajoso ter o ganho o mais próximo possível do elemento sensor. Em situações onde um maior ganho é necessário, muitas vezes pode haver implicações para lidar com quaisquer efeitos adversos, como o ruído, problemas de \textit{layout} do \textit{chip}, e os transitórios agudos associados aos sinais digitais que precisam de ser mantidos bem longe dos circuitos analógicos \textit{front-end}. \cite{book-9}
 \\
 \\
-A ligação deste componente é intuitiva e fácil de se perceber \textit{tabela} \ref{HX711_connection}, o que é complexo neste trabalho é a interligação dos equipamentos com o micro controlador por meio de \textit{software} e a criação das bibliotecas e os \textit{drivers} de comunicação, como neste caso da placa do amplificador de sinal (\textit{chip} HX711 figura \ref{HX711_Schematic_1}), já que o protocolo de comunicação é proprietário como demonstrado na \textit{figure} \ref{Protocolo}.
+A ligação deste componente é intuitiva e fácil de se perceber \textit{tabela} \ref{HX711_connection}, o que é complexo neste trabalho é a interligação dos equipamentos com o micro controlador por meio de \textit{software} e a criação das bibliotecas e os \textit{drivers} de comunicação, como a placa do amplificador de célula de carga (\textit{chip} HX711 figura \ref{HX711_Schematic_1}), já que o protocolo de comunicação é proprietário como demonstrado na \textit{figure} \ref{Protocolo}.
 \\
 \\
 Pode se consultar a biblioteca \textit{driver} do amplificador de célula de carga HX711 nos anexos \ref{hx711-h} e \ref{hx711-c}.
@@ -174,7 +174,7 @@ O processamento digital pode consistir de rotinas para compensar os desvios por 
 A comunicação é responsável por criar rotinas necessárias para transferir e receber a informação e sinais de controle, entre o sensor e o processador, que toma lugar como componente central, tratando a informação, guardando os dados e fazendo rotinas, tais como, de calibração, e de teste e controlo de ganho da amplificação. \cite{book-9}
 \\
 \\
-Abaixo a \textit{figura} \ref{SPS_64} que foi adquirida do trabalho realizado recorrendo ao osciloscópio da RIGOL DS1102E e seu software \textit{Rigol Waveform Viewer}, demonstrando a comunicação entre o amplificador de sinal e o micro controlador da informação do \acs{adc}, a linha amarela é a informação (\acs{adc}) e a azul os impulsos do \textit{clock} PD\_SCK. Neste exemplo é visível cinco conversões executadas.
+Abaixo a \textit{figura} \ref{SPS_64} que foi adquirida do trabalho realizado recorrendo ao osciloscópio da RIGOL DS1102E e seu software \textit{Rigol Waveform Viewer}, demonstrando a comunicação entre o amplificador de sinal e o micro controlador da informação do \acs{adc}, a linha amarela é a informação (\acs{adc}) e a azul os impulsos do \textit{clock} (PD\_SCK). Neste exemplo é visível cinco conversões executadas.
 \\
 \begin{figure}[H]
 	\centering
@@ -183,7 +183,7 @@ Abaixo a \textit{figura} \ref{SPS_64} que foi adquirida do trabalho realizado re
 	\label{SPS_64}
 \end{figure}
 \figurespace{.5}
-A biblioteca (\textit{driver}) do integrado HX771 recorre a interrupções periódicas. Quando a linha de sinal da informação (amarela) vai para a massa esta indica que tem um pacote de leitura pronto a ser transmitido.
+A biblioteca (\textit{driver}) do integrado HX711 recorre a interrupções periódicas. Quando a linha de sinal da informação (amarela) vai para a massa esta indica que tem um pacote de leitura pronto a ser transmitido.
 \\
 \\
 \begin{minipage}[!b]{\linewidth}
@@ -209,7 +209,7 @@ A biblioteca (\textit{driver}) do integrado HX771 recorre a interrupções peri�
 \end{minipage}
 \begin{minipage}[l]{.53\linewidth}
 \vspace{.1cm}
-Como indicado abaixo nos gráficos, em que a linha \textcolor{yellow}{amarela} é a informação, e a linha \textcolor{BlueGreen}{azul} o respetivo \textit{clock} que é gerado pelas interrupções do micro-controlador, fazendo um deslocamento dos \textcolor{blue}{24} \textit{bits}, que por fim transmite para o amplificador, o ganho de amplificação a ser usado pelo numero excedente de \textit{clock cycles}, em que nesta demonstração da \textit{figura} \ref{Gain_128_example} é \textcolor{blue}{um}, e corresponde a um ganho de \textcolor{blue}{128}, respeitando a informação apresentada na \textit{tabela} \ref{Gain_Selection},  e de seguida o exemplo da \textit{figura} \ref{Gain_64_example}, com um ganho de \textcolor{blue}{64}, pois tem \textcolor{blue}{três} impulsos excedentes.
+Como indicado abaixo nos gráficos, em que a linha \textcolor{yellow}{amarela} é a informação e a linha \textcolor{BlueGreen}{azul} o respetivo \textit{clock} que é gerado pelas interrupções do micro-controlador, fazendo um deslocamento dos \textcolor{blue}{24} \textit{bits}, que por fim transmite para o amplificador o ganho de amplificação a ser usado pelo numero excedente de \textit{clock cycles}, em que nesta demonstração da \textit{figura} \ref{Gain_128_example} é \textcolor{blue}{um}, e corresponde a um ganho de \textcolor{blue}{128}, respeitando a informação apresentada na \textit{tabela} \ref{Gain_Selection},  e de seguida o exemplo da \textit{figura} \ref{Gain_64_example}, com um ganho de \textcolor{blue}{64}, pois tem \textcolor{blue}{três} impulsos excedentes.
 \end{minipage}
 \end{minipage}
 \\
@@ -238,7 +238,7 @@ Como indicado abaixo nos gráficos, em que a linha \textcolor{yellow}{amarela} �
 Para obter este resultado, a livraria \textit{driver} para o \textit{Load Cell Amplifier} teve de ter em consideração que a arquitetura do micro-controlador é de 8 \textit{bits}, uma vez que a estrutura do pacote de informação é entre 25 a 27 impulsos do \textit{clock cycle} em que é transmitido primeiro o \ac{msb}.
 \\
 \\
-Este amplificador de célula de carga tem uma amplificação no sinal de entrada com valores indicados na \textit{tabela} \ref{Gain_Selection}, e tem uma resolução de 24 \textit{bits}, como se sabe os números podem representar quantidades ou intervalos, os 24 \textit{bits} representa um intervalo de 0 até \, $2^{24}-1$, que nos dá 16777215 unidades, ou seja, o sinal de entrada amplificado pode ser dividido por este numero, isto é, pode-se obter este número de leituras possíveis, em que, se se tratar por exemplo de 5 Volt pode-se obter 16777215 leituras de intervalos de aproximadamente $2.98 \times 10^{-7}$ Volt cada, uma precisão muito boa.
+Este amplificador de célula de carga tem uma amplificação no sinal de entrada com valores indicados na \textit{tabela} \ref{Gain_Selection}, e tem uma resolução de 24 \textit{bits}, como se sabe os números podem representar quantidades e intervalos, os 24 \textit{bits} representa um intervalo de 0 até \, $2^{24}-1$, que nos dá 16777215 unidades, ou seja, o sinal de entrada amplificado pode ser dividido por este numero, isto é, pode-se obter este número de leituras possíveis, em que, se se tratar por exemplo de 5 Volt pode-se obter 16777215 leituras de intervalos de aproximadamente $2.98 \times 10^{-7}$ Volt cada, uma precisão muito boa.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Display \acs{lcd}}
 %Porque este ?
@@ -331,7 +331,7 @@ O Atmega 128 (\textit{figura} \ref{Atmega_128_pinagem}) é um dos mais poderosos
 \figurespace{1}
 %{Transparências Sistemas Digitais 2 \quad \acs{isep} \quad 2008/2009 \quad \textit{link}}: \\
 %\url{https://drive.google.com/file/d/1wgOGf8WwYY0OzDhRca9ypXz-iBO55YOF/view?usp=sharing} \\ \\
-Esta opção preenche os requisitos requeridos, por ter portas de entrada e saída suficientes, porque o \acs{lcd} requer a utilização de oito pinos para funcionar, o amplificador de sinal dois pinos, temos quatro botões que requer quatro pinos de entrada e três \textit{leds} indicadores, ou seja, três pinos de saída. Por aqui deduzimos que o \acs{mcu} a escolher tem que ter mais do que dezasseis pinos só para os periféricos.
+Esta opção preenche os requisitos requeridos, por ter portas de entrada e saída suficientes, porque o \acs{lcd} requer a utilização de oito pinos para funcionar, o amplificador de célula de carga dois pinos, temos quatro botões que requer quatro pinos de entrada e três \textit{leds} indicadores, ou seja, três pinos de saída. Por aqui deduzimos que o \acs{mcu} a escolher tem que ter mais do que dezasseis pinos só para os periféricos.
 \\
 O \acs{mcu} também tem que ter dois temporizadores capazes de gerar os tempos desejados por interrupções, talvez seria possível fazer isto com um micro controlador com menos capacidades, porque este projeto não utiliza a funcionalidade do \acs{adc} nem comunicações série integradas, no entanto comparando a nível de preço com as alternativas destaca-se esta opção.
 \\
@@ -350,8 +350,8 @@ Dos componentes que constituem o Atmega 128, os temporizadores são os que consi
 , o \ac{adc} do \acs{mcu} nem vai ser usado neste projeto, vai ser utilizado um \textit{load cell amplifier} externo, uma alternativa que é muito melhor porque tem maior resolução e específico para a aplicação em causa.
 \\
 \\
-Talvez os \acs{mcu} nem deviam ter a componente \acs{adc} e realçar em meios de comunicação e memoria, tornava-se assim num sistema unicamente digital.
-O Atmega 128 é uma escolha acertada para este projeto, considerando as alternativas de optar por um \ac{mcu} de 32 \textit{bits} ou um \textit{embeded system} com sistema operativo integrado, em que no primeiro caso o grau de dificuldade é acrescida devido a ter muito mais configurações e funcionalidades, e a segunda opção de ser exagerada, devido a só utilizar uma muito pequena parte das suas possibilidades, como se diz em inglês um \textit{overkill}, desperdiçando recursos desnecessariamente, e também se iria refletir a nível de custos monetários, no entanto facilita bastante no desenvolvimento de qualquer projeto, pois estaria-se a trabalhar sobre uma camada de nível superior (\textit{Kernel}).
+Talvez os \acp{mcu} nem deviam ter a componente \acs{adc} e realçar em meios de comunicação e memoria, tornava-se assim num sistema unicamente digital.
+O Atmega 128 é uma escolha acertada para este projeto, considerando as alternativas de optar por um \ac{mcu} de 32 \textit{bits} ou um \textit{embedded system} com sistema operativo integrado, em que no primeiro caso o grau de dificuldade é acrescida devido a ter muito mais configurações e funcionalidades, e a segunda opção de ser exagerada, devido a só utilizar uma muito pequena parte das suas possibilidades, como se diz em inglês um \textit{overkill}, desperdiçando recursos desnecessariamente, e também se iria refletir a nível de custos monetários, no entanto facilita bastante no desenvolvimento de qualquer projeto, pois estaria-se a trabalhar sobre uma camada de nível superior (\textit{Kernel}).
 \\
 \\
 \begin{minipage}{\linewidth}
