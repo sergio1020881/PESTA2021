@@ -1,2 +1,3 @@
 I use \ref to link sections and \eqref to refer equations, and \autoref to refer figs and tables
 
+micro controlador ou microcontrolador

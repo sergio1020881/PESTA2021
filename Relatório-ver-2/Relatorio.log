@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.30)  24 JUN 2021 01:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.30)  24 JUN 2021 03:11
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
@@ -2894,7 +2894,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 26--74
 ) (chapters/chapter-3.aux) (chapters/chapter-4.aux) (chapters/chapter-5.aux)
 (chapters/chapter-6.aux) (chapters/appendixA.aux))
 Package rerunfilecheck Info: File `Relatorio.out' has not changed.
-(rerunfilecheck)             Checksum: CD6461B14E05DA9C39928936573FE2D5;4662.
+(rerunfilecheck)             Checksum: 315FBA13CF6A4FB8D7599442B85ED84E;4657.
 Package rerunfilecheck Info: File `Relatorio.brf' has not changed.
 (rerunfilecheck)             Checksum: C56A84D5D667A11750147A7E70D258DD;837.
  ) 
@@ -2933,7 +2933,7 @@ type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy6
 .pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files
 /MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX/fonts/type1/p
 ublic/lm/lmtt12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtt9.pfb>
-Output written on Relatorio.pdf (92 pages, 8321183 bytes).
+Output written on Relatorio.pdf (92 pages, 8320954 bytes).
 PDF statistics:
  2712 PDF objects out of 2984 (max. 8388607)
  1548 named destinations out of 1728 (max. 500000)

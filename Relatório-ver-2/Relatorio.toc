@@ -17,7 +17,7 @@
 \contentsline {section}{\numberline {3.1}Célula de carga}{12}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Amplificador de sinal e \acs {adc}}{15}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Display \acs {lcd}}{19}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Micro-controlador}{20}{section.3.4}%
+\contentsline {section}{\numberline {3.4}Microcontrolador}{20}{section.3.4}%
 \contentsline {section}{\numberline {3.5}Fonte de Alimentação}{24}{section.3.5}%
 \contentsline {section}{\numberline {3.6}Orçamento do material}{25}{section.3.6}%
 \contentsline {chapter}{\numberline {4}Software}{27}{chapter.4}%
