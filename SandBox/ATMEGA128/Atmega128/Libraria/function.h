@@ -52,7 +52,7 @@ struct fnctn{
 	unsigned char (*bin2bcd)(unsigned val);
 	long (*gcd1)(long a, long b);
 	uint8_t (*pincheck)(uint8_t port, uint8_t pin);
-	char* (*print_binary)(uint8_t number);
+	char* (*print_binary)(unsigned int n_bits, uint8_t number);
 	char* (*ftoa)(float n, char* res, uint8_t afterpoint);
 	/***pc use***
 	char* (*fltos)(FILE* stream);

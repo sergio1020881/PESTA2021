@@ -70,7 +70,7 @@ unsigned char FUNCbcd2bin(unsigned char val);
 unsigned char FUNCbin2bcd(unsigned val);
 long FUNCgcd1(long a, long b);
 uint8_t FUNCpincheck(uint8_t port, uint8_t pin);
-char* FUNCprint_binary(uint8_t number);
+char* FUNCprint_binary(unsigned int n_bits, uint8_t number);
 void FUNCreverse(char* str, int len);
 uint8_t FUNCintinvstr(int32_t n, char* res, uint8_t n_digit);
 char* FUNCftoa(float n, char* res, uint8_t afterpoint);
@@ -506,12 +506,11 @@ uint8_t FUNCpincheck(uint8_t port, uint8_t pin)
 		lh=0;
 	return lh;
 }
-char* FUNCprint_binary(uint8_t number)
+char* FUNCprint_binary(unsigned int n_bits, uint8_t number)
 {
-	uint8_t i,c;
-    for(i=128,c=0;i;i>>=1,c++){
-	(number & i) ? (FUNCstr[c]='1') : (FUNCstr[c]='0');
-	}
+	int i,c;
+	for(i=(1<<(n_bits-1)), c=0; i; i >>= 1, c++)
+		(number & i) ? (FUNCstr[c]='1') : (FUNCstr[c]='0');
 	FUNCstr[c]='\0';
 	return FUNCstr;
 }
