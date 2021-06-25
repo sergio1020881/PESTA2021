@@ -94,7 +94,18 @@ O termo piezoresistividade deriva da palavra grega \textit{piezin}, que signific
 \minipagespace{.5}
 Normalmente nesta configuração (\textit{Wheatstone}) só são usados um ou dois sensores, e estes podem estar ligados nos extremos opostos, ou ligados ao mesmo ponto da alimentação, só em casos muito raros são utilizados quatro sensores na qual sua sensibilidade é máxima. Na \textit{figura} \ref{wheatstone-2} se os valores das quatro resistências são iguais ou nos casos em que $R_2 R_3 = R_4 R_1$, então a tensão $V_{AB}$ na saída é nula, e para haver variação $V_A$ terá que ser diferente de $V_B$.
 \\
+Como demonstrado no exemplo do \textit{gráfico} \ref{wheatstone-reaction}, em que a ponte \textit{Wheatstone} tem um comportamento parabólico a uma entrada linear, precisando de uma linearização para ser proporcional.
 \\
+\begin{minipage}[!b]{\linewidth}
+	\begin{figure}[H]
+		%\captionsetup{justification=raggedright,singlelinecheck=false}
+		\centering
+		\includegraphics[height=8cm]{./image/PESTA/graph/grafico.png}
+		\caption{\textit{Wheatstone} comportamento}
+		\label{wheatstone-reaction}
+	\end{figure}
+\end{minipage}
+\minipagespace{1}
 Esta célula de carga de 50Kg tem uma resolução na saída de 2 mV por cada Volt da sua alimentação com mais ou menos 0.15 mV de erro. Isto quer dizer que se for alimentada por 5 Volt está vai ter na saída uma tensão máxima de 10 mV e a margem de erro total de leitura esta na ordem de mais ou menos 0.03\%.
 Esta célula de carga tem interferências se usado durante longos contínuos períodos de tempo, da temperatura e ruídos.
 \\
@@ -106,7 +117,8 @@ Como indicado no \textit{datasheet} o valor obtido pode ter interferência de 0.
 %Para perceber melhor o funcionamento do sensor \textit{\textbf{strain gauge}} é aconselhável recorrer a literatura \cite{book-9} e \cite{book-10}, que explica como são feitas, seus dimensionamentos e processos de fabrico.
 A montagem da mesa (prato) de medição é apresentada na \textit{figura} \ref{Prato}.
 %Esta montagem deve ser explicada e a figura deve permitir ver todos os elementos, que devem estar devidamente identiificados
-\minipagespace{3}
+\\
+\\
 \begin{minipage}[!b]{\linewidth}
 \begin{figure}[H]
 	\centering
@@ -126,6 +138,17 @@ A ligação deste componente é intuitiva e fácil de se perceber \textit{tabela
 \\
 \\
 Pode se consultar a biblioteca \textit{driver} do amplificador de célula de carga HX711 nos anexos \ref{hx711-h} e \ref{hx711-c}.
+\\
+\\
+\begin{figure}[H]
+	%\captionsetup{justification=raggedright,singlelinecheck=false}
+	\centering
+	\includegraphics[scale=0.3]{./image/PESTA/schematic/HX711_Schematic_1.jpg}
+	\includegraphics[scale=0.09]{./image/PESTA/material/HX711_board_1.jpg}
+	\caption{Diagrama de blocos e a placa do HX711}
+	\label{HX711_Schematic_1}
+\end{figure}
+\figurespace{1}
 %Então deve ser apresentada
 %Apresenatação das figuras e da tabela....
 \begin{table}[H]
@@ -144,16 +167,7 @@ Pode se consultar a biblioteca \textit{driver} do amplificador de célula de car
 	\end{tabular}	
 	\label{HX711_connection}
 \end{table}
-\tablespace{.5}
-\begin{figure}[H]
-	%\captionsetup{justification=raggedright,singlelinecheck=false}
-	\centering
-	\includegraphics[scale=0.3]{./image/PESTA/schematic/HX711_Schematic_1.jpg}
-	\includegraphics[scale=0.09]{./image/PESTA/material/HX711_board_1.jpg}
-	\caption{Diagrama de blocos e a placa do HX711}
-	\label{HX711_Schematic_1}
-\end{figure}
-\figurespace{.5}
+\tablespace{1}
 %apresentar tabela
 %A conversão AD deve ser apresentada... indicar a resolução do peso medido
 \begin{figure}[H]
@@ -163,7 +177,7 @@ Pode se consultar a biblioteca \textit{driver} do amplificador de célula de car
 	\caption{Protocolo de comunicação}
 	\label{Protocolo}
 \end{figure}
-\figurespace{2}
+\figurespace{.3}
 A placa \textit{Load Cell Amplifier} pode ser fisicamente configurada para determinar o número de amostras por segundo a ser transmitido. Este circuito tem duas opções: a opção de 10 amostras por segundo, e de 80 amostras por segundo. Neste projeto foi utilizada a segunda opção, que necessita de uma pequena alteração na placa de circuito de impresso, isto é, é necessário abrir o respetivo \textit{jumper} de configuração.
 \\
 \\
@@ -258,11 +272,10 @@ Abaixo está uma imagem do \acs{lcd} de 4x20 azul na \textit{figura} \ref{4x20_L
 \begin{figure}[H]
 	\centering
 	%%\captionsetup{justification=raggedright,singlelinecheck=false}
-	\includegraphics[height=7cm]{./image/PESTA/material/4x20_LCD.jpg}
+	\includegraphics[height=5cm]{./image/PESTA/material/4x20_LCD.jpg}
 	\caption{\acs{lcd}}
 	\label{4x20_LCD}
 \end{figure}
-\figurespace{1}
 \begin{table}[H]
 	\centering
 	\caption{Ligações \acs{lcd}}
@@ -321,14 +334,15 @@ Os microcontroladores da \acs{avr} utilizam uma arquitetura de instruções \ac{
 %A seleção do material deve ser justificada de forma mais citeriosa
 %Devia ser feita uma pesquisa de produtos e seleção baseada nos requisitos prédefinidos.
 O Atmega 128 (\textit{figura} \ref{Atmega_128_pinagem}) é um dos mais poderosos \ac{mcu} da linha de 8 \textit{bits} da Atmel, e neste projeto esta integrado numa placa de desenvolvimento dotado de ligações por fichas \ac{idc}, ou seja, utiliza \textit{flat ribbon cables} para ligar os periféricos, o que é muito mais prático do que sistemas que atualmente são mais populares, como por exemplo a placa de desenvolvimento Arduino, STMicroelectronics e a \ac{pic} que recorrem a um interface por pinos (\textit{pin headers}).
+\\
 \begin{figure}[H]
 	\centering
 	%%\captionsetup{justification=raggedright,singlelinecheck=false}
-	\includegraphics[scale=0.32]{./image/PESTA/material/Atmega128_1.jpg}
+	\includegraphics[scale=0.6]{./image/PESTA/material/Atmega128_1.jpg}
 	\caption{Atmega 128}
 	\label{Atmega_128_pinagem}
 \end{figure}
-\figurespace{1}
+\figurespace{.5}
 %{Transparências Sistemas Digitais 2 \quad \acs{isep} \quad 2008/2009 \quad \textit{link}}: \\
 %\url{https://drive.google.com/file/d/1wgOGf8WwYY0OzDhRca9ypXz-iBO55YOF/view?usp=sharing} \\ \\
 Esta opção preenche os requisitos requeridos, por ter portas de entrada e saída suficientes, porque o \acs{lcd} requer a utilização de oito pinos para funcionar, o amplificador de célula de carga dois pinos, temos quatro botões que requer quatro pinos de entrada e três \textit{leds} indicadores, ou seja, três pinos de saída. Por aqui deduzimos que o \acs{mcu} a escolher tem que ter mais do que dezasseis pinos só para os periféricos.
@@ -345,6 +359,7 @@ Alternativas que foram postas em consideração estão na \textit{figura} \ref{B
 	\caption{Alternativas ao Atmega 128}
 	\label{Boards-1}
 \end{figure}
+\figurespace{.5}
 Dos componentes que constituem o Atmega 128, os temporizadores são os que considero os mais importantes devido a ser uma das grandezas fundamentais, o tempo, podendo este gerar intervalos de tempo e \acp{pwm}
 %porque
 , o \ac{adc} do \acs{mcu} nem vai ser usado neste projeto, vai ser utilizado um \textit{load cell amplifier} externo, uma alternativa que é muito melhor porque tem maior resolução e específico para a aplicação em causa.
