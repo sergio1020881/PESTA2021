@@ -31,9 +31,9 @@ Comment:
 /***Global File Variable***/
 /***/
 HX711_calibration HX711_Default_50Kg = {
-	.offset_32 = 35800,
-	.offset_64 = 71600,
-	.offset_128 = 143200,
+	.offset_32 = 35035,
+	.offset_64 = 70070,
+	.offset_128 = 140140,
 	.divfactor_32 = 23,
 	.divfactor_64 = 46,
 	.divfactor_128 = 92,

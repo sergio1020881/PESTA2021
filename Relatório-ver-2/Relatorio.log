@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.30)  25 JUN 2021 21:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.30)  26 JUN 2021 15:42
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
@@ -2212,12 +2212,12 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 86.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 86.
-<./image/PESTA/graph/grafico.png, id=543, 359.09157pt x 216.05719pt>
-File: ./image/PESTA/graph/grafico.png Graphic file (type png)
-<use ./image/PESTA/graph/grafico.png>
-Package pdftex.def Info: ./image/PESTA/graph/grafico.png  used on input line 10
-3.
-(pdftex.def)             Requested size: 378.32846pt x 227.62204pt.
+<./image/PESTA/graph/grafico-1.png, id=543, 359.09157pt x 213.79875pt>
+File: ./image/PESTA/graph/grafico-1.png Graphic file (type png)
+<use ./image/PESTA/graph/grafico-1.png>
+Package pdftex.def Info: ./image/PESTA/graph/grafico-1.png  used on input line 
+103.
+(pdftex.def)             Requested size: 382.30643pt x 227.62204pt.
 <./image/PESTA/material/Prato-1.jpg, id=545, 2876.54958pt x 916.09859pt>
 File: ./image/PESTA/material/Prato-1.jpg Graphic file (type jpg)
 <use ./image/PESTA/material/Prato-1.jpg>
@@ -2256,7 +2256,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--133
 
 [13 <./image/PESTA/material/Load_Cell_1.jpg> <./image/PESTA/general/strain_gaug
 e_1.jpg> <./image/PESTA/schematic/Wheatstone-1.png>] [14 <./image/PESTA/schemat
-ic/Wheatstone-1.jpg> <./image/PESTA/graph/grafico.png>]
+ic/Wheatstone-1.jpg> <./image/PESTA/graph/grafico-1.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\acs' on input line 133.
@@ -2926,7 +2926,7 @@ Package rerunfilecheck Info: File `Relatorio.brf' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  64330 strings out of 479081
- 1444058 string characters out of 2862515
+ 1444072 string characters out of 2862515
  2523450 words of memory out of 3000000
  79330 multiletter control sequences out of 15000+600000
  537676 words of font info for 116 fonts, out of 8000000 for 9000
@@ -2959,7 +2959,7 @@ type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy6
 .pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files
 /MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX/fonts/type1/p
 ublic/lm/lmtt12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtt9.pfb>
-Output written on Relatorio.pdf (92 pages, 8326970 bytes).
+Output written on Relatorio.pdf (92 pages, 8326896 bytes).
 PDF statistics:
  2719 PDF objects out of 2984 (max. 8388607)
  1549 named destinations out of 1728 (max. 500000)
