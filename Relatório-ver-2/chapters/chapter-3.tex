@@ -25,7 +25,7 @@ A seguir na \autoref{Diagrama-bloco-2} estão representados os elementos em diag
 	\caption{Diagrama blocos do sistema implementado}
 	\label{Diagrama-bloco-2}
 \end{figure}
-O microcontrolador usado neste projeto é um Atmega 128, a célula de peso é de 50Kg com uma saída de proporção de $\; 2mV/V \;$. É usado um amplificador de célula de carga com a referência HX711, que tem um protocolo de comunicação proprietário.
+O microcontrolador usado neste projeto é um Atmega 128, a célula de peso é de $50 Kg$ com uma saída de proporção de $\; 2 mV/V \;$. É usado um amplificador de célula de carga com a referência HX711, que tem um protocolo de comunicação proprietário.
 È utilizo um \textit{display} \acs{lcd} para visualizar os valores medidos (com a sua grandeza), e também para visualizar o fator de divisão que converte o valor lido da célula de carga pelo \acs{adc} no seu respetiva correspondente valor de massa. Os
 botões são usados para saltar entre \textit{Menus} e os \acsp{led} servem como indicadores de estado, isto é, se está a usar os parâmetros \textit{default} ou de \textit{offset}.
 \\
@@ -33,7 +33,7 @@ botões são usados para saltar entre \textit{Menus} e os \acsp{led} servem como
 Nas seguintes secções serão apresentados os componentes utilizados no projeto, assim como os aspetos relacionados com a implementação dos mesmos.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Célula de carga}
-Para medir a massa, recorreu-se a uma célula de carga de 50 Kg (\autoref{Load_Cell_1}). Esta célula de carga utiliza sensores piezoresistivos, numa montagem em ponte \textit{Wheatstone}, os sensores são colocados na superfície da célula de carga em locais específicos. Esses locais são determinados pela configuração mecânica da célula de carga de forma a obter a leitura linear e proporcional ao peso exercido, isto é, ter um comportamento similar ao de uma mola.
+Para medir a massa, recorreu-se a uma célula de carga de $50 Kg$ (\autoref{Load_Cell_1}). Esta célula de carga utiliza sensores piezoresistivos, numa montagem em ponte \textit{Wheatstone}, os sensores são colocados na superfície da célula de carga em locais específicos. Esses locais são determinados pela configuração mecânica da célula de carga de forma a obter a leitura linear e proporcional ao peso exercido, isto é, ter um comportamento similar ao de uma mola.
 %explicar melhor esta parte da montagem
 \\
 \begin{figure}[H]
@@ -76,7 +76,7 @@ Estes sensores são implementados numa montagem do tipo ponte de \textit{Wheatst
 \minipagespace{.5}
 %Fazer uma introdução à figura 3.6.
 %Pôr sinal de massa na figura.
-Para uma melhoar compreensão do funcionamento da ponte de \textit{Wheatstone}, a seguir é apresentado o princípio de funcionamento da ponte apenas com resistências, que está apresentada na \autoref{wheatstone-2}.
+Para uma melhor compreensão do funcionamento da ponte de \textit{Wheatstone}, a seguir é apresentado o princípio de funcionamento da ponte apenas com resistências, que está apresentada na \autoref{wheatstone-2}.
 \\
 É possível determinar a queda de tensão entre os pontos $A$ e $B$ do circuito ($V_{AB}$), através da diferença entre a tensão (potencial) no ponto $A$ ($V_A$) e a tensão no ponto $B$ ($V_B$).
 \\
@@ -121,11 +121,11 @@ Como demonstrado no exemplo do \autoref{wheatstone-reaction}, onde a ponte \text
 	\end{figure}
 \end{minipage}
 \minipagespace{1}
-Esta célula de carga de 50 Kg tem uma resolução na saída de 2 mV por cada 1 Volt da sua alimentação com mais ou menos 0.15 mV de erro. Isto quer dizer que, se for alimentada com 5 V, esta vai ter na saída uma variação de tensão mínima de 10 mV e a margem de erro total de leitura está na ordem de mais ou menos 0.03\%, segundo indicação de seu \textit{datasheet}.
+Esta célula de carga de $50 Kg$ tem uma resolução na saída de $2 mV$ por cada $1 \; Volt$ da sua alimentação com mais ou menos $0.15 mV$ de erro. Isto quer dizer que, se for alimentada com $5 V$, esta vai ter na saída uma variação de tensão mínima de $10 mV$ e a margem de erro total de leitura está na ordem de mais ou menos $0.03\%$, segundo indicação de seu \textit{datasheet}.
 Esta célula de carga tem interferências da temperatura, ruídos e se usada durante longos contínuos períodos de tempo.
 \\
 \\
-Como indicado no \textit{datasheet} o valor obtido pode ter interferência de 0.03\% por cada meia hora de utilização, e 0.0016\% por cada grau de temperatura em excesso. Convém neste caso manter desligado o equipamento e apenas ser usado quando necessário, ou fazer \textit{offset} tendo em consideração a margem de erro.
+Como indicado no \textit{datasheet} o valor obtido pode ter interferência de $0.03\%$ por cada meia hora de utilização, e $0.0016\%$ por cada grau de temperatura em excesso. Convém neste caso manter desligado o equipamento e apenas ser usado quando necessário, ou fazer \textit{offset} tendo em consideração a margem de erro.
 \\
 \\
 %https://www.800loadcel.com/load-cell-and-strain-gauge-basics.html
@@ -352,7 +352,7 @@ Os microcontroladores da \acs{avr} utilizam uma arquitetura de instruções \ac{
 %O facto de ser um dos masi poderosos.. não é justificação
 %A seleção do material deve ser justificada de forma mais citeriosa
 %Devia ser feita uma pesquisa de produtos e seleção baseada nos requisitos prédefinidos.
-O Atmega 128 (\textit{figura} \ref{Atmega_128_pinagem}) é um dos mais poderosos \ac{mcu} da linha de 8 \textit{bits} da Atmel, e neste projeto esta integrado numa placa de desenvolvimento dotado de ligações por fichas \ac{idc}, ou seja, utiliza \textit{flat ribbon cables} para ligar os periféricos, o que é muito mais prático do que sistemas que atualmente são mais populares, como por exemplo a placa de desenvolvimento Arduino, STMicroelectronics e a \ac{pic} que recorrem a um interface por pinos (\textit{pin headers}).
+O Atmega 128 (\autoref{Atmega_128_pinagem}) é um dos mais poderosos \ac{mcu} da linha de 8 \textit{bits} da Atmel, e neste projeto esta integrado numa placa de desenvolvimento dotado de ligações por fichas \ac{idc}, ou seja, utiliza \textit{flat ribbon cables} para ligar os periféricos, o que é muito mais prático do que sistemas que atualmente são mais populares, como por exemplo a placa de desenvolvimento Arduino, STMicroelectronics e a \ac{pic} que recorrem a um interface por pinos (\textit{pin headers}).
 \\
 \begin{figure}[H]
 	\centering
@@ -369,7 +369,7 @@ Esta opção preenche os requisitos requeridos, por ter portas de entrada e saí
 O \acs{mcu} também tem que ter dois temporizadores capazes de gerar os tempos desejados por interrupções, talvez seria possível fazer isto com um micro controlador com menos capacidades, porque este projeto não utiliza a funcionalidade do \acs{adc} nem comunicações série integradas, no entanto comparando a nível de preço com as alternativas destaca-se esta opção.
 \\
 \\
-Alternativas que foram postas em consideração estão na \textit{figura} \ref{Boards-1}, e foram excluídas pelos motivos mencionados.
+Alternativas que foram postas em consideração estão na \autoref{Boards-1}, e foram excluídas pelos motivos mencionados.
 \\
 \begin{figure}[H]
 	\centering
@@ -443,7 +443,7 @@ Para programar este microcontrolador (\textbf{Atmega 128}), foi utilizado o prog
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Fonte de Alimentação}
 %Introdução a fonte de alimentação...
-Está se a usar uma fonte de alimentação comutada abaixadora \autoref{buck-converter}, ou seja, a tensão na sua saída é sempre inferior a da sua entrada e tem uma eficiência até 96\%.
+Está se a usar uma fonte de alimentação comutada abaixadora \autoref{buck-converter}, ou seja, a tensão na sua saída é sempre inferior a da sua entrada e tem uma eficiência até $96\%$.
 \\
 \begin{minipage}[!b]{.5\linewidth}
 	\begin{figure}[H]
@@ -479,7 +479,7 @@ Características DC/DC:
 	\end{itemize}
 \end{minipage}
 \minipagespace{.5}
-Como a \textit{mainboard} tem um regulador de tensão linear de 5 Volt, para aumentar a eficiência e ter uma alimentação variável de entrada até 38VDC foi utilizado o \textit{buck converter} para alimentar o regulador de tensão linear para um valor próximo dos 5 Volt, por exemplo 9 Volt, porque se sabe que as perdas de um regulador de tensão linear é proporcional a queda de tensão entre a sua entrada e a sua saída. Podia-se remover o regulador de tensão linear e apenas utilizar o \textit{buck converter} regulado para o valor de 5 Volt mas pretende-se não alterar o \acs{pcb} da \textit{mainboard}.
+Como a \textit{mainboard} tem um regulador de tensão linear de $5 \; Volt$, para aumentar a eficiência e ter uma alimentação variável de entrada até $38VDC$ foi utilizado o \textit{buck converter} para alimentar o regulador de tensão linear para um valor próximo dos $5 \; Volt$, por exemplo $9 \; Volt$, porque se sabe que as perdas de um regulador de tensão linear é proporcional a queda de tensão entre a sua entrada e a sua saída. Podia-se remover o regulador de tensão linear e apenas utilizar o \textit{buck converter} regulado para o valor de 5 Volt mas pretende-se não alterar o \acs{pcb} da \textit{mainboard}.
 %Explicar melhor
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Orçamento do material}
