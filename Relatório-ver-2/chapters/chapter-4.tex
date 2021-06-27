@@ -14,7 +14,7 @@ O \ac{ide} utilizado neste trabalho foi o \textbf{\textit{{Microchip Studio for 
 	\end{figure}
 \end{minipage}
 \begin{minipage}[!b]{.45\linewidth}
-	Ao lado a figura \ref{Microchip-Studio} nos mostra o logo da empresa, e abaixo a figura \ref{Work-Space} demonstra o ambiente de trabalho onde se executa todo o código que vai correr no microcontrolador.
+	Ao lado a \autoref{Microchip-Studio} nos mostra o logo da empresa, e abaixo a figura \ref{Work-Space} demonstra o ambiente de trabalho onde se executa todo o código que vai correr no microcontrolador.
 	\\
 	\\
 	\\
@@ -105,7 +105,7 @@ Quanto às interrupções é sempre um desafio, porque as tarefas têm que ser b
 %Passar isso para a parte de software
 \\
 \\
-O código que executa a rotina de leitura \acs{adc} é demonstrado na \textit{lista} \ref{HX711-read-raw}, sendo que esta é chamada pela interrupção periódica da \textit{figura} \ref{Interrupt_1}, em que só é ativa quando o resultado da função na \textit{lista} \ref{Main-While-case-1} \textbf{hx.query(\&hx)} é verdadeira.
+O código que executa a rotina de leitura \acs{adc} é demonstrado na \autoref{HX711-read-raw}, sendo que esta é chamada pela interrupção periódica da \textit{figura} \ref{Interrupt_1}, em que só é ativa quando o resultado da função na \autoref{Main-While-case-1} \textbf{hx.query(\&hx)} é verdadeira.
 {
 	\lstinputlisting[language=C, caption={função de chamada \textbf{hx.query(\&hx)}}, captionpos=b, label=Main-While-case-1]{./input/code/hx_query.c}
 }
@@ -122,7 +122,7 @@ Após obter um número determinado de valores discretos lidos pelo amplificador 
 para ser tratado e deduzido o valor correspondente da massa.
 \\
 \\
-O código da interrupção 2 esta abaixo descrita na \textit{lista} \ref{Jump-menu} e serve para mudar de \textit{Menu} e limpar a \acs{eeprom}.
+O código da interrupção 2 esta abaixo descrita na \autoref{Jump-menu} e serve para mudar de \textit{Menu} e limpar a \acs{eeprom}.
 {
 	\lstinputlisting[language=C, caption=Saltar de menu, captionpos=b, label=Jump-menu]{./input/code/Jump_menu.c}
 }

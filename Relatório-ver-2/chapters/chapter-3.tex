@@ -4,7 +4,7 @@ Para o desenvolvimento deste projeto, foi criado um \textit{kit} de desenvolvime
 \\
 \\
 %Qual a resolução do dispaly LCD e a Gama da celula de peso.
-Analisando a \textit{figura} \ref{Kit_Desenvolvimento_2}, pode-se verificar a montagem em esqueleto do equipamento.
+Analisando a \autoref{Kit_Desenvolvimento_2}, pode-se verificar a montagem em esqueleto do equipamento.
 \\
 \begin{figure}[H]
 	\centering
@@ -13,7 +13,7 @@ Analisando a \textit{figura} \ref{Kit_Desenvolvimento_2}, pode-se verificar a mo
 	\label{Kit_Desenvolvimento_2}
 \end{figure}
 \figurespace{.5}
-A seguir na \textit{figura} \ref{Diagrama-bloco-2} estão representados os elementos em diagrama de blocos.
+A seguir na \autoref{Diagrama-bloco-2} estão representados os elementos em diagrama de blocos.
 %Pôr a celula de caraga representada por um bloco
 %comunicação série
 %que tipo de comunicações ?
@@ -33,14 +33,14 @@ botões são usados para saltar entre \textit{Menus} e os \acsp{led} servem como
 Nas seguintes secções serão apresentados os componentes utilizados no projeto, assim como os aspetos relacionados com a implementação dos mesmos.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Célula de carga}
-Para medir a massa, recorreu-se a uma célula de carga de 50 Kg (\textit{figura} \ref{Load_Cell_1}). Esta célula de carga utiliza sensores piezoresistivos, numa montagem em ponte \textit{Wheatstone}, os sensores são colocados na superfície da célula de carga em locais específicos. Esses locais são determinados pela configuração mecânica da célula de carga de forma a obter a leitura linear e proporcional ao peso exercido, isto é, ter um comportamento similar ao de uma mola.
+Para medir a massa, recorreu-se a uma célula de carga de 50 Kg (\autoref{Load_Cell_1}). Esta célula de carga utiliza sensores piezoresistivos, numa montagem em ponte \textit{Wheatstone}, os sensores são colocados na superfície da célula de carga em locais específicos. Esses locais são determinados pela configuração mecânica da célula de carga de forma a obter a leitura linear e proporcional ao peso exercido, isto é, ter um comportamento similar ao de uma mola.
 %explicar melhor esta parte da montagem
 \\
 \begin{figure}[H]
 	%\captionsetup{justification=raggedright,singlelinecheck=false}
 	\centering
 	\includegraphics[scale=0.15]{./image/PESTA/material/Load_Cell_1.jpg}
-	\caption{Célula de carga de 50Kg}
+	\caption{Célula de carga de 50 Kg}
 	\label{Load_Cell_1}
 \end{figure}
 \figurespace{.5}
@@ -48,8 +48,8 @@ O termo piezoresistividade deriva da palavra grega \textit{piezin}, que signific
 %A primeira aplicação do efeito piezoresistivo não apareceu até à década de 1930, cerca de 75 anos após a descoberta de Lord Kelvin.
 \\
 \\
-Os medidores de tensão mecânica em vez de usar fios de metal, são geralmente feitos de uma folha de metal fina, montada numa película de suporte, que pode ser colada numa superfície. O sensor de fita de metal típico é representado na \textit{figura} \ref{strain_gauge_1} \cite{book-9}.
-Estes sensores são implementados numa montagem do tipo ponte de \textit{Whaetstone}, de acordo com o esquema da \textit{figura} \ref{wheatstone-1}.
+Os medidores de tensão mecânica em vez de usar fios de metal, são geralmente feitos de uma folha de metal fina, montada numa película de suporte, que pode ser colada numa superfície. O sensor de fita de metal típico é representado na \autoref{strain_gauge_1} \cite{book-9}.
+Estes sensores são implementados numa montagem do tipo ponte de \textit{Wheatstone}, de acordo com o esquema da \autoref{wheatstone-1}.
 \\
 \\
 \begin{minipage}[!b]{.6\linewidth}
@@ -76,9 +76,10 @@ Estes sensores são implementados numa montagem do tipo ponte de \textit{Whaetst
 \minipagespace{.5}
 %Fazer uma introdução à figura 3.6.
 %Pôr sinal de massa na figura.
-Para uma melhoar compreensão do funcionamento da ponte de \textit{Wheatstone}, a seguir é apresentado o princípio de funcionamento da ponte apenas com resistências, que está apresentada na \textit{figura} \ref{wheatstone-2}.
+Para uma melhoar compreensão do funcionamento da ponte de \textit{Wheatstone}, a seguir é apresentado o princípio de funcionamento da ponte apenas com resistências, que está apresentada na \autoref{wheatstone-2}.
 \\
 É possível determinar a queda de tensão entre os pontos $A$ e $B$ do circuito ($V_{AB}$), através da diferença entre a tensão (potencial) no ponto $A$ ($V_A$) e a tensão no ponto $B$ ($V_B$).
+\\
 \begin{minipage}[!b]{.45\linewidth}
 	\begin{figure}[H]
 		\captionsetup{justification=raggedright,singlelinecheck=false}
@@ -100,15 +101,15 @@ Para uma melhoar compreensão do funcionamento da ponte de \textit{Wheatstone}, 
 \vspace{1pt}
 \end{minipage}
 \minipagespace{.5}
-Normalmente nesta configuração (\textit{Wheatstone}) só são usados um ou dois sensores como na \textit{figura} \ref{wheatstone-1}, e estes podem estar ligados nos extremos opostos, ou ligados ao mesmo ponto da alimentação. Só em casos muito raros são utilizados quatro sensores obtendo-se, nesse caso, uma sensibilidade máxima.
+Normalmente nesta configuração (\textit{Wheatstone}) só são usados um ou dois sensores como na \autoref{wheatstone-1}, e estes podem estar ligados nos extremos opostos, ou ligados ao mesmo ponto da alimentação. Só em casos muito raros são utilizados quatro sensores obtendo-se, nesse caso, uma sensibilidade máxima.
 \\
-\\ 
+\\
 %Na \textit{figura} \ref{wheatstone-2}
 Se os valores das quatro resistências são iguais, ou nos casos em que $R_2 R_3 = R_4 R_1$, então a tensão $V_{AB}$ na saída é nula, e para haver variação $V_A$ terá que ser diferente de $V_B$.
 \\
-Analisando a \textit{figura} \ref{wheatstone-1}, se os valores de $R1$ e $R4$ (os sensores) variam, então existe uma variação de tensão $V_{AB}$
+Analisando a \autoref{wheatstone-1}, se os valores de $R1$ e $R4$ (os sensores) variam, então existe uma variação de tensão $V_{AB}$
 \\
-Como demonstrado no exemplo do \textit{gráfico} \ref{wheatstone-reaction}, em que a ponte \textit{Wheatstone} tem um comportamento parabólico a uma entrada linear, precisando de uma linearização para ser proporcional.
+Como demonstrado no exemplo do \autoref{wheatstone-reaction}, onde a ponte \textit{Wheatstone} tem um comportamento parabólico a uma entrada linear, em que, em certas situações é necessário uma linearização.
 \\
 \begin{minipage}[!b]{\linewidth}
 	\begin{figure}[H]
@@ -129,7 +130,7 @@ Como indicado no \textit{datasheet} o valor obtido pode ter interferência de 0.
 \\
 %https://www.800loadcel.com/load-cell-and-strain-gauge-basics.html
 %Para perceber melhor o funcionamento do sensor \textit{\textbf{strain gauge}} é aconselhável recorrer a literatura \cite{book-9} e \cite{book-10}, que explica como são feitas, seus dimensionamentos e processos de fabrico.
-A montagem da mesa (prato) de medição é apresentada na \textit{figura} \ref{Prato}.
+A montagem da mesa (prato) de medição é apresentada na \autoref{Prato}.
 %Esta montagem deve ser explicada e a figura deve permitir ver todos os elementos, que devem estar devidamente identiificados
 \\
 \\
@@ -148,9 +149,9 @@ Ao colocar uma massa sobre a mesa, esta vai exercer pressão na célula de carga
 A amplificação é geralmente um requisito fundamental, pois a maioria dos sensores tende a produzir níveis de sinal significativamente mais baixos do que aqueles usados no processador digital. Os sensores resistivos podem precisar de um amplificador para a célula de carga. Se possível, é vantajoso ter o ganho o mais próximo possível do elemento sensor, eliminado interferências de ruído e da resistência da cablagem. Em situações onde um maior ganho é necessário, muitas vezes pode haver implicações para lidar com quaisquer efeitos adversos, como o ruído, problemas de \textit{layout} do \textit{chip}, e os transitórios agudos associados aos sinais digitais que precisam de ser mantidos bem longe dos circuitos analógicos \textit{front-end}. \cite{book-9}
 \\
 \\
-Neste projeto foi utilizado o HX711, que está apresentado na \textit{figura}, a ligação deste componente é fácil de se perceber tal como indicado na \textit{tabela} \ref{HX711_connection}. A parte mais complexa neste trabalho é a interligação dos equipamentos com o microcontrolador por meio de \textit{software} e a criação das bibliotecas e os \textit{drivers} de comunicação,
+Neste projeto foi utilizado o HX711, que está apresentado na \autoref{HX711_Schematic_1}, a ligação deste componente é fácil de se perceber tal como indicado na \autoref{HX711_connection}. A parte mais complexa neste trabalho é a interligação dos equipamentos com o microcontrolador por meio de \textit{software} e a criação das bibliotecas e os \textit{drivers} de comunicação,
 %como a placa do amplificador de célula de carga (\textit{chip} HX711 figura \ref{HX711_Schematic_1}),
- já que o protocolo de comunicação é proprietário. O mesmo está demonstrado na \textit{figura} \ref{Protocolo}.
+ já que o protocolo de comunicação é proprietário. O mesmo está demonstrado na \autoref{Protocolo}.
 \\
 \\
 Pode-se consultar a biblioteca \textit{driver} do amplificador de célula de carga HX711 nos anexos \ref{hx711-h} e \ref{hx711-c}.
@@ -206,7 +207,7 @@ O processamento digital pode consistir de rotinas para compensar os desvios por 
 A comunicação é responsável por criar rotinas necessárias para transferir e receber a informação e sinais de controle, entre o sensor e o processador, que toma lugar como componente central, tratando a informação, guardando os dados e fazendo rotinas, tais como, de calibração, e de teste e controlo de ganho da amplificação. \cite{book-9}
 \\
 \\
-Abaixo a \textit{figura} \ref{SPS_64} que foi adquirida do trabalho realizado recorrendo ao osciloscópio da RIGOL DS1102E e seu software \textit{Rigol Waveform Viewer}, demonstrando a comunicação entre o amplificador de sinal e o microcontrolador da informação do \acs{adc}, a linha amarela é a informação (\acs{adc}) e a azul os impulsos do \textit{clock} (PD\_SCK). Neste exemplo é visível cinco conversões executadas.
+Abaixo a \autoref{SPS_64} que foi adquirida do trabalho realizado recorrendo ao osciloscópio da RIGOL DS1102E e seu software \textit{Rigol Waveform Viewer}, demonstrando a comunicação entre o amplificador de sinal e o microcontrolador da informação do \acs{adc}, a linha amarela é a informação (\acs{adc}) e a azul os impulsos do \textit{clock} (PD\_SCK). Neste exemplo é visível cinco conversões executadas.
 \\
 \begin{figure}[H]
 	\centering
@@ -241,7 +242,7 @@ A biblioteca (\textit{driver}) do integrado HX711 recorre a interrupções peri�
 \end{minipage}
 \begin{minipage}[l]{.53\linewidth}
 \vspace{.1cm}
-Como indicado abaixo nos gráficos, em que a linha \textcolor{yellow}{amarela} é a informação e a linha \textcolor{BlueGreen}{azul} o respetivo \textit{clock} que é gerado pelas interrupções do microcontrolador, fazendo um deslocamento dos \textcolor{blue}{24} \textit{bits}, que por fim transmite para o amplificador o ganho de amplificação a ser usado pelo numero excedente de \textit{clock cycles}, em que nesta demonstração da \textit{figura} \ref{Gain_128_example} é \textcolor{blue}{um}, e corresponde a um ganho de \textcolor{blue}{128}, respeitando a informação apresentada na \textit{tabela} \ref{Gain_Selection},  e de seguida o exemplo da \textit{figura} \ref{Gain_64_example}, com um ganho de \textcolor{blue}{64}, pois tem \textcolor{blue}{três} impulsos excedentes.
+Como indicado abaixo nos gráficos, em que a linha \textcolor{yellow}{amarela} é a informação e a linha \textcolor{BlueGreen}{azul} o respetivo \textit{clock} que é gerado pelas interrupções do microcontrolador, fazendo um deslocamento dos \textcolor{blue}{24} \textit{bits}, que por fim transmite para o amplificador o ganho de amplificação a ser usado pelo numero excedente de \textit{clock cycles}, em que nesta demonstração da \autoref{Gain_128_example} é \textcolor{blue}{um}, e corresponde a um ganho de \textcolor{blue}{128}, respeitando a informação apresentada na \autoref{Gain_Selection},  e de seguida o exemplo da \autoref{Gain_64_example}, com um ganho de \textcolor{blue}{64}, pois tem \textcolor{blue}{três} impulsos excedentes.
 \end{minipage}
 \end{minipage}
 \\
@@ -270,7 +271,7 @@ Como indicado abaixo nos gráficos, em que a linha \textcolor{yellow}{amarela} �
 Para obter este resultado, a livraria \textit{driver} para o \textit{Load Cell Amplifier} teve de ter em consideração que a arquitetura do microcontrolador é de 8 \textit{bits}, uma vez que a estrutura do pacote de informação é entre 25 a 27 impulsos do \textit{clock cycle} em que é transmitido primeiro o \ac{msb}.
 \\
 \\
-Este amplificador de célula de carga tem uma amplificação no sinal de entrada com valores indicados na \textit{tabela} \ref{Gain_Selection}, e tem uma resolução de 24 \textit{bits}, como se sabe os números podem representar quantidades e intervalos, os 24 \textit{bits} representa um intervalo de 0 até \, $2^{24}-1$, que nos dá 16777215 unidades, ou seja, o sinal de entrada amplificado pode ser dividido por este numero, isto é, pode-se obter este número de leituras possíveis, em que, se se tratar por exemplo de 5 Volt pode-se obter 16777215 leituras de intervalos de aproximadamente $2.98 \times 10^{-7}$ Volt cada, uma precisão muito boa.
+Este amplificador de célula de carga tem uma amplificação no sinal de entrada com valores indicados na \autoref{Gain_Selection}, e tem uma resolução de 24 \textit{bits}, como se sabe os números podem representar quantidades e intervalos, os 24 \textit{bits} representa um intervalo de 0 até \, $2^{24}-1$, que nos dá 16777215 unidades, ou seja, o sinal de entrada amplificado pode ser dividido por este numero, isto é, pode-se obter este número de leituras possíveis, em que, se se tratar por exemplo de 5 Volt pode-se obter 16777215 leituras de intervalos de aproximadamente $2.98 \times 10^{-7}$ Volt cada, uma precisão muito boa.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Display \acs{lcd}}
 %Porque este ?
@@ -285,7 +286,7 @@ A biblioteca ou driver do \acs{lcd} que já tinha feito para outros projetos pes
 %[\ref{codigo}]
 \\
 \\
-Abaixo está uma imagem do \acs{lcd} de 4x20 azul na \textit{figura} \ref{4x20_LCD} e na tabela \ref{LCD_connections}, suas respetivas ligações.
+Abaixo está uma imagem do \acs{lcd} de 4x20 azul na \autoref{4x20_LCD} e na \autoref{LCD_connections}, suas respetivas ligações.
 \\
 \begin{figure}[H]
 	\centering
@@ -319,7 +320,7 @@ Abaixo está uma imagem do \acs{lcd} de 4x20 azul na \textit{figura} \ref{4x20_L
 		16 & LED- & \textit{Led Ground} & \\
 		\multicolumn{3}{||c|}{\textit{Reboot} \acs{lcd}} & \multicolumn{1}{|l||}{Pin 3}\\ [1ex]
 		\hline
-	\end{tabular}	
+	\end{tabular}
 	\label{LCD_connections}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -383,7 +384,7 @@ Dos componentes que constituem o Atmega 128, os temporizadores são os que consi
 , o \ac{adc} do \acs{mcu} nem vai ser usado neste projeto, vai ser utilizado um \textit{load cell amplifier} externo, uma alternativa que é muito melhor porque tem maior resolução e específico para a aplicação em causa.
 \\
 \\
-Talvez os \acp{mcu} nem deviam ter a componente \acs{adc} e realçar em meios de comunicação e memoria, tornava-se assim num sistema unicamente digital.
+Talvez os \acsp{mcu} nem deviam ter a componente \acs{adc} e realçar em meios de comunicação e memoria, tornava-se assim num sistema unicamente digital.
 O Atmega 128 é uma escolha acertada para este projeto, considerando as alternativas de optar por um \ac{mcu} de 32 \textit{bits} ou um \textit{embedded system} com sistema operativo integrado, em que no primeiro caso o grau de dificuldade é acrescida devido a ter muito mais configurações e funcionalidades, e a segunda opção de ser exagerada, devido a só utilizar uma muito pequena parte das suas possibilidades, como se diz em inglês um \textit{overkill}, desperdiçando recursos desnecessariamente, e também se iria refletir a nível de custos monetários, no entanto facilita bastante no desenvolvimento de qualquer projeto, pois estaria-se a trabalhar sobre uma camada de nível superior (\textit{Kernel}).
 \\
 \\
@@ -416,7 +417,7 @@ As características do microcontrolador Atmega 128 :
 \end{itemize}
 \end{minipage}
 \minipagespace{.5}
-Para programar este microcontrolador (\textbf{Atmega 128}), foi utilizado o programador da marca da Atmel, o \ac{atmel-ice} \textit{figura} \ref{Programador_1}. Para este equipamento tem disponível programação via \ac{isp} \textit{figura} \ref{ISP_6_8_10pin} e \ac{jtag}.
+Para programar este microcontrolador (\textbf{Atmega 128}), foi utilizado o programador da marca da Atmel, o \ac{atmel-ice} \autoref{Programador_1}. Para este equipamento tem disponível programação via \ac{isp} \autoref{ISP_6_8_10pin} e \ac{jtag}.
 \minipagespace{.2}
 \begin{minipage}[!b]{.5\linewidth}
 	\begin{figure}[H]
@@ -442,7 +443,7 @@ Para programar este microcontrolador (\textbf{Atmega 128}), foi utilizado o prog
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Fonte de Alimentação}
 %Introdução a fonte de alimentação...
-Está se a usar uma fonte de alimentação comutada abaixadora \textit{figura} \ref{buck-converter}, ou seja, a tensão na sua saída é sempre inferior a da sua entrada e tem uma eficiência até 96\%.
+Está se a usar uma fonte de alimentação comutada abaixadora \autoref{buck-converter}, ou seja, a tensão na sua saída é sempre inferior a da sua entrada e tem uma eficiência até 96\%.
 \\
 \begin{minipage}[!b]{.5\linewidth}
 	\begin{figure}[H]
@@ -482,7 +483,7 @@ Como a \textit{mainboard} tem um regulador de tensão linear de 5 Volt, para aum
 %Explicar melhor
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Orçamento do material}
-Abaixo na \textit{tabela} \ref{material}, é apresentado a lista do material utilizado no projeto, bem como o seu preço.
+Abaixo na \autoref{Material-1}, é apresentado a lista do material utilizado no projeto, bem como o seu preço.
 \\
 %O orçamento deve estar num anexo, ou no capítulo da apresentação dos componentes, não na validação
 \begin{table}[H]{
@@ -509,8 +510,8 @@ Abaixo na \textit{tabela} \ref{material}, é apresentado a lista do material uti
 			& \textit{total} & \EUR{86.96} \\
 			\hline
 		\end{tabular}
+		\label{Material-1}
 	}
-	\label{material}
 \end{table}
-Os preços são o que estão disponíveis no mercado. Quanto a \textit{mainboard}, o preço do \acs{mcu} Atmega 128 foi o mais competitivo. Outras alternativas, de \acs{mcu} de igual ou menor capacidade,atingiam o mesmo preço ou até seriam mais caras.
+Os preços são o que estão disponíveis no mercado. Quanto a \textit{mainboard}, o preço do \acs{mcu} Atmega 128 foi o mais competitivo. Outras alternativas, de \acs{mcu} de igual ou menor capacidade, atingiam o mesmo preço ou até seriam mais caras.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
