@@ -14,13 +14,13 @@
 \par O projeto proposto prevê a implementação de uma balança digital, utilizando um microcontrolador. Vai ser utilizada uma célula de carga como sensor de conversão do peso a medir, para uma diferença de potencial ou tensão proporcional (\textit{Volt}).
 \\
 \\
-Após a aquisição deste sinal em tensão gerado pela ponte de \textit{Wheatstone} da célula de carga, o mesmo será depois ligado a um amplificador de sinal com \ac{adc} dedicado para este tipo de aplicação. Este tem 24 \textit{bits} de resolução, amplificação programável e uma taxa de transferência fisicamente configurável. O amplificador de célula de carga é designado por \textbf{HX711}, e possui um protocolo de comunicação dedicado, o protocolo  de comunicação série será realizada como o uso de um \ac{mcu}.
+Após a aquisição deste sinal em tensão gerado pela ponte de \textit{Wheatstone} da célula de carga, o mesmo será depois ligado a um amplificador de sinal com \ac{adc} dedicado para este tipo de aplicação. Este tem 24 \textit{bits} de resolução, amplificação programável e uma taxa de transferência fisicamente configurável. O amplificador de célula de carga é designado por \textbf{HX711}, e possui um protocolo de comunicação dedicado, o protocolo  de comunicação série será realizada com o uso de um \ac{mcu}.
 \\
 \\
 A programação do \acrshort{mcu}, o código das bibliotecas e ou drivers vai ser implementada em linguagem \textbf{C}. O objetivo é implementar uma balança funcional de fácil utilização e calibração, economicamente viável, tornado-a desta forma numa balança acessível e prática.
 \\
 \\
-A balança digital vai ter um \textit{display} \ac{lcd} para visualizar o valor do peso medido e o parâmetro de calibração da célula de carga. Vai ter um botão de \textit{offset}, e botões para carregar os parâmetros de \textit{default} e para alterar o valor de calibração, também vai utilizar \acp{led} para indicar o estado em que a balança se encontra, ou seja, se esta a utilizar os valores \textit{default} ou da memória \acs{eeprom}.
+A balança digital vai ter um \textit{display} \ac{lcd} para visualizar o valor do peso medido e o parâmetro de calibração da célula de carga. Vai ter um botão de \textit{offset}, e botões para carregar os parâmetros de \textit{default} e para alterar o valor de calibração, também vai utilizar \acp{led} para indicar o estado em que a balança se encontra, ou seja, se esta a utilizar os valores \textit{default} ou da memória \ac{eeprom}.
 %Este trabalho é orientado para quem tem alguns conhecimentos básicos de eletrotecnia, com orientação para a eletrónica e programação.
 \\
 \\
@@ -46,7 +46,7 @@ This information then will be passed to the microcontroller.
 The \ac{mcu} programming code, libraries and or drivers are to be implemented using the \textbf{C} language. The objective of this project is to get a functional weighing scale easy to use and to calibrate economically viable, in order to have a practical weight scale.
 \\
 \\
-This weight scale will have integrated an \ac{lcd} display with buttons and led indicators, making it easy for the user to work with.
+This weight scale will have integrated an \acs{lcd} display with buttons and \acs{led} indicators, making it easy for the user to work with.
 %This work is targeted to a public with some basic electrical knowledge with electronic and programming background.
 %---------------------------------------------------------
 \vfill
