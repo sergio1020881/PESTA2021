@@ -3,8 +3,7 @@
 As balanças foram criadas por necessidade durante o desenvolvimento do comércio na antiguidade. Os produtos que não recorriam a contagem por unidades, tais como objetos irregulares (por exemplo o ouro) tinha de se quantificar o seu valor, e a forma de medir a sua massa tornou-se numa variável de medição para a troca de bens.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{O aparecimento e a evolução da balança}
-A relíquia mais antiga de uma balança de medir massa foi descoberta na vila de \textit{Indus River}, perto da região hoje conhecida como Paquistão, e estima-se ser por volta de 2000 A.C.
-\\
+%A relíquia mais antiga de uma balança de medir massa foi descoberta na vila de \textit{Indus River}, perto da região hoje conhecida como Paquistão, e estima-se ser por volta de 2000 A.C.
 Estas primeiras balanças eram alavancas em equilíbrio. $[ \; F_{1} \times b_{1c} = F_{2} \times b_{2c} \; ]$. Nos extremos eram colocados cestos estando este conjunto centrado no seu centro de massa. Assim, se os pesos colocados nos dois cestos fossem iguais, a alavanca ficava em equilíbrio (na horizontal). Esse tipo de balança era um sistema de comparação, com recurso a pesos fixos estabelecidos como norma e designados de \textbf{contra-pesos}.
 \\
 \\
@@ -27,7 +26,7 @@ Estas primeiras balanças eram alavancas em equilíbrio. $[ \; F_{1} \times b_{1
 	\end{figure}
 \end{minipage}
 \minipagespace{.5}
-Este sistema tem grande precisão, mas também pode facilmente ser adulterado.
+Este sistema é prático, mas também pode facilmente ser adulterado.
 \\
 \\
 \\
@@ -60,7 +59,7 @@ A balança por mola, como o nome implica, mede a pressão (ou sua tensão) exerc
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{A balança eletrónica}
 %Desenvolver mais
-As balanças eletrónicas mais modernas, utilizam resistências elétricas instaladas sobre materiais flexíveis por onde passa uma corrente elétrica, onde é possível detetar a variação de condutividade das resistências. Esta variação é proporcional à pressão exercida sobre esse material, trata-se dos sensores \textit{strain gauge}. As células de carga são materiais desenhados com uma estrutura para ter o mesmo comportamento de uma mola, dando-lhe uma caraterística de proporcionalidade entre a pressão exercida e o deslocamento provocado no material onde estão colocados os sensores (\textit{strain gauge}) em que detetam essa tensão mecânica e compressão. As células de carga são os sensores mais comuns usadas nas balanças digitais, porque geram um sinal proporcional a força ou pressão. De notar que existe muitos tipos de células de carga para diferentes gamas de massas, porque todas as molas tem um ponto de rotura da sua elasticidade onde perde sua caracteristica de ser uma mola.
+As balanças eletrónicas mais modernas utilizam resistências elétricas instaladas sobre materiais flexíveis por onde passa uma corrente elétrica, onde é possível detetar a variação de condutividade das resistências. Esta variação é proporcional à pressão exercida sobre esse material, trata-se dos sensores \textit{strain gauge}. As células de carga são materiais desenhados com uma estrutura para ter o mesmo comportamento de uma mola, dando-lhe uma caraterística de proporcionalidade entre a pressão exercida e o deslocamento provocado no material onde estão colocados os sensores (\textit{strain gauge}) em que detetam essa tensão mecânica e compressão. As células de carga são os sensores mais comuns usados nas balanças digitais, porque geram um sinal proporcional a força ou pressão. De notar que existem muitos tipos de células de carga para diferentes gamas de massas, porque todas as molas tem um ponto de rotura da sua elasticidade, e a partir do instante em que o mesmo é atingido, a mola perde a caraterística que a define.
 \\
 \begin{figure}[H]
 	\centering
@@ -69,7 +68,9 @@ As balanças eletrónicas mais modernas, utilizam resistências elétricas insta
 	\label{Scale_1}
 \end{figure}
 \figurespace{.5}
-No projeto proposto vai ser utilizado uma \textbf{célula de carga}, que segue o princípio acima mencionado. Estas células têm sensores \textit{\textbf{strain gauges}} ligadas em ponte de \textit{Wheatstone}, que vão detetar a distorção (pressão) no material, ou seja, da célula de carga e gerar um sinal de diferença de potencial proporcional. Seque o mesmo princípio de uma mola. Todas as molas tem uma constante de elasticidade conhecida pela lei de Hooke \cite{book-3} \textit{equação} \ref{eq:Hooke}.\\
+No projeto proposto vai ser utilizado uma \textbf{célula de carga}, que segue o princípio acima mencionado. Estas células têm sensores \textit{\textbf{strain gauges}} ligados em ponte de \textit{Wheatstone}, que vão detetar a distorção (pressão) no material da célula de carga e gerar um sinal de diferença de potencial proporcional. %Segue o mesmo princípio de uma mola.
+\\
+Todas as molas têm uma constante de elasticidade conhecida pela lei de Hooke \cite{book-3} \textit{equação} \ref{eq:Hooke}.\\
 %\\
 %As expressões aparecem sem ligação ao texto
 %Deve desenvolver mais esta parte, resultando numa mais elaborada fundamentação teórica
@@ -100,15 +101,15 @@ Outros tipos de células de carga, tais como as pneumáticas e hidráulicas, con
 	\label{eq:Preasure}
 	P = \frac{F}{A}
 \end{equation}
-As células de carga capacitivas são outro exemplo de como obter um sinal proporcional da força imposta como carga. Neste caso, é medida a sua capacidade de acordo com o afastamento ou aproximação das placas dos elétrodos, expressão \ref{eq:Capacity}.
+As células de carga capacitivas são outro exemplo de como obter um sinal proporcional à força imposta como carga. Neste caso, é medida a sua capacidade, de acordo com o afastamento ou aproximação das placas dos elétrodos, de acordo com a expressão \ref{eq:Capacity}.
 \begin{equation}
 	\label{eq:Capacity}
 	C = \varepsilon_{0} \; \varepsilon_{r} \; \frac{A}{d}
 \end{equation}
-Também existem células, que utilizam os princípios de ressonância, desfasamento de fase, e pelo efeito \textit{Doppler} para determinar a pressão ou distorção, em que resulta consequentemente numa medição.
+Também existem células que utilizam os princípios de ressonância, desfasamento de fase, e efeito \textit{Doppler} para determinar a pressão ou distorção, que resulta consequentemente numa medição.
 \\
 \\
-Pode-se dizer que, em todos os casos se determina a força resultante através do deslocamento no espaço.
+%Pode-se dizer que em todos os casos se determina a força resultante através do deslocamento no espaço.
 \\
 \\
 Como se pode observar existe diversos tipos de células de carga, é a peça principal que mede informação analógica da vida real para outra analógica de sinal elétrico, uma etapa de conversão onde podemos utilizar nos nossos sistemas eletrónicos para determinar seu valor.
