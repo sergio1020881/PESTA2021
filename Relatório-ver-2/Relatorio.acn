@@ -12,7 +12,7 @@
 \glossaryentry{LCD?\glossentry{lcd}|setentrycounter[]{page}\glsnumberformat}{v}
 \glossaryentry{LCD?\glossentry{lcd}|setentrycounter[]{page}\glsnumberformat}{vii}
 \glossaryentry{ISP?\glossentry{isp}|setentrycounter[]{page}\glsnumberformat}{vii}
-\glossaryentry{ADC?\glossentry{adc}|setentrycounter[]{page}\glsnumberformat}{viii}
+\glossaryentry{ADC?\glossentry{adc}|setentrycounter[]{page}\glsnumberformat}{vii}
 \glossaryentry{LCD?\glossentry{lcd}|setentrycounter[]{page}\glsnumberformat}{ix}
 \glossaryentry{ADC?\glossentry{adc}|setentrycounter[]{page}\glsnumberformat}{9}
 \glossaryentry{LCD?\glossentry{lcd}|setentrycounter[]{page}\glsnumberformat}{12}
@@ -75,10 +75,10 @@
 \glossaryentry{IDE?\glossentry{ide}|setentrycounter[]{page}\glsnumberformat}{29}
 \glossaryentry{ADC?\glossentry{adc}|setentrycounter[]{page}\glsnumberformat}{32}
 \glossaryentry{ADC?\glossentry{adc}|setentrycounter[]{page}\glsnumberformat}{32}
-\glossaryentry{EEPROM?\glossentry{eeprom}|setentrycounter[]{page}\glsnumberformat}{33}
-\glossaryentry{LCD?\glossentry{lcd}|setentrycounter[]{page}\glsnumberformat}{33}
+\glossaryentry{EEPROM?\glossentry{eeprom}|setentrycounter[]{page}\glsnumberformat}{32}
+\glossaryentry{LCD?\glossentry{lcd}|setentrycounter[]{page}\glsnumberformat}{32}
 \glossaryentry{ADC?\glossentry{adc}|setentrycounter[]{page}\glsnumberformat}{33}
-\glossaryentry{EEPROM?\glossentry{eeprom}|setentrycounter[]{page}\glsnumberformat}{35}
+\glossaryentry{EEPROM?\glossentry{eeprom}|setentrycounter[]{page}\glsnumberformat}{34}
 \glossaryentry{ADC?\glossentry{adc}|setentrycounter[]{page}\glsnumberformat}{38}
 \glossaryentry{MCU?\glossentry{mcu}|setentrycounter[]{page}\glsnumberformat}{38}
 \glossaryentry{LED?\glossentry{led}|setentrycounter[]{page}\glsnumberformat}{38}
@@ -89,6 +89,5 @@
 \glossaryentry{MCU?\glossentry{mcu}|setentrycounter[]{page}\glsnumberformat}{39}
 \glossaryentry{ADC?\glossentry{adc}|setentrycounter[]{page}\glsnumberformat}{39}
 \glossaryentry{PIC?\glossentry{pic}|setentrycounter[]{page}\glsnumberformat}{39}
-\glossaryentry{PVP?\glossentry{pvp}|setentrycounter[]{page}\glsnumberformat}{40}
 \glossaryentry{PCB?\glossentry{pcb}|setentrycounter[]{page}\glsnumberformat}{40}
 \glossaryentry{LCD?\glossentry{lcd}|setentrycounter[]{page}\glsnumberformat}{40}

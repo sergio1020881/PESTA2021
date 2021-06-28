@@ -1,33 +1,33 @@
 \chapter{Validação do projeto implementado}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Neste capítulo deve apresentar os testes realizados ao sistema implementado, e que devem garantir os objetivos iniciais.
-Neste capítulo vai ser mencionado os testes realizados na implementação do projeto e explicado as características de funcionamento da balança, baseado nas escolhas feitas.
+Neste capítulo são apresentados os testes realizados na implementação do projeto e explicado as características de funcionamento da balança.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Validação}
+\section{Testagem e validação do sistema implementado}
 %%%To validate is to justify why the choices made and alternatives that could be chosen.
-As escolhas feitas estão conforme o necessário para implementar o projeto considerando os custos serem o mais competitivo. Apenas o conhecimento adquirido ao aprofundar o funcionamento dos componentes é o ganho mais evidente na sua execução, facilitando a interpretação de situações reais e deteção de anomalias (\textit{troubleshooting}), derivado aos custos dos materiais serem caros.
+O conhecimento adquirido ao aprofundar o funcionamento dos componentes é o ganho mais evidente na realização do projeto, que permitiu a interpretação de situações reais e deteção de anomalias (\textit{troubleshooting}).
 \\
 \\
-Foram feitos muitos testes, usado um osciloscópio para afinações e resolução de anomalias, o que deu mais trabalho foi a biblioteca do amplificador de célula de carga HX711, foi testado com os parâmetros permitidos e com diferentes frequências de transmissão. No código foi feito várias experiências para determinar o comportamento mais favorável. Na consulta do código pode-se ver as estratégias tomadas e qual o procedimentos optados, este têm comentários com a possibilidade de alterar parâmetros que estão indicados.
+Foram realizados testes, usando um osciloscópio Rigol DS1102E para afinações e resolução de anomalias e ajustando o código do anexo \ref{main-c}. O que deu mais trabalho foi a validação da biblioteca do amplificador de célula de carga HX711, que testada com os parâmetros permitidos e com diferentes frequências de transmissão. No código foram realizadas várias experiências para determinar o comportamento mais favorável. Na consulta do código que pode ser consultado nos anexos podem ver as estratégias tomadas e qual os procedimentos selecionados. Estes têm comentários com a possibilidade de alterar parâmetros que estão indicados.
 %Esta justificação não é válida, tendo em conta o objetivo do trabalho !
 %Apostei na marca \textbf{Atmel} devido a experiência e conhecimentos já adquiridos, se aposta-se noutra marca teria de enfrentar uma curva de aprendizagem e adaptação que no final a nível de custos beneficio seria desfavorável, pelo tempo a dispensar e de ser muito trabalhoso ao refazer tudo novamente noutra arquitetura.
 \\
 \\
-O sensor usado é o mais comum nesta pratica, e escolha demonstrada, o circuito de interface é indiferente, a escolha apenas é baseada na sua precisão, ou seja, é de 24 \textit{bits} enquanto o \acs{adc} do \acs{mcu} de apenas 10 \textit{bits} de resolução.
+O sensor usado é o mais comum neste tipo de aplicações pratica. Quanto ao circuito de interface a escolha foi baseada na sua precisão, ou seja, é de 24 \textit{bits} enquanto o \acs{adc} do \acs{mcu} é de apenas 10 \textit{bits} de resolução.
 %Os 24 bits são necessarios? Os 10 não satifazem os objectivos ? Chega-se a este capítulo e isto não foi apresentado até agora
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Testar}
-Quanto a funcionalidade no seu todo, a balança tem \textcolor{blue}{quatro} botões e \textcolor{blue}{três} \acsp{led} ativados, um botão para fazer o \textit{offset} no \textcolor{green}{PORTF 0}, e dois botões com dupla função, fazer \textit{reset} para \textit{default} e incrementar, outro para entrar no menu de calibração e decrementar, o \textcolor{blue}{quarto} botão é reservado para \textit{enter} e assumir o valor introduzido na calibração.\\
+\section{Algumas considerações acerca do funcionamento do sistema}
+Quanto à funcionalidade no seu todo, a balança tem \textcolor{blue}{quatro} botões e \textcolor{blue}{três} \acsp{led}, um botão para fazer o \textit{offset} no \textcolor{green}{PORTF 0}, e dois botões com dupla função, fazer \textit{reset} para \textit{default} e incrementar, outro para entrar no menu de calibração e decrementar, o \textcolor{blue}{quarto} botão é reservado para \textit{enter} e assumir o valor introduzido na calibração.\\
 \\
 O botão \textcolor{green}{PORTF 3} quando premido durante \textcolor{blue}{cinco} segundos faz um \textit{reset} para configuração \textit{default} depois de o \acs{led} no \textcolor{red}{PORTC 6} piscar \textcolor{blue}{quatro} vezes.\\
 \\
-O botão \textcolor{green}{PORTF 4} quando premido durante \textcolor{blue}{cinco} segundos entra no menu de calibração do valor do \textit{gain factor} e o \acs{led} no \textcolor{red}{PORTC 7} liga, usando os botões de incrementa e decrementar, isto é, o
+O botão \textcolor{green}{PORTF 4} quando premido durante \textcolor{blue}{cinco} segundos entra no menu de calibração do valor do \textit{gain factor} e o \acs{led} no \textcolor{red}{PORTC 7} liga. Usando os botões de incrementar e decrementar no
 \textcolor{green}{PORTF 3} e \textcolor{green}{PORTF 4} pode-se alterar esse valor.\\
 \\
-Para assumir o valor e sair do menu de calibração basta premir o botão colocado no \textcolor{green}{PORTF 5}. Tanto no caso de calibração ou de \textit{offset} os valores são guardados na \acs{eeprom} do micro-controlador, sendo que, se retirar a alimentação do circuito este não perde os valores e o \acs{led} no \textcolor{red}{PORTC 5} permanece ligado.
+Para assumir o valor e sair do menu de calibração basta premir o botão colocado no \textcolor{green}{PORTF 5}. Tanto no caso de calibração como no \textit{offset} os valores são guardados na \acs{eeprom} do micro-controlador, sendo que, se retirar a alimentação do circuito este não perde os valores e o \acs{led} no \textcolor{red}{PORTC 5} permanece ligado.
 \\
 \\
-No ensaio foi utilizado objetos em que já se conhecia sua massa, não tendo pesos de calibração disponível para determinar sua precisão em toda a sua gama, isto é, de zero até aos cinquenta quilogramas, algo que futuramente se pode explorar.
+Nos ensaios foram utilizados objetos cujo peso era conhecido, não tendo pesos de calibração disponíveis para determinar sua precisão em toda a sua gama.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{comment}
 Sem contar com as despesas no equipamento para a programação do hardware que em principio só se gasta uma vez, isto é, se não se estragar. No caso do programador \textbf{Atmel-ICE} pode custar até \EUR{185.55}.\\

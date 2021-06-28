@@ -6,7 +6,6 @@
 \contentsline {chapter}{Lista de Tabelas}{ix}{chapter*.10}%
 \contentsline {chapter}{Listagens}{xi}{chapter*.11}%
 \contentsline {chapter}{Lista de Acr\'{o}nimos}{xiii}{section*.12}%
-\contentsline {chapter}{Acrónimos}{xv}{section*.14}%
 \contentsline {chapter}{\numberline {1}Introdução}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Objetivos}{2}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Calendarização}{2}{section.1.2}%
@@ -24,12 +23,11 @@
 \contentsline {chapter}{\numberline {4}Software}{29}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Software}{29}{section.4.1}%
 \contentsline {chapter}{\numberline {5}Validação do projeto implementado}{37}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Validação}{37}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Testar}{38}{subsection.5.1.1}%
+\contentsline {section}{\numberline {5.1}Testagem e validação do sistema implementado}{37}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Algumas considerações acerca do funcionamento do sistema}{38}{section.5.2}%
 \contentsline {chapter}{\numberline {6}Conclusões}{39}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Trabalho Futuro}{40}{section.6.1}%
-\contentsline {chapter}{Refer\^{e}ncias}{41}{section*.55}%
-\contentsline {chapter}{Refer\^{e}ncias}{41}{chapter*.56}%
+\contentsline {chapter}{Refer\^{e}ncias}{41}{section*.51}%
+\contentsline {chapter}{Refer\^{e}ncias}{41}{chapter*.52}%
 \contentsline {chapter}{\numberline {A}main}{43}{appendix.A}%
 \contentsline {chapter}{\numberline {B}lcd.h}{51}{appendix.B}%
 \contentsline {chapter}{\numberline {C}lcd.c}{53}{appendix.C}%

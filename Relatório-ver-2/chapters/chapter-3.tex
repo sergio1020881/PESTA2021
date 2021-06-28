@@ -14,6 +14,7 @@ Analisando a \autoref{Kit_Desenvolvimento_2}, pode-se verificar a montagem em es
 \end{figure}
 \figurespace{.5}
 A seguir na \autoref{Diagrama-bloco-2} estão representados os elementos em diagrama de blocos.
+\\
 %Pôr a celula de caraga representada por um bloco
 %comunicação série
 %que tipo de comunicações ?
@@ -25,30 +26,31 @@ A seguir na \autoref{Diagrama-bloco-2} estão representados os elementos em diag
 	\caption{Diagrama blocos do sistema implementado}
 	\label{Diagrama-bloco-2}
 \end{figure}
-O microcontrolador usado neste projeto é um Atmega 128, a célula de peso é de $50 Kg$ com uma saída de proporção de $\; 2 mV/V \;$. É usado um amplificador de célula de carga com a referência HX711, que tem um protocolo de comunicação proprietário.
-È utilizo um \textit{display} \acs{lcd} para visualizar os valores medidos (com a sua grandeza), e também para visualizar o fator de divisão que converte o valor lido da célula de carga pelo \acs{adc} no seu respetiva correspondente valor de massa. Os
+\figurespace{.5}
+O microcontrolador usado neste projeto é um Atmega 128, a célula de peso é de $50 \; Kg$ com uma saída de proporção de $\; 2 \; mV/V \;$. É usado um amplificador de célula de carga com a referência HX711, que tem um protocolo de comunicação proprietário.
+É utilizo um \textit{display} \acs{lcd} para visualizar os valores medidos (com a sua grandeza), e também para visualizar o fator de divisão que converte o valor lido da célula de carga pelo \acs{adc} no seu respetiva correspondente valor de massa. Os
 botões são usados para saltar entre \textit{Menus} e os \acsp{led} servem como indicadores de estado, isto é, se está a usar os parâmetros \textit{default} ou de \textit{offset}.
 \\
 \\
 Nas seguintes secções serão apresentados os componentes utilizados no projeto, assim como os aspetos relacionados com a implementação dos mesmos.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Célula de carga}
-Para medir a massa, recorreu-se a uma célula de carga de $50 Kg$ (\autoref{Load_Cell_1}). Esta célula de carga utiliza sensores piezoresistivos, numa montagem em ponte \textit{Wheatstone}, os sensores são colocados na superfície da célula de carga em locais específicos. Esses locais são determinados pela configuração mecânica da célula de carga de forma a obter a leitura linear e proporcional ao peso exercido, isto é, ter um comportamento similar ao de uma mola.
+Para medir a massa, recorreu-se a uma célula de carga de $50 \; Kg$ (\autoref{Load_Cell_1}). Esta célula de carga utiliza sensores piezoresistivos numa montagem em ponte \textit{Wheatstone}. Esses locais são determinados pela configuração mecânica da célula de carga de forma a obter a leitura linear e proporcional ao peso exercido, isto é, ter um comportamento similar ao de uma mola.
 %explicar melhor esta parte da montagem
 \\
 \begin{figure}[H]
 	%\captionsetup{justification=raggedright,singlelinecheck=false}
 	\centering
 	\includegraphics[scale=0.15]{./image/PESTA/material/Load_Cell_1.jpg}
-	\caption{Célula de carga de 50 Kg}
+	\caption{Célula de carga de $50 \; Kg$}
 	\label{Load_Cell_1}
 \end{figure}
 \figurespace{.5}
 O termo piezoresistividade deriva da palavra grega \textit{piezin}, que significa "pressionar". É um efeito exibido por vários materiais que sofrem uma mudança na resistividade devido a uma pressão aplicada. O efeito foi descoberto pela primeira vez por Lord Kelvin em 1856, que notou que a resistência dos fios de cobre e ferro aumentava quando em tensão mecânica. Ele também observou que os fios de ferro apresentavam uma alteração maior na resistência do que os de cobre. 
-%A primeira aplicação do efeito piezoresistivo não apareceu até à década de 1930, cerca de 75 anos após a descoberta de Lord Kelvin.
+A primeira aplicação do efeito piezoresistivo não apareceu até à década de 1930.
 \\
 \\
-Os medidores de tensão mecânica em vez de usar fios de metal, são geralmente feitos de uma folha de metal fina, montada numa película de suporte, que pode ser colada numa superfície. O sensor de fita de metal típico é representado na \autoref{strain_gauge_1} \cite{book-9}.
+Em vez de usar fios de metal, são geralmente feitos de uma folha de metal fina, montada numa película de suporte, que pode ser colada numa superfície. O sensor de fita de metal típico é representado na \autoref{strain_gauge_1} \cite{book-9}.
 Estes sensores são implementados numa montagem do tipo ponte de \textit{Wheatstone}, de acordo com o esquema da \autoref{wheatstone-1}.
 \\
 \\
@@ -72,12 +74,13 @@ Estes sensores são implementados numa montagem do tipo ponte de \textit{Wheatst
 	\label{wheatstone-1}
 \end{figure}
 \end{minipage}
+\minipagespace{.1}
+\hspace*{1cm}\url{https://www.slideshare.net/maneeb/strain-gauge-loadcell-ppt}
 %É esta a implementação utilizada no trabalho ?
-\minipagespace{.5}
+
 %Fazer uma introdução à figura 3.6.
 %Pôr sinal de massa na figura.
-Para uma melhor compreensão do funcionamento da ponte de \textit{Wheatstone}, a seguir é apresentado o princípio de funcionamento da ponte apenas com resistências, que está apresentada na \autoref{wheatstone-2}.
-\\
+\vspace{.5cm}
 É possível determinar a queda de tensão entre os pontos $A$ e $B$ do circuito ($V_{AB}$), através da diferença entre a tensão (potencial) no ponto $A$ ($V_A$) e a tensão no ponto $B$ ($V_B$).
 \\
 \begin{minipage}[!b]{.45\linewidth}
@@ -104,24 +107,27 @@ Para uma melhor compreensão do funcionamento da ponte de \textit{Wheatstone}, a
 Normalmente nesta configuração (\textit{Wheatstone}) só são usados um ou dois sensores como na \autoref{wheatstone-1}, e estes podem estar ligados nos extremos opostos, ou ligados ao mesmo ponto da alimentação. Só em casos muito raros são utilizados quatro sensores obtendo-se, nesse caso, uma sensibilidade máxima.
 \\
 \\
+Para uma melhor compreensão do funcionamento da ponte de \textit{Wheatstone}, a seguir é apresentado o princípio de funcionamento da ponte apenas com resistências, que está apresentada na \autoref{wheatstone-2}.
+\\
+\\
 %Na \textit{figura} \ref{wheatstone-2}
 Se os valores das quatro resistências são iguais, ou nos casos em que $R_2 R_3 = R_4 R_1$, então a tensão $V_{AB}$ na saída é nula, e para haver variação $V_A$ terá que ser diferente de $V_B$.
 \\
 Analisando a \autoref{wheatstone-1}, se os valores de $R1$ e $R4$ (os sensores) variam, então existe uma variação de tensão $V_{AB}$
 \\
-Como demonstrado no exemplo do \autoref{wheatstone-reaction}, onde a ponte \textit{Wheatstone} tem um comportamento parabólico a uma entrada linear, em que, em certas situações é necessário uma linearização.
+%Como demonstrado no exemplo do \autoref{wheatstone-reaction}, onde a ponte \textit{Wheatstone} tem um comportamento parabólico a uma entrada linear, em que, em certas situações é necessário uma linearização.
 \\
-\begin{minipage}[!b]{\linewidth}
-	\begin{figure}[H]
+%\begin{minipage}[!b]{\linewidth}
+%	\begin{figure}[H]
 		%\captionsetup{justification=raggedright,singlelinecheck=false}
-		\centering
-		\includegraphics[height=8cm]{./image/PESTA/graph/grafico-1.png}
-		\caption{\textit{Wheatstone} comportamento}
-		\label{wheatstone-reaction}
-	\end{figure}
-\end{minipage}
-\minipagespace{1}
-Esta célula de carga de $50 Kg$ tem uma resolução na saída de $2 mV$ por cada $1 \; Volt$ da sua alimentação com mais ou menos $0.15 mV$ de erro. Isto quer dizer que, se for alimentada com $5 V$, esta vai ter na saída uma variação de tensão mínima de $10 mV$ e a margem de erro total de leitura está na ordem de mais ou menos $0.03\%$, segundo indicação de seu \textit{datasheet}.
+%		\centering
+%		\includegraphics[height=8cm]{./image/PESTA/graph/grafico-1.png}
+%		\caption{\textit{Wheatstone} comportamento}
+%		\label{wheatstone-reaction}
+%	\end{figure}
+%\end{minipage}
+%\minipagespace{.5}
+Esta célula de carga de $50 \; Kg$ tem uma resolução na saída de $2 \; mV$ por cada $1 \; Volt$ da sua alimentação com mais ou menos $0.15 mV$ de erro. Isto quer dizer que, se for alimentada com $5 \; V$, esta vai ter na saída uma variação de tensão mínima de $10 \; mV$ e a margem de erro total de leitura está na ordem de mais ou menos $0.03\%$, segundo indicação de seu \textit{datasheet}.
 Esta célula de carga tem interferências da temperatura, ruídos e se usada durante longos contínuos períodos de tempo.
 \\
 \\
@@ -149,13 +155,7 @@ Ao colocar uma massa sobre a mesa, esta vai exercer pressão na célula de carga
 A amplificação é geralmente um requisito fundamental, pois a maioria dos sensores tende a produzir níveis de sinal significativamente mais baixos do que aqueles usados no processador digital. Os sensores resistivos podem precisar de um amplificador para a célula de carga. Se possível, é vantajoso ter o ganho o mais próximo possível do elemento sensor, eliminado interferências de ruído e da resistência da cablagem. Em situações onde um maior ganho é necessário, muitas vezes pode haver implicações para lidar com quaisquer efeitos adversos, como o ruído, problemas de \textit{layout} do \textit{chip}, e os transitórios agudos associados aos sinais digitais que precisam de ser mantidos bem longe dos circuitos analógicos \textit{front-end}. \cite{book-9}
 \\
 \\
-Neste projeto foi utilizado o HX711, que está apresentado na \autoref{HX711_Schematic_1}, a ligação deste componente é fácil de se perceber tal como indicado na \autoref{HX711_connection}. A parte mais complexa neste trabalho é a interligação dos equipamentos com o microcontrolador por meio de \textit{software} e a criação das bibliotecas e os \textit{drivers} de comunicação,
-%como a placa do amplificador de célula de carga (\textit{chip} HX711 figura \ref{HX711_Schematic_1}),
- já que o protocolo de comunicação é proprietário. O mesmo está demonstrado na \autoref{Protocolo}.
-\\
-\\
-Pode-se consultar a biblioteca \textit{driver} do amplificador de célula de carga HX711 nos anexos \ref{hx711-h} e \ref{hx711-c}.
-\\
+Neste projeto foi utilizado o HX711, que está apresentado na \autoref{HX711_Schematic_1}. 
 \\
 \begin{figure}[H]
 	%\captionsetup{justification=raggedright,singlelinecheck=false}
@@ -165,7 +165,9 @@ Pode-se consultar a biblioteca \textit{driver} do amplificador de célula de car
 	\caption{Esquema de ligações e a placa do HX711}
 	\label{HX711_Schematic_1}
 \end{figure}
-\figurespace{1}
+\figurespace{.5}
+A ligação deste componente é fácil de se perceber tal como indicado na \autoref{HX711_connection}.
+\\
 %Então deve ser apresentada
 %Apresenatação das figuras e da tabela....
 \begin{table}[H]
@@ -184,7 +186,15 @@ Pode-se consultar a biblioteca \textit{driver} do amplificador de célula de car
 	\end{tabular}	
 	\label{HX711_connection}
 \end{table}
-\tablespace{1}
+\tablespace{.5}
+ A parte mais complexa neste trabalho é a interligação dos equipamentos com o microcontrolador por meio de \textit{software} e a criação das bibliotecas e os \textit{drivers} de comunicação,
+%como a placa do amplificador de célula de carga (\textit{chip} HX711 figura \ref{HX711_Schematic_1}),
+ já que o protocolo de comunicação é proprietário. O mesmo está demonstrado na \autoref{Protocolo}.
+\\
+\\
+Pode-se consultar a biblioteca \textit{driver} do amplificador de célula de carga HX711 nos anexos \ref{hx711-h} e \ref{hx711-c}.
+\\
+
 %apresentar tabela
 %A conversão AD deve ser apresentada... indicar a resolução do peso medido
 \begin{figure}[H]
@@ -246,6 +256,7 @@ Como indicado abaixo nos gráficos, em que a linha \textcolor{yellow}{amarela} �
 \end{minipage}
 \end{minipage}
 \\
+\\
 \begin{minipage}[!b]{\linewidth}
 \begin{minipage}[!b]{.43\linewidth}
 \begin{figure}[H]
@@ -267,7 +278,7 @@ Como indicado abaixo nos gráficos, em que a linha \textcolor{yellow}{amarela} �
 \end{figure}
 \end{minipage}
 \end{minipage}
-\minipagespace{.3}
+\minipagespace{.5}
 Para obter este resultado, a livraria \textit{driver} para o \textit{Load Cell Amplifier} teve de ter em consideração que a arquitetura do microcontrolador é de 8 \textit{bits}, uma vez que a estrutura do pacote de informação é entre 25 a 27 impulsos do \textit{clock cycle} em que é transmitido primeiro o \ac{msb}.
 \\
 \\
@@ -291,7 +302,7 @@ Abaixo está uma imagem do \acs{lcd} de 4x20 azul na \autoref{4x20_LCD} e na \au
 \begin{figure}[H]
 	\centering
 	%%\captionsetup{justification=raggedright,singlelinecheck=false}
-	\includegraphics[height=5cm]{./image/PESTA/material/4x20_LCD.jpg}
+	\includegraphics[height=6cm]{./image/PESTA/material/4x20_LCD.jpg}
 	\caption{\acs{lcd}}
 	\label{4x20_LCD}
 \end{figure}
@@ -338,6 +349,7 @@ O espaço de memória de dados é dividido em três partes, os \ac{gpr} as \ac{s
 \\
 \\
 Os microcontroladores da \acs{avr} utilizam uma arquitetura de instruções \ac{risc} que reduz a complexidade dos circuitos na codificação de cada instrução. Daí que os microcontroladores que se baseiam nestes tipos de arquitetura são sinónimo de código reduzido, alta performance e baixo consumo energético.
+\\
 \begin{figure}[H]
 	\centering
 	%%\captionsetup{justification=raggedright,singlelinecheck=false}
@@ -347,6 +359,7 @@ Os microcontroladores da \acs{avr} utilizam uma arquitetura de instruções \ac{
 	\vspace{.1cm}
 	\qquad link: \url{https://en.wikipedia.org/wiki/Harvard_architecture}
 \end{figure}
+\figurespace{.5}
 %\qquad link: \url{https://en.wikipedia.org/wiki/Harvard_architecture}
 %Porque esta opção?
 %O facto de ser um dos masi poderosos.. não é justificação
@@ -357,7 +370,7 @@ O Atmega 128 (\autoref{Atmega_128_pinagem}) é um dos mais poderosos \ac{mcu} da
 \begin{figure}[H]
 	\centering
 	%%\captionsetup{justification=raggedright,singlelinecheck=false}
-	\includegraphics[scale=0.6]{./image/PESTA/material/Atmega128_1.jpg}
+	\includegraphics[scale=0.5]{./image/PESTA/material/Atmega128_1.jpg}
 	\caption{Atmega 128}
 	\label{Atmega_128_pinagem}
 \end{figure}
@@ -513,5 +526,6 @@ Abaixo na \autoref{Material-1}, é apresentado a lista do material utilizado no 
 		\label{Material-1}
 	}
 \end{table}
+\tablespace{.5}
 Os preços são o que estão disponíveis no mercado. Quanto a \textit{mainboard}, o preço do \acs{mcu} Atmega 128 foi o mais competitivo. Outras alternativas, de \acs{mcu} de igual ou menor capacidade, atingiam o mesmo preço ou até seriam mais caras.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
