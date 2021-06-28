@@ -81,6 +81,8 @@ Estes sensores são implementados numa montagem do tipo ponte de \textit{Wheatst
 %Fazer uma introdução à figura 3.6.
 %Pôr sinal de massa na figura.
 \vspace{.5cm}
+Para uma melhor compreensão do funcionamento da ponte de \textit{Wheatstone}, a seguir é apresentado o princípio de funcionamento da ponte apenas com resistências, que está apresentada na \autoref{wheatstone-2}.
+\\
 É possível determinar a queda de tensão entre os pontos $A$ e $B$ do circuito ($V_{AB}$), através da diferença entre a tensão (potencial) no ponto $A$ ($V_A$) e a tensão no ponto $B$ ($V_B$).
 \\
 \begin{minipage}[!b]{.45\linewidth}
@@ -107,8 +109,6 @@ Estes sensores são implementados numa montagem do tipo ponte de \textit{Wheatst
 Normalmente nesta configuração (\textit{Wheatstone}) só são usados um ou dois sensores como na \autoref{wheatstone-1}, e estes podem estar ligados nos extremos opostos, ou ligados ao mesmo ponto da alimentação. Só em casos muito raros são utilizados quatro sensores obtendo-se, nesse caso, uma sensibilidade máxima.
 \\
 \\
-Para uma melhor compreensão do funcionamento da ponte de \textit{Wheatstone}, a seguir é apresentado o princípio de funcionamento da ponte apenas com resistências, que está apresentada na \autoref{wheatstone-2}.
-\\
 \\
 %Na \textit{figura} \ref{wheatstone-2}
 Se os valores das quatro resistências são iguais, ou nos casos em que $R_2 R_3 = R_4 R_1$, então a tensão $V_{AB}$ na saída é nula, e para haver variação $V_A$ terá que ser diferente de $V_B$.
@@ -127,7 +127,7 @@ Analisando a \autoref{wheatstone-1}, se os valores de $R1$ e $R4$ (os sensores) 
 %	\end{figure}
 %\end{minipage}
 %\minipagespace{.5}
-Esta célula de carga de $50 \; Kg$ tem uma resolução na saída de $2 \; mV$ por cada $1 \; Volt$ da sua alimentação com mais ou menos $0.15 mV$ de erro. Isto quer dizer que, se for alimentada com $5 \; V$, esta vai ter na saída uma variação de tensão mínima de $10 \; mV$ e a margem de erro total de leitura está na ordem de mais ou menos $0.03\%$, segundo indicação de seu \textit{datasheet}.
+Esta célula de carga de $50 \; Kg$ tem uma resolução na saída de $2 \; mV$ por cada $1 \; Volt$ da sua alimentação com mais ou menos $0.15 \; mV$ de erro. Isto quer dizer que, se for alimentada com $5 \; V$, esta vai ter na saída uma variação de tensão mínima de $10 \; mV$ e a margem de erro total de leitura está na ordem de mais ou menos $0.03\%$, segundo indicação de seu \textit{datasheet}.
 Esta célula de carga tem interferências da temperatura, ruídos e se usada durante longos contínuos períodos de tempo.
 \\
 \\
@@ -492,7 +492,7 @@ Características DC/DC:
 	\end{itemize}
 \end{minipage}
 \minipagespace{.5}
-Como a \textit{mainboard} tem um regulador de tensão linear de $5 \; Volt$, para aumentar a eficiência e ter uma alimentação variável de entrada até $38VDC$ foi utilizado o \textit{buck converter} para alimentar o regulador de tensão linear para um valor próximo dos $5 \; Volt$, por exemplo $9 \; Volt$, porque se sabe que as perdas de um regulador de tensão linear é proporcional a queda de tensão entre a sua entrada e a sua saída. Podia-se remover o regulador de tensão linear e apenas utilizar o \textit{buck converter} regulado para o valor de 5 Volt mas pretende-se não alterar o \acs{pcb} da \textit{mainboard}.
+Como a \textit{mainboard} tem um regulador de tensão linear de $5 \; Volt$, para aumentar a eficiência e ter uma alimentação variável de entrada até $38 \; VDC$ foi utilizado o \textit{buck converter} para alimentar o regulador de tensão linear para um valor próximo dos $5 \; Volt$, por exemplo $9 \; Volt$, porque se sabe que as perdas de um regulador de tensão linear é proporcional a queda de tensão entre a sua entrada e a sua saída. Podia-se remover o regulador de tensão linear e apenas utilizar o \textit{buck converter} regulado para o valor de $5 \; Volt$ mas pretende-se não alterar o \acs{pcb} da \textit{mainboard}.
 %Explicar melhor
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Orçamento do material}
