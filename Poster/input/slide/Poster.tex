@@ -2,9 +2,10 @@
 \begin{columns}
 \column{1}
 \block{Introdução}{
-	As balanças foram criadas por necessidade durante o desenvolvimento de comercio na antiguidade, os produtos que não recorriam a contagem por unidades, tais como objetos irregulares por exemplo o ouro tinham de se quantificar seu valor, e a forma de medir sua massa tornou-se numa variável de medição para troca de bens. As primeiras balanças eram alavancas em equilíbrio [ $F_1 \times b_{1c} = F_2 \times b_{2c}$ ], onde nos extremos eram colocados cestos e se colocava os pesos, este estava centrado no seu centro de massa, assim se os pesos nos dois cestos serem iguais fica em equilíbrio, era um sistema de comparar com pesos fixos estabelecidos como norma (contra-pesos).\\
-	Os métodos de medir a massa de objetos não conheceu nenhumas melhorias tecnológicas relevantes até a era industrial. Só nos anos do século XVIII é que o meio de medir a massa de objetos não dependia de contra-pesos. As balanças por molas foi inventado por Richard Salter, um fabricante de balanças por volta dos anos de 1770 na Inglaterra.\\
-	O que vai ser utilizado no projeto vai ser um \textbf{célula de carga}, estas células tem quatro sensores \textit{strain gauges} ligadas em ponte wheatstone que vão detetar a distorção (pressão) do material, ou seja, a célula de peso e gerar um sinal em tensão proporcional a força exercida quando alimentado. Seque o mesmo principio de uma mola [ $K= \frac{\Delta l}{F}$ ].
+As balanças foram criadas por necessidade e são utilizadas para medir uma das grandezas fundamentais da física, a massa. A massa é uma das grandezas intrínsecas dos objetos, que se mede pela suas resistência à aceleração.
+\\
+\\
+Determinar a massa dos objetos é uma ferramenta em que empurra o desenvolvimento comercial, industrial e científico. Existe uma constante evolução para adquirir equipamentos com maior precisão e imunes a interferências para medir esta grandeza beneficiando o desenvolvimento cientifico. Motivo deste projeto de criar uma balança digital recorrendo aos materiais disponíveis no mercado.
 }
 \end{columns}
 \begin{columns}
@@ -12,21 +13,22 @@
 \column{0.8}
 \block{Kit Desenvolvimento}{
 	\begin{tikzfigure}
-		\includegraphics[width=0.65\textwidth]{./image/PESTA/kit/Kit_Desenvolvimento_2.jpg}
+		\includegraphics[width=0.7\textwidth]{./image/PESTA/kit/Kit_Desenvolvimento_2.jpg}
 	\end{tikzfigure}
 }
 \end{columns}
 \begin{columns}
 \column{0.5}
 \block{Sensor}{
-	O sensor é um transdutor utilizado em converter energia de uma natureza para outra como entrada de sinal para um sistema, são os elementos principais de interface com o mundo real para o analógico. \\
-	Neste projecto é o caso de utilizar uma celula de carga, ou seja, sensores piezoresistivos para determinar a massa dos objectos.
-	
+O sensor é um transdutor utilizado para converter energia de uma natureza para outra e servir como entrada de um sistema de controlo, são os elementos principais de interface com o mundo real para o analógico.
+\\
+Neste projeto é o caso de utilizar uma célula de carga de tipo piezoresistivo para determinar a massa dos objetos.	
 }
 \column{0.5}
 \block{Informação e Controlo}{
-	Tratamento dos valores medidos, conversão de sinal medido pelo sensor para analógico, conversão de analógico para digital usando medidas discretas, tirando varias amostras para obter uma média depois dedução de sua massa.\\
-	Um \textit{Frontend} de controlo intuitivo, com respectivo \textit{offset} e meio de calibração para a celula que estiver a ser usada. \qquad Uma balança electrónica simples.
+O tratamento da informação e sua comunicação nas várias etapas até chegar ao sistema digital têm grande complexidade. Requer muitos conhecimentos em diversas áreas.
+\\
+Usando a linguagem C e um microcontrolador foi possível desenvolver este projeto, com um controlo intuitivo e fácil de se replicar.
 }
 \end{columns}
 \begin{columns}
@@ -45,7 +47,7 @@
 		\end{minipage}
 		\begin{minipage}[b!]{.3\linewidth}
 			\begin{itemize}
-				\item Criar uma methologia de trabalho estavel.
+				\item Criar uma methologia de trabalho.
 				\item Pesquisar de literatura.
 				\item Dominar a linguagem \textbf{C}.
 			\end{itemize}
@@ -67,7 +69,7 @@
 			\hspace{3cm}
 			\begin{minipage}[b!]{.2\linewidth}
 			\begin{itemize}
-				\item Ruido
+				\item Ruído
 				\item Temperatura
 				\item Humidade
 				\item \textit{Long term shift}
@@ -75,7 +77,7 @@
 			\end{itemize}
 			\end{minipage}
 			\begin{minipage}[b!]{.6\linewidth}
-				Ao executar este projecto teve de se ter em conta interferencia exteriores, tais como colocar o amplificador de sinal o mais proximo do sensor e afastado do ruido do circuito electrónico. Foi observado os efeito a longo prazo das leituras e seu desvio.
+				Ao executar este projecto teve de se ter em conta interferencia exteriores, tais como colocar o amplificador de sinal o mais próximo do sensor e afastado do ruído do circuito electrónico. Foi observado os efeito a longo prazo das leituras e seu desvio.
 				\vspace{1cm}
 			\end{minipage}
 		\end{minipage}
