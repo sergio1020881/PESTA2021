@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.30)  28 JUN 2021 23:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.30)  29 JUN 2021 10:32
 entering extended mode
 **./Relatorio.tex
 (Relatorio.tex
@@ -2225,7 +2225,7 @@ Overfull \hbox (2.43332pt too wide) in paragraph at lines 49--80
 File: ./image/PESTA/schematic/Wheatstone-1.jpg Graphic file (type jpg)
 <use ./image/PESTA/schematic/Wheatstone-1.jpg>
 Package pdftex.def Info: ./image/PESTA/schematic/Wheatstone-1.jpg  used on inpu
-t line 92.
+t line 90.
 (pdftex.def)             Requested size: 170.8053pt x 142.26378pt.
 <./image/PESTA/material/Prato-1.jpg, id=548, 2876.54958pt x 916.09859pt>
 File: ./image/PESTA/material/Prato-1.jpg Graphic file (type jpg)
@@ -3006,7 +3006,7 @@ type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy6
 .pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files
 /MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX/fonts/type1/p
 ublic/lm/lmtt12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtt9.pfb>
-Output written on Relatorio.pdf (94 pages, 8244985 bytes).
+Output written on Relatorio.pdf (94 pages, 8244993 bytes).
 PDF statistics:
  2745 PDF objects out of 2984 (max. 8388607)
  1560 named destinations out of 1728 (max. 500000)
