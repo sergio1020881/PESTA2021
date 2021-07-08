@@ -1,0 +1,5 @@
+Descrição do trabalho implementado
+
+Uma célula de carga vai ser o sensor de conversão entre o peso e uma diferença de potencial em tensão eléctrica.
+Após obter este sinal será ligado a um amplificador com ADC dedicado para este tipo de funcionalidade, 24 bits de resolução, amplificação programável e taxa de transferência fisicamente alterável, trata-se do integrado HX711, com um protocolo de comunicação que lhe é próprio. Depois esta comunicação série vai ser entregue ao microcontrolador para ser tratada.
+A programação do MCU as bibliotecas e drivers é implementado em linguagem C e o objetivo é para obter uma balança funcional de fácil utilização e calibração economicamente viável, assim ficar com uma balança pratica fácil de se replicar.
