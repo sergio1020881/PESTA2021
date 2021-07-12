@@ -1,7 +1,7 @@
 /********************************************************************
 	EXPLODE
 Author: Sergio Santos
-	<sergio.salazar.santos@gmail.com> 
+	<sergio.salazar.santos@gmail.com>
 License: GNU General Public License
 Hardware: all
 Date: 16032021
